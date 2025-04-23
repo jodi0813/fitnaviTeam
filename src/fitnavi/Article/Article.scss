@@ -22,7 +22,7 @@
         button.back {
             flex: 0;
             /* margin-left: 30px; */
-            font-size: 20px;
+            font-size: 14px;
             font-family: "Noto Sans TC";
             background-color: transparent;
             border: none;
@@ -38,35 +38,45 @@
             margin-left: 70px;
             margin-top: 0px;
 
+            >p {
+                font-size: 14px;
+                color: #FEFCF7 !important;
+                font-family: "Noto Sans TC";
+                background-color: #FF8740;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 40px;
+                border-radius: 20px;
+            }
+
+            >h2 {
+                font-size: 40px;
+                color: #3A2C19;
+                font-family: "Noto Sans TC";
+                font-weight: bolder;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-top: 5px;
+            }
+
             .dateshare {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
+                margin-top: 13px;
+
 
                 p {
                     font-size: 14px;
-                    color: #FEFCF7 !important;
                     font-family: "Noto Sans TC";
-                    background-color: #FF8740;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100px;
-                    height: 40px;
-                    border-radius: 20px;
+                    color: #3A2C19;
                 }
 
-                h2 {
-                    font-size: 40px;
-                    color: #3A2C19;
-                    font-family: "Noto Sans TC";
-                    font-weight: bolder;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-                }
 
                 button.share {
                     justify-content: center;
@@ -75,18 +85,27 @@
                     background-color: transparent;
                     border: none;
                     text-align: center;
+                    background-image: url('../images/share.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
                     font-size: 14px;
                     width: 24px;
                     height: 24px;
+                    margin-bottom: 10px;
+                    border: none;
+                    outline: none;
+
                 }
 
             }
+
         }
     }
 
     button.bread {
         flex: 0;
-        font-size: 20px;
+        font-size: 14px;
         font-family: "Noto Sans TC";
         background-color: transparent;
         border: none;
@@ -96,11 +115,14 @@
 
 
 
+
+
+
 .bannerimg {
     width: 100%;
     height: 400px;
 
-    .bannerimg img {
+    img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -109,6 +131,20 @@
 
 
 
+.phase2.content,
+.phase3.content
+.phase3img,
+.phase4.content1,
+.phase4.content2,
+.phase4.content3 {
+
+        display: inline-block;
+        width: 40%; /* 設定相同的寬度 */
+        box-sizing: border-box;
+        vertical-align: top;
+        text-align: justify;
+
+}
 
 .phase1 {
     margin-top: 90px;
@@ -126,6 +162,7 @@
 
 
 
+
 .phase2 {
     display: flex;
     flex-direction: row;
@@ -134,7 +171,7 @@
     margin: 100px 30px;
 
     .tablecontent {
-        flex: 1;
+        width: 30%;
 
         .tabletitle {
             p {
@@ -156,7 +193,7 @@
     }
 
     .content {
-        width: 50%;
+        width: 75%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -165,18 +202,22 @@
             font-size: 32px;
             font-family: "Noto Sans TC";
             color: #3A2C19;
+            margin-bottom: 35px;
         }
 
         p {
-            font-size: 20px;
-            font-family: "Noto Sans TC";
             color: #3A2C19;
-            line-height: 2;
+            font-family: "Noto Sans TC";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            margin-bottom: 70px;
         }
     }
 
     .author {
-        width: 20%;
+        width: 23%;
         background-color: #DFDFDE;
         border-radius: 20px;
         display: flex;
@@ -208,26 +249,30 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    gap: 70px;
+    align-self: stretch;
+    margin-bottom: 70px;
 
     .content {
         width: 50%;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        // word-wrap: break-word;
 
-        h3 {
+        >h3 {
             font-size: 32px;
             font-family: "Noto Sans TC";
             color: #3A2C19;
+            margin-bottom: 35px;
         }
 
-        p {
+        >p {
             font-size: 20px;
             font-family: "Noto Sans TC";
             color: #3A2C19;
             line-height: 2;
+
         }
     }
 
@@ -242,14 +287,14 @@
 
 
 
-
-
 .phase4 {
+ 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 100px 30px;
+    gap: 70px;
+    align-self: stretch;
 
     .content1,
     .content2,
@@ -258,12 +303,15 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+        text-align: left;
 
-        h3 {
+        >h3 {
+            margin-bottom: 35px;
             font-size: 32px;
             font-family: "Noto Sans TC";
             color: #3A2C19;
+         
         }
 
         p {
@@ -281,6 +329,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 35px;
 
     svg {
         display: block;
@@ -288,6 +337,7 @@
         margin-right: auto;
         stroke-width: 2px;
         stroke: var(--dark, #3A2C19);
+        margin-top: 70px;
     }
 
     .bottomcontent {
@@ -327,7 +377,7 @@
             justify-content: flex-end;
             margin-right: 20px;
 
-            bottombutton.button {
+            .bottombutton {
                 display: flex;
                 flex-wrap: nowrap;
                 font-size: 20px;
