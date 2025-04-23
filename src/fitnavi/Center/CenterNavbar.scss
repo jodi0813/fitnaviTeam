@@ -12,39 +12,44 @@
     }
 }
 
-* {
-    h2 {
-        color: #FF8740;
-        font-size: 32px;
-        font-weight: 700;
-        letter-spacing: 3.2px;
-    }
+// * {
 
-    ul {
-        li {
-            color: #3A2C19;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 40px;
-            /* 200% */
-            letter-spacing: 0.4px;
 
-            strong {
-                color: #989794;
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 150%;
-                /* 24px */
-                letter-spacing: 1.6px;
-            }
-        }
-    }
-}
+//     ul {
+//         li {
+//             color: #3A2C19;
+//             font-size: 20px;
+//             font-weight: 500;
+//             line-height: 40px;
+//             /* 200% */
+//             letter-spacing: 0.4px;
+
+//             strong {
+//                 color: #989794;
+//                 font-size: 16px;
+//                 font-weight: 500;
+//                 line-height: 150%;
+//                 /* 24px */
+//                 letter-spacing: 1.6px;
+//             }
+//         }
+//     }
+// }
 
 .centerInformation {
     .information {
         display: flex;
         justify-content: center;
+        margin: 64px;
+        div{
+            margin: 36px;
+            h2 {
+                color: #FF8740;
+                font-size: 32px;
+                font-weight: 700;
+                letter-spacing: 3.2px;
+            }
+        }
     }
 
     .outward {
