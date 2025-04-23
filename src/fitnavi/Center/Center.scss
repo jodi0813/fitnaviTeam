@@ -1,15 +1,17 @@
 .title {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
   .titlehead {
     display: flex;
     justify-content: space-between;
-    width: 1300px;
+    width: 100%;
     align-items: flex-end;
-    margin: 0 50px;
+    // margin: 0 50px;
 
     .head {
       display: flex;
       align-items: flex-end;
-
 
       h2 {
         font-family: "Mantou Sans";
@@ -48,11 +50,11 @@
 }
 
 .centerPic {
-  height: 338px;
+  // height: 338px;
   align-self: stretch;
   border-radius: 16px;
-  width: 1140px;
-
+  // width: 1140px;
+  max-height: 338px;
 }
 
 .centerLogoPic {
@@ -90,7 +92,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-
 }
 
 .title2 h3 {
@@ -118,9 +119,10 @@
   /* 24px */
   letter-spacing: 1.6px;
 }
-.expandContent{
+.expandContent {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   margin: 24px;
 }
+
 
