@@ -20,7 +20,7 @@ function CenterNavbar() {
             <section class="centerInformation">
                 <div class="information">
                     <div>
-                        <h2>基本資料</h2>
+                        <h2 class="">基本資料</h2>
                         <ul>
                             <li>
                                 <strong>地址</strong><br />
