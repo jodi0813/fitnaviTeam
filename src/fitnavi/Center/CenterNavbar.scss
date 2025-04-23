@@ -1,0 +1,13 @@
+.centerMenu{
+    display: flex;
+    justify-content: center;
+
+    ul{
+        display: flex;
+    background: #fff;
+    padding: 12px 80px;
+    gap: 80px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 999px;
+   }
+}

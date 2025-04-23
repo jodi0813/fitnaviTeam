@@ -1,0 +1,64 @@
+@import "../reset.scss";
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  height: 60px;
+  padding: 0px 26px;
+  margin: 29px 120px;
+  background-color:  rgba(237, 237, 237, 0.60);
+  border-radius: 999px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+
+  .logo {
+    display: flex;
+    align-items: baseline;
+    width: 109px;
+    height: 35px;
+    margin: 13px;
+    font-weight: 400;
+    font-family: "Dela Gothic One";
+    .fit {
+      font-size: 16px;
+      color: #3a2c19;
+    }
+    .navi {
+      font-size: 24px;
+      color: #ff8740;
+    }
+  }
+  .menu {
+    display: flex;
+    padding: 0px 25px;
+
+    li {
+      display: flex;
+      padding: 0px 25px;
+      a {
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-weight: 500;
+        color: #3a2c19;
+      }
+    }
+  }
+}
+
+.login {
+  background: #ff8740;
+  color: #fff;
+  display: flex;
+  padding: 10px 24px;
+  /* 內距 */
+  justify-content: center;
+  /* 置中 */
+  border-radius: 999px;
+  /* 邊角 */
+  font-size: 14px;
+  /* 字體大小 */
+  letter-spacing: 1.4px;
+  /* 字距 */
+}

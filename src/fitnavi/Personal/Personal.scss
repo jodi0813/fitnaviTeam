@@ -1,0 +1,123 @@
+@import "../reset.scss";
+
+.title {
+  display: flex;
+  align-items: center;
+  h2 {
+    font-family: "Mantou Sans";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 9.6px;
+    color: #ff8740;
+  }
+  h3 {
+    font-family: "Mantou Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 2.4px;
+  }
+}
+#personal-search-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  #area {
+    width: 180px;
+    height: 40px;
+    padding: 8px 20px;
+    border-radius: 999px;
+  }
+  #trainingNeeds {
+    width: 180px;
+    height: 40px;
+    padding: 8px 20px;
+    border-radius: 999px;
+  }
+  #sex {
+    width: 180px;
+    height: 40px;
+    padding: 8px 20px;
+    border-radius: 999px;
+  }
+  #keyword-search {
+    width: 305px;
+    height: 40px;
+    padding: 8px 20px;
+    border-radius: 999px;
+    border: 0.5px solid
+  }
+  .submit {
+    width: 165px;
+    height: 40px;
+    padding: 8px 8px;
+    background: #ff8740;
+    color: #fff;
+    border-radius: 999px;
+    border: none;
+  }
+}
+.coach {
+  display: flex;
+  flex-direction: column;
+  margin: 31.55px 192.5px;
+  .coach-name {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .all-coach {
+    color: #ff8740;
+    font-family: "Dela Gothic One", sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+  }
+  .coach-card {
+    width: 330px;
+    height: 452px;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+    border-radius: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
+    .image-container {
+      position: relative;
+    }
+    .label {
+      position: absolute;
+      left: 29px;
+      top: 24px;
+      border-radius: 8px;
+      background: #fefcf7;
+      padding: 4px 8px;
+      color: #ff8740;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 140%; 
+      letter-spacing: 1.4px;
+    }
+    .hashtag {
+      display: flex;
+      a {
+        color: #ff8740;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 1.4px;
+        display: flex;
+        margin: 0px 14px 0px 0px;
+      }
+    }
+    .coach-details {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: 1.4px;
+    }
+  }
+}
