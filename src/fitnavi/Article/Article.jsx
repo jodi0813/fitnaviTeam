@@ -1,27 +1,9 @@
+import "./Article.scss";
 
 
 function Article() {
     return (
         <>
-            <header id="navbar">
-                <h1 className="logo">
-                    <a href="./intro.html">
-                        <img src="./images/FitNAVI.ico" alt="" />
-                    </a>
-                </h1>
-                <nav className="navigation">
-                    <ul>
-                        <li><a href="#">健身場地</a></li>
-                        <li><a href="#">健身教練</a></li>
-                        <li><a href="#">營養師</a></li>
-                        <li><a href="#">知識文章</a></li>
-                        <li><a href="#">最新活動</a></li>
-                    </ul>
-
-                </nav>
-
-                <button className="login">登入/註冊</button>
-            </header>
 
             <main>
                 {/* <!-- banner區域 --> */}

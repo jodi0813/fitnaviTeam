@@ -21,7 +21,7 @@ function Navbar() {
             <Link>營養師</Link>
           </li>
           <li>
-            <Link>知識文章</Link>
+            <Link to='/article'>知識文章</Link>
           </li>
           <li>
             <Link>加入我們</Link>
