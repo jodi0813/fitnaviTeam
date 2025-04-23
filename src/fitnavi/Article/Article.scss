@@ -1,0 +1,535 @@
+@charset "UTF-8";
+*/
+
+/* reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* 重置字體，有空格字體或是中文字體要用引號 */
+body {
+    font-family:
+        /*西文*/
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+        /*中文*/
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    ;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+}
+
+/* 重置連接 */
+a {
+    /* a預設是行內元素不知原設定尺寸，所以先改為display block */
+    display: block;
+    color: #444;
+    text-decoration: none;
+}
+
+
+/* 導覽列 */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    /* 距離邊界的間距 */
+    width: 100%;
+    box-shadow: 0 8px 8px #E3E0D8;
+    border-radius: 999px;
+
+    .logo {
+        width: 80px;
+        margin: 10px;
+        padding-left: 10px;
+    }
+
+    .navigation {
+        /* 控制子層 */
+        display: flex;
+        /* 主軸變成垂直，副軸為水平，設定為end就會靠右 */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        height: 80px;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        a {
+            margin: 30px;
+            padding: 5 0px;
+
+            &:hover {
+                border-bottom: 1px solid #514535;
+            }
+        }
+
+    }
+
+
+    button.login {
+        display: inline-block;
+        background-color: #FF8740;
+        color: white;
+        border: none;
+        text-align: center;
+        font-size: 14px;
+        width: 120px;
+        height: 30px;
+        border-radius: 20px;
+    }
+}
+
+
+.banner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 90px;
+
+
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px;
+
+
+        button.back {
+            flex: 0;
+            /* margin-left: 30px; */
+            font-size: 20px;
+            font-family: "Noto Sans TC";
+            background-color: transparent;
+            border: none;
+            color: #3A2C19;
+        }
+
+        .bannercontent {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 70px;
+            margin-top: 0px;
+
+            .dateshare {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    font-size: 14px;
+                    color: #FEFCF7 !important;
+                    font-family: "Noto Sans TC";
+                    background-color: #FF8740;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100px;
+                    height: 40px;
+                    border-radius: 20px;
+                }
+
+                h2 {
+                    font-size: 40px;
+                    color: #3A2C19;
+                    font-family: "Noto Sans TC";
+                    font-weight: bolder;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+
+                button.share {
+                    justify-content: center;
+                    align-items: center;
+                    display: inline-block;
+                    background-color: transparent;
+                    border: none;
+                    text-align: center;
+                    font-size: 14px;
+                    width: 24px;
+                    height: 24px;
+                }
+
+            }
+        }
+    }
+
+    button.bread {
+        flex: 0;
+        font-size: 20px;
+        font-family: "Noto Sans TC";
+        background-color: transparent;
+        border: none;
+        color: #3A2C19;
+    }
+}
+
+
+
+.bannerimg {
+    width: 100%;
+    height: 400px;
+
+    .bannerimg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+
+.phase1 {
+    margin-top: 90px;
+
+    h4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 90px 30px;
+        font-size: 20px;
+        font-family: "Noto Sans TC";
+        color: #3A2C19;
+    }
+}
+
+
+
+.phase2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 100px 30px;
+
+    .tablecontent {
+        flex: 1;
+
+        .tabletitle {
+            p {
+                font-size: 14px;
+                font-family: "Noto Sans TC";
+                color: #3A2C19;
+                margin-bottom: 30px;
+            }
+        }
+
+        .table {
+            a {
+                font-size: 14px;
+                font-family: "Noto Sans TC";
+                color: #000000;
+                line-height: 2;
+            }
+        }
+    }
+
+    .content {
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            font-size: 32px;
+            font-family: "Noto Sans TC";
+            color: #3A2C19;
+        }
+
+        p {
+            font-size: 20px;
+            font-family: "Noto Sans TC";
+            color: #3A2C19;
+            line-height: 2;
+        }
+    }
+
+    .author {
+        width: 20%;
+        background-color: #DFDFDE;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h4 {
+            font-size: 14px;
+            font-family: "Noto Sans TC";
+            color: #3A2C19;
+        }
+
+        p {
+            font-size: 14px;
+            font-family: "Noto Sans TC";
+            color: #000000;
+            line-height: 2;
+        }
+    }
+}
+
+
+
+
+.phase3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            font-size: 32px;
+            font-family: "Noto Sans TC";
+            color: #3A2C19;
+        }
+
+        p {
+            font-size: 20px;
+            font-family: "Noto Sans TC";
+            color: #3A2C19;
+            line-height: 2;
+        }
+    }
+
+    .phase3img {
+        width: 50%;
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+
+}
+
+
+
+
+
+
+.phase4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 30px;
+
+    .content1,
+    .content2,
+    .content3 {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            font-size: 32px;
+            font-family: "Noto Sans TC";
+            color: #3A2C19;
+        }
+
+        p {
+            width: 100%;
+            font-size: 20px;
+            font-family: "Noto Sans TC";
+            color: #3A2C19;
+            line-height: 2;
+        }
+    }
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        stroke-width: 2px;
+        stroke: var(--dark, #3A2C19);
+    }
+
+    .bottomcontent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 1002px;
+        margin: 20px 0px;
+
+        .hashtag {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 0px 20px;
+
+            p {
+                width: 64px;
+                height: 26px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                font-family: "Noto Sans TC";
+                color: white;
+                background-color: #FF8740;
+                border-radius: 8px;
+                margin: 0px 10px;
+            }
+        }
+
+        .button {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 20px;
+
+            bottombutton.button {
+                display: flex;
+                flex-wrap: nowrap;
+                font-size: 20px;
+                font-family: "Noto Sans TC";
+                color: #3A2C19;
+                background-color: transparent;
+                border: none;
+                white-space: nowrap;
+            }
+        }
+
+    }
+
+}
