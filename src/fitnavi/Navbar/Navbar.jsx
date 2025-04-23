@@ -15,7 +15,7 @@ function Navbar() {
             <Link to="/center">健身場地</Link>
           </li>
           <li>
-            <Link to="/personal">健身教練</Link>
+            <Link to="/coach">健身教練</Link>
           </li>
           <li>
             <Link>營養師</Link>

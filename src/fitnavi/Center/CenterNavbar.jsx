@@ -15,8 +15,16 @@ function CenterNavbar() {
                         <Link to="">私人教練</Link>
                     </li>
                 </ul>
-
             </div>
+            <div>
+                基本資料
+            </div>
+            <ul>
+                <li>地址</li>
+                <li>營業時間</li>
+                <li>有無停車場</li>
+                <li>大眾運輸</li>
+            </ul>
         </>
     );
 }

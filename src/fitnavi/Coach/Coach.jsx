@@ -1,6 +1,6 @@
-import "./Personal.scss";
+import "./Coach.scss";
 
-function Personal() {
+function Coach() {
   return (
     <>
       <header class="title">
@@ -63,4 +63,4 @@ function Personal() {
     </>
   );
 }
-export default Personal;
+export default Coach;
