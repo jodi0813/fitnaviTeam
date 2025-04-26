@@ -3,14 +3,15 @@ import "./Navbar.scss";
 function Navbar() {
   return (
     <>
-      <header id="navbar">
-        
+      <header id="header">
+        <div className="container">
+          <nav id="navbar">
         <Link to="/" className="logo">
           <span className="fit">Fit</span>
           <span className="navi">NAVI</span>
         </Link>
 
-        <ul class="menu">
+        <ul className="menu">
           <li>
             <Link to="/center">健身場地</Link>
           </li>
@@ -27,9 +28,11 @@ function Navbar() {
             <Link>加入我們</Link>
           </li>
         </ul>
-        <button type="button" class="login">
+        <button type="button" className="login">
           登入 / 註冊
         </button>
+        </nav>
+        </div>
       </header>
     </>
   );

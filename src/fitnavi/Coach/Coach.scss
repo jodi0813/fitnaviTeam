@@ -1,8 +1,11 @@
 @import "../reset.scss";
-
-.title {
+#coachMain{
+  padding: 120px 50px;
+}
+.coachTitle{
   display: flex;
-  align-items: center;
+  align-items:baseline;
+
   h2 {
     font-family: "Mantou Sans";
     font-size: 48px;

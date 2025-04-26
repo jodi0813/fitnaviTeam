@@ -3,7 +3,8 @@ import "./Coach.scss";
 function Coach() {
   return (
     <>
-      <header class="title">
+    <div id="coachMain">
+      <header className="coachTitle">
         <h2>健身教練</h2>
         <p>PERSONAL TRAINER</p>
       </header>
@@ -40,25 +41,26 @@ function Coach() {
           id="keyword-search"
           placeholder="關鍵字搜尋"
         ></input>
-        <input type="submit" value="搜尋" class="submit"></input>
+        <input type="submit" value="搜尋" className="submit"></input>
       </form>
-      <div class="coach">
-        <div class="all-coach">全部教練</div>
-        <div class="coach-card">
-          <div class="image-container">
+      <div className="coach">
+        <div className="all-coach">全部教練</div>
+        <div className="coach-card">
+          <div className="image-container">
             <img src="./images/trainer.png" alt="教練照片" />
-            <span class="label">教練</span>
+            <span className="label">教練</span>
           </div>
-          <div class="coach-name">名字</div>
-          <div class="hashtag">
+          <div className="coach-name">名字</div>
+          <div className="hashtag">
             <a href="#">#專業</a>
             <a href="#">#專業</a>
             <a href="#">#專業</a>
           </div>
-          <p class="coach-details">
+          <p className="coach-details">
             這是教練或營養師的簡介內容，這是教練或營養師的簡介內容，這是教練或營養師的簡介內容。
           </p>
         </div>
+      </div>
       </div>
     </>
   );

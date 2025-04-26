@@ -8,7 +8,7 @@ function CenterNavbar() {
     <>
       <div>
         {/* 中間的選單列 */}
-        <div class="centerMenu">
+        <div className="centerMenu">
           <ul>
             <li>
               <a onClick={tabClick} href="#">
@@ -26,16 +26,16 @@ function CenterNavbar() {
         {/* 一、場館資料 */}
         <section id="centerInformation">
           {/* 基本資料 */}
-          <div class="basicVenueInfo">
-            <div class="informationLeft">
+          <div className="basicVenueInfo">
+            <div className="informationLeft">
               {/* 標題 */}
-              <div class="centermenuTitle">
+              <div className="centermenuTitle">
                 <h2>基本資料</h2>
-                <span class="subtitle">Basic Venue Info</span>
+                <span className="subtitle">Basic Venue Info</span>
               </div>
 
-              <hr class="divider"></hr>
-              <ul>
+              <hr className="divider"></hr>
+              <ul className="informationList">
                 <li>
                   <strong>地址</strong>
                   <br />
@@ -57,20 +57,20 @@ function CenterNavbar() {
                 </li>
               </ul>
             </div>
-            <div class="informationRight">
+            <div className="informationRight">
               <img src="./images/map.png" alt="場館地圖位置" />
             </div>
           </div>
           {/* 場景外觀 */}
-          <div class="venueExterior">
+          <div className="venueExterior">
             {/* 標題 */}
-            <div class="centermenuTitle">
+            <div className="centermenuTitle">
               <h2>場館外觀</h2>
-              <span class="subtitle"> Venue Exterior</span>
+              <span className="subtitle"> Venue Exterior</span>
             </div>
-            <hr class="divider"></hr>
+            <hr className="divider"></hr>
             {/* 場景外觀的照片 */}
-            <div class="centerPhotos">
+            <div className="centerPhotos">
               <button>‹</button>
               <img src="/images/center01.jpg" alt="外觀照片1" />
               <img src="/images/center02.jpg" alt="外觀照片2" />
@@ -79,17 +79,17 @@ function CenterNavbar() {
             </div>
           </div>
           {/* 入場費用+聯絡方式 */}
-          <div class="costContact">
+          <div className="costContact">
             {/* 入場費用 */}
-            <div class="entranceFee">
+            <div className="entranceFee">
               {/* 標題 */}
-              <div class="centermenuTitle">
+              <div className="centermenuTitle">
                 <h2>入場費用</h2>
-                <span class="subtitle">Entrance Fee</span>
+                <span className="subtitle">Entrance Fee</span>
               </div>
-              <hr class="divider"></hr>
+              <hr className="divider"></hr>
 
-              <ul>
+              <ul className="informationList">
                 <li>
                   <strong>單次入場</strong>
                   <br />
@@ -108,13 +108,13 @@ function CenterNavbar() {
               </ul>
             </div>
             {/* 聯絡方式 */}
-            <div class="contactInfo">
-              <div class="centermenuTitle">
+            <div className="contactInfo">
+              <div className="centermenuTitle">
                 <h2>聯絡方式</h2>
-                <span class="subtitle">Contact Info.</span>
+                <span className="subtitle">Contact Info.</span>
               </div>
-              <hr class="divider"></hr>
-              <ul>
+              <hr className="divider"></hr>
+              <ul className="informationList" >
                 <li>
                   <strong>連絡電話</strong>
                   <br />
@@ -135,15 +135,15 @@ function CenterNavbar() {
         {/* 二、環境設施 */}
         <section id="facilities">
           {/* 有氧器材 */}
-          <div class="venueExterior">
-            <div class="centermenuTitle">
+          <div className="venueExterior">
+            <div className="centermenuTitle">
               <h2>有氧器材</h2>
-              <span class="subtitle">Cardio Equipment Area</span>
+              <span className="subtitle">Cardio Equipment Area</span>
             </div>
-            <hr class="divider"></hr>
+            <hr className="divider"></hr>
 
             {/* 有氧器材的照片 */}
-            <div class="centerPhotos">
+            <div className="centerPhotos">
               <button>‹</button>
               <img src="/images/cardioEquipment01.jpg" alt="有氧器材照片1" />
               <img src="/images/cardioEquipment02.jpg" alt="有氧器材照片2" />
@@ -155,15 +155,15 @@ function CenterNavbar() {
             <div>跑步機 飛輪機 滑步機 登階機 划船機 戰繩設備 壺鈴</div>
           </div>
           {/* 重訓器材(X) */}
-          <div class="weightTrainingArea">
-            <div class="centermenuTitle">
+          <div className="weightTrainingArea">
+            <div className="centermenuTitle">
               <h2>重訓器材</h2>
-              <span class="subtitle">Weight Training Area</span>
+              <span className="subtitle">Weight Training Area</span>
             </div>
-            <hr class="divider"></hr>
+            <hr className="divider"></hr>
 
             {/* 重訓器材的照片 */}
-            <div class="weightTrainingAreaPhotos">
+            <div className="weightTrainingAreaPhotos">
               <button>‹</button>
               <img src="/images/weightTraining01.jpg" alt="重訓器材照片1" />
               <img src="/images/weightTraining02.jpg" alt="重訓器材照片2" />
@@ -175,22 +175,22 @@ function CenterNavbar() {
             <div>跑步機 飛輪機 滑步機 登階機 划船機 戰繩設備 壺鈴</div>
           </div>
           {/* 更衣淋浴(X) */}
-          <div class="showerArea">
-            <div class="centermenuTitle">
+          <div className="showerArea">
+            <div className="centermenuTitle">
               <h2>更衣淋浴</h2>
-              <span class="subtitle">Changing & Shower Area</span>
+              <span className="subtitle">Changing & Shower Area</span>
             </div>
-            <hr class="divider"></hr>
+            <hr className="divider"></hr>
 
             {/* 更衣淋浴的照片 */}
-            <div class="showerAreaPhotos">
+            <div className="showerAreaPhotos">
               <button>‹</button>
               <img src="/images/showerArea01.jpg" alt="更衣淋浴照片1" />
               <img src="/images/showerArea02.jpg" alt="更衣淋浴照片2" />
               <button>›</button>
             </div>
             <div>設備器材</div>
-            <hr class="divider"></hr>
+            <hr className="divider"></hr>
             <div>跑步機 飛輪機 滑步機 登階機 划船機 戰繩設備 壺鈴</div>
           </div>
         </section>
@@ -198,16 +198,16 @@ function CenterNavbar() {
         {/* 三、私人教練 */}
         <section id="fitnessTrainer">
           {/* 男性教練 */}
-          <div class="trainers">
+          <div className="trainers">
             <h2>男性教練</h2>
-            <span class="subtitle">Male Trainers</span>
-            <hr class="divider"></hr>
+            <span className="subtitle">Male Trainers</span>
+            <hr className="divider"></hr>
           </div>
           {/* 女性教練 */}
-          <div class="trainers">
+          <div className="trainers">
             <h2>女性教練</h2>
-            <span class="subtitle">Female Trainers</span>
-            <hr class="divider"></hr>
+            <span className="subtitle">Female Trainers</span>
+            <hr className="divider"></hr>
           </div>
         </section>
       </div>
