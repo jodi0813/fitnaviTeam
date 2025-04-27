@@ -45,6 +45,7 @@ function Coach() {
       </form>
       <div className="coach">
         <div className="all-coach">全部教練</div>
+        {/* 教練小卡 */}
         <div className="coach-card">
           <div className="image-container">
             <img src="./images/trainer.png" alt="教練照片" />

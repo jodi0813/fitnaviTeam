@@ -12,6 +12,30 @@
     border-radius: 999px;
   }
 }
+.centermenuTitle {
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+ 
+  .subtitleWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .subtitle {
+    font-size: 16px;
+    color: #4a3928; // 可以自己設定英文副標的顏色
+    letter-spacing: 0.5px;
+    // padding: 5px 0px;
+  }
+  .subtitleLine {
+    width: 150%;
+    height: 2px;
+    background-color: #4a3928; // 和副標一樣色
+    margin-top: 4px; // 副標和橫線的距離
+  }
+}
 
 /* 一、場館資料 */
 #centerInformation {
@@ -20,7 +44,7 @@
     font-size: 32px;
     font-weight: 700;
     letter-spacing: 3.2px;
-    padding-top: 64px;
+    // padding-top: 64px;
   }
 
   ul li {
@@ -38,12 +62,12 @@
       letter-spacing: 1.6px;
     }
   }
-
+ 
   /* 基本資料 */
   .basicVenueInfo {
     display: flex;
-      align-items: flex-end;
-      gap: 72px;
+    align-items: flex-end;
+    gap: 72px;
 
     .informationRight {
       width: 390px;
@@ -67,8 +91,7 @@
   .costContact {
     display: flex;
     // justify-content: center;
-    gap:300px;
-
+    gap: 300px;
   }
 }
 
@@ -126,6 +149,7 @@
 }
 /* 私人教練 */
 #fitnessTrainer {
+
   h2 {
     color: #ff8740;
     font-size: 32px;
@@ -137,16 +161,69 @@
     display: flex;
   }
 }
-.centermenuTitle {
-  display: flex;
-  align-items: baseline;
-}
-.centerPhotos {
-    display: flex;
-    width: 300px;
-    height: 200px;
-  }
 
-  .informationList{
-    padding: 24px 36px;
+.centerPhotos {
+  display: flex;
+  width: 300px;
+  height: 200px;
+}
+
+.informationList {
+  padding: 24px 36px;
+}
+.maleTrainersCards{
+  
+  display: flex;
+  flex-direction: column;
+
+}
+.threeCards{
+display: flex;
+  // padding: 42px;
+}
+// 教練小卡
+.coach-card {
+  width: 330px;
+  height: 452px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  margin: 32px;
+  .image-container {
+    position: relative;
   }
+  .label {
+    position: absolute;
+    left: 29px;
+    top: 24px;
+    border-radius: 8px;
+    background: #fefcf7;
+    padding: 4px 8px;
+    color: #ff8740;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%; 
+    letter-spacing: 1.4px;
+  }
+  .hashtag {
+    display: flex;
+    a {
+      color: #ff8740;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: 1.4px;
+      display: flex;
+      margin: 0px 14px 0px 0px;
+    }
+  }
+  .coach-details {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 1.4px;
+  }
+}
