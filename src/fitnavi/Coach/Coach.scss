@@ -1,19 +1,18 @@
 @import "../reset.scss";
-#coachMain{
+#coachMain {
   padding: 120px 50px;
 }
-.coachTitle{
+.coachTitle {
   display: flex;
-  align-items:baseline;
-
+  align-items: baseline;
   h2 {
-    font-family: "Mantou Sans";
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 9.6px;
     color: #ff8740;
+    font-family: "Dela Gothic One", sans-serif;
   }
   h3 {
     font-family: "Mantou Sans";
@@ -24,9 +23,12 @@
     letter-spacing: 2.4px;
   }
 }
-#personal-search-form {
+.searchBox {
   display: flex;
-  justify-content: center;
+  padding: 0px 200px;
+
+}
+#personal-search-form {
   margin-top: 50px;
 
   #area {
@@ -52,7 +54,7 @@
     height: 40px;
     padding: 8px 20px;
     border-radius: 999px;
-    border: 0.5px solid
+    border: 0.5px solid;
   }
   .submit {
     width: 165px;
@@ -101,7 +103,7 @@
       color: #ff8740;
       font-size: 14px;
       font-weight: 500;
-      line-height: 140%; 
+      line-height: 140%;
       letter-spacing: 1.4px;
     }
     .hashtag {
