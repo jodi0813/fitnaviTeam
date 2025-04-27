@@ -13,7 +13,7 @@ function Navbar() {
 
         <ul className="menu">
           <li>
-            <Link to="/center">健身場地</Link>
+            <Link to="/centerMap">健身場地</Link>
           </li>
           <li>
             <Link to="/coach">健身教練</Link>
