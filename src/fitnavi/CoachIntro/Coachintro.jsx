@@ -1,8 +1,10 @@
+import "./CoachIntro.scss";
+
 function CoachIntro() {
     return(
         <>
          <section className="intro">
-                <div className="title">
+                <div className="joinustitle">
                     <div className="titlecontent">
                         <h3>加入我們</h3>
                         <h4>成為我們的合作夥伴</h4>
@@ -10,7 +12,7 @@ function CoachIntro() {
                     <button>健身教練&gt;全部教練&gt;教練姓名</button>
                 </div>
 
-                <hr className="line"/>
+                <hr className="joinusline"/>
 
                     <div className="backbutton">
                         <button>
