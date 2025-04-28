@@ -12,7 +12,7 @@ function CoachIntro() {
                     <button>健身教練&gt;全部教練&gt;教練姓名</button>
                 </div>
 
-                <hr className="line"/>
+                <hr className="joinusline"/>
 
                     <div className="backbutton">
                         <button>
