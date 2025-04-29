@@ -2,8 +2,8 @@ import "./CenterTitle.scss";
 function CenterTitle() {
   return (
     <>
-      <div className="titlehead">
-        <div className="head">
+      <div className="centerTitleHead">
+        <div className="centerHead">
           <h2>找場地</h2>
           <h3>尋找專屬適合您的運動場地</h3>
         </div>

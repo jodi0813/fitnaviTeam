@@ -6,7 +6,7 @@ function Center() {
   return (
     <>
       <div id="centerMain">
-        <header className="title">
+        <header className="centerTitle">
         <CenterTitle />
           <hr />
           <h5 className="return">&lt; 返回列表</h5>
