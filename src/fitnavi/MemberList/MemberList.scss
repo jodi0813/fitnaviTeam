@@ -1,11 +1,35 @@
-.centerHead{
-width: 100%;
-}
-.memberBotton {
+#memberListAll {
     display: flex;
     flex-direction: column;
-    .personalStudentList{
+    width: 100vw;
+    padding: 120px 50px;
+    gap: 28px;
+
+
+    .centerHead {}
+
+    .memberList {
         display: flex;
-    flex-direction: column;
+        .memberBotton {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 20%;
+
+            .personalStudentList {
+                display: flex;
+                flex-direction: column;
+
+                gap: 10px;
+
+                button {
+                    width: 162px;
+                    border-radius: 20px;
+                    border: 1px solid #000;
+                    background: #FFF;
+
+                }
+            }
+        }
     }
 }
