@@ -1,10 +1,15 @@
-import CenterTitle from "./CenterTitle.jsx";
+import { Link } from "react-router-dom";
 import "./CenterMap.scss";
+
 function CenterMap() {
   return (
     <>
       <div id="centerMapMain">
-        <CenterTitle />
+        <div className="centerHead">
+          <h2>找場地</h2>
+          <h3>尋找專屬適合您的運動場地</h3>
+        </div>
+        <hr />
         <div className="mapSearchAll" >
           {/* 左邊 */}
           <div className="mapSearchLeft">
@@ -95,10 +100,47 @@ function CenterMap() {
                   </div>
                 </fieldset>
               </div>
-              <input type="button" value="搜尋" />
+              <button className="centermapSearch">搜尋</button>
             </form>
           </div>
-          <div className="mapResearch"></div>
+          {/* 中間 */}
+          <div className="centerResultPhoto">
+            <div className="photosNumber">共有 4 間符合條件的場館</div>
+            <Link to="/center" className="gymCard">
+            <div className="gymCard">
+              <img src="./images/center.jpg" alt="" className="centerPic" />
+              <div className="gymCardText">
+                <h3>A健身房</h3>
+                <p> #重訓器材 #私人教練 #單次計費 #女性專區 <br />
+                  #補給品販賣機 #靠近捷運站</p>
+              </div>
+            </div>
+            </Link>
+            <div className="gymCard">
+              <img src="./images/center.jpg" alt="" className="centerPic" />
+              <div className="gymCardText">
+                <h3>B健身房</h3>
+                <p> #重訓器材 #私人教練 #單次計費 #女性專區 <br />
+                  #補給品販賣機 #靠近捷運站</p>
+              </div>
+            </div>
+            <div className="gymCard">
+              <img src="./images/center.jpg" alt="" className="centerPic" />
+              <div className="gymCardText">
+                <h3>C健身房</h3>
+                <p> #重訓器材 #私人教練 #單次計費 #女性專區 <br />
+                  #補給品販賣機 #靠近捷運站</p>
+              </div>
+            </div>
+            <div className="gymCard">
+              <img src="./images/center.jpg" alt="" className="centerPic" />
+              <div className="gymCardText">
+                <h3>D健身房</h3>
+                <p> #重訓器材 #私人教練 #單次計費 #女性專區 <br />
+                  #補給品販賣機 #靠近捷運站</p>
+              </div>
+            </div>
+          </div>
           <div className="mapPhotos"></div>
         </div>
       </div>
