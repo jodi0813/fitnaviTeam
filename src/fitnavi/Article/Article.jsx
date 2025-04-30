@@ -6,14 +6,14 @@ function Article() {
 
             <main>
                 {/* <!-- banner區域 --> */}
-                <section className="banner">
+                <section className="article-banner">
 
-                    <div className="content">
+                    <div className="article-content">
                         <div className="left">
                             <button class="back">返回列表</button>
                         </div>
 
-                        <div className="bannercontent">
+                        <div className="article-bannercontent">
                             <p>健身入門</p>
                             <h2>增肌還是減脂？<br />
                                 搞懂訓練順序，讓妳少走冤枉路！</h2>
