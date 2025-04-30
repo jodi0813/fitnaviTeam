@@ -4,6 +4,7 @@ import Coach from "./Coach/Coach";
 import CenterMap from "./Center/CenterMap";
 import Article from "./Article/Article";
 import Center from "./Center/Center";
+import CoachIntro from "./CoachIntro/Coachintro";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/centerMap" element={<CenterMap />}></Route>
           <Route path="/article" element={<Article />}></Route>
           <Route path="/center" element={<Center />}></Route>
+          <Route path="/coachintro" element={<CoachIntro />}></Route>
         </Routes>
       </div>
     </>
