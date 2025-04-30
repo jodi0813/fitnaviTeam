@@ -31,6 +31,9 @@ function Navbar() {
               <li>
                 <Link>加入我們</Link>
               </li>
+              <li>
+                <Link to="/memberlist">後台(暫放)</Link>
+              </li>
             </ul>
             <button type="button" className="login">
               登入 / 註冊

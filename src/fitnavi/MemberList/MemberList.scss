@@ -1,0 +1,11 @@
+.centerHead{
+width: 100%;
+}
+.memberBotton {
+    display: flex;
+    flex-direction: column;
+    .personalStudentList{
+        display: flex;
+    flex-direction: column;
+    }
+}
