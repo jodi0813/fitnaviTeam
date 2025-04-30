@@ -8,6 +8,7 @@ function Coach() {
           <h2>健身教練</h2>
           <p>PERSONAL TRAINER</p>
         </header>
+        <hr />
         <div className="searchBox">
           <form
             action=""
