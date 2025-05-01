@@ -17,7 +17,7 @@ function MemberList() {
                             <button>個人資訊</button>
                             <button>我的頁面</button>
                             <p>我是<br />一般用戶</p>
-                            <img src="./images/member1.png" alt="" />
+                            <img src="" alt="" />
                         </div>
                         {/* 教練/營養師 */}
                         <div className="personalStudentList">

@@ -106,7 +106,8 @@
                     flex-direction: column;
                     gap: 12px;
                     padding: 0px 24px;
-
+                    height: 329px;
+                    overflow: auto; //卷軸
                     legend {
                         font-family: Alata;
                         font-size: 14px;

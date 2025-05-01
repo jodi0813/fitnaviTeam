@@ -85,6 +85,7 @@ function CenterMap() {
                     <input type="checkbox" name="order" id="order11" />
                     <label for="order11">靠近捷運站(200m)</label>
                   </div>
+
                 </fieldset>
               </div>
               <div className="centerTitleItem">
