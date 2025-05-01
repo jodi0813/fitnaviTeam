@@ -10,6 +10,7 @@
 
     .memberList {
         display: flex;
+
         .memberBotton {
             display: flex;
             flex-direction: column;
@@ -19,13 +20,15 @@
             .personalStudentList {
                 display: flex;
                 flex-direction: column;
-
+                height: 240px;
                 gap: 10px;
+                border-radius: 20px 0px 0px 20px;
+                background: #FBADAD;
+                padding: 20px;
 
                 button {
                     width: 162px;
                     border-radius: 20px;
-                    border: 1px solid #000;
                     background: #FFF;
 
                 }
