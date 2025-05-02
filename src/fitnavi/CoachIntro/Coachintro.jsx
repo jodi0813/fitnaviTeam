@@ -3,21 +3,21 @@ import "./Coachintro.css";
 function Coachintro() {
     return (
         <>
-        
-        
+
+
             <section className="intro">
-                <div className="joinustitle">
+                <div className="title">
                     <div className="titlecontent">
-                        <h3 >加入我們</h3>
+                        <h3>加入我們</h3>
                         <h4>成為我們的合作夥伴</h4>
                     </div>
-                    <button>健身教練&gt;全部教練&gt;教練姓名</button>
+                    <button>首頁&gt;健身教練&gt;張俐筠 Lila</button>
                 </div>
 
-                <hr className="joinusline" />
+                <hr className="line" />
 
                 <div className="backbutton">
-                    <button >
+                    <button>
                         &lt;返回列表</button>
                 </div>
 
@@ -29,15 +29,15 @@ function Coachintro() {
                         </div>
                         <div className="more">
                             <figure className="moreimg1">
-                                <img src="./images/Frame 100.png" alt="" />
+                                <img src="./images/coachintromore-1.jpg"/>
                             </figure>
 
                             <figure className="moreimg2">
-                                <img src="./images/Frame 101.png" alt="" />
+                                <img src="./images/coachintromore-2.jpg" alt="" />
                             </figure>
 
                             <figure className="moreimg3">
-                                <img src="./images/Frame 99.png" alt="" />
+                                <img src="./images/coachintromore-3.jpg" alt="" />
                             </figure>
 
                         </div>
@@ -61,7 +61,7 @@ function Coachintro() {
                         <div className="box">
                             <div className="classtime">
                                 <h2>一對一訓練課程</h2>
-                                <div class="timeblock">
+                                <div className="timeblock">
                                     <i class="fa-regular fa-clock"> </i>
                                     <span>60分鐘</span>
                                 </div>
@@ -75,7 +75,7 @@ function Coachintro() {
                             </div>
                         </div>
 
-                        <div className="place">
+                        <div class="place">
                             <p>上課地點<br />可選擇</p>
                             <div className="moreimg4">
                                 <img src="./images/Frame 104.png" alt="" />
@@ -116,7 +116,7 @@ function Coachintro() {
                     </div>
                     <div className="bubble-wrapper">
                         <div className="talkbubble">
-                            <p>不只是訓練，<br />是量身打造的改變。</p>
+                            <p>不只是訓練，<br/>是量身打造的改變。</p>
                         </div>
                     </div>
 
@@ -164,9 +164,10 @@ function Coachintro() {
                         <h3>工作經歷</h3>
                         <h4>Working Experiences</h4>
                     </div>
-                    <p>·[幾年] 年健身教練經驗，累積超過 [多少] 堂私人課程
-                        ·曾任職於 [健身房名稱/私人工作室]，專長增肌、減脂、體能訓練
-                        ·指導超過 [多少] 名學員，達成體態與表現目標
+
+                    <p>·[幾年] 年健身教練經驗，累積超過 [多少] 堂私人課程<br />
+                        ·曾任職於 [健身房名稱/私人工作室]，專長增肌、減脂、體能訓練<br />
+                        /                  ·指導超過 [多少] 名學員，達成體態與表現目標<br />
                         ·開設團體與企業課程，內容涵蓋體適能與 HIIT 訓練 </p>
                 </div>
 
@@ -176,17 +177,17 @@ function Coachintro() {
                         <h4>Certification</h4>
                     </div>
 
-                    <p>
-                        ·中華民國體適能協會 C 級健身指導員
-                        ·ACE 美國運動委員會私人教練證照
-                        ·TRX 懸吊訓練系統認證教練
+                    <p>·中華民國體適能協會 C 級健身指導員<br />
+                        ·ACE 美國運動委員會私人教練證照<br />
+                        ·TRX 懸吊訓練系統認證教練<br />
                     </p>
                 </div>
+
             </section>
 
-            <section className="reservation">
-                <div className="reserve">
-                    <div className="restitle">
+            <section className="reservation"> 
+            <div className="reserve">
+                <div className="restitle">
                         <h3>預約流程</h3>
                         <h4>Reserve Process</h4>
                     </div>
@@ -215,14 +216,242 @@ function Coachintro() {
                         <h4>Available Time</h4>
                     </div>
 
-              
+
+                    <div class="main-container-wrapper"></div>
+            </div>                   
+                        <header>
+                            <button className="header__btn header__btn--left" title="Menu">
+                                <svg className="icon" width="20px" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="#fff" d="M0 0h20v2H0zM0 7h20v2H0zM0 14h20v2H0z" />
+                                </svg>
+                            </button>
+                            <button className="header__btn header__btn--right" title="Add event">
+                                <svg className="icon" width="26px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill="#fff" d="M416 277.333H277.333V416h-42.666V277.333H96v-42.666h138.667V96h42.666v138.667H416v42.666z" />
+                                </svg>
+                            </button>
+                        </header>
+                        <div>
+                            <div class="calendar-container">
+                                <div class="calendar-container__header">
+                                    <button class="calendar-container__btn calendar-container__btn--left" title="Previous">
+                                        <i class="icon ion-ios-arrow-back"></i>
+                                    </button>
+                                    <h2 class="calendar-container__title">October 2018</h2>
+                                    <button class="calendar-container__btn calendar-container__btn--right" title="Next">
+                                        <i class="icon ion-ios-arrow-forward"></i>
+                                    </button>
+                                </div>
+                                <div class="calendar-container__body">
+                                    <div class="calendar-table">
+                                        <div class="calendar-table__header">
+                                            <div class="calendar-table__row">
+                                                <div class="calendar-table__col">S</div>
+                                                <div class="calendar-table__col">M</div>
+                                                <div class="calendar-table__col">T</div>
+                                                <div class="calendar-table__col">W</div>
+                                                <div class="calendar-table__col">T</div>
+                                                <div class="calendar-table__col">F</div>
+                                                <div class="calendar-table__col">S</div>
+                                            </div>
+                                        </div>
+                                        <div class="calendar-table__body">
+                                            <div class="calendar-table__row">
+                                                <div class="calendar-table__col calendar-table__inactive">
+                                                    <div class="calendar-table__item">
+                                                        <span>30</span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-table__col calendar-table__today">
+                                                    <div class="calendar-table__item">
+                                                        <span>1</span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-table__col">
+                                                    <div class="calendar-table__item">
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-table__col">
+                                                    <div class="calendar-table__item">
+                                                        <span>3</span>
+                                                    </div>
+                                                </div>
+                                                <div className="calendar-table__col">
+                                                    <div className="calendar-table__item">
+                                                        <span>4</span>
+                                                    </div>
+                                                </div>
+                                                <div className="calendar-table__col calendar-table__event">
+                                                    <div className="calendar-table__item">
+                                                        <span>5</span>
+                                                    </div>
+                                                </div>
+                                                <div className="calendar-table__col">
+                                                    <div className="calendar-table__item">
+                                                        <span>6</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__row">
+                                                <div className="calendar-table__item">
+                                                    <span>7</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>8</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>9</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>10</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>11</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>12</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>13</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="calendar-table__row">
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>14</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>15</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col calendar-table__event calendar-table__event--long calendar-table__event--start">
+                                                <div className="calendar-table__item">
+                                                    <span>16</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col calendar-table__event calendar-table__event--long">
+                                                <div className="calendar-table__item">
+                                                    <span>17</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col calendar-table__event calendar-table__event--long calendar-table__event--end">
+                                                <div className="calendar-table__item">
+                                                    <span>18</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>19</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>20</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="calendar-table__row">
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>21</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>22</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>23</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>24</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>25</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>26</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col calendar-table__event calendar-table__event--long calendar-table__event--start">
+                                                <div className="calendar-table__item">
+                                                    <span>27</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="calendar-table__row">
+                                            <div className="calendar-table__col calendar-table__event calendar-table__event--long calendar-table__event--end">
+                                                <div className="calendar-table__item">
+                                                    <span>28</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>29</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>30</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col">
+                                                <div className="calendar-table__item">
+                                                    <span>31</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col calendar-table__event calendar-table__inactive">
+                                                <div className="calendar-table__item">
+                                                    <span>1</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col calendar-table__inactive">
+                                                <div className="calendar-table__item">
+                                                    <span>2</span>
+                                                </div>
+                                            </div>
+                                            <div className="calendar-table__col calendar-table__inactive">
+                                                <div className="calendar-table__item">
+                                                    <span>3</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
 
                 </div>
             </section>
 
+
             <section className="coacharticle">
                 <div className="articletitle">
-                    <h3>發表文章</h3>
+                    <h3 className="title">發表文章</h3>
                     <h4>Articles</h4>
                 </div>
 
@@ -239,7 +468,7 @@ function Coachintro() {
                                 <h4>健身初學者必看：<br />如何開始你的運動旅程</h4>
                                 <p>剛開始健身時，選擇合適的運動方式和計劃非常重要。無論你是想增強體能還是減脂，開始的時候不需要過於激烈，慢慢增加運動量。這篇文章將帶你了解一些基本的運動常識，並提供從簡單動作開始的計劃。
                                 </p>
-                                <div className="tag">
+                                <div class="tag">
                                     <p>#標籤</p>
                                     <p>#標籤</p>
                                     <p>#標籤</p>
@@ -250,9 +479,9 @@ function Coachintro() {
 
                         <div className="card2">
                             <p>2025/03/28</p>
-                            <div className="img-box"><img src="./images/article.png" alt="" /></div>
+                            <div class="img-box"><img src="./images/article.png" alt="" /></div>
                             <div className="content-box">
-                                <h4>健身初學者必看：<br />如何開始你的運動旅程</h4>
+                                <h4>健身初學者必看：<br/>如何開始你的運動旅程</h4>
                                 <p>剛開始健身時，選擇合適的運動方式和計劃非常重要。無論你是想增強體能還是減脂，開始的時候不需要過於激烈，慢慢增加運動量。這篇文章將帶你了解一些基本的運動常識，並提供從簡單動作開始的計劃。
                                 </p>
                                 <div className="tag">
@@ -266,7 +495,7 @@ function Coachintro() {
 
                         <div className="card3">
                             <p>2025/03/28</p>
-                            <div className="img-box"><img src="./images/article.png" alt="" /></div>
+                            <div class="img-box"><img src="./images/article.png" alt="" /></div>
                             <div className="content-box">
                                 <h4>健身初學者必看：<br />如何開始你的運動旅程</h4>
                                 <p>剛開始健身時，選擇合適的運動方式和計劃非常重要。無論你是想增強體能還是減脂，開始的時候不需要過於激烈，慢慢增加運動量。這篇文章將帶你了解一些基本的運動常識，並提供從簡單動作開始的計劃。
@@ -287,7 +516,18 @@ function Coachintro() {
 
                 </div>
             </section>
-     
+
+            <section className="comment">
+                <div className="commentitle">
+                    <h3>學員評價</h3>
+                    <h4>Rating</h4>
+                </div>
+                <div className="star">
+                    <p>4.0</p>
+                    <p> &#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                </div>
+            </section >
+
         </>
     )
 }
