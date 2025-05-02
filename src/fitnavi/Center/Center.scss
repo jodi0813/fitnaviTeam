@@ -1,12 +1,14 @@
 #centerMain {
   padding: 120px 50px;
 }
+
 .centerTitle {
   // position: absolute;
   // top: 114px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
   .titlehead {
     display: flex;
     justify-content: space-between;
@@ -44,6 +46,7 @@
     }
   }
 }
+
 .main-content {
   padding: 19px 100px;
   align-items: flex-start;
@@ -56,11 +59,11 @@
 }
 
 .centerPic {
-  // height: 338px;
   align-self: stretch;
   border-radius: 16px;
-  // width: 1140px;
   max-height: 338px;
+  object-fit: cover;
+
 }
 
 .centerLogoPic {
@@ -117,12 +120,14 @@
   line-height: 150%;
   letter-spacing: 1.6px;
 }
+
 .expandContent {
   display: flex;
   justify-content: center;
   margin: 24px;
 }
-.main{
+
+.main {
   display: flex;
   flex-direction: column;
   padding: 0px 122px;
