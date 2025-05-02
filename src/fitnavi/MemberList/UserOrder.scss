@@ -59,7 +59,7 @@
         font-size: 14px;
         font-weight: 500;
         line-height: 140%;
-              letter-spacing: 1.4px;
+        letter-spacing: 1.4px;
         text-align: center;
         padding: 4px 12px;
       }
@@ -75,6 +75,78 @@
       line-height: 140%;
       /* 16.8px */
       letter-spacing: 1.2px;
+    }
+  }
+
+  // 表格區
+  .order-table {
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: center;
+
+    //表格標題跟欄位
+    .table-header,
+    .table-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.5fr 1.5fr 1fr 1.5fr 1.5fr 1fr;
+      align-items: center;
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
+      background-color: #F9FAFC;
+    }
+
+    .table-header {
+      background-color: #FFF;
+      font-weight: bold;
+    }
+
+    .btn-orange {
+      background-color: #FF8740;
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 12px;
+    }
+
+    .btn-cancel {
+      background: transparent;
+      color: #FF8740;
+      border: 1px solid #FF8740;
+      border-radius: 999px;
+      padding: 2px 10px;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .btn-outline {
+      border: 1px solid #000;
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 12px;
+      background: transparent;
+    }
+
+    //課程完成按鈕(完成&未進行)
+    .status {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+
+      &.done {
+        background-color: #FFF;
+        color: #FF8740;
+        border: 1px solid #FF8740;
+        padding: 4px 12px;
+
+      }
+
+      &.pending {
+        color: #999;
+
+      }
     }
   }
 }
