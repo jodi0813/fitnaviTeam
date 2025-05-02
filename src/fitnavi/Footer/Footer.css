@@ -1,0 +1,197 @@
+@charset "UTF-8";
+*/
+
+/* reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* 重置字體，有空格字體或是中文字體要用引號 */
+body {
+    font-family:
+        /*西文*/
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+        /*中文*/
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    ;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+}
+
+/* 重置連接 */
+a {
+    /* a預設是行內元素不知原設定尺寸，所以先改為display block */
+    display: block;
+    color: #444;
+    text-decoration: none;
+}
+
+
+#footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background-size: cover;
+    background-position:center; 
+    background-repeat: no-repeat;
+}
+
+.footerwrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 600px;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+
+}
+
+.overlaytext {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+
+.explore,
+.partner,
+.aboutus,
+.law {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0px;
+}
+
+.overlaytext h4 {
+    color: var(--white, var(--white, #FEFCF7));
+    text-align: center;
+    font-family: "Noto Sans TC";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 45px
+
+}
+
+.overlaytext p {
+    color: var(--dark, #3A2C19);
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 45px;
+}
