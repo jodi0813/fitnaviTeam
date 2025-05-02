@@ -1,0 +1,80 @@
+.orderbox {
+  border-radius: 20px;
+  background: #F1F1F1;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.25);
+  width: 1073px;
+  height: 658px;
+  padding: 50px;
+
+  .centermenuTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+
+    h2 {
+      color: #ff8740;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 3.2px;
+    }
+
+    .subtitleWrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #4a3928; // 可以自己設定英文副標的顏色
+      letter-spacing: 0.5px;
+      // padding: 5px 0px;
+    }
+
+    .subtitleLine {
+      width: 150%;
+      height: 2px;
+      background-color: #4a3928; // 和副標一樣色
+      margin-top: 4px; // 副標和橫線的距離
+    }
+  }
+
+  .orderboxButtonText {
+    display: flex;
+    justify-content: space-between;
+
+
+    .orderboxButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+
+      button {
+        border-radius: 20px;
+        border: 1px solid #3A2C19;
+        background: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 140%;
+              letter-spacing: 1.4px;
+        text-align: center;
+        padding: 4px 12px;
+      }
+    }
+
+    p {
+      color: #989794;
+      text-align: center;
+      font-family: "Noto Sans TC";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      /* 16.8px */
+      letter-spacing: 1.2px;
+    }
+  }
+}

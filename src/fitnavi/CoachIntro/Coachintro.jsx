@@ -1,4 +1,4 @@
-import "./Coachintro.scss";
+import "./Coachintro.css";
 
 function Coachintro() {
     return (

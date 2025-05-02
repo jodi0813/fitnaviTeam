@@ -6,6 +6,7 @@ import Article from "./Article/Article";
 import Center from "./Center/Center";
 import CoachIntro from "./CoachIntro/Coachintro";
 import Footer from "./Footer/Footer";
+import MemberList from "./MemberList/MemberList";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/article" element={<Article />}></Route>
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
+          <Route path="/memberlist" element={<MemberList />}></Route>
         </Routes>
         <Footer/>
         

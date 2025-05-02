@@ -6,8 +6,10 @@ function Footer() {
         <>
             <section id="footer">
                 <div className="footerwrapper">
-                    <img src="/images/Footer.png" alt="Footer"/>
-                        <div className="overlaytext">
+                    {/* <img src="/images/Footer.png" alt="Footer" /> */}
+
+                    <div className="footer-overlaytext">
+                        <div className="footer-columntext">
                             <div className="explore">
                                 <h4>探索</h4>
                                 <p>課程搜尋</p>
@@ -36,11 +38,17 @@ function Footer() {
                                 <p>合作夥伴爭議解決中心</p>
                             </div>
                         </div>
+
+                        <div className="copyright">Copyright © 2025 FITNAVI All rights reserved.</div>
+                    </div>
+
+
                 </div>
 
 
 
             </section>
+
         </>)
 }
 export default Footer;

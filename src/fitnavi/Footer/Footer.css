@@ -138,22 +138,40 @@ a {
     position: relative;
     bottom: 0;
     background-size: cover;
-    background-position:center; 
     background-repeat: no-repeat;
+    margin-top: 300px;
 }
 
 .footerwrapper {
+    background-image: url(/public/images/Footer.png);
     display: flex;
-    flex-direction: row;
-    width: 100vw;
+    flex-direction: column;
+    max-width: 100vw;
     height: 600px;
     background-size: cover;
     position: relative;
     background-repeat: no-repeat;
-
+    background-position: center;
+    flex-wrap: wrap;
 }
 
-.overlaytext {
+/* .footertext{
+    width: 100%;
+    display: flex;
+    /* flex-direction: row; */
+/* flex-direction: column;}  */
+
+.footer-overlaytext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 添加間距 */
+    align-items: center;
+    height: 100%;
+}
+
+
+.footer-columntext {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -176,7 +194,7 @@ a {
     margin: 0px;
 }
 
-.overlaytext h4 {
+.footer-overlaytext h4 {
     color: var(--white, var(--white, #FEFCF7));
     text-align: center;
     font-family: "Noto Sans TC";
@@ -184,14 +202,28 @@ a {
     font-style: normal;
     font-weight: 900;
     line-height: 45px
-
 }
 
-.overlaytext p {
+.footer-overlaytext p {
     color: var(--dark, #3A2C19);
     font-family: "Noto Sans TC";
     font-size: 16px;
     font-style: normal;
     font-weight: 900;
     line-height: 45px;
+}
+
+
+.copyright {
+    position: absolute;
+    bottom: 5%;
+    color: #FFFCFA;
+
+    font-family: "Nyght Serif";
+    font-size: var(--fontsize-H3, 18px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    /* 222.222% */
+    letter-spacing: 0.36px;
 }
