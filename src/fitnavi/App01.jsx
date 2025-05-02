@@ -7,6 +7,7 @@ import Center from "./Center/Center";
 import CoachIntro from "./CoachIntro/Coachintro";
 import Footer from "./Footer/Footer";
 import MemberList from "./MemberList/MemberList";
+import Allarticle from "./Allarticle/Allarticle";
 
 function App() {
   return (
