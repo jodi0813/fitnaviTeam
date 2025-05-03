@@ -3,6 +3,7 @@ import Navbar from "./Navbar/Navbar";
 import Coach from "./Coach/Coach";
 import CenterMap from "./Center/CenterMap";
 import Article from "./Article/Article";
+import Allarticle from "./Allarticle/Allarticle";
 import Center from "./Center/Center";
 import CoachIntro from "./CoachIntro/Coachintro";
 import Footer from "./Footer/Footer";
@@ -18,9 +19,10 @@ function App() {
         <Routes>
         <Route path="/" element={<Coach />} />
           <Route path="/coach" element={<Coach />}></Route>
-          <Route path="/coach/:id" element={<Coach />}></Route>
+          
           <Route path="/centerMap" element={<CenterMap />}></Route>
-          <Route path="/article" element={<Article />}></Route>
+          <Route path="/allarticle" element={<Allarticle />} />  {/* 文章列表頁 */}
+          {/* <Route path="/allarticle/:card1" element={<Article />} />  */}
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>

@@ -23,7 +23,7 @@ function Navbar() {
                 <Link>我的收藏</Link>
               </li>
               <li>
-                <Link to='/article'>知識文章</Link>
+                <Link to="/allarticle">知識文章</Link>
               </li>
               <li>
                 <Link to="/centerMap">健身場地</Link>

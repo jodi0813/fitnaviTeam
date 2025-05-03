@@ -1,17 +1,22 @@
 import React from 'react';
 import Articlecards from '../../components/Articlecards';
+// import { useParams } from "react-router-dom";
 
 function Allarticle() {
+    // const { id } = useParams();
     const cardsData = [
         {
-            date: "2025/06/15",
+            id:"card1",
+            date: "2025/01/02",
             img: "./images/card1.jpg",
-            title: "健身初學者必看：如何開始你的運動旅程",
-            content: "剛開始健身時，選擇合適的運動方式和計劃非常重要。無論你是想增強體能還是減脂，開始的時候不需要過於激烈，慢慢增加運動量。這篇文章將帶你了解一些基本的運動常識，並提供從簡單動作開始的計劃。",
-            tags: ["新手健身", "養成習慣"],
-            category: "健身入門"
+            title: "增肌還是減脂？搞懂訓練順序，讓你少走冤枉路！",
+            content: "健身營養的成功不僅是攝取足夠的卡路里，更重要的是如何搭配碳水化合物、蛋白質與脂肪。根據不同的健身目標，合理調整飲食比例，讓效果事半功倍！",
+            tags: ["減脂", "增肌"],
+            category: "營養調配"
+
         },
         {
+            id:"card2",
             date: "2025/05/26",
             img: "./images/card1.jpg",
             title: "重訓不等於變壯？破解迷思！",
@@ -21,6 +26,7 @@ function Allarticle() {
 
         },
         {
+            id:"card3",
             date: "2025/05/20",
             img: "./images/card1.jpg",
             title: "想有效燃脂？必學這5種高效率運動法",
@@ -29,6 +35,7 @@ function Allarticle() {
             category: "燃脂運動"
         },
         {
+            id:"card4",
             date: "2025/04/27",
             img: "./images/card1.jpg",
             title: "為什麼肌力這麼重要？打造強韌體能的第一步",
@@ -38,6 +45,7 @@ function Allarticle() {
 
         },
         {
+            id:"card5",
             date: "2025/04/11",
             img: "./images/card1.jpg",
             title: "想練出理想線條？體態雕塑其實有方法",
@@ -47,6 +55,7 @@ function Allarticle() {
 
         },
         {
+            id:"card6",
             date: "2025/04/06",
             img: "./images/card1.jpg",
             title: "每天10分鐘，伸展放鬆身體提升柔軟度",
@@ -55,6 +64,7 @@ function Allarticle() {
             category: "伸展放鬆"
         },
         {
+            id:"card7",
             date: "2025/03/28",
             img: "./images/card1.jpg",
             title: "減脂只靠運動不夠？飲食管理才是關鍵",
@@ -63,6 +73,7 @@ function Allarticle() {
             category: "減脂攻略"
         },
         {
+            id:"card8",
             date: "2025/02/04",
             img: "./images/card1.jpg",
             title: "增肌該怎麼吃？營養搭配與飲食策略分享",
@@ -71,17 +82,20 @@ function Allarticle() {
             category: "增肌飲食"
         },
         {
-            date: "2025/01/02",
+            id:"card9",
+            date: "2025/06/15",
             img: "./images/card1.jpg",
-            title: "增肌還是減脂？搞懂訓練順序，讓你少走冤枉路！",
-            content: "健身營養的成功不僅是攝取足夠的卡路里，更重要的是如何搭配碳水化合物、蛋白質與脂肪。根據不同的健身目標，合理調整飲食比例，讓效果事半功倍！",
-            tags: ["減脂", "增肌"],
-            category: "營養調配"
+            title: "健身初學者必看：如何開始你的運動旅程",
+            content: "剛開始健身時，選擇合適的運動方式和計劃非常重要。無論你是想增強體能還是減脂，開始的時候不需要過於激烈，慢慢增加運動量。這篇文章將帶你了解一些基本的運動常識，並提供從簡單動作開始的計劃。",
+            tags: ["新手健身", "養成習慣"],
+            category: "健身入門"
+
         }
     ]
     return (
         <>
-         <section className="Allarticle-header">
+        
+            <section className="Allarticle-header">
                 <h3>知識文章</h3>
                 <h4>補足符合您需求的知識</h4>
                 <hr />
@@ -144,39 +158,39 @@ function Allarticle() {
                 </div>
             </section>
 
-                <section>
-                    <div className="Allarticle-cards">
-                        {cardsData.map((card, index) => (
-                            <Articlecards
-                                key={index}
-                                date={card.date}
-                                img={card.imageUrl}
-                                title={card.title}
-                                content={card.content}
-                                tags={card.tags}
-                                category={card.category}
-                                className={`card${index + 1}`}
-                            />
-                        ))}
-                    </div>
-                </section>
+            <section>
+                <div className="Allarticle-cards">
+                    {cardsData.map((card, index) => (
+                        <Articlecards
+                            key={index}
+                            date={card.date}
+                            img={card.img}
+                            title={card.title}
+                            content={card.content}
+                            tags={card.tags}
+                            category={card.category}
+                            className={`card${index + 1}`}
+                        />
+                    ))}
+                </div>
+            </section>
 
             <div class="pagination">
                 <button className="pre-button"></button>
-                <button className="page-button" onclick="goToPage(1)">1</button>
-                <button className="page-button" onclick="goToPage(2)">2</button>
-                <button className="page-button" onclick="goToPage(3)">3</button>
-                <button className="page-button" onclick="goToPage(4)">4</button>
-                <button className="page-button" onclick="goToPage(5)">5</button>
-                <button className="page-button" onclick="goToPage(6)">6</button>
-                <button className="page-button" onclick="goToPage(7)">7</button>
-                <button className="page-button" onclick="goToPage(8)">8</button>
-                <button className="page-button" onclick="goToPage(9)">9</button>
+                <button className="page-button" onClick="goToPage(1)">1</button>
+                <button className="page-button" onClick="goToPage(2)">2</button>
+                <button className="page-button" onClick="goToPage(3)">3</button>
+                <button className="page-button" onClick="goToPage(4)">4</button>
+                <button className="page-button" onClick="goToPage(5)">5</button>
+                <button className="page-button" onClick="goToPage(6)">6</button>
+                <button className="page-button" onClick="goToPage(7)">7</button>
+                <button className="page-button" onClick="goToPage(8)">8</button>
+                <button className="page-button" onClick="goToPage(9)">9</button>
                 <button className="next-button"></button>
             </div>
         </>
 
     )
-    
+
 }
 export default Allarticle
