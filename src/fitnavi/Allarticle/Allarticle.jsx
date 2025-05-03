@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import "./AllArticle.scss";
 
 function Allarticle() {
-    const { id } = useParams();
+    // const { id } = useParams();
     const cardsData = [
         {
             id: "card1",
