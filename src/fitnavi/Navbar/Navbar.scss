@@ -1,12 +1,13 @@
 @use "../reset.scss";
 
 
-#header {
+#navbarHeader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: transparent; /* 或透明 */
+
 }
 .container {
   max-width: calc(100% - 240px); /* 左右各120px */

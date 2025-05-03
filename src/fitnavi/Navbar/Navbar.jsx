@@ -3,7 +3,7 @@ import "./Navbar.scss";
 function Navbar() {
   return (
     <>
-      <header id="header">
+      <header id="navbarHeader">
         <div className="container">
           <nav id="navbar">
             <Link to="/" className="logo">

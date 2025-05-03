@@ -8,6 +8,7 @@ import CoachIntro from "./CoachIntro/Coachintro";
 import Footer from "./Footer/Footer";
 import MemberList from "./MemberList/MemberList";
 import Allarticle from "./Allarticle/Allarticle";
+import "./reset.scss";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <div className="wrap">
         <Navbar />
         <Routes>
+        <Route path="/" element={<Coach />} />
           <Route path="/coach" element={<Coach />}></Route>
           <Route path="/coach/:id" element={<Coach />}></Route>
           <Route path="/centerMap" element={<CenterMap />}></Route>

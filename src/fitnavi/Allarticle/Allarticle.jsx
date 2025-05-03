@@ -1,5 +1,5 @@
 import React from 'react';
-import Articlecards from './Articlecards';
+import Articlecards from '../../components/Articlecards';
 
 function Allarticle() {
     const cardsData = [
