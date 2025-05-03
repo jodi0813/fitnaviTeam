@@ -125,7 +125,7 @@ function Allarticle() {
                     <div className="Cat-name">
                         <p>健身入門</p>
                         <p>重量訓練</p>
-                        <h4>燃脂運動</h4>
+                        <p>燃脂運動</p>
                         <p>肌力提升</p>
                         <p>體態雕塑</p>
                         <p>伸展放鬆</p>
@@ -168,7 +168,7 @@ function Allarticle() {
 
                     
 
-                 <div className="Allarticle-cards">
+                 <div className="Allarticle-Card">
                     {cardsData.map((card, index) => (
                         <Articlecards
                             key={index}
