@@ -107,32 +107,25 @@ function Allarticle() {
 
 
 
-            <section className="Serch">
-                <label htmlFor="">健身教練</label>
-                <label htmlFor="">營養師</label>
-                <input type="text" />
-                <button>搜尋</button>
+            <section className="Search">
+                <button className='Coach-Button'>健身教練</button>
+                <button className='Nutriton-Button'>營養師</button>
+                <input type="text" className='Search-Button' placeholder='關鍵字搜尋' />
+                <button className='ClickSearch-Button'>搜尋</button>
             </section>
 
 
-            <section className="AllArticle-title">
-                <div>
-                    <p>Categories</p>
-                    <hr />
-                </div>
-
-                <div>
-                    <p>Articles</p>
-                    <h4>燃脂運動</h4>
-                </div>
-            </section>
 
             <section className="Allarticle-content">
                 <div className="cat-tag">
+                    <div className="cat-tag-title">
+                        <p>Categories</p>
+                    </div>
+
                     <div className="Cat-name">
                         <p>健身入門</p>
                         <p>重量訓練</p>
-                        <p>燃脂運動</p>
+                        <h4>燃脂運動</h4>
                         <p>肌力提升</p>
                         <p>體態雕塑</p>
                         <p>伸展放鬆</p>
@@ -142,6 +135,10 @@ function Allarticle() {
                     </div>
 
                     <div className="Tag">
+                        <div className='TagName'>
+                            <h4>#HashTag</h4>
+                        </div>
+
                         <p>新手健身</p>
                         <p>迷思破解</p>
                         <p>養成習慣</p>
@@ -162,10 +159,16 @@ function Allarticle() {
                         <p>飲食</p>
                     </div>
                 </div>
-            </section>
 
-            {/* <section>
-                <div className="Allarticle-cards">
+                <div className='Allarticle-cards'>
+                    <div className="Allarticle-cards-title">
+                        <p>Articles</p>
+                        <h4>燃脂運動</h4>
+                    </div>
+
+                    
+
+                    {/* <div className="Allarticle-cards">
                     {cardsData.map((card, index) => (
                         <Articlecards
                             key={index}
@@ -177,22 +180,23 @@ function Allarticle() {
                             category={card.category}
                             className={`card${index + 1}`}
                         />
-                    ))}
+                    ))}</div> */}
                 </div>
-            </section> */}
+            </section>
+
 
             <div class="pagination">
-                <button className="pre-button"></button>
+                <button className="pre-button">	&laquo;</button>
                 <button className="page-button" onClick="goToPage(1)">1</button>
                 <button className="page-button" onClick="goToPage(2)">2</button>
                 <button className="page-button" onClick="goToPage(3)">3</button>
                 <button className="page-button" onClick="goToPage(4)">4</button>
-                <button className="page-button" onClick="goToPage(5)">5</button>
+                <button className="page-button5" onClick="goToPage(5)">5</button>
                 <button className="page-button" onClick="goToPage(6)">6</button>
                 <button className="page-button" onClick="goToPage(7)">7</button>
                 <button className="page-button" onClick="goToPage(8)">8</button>
                 <button className="page-button" onClick="goToPage(9)">9</button>
-                <button className="next-button"></button>
+                <button className="next-button">&raquo;</button>
             </div>
         </>
 
