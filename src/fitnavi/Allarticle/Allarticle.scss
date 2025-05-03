@@ -1,2 +1,71 @@
 @import "../reset.scss";
 
+@font-face {
+    font-family: "Mantou Sans";
+    src: url(../../assets/MantouSans-Regular.ttf);
+}
+
+
+body {
+    margin-top: 100px;
+
+    #root {
+        width: 100%;
+
+        .Allarticle-header {
+            display: flex;
+            flex-direction: column;
+            margin-left: 50px;
+            margin-right: 50px;
+            width: 100%;
+            margin-bottom: 40px;
+
+
+            .headertitle {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                justify-content: flex-start;
+                align-items: center;
+
+                h3 {
+                    color: var(--primary, var(--primary, #FF8740));
+                    font-family: "Mantou Sans";
+                    font-size: 48px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    /* 72px */
+                    letter-spacing: 9.6px;
+                }
+
+                h4 {
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: var(--dark, #3A2C19);
+                    font-family: "Mantou Sans";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 50px;
+                    /* 208.333% */
+                    letter-spacing: 2.4px;
+                    color: white;
+                    margin-top: 25px;
+                }
+            }
+
+            .headerline {
+                margin-left: 0px;
+                width: 100%;
+            }
+
+        }
+    }
+
+    .headerline {
+        width: 100%; // 或固定寬度 like 1341px
+        max-width: 1341px; // 可選：避免過寬
+        height: 2px;
+    }
+
+}

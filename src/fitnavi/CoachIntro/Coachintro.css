@@ -1179,7 +1179,7 @@ span {
     }
   }
   
-  header {
+.calendarname {
     background-color: #fff;
     display: flex;
     height: 58px;
@@ -1188,7 +1188,7 @@ span {
     position: relative;
   }
   
-  .header__btn {
+  .calendarname__btn {
     background-color: #86d8c9;
     border: 2px solid #fff;
     border-radius: 50%;
@@ -1202,20 +1202,20 @@ span {
     top: -25px;
     width: 80px;
   }
-  .header__btn:hover, .header__btn:focus {
+  .calendarname__btn:hover, .header__btn:focus {
     background: #67cebb;
     transition: all 0.3s ease-in;
     outline: none;
   }
-  .header__btn .icon {
+  .calendarname__btn .icon {
     display: inline-block;
   }
-  .header__btn--left {
+  .calendarname__btn--left {
     left: -25px;
     padding-left: 38px;
     text-align: left;
   }
-  .header__btn--right {
+  .calendarname__btn--right {
     padding-right: 32px;
     right: -25px;
     text-align: right;

@@ -218,8 +218,8 @@ function Coachintro() {
 
 
                     <div class="main-container-wrapper"></div>
-            </div>                   
-                        <header>
+                 
+                        <header className="calendarname">
                             <button className="header__btn header__btn--left" title="Menu">
                                 <svg className="icon" width="20px" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill="#fff" d="M0 0h20v2H0zM0 7h20v2H0zM0 14h20v2H0z" />
@@ -231,7 +231,7 @@ function Coachintro() {
                                 </svg>
                             </button>
                         </header>
-                        <div>
+                 
                             <div class="calendar-container">
                                 <div class="calendar-container__header">
                                     <button class="calendar-container__btn calendar-container__btn--left" title="Previous">
