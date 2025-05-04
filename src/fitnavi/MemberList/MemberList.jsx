@@ -30,12 +30,12 @@ function MemberList() {
               >
                 我的頁面
               </button>
-              <p>
+              {/* <p>
                 我是
                 <br />
                 一般用戶
-              </p>
-              <img src="" alt="" />
+              </p> */}
+              <img src="/images/member1.png" alt="" className="member1"/>
             </div>
             {/* 教練/營養師 */}
             <div className="memberListBox studentList">

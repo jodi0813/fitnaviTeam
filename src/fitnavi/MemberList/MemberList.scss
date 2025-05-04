@@ -16,7 +16,8 @@
       flex-direction: column;
       align-items: center;
       width: 20%;
-
+      padding-top: 70px;
+      padding-left: 30px;
       .memberListBox {
         display: flex;
         flex-direction: column;
@@ -31,10 +32,17 @@
       .memberListBox.studentList {
         background: #fbdbad;
       }
+      .member1 {
+        width: 160px;
+        position: relative;
+        top: -30px;
+        left: -50px;
+      }
 
       /* 被選到跟沒選到的按鈕樣式 */
       .memberBt {
         width: 162px;
+        height: 50px;
         border-radius: 20px;
         background: #fff;
         font-family: "Noto Sans TC";
@@ -51,12 +59,14 @@
         white-space: nowrap;
       }
       .memberBt.memberActive {
+        width: 216px;
         color: #ff8740;
         font-size: 20px;
         font-weight: 700;
         line-height: normal;
         letter-spacing: 2px;
         outline: none;
+        z-index: 1;
       }
     }
   }

@@ -22,16 +22,16 @@ function CenterMap() {
             >
               {/* 前三個搜尋框 */}
               <div className="nameCityArea">
-                <label for="centername">場館名稱</label>
+                <label htmlFor="centername">場館名稱</label>
                 <input type="text" name="centername" id="centername" title="場館名稱" placeholder="請輸入場館名稱" required />
 
-                <label for="city">縣市</label>
+                <label htmlFor="city">縣市</label>
                 <select name="city" id="city">
                   <option value="">請選擇縣市</option>
                   <option value="台北市">台北市</option>
                   <option value="新北市">新北市</option>
                 </select>
-                <label for="area">地區</label>
+                <label htmlFor="area">地區</label>
                 <select name="area" id="area">
                   <option value="">請選擇地區</option>
                   <option value=""></option>
@@ -43,47 +43,47 @@ function CenterMap() {
                 <fieldset className="centerItem" >
                   <div className="checkboxItem">
                     <input type="checkbox" name="order" id="order1" />
-                    <label for="order1">重訓器材</label>
+                    <label htmlFor="order1">重訓器材</label>
                   </div>
                   <div className="checkboxItem">
                     <input type="checkbox" name="order" id="order2" />
-                    <label for="order2">有氧器材</label>
+                    <label htmlFor="order2">有氧器材</label>
                   </div>
                   <div className="checkboxItem">
                     <input type="checkbox" name="order" id="order3" />
-                    <label for="order3">淋浴間</label>
+                    <label htmlFor="order3">淋浴間</label>
                   </div>
                   <div className="checkboxItem">
                     <input type="checkbox" name="order" id="order4" />
-                    <label for="order4">24小時營業</label>
+                    <label htmlFor="order4">24小時營業</label>
                   </div>
                   <div className="checkboxItem">
                     <input type="checkbox" name="order" id="order5" />
-                    <label for="order5">團體課程</label>
+                    <label htmlFor="order5">團體課程</label>
                   </div>
                   <div className="checkboxItem">
                     <input type="checkbox" name="order" id="order6" />
-                    <label for="order6">單次計費</label>
+                    <label htmlFor="order6">單次計費</label>
                   </div>
                   <div className="checkboxItem">
                     <input type="checkbox" name="order" id="order7" />
-                    <label for="order7">月費</label>
+                    <label htmlFor="order7">月費</label>
                   </div>
                   <div className="checkboxItem">
                     <input type="checkbox" name="order" id="order8" />
-                    <label for="order8">私人教練</label>
+                    <label htmlFor="order8">私人教練</label>
                   </div>
                   <div className="checkboxItem">
                     <input type="checkbox" name="order" id="order9" />
-                    <label for="order9">女性專區</label>
+                    <label htmlFor="order9">女性專區</label>
                   </div>
                   <div className="checkboxItem">
                     <input type="checkbox" name="order" id="order10" />
-                    <label for="order10">補給品販賣機</label>
+                    <label htmlFor="order10">補給品販賣機</label>
                   </div>
                   <div className="checkboxItem">
                     <input type="checkbox" name="order" id="order11" />
-                    <label for="order11">靠近捷運站(200m)</label>
+                    <label htmlFor="order11">靠近捷運站(200m)</label>
                   </div>
 
                 </fieldset>
@@ -93,11 +93,11 @@ function CenterMap() {
                 <fieldset className="centerItem">
                   <div className="checkboxItem">
                     <input type="checkbox" name="order" id="order12" />
-                    <label for="order12">重訓器材</label>
+                    <label htmlFor="order12">重訓器材</label>
                   </div>
                   <div className="checkboxItem">
                     <input type="checkbox" name="order" id="order13" />
-                    <label for="order13">有氧器材</label>
+                    <label htmlFor="order13">有氧器材</label>
                   </div>
                 </fieldset>
               </div>

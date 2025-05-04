@@ -53,7 +53,7 @@ function MyInfo() {
                   <span>huahua0303@gmail.com</span>
                   <div className="myinfoCheckbox">
                     <input type="checkbox" name="stuCheck" id="stuCheck" />
-                    <label for="stuCheck" className="trShow">
+                    <label htmlFor="stuCheck" className="trShow">
                       向講師顯示
                     </label>
                   </div>
@@ -63,7 +63,7 @@ function MyInfo() {
                   <span>0912345678</span>
                   <div className="myinfoCheckbox">
                     <input type="checkbox" name="stuCheck" id="stuCheck" />
-                    <label for="stuCheck" className="trShow">
+                    <label htmlFor="stuCheck" className="trShow">
                       向講師顯示
                     </label>
                   </div>
@@ -73,7 +73,7 @@ function MyInfo() {
                   <span>huahua0303</span>
                   <div className="myinfoCheckbox">
                     <input type="checkbox" name="stuCheck" id="stuCheck" />
-                    <label for="stuCheck" className="trShow">
+                    <label htmlFor="stuCheck" className="trShow">
                       向講師顯示
                     </label>
                   </div>
