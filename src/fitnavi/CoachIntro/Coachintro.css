@@ -1565,7 +1565,7 @@ span {
     letter-spacing: 1.4px;
 }
 
-.Coachintrocard-tag {
+.Coachintrocard-tag p {
     position: relative;
     bottom: -70px;
     /* 根據你想要的距離調整 */
@@ -1575,9 +1575,7 @@ span {
     justify-content: flex-end;
     align-items: flex-end;
     gap: 8px;
-}
 
-.Coachintrocard-tag p{
     border-radius: 8px;
     background: #FF8740;
     color: var(--white, var(--white, #FEFCF7));

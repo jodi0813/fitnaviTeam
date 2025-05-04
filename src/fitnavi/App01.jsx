@@ -9,6 +9,7 @@ import CoachIntro from "./CoachIntro/Coachintro";
 import Footer from "./Footer/Footer";
 import MemberList from "./MemberList/MemberList";
 import Joinus from "./Joinus/Joinus";
+import JoinusSuccess from "./JoinusSuccess/JoinusSuccess"
 import "./reset.scss";
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
-          <Route path="/joinus" element={<Joinus />}></Route>
+          <Route path="/Joinussuccess" element={<JoinusSuccess />}></Route>
         </Routes>
         <Footer/>
         
