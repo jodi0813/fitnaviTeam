@@ -33,15 +33,15 @@ function MyInfo() {
                 <h3 className="myinfosectionTitle">基本資料</h3>
 
                 <div className="myinfoItem">
-                  <span>出生年月</span>
+                  <span className="myinfoItem1">出生年月</span>
                   <span>2000 / 03 / 03</span>
                 </div>
                 <div className="myinfoItem">
-                  <span>生理性別</span>
+                  <span className="myinfoItem1">生理性別</span>
                   <span>女</span>
                 </div>
                 <div className="myinfoItem">
-                  <span> 通訊地址</span>
+                  <span className="myinfoItem1"> 通訊地址</span>
                   <span>台北市中正區濟南路一段321號12樓</span>
                 </div>
               </div>
@@ -49,26 +49,64 @@ function MyInfo() {
               <div className="myinfoSection">
                 <h3 className="myinfosectionTitle">聯絡資訊</h3>
                 <div className="myinfoItem">
-                  <span>Email</span><span>huahua0303@gmail.com</span> ☐ 向講師顯示
+                  <span className="myinfoItem1">Email</span>
+                  <span>huahua0303@gmail.com</span>
+                  <div className="myinfoCheckbox">
+                    <input type="checkbox" name="stuCheck" id="stuCheck" />
+                    <label for="stuCheck" className="trShow">
+                      向講師顯示
+                    </label>
+                  </div>
                 </div>
                 <div className="myinfoItem">
-                <span>手機號碼</span><span>0912345678</span> ☐ 向講師顯示
+                  <span className="myinfoItem1">手機號碼</span>
+                  <span>0912345678</span>
+                  <div className="myinfoCheckbox">
+                    <input type="checkbox" name="stuCheck" id="stuCheck" />
+                    <label for="stuCheck" className="trShow">
+                      向講師顯示
+                    </label>
+                  </div>
                 </div>
                 <div className="myinfoItem">
-                <span> Line ID</span><span>huahua0303</span> ☐ 向講師顯示
+                  <span className="myinfoItem1"> Line ID</span>
+                  <span>huahua0303</span>
+                  <div className="myinfoCheckbox">
+                    <input type="checkbox" name="stuCheck" id="stuCheck" />
+                    <label for="stuCheck" className="trShow">
+                      向講師顯示
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
             {/* 健康資訊 */}
             <div className="myinfoSection">
               <h3 className="myinfosectionTitle">健康資訊</h3>
-              <div className="myinfoItem">素食/葷食：葷食</div>
-              <div className="myinfoItem">食物過敏：牛奶（輕微不耐）</div>
-              <div className="myinfoItem">特殊疾病：無</div>
               <div className="myinfoItem">
-                傷病史：一年前腰部受傷，現在偶爾會不舒服
+                <span className="myinfoItem1"> 素食/葷食</span>
+                <span>葷食</span>
               </div>
-              <div className="myinfoItem">運動目標：健康維持、減脂</div>
+              <div className="myinfoItem">
+                <span className="myinfoItem1">食物過敏</span>
+                <span>牛奶（輕微不耐）</span>
+              </div>
+              <div className="myinfoItem">
+                <span className="myinfoItem1">特殊疾病</span>
+                <span>無</span>
+              </div>
+              <div className="myinfoItem">
+                <span className="myinfoItem1">傷病史</span>
+                <span>
+                  一年前腰部受傷，現
+                  <br />
+                  在偶爾會不舒服
+                </span>
+              </div>
+              <div className="myinfoItem">
+                <span className="myinfoItem1">運動目標</span>
+                <span>健康維持、減脂 </span>
+              </div>
             </div>
           </div>
         </div>
