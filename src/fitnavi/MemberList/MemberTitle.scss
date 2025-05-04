@@ -1,0 +1,34 @@
+.member-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+
+    .member-title {
+      color: #ff8740;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 3.2px;
+    }
+
+    .subtitleWrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .member-subtitle {
+      font-size: 16px;
+      color: #4a3928; // 可以自己設定英文副標的顏色
+      letter-spacing: 0.5px;
+      // padding: 5px 0px;
+    }
+
+    .member-line {
+      width: 150%;
+      height: 2px;
+      background-color: #4a3928; // 和副標一樣色
+      margin-top: 4px; // 副標和橫線的距離
+    }
+  }

@@ -35,7 +35,7 @@ function Navbar() {
                 <Link to="/memberlist">後台(暫放)</Link>
               </li>
             </ul>
-            <button type="button" className="login">
+            <button type="button" className="nbr-login">
               登入 / 註冊
             </button>
           </nav>
