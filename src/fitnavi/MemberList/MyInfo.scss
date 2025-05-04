@@ -1,0 +1,39 @@
+.myinfoCard {
+  display: flex;
+  flex-direction: column;
+  width: 918px;
+  padding: 24px 36px;
+  gap: 36px;
+  .myinfoHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .myinfoAvatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .myinfoNameSection {
+      display: flex;
+      .myinfoLabel {
+        color: #3a2c19;
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%; /* 19.6px */
+        letter-spacing: 1.4px;
+      }
+      .myinfoValue {
+        color: #3a2c19;
+        font-family: "Noto Sans TC";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
