@@ -10,13 +10,13 @@ function MyInfo() {
         <div className="myinfoCard">
           {/* 大頭照姓名跟編輯按鈕 */}
           <div className="myinfoHeader">
-            <img src="/images/coach13.jpg" className="myinfoAvatar" />
             <div className="myinfoNameSection">
-              <div>
+              <img src="/images/coach13.jpg" className="myinfoAvatar" />
+              <div className="myinfoName">
                 <span className="myinfoLabel">姓名</span>
                 <span className="myinfoValue">王明華</span>
               </div>
-              <div>
+              <div className="myinfoName">
                 <span className="myinfoLabel">暱稱</span>
                 <span className="myinfoValue">阿華</span>
               </div>
@@ -26,28 +26,39 @@ function MyInfo() {
 
           {/* 基本資料+健康資訊+聯絡資訊 */}
           <div className="profileContent">
-            {/* 基本資料 */}
-            <div className="myinfoSection">
-              <h3 className="myinfosectionTitle">基本資料</h3>
-              <div className="myinfoItem">出生年月：2000 / 03 / 03</div>
-              <div className="myinfoItem">生理性別：女</div>
-              <div className="myinfoItem">
-                通訊地址：台北市中正區濟南路一段321號12樓
+            {/* 左邊基本資料+聯絡資訊 */}
+            <div className="profileContentLeft">
+              {/* 基本資料 */}
+              <div className="myinfoSection">
+                <h3 className="myinfosectionTitle">基本資料</h3>
+
+                <div className="myinfoItem">
+                  <span>出生年月</span>
+                  <span>2000 / 03 / 03</span>
+                </div>
+                <div className="myinfoItem">
+                  <span>生理性別</span>
+                  <span>女</span>
+                </div>
+                <div className="myinfoItem">
+                  <span> 通訊地址</span>
+                  <span>台北市中正區濟南路一段321號12樓</span>
+                </div>
+              </div>
+              {/* 聯絡資訊 */}
+              <div className="myinfoSection">
+                <h3 className="myinfosectionTitle">聯絡資訊</h3>
+                <div className="myinfoItem">
+                  <span>Email</span><span>huahua0303@gmail.com</span> ☐ 向講師顯示
+                </div>
+                <div className="myinfoItem">
+                <span>手機號碼</span><span>0912345678</span> ☐ 向講師顯示
+                </div>
+                <div className="myinfoItem">
+                <span> Line ID</span><span>huahua0303</span> ☐ 向講師顯示
+                </div>
               </div>
             </div>
-
-            {/* 聯絡資訊 */}
-            <div className="myinfoSection">
-              <h3 className="myinfosectionTitle">聯絡資訊</h3>
-              <div className="myinfoItem">
-                Email：huahua0303@gmail.com ☐ 向講師顯示
-              </div>
-              <div className="myinfoItem">
-                手機號碼：0912345678 ☐ 向講師顯示
-              </div>
-              <div className="myinfoItem">Line ID：huahua0303 ☐ 向講師顯示</div>
-            </div>
-
             {/* 健康資訊 */}
             <div className="myinfoSection">
               <h3 className="myinfosectionTitle">健康資訊</h3>
