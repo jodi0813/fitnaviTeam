@@ -331,7 +331,7 @@ a {
     flex-direction: row;
     align-self: center;
     gap: 17px;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1;
     background-color: transparent;
     outline: none;
     border: none;
