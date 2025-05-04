@@ -460,7 +460,7 @@ function Coachintro() {
                         <button>&lt;</button>
                     </div>
 
-                    <div className="card">
+                    <div className="Coachintrocard">
                         <div className="card1">
                             <p>2025/03/28</p>
                             <div className="img-box"><img src="./images/article.png" alt="" /></div>
@@ -468,7 +468,7 @@ function Coachintro() {
                                 <h4>健身初學者必看：<br />如何開始你的運動旅程</h4>
                                 <p>剛開始健身時，選擇合適的運動方式和計劃非常重要。無論你是想增強體能還是減脂，開始的時候不需要過於激烈，慢慢增加運動量。這篇文章將帶你了解一些基本的運動常識，並提供從簡單動作開始的計劃。
                                 </p>
-                                <div class="tag">
+                                <div class="Coachintrocard-tag">
                                     <p>#標籤</p>
                                     <p>#標籤</p>
                                     <p>#標籤</p>
