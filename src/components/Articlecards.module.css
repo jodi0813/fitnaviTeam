@@ -16,8 +16,8 @@
     position: relative;
     border: none;
     outline: none;
-    width: 320px;
-    height: 200px;
+    max-width: 320px;
+    max-height: 200px;
     margin: 0 30px 5px 0;
   }
   
@@ -97,3 +97,19 @@
     white-space: nowrap;
   }
   
+
+  .imgbox img {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card2 .tag {
+  position: relative;
+  bottom: -100px;
+}
+.card7TagAdjust .tag p {
+  position: relative;
+  left: 150px;
+}

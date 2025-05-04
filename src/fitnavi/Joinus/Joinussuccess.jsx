@@ -1,7 +1,0 @@
-function Joinussucess(){
-    return(
-        <>
-        
-        </>
-    )
-}

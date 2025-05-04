@@ -336,6 +336,13 @@
             /* 三欄 */
             gap: 10px;
             /* 卡片間距 */
+
+            #card2>tag{
+                position: relative;
+                bottom: -15px;
+                
+
+            }
         }
     }
 }
