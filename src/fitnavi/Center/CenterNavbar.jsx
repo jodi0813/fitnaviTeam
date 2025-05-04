@@ -2,15 +2,15 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./CenterNavbar.scss";
 function CenterNavbar() {
-  const [activeTab, setActiveTab] = useState("info"); // 預設是場館資料
+  const [activeTab, setActiveTab] = useState("centerInformation"); // 預設是場館資料
   return (
     <>
       <div>
         {/* 中間的選單列 */}
         <div className="centerMenu">
           <button
-            className={activeTab === "info" ? "active" : ""}
-            onClick={() => setActiveTab("info")}
+            className={activeTab === "centerInformation" ? "active" : ""}
+            onClick={() => setActiveTab("centerInformation")}
           >
             場館資料
           </button>
@@ -21,15 +21,15 @@ function CenterNavbar() {
             環境設施
           </button>
           <button
-            className={activeTab === "trainer" ? "active" : ""}
-            onClick={() => setActiveTab("trainer")}
+            className={activeTab === "fitnessTrainer" ? "active" : ""}
+            onClick={() => setActiveTab("fitnessTrainer")}
           >
             私人教練
           </button>
         </div>
 
         <div className="tab-content">
-          {activeTab === "info" && (
+          {activeTab === "centerInformation" && (
             /* 一、場館資料 */
             <div id="centerInformation">
               {/* 1.基本資料 */}
@@ -241,7 +241,7 @@ function CenterNavbar() {
             </div>
           )}
           {/* 三、私人教練 */}
-          {activeTab === "trainer" && (
+          {activeTab === "fitnessTrainer" && (
             <div className="content">
               <section id="fitnessTrainer">
                 <div className="maleTrainersCards">

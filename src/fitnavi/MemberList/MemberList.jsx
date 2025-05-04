@@ -1,8 +1,11 @@
 import UserOrder from "./UserOrder";
 import MyInfo from "./MyInfo";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./MemberList.scss";
 
 function MemberList() {
+  const [memberTab, setMemberTab] = useState("myinfo");
   return (
     <>
       <div id="memberListAll">
@@ -14,9 +17,19 @@ function MemberList() {
           {/* 左側選單 */}
           <div className="memberBotton">
             {/* 一般用戶 */}
-            <div className="personalStudentList">
-              <button>個人資訊</button>
-              <button>我的頁面</button>
+            <div className="memberListBox personalList">
+              <button
+                className={memberTab === "myinfo" ? "memberBt memberActive" : "memberBt"}
+                onClick={() => setMemberTab("myinfo")}
+              >
+                個人資訊
+              </button>
+              <button
+                className={memberTab === "useOrder" ? "memberBt memberActive" : "memberBt"}
+                onClick={() => setMemberTab("useOrder")}
+              >
+                我的頁面
+              </button>
               <p>
                 我是
                 <br />
@@ -25,7 +38,7 @@ function MemberList() {
               <img src="" alt="" />
             </div>
             {/* 教練/營養師 */}
-            <div className="personalStudentList">
+            <div className="memberListBox studentList">
               <button>學員訂單</button>
               <button>課程管理</button>
               <button>文章管理</button>
@@ -39,9 +52,9 @@ function MemberList() {
           </div>
           {/* 一般用戶 */}
           {/* 個人資訊 */}
-          <div><MyInfo /></div>
-
+          {memberTab === "myinfo" && <MyInfo />}
           {/* 訂單管理 */}
+          {memberTab === "useOrder" && <UserOrder />}
           {/* <div>
             <UserOrder />
           </div> */}

@@ -1,38 +1,63 @@
 #memberListAll {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 120px 50px;
+  gap: 28px;
+
+  .centerHead {
+  }
+
+  .memberList {
     display: flex;
-    flex-direction: column;
-    width: 100vw;
-    padding: 120px 50px;
-    gap: 28px;
 
+    .memberBotton {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 20%;
 
-    .centerHead {}
-
-    .memberList {
+      .memberListBox {
         display: flex;
+        flex-direction: column;
+        height: 240px;
+        gap: 10px;
+        border-radius: 20px 0px 0px 20px;
+        background: #fbadad;
+        padding: 20px;
+        width: 206px;
+        height: 240px;
+      }
+      .memberListBox.studentList {
+        background: #fbdbad;
+      }
 
-        .memberBotton {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 20%;
-
-            .personalStudentList {
-                display: flex;
-                flex-direction: column;
-                height: 240px;
-                gap: 10px;
-                border-radius: 20px 0px 0px 20px;
-                background: #FBADAD;
-                padding: 20px;
-
-                button {
-                    width: 162px;
-                    border-radius: 20px;
-                    background: #FFF;
-
-                }
-            }
-        }
+      /* 被選到跟沒選到的按鈕樣式 */
+      .memberBt {
+        width: 162px;
+        border-radius: 20px;
+        background: #fff;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%; /* 24px */
+        letter-spacing: 1.6px;
+        outline: none;
+        display: flex;
+        padding: 13px 46px 13px 47px;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+      }
+      .memberBt.memberActive {
+        color: #ff8740;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2px;
+        outline: none;
+      }
     }
+  }
 }
