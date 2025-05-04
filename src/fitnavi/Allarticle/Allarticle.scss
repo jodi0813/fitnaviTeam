@@ -177,7 +177,7 @@
 
 .Allarticle-content {
     margin-top: 60px;
-    margin-left: 90px;
+    margin-left: 60px;
     display: flex;
     flex-direction: row;
     gap: 34px;
@@ -329,12 +329,12 @@
         .Allarticle-Card {
             flex-direction: row;
             justify-content: flex-start;
-            align-items: flex-start;
-            width: 80%;
+            align-items: center;
+            width: 100%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             /* 三欄 */
-            gap: 5px;
+            gap: 10px;
             /* 卡片間距 */
         }
     }

@@ -1453,7 +1453,8 @@ span {
     height: 400px;
 }
 
-.card {
+.Coachintrocard {
+    width: 20%;
     position: relative;
     margin: 0px;
     display: flex;
@@ -1514,6 +1515,10 @@ span {
     margin-right: 20px;
 }
 
+.card2>.content-box>h4{
+    padding-bottom: 36px;
+}
+
 .content-box p {
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -1534,14 +1539,18 @@ span {
 }
 
 .tag-box {
-    position: absolute;
+    position: relative;
     background: #FF8740;
     border-radius: 10px;
     width: 80px;
     left: -60px;
-    top: 150px;
+    top: -80px;
     height: 30px;
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
     padding: 5px 15px;
     justify-content: center;
     align-items: center;
@@ -1556,11 +1565,11 @@ span {
     letter-spacing: 1.4px;
 }
 
-.tag {
-    position: absolute;
-    bottom: -35px;
+.Coachintrocard-tag {
+    position: relative;
+    bottom: -70px;
     /* 根據你想要的距離調整 */
-    right: -50px;
+    right: -10px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -1568,7 +1577,7 @@ span {
     gap: 8px;
 }
 
-.tag p {
+.Coachintrocard-tag p{
     border-radius: 8px;
     background: #FF8740;
     color: var(--white, var(--white, #FEFCF7));
