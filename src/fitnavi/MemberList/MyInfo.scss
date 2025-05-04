@@ -67,9 +67,9 @@
       gap: 24px;
     }
     .myinfoSection {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
       .myinfosectionTitle {
         color: #ff8740;
         font-family: "Noto Sans TC";
@@ -82,7 +82,7 @@
       .myinfoItem {
         display: flex;
         padding: 0px 24px;
-        gap: 12px;
+        gap: 10px;
         color: #3a2c19;
         font-family: "Noto Sans TC";
         font-size: 16px;
@@ -90,7 +90,13 @@
         font-weight: 500;
         line-height: 150%; /* 24px */
         letter-spacing: 1.6px;
-
+        .myinfoItem1{
+            width: 100px;
+        }    
+        .myinfoCheckbox{
+        .trShow {
+          font-size: 14px;
+        }}
       }
     }
   }
