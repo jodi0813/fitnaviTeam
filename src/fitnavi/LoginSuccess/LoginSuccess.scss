@@ -1,0 +1,123 @@
+@import "../reset.scss";
+
+@font-face {
+    font-family: "Mantou Sans";
+    src: url(../../assets/MantouSans-Regular.ttf);
+}
+
+.LoginSuccess {
+    margin-top: 100px;
+    margin-bottom: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .LoginSuccess-title {
+        display: inline-flex;
+        padding: 10px 30px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 220px;
+        top: 25px;
+        margin: 0px;
+
+        background: var(--white, #FEFCF7);
+        color: var(--dark, #3A2C19);
+        text-align: center;
+        /* heading/標題3 */
+        font-family: "Noto Sans TC";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 3.2px;
+    }
+
+
+    .LoginSuccess-content {
+        width: 600px;
+        padding: 60px 95px 70px 95px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        border-radius: 20px;
+        border: 0.8px solid var(--dark, #3A2C19);
+
+        p {
+           
+            color: var(--dark, #3A2C19);
+            text-align: center;
+            /* heading/標題4/medium */
+            font-family: "Noto Sans TC";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 40px;
+            /* 200% */
+            letter-spacing: 0.4px;
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+
+        button {
+
+            width: 200px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+
+            border-radius: 999px;
+            text-align: center;
+            /* heading/標題4/Bold */
+            font-family: "Noto Sans TC";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 2px;
+            background-color: #FFF;
+            color: var(--primary, var(--primary, #FF8740));
+            border: 1px solid var(--primary, #FF8740);
+
+            &:hover {
+                background: var(--primary, #FF8740);
+                color: var(--white, var(--white, #FEFCF7));
+            }
+
+        }
+
+    }
+
+    .SetAccountPassword-option {
+        position: relative;
+        top: -100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 200px;
+        margin-top: 60px;
+
+        button {
+            color: var(--dark, #3A2C19);
+            /* 段落/16 */
+            font-family: "Noto Sans TC";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+            /* 24px */
+            letter-spacing: 1.6px;
+            padding: 0px;
+        }
+    }
+}
