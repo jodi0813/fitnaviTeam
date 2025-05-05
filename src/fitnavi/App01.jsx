@@ -12,6 +12,7 @@ import Joinus from "./Joinus/Joinus";
 import JoinusSuccess from "./JoinusSuccess/JoinusSuccess";
 import ForgetPassword from "./ForgetPassword/ForgetPassword";
 import MemberLogin from "./MemberLogin/MemberLogin";
+import SetAccountPassword from "./SetAccountPassword/SetAccountPassword";
 import "./reset.scss";
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
-          <Route path="/memberlogin" element={<MemberLogin />}></Route>
+          <Route path="/SetAccountPassword" element={<SetAccountPassword />}></Route>
         </Routes>
         <Footer/>
         
