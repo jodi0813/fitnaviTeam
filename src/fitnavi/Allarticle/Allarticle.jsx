@@ -184,6 +184,7 @@ function Allarticle() {
                             tags={card.tags}
                             category={card.category}
                             className={`card${index + 1}`}
+                            // onclick ()=>{}
                         />
                     ))}</div> 
                 </div>
