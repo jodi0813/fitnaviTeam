@@ -1,0 +1,143 @@
+@import "../reset.scss";
+
+@font-face {
+    font-family: "Mantou Sans";
+    src: url(../../assets/MantouSans-Regular.ttf);
+}
+
+.MemberSignup {
+    margin-top: 180px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    position: relative;
+
+    // padding: 60px 95px 50px 95px;
+    gap: 10px;
+    width: 1050px;
+    height: 566px;
+    margin-left: 420px;
+
+    border-radius: 20px;
+    border: 0.8px solid var(--dark, #3A2C19);
+
+
+    form {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 95px;
+        margin-right: 95px;
+
+        .MemberSignup-title {
+            display: inline-flex;
+            padding: 10px 30px;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            left: 10px;
+            top: -40px;
+
+            background: var(--white, #FEFCF7);
+            color: var(--dark, #3A2C19);
+            text-align: center;
+            /* heading/標題3 */
+            font-family: "Noto Sans TC";
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 3.2px;
+        }
+
+        .KeyinNameEmail {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+
+            .KeyinName {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: center;
+                gap: 10px;
+
+                label {
+                    color: var(--dark, #3A2C19);
+                    /* 段落/16 */
+                    font-family: "Noto Sans TC";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 150%;
+                    /* 24px */
+                    letter-spacing: 1.6px;
+                }
+
+                input {
+                    width: 400px;
+                    height: 40px;
+                    border-radius: 10px;
+                    border: 0.6px solid var(--dark, #3A2C19);
+                    background: #FFF;
+                }
+            }
+
+            .KeyinEmail {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: center;
+                gap: 10px;
+
+                label {
+                    color: var(--dark, #3A2C19);
+                    /* 段落/16 */
+                    font-family: "Noto Sans TC";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 150%;
+                    /* 24px */
+                    letter-spacing: 1.6px;
+                }
+
+                input {
+                    width: 400px;
+                    height: 40px;
+                    border-radius: 10px;
+                    border: 0.6px solid var(--dark, #3A2C19);
+                    background: #FFF;
+                }
+            }
+
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
