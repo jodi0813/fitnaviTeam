@@ -4,6 +4,7 @@ import MyOrders from "./MyOrders";
 import MyOrderView from "./MyOrderView";
 import { Link } from "react-router-dom";
 import "./UserOrder.scss";
+import MyFinishOrder from "./MyFinishOrder";
 function UserOrder() {
   const [userTab, setUserTab] = useState("myorder");
 
@@ -15,9 +16,14 @@ function UserOrder() {
           <div className="orderboxButton">
             <button className={userTab === "myorder" ? "userBt" : "userBt"}
               onClick={() => setUserTab("myorder")}>我的預約</button>
+
+
             <button className={userTab === "myorderview" ? "userBt" : "userBt"}
               onClick={() => setUserTab("myorderview")}>訂單總覽</button>
-            <button>完成的課程 </button>
+
+
+            <button className={userTab === "myfinishorder" ? "userBt" : "userBt"}
+             onClick={() => setUserTab("myfinishorder")}>完成的課程 </button>
           </div>
           <p>
             *若教練確認您的預約申請，會在您的預約確認欄位中顯示"已確認"
@@ -26,8 +32,9 @@ function UserOrder() {
           </p>
         </div>
         {/* 表格區 */}
-        {userTab === "myorder" && <MyOrders/>}
+        {userTab === "myorder" && <MyOrders />}
         {userTab === "myorderview" && <MyOrderView />}
+        {userTab === "myfinishorder" && <MyFinishOrder />}
 
 
       </div>

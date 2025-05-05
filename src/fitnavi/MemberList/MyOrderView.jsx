@@ -2,6 +2,7 @@ import "./MyOrderView.scss";
 function MyOrderView() {
     const orderview = [
         {
+            no: "1",
             id: "#00596",
             teacher: "飛飛 Feifei",
             date: "2025/01/01",
@@ -18,6 +19,7 @@ function MyOrderView() {
             <div className="orderview-table">
                 {/* 標題 */}
                 <div className="orderview-table-header">
+                    <span>No</span>
                     <span>訂單編號</span>
                     <span>講師名稱</span>
                     <span>購買日期</span>
@@ -31,6 +33,8 @@ function MyOrderView() {
                 {/* 表格內容 */}
                 {orderview.map((orderview, index) => (
                     <div className="table-row" key={index}>
+                        {/* 序號 */}
+                        <span >{orderview.no}</span>
                         {/* 訂單編號 */}
                         <span className="order-id">{orderview.id}</span>
                         {/* 講師名稱 */}
