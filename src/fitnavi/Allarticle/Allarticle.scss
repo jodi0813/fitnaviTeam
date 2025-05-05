@@ -180,7 +180,7 @@
     margin-left: 60px;
     display: flex;
     flex-direction: row;
-    gap: 34px;
+    gap: 200px;
     justify-content: flex-start;
     align-items: first baseline;
 
@@ -290,6 +290,7 @@
     }
 
     .Allarticle-cards {
+        // width: 80%;
         .Allarticle-cards-title {
             display: flex;
             flex-direction: row;
