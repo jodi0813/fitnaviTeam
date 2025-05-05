@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
-  padding: 120px 50px;
+  padding: 120px 80px;
   gap: 28px;
 
   .centerHead {
@@ -14,7 +14,7 @@
     .memberBotton {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-end;
       width: 20%;
       padding-top: 70px;
       padding-left: 30px;
