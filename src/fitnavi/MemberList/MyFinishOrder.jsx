@@ -27,7 +27,7 @@ function MyFinishOrder() {
                     <span>上課地點</span>
                     <span>課程進度</span>
                     <span>課程狀態</span>
-                    <span>匿名評價</span>
+                  
                 </div>
 
                 {finishOrders.map((finishOrder, index) => (
