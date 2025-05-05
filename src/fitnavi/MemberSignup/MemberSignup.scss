@@ -17,14 +17,13 @@
     // padding: 60px 95px 50px 95px;
     gap: 10px;
     width: 1050px;
-    height: 566px;
-    margin-left: 420px;
-
+    height: 580px;
+    margin-left: 200px;
     border-radius: 20px;
     border: 0.8px solid var(--dark, #3A2C19);
 
 
-    form {
+    .MemberSignup-form {
 
         display: flex;
         flex-direction: column;
@@ -32,6 +31,7 @@
         align-items: flex-start;
         margin-left: 95px;
         margin-right: 95px;
+        // width: 100%;
 
         .MemberSignup-title {
             display: inline-flex;
@@ -40,7 +40,7 @@
             align-items: center;
             gap: 10px;
             position: relative;
-            left: 10px;
+            left: 320px;
             top: -40px;
 
             background: var(--white, #FEFCF7);
@@ -121,6 +121,224 @@
 
 
         }
+
+        .KeyinGenderTel {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            .ChooseGender {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 10px;
+
+                .ChooseGender-label {
+                    color: var(--dark, #3A2C19);
+                    /* 段落/16 */
+                    font-family: "Noto Sans TC";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 150%;
+                    /* 24px */
+                    letter-spacing: 1.6px;
+                }
+
+                .ChooseGender-button {
+                    height: 40px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+
+                    button {
+                        border-radius: 99px;
+                        border: 1px solid var(--primary, #FF8740);
+                        background: var(--white, #FEFCF7);
+                        margin-right: 20px;
+                        height: 40px;
+                        width: 120px;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+
+                        color: var(--primary, var(--primary, #FF8740));
+                        text-align: center;
+                        font-family: "Noto Sans TC";
+                        font-size: var(--fontsize-H3, 18px);
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 150%;
+                        /* 27px */
+                    }
+
+                }
+
+
+
+            }
+
+            .KeyinTel {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 10px;
+                margin-left: 0px;
+
+                label {
+                    color: var(--dark, #3A2C19);
+                    /* 段落/16 */
+                    font-family: "Noto Sans TC";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 150%;
+                    /* 24px */
+                    letter-spacing: 1.6px;
+                }
+
+                input {
+                    width: 400px;
+                    height: 40px;
+                    border-radius: 10px;
+                    border: 0.6px solid var(--dark, #3A2C19);
+                    background: #FFF;
+                }
+            }
+
+
+
+
+
+        }
+
+        .KeyinBirthday {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            label {
+                color: var(--dark, #3A2C19);
+                /* 段落/16 */
+                font-family: "Noto Sans TC";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+                /* 24px */
+                letter-spacing: 1.6px;
+            }
+
+            input {
+                width: 400px;
+                height: 40px;
+                border-radius: 10px;
+                border: 0.6px solid var(--dark, #3A2C19);
+                background: #FFF;
+            }
+
+        }
+
+        .TermsNext {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-self: center;
+            margin-top: 40px;
+            margin-bottom: 50PX;
+
+            span {
+                color: var(--gray, #989794);
+                /* 段落/14 */
+                font-family: "Noto Sans TC";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
+
+            span.serviceterm,
+            span.privateterm {
+                color: var(--gray, #989794);
+                /* 段落/14 */
+                font-family: "Noto Sans TC";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                letter-spacing: 1.4px;
+                text-decoration-line: underline;
+                text-decoration-style: solid;
+                text-decoration-skip-ink: auto;
+                text-decoration-thickness: auto;
+                text-underline-offset: 50%;
+                text-underline-position: from-font;
+
+            }
+        }
+
+        .Signup-button {
+            align-self: center;
+
+            button {
+                border-radius: 999px;
+                background: var(--primary, #FF8740);
+                display: flex;
+                flex-direction: row;
+                width: 200px;
+                height: 40px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                color: var(--white, var(--white, #FEFCF7));
+                text-align: center;
+                /* heading/標題4/Bold */
+                font-family: "Noto Sans TC";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 2px;
+            }
+
+        }
+
+        .MemberSignup-option {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 200px;
+            width: 100%;
+
+
+            button {
+                color: var(--dark, #3A2C19);
+                /* 段落/16 */
+                font-family: "Noto Sans TC";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+                /* 24px */
+                letter-spacing: 1.6px;
+            }
+        }
+
+
 
     }
 

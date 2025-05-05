@@ -24,11 +24,16 @@ function MemberSignup() {
 
                     <div className='KeyinGenderTel'>
                         <div className='ChooseGender'>
-                            <label htmlFor="">性別</label>
-                            <button></button>
-                            <button>
-                                <button></button>
-                            </button>
+                            <div className='ChooseGender-label'>
+                               <label htmlFor="">性別</label> 
+                            </div>
+                            
+                            <div className='ChooseGender-button'> 
+                                <button>男性</button>
+                                <button>女性</button>
+                                <button>不透露</button>
+                            </div>
+                            
                         </div>
 
                         <div className='KeyinTel'>
@@ -44,8 +49,16 @@ function MemberSignup() {
 
                     <div className='TermsNext'>
                         <input type="checkbox" className='TermsNextCheck' />
+                        <span>我同意</span>
+                        <span className='serviceterm'>服務條款</span>
+                        <span>和</span>
+                        <span className='privateterm'>隱私權政策</span>
+                    </div>
+
+                    <div className='Signup-button'>
                         <button>下一步</button>
                     </div>
+
 
 
 
