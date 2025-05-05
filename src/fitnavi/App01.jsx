@@ -14,6 +14,7 @@ import ForgetPassword from "./ForgetPassword/ForgetPassword";
 import MemberLogin from "./MemberLogin/MemberLogin";
 import SetAccountPassword from "./SetAccountPassword/SetAccountPassword";
 import LoginSuccess from "./LoginSuccess/LoginSuccess";
+import MemberSignup from "./MemberSignup/MemberSignup";
 import "./reset.scss";
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
-          <Route path="/LoginSuccess" element={<LoginSuccess />}></Route>
+          <Route path="/MemberSignup" element={<MemberSignup />}></Route>
         </Routes>
         <Footer/>
         
