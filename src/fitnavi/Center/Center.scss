@@ -70,7 +70,7 @@
   // position: absolute;
   width: 143.253px;
   height: 143.253px;
-  aspect-ratio: 143.25/143.25;
+  aspect-ratio: 1;
   border-radius: 143.253px;
   margin: 0px 14px 0px 0px;
 }
@@ -126,8 +126,7 @@
   justify-content: center;
   margin: 24px;
 }
-
-.main {
+.main{
   display: flex;
   flex-direction: column;
   padding: 0px 122px;

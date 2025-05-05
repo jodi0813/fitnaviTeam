@@ -1,12 +1,12 @@
 @use "../reset.scss";
 
-
-#header {
+#navbarHeader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: transparent; /* 或透明 */
+  z-index: 999;
 }
 .container {
   max-width: calc(100% - 240px); /* 左右各120px */
@@ -19,11 +19,10 @@
   align-items: center;
 
   padding: 0px 24px;
-  background-color:  rgba(237, 237, 237, 0.60);
+  background-color: rgba(237, 237, 237, 0.6);
   border-radius: 999px;
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(12px);
-
 
   .logo {
     display: flex;
@@ -59,7 +58,7 @@
   }
 }
 
-.login {
+.nbr-login {
   background: #ff8740;
   color: #fff;
   display: flex;

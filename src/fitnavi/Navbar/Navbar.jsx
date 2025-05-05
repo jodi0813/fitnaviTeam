@@ -3,7 +3,7 @@ import "./Navbar.scss";
 function Navbar() {
   return (
     <>
-      <header id="header">
+      <header id="navbarHeader">
         <div className="container">
           <nav id="navbar">
             <Link to="/" className="logo">
@@ -23,19 +23,19 @@ function Navbar() {
                 <Link>我的收藏</Link>
               </li>
               <li>
-                <Link to='/article'>知識文章</Link>
+                <Link to="/allarticle">知識文章</Link>
               </li>
               <li>
                 <Link to="/centerMap">健身場地</Link>
               </li>
               <li>
-                <Link>加入我們</Link>
+                <Link to="./ForgetPassword">加入我們</Link>
               </li>
               <li>
                 <Link to="/memberlist">後台(暫放)</Link>
               </li>
             </ul>
-            <button type="button" className="login">
+            <button type="button" className="nbr-login">
               登入 / 註冊
             </button>
           </nav>

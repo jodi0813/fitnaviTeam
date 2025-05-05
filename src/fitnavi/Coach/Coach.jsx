@@ -17,25 +17,25 @@ function Coach() {
             id="personal-search-form"
             title="健身教練搜尋"
           >
-            <label for="area"></label>
+            <label htmlFor="area"></label>
             <select name="area" id="area">
               <option value="">地區</option>
               <option value="台北市">台北市</option>
               <option value="新北市">新北市</option>
             </select>
-            <label for="trainingNeeds"></label>
+            <label htmlFor="trainingNeeds"></label>
             <select name="trainingNeeds" id="trainingNeeds">
               <option value="">訓練需求</option>
               <option value=""></option>
               <option value=""></option>
             </select>
-            <label for="sex"></label>
+            <label htmlFor="sex"></label>
             <select name="sex" id="sex">
               <option value="性別">性別</option>
               <option value="男">男</option>
               <option value="女">女</option>
             </select>
-            <label for="keyword-search"></label>
+            <label htmlFor="keyword-search"></label>
             <input
               type="search"
               name="keyword-search"
