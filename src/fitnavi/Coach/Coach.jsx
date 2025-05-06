@@ -3,6 +3,14 @@ import CoachCard from "../../components/CoachCard";
 function Coach() {
   const coachList = [
     {
+      name: "張莉菈 Lila",
+      role: "教練",
+      hashtags: ["TRX", "功能性訓練", "訓練動機"],
+      description:
+        "結合 TRX、功能訓練與動力引導，幫助學員突破瓶頸，養成穩定運動習慣。",
+      imageSrc: "/images/coach09.jpg",
+    },
+    {
       name: "蘇菲亞 Sophia",
       role: "教練",
       hashtags: ["專業指導", "體能提升", "科學健身"],
@@ -66,14 +74,7 @@ function Coach() {
         "專業健身訓練教練，提供一對一課程與飲食建議，讓訓練更有效率。",
       imageSrc: "/images/coach08.jpg",
     },
-    {
-      name: "張莉菈 Lila",
-      role: "教練",
-      hashtags: ["TRX", "功能性訓練", "訓練動機"],
-      description:
-        "結合 TRX、功能訓練與動力引導，幫助學員突破瓶頸，養成穩定運動習慣。",
-      imageSrc: "/images/coach09.jpg",
-    },
+
   ];
   return (
     <>

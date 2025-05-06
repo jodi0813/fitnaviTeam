@@ -2,9 +2,10 @@
 
 .coach-card {
   width: 330px;
-//   height: 452px;
+  height: 452px;
   display: flex;
   flex-direction: column;
+  // justify-content: space-between;
   padding: 12px 16px;
   gap: 8px 14px;
   border-radius: 18px;
@@ -32,32 +33,35 @@
       letter-spacing: 1.4px;
     }
   }
-  .coach-box{
+  .coach-box {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 6px;
-  .coach-name {
-    color: #3a2c19;
-    font-family: "Noto Sans TC";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 2px;
-  }
-
-  .hashtag {
-    display: flex;
-    a {
-      color: #ff8740;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 140%;
-      letter-spacing: 1.4px;
-      display: flex;
-      margin: 0px 14px 0px 0px;
+height: 116px;
+    .coach-name {
+      color: #3a2c19;
+      font-family: "Noto Sans TC";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2px;
     }
-  }}
+
+    .hashtag {
+      display: flex;
+      a {
+        color: #ff8740;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 1.4px;
+        display: flex;
+        margin: 0px 14px 0px 0px;
+      }
+    }
+  }
   .coach-details {
     color: #3a2c19;
     font-family: "Noto Sans TC";
@@ -69,7 +73,7 @@
   }
   .more-button {
     display: flex;
-    justify-content: flex-end;  
+    justify-content: flex-end;
     cursor: pointer;
     color: #3a2c19;
     font-family: "Noto Sans TC";

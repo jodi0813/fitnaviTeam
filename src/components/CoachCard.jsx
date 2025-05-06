@@ -18,14 +18,13 @@ function CoachCard({ imageSrc, role, name, hashtags = [], description }) {
             ))}
           </div>
           <p className="coach-details">{description}</p>
-        </div>
-        <div>
-          <Link to="#" className="more-button">
-            瞭解更多
+          </div>
+          <Link to="/coachintro" className="more-button">
+            瞭解更多▶
           </Link>
-        </div>
+       
       </div>
-    </>
+      </>
   );
 }
 export default CoachCard;
