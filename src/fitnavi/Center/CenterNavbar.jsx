@@ -213,7 +213,7 @@ function CenterNavbar() {
                     role="教練"
                     hashtags={["運動目標", "體能提升", "燃燒脂肪"]}
                     description="專注於運動後的恢復與預防傷害，讓你在安全的環境中達到最佳效果。健康和成果，我一起陪伴你實現。"
-                    imageSrc="/images/coach16.jpg"
+                    imageSrc="/images/coach07.jpg"
                   />
                   <CoachCard
                     name="文彥 Wenyen"
@@ -226,16 +226,31 @@ function CenterNavbar() {
               </div>
               {/* 女性教練 */}
               <div className="trainersCards">
-              <Subtitle subtitle="女性教練" subtitleEN="Female Trainers" />
-              <div className="threeCards">
-                <CoachCard
-                  name="蘇菲亞 Sophia"
-                  role="教練"
-                  hashtags={["專業指導", "體能提升", "科學健身"]}
-                  description="擅長增肌、減脂與身體雕塑，根據學員的需求制定訓練目標。無論你的目標是什麼，我都能幫助你實現。"
-                  imageSrc="/images/coach15.jpg"
-                />
-              </div></div>
+                <Subtitle subtitle="女性教練" subtitleEN="Female Trainers" />
+                <div className="threeCards">
+                  <CoachCard
+                    name="蘇菲亞 Sophia"
+                    role="教練"
+                    hashtags={["專業指導", "體能提升", "科學健身"]}
+                    description="擅長增肌、減脂與身體雕塑，根據學員的需求制定訓練目標。無論你的目標是什麼，我都能幫助你實現。"
+                    imageSrc="/images/coach01.jpg"
+                  />
+                  <CoachCard
+                    name="蘭娜 Lanna"
+                    role="教練"
+                    hashtags={["正確訓練", "體能提升"]}
+                    description="提供專業的健身計劃與飲食建議，讓你在最短的時間內達成最好的效果。讓每一個動作都充滿目的。"
+                    imageSrc="/images/coach02.jpg"
+                  />
+                  <CoachCard
+                    name="莉莉 Lily"
+                    role="教練"
+                    hashtags={["健身生活", "增肌減脂", "個人訓練"]}
+                    description="結合TRX、功能性訓練與減脂訓練，我專注於幫助學員提升全身力量與協調。透過有效的訓練計劃，快速達成減脂與塑形目標。"
+                    imageSrc="/images/coach04.jpg"
+                  />
+                </div>
+              </div>
             </section>
           </div>
         )}

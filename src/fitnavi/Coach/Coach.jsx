@@ -1,6 +1,80 @@
 import "./Coach.scss";
-
+import CoachCard from "../../components/CoachCard";
 function Coach() {
+  const coachList = [
+    {
+      name: "蘇菲亞 Sophia",
+      role: "教練",
+      hashtags: ["專業指導", "體能提升", "科學健身"],
+      description:
+        "擅長增肌、減脂與身體雕塑，根據學員的需求制定訓練目標。無論你的目標是什麼，我都能幫助你實現。",
+      imageSrc: "/images/coach01.jpg",
+    },
+    {
+      name: "蘭娜 Lanna",
+      role: "教練",
+      hashtags: ["塑身訓練", "運動飲食", "專業規劃"],
+      description:
+        "擁有豐富健身指導經驗，提供客製化課程，協助學員達成理想體態。",
+      imageSrc: "/images/coach02.jpg",
+    },
+    {
+      name: "飛飛 Feifei",
+      role: "教練",
+      hashtags: ["增肌減脂", "健身計畫", "個人訓練"],
+      description:
+        "具有多年健身教學經驗，幫助學員設定合適的健身目標與計劃。讓你以專業的指導達到最佳成果。",
+      imageSrc: "/images/coach03.jpg",
+    },
+    {
+      name: "莉莉 Lily",
+      role: "教練",
+      hashtags: ["核心訓練", "肌力訓練", "個人訓練"],
+      description:
+        "擁有國內外多項認證與豐富教學經驗，幫助學員改善體態，養成健康運動習慣。",
+      imageSrc: "/images/coach04.jpg",
+    },
+    {
+      name: "艾瑪 Emma",
+      role: "教練",
+      hashtags: ["有氧訓練", "肌耐力", "營養搭配"],
+      description:
+        "透過專業課表與飲食建議，協助你建立健康生活風格，輕鬆達成訓練目標。",
+      imageSrc: "/images/coach05.jpg",
+    },
+    {
+      name: "莉娜 Lina",
+      role: "教練",
+      hashtags: ["伸展放鬆", "核心穩定", "專注飲食"],
+      description:
+        "透過體態評估與訓練規劃，協助學員強化核心與柔軟度，提升整體體能表現。",
+      imageSrc: "/images/coach06.jpg",
+    },
+    {
+      name: "文彥 Wenyen",
+      role: "教練",
+      hashtags: ["運動目標", "體能提升", "燃燒脂肪"],
+      description:
+        "專注於運動後的恢復與預防傷害，讓你在安全的環境中達到最佳效果。健康和成果，我一起陪伴你實現。",
+      imageSrc: "/images/coach07.jpg",
+    },
+    {
+      name: "詹姆斯 James",
+      role: "教練",
+      hashtags: ["增肌訓練", "器械教學", "飲食管理"],
+      description:
+        "專業健身訓練教練，提供一對一課程與飲食建議，讓訓練更有效率。",
+      imageSrc: "/images/coach08.jpg",
+    },
+    {
+      name: "張莉菈 Lila",
+      role: "教練",
+      hashtags: ["TRX", "功能性訓練", "訓練動機"],
+      description:
+        "結合 TRX、功能訓練與動力引導，幫助學員突破瓶頸，養成穩定運動習慣。",
+      imageSrc: "/images/coach09.jpg",
+    },
+  ];
   return (
     <>
       <div id="coachMain">
@@ -45,24 +119,21 @@ function Coach() {
             <input type="submit" value="搜尋" className="submit"></input>
           </form>
         </div>
-        <div className="coach">
+        <div className="allCoachCards">
           <div className="all-coach">全部教練</div>
           {/* 教練小卡 */}
-          <div className="coach-card">
-            <div className="image-container">
-              <img src="./images/trainer.png" alt="教練照片" />
-              <span className="label">教練</span>
-            </div>
-            <div className="coach-name">名字</div>
-            <div className="hashtag">
-              <a href="#">#專業</a>
-              <a href="#">#專業</a>
-              <a href="#">#專業</a>
-            </div>
-            <p className="coach-details">
-              這是教練或營養師的簡介內容，這是教練或營養師的簡介內容，這是教練或營養師的簡介內容。
-            </p>
-          </div>
+          <div className="coachNineCards">
+            {coachList.map((coach, i) => (
+              <CoachCard
+                key={i}
+                name={coach.name}
+                role={coach.role}
+                hashtags={coach.hashtags}
+                description={coach.description}
+                imageSrc={coach.imageSrc}
+              />
+            ))}
+          </div>{" "}
         </div>
       </div>
     </>
