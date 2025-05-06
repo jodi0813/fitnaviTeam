@@ -1,5 +1,6 @@
 import "./Coach.scss";
 import CoachCard from "../../components/CoachCard";
+import MainTitle from "../../components/Title/MainTitle";
 function Coach() {
   const coachList = [
     {
@@ -79,11 +80,8 @@ function Coach() {
   return (
     <>
       <div id="coachMain">
-        <header className="coachTitle">
-          <h2>健身教練</h2>
-          <p>找到專屬你的健身教練</p>
-        </header>
-        <hr />
+        <MainTitle title1="健身教練" title2="找到專屬你的健身教練"/>
+ 
         <div className="searchBox">
           <form
             action=""

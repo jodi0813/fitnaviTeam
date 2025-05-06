@@ -1,5 +1,5 @@
 
-import Subtitle from "../Subtitle/Subtitle";
+import Subtitle from "../../components/Title/Subtitle";
 import "./MyInfo.scss";
 function MyInfo() {
   return (

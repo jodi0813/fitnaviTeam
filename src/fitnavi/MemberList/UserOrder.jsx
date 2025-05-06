@@ -4,7 +4,7 @@ import MyOrderView from "./MyOrderView";
 import { Link } from "react-router-dom";
 import "./UserOrder.scss";
 import MyFinishOrder from "./MyFinishOrder";
-import Subtitle from "../Subtitle/Subtitle";
+import Subtitle from "../../components/Title/Subtitle";
 function UserOrder() {
   const [userTab, setUserTab] = useState("myorder");
 

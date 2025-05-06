@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./CenterNavbar.scss";
-import Subtitle from "../Subtitle/Subtitle";
+import Subtitle from "../../components/Title/Subtitle";
 import CoachCard from "../../components/CoachCard";
 function CenterNavbar() {
   const [activeTab, setActiveTab] = useState("centerInformation"); // 預設是場館資料
