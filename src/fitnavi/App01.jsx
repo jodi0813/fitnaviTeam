@@ -28,7 +28,7 @@ function App() {
           
           <Route path="/centerMap" element={<CenterMap />}></Route>
           <Route path="/allarticle" element={<Allarticle />} />  {/* 文章列表頁 */}
-          {/* <Route path="/allarticle/:card1" element={<Article />} />  */}
+          <Route path="/article/:id" element={<Article />} />
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
