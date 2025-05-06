@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
 import Coach from "./Coach/Coach";
+import Dietitian from "./Coach/Dietitian";
 import CenterMap from "./Center/CenterMap";
 import Article from "./Article/Article";
 import Allarticle from "./Allarticle/Allarticle";
@@ -23,19 +24,18 @@ function App() {
       <div className="wrap">
         <Navbar />
         <Routes>
-        <Route path="/" element={<Coach />} />
-          <Route path="/coach" element={<Coach />}></Route>
-          
-          <Route path="/centerMap" element={<CenterMap />}></Route>
-          <Route path="/allarticle" element={<Allarticle />} />  {/* 文章列表頁 */}
+          <Route path="/" element={<Coach />} />
+          <Route path="/coach" element={<Coach />}/>
+          <Route path="/dietitian"element={<Dietitian/>}/>
+          <Route path="/centerMap" element={<CenterMap/>}/>
+          <Route path="/allarticle" element={<Allarticle />} />
           <Route path="/article/:id" element={<Article />} />
-          <Route path="/center" element={<Center />}></Route>
-          <Route path="/coachintro" element={<CoachIntro />}></Route>
-          <Route path="/memberlist" element={<MemberList />}></Route>
-          <Route path="/MemberSignup" element={<MemberSignup />}></Route>
+          <Route path="/center" element={<Center />}/>
+          <Route path="/coachintro" element={<CoachIntro />}/>
+          <Route path="/memberlist" element={<MemberList />}/>
+          <Route path="/MemberSignup" element={<MemberSignup />}/>
         </Routes>
-        <Footer/>
-        
+        <Footer />
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import "./Coach.scss";
 import CoachCard from "../../components/CoachCard";
 import MainTitle from "../../components/Title/MainTitle";
-function Coach() {
+function Dietitian() {
   const coachList = [
     {
       name: "張莉菈 Lila",
@@ -137,4 +137,4 @@ function Coach() {
     </>
   );
 }
-export default Coach;
+export default Dietitian;
