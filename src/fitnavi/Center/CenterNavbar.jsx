@@ -5,9 +5,9 @@ function CenterNavbar() {
   const [activeTab, setActiveTab] = useState("centerInformation"); // 預設是場館資料
   return (
     <>
-      <div>
+      <div id="centerMenu">
         {/* 中間的選單列 */}
-        <div className="centerMenu">
+        <div className="centerMenuBt">
           <button
             className={activeTab === "centerInformation" ? "active" : ""}
             onClick={() => setActiveTab("centerInformation")}
@@ -92,7 +92,7 @@ function CenterNavbar() {
               {/* 入場費用+聯絡方式 */}
               <div className="costContact">
                 {/* 入場費用 */}
-                <div className="entranceFee">
+                <div className="contactInfo">
                   {/* 標題 */}
                   <div className="centermenuTitle">
                     <h2>入場費用</h2>
@@ -101,7 +101,6 @@ function CenterNavbar() {
                       <div className="subtitleLine"></div> {/* 橫線 */}
                     </div>
                   </div>
-
                   <ul className="informationList">
                     <li>
                       <strong>單次入場</strong>
