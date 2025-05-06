@@ -1,0 +1,277 @@
+@import "../reset.scss";
+
+@font-face {
+    font-family: "Mantou Sans";
+    src: url(../../assets/MantouSans-Regular.ttf);
+}
+
+
+.JoinusStep1-header {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 50px;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 100px;
+
+
+    .JoinusStep1-headertitle {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 2px solid #3A2C19;
+        position: relative;
+
+        h3 {
+            color: var(--primary, var(--primary, #FF8740));
+            text-align: center;
+            font-family: "Dela Gothic One";
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 5.4px;
+        }
+
+        h4 {
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: var(--dark, #3A2C19);
+            font-family: "Mantou Sans";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 50px;
+            /* 208.333% */
+            letter-spacing: 2.4px;
+            color: white;
+        }
+
+    }
+
+}
+
+.CoachJoinus-Step1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 550px;
+    height: 700px;
+    margin-left: 350px;
+    margin-right: 450px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-right: 32px;
+    padding-left: 32px;
+
+    border-radius: 32px;
+    border: 1px solid var(--dark, #3A2C19);
+    background: #FFF;
+    box-shadow: 4px 4px 24px 0px rgba(58, 44, 25, 0.30);
+
+    .JoinusStep1-title {
+        display: flex;
+        flex-direction: row;
+        gap: 150px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #3a2c19;
+
+        .Step1-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: baseline;
+            gap: 12px;
+
+            h3 {
+                color: var(--primary, var(--primary, #FF8740));
+                text-align: center;
+                font-family: "Dela Gothic One";
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 5.4px;
+            }
+
+            h4 {
+                color: var(--primary, var(--primary, #FF8740));
+                text-align: center;
+                font-family: "Noto Sans TC";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 250%;
+                /* 35px */
+                letter-spacing: 1.4px;
+            }
+        }
+
+        p {
+            color: var(--primary, var(--primary, #FF8740));
+            text-align: center;
+            font-family: "Dela Gothic One";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+        }
+
+    }
+
+    .Step1-form {
+        display: flex;
+        width: 400px;
+        flex-direction: column;
+        gap: 12px;
+
+        label {
+            color: var(--gray, #989794);
+            /* 段落/14 */
+            font-family: "Noto Sans TC";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+        }
+
+        input:focus+label {
+            color: var(--dark, #3A2C19);
+            /* 段落/14 */
+
+        }
+
+        input {
+            border-radius: 999px;
+            border: 0.6px solid var(--gray, #989794);
+            background: var(--white, #FEFCF7);
+            height: 30px;
+            position: relative;
+            padding-left: 17px;
+
+            ::placeholder {
+                color: var(--gray, #989794);
+                /* 段落/14 */
+                font-family: "Noto Sans TC";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
+
+            &:focus {
+                border: 2px solid var(--primary, #FF8740);
+                background: #FFF;
+                box-shadow: 1px 2px 4px 0px rgba(58, 44, 25, 0.20);
+            }
+        }
+
+    }
+
+    .Step1-form-button {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        margin-top: 30px;
+
+        button {
+            display: flex;
+            padding: 10px 16px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+
+            border-radius: 999px;
+            border: 1px solid var(--primary, #FF8740);
+
+            color: var(--dark, #3A2C19);
+            text-align: center;
+            /* 段落/14 */
+            font-family: "Noto Sans TC";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+        }
+    }
+}
+
+
+CoachJoinus-Step2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 550px;
+    height: 700px;
+    margin-left: 350px;
+    margin-right: 450px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-right: 32px;
+    padding-left: 32px;
+
+    border-radius: 32px;
+    border: 1px solid var(--dark, #3A2C19);
+    background: #FFF;
+    box-shadow: 4px 4px 24px 0px rgba(58, 44, 25, 0.30);
+
+    .JoinusStep2-header {
+        display: flex;
+        flex-direction: row;
+        gap: 150px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #3a2c19;
+
+        .Step2-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: baseline;
+            gap: 12px;
+
+            h3 {
+                color: var(--primary, var(--primary, #FF8740));
+                text-align: center;
+                font-family: "Dela Gothic One";
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 5.4px;
+            }
+
+            h4 {
+                color: var(--primary, var(--primary, #FF8740));
+                text-align: center;
+                font-family: "Noto Sans TC";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 250%;
+                /* 35px */
+                letter-spacing: 1.4px;
+            }
+        }
+
+
+    }
+}
+
+
+
+
+
+

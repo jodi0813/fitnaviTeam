@@ -1,0 +1,33 @@
+.orderview-table {
+  border: 1px solid #eee;
+  padding: 10px;
+  text-align: center;
+}
+.orderview-table .orderview-table-header, .orderview-table .table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  background-color: #F9FAFC;
+}
+.orderview-table .orderview-table-header {
+  background-color: #FFF;
+  font-weight: bold;
+}
+.orderview-table .btn-orange {
+  background-color: #FF8740;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12px;
+}
+.orderview-table .btn-outline {
+  border: 1px solid #000;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12px;
+  background: transparent;
+}

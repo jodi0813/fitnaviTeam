@@ -15,6 +15,8 @@ import MemberLogin from "./MemberLogin/MemberLogin";
 import SetAccountPassword from "./SetAccountPassword/SetAccountPassword";
 import LoginSuccess from "./LoginSuccess/LoginSuccess";
 import MemberSignup from "./MemberSignup/MemberSignup";
+import JoinusStep1 from "./JoinusStep1/JoinusStep1";
+import JoinusStep2 from "./JoinusStep2/JoinusStep2";
 import "./reset.scss";
 
 function App() {
@@ -32,7 +34,7 @@ function App() {
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
-          <Route path="/MemberSignup" element={<MemberSignup />}></Route>
+          <Route path="/JoinusStep2" element={<JoinusStep2 />}></Route>
         </Routes>
         <Footer/>
         

@@ -1,0 +1,235 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box; /* 不累加邊框及內距 */
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 重置字體 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+  background-color: #fefcf7;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 重置連接 */
+a {
+  display: block; /* a預設的行內元素，不支援寬高及上下間距，通常會改為區塊，方便設定 */
+  color: #444;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Mantou Sans";
+  src: url(../../assets/MantouSans-Regular.ttf);
+}
+.LoginSuccess {
+  margin-top: 100px;
+  margin-bottom: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.LoginSuccess .LoginSuccess-title {
+  display: inline-flex;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 220px;
+  top: 25px;
+  margin: 0px;
+  background: var(--white, #FEFCF7);
+  color: var(--dark, #3A2C19);
+  text-align: center;
+  /* heading/標題3 */
+  font-family: "Noto Sans TC";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.2px;
+}
+.LoginSuccess .LoginSuccess-content {
+  width: 600px;
+  padding: 60px 95px 70px 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  border: 0.8px solid var(--dark, #3A2C19);
+}
+.LoginSuccess .LoginSuccess-content p {
+  color: var(--dark, #3A2C19);
+  text-align: center;
+  /* heading/標題4/medium */
+  font-family: "Noto Sans TC";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  /* 200% */
+  letter-spacing: 0.4px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.LoginSuccess .LoginSuccess-content button {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 999px;
+  text-align: center;
+  /* heading/標題4/Bold */
+  font-family: "Noto Sans TC";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  background-color: #FFF;
+  color: var(--primary, var(--primary, #FF8740));
+  border: 1px solid var(--primary, #FF8740);
+}
+.LoginSuccess .LoginSuccess-content button:hover {
+  background: var(--primary, #FF8740);
+  color: var(--white, var(--white, #FEFCF7));
+}
+.LoginSuccess .SetAccountPassword-option {
+  position: relative;
+  top: -100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+  margin-top: 60px;
+}
+.LoginSuccess .SetAccountPassword-option button {
+  color: var(--dark, #3A2C19);
+  /* 段落/16 */
+  font-family: "Noto Sans TC";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  /* 24px */
+  letter-spacing: 1.6px;
+  padding: 0px;
+}
