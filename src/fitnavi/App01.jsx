@@ -18,6 +18,7 @@ import LoginSuccess from "./LoginSuccess/LoginSuccess";
 import MemberSignup from "./MemberSignup/MemberSignup";
 import JoinusStep1 from "./JoinusStep1/JoinusStep1";
 import JoinusStep2 from "./JoinusStep2/JoinusStep2";
+import JoinusStep3 from "./JoinusStep3/JoinusStep3";
 import "./reset.scss";
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
-          <Route path="/JoinusStep2" element={<JoinusStep2 />}></Route>
+          <Route path="/JoinusStep2" element={<JoinusStep3 />}></Route>
         </Routes>
         <Footer />
       </div>
