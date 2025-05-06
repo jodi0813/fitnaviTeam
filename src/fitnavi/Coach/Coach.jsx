@@ -81,7 +81,7 @@ function Coach() {
       <div id="coachMain">
         <header className="coachTitle">
           <h2>健身教練</h2>
-          <p>PERSONAL TRAINER</p>
+          <p>找到專屬你的健身教練</p>
         </header>
         <hr />
         <div className="searchBox">
