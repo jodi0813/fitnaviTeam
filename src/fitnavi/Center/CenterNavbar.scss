@@ -3,10 +3,43 @@
 #centerMenu {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
   gap: 64px;
   .centerMenuBt {
     display: flex;
-    justify-content: center;
+    padding: 12px 80px;
+    justify-content: space-around;
+    gap: 80px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background: #fff;
+    .centerActive {
+      color: #FF8740;
+      text-align: center;
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 140%; /* 19.6px */
+      letter-spacing: 1.4px;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: 10%; /* 1.4px */
+      text-underline-offset: 25%; /* 3.5px */
+    }
+    .centerNoActive {
+      color: #000;
+      text-align: center;
+      /* 段落/14 */
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; /* 19.6px */
+      letter-spacing: 1.4px;
+    }
   }
 
   h2 {
@@ -136,12 +169,13 @@
     }
   }
   /* 教練卡 */
-  #fitnessTrainer{
+  #fitnessTrainer {
     display: flex;
     flex-direction: column;
     gap: 64px;
-  .threeCards {
-    display: flex;
-    gap: 64px;
-  }}
+    .threeCards {
+      display: flex;
+      gap: 64px;
+    }
+  }
 }
