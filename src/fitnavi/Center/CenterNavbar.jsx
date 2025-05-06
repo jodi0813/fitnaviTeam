@@ -216,11 +216,11 @@ function CenterNavbar() {
                     imageSrc="/images/coach07.jpg"
                   />
                   <CoachCard
-                    name="文彥 Wenyen"
+                    name="詹姆斯 James"
                     role="教練"
-                    hashtags={["運動目標", "體能提升", "燃燒脂肪"]}
-                    description="專注於運動後的恢復與預防傷害，讓你在安全的環境中達到最佳效果。健康和成果，我一起陪伴你實現。"
-                    imageSrc="/images/coach16.jpg"
+                    hashtags={["健身啟發", "運動挑戰", "燃燒脂肪"]}
+                    description="無論是增肌還是減脂，我會為你量身打造最佳的訓練計劃。讓我們一起實現更健康的未來。"
+                    imageSrc="/images/coach08.jpg"
                   />
                 </div>
               </div>
