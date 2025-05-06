@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
 import Coach from "./Coach/Coach";
+import Nutritionist from "./Coach/Nutritionist";
 import CenterMap from "./Center/CenterMap";
 import Article from "./Article/Article";
 import Allarticle from "./Allarticle/Allarticle";
@@ -25,19 +26,25 @@ function App() {
       <div className="wrap">
         <Navbar />
         <Routes>
-        <Route path="/" element={<Coach />} />
-          <Route path="/coach" element={<Coach />}></Route>
-          
-          <Route path="/centerMap" element={<CenterMap />}></Route>
-          <Route path="/allarticle" element={<Allarticle />} />  {/* 文章列表頁 */}
+          <Route path="/" element={<Coach />} />
+          <Route path="/coach" element={<Coach />}/>
+          <Route path="/nutritionist"element={<Nutritionist/>}/>
+          <Route path="/centerMap" element={<CenterMap/>}/>
+          <Route path="/allarticle" element={<Allarticle />} />
           <Route path="/article/:id" element={<Article />} />
+<<<<<<< HEAD
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
           <Route path="/JoinusStep2" element={<JoinusStep2 />}></Route>
+=======
+          <Route path="/center" element={<Center />}/>
+          <Route path="/coachintro" element={<CoachIntro />}/>
+          <Route path="/memberlist" element={<MemberList />}/>
+          <Route path="/MemberSignup" element={<MemberSignup />}/>
+>>>>>>> d36f3755d5692a33795f25bd27e7205c9e271993
         </Routes>
-        <Footer/>
-        
+        <Footer />
       </div>
     </>
   );

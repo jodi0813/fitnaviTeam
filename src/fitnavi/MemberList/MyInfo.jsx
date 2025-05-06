@@ -1,11 +1,12 @@
-import MemberTitle from "./MemberTitle";
+
+import Subtitle from "../../components/Title/Subtitle";
 import "./MyInfo.scss";
 function MyInfo() {
   return (
     <>
       <div className="orderbox">
         {/* 個人資訊標題 */}
-        <MemberTitle title="個人資訊" subtitle="My Info" />
+        <Subtitle  subtitle="個人資訊" subtitleEN="My Info"/>
         {/* 個人資訊白卡 */}
         <div className="myinfoCard">
           {/* 大頭照姓名跟編輯按鈕 */}

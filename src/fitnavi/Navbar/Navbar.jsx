@@ -17,7 +17,7 @@ function Navbar() {
                 <Link to="/coach">健身教練</Link>
               </li>
               <li>
-                <Link to="/coachintro">營養師</Link>
+                <Link to="/nutritionist">營養師</Link>
               </li>
               <li>
                 <Link>我的收藏</Link>

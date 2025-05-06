@@ -142,7 +142,9 @@ function CenterMap() {
               </div>
             </div>
           </div>
-          <div className="mapPhotos"></div>
+          <div className="mapPhotos">
+            <img src="/images/mapicon.jpg" alt="" className="centerMapPhoto"/>
+          </div>
         </div>
       </div>
     </>

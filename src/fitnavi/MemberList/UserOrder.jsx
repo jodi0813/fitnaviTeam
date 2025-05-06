@@ -1,17 +1,17 @@
 import { useState } from "react";
-import MemberTitle from "./MemberTitle";
 import MyOrders from "./MyOrders";
 import MyOrderView from "./MyOrderView";
 import { Link } from "react-router-dom";
 import "./UserOrder.scss";
 import MyFinishOrder from "./MyFinishOrder";
+import Subtitle from "../../components/Title/Subtitle";
 function UserOrder() {
   const [userTab, setUserTab] = useState("myorder");
 
   return (
     <>
       <div className="orderbox">
-        <MemberTitle title="我的訂單管理" subtitle="My Order Management" />
+       <Subtitle subtitle="我的訂單管理" subtitleEN="My Order Management"/>
         <div className="orderboxButtonText">
           <div className="orderboxButton">
             <button className={userTab === "myorder" ? "userBt" : "userBt"}
