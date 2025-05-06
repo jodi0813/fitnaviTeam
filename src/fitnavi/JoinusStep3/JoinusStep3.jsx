@@ -124,8 +124,8 @@ function JoinusStep3() {
 
                 </div>
 
-                <div className='Step3-form-button'>
-                    <button>◀ 上一步</button>
+                <div className='NextPreButton'>
+                    <button >◀ 上一步</button>
                     <button>下一步 ▶</button>
                 </div>
             </form>
