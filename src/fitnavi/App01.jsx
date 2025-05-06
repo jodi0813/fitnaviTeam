@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
 import Coach from "./Coach/Coach";
-import Dietitian from "./Coach/Dietitian";
+import Nutritionist from "./Coach/Nutritionist";
 import CenterMap from "./Center/CenterMap";
 import Article from "./Article/Article";
 import Allarticle from "./Allarticle/Allarticle";
@@ -26,7 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Coach />} />
           <Route path="/coach" element={<Coach />}/>
-          <Route path="/dietitian"element={<Dietitian/>}/>
+          <Route path="/nutritionist"element={<Nutritionist/>}/>
           <Route path="/centerMap" element={<CenterMap/>}/>
           <Route path="/allarticle" element={<Allarticle />} />
           <Route path="/article/:id" element={<Article />} />
