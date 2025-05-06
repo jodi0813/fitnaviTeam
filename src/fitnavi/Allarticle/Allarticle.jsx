@@ -1,10 +1,18 @@
 import React from 'react';
 import Articlecards from '../../components/Articlecards';
-import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./AllArticle.scss";
 
+
 function Allarticle() {
-    // const { id } = useParams();
+
+    const navigate = useNavigate();
+    const handleCardClick = (id) => {
+        // 使用 useNavigate 來跳轉到相應的文章頁面
+        navigate(`/article/${id}`);
+    };
+
+    
     
 
     const cardsData = [
@@ -184,7 +192,7 @@ function Allarticle() {
                             tags={card.tags}
                             category={card.category}
                             className={`card${index + 1}`}
-                            // onclick ()=>{}
+                            onClick={() => navigate(`/article/${card.id}`)}
                         />
                     ))}</div> 
                 </div>

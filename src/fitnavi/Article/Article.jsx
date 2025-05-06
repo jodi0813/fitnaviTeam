@@ -1,6 +1,20 @@
 import "./Article.scss";
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from "react";
 
 function Article() {
+    const { id } = useParams();
+    const [article, setArticle] = useState(null);
+    useEffect(() => {
+        const stored = localStorage.getItem("selectedArticle");
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (parsed.id === id) {
+            setArticle(parsed);
+          }
+        }
+      }, [id]);
+
     return (
         <>
 
