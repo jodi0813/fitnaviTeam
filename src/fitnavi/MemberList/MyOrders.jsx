@@ -1,6 +1,7 @@
 import "./MyOrders.scss";
 import { useState } from "react";
-import StudentChatPopup from "./StudentChatPopup";
+import StudentChatPopup from "./Popup/StudentChatPopup";
+import ProblemPopup from "./Popup/ProblemPopup";
 function MyOrders() {
   /* 訂單資料 */
   const orders = [

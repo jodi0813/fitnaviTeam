@@ -1,0 +1,143 @@
+#chat-popup {
+    position: absolute;
+    left:0;
+    right:0; 
+    top:0; 
+    bottom:0; 
+    margin:auto;
+    display: flex;
+    width: 600px;
+    height: 504px;
+    padding: 36px 24px;
+    flex-direction: column;
+    // align-items:flex-start;
+    // justify-content: center;
+    // align-items: center;
+    gap: 24px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background: rgba(67, 61, 61, 0.70);
+    box-shadow: 2px 2px 2px 0px rgba(255, 255, 255, 0.25) inset, 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+hr{
+    width: 100%;
+}
+    .chat-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+
+        h2 {
+            color: #FF8740;
+            font-family: "Noto Sans TC";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 2px;
+        }
+
+        span {
+            color: #FFF;
+            font-family: "Noto Sans TC";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+        }
+
+        .teacher-info {
+            width: 270px;
+
+            span {
+                color: #FFF;
+            }
+        }
+
+        .close-btn {
+            display: flex;
+  align-items: center;
+  justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            fill: #FEFCF7;
+            position: absolute;
+            right: 12px;
+            top: 10px;
+            opacity: 0.8;
+            padding: 0;  
+        }
+    }
+
+    .avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 36px;
+        overflow: crop;
+    }
+
+    .messages {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 552px;
+
+        .bubble {
+            font-family: "Noto Sans TC";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            letter-spacing: 1.4px;
+            display: flex;
+            padding: 8px 12px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .messageUser {
+            display: flex;
+            flex-direction:row-reverse;
+        
+            .bubble {
+                color: #3A2C19;
+                border-radius: 100px;
+                border: 1px solid #3a2c19;
+                background: #FEFCF7;
+            }
+        }
+
+        .messageCoach {
+            display: flex;
+           
+            .bubble {
+                color: #FEFCF7;
+                border-radius: 100px;
+                border: 1px solid #FEFCF7;
+                background: #3A2C19;
+            }
+        }
+
+    }
+.chat-input-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+input{
+    width: 453px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    border: none;
+}
+
+}
+
+}
