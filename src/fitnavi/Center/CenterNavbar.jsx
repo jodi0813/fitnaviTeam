@@ -63,7 +63,7 @@ function CenterNavbar() {
                 </ul>
               </div>
               <div className="informationRight">
-                <img src="./images/map.png" alt="場館地圖位置" />
+                <img src="./images/map.jpg" alt="場館地圖位置" />
               </div>
             </div>
             {/* 場景外觀 */}
