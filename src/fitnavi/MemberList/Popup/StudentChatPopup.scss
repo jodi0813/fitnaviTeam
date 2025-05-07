@@ -1,143 +1,224 @@
-#chat-popup {
-    position: absolute;
-    left:0;
-    right:0; 
-    top:0; 
-    bottom:0; 
-    margin:auto;
-    display: flex;
-    width: 600px;
-    height: 504px;
-    padding: 36px 24px;
-    flex-direction: column;
-    // align-items:flex-start;
-    // justify-content: center;
-    // align-items: center;
-    gap: 24px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.30);
-    background: rgba(67, 61, 61, 0.70);
-    box-shadow: 2px 2px 2px 0px rgba(255, 255, 255, 0.25) inset, 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(25px);
-hr{
+.chat-popup {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  width: 600px;
+  height: 504px;
+  padding: 36px 24px;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(67, 61, 61, 0.7);
+  box-shadow: 2px 2px 2px 0px rgba(255, 255, 255, 0.25) inset,
+    10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(25px);
+  hr {
     width: 100%;
-}
-    .chat-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 24px;
+  }
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
 
-        h2 {
-            color: #FF8740;
-            font-family: "Noto Sans TC";
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            letter-spacing: 2px;
-        }
-
-        span {
-            color: #FFF;
-            font-family: "Noto Sans TC";
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%;
-            /* 19.6px */
-            letter-spacing: 1.4px;
-        }
-
-        .teacher-info {
-            width: 270px;
-
-            span {
-                color: #FFF;
-            }
-        }
-
-        .close-btn {
-            display: flex;
-  align-items: center;
-  justify-content: center;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            fill: #FEFCF7;
-            position: absolute;
-            right: 12px;
-            top: 10px;
-            opacity: 0.8;
-            padding: 0;  
-        }
+    h2 {
+      color: #ff8740;
+      font-family: "Noto Sans TC";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2px;
     }
 
-    .avatar {
-        width: 36px;
-        height: 36px;
-        border-radius: 36px;
-        overflow: crop;
+    span {
+      color: #fff;
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      /* 19.6px */
+      letter-spacing: 1.4px;
     }
 
-    .messages {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        width: 552px;
+    .teacher-info {
+      width: 270px;
 
-        .bubble {
-            font-family: "Noto Sans TC";
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%;
-            letter-spacing: 1.4px;
-            display: flex;
-            padding: 8px 12px;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .messageUser {
-            display: flex;
-            flex-direction:row-reverse;
-        
-            .bubble {
-                color: #3A2C19;
-                border-radius: 100px;
-                border: 1px solid #3a2c19;
-                background: #FEFCF7;
-            }
-        }
-
-        .messageCoach {
-            display: flex;
-           
-            .bubble {
-                color: #FEFCF7;
-                border-radius: 100px;
-                border: 1px solid #FEFCF7;
-                background: #3A2C19;
-            }
-        }
-
+      span {
+        color: #fff;
+      }
     }
-.chat-input-area{
+
+    .close-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      fill: #fefcf7;
+      position: absolute;
+      right: 12px;
+      top: 10px;
+      opacity: 0.8;
+      padding: 0;
+    }
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 36px;
+    overflow: crop;
+  }
+
+  .messages {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 552px;
+
+    .bubble {
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: 1.4px;
+      display: flex;
+      padding: 8px 12px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .messageUser {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .bubble {
+        color: #3a2c19;
+        border-radius: 100px;
+        border: 1px solid #3a2c19;
+        background: #fefcf7;
+      }
+    }
+
+    .messageCoach {
+      display: flex;
+
+      .bubble {
+        color: #fefcf7;
+        border-radius: 100px;
+        border: 1px solid #fefcf7;
+        background: #3a2c19;
+      }
+    }
+  }
+  .chat-input-area {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
 
-input{
-    width: 453px;
-    height: 40px;
-    flex-shrink: 0;
-    border-radius: 100px;
+    input {
+      width: 453px;
+      height: 40px;
+      flex-shrink: 0;
+      border-radius: 100px;
+      border: none;
+    }
+  }
+  .popup-subtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: flex-start;
+    gap: 12px;
+    // align-self: stretch;
+
+    label {
+      color: #fefcf7;
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; /* 19.6px */
+      letter-spacing: 1.4px;
+    }
+    .problemBody {
+      display: flex;
+      padding: 0px 36px;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      #classification1,
+      #classification2 {
+        border-radius: 20px;
+        border: #3a2c19;
+        background: #fefcf7;
+        width: 200px;
+        height: 40px;
+        color: #989794;
+        padding: 8px 20px;
+align-items: center;
+      }
+    }
+    .describe {
+      display: flex;
+      flex-direction: column;
+
+      gap: 12px;
+      textarea {
+        height: 150px;
+        align-self: stretch;
+        border-radius: 12px;
+        background: #fefcf7;
+      }
+    }
+    .popup-submit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      .notice {
+        color: #fefcf7;
+        text-align: center;
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 1.4px;
+      }
+    }
+  }
+  .popup-submit-btn {
+    display: flex;
+    padding: 4px 48px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    background: #ff8740;
+    width: 130px;
+    height: 28px;
+    text-align: center;
+    color: #fefcf7;
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: 1.4px;
     border: none;
+  }
 }
-
-}
-
+.problem-popup {
+  gap: 12px;
 }

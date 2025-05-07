@@ -4,7 +4,7 @@ import { GrAddCircle } from "react-icons/gr";
 function StudentChatPopup({ onClose }) {
     return (
         <>
-            <section id="chat-popup">
+            <section className="chat-popup">
                 <div>
                     <header className="chat-header">
                         <h2>聯絡講師</h2>
