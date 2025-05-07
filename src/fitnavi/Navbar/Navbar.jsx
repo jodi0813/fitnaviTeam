@@ -29,7 +29,7 @@ function Navbar() {
                 <Link to="/centerMap">健身場地</Link>
               </li>
               <li>
-                <Link to="./JoinusStep3">加入我們</Link>
+                <Link to="./ JoinusLoading">加入我們</Link>
               </li>
               <li>
                 <Link to="/memberlist">後台(暫放)</Link>
