@@ -1,8 +1,17 @@
 import React from 'react';
 import "./JoinusStep1.scss";
+import { useNavigate } from 'react-router-dom';
 
 function JoinusStep1() {
+    const navigate = useNavigate();
+
+    const handleNext = (e) => {
+        e.preventDefault(); // 防止表單預設提交行為
+        navigate('/joinusStep2');
+    };
+
     return (
+        
         <>
             <section className="JoinusStep1-header">
                 <div className='JoinusStep1-headertitle'>
@@ -40,7 +49,7 @@ function JoinusStep1() {
                     </div>
 
                     <div className='Step1-form-button'>
-                        <button>下一步 ▶</button>
+                        <button onClick={handleNext}>下一步 ▶</button>
                     </div>
                 </form>
 
@@ -193,13 +202,6 @@ function JoinusStep1() {
                 </form>
 
             </div>
-
-
-
-
-
-
-
 
 
         </>
