@@ -34,7 +34,7 @@ function Center() {
 
           <div className="centerPhotoBox">
             <img src="./images/center.jpg" alt="" className="centerPic" />
-            <div className="title2">
+            <div className="centerTitle2">
               <img
                 src="./images/centerlogopic.jpg"
                 alt=""
