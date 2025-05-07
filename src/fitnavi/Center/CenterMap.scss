@@ -68,15 +68,17 @@
 
 .mapSearchAll {
     display: flex;
+    
     gap: 8px;
 
     .mapSearchLeft {
         display: flex;
         width: 20%;
-
+        justify-content:center;
         #center-search-form {
             display: flex;
-            flex-direction: column;
+            flex-direction: column;  
+        
             gap: 18px;
 
             #centername,
@@ -95,6 +97,9 @@
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 8px;
+                input{
+                    width: 100%;
+                }
 
             }
 
@@ -120,6 +125,7 @@
                         display: flex;
                         gap: 14px;
                     }
+              
                 }
             }
 
@@ -136,7 +142,8 @@
     .centerResultPhoto {
         display: flex;
         flex-direction: column;
-        width: 30%;
+        align-items:center;
+        width: 25%;
         gap: 12px;
 
         .photosNumber {
@@ -182,8 +189,7 @@
 
     .centerMapPhoto {
         border-radius: 16px;
-        width: 670px;
-        height: 766px;
+              height: 766px;
     }
 
 
