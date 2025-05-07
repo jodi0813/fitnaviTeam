@@ -1,4 +1,5 @@
 @use "../reset.scss";
+
 .centerTitleHead {
     display: flex;
     justify-content: space-between;
@@ -6,35 +7,36 @@
     width: 100%;
 
     .centerHead {
-      display: flex;
-      align-items: flex-end;
+        display: flex;
+        align-items: flex-end;
 
-      h2 {
-        font-family: "Mantou Sans";
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 150%;
-        letter-spacing: 9.6px;
-        color: #ff8740;
-      }
+        h2 {
+            font-family: "Mantou Sans";
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: 9.6px;
+            color: #ff8740;
+        }
 
-      h3 {
-        font-family: "Mantou Sans";
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 50px;
-        letter-spacing: 2.4px;
-      }
+        h3 {
+            font-family: "Mantou Sans";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 50px;
+            letter-spacing: 2.4px;
+        }
     }
 
     nav {
-      .breadcrumb {
-        display: flex;
-      }
+        .breadcrumb {
+            display: flex;
+        }
     }
-  }
+}
+
 .centerHead {
     display: flex;
     align-items: flex-end;
@@ -106,8 +108,9 @@
                     flex-direction: column;
                     gap: 12px;
                     padding: 0px 24px;
-                    height: 329px;
+                    height: 350px;
                     overflow: auto; //卷軸
+
                     legend {
                         font-family: Alata;
                         font-size: 14px;
@@ -149,15 +152,23 @@
         .gymCard {
             position: relative;
 
+            .centerPic {
+                width: 287px;
+                height: 162px;
+                overflow: crop;
+            }
+
             .gymCardText {
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 padding: 16px;
                 color: white;
+
                 h3 {
                     font-size: 14px;
                 }
+
                 p {
                     margin: 0;
                     font-size: 12px;
@@ -168,8 +179,11 @@
         }
 
     }
-    .centerMapPhoto{
+
+    .centerMapPhoto {
         border-radius: 16px;
+        width: 670px;
+        height: 766px;
     }
 
 
