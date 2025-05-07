@@ -29,9 +29,11 @@ function CenterNavbar() {
             私人教練
           </Link>
         </div>
+      </div>
+      <div >
         {activeTab === "centerInformation" && (
           /* 一、場館資料 */
-          <div id="centerInformation">
+          <section id="centerInformation">
             {/* 1.基本資料 */}
             <div className="basicVenueInfo">
               <div className="informationLeft">
@@ -61,7 +63,7 @@ function CenterNavbar() {
                 </ul>
               </div>
               <div className="informationRight">
-                <img src="./images/map.png" alt="場館地圖位置" />
+                <img src="./images/map.jpg" alt="場館地圖位置" />
               </div>
             </div>
             {/* 場景外觀 */}
@@ -121,77 +123,74 @@ function CenterNavbar() {
                 </ul>
               </div>
             </div>
-          </div>
+          </section>
         )}
         {/* 二、環境設施 */}
         {activeTab === "facility" && (
-          <div className="content">
-            <section id="facilities">
-              {/* 有氧器材 */}
-              <div className="venueExterior">
-                <Subtitle
-                  subtitle="有氧器材"
-                  subtitleEN="Cardio Equipment Area"
+          <section id="facilities">
+            {/* 有氧器材 */}
+            <div className="venueExterior">
+              <Subtitle
+                subtitle="有氧器材"
+                subtitleEN="Cardio Equipment Area"
+              />
+              {/* 有氧器材的照片 */}
+              <div className="centerPhotos">
+                <button>‹</button>
+                <img
+                  src="/images/cardioEquipment01.jpg"
+                  alt="有氧器材照片1"
                 />
-
-                {/* 有氧器材的照片 */}
-                <div className="centerPhotos">
-                  <button>‹</button>
-                  <img
-                    src="/images/cardioEquipment01.jpg"
-                    alt="有氧器材照片1"
-                  />
-                  <img
-                    src="/images/cardioEquipment02.jpg"
-                    alt="有氧器材照片2"
-                  />
-                  <img
-                    src="/images/cardioEquipment03.jpg"
-                    alt="有氧器材照片3"
-                  />
-                  <button>›</button>
-                </div>
-                <div>設備器材</div>
-                <hr />
-                <div>跑步機 飛輪機 滑步機 登階機 划船機 戰繩設備 壺鈴</div>
-              </div>
-              {/* 重訓器材(X) */}
-              <div className="weightTrainingArea">
-                <Subtitle
-                  subtitle="重訓器材"
-                  subtitleEN="Weight Training Area"
+                <img
+                  src="/images/cardioEquipment02.jpg"
+                  alt="有氧器材照片2"
                 />
-                {/* 重訓器材的照片 */}
-                <div className="weightTrainingAreaPhotos">
-                  <button>‹</button>
-                  <img src="/images/weightTraining01.jpg" alt="重訓器材照片1" />
-                  <img src="/images/weightTraining02.jpg" alt="重訓器材照片2" />
-                  <img src="/images/weightTraining03.jpg" alt="重訓器材照片3" />
-                  <button>›</button>
-                </div>
-                <div>設備器材</div>
-                <hr />
-                <div>跑步機 飛輪機 滑步機 登階機 划船機 戰繩設備 壺鈴</div>
-              </div>
-              {/* 更衣淋浴(X) */}
-              <div className="showerArea">
-                <Subtitle
-                  subtitle="更衣淋浴"
-                  subtitleEN="Changing & Shower Area"
+                <img
+                  src="/images/cardioEquipment03.jpg"
+                  alt="有氧器材照片3"
                 />
-                {/* 更衣淋浴的照片 */}
-                <div className="showerAreaPhotos">
-                  <button>‹</button>
-                  <img src="/images/showerArea01.jpg" alt="更衣淋浴照片1" />
-                  <img src="/images/showerArea02.jpg" alt="更衣淋浴照片2" />
-                  <button>›</button>
-                </div>
-                <div>設備器材</div>
-                <hr className="divider"></hr>
-                <div>跑步機 飛輪機 滑步機 登階機 划船機 戰繩設備 壺鈴</div>
+                <button>›</button>
               </div>
-            </section>
-          </div>
+              <div>設備器材</div>
+              <hr />
+              <div>跑步機 飛輪機 滑步機 登階機 划船機 戰繩設備 壺鈴</div>
+            </div>
+            {/* 重訓器材(X) */}
+            <div className="weightTrainingArea">
+              <Subtitle
+                subtitle="重訓器材"
+                subtitleEN="Weight Training Area"
+              />
+              {/* 重訓器材的照片 */}
+              <div className="centerPhotos">
+                <button>‹</button>
+                <img src="/images/weightTraining01.jpg" alt="重訓器材照片1" />
+                <img src="/images/weightTraining02.jpg" alt="重訓器材照片2" />
+                <img src="/images/weightTraining03.jpg" alt="重訓器材照片3" />
+                <button>›</button>
+              </div>
+              <div>設備器材</div>
+              <hr />
+              <div>跑步機 飛輪機 滑步機 登階機 划船機 戰繩設備 壺鈴</div>
+            </div>
+            {/* 更衣淋浴(X) */}
+            <div className="showerArea">
+              <Subtitle
+                subtitle="更衣淋浴"
+                subtitleEN="Changing & Shower Area"
+              />
+              {/* 更衣淋浴的照片 */}
+              <div className="centerPhotos">
+                <button>‹</button>
+                <img src="/images/showerArea01.jpg" alt="更衣淋浴照片1" />
+                <img src="/images/showerArea02.jpg" alt="更衣淋浴照片2" />
+                <button>›</button>
+              </div>
+              <div>設備器材</div>
+              <hr className="divider"></hr>
+              <div>跑步機 飛輪機 滑步機 登階機 划船機 戰繩設備 壺鈴</div>
+            </div>
+          </section>
         )}
         {/* 三、私人教練 */}
         {activeTab === "fitnessTrainer" && (
@@ -254,7 +253,8 @@ function CenterNavbar() {
             </section>
           </div>
         )}
-      </div>
+
+      </div >
     </>
   );
 }
