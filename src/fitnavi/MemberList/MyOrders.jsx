@@ -1,5 +1,8 @@
 import "./MyOrders.scss";
+import { useState } from "react";
+import StudentChatPopup from "./StudentChatPopup";
 function MyOrders() {
+  /* 訂單資料 */
   const orders = [
     {
       no: "1",
@@ -10,7 +13,7 @@ function MyOrders() {
       time: "17:00-18:00",
       location: "TECHNOgym",
       locationCH: "（忠孝館）",
-      contactStatus: "留言",
+      // contactStatus: "留言",
       confirmStatus: "您已送出預約申請",
       confirmAction: "取消",
       progress: "尚未進行課程",
@@ -25,13 +28,18 @@ function MyOrders() {
       time: "17:00-18:00",
       location: "TECHNOgym",
       locationCH: "（忠孝館）",
-      contactStatus: "留言",
+      // contactStatus: "留言",
       confirmStatus: "已確認",
       confirmAction: "",
       progress: "完成",
       isFinished: true,
     },
   ];
+  /* 控制按鈕彈窗 */
+  const [popupType, setPopupType] = useState(null);
+  const handleOpenChat = () => setPopupType("chat");
+  const handleOpenProblem = () => setPopupType("problem");
+  const handleClosePopup = () => setPopupType(null);
   return (
     <>
       <div className="order-table">
@@ -68,14 +76,12 @@ function MyOrders() {
             </span>
             {/* 聯絡講師(按鈕) */}
             <span>
-              <button className="btn-orange">{order.contactStatus}</button>
+              <button onClick={handleOpenChat} className="btn-orange">留言</button>
             </span>
             {/* 預約確認(按鈕待確認) */}
             <span>
               <span>{order.confirmStatus}</span>
-              {/* {order.confirmAction && (
-                                    <button className="btn-cancel">{order.confirmAction}</button>
-                                )} */}
+              {/* {order.confirmAction && (<button className="btn-cancel">{order.confirmAction}</button>)} */}
             </span>
             {/* 課程完成(按鈕待確認) */}
             <span>
@@ -87,11 +93,14 @@ function MyOrders() {
             </span>
             {/* 問題反映 */}
             <span>
-              <button className="btn-outline">聯絡客服</button>
+              <button onClick={handleOpenProblem} className="btn-outline">聯絡客服</button>
             </span>
           </div>
         ))}
       </div>
+      {/* 根據 popupType 顯示彈窗 */}
+      {popupType === "chat" && <StudentChatPopup onClose={handleClosePopup} />}
+      {popupType === "problem" && <ProblemPopup onClose={handleClosePopup} />}
     </>
   )
 } export default MyOrders;
