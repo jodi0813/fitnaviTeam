@@ -34,7 +34,7 @@ function App() {
           <Route path="/nutritionist"element={<Nutritionist/>}/>
           <Route path="/centerMap" element={<CenterMap/>}/>
           <Route path="/allarticle" element={<Allarticle />} />
-          <Route path="/article/:id" element={<Article />} />
+          <Route path="/article" element={<Article />} />
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
