@@ -5,7 +5,11 @@ import styles from "./Articlecards.module.css";
 function Articlecards({id, date, img, title, content, tags, category, className }) {
     return (
         <>
+<<<<<<< HEAD
             <Link to={`/article/${id}`} className={`article-card ${className}`}>
+=======
+            <Link to="/article" className={`article-card ${className}`}>
+>>>>>>> e39aac50d5e5ef34347b583bc43c3dff4344716c
                 <div className={`${styles.card}  ${className}`}>
                     <p className={styles.data}>{date}</p>
                     <div className={styles.imgbox}>

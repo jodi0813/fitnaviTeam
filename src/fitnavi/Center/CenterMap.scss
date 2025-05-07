@@ -68,15 +68,18 @@
 
 .mapSearchAll {
     display: flex;
+
     gap: 8px;
 
     .mapSearchLeft {
         display: flex;
         width: 20%;
+        justify-content: center;
 
         #center-search-form {
             display: flex;
             flex-direction: column;
+
             gap: 18px;
 
             #centername,
@@ -96,30 +99,34 @@
                 align-items: flex-start;
                 gap: 8px;
 
+                input {
+                    width: 100%;
+                }
+
             }
 
             .centerTitleItem {
                 display: flex;
                 flex-direction: column;
                 gap: 14px;
+                overflow: auto; //卷軸
+                height: 350px;
 
                 .centerItem {
                     display: flex;
                     flex-direction: column;
                     gap: 12px;
                     padding: 0px 24px;
-                    height: 350px;
-                    overflow: auto; //卷軸
 
                     legend {
                         font-family: Alata;
                         font-size: 14px;
                     }
-
                     .checkboxItem {
                         display: flex;
                         gap: 14px;
                     }
+
                 }
             }
 
@@ -136,7 +143,8 @@
     .centerResultPhoto {
         display: flex;
         flex-direction: column;
-        width: 30%;
+        align-items: center;
+        width: 25%;
         gap: 12px;
 
         .photosNumber {
@@ -182,7 +190,6 @@
 
     .centerMapPhoto {
         border-radius: 16px;
-        width: 670px;
         height: 766px;
     }
 
