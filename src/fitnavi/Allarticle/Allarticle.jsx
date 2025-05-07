@@ -1,17 +1,14 @@
 import React from 'react';
 import Articlecards from '../../components/Articlecards';
-import { useParams } from "react-router-dom";
 import "./AllArticle.scss";
 
 
 function Allarticle() {
 
-    const { id } = useParams();
-
-    
-    
+    // const { id } = useParams();
+    // const navigate = useNavigate();
     const cardsData = [
-        
+
         {
             id: "card1",
             date: "2025/06/15",
@@ -96,10 +93,17 @@ function Allarticle() {
             content: "健身營養的成功不僅是攝取足夠的卡路里，更重要的是如何搭配碳水化合物、蛋白質與脂肪。根據不同的健身目標，合理調整飲食比例，讓效果事半功倍！",
             tags: ["減脂", "增肌"],
             category: "營養調配"
-          
-
         }
+
+        
     ]
+
+    // let filteredCards = cardsData;  // 預設是顯示所有文章
+    // if (id) {
+    //     filteredCards = cardsData.filter(card => card.category === id);  // 如果有id，就根據category篩選
+    // }
+
+
     return (
         <>
 
@@ -173,23 +177,23 @@ function Allarticle() {
                         <h4>燃脂運動</h4>
                     </div>
 
-                    
 
-                 <div className="Allarticle-Card">
-                    {cardsData.map((card, index) => (
-                        
-                        <Articlecards
-                            key={index}
-                            date={card.date}
-                            img={card.img}
-                            title={card.title}
-                            content={card.content}
-                            tags={card.tags}
-                            category={card.category}
-                            className={`card${index + 1}`}
-                            onClick={() => navigate(`/article/${card.id}`)}
-                        />
-                    ))}</div> 
+
+                    <div className="Allarticle-Card">
+                        {cardsData.map((card, index) => (
+
+                            <Articlecards
+                                key={index}
+                                date={card.date}
+                                img={card.img}
+                                title={card.title}
+                                content={card.content}
+                                tags={card.tags}
+                                category={card.category}
+                                className={`card${index + 1}`}
+                                onClick={() => navigate(`/article/${card.id}`)}
+                            />
+                        ))}</div>
                 </div>
             </section>
 

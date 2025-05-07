@@ -135,72 +135,16 @@ a {
     text-decoration: none;
 }
 
-#navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /* 距離邊界的間距 */
-    width: 1200px;
-    height: 60px;
-    box-shadow: 0 8px 8px #E3E0D8;
-    border-radius: 999px;
-    margin: 0 auto;
-}
 
-#navbar .logo {
-    width: 80px;
-    margin: 10px;
-    padding-left: 10px;
+.Coachintro{
+    padding: 120px 50px;
 }
 
 
-.navigation {
-    /* 控制子層 */
-    display: flex;
-    /* 主軸變成垂直，副軸為水平，設定為end就會靠右 */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    height: 80px;
+.Coachintro-header{
+    margin-top: 100px;
 }
 
-.navigation ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* 可以直接用navbar找到class:menu，再找到a */
-#navbar .navigation a {
-    /* 若a是行內元素，會抓不到上下margin */
-    margin: 30px;
-    /* 調整字與border之間空間 */
-    padding: 5 0px;
-}
-
-#navbar .navigation a:hover {
-    /* 邊框樣式 寬度 線條樣式 顏色 */
-    border-bottom: 1px solid #514535;
-}
-
-.login {
-    display: inline-block;
-    background-color: #FF8740;
-    color: white;
-    border: none;
-    text-align: center;
-    font-size: 14px;
-    width: 120px;
-    height: 30px;
-    border-radius: 20px;
-}
-
-.intro {
-    width: 100%;
-}
 
 .title {
     display: flex;

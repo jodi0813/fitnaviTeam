@@ -12,7 +12,7 @@ function JoinusStep2() {
             </section>
 
             <div className='card1-card2-card3'>
-                <form action="" className='CoachJoinus-Step1'>
+                {/* <form action="" className='CoachJoinus-Step1'>
                     <div className='JoinusStep1-title'>
                         <div className='Step1-title'>
                             <h3>基本資料</h3>
@@ -42,7 +42,7 @@ function JoinusStep2() {
                     <div className='Step1-form-button'>
                         <button>下一步 ▶</button>
                     </div>
-                </form>
+                </form> */}
 
                 <form action="" className='CoachJoinus-Step2'>
                     <div className='JoinusStep2-header'>
@@ -192,7 +192,7 @@ function JoinusStep2() {
 
                 </form>
 
-                <form action="" className='CoachJoinus-Step3'>
+                {/* <form action="" className='CoachJoinus-Step3'>
                     <div className='JoinusStep3-title'>
                         <div className='Step3-title'>
                             <h3>自我介紹</h3>
@@ -299,19 +299,19 @@ function JoinusStep2() {
                                         </td>
                                     </tr>
                                     {/* 更多資料... */}
-                                </tbody>
+                                {/* </tbody>
                             </table>
                         </fieldset>
 
-                    </div>
+                    </div> */}
 
 
-                    <div className='NextPreButton'>
+                    {/* <div className='NextPreButton'>
                         <button >◀ 上一步</button>
                         <button>下一步 ▶</button>
                     </div>
                     
-                </form>
+                </form> */} 
 
 
 

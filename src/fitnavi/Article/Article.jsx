@@ -1,24 +1,16 @@
 import "./Article.scss";
-import { useParams } from 'react-router-dom';
-import { useEffect, useState } from "react";
+// import { useParams } from 'react-router-dom';
+// import { cardsData } from './Allarticle';
+
 
 function Article() {
-    const { id } = useParams();
-    const [article, setArticle] = useState(null);
-    useEffect(() => {
-        const stored = localStorage.getItem("selectedArticle");
-        if (stored) {
-          const parsed = JSON.parse(stored);
-          if (parsed.id === id) {
-            setArticle(parsed);
-          }
-        }
-      }, [id]);
+    // const { id } = useParams();
+    // const article = cardsData.find(card => card.id === id);   
 
     return (
         <>
 
-            <main>
+            <main id="card9">
                 {/* <!-- banner區域 --> */}
                 <section className="article-banner">
 
