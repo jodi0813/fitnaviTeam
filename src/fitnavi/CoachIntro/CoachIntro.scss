@@ -1,4 +1,4 @@
-@import "../reset.scss";
+@use "../reset.scss";
 
 @font-face {
     font-family: "Mantou Sans";
@@ -13,42 +13,28 @@
 
     .Coachintro-header {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 100%;
-
-        .Coachintro-header-line1 {
-            display: flex;
-            flex-direction: row;
-            border-bottom: 0.6px solid #3A2C19;
-
-
-            button {
-                color: var(--dark, #3A2C19);
-                /* 段落/14 */
-                font-family: "Noto Sans TC";
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                /* 19.6px */
-                letter-spacing: 1.4px;
-                background-color: transparent;
-            }
-        }
+        flex-direction: row;
     }
+
+    .BacktoPage {
+        display: flex;
+        flex-direction: row;
+    }
+
+
 
     .Coachintro-person {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 50px;
-        width: 80%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 30px;
+        width: 100%;
+
 
         .person-class-photo {
-            margin-left: 160px;
+            margin-left: 100px;
+
             .coachphotos {
                 width: 70%;
 
@@ -58,6 +44,7 @@
 
                     img {
                         border-radius: 20px;
+                        width: 100%;
                     }
 
                 }
@@ -65,7 +52,7 @@
                 .more {
                     display: flex;
                     flex-direction: row;
-                    gap: 60px;
+                    gap: 30px;
                     margin-left: 0px;
 
                     img {
@@ -86,8 +73,257 @@
 
         }
 
-        .Coachclass-container{
-            width: 50%;
+        .Coachclass-container {
+            width: 600px;
+
+            .personinfo {
+                .namefavorite {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: baseline;
+                    gap: 300px;
+                    margin-bottom: 10px;
+
+                    h2 {
+                        color: var(--dark, #3A2C19);
+                        font-family: "Noto Sans TC";
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        letter-spacing: 3.2px;
+                    }
+
+                    button {
+                        background: none;
+                        border: none;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                    }
+                }
+
+                p {
+                    white-space: nowrap;
+                    color: var(--primary, var(--primary, #FF8740));
+                    /* heading/標題4/Bold */
+                    font-family: "Noto Sans TC";
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 2px;
+                    margin-bottom: 25px;
+                }
+
+            }
+
+            .classbox {
+                border-radius: 30px;
+                border: 1px solid var(--gray, #989794);
+                background: var(--white, #FEFCF7);
+                padding: 40px;
+
+
+
+                .classtime {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 100px;
+
+                    h2 {
+                        color: var(--dark, #3A2C19);
+                        /* heading/標題3 */
+                        font-family: "Noto Sans TC";
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        letter-spacing: 3.2px;
+                    }
+
+                    .timeblock {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                }
+
+                .p-linethrough-color {
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: last baseline;
+                    margin-top: 30px;
+
+                    p {
+                        color: var(--dark, #3A2C19);
+                        /* heading/標題4/medium */
+                        font-family: "Noto Sans TC";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 40px;
+                        /* 200% */
+                        letter-spacing: 0.4px;
+                    }
+
+                    p.p-linethrough {
+                        margin-right: 5px;
+                        color: var(--dark, #3A2C19);
+                        /* heading/標題4/medium */
+                        font-family: "Noto Sans TC";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 40px;
+                        /* 200% */
+                        letter-spacing: 0.4px;
+
+                        text-decoration: line-through;
+                        text-decoration-color: #FF8740;
+                        /* 控制槓掉線的顏色 */
+                        text-decoration-thickness: 2px;
+                        /* 控制槓掉線的粗細 */
+                        text-decoration-style: solid;
+                        /* 控制槓掉線的樣式 */
+
+
+                    }
+
+                    span {
+                        position: relative;
+                        gap: 5px;
+
+                        p.FirstPrice {
+                            position: relative;
+                            margin-bottom: 5px;
+                            margin-left: 25px;
+                            color: var(--dark, #3A2C19);
+                            /* 段落/14 */
+                            font-family: "Noto Sans TC";
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 140%;
+                            /* 19.6px */
+                            letter-spacing: 1.4px;
+                        }
+
+
+                        .Arrow-price {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            gap: 3px;
+
+                            .Arrow-orange {
+                                width: 24px;
+                                height: 24px;
+                                color: #FF8740;
+                                margin-top: 15px;
+                            }
+
+                            p.OrangePrice {
+                                color: var(--primary, var(--primary, #FF8740));
+                                font-family: "Noto Sans TC";
+                                font-size: 40px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 40px;
+                                /* 100% */
+                                letter-spacing: 0.8px;
+                                margin-left: 0px;
+                                padding-left: 0pX;
+                                margin-right: 5px;
+                            }
+                        }
+
+                        p.SingleClass {
+                            color: var(--dark, #3A2C19);
+                            font-family: "Noto Sans TC";
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 40px;
+                            /* 200% */
+                            letter-spacing: 0.4px;
+                        }
+
+
+                    }
+
+                    p.SingleClass {
+                        color: var(--dark, #3A2C19);
+                        font-family: "Noto Sans TC";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 40px;
+                        /* 200% */
+                        letter-spacing: 0.4px;
+
+                    }
+
+                }
+
+                .prices-button {
+                    margin-bottom: 15px;
+
+                    p {
+                        color: var(--dark, #3A2C19);
+                        /* heading/標題4/medium */
+                        font-family: "Noto Sans TC";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 40px;
+                        /* 200% */
+                        letter-spacing: 0.4px;
+                    }
+
+                    .price-with-button {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: baseline;
+                        gap: 30px;
+
+                        button {
+                            width: 203px;
+                            height: 40px;
+                            border-radius: 999px;
+                            background: var(--primary, #FF8740);
+                            color: var(--white, var(--white, #FEFCF7));
+                            text-align: center;
+                            font-family: "Noto Sans TC";
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 900;
+                            line-height: 140%;
+                            /* 19.6px */
+                            letter-spacing: 1.4px;
+                        }
+
+                    }
+
+
+
+                }
+
+
+            }
+
+
 
         }
 
