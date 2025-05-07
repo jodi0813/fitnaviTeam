@@ -20,6 +20,7 @@ import JoinusStep1 from "./JoinusStep1/JoinusStep1";
 import JoinusStep2 from "./JoinusStep2/JoinusStep2";
 import JoinusStep3 from "./JoinusStep3/JoinusStep3";
 import JoinusStep4 from "./JoinusStep4/JoinusStep4";
+import JoinusLoading from "./JoinusLoading/JoinusLoading";
 import "./reset.scss";
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
-          <Route path="/JoinusStep4" element={<JoinusStep4 />}></Route>
+          <Route path="/ JoinusLoading" element={< JoinusLoading />}></Route>
         </Routes>
         <Footer />
       </div>
