@@ -38,7 +38,7 @@ function App() {
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
-          <Route path="/ JoinusLoading" element={< JoinusLoading />}></Route>
+          <Route path="/ JoinusStep1" element={< JoinusStep1 />}></Route>
         </Routes>
         <Footer />
       </div>
