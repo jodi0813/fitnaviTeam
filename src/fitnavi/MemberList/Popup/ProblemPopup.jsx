@@ -21,7 +21,7 @@ function ProblemPopup({ onClose }) {
           id="problemReflection"
           title="問題反映"
         >
-          <div className="popup-subtitle">
+          <div className="popup-subtitle problem-select">
             <label htmlFor="classification">問題類別</label>
             <div className="problemBody">
               <select name="classification1" id="classification1">

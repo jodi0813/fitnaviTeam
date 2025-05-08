@@ -2,6 +2,7 @@ import "./MyOrders.scss";
 import { useState } from "react";
 import StudentChatPopup from "./Popup/StudentChatPopup";
 import ProblemPopup from "./Popup/ProblemPopup";
+/* 會員管理>我的訂單>我的預約 */
 function MyOrders() {
   /* 訂單資料 */
   const orders = [
@@ -38,8 +39,8 @@ function MyOrders() {
   ];
   /* 控制按鈕彈窗 */
   const [popupType, setPopupType] = useState(null);
-  const handleOpenChat = () => setPopupType("chat");
-  const handleOpenProblem = () => setPopupType("problem");
+  const handleOpenChat = () => setPopupType("chat");//聯絡教練
+  const handleOpenProblem = () => setPopupType("problem");//問題
   const handleClosePopup = () => setPopupType(null);
   return (
     <>
