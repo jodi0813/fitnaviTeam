@@ -890,7 +890,7 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
-        gap: 5px;
+        gap: 20px;
 
         .number {
             p {
@@ -915,8 +915,8 @@
         .resdetail {
             p {
                 display: flex;
-                width: 285px;
-                padding: 15px 35px;
+                width: 300px;
+                height: 40px;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -934,6 +934,9 @@
                 line-height: 140%;
                 /* 19.6px */
                 letter-spacing: 1.4px;
+                white-space: nowrap;
+                margin-bottom: 30px;
+                margin-top: 10px;
             }
 
         }

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./CommentCard.module.scss";
 
-function CommentCard({ rate, content, commentperson, commentdate, className }) {
+function CommentCard({ rate, content, commentperson, commentdate}) {
     function renderStars() {
         const stars = [];
         for (let i = 0; i < 5; i++) {
@@ -19,7 +19,7 @@ function CommentCard({ rate, content, commentperson, commentdate, className }) {
     }
 
     return (
-        <div className={`${styles.card} ${className || ''}`}>
+        <div className={`${styles.card} }`}>
             <div className={styles.starRate}>
                 <div>{renderStars()}</div>
                 <p className={styles.rate}>{rate}</p>
