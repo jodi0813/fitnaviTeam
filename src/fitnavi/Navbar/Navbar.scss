@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   background: transparent; /* 或透明 */
-  z-index: 999;
+  z-index: 999;//排序最高
 }
 .container {
   max-width: calc(100% - 240px); /* 左右各120px */

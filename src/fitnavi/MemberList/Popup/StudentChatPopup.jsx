@@ -3,7 +3,7 @@ import { GrWaypoint } from "react-icons/gr";
 import { GrAddCircle } from "react-icons/gr";
 function StudentChatPopup({ onClose }) {
     return (
-        <>
+        <>  <div className="overlay">{/* 背景遮住 */}
             <section className="chat-popup">
                 <div>
                     <header className="chat-header">
@@ -61,7 +61,7 @@ function StudentChatPopup({ onClose }) {
                     <GrWaypoint size={36} color="#FEFCF7" />
                 </footer>
             </section>
-
+            </div>
 
 
         </>
