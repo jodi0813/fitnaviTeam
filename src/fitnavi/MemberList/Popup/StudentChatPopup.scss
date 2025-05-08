@@ -17,9 +17,11 @@
   box-shadow: 2px 2px 2px 0px rgba(255, 255, 255, 0.25) inset,
     10px 10px 10px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(25px);
+
   hr {
     width: 100%;
   }
+
   .chat-header {
     display: flex;
     justify-content: space-between;
@@ -121,6 +123,7 @@
       }
     }
   }
+
   .chat-input-area {
     display: flex;
     justify-content: center;
@@ -135,13 +138,22 @@
       border: none;
     }
   }
+
   .popup-subtitle {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: flex-start;
     gap: 12px;
-    // align-self: stretch;
+
+    &.booking-select {
+      display: flex;
+
+    }
+
+    &.problem-select {
+      display: flex;
+      flex-direction: column;
+    }
 
     label {
       color: #fefcf7;
@@ -149,15 +161,18 @@
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
-      line-height: 140%; /* 19.6px */
+      line-height: 140%;
+      /* 19.6px */
       letter-spacing: 1.4px;
     }
+
     .problemBody {
       display: flex;
       padding: 0px 36px;
       align-items: center;
       gap: 10px;
       align-self: stretch;
+
       #classification1,
       #classification2 {
         border-radius: 20px;
@@ -167,14 +182,16 @@
         height: 40px;
         color: #989794;
         padding: 8px 20px;
-align-items: center;
+        align-items: center;
       }
     }
+
     .describe {
       display: flex;
       flex-direction: column;
 
       gap: 12px;
+
       textarea {
         height: 150px;
         align-self: stretch;
@@ -182,11 +199,13 @@ align-items: center;
         background: #fefcf7;
       }
     }
+
     .popup-submit {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 12px;
+
       .notice {
         color: #fefcf7;
         text-align: center;
@@ -199,6 +218,7 @@ align-items: center;
       }
     }
   }
+
   .popup-submit-btn {
     display: flex;
     padding: 4px 48px;
@@ -214,11 +234,13 @@ align-items: center;
     font-size: 14px;
     font-style: normal;
     font-weight: 900;
-    line-height: 140%; /* 19.6px */
+    line-height: 140%;
+    /* 19.6px */
     letter-spacing: 1.4px;
     border: none;
   }
 }
+
 .problem-popup {
   gap: 12px;
 }

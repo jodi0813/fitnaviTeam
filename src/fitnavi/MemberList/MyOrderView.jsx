@@ -1,4 +1,8 @@
 import "./MyOrderView.scss";
+import { useState } from "react";
+import BookingPopup from "./Popup/BookingPopup";
+import ReviewPopup from "./Popup/ReviewPopup";
+/* 會員管理>我的訂單>訂單總覽 */
 function MyOrderView() {
   const orderview = [
     {
@@ -13,6 +17,11 @@ function MyOrderView() {
       reserveBt: "預約",
     },
   ];
+  /* 控制按鈕彈窗 */
+  const [popupType, setPopupType] = useState(null);
+  const handleOpenBooking = () => setPopupType("booking");//預約
+  const handleOpenReview = () => setPopupType("review");//評價
+  const handleClosePopup = () => setPopupType(null);
   return (
     <>
       <div className="orderview-table">
@@ -51,11 +60,11 @@ function MyOrderView() {
             <span>{orderview.lastClasses}</span>
             {/* 預約課程 */}
             <span>
-              <button className="btn-orange">預約</button>
+              <button onClick={handleOpenBooking} className="btn-orange">預約</button>
             </span>
             {/* 匿名評價 */}
             <span>
-              <button className="btn-outline">評價</button>
+              <button onClick={ handleOpenReview} className="btn-outline">評價</button>
             </span>
             {/* 問題反映 */}
             <span>
@@ -64,6 +73,9 @@ function MyOrderView() {
           </div>
         ))}
       </div>
+      {/* 根據 popupType 顯示彈窗 */}
+      {popupType === "booking" && <BookingPopup onClose={handleClosePopup} />}
+      {popupType === "review" && <ReviewPopup onClose={handleClosePopup} />}
     </>
   );
 }
