@@ -3,13 +3,50 @@ import { useState } from "react";
 import MainTitle from "../../components/Title/MainTitle";
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
+import Articlecards from '../../components/Articlecards';
 
 
 function Coachintro() {
     const [liked, setLiked] = useState(false);
+    const cardsData = [
+
+        {
+            id: "card1",
+            date: "2025/04/11",
+            img: "./public/images/article-5.jpg",
+            title: "想練出理想線條？體態雕塑其實有方法",
+            content: "想要雕塑迷人曲線，光靠減脂還不夠！針對臀部、腿部、核心等部位的專項訓練，搭配有氧運動，讓你的體態更加迷人，展現出最完美的曲線。",
+            tags: ["曲線雕塑", "體態"],
+            category: "體態雕塑"
+
+        },
+        {
+            id: "card2",
+            date: "2025/04/27",
+            img: "./public/images/article-4.jpg",
+            title: "為什麼肌力這麼重要？打造強韌體能的第一步",
+            content: "你是否常常在訓練中感到停滯不前？增加重量、改變訓練方式或專注於大肌群訓練，都能有效突破瓶頸，提升力量，讓你進一步挑戰更高強度的訓練！",
+            tags: ["力量突破", "肌力提升"],
+            category: "肌力提升"
+
+        },
+        {
+            id: "card3",
+            date: "2025/05/20",
+            img: "./public/images/article-3.jpg",
+            title: "想有效燃脂？必學這5種高效率運動法",
+            content: "高強度間歇運動（HIIT）是現代最有效率的燃脂方式之一。短時間內提升心跳率，刺激脂肪燃燒，即使運動結束後，代謝仍持續上升，是減脂族群的秘密武器。供從簡單動作開始的計劃。",
+            tags: ["燃脂", "HIIT訓練"],
+            category: "燃脂運動"
+        }
+
+
+
+    ]
 
 
     return (
+
         <>
             <main id="Coachintro">
                 <section className="Coachintro-header">
@@ -145,10 +182,10 @@ function Coachintro() {
                                 <h3>關於教練</h3>
                                 <h4>About</h4>
                             </div>
-           
+
 
                             <div className="svg">
-                                <p>不只是訓練，<br/>是量身打造的改變</p>
+                                <p>不只是訓練，<br />是量身打造的改變</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="421" height="191" viewBox="0 0 421 191" fill="none">
                                     <path d="M125.387 -22.1668C118.493 -20.9203 111.6 -19.3337 104.807 -17.6338C98.0133 -15.9339 91.2199 -14.0073 84.5264 -11.9675C71.1394 -7.7744 57.8523 -2.56139 45.1646 3.78489C38.8707 7.07135 32.6767 10.5845 26.8823 14.8909C21.1878 19.0839 15.6932 23.957 11.4972 29.8499C9.39927 32.7964 7.70092 35.9696 6.50208 39.3694C5.30324 42.7691 4.80373 46.2823 4.80373 49.9087C4.90363 53.5351 5.70285 57.0483 7.00159 60.4481C8.30033 63.8478 9.99869 67.021 11.9967 70.0808L13.4953 72.3473L15.1936 74.5005C16.2926 75.9738 17.3915 77.447 18.5904 78.9202L22.1869 83.1133L23.086 84.1333L24.085 85.1532L25.9832 87.0798C28.4808 89.7996 31.278 92.0661 33.8755 94.5593C36.6728 96.8258 39.3702 99.2057 42.3673 101.246C45.2645 103.399 48.2616 105.325 51.2587 107.252C54.3557 109.065 57.3527 110.878 60.5496 112.465C66.8435 115.751 73.2373 118.698 79.8309 121.078C86.4246 123.571 93.1181 125.611 99.8116 127.424C106.605 129.124 113.398 130.484 120.292 131.617C133.978 133.884 147.865 135.357 161.751 136.15L163.05 136.037V137.51C163.05 142.156 162.95 146.689 162.651 151.222C162.351 155.756 161.951 160.289 161.352 164.822C160.752 169.355 159.953 173.888 158.754 178.307C158.155 180.574 157.456 182.727 156.557 184.88C155.657 187.034 154.558 189.073 153.16 191L151.262 189.073C155.258 183.974 159.454 179.101 163.75 174.454C168.045 169.808 172.541 165.275 177.037 160.855C181.532 156.435 186.228 152.129 191.123 148.163C196.018 144.196 201.013 140.343 206.608 137.17C208.007 136.377 209.505 135.697 211.004 135.13C211.703 134.79 212.602 134.677 213.401 134.45C214.201 134.223 215 134.11 215.699 133.997C217.298 133.657 218.696 133.544 220.295 133.317C221.793 133.204 223.292 132.977 224.79 132.864C230.785 132.41 236.779 132.297 242.773 132.184C254.661 131.957 266.55 132.184 278.538 132.41C302.315 132.864 326.092 133.77 349.769 134.563C361.658 135.017 373.546 135.47 385.335 135.697L403.117 136.037C409.012 136.037 415.006 136.15 420.9 136.037L421 138.87C397.223 140.796 373.346 140.456 349.569 140.23C325.792 139.89 302.015 139.097 278.338 138.53L260.556 138.19C254.661 138.077 248.667 137.963 242.773 138.077C236.879 138.077 230.984 138.19 225.09 138.53C223.592 138.643 222.193 138.757 220.694 138.87C219.296 139.097 217.797 139.097 216.398 139.323C215 139.55 213.701 139.776 212.402 140.23C211.104 140.796 209.805 141.25 208.506 141.93C203.311 144.65 198.416 148.276 193.621 152.016C188.825 155.869 184.13 159.949 179.534 164.142C174.939 168.335 170.443 172.641 165.947 177.174C161.552 181.707 157.156 186.24 153.16 191L151.262 189.073C153.659 185.9 155.158 181.707 156.357 177.514C157.456 173.321 158.255 168.901 158.854 164.482C159.454 160.062 159.853 155.529 160.053 151.109C160.353 146.576 160.453 142.043 160.453 137.623L161.751 138.983C154.658 140.003 147.565 140.116 140.572 139.89C133.479 139.663 126.486 138.983 119.393 137.85C112.399 136.717 105.406 135.243 98.5128 133.544C91.6195 131.73 84.7262 129.577 78.0327 126.971C71.2393 124.477 64.6457 121.418 58.2519 118.018C54.9551 116.318 51.8581 114.391 48.7611 112.578C45.6641 110.538 42.5671 108.612 39.57 106.345C36.5729 104.192 33.6757 101.699 30.7785 99.4323C27.9812 96.8258 25.184 94.446 22.5865 91.6128L20.5884 89.5729L19.5894 88.553L18.6903 87.4197L14.8939 83C13.6951 81.5268 12.4963 79.9402 11.3973 78.3536L9.59907 76.0871L8.00062 73.5939C5.80276 70.1941 3.9046 66.5677 2.50595 62.7146C1.00741 58.7482 0.10828 54.4418 0.00837738 50.022C-0.0915257 45.7156 0.707699 41.2959 2.10634 37.3295C3.60489 33.3631 5.60295 29.7366 8.00062 26.5635C12.796 20.1039 18.5904 15.1175 24.5845 10.8111C30.6786 6.50472 36.9725 2.87828 43.4662 -0.408184C56.4536 -6.86778 69.9405 -11.6275 83.6273 -15.7072C97.2141 -19.6737 111.101 -22.8468 124.987 -25L125.387 -22.1668Z" fill="#FF8740" />
                                 </svg>
@@ -162,13 +199,6 @@ function Coachintro() {
 
                 </section>
 
-                
-
-
-
-
-
-
 
                 <section id="spe">
                     <div className="spetitle">
@@ -177,25 +207,52 @@ function Coachintro() {
                     </div>
 
                     <div className="circlewrapper">
-                        <div className="circle">
-                            <h4>體態雕塑</h4>
-                            <p>增肌減脂、核心強化、線條塑造
-                            </p>
+                        <div className="circle1">
+                            <span>
+                                <h4>減脂訓練
+                                </h4>
+                                <p>燃燒脂肪、線條塑造、<br />打造健康體態
+                                </p>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="310" height="309" viewBox="0 0 310 309" fill="none">
+                                <path d="M155 0.5C170.633 0.5 185.723 2.81591 199.944 7.11914L199.896 7.17188C185.688 2.87573 170.614 0.56543 155 0.56543C69.7116 0.56543 0.569336 69.4828 0.569336 154.5C0.569336 239.517 69.7116 308.435 155 308.435C240.288 308.435 309.431 239.517 309.431 154.5C309.431 142.058 307.948 129.96 305.152 118.372L305.209 118.31C308.013 129.916 309.5 142.035 309.5 154.5C309.5 239.55 240.33 308.5 155 308.5C69.6705 308.5 0.5 239.55 0.5 154.5C0.5 69.4497 69.6705 0.5 155 0.5Z" fill="#3A2C19" stroke="#3A2C19" />
+
+                            </svg>
                         </div>
 
-                        <div className="circle">
-                            <h4>運動提升表現</h4>
-                            <p>運動員體能訓練、爆發力與肌耐力訓練</p>
+                        <div className="circle2">
+                            <span>
+                                <h4>個人指導</h4>
+                                <p>專屬訓練計畫、一對一指導、達成健身目標</p>
+                            </span>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="310" height="311" viewBox="0 0 310 311" fill="none">
+                                <path d="M309.132 147.411C309.713 158.822 309.029 170.478 306.96 182.211C292.157 266.163 212.1 322.219 128.148 307.416C121.289 306.206 114.616 304.56 108.153 302.513L108.219 302.462C114.665 304.502 121.32 306.143 128.16 307.35C212.075 322.146 292.097 266.114 306.894 182.199C308.959 170.489 309.642 158.854 309.065 147.461L309.132 147.411ZM181.755 3.39787C197.136 6.11005 211.58 11.0132 224.823 17.7281L224.764 17.7743C211.534 11.069 197.105 6.17399 181.743 3.46519C97.8277 -11.3314 17.8059 44.7005 3.00937 128.616C-0.669016 149.477 0.0310093 170.099 4.44824 189.538L4.3897 189.584C-0.0354096 170.128 -0.740217 149.487 2.94204 128.604C17.7451 44.6517 97.8026 -11.4052 181.755 3.39787Z" fill="#3A2C19" stroke="#3A2C19" />
+                            </svg>
                         </div>
 
-                        <div className="circle">
-                            <h4>功能性訓練</h4>
-                            <p>長期姿勢改善、減少運動傷害、提升活動能力</p>
+                        <div className="circle3">
+                            <span>
+                                <h4>功能性訓練</h4>
+                                <p>長期姿勢改善、減少運動<br />傷害、提升活動能力</p>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="310" height="311" viewBox="0 0 310 311" fill="none">
+                                <path d="M309.208 147.411C309.79 158.822 309.105 170.478 307.036 182.211C292.233 266.163 212.177 322.219 128.225 307.416C121.365 306.206 114.692 304.56 108.229 302.513L108.295 302.462C114.741 304.502 121.396 306.143 128.236 307.35C212.151 322.146 292.173 266.114 306.97 182.199C309.035 170.489 309.719 158.854 309.141 147.461L309.208 147.411ZM181.831 3.39787C197.212 6.11005 211.656 11.0132 224.899 17.7281L224.841 17.7743C211.61 11.069 197.181 6.17399 181.819 3.46519C97.9039 -11.3314 17.8821 44.7005 3.08554 128.616C-0.592845 149.477 0.107181 170.099 4.52441 189.538L4.46587 189.584C0.0407623 170.128 -0.664045 149.487 3.01822 128.604C17.8213 44.6517 97.8788 -11.4052 181.831 3.39787Z" fill="#3A2C19" stroke="#3A2C19" />
+
+                            </svg>
                         </div>
 
-                        <div className="circle">
-                            <h4>特殊族群訓練</h4>
-                            <p>孕產婦訓練、中高齡體適能、術後復健運動指導</p>
+                        <div className="circle4">
+                            <span>
+                                <h4>TRX懸吊訓練</h4>
+                                <p>全身訓練、核心強化、增進穩定性與力量</p>
+                            </span>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="310" height="309" viewBox="0 0 310 309" fill="none">
+                                <path d="M155 0.5C240.33 0.500007 309.5 69.4497 309.5 154.5C309.5 239.55 240.33 308.5 155 308.5C139.366 308.5 124.276 306.183 110.055 301.88L110.104 301.827C124.312 306.124 139.385 308.435 155 308.435C240.288 308.435 309.431 239.517 309.431 154.5C309.431 69.4828 240.288 0.565437 155 0.56543C69.7116 0.565431 0.569343 69.4828 0.569336 154.5L0.573242 155.674C0.663376 167.703 2.13872 179.404 4.84668 190.627L4.79004 190.689C1.98579 179.084 0.5 166.965 0.5 154.5C0.500007 69.4497 69.6705 0.500001 155 0.5Z" fill="#3A2C19" stroke="#3A2C19" />
+
+
+                            </svg>
                         </div>
 
                     </div>
@@ -208,10 +265,14 @@ function Coachintro() {
                             <h4>Working Experiences</h4>
                         </div>
 
-                        <p>·[幾年] 年健身教練經驗，累積超過 [多少] 堂私人課程<br />
-                            ·曾任職於 [健身房名稱/私人工作室]，專長增肌、減脂、體能訓練<br />
-                            /                  ·指導超過 [多少] 名學員，達成體態與表現目標<br />
-                            ·開設團體與企業課程，內容涵蓋體適能與 HIIT 訓練 </p>
+                        <ul >
+                            <li >5年健身教練經驗，累積超過200堂私人課程</li>
+                            <li>曾任職於健身工廠，專長TRX、減脂、功能性訓練</li>
+                            <li>指導超過150名學員，達成體態與表現目標</li>
+                            <li>開設團體與企業課程，內容涵蓋TRX懸吊訓練與減脂健身觀念宣導</li>
+                        </ul>
+
+
                     </div>
 
                     <div className="certificate">
@@ -220,10 +281,13 @@ function Coachintro() {
                             <h4>Certification</h4>
                         </div>
 
-                        <p>·中華民國體適能協會 C 級健身指導員<br />
-                            ·ACE 美國運動委員會私人教練證照<br />
-                            ·TRX 懸吊訓練系統認證教練<br />
-                        </p>
+                        <ul>
+                            <li>中華民國體適能協會C級健身指導員</li>
+                            <li>ACE 美國運動委員會私人教練證照</li>
+                            <li>TRX 懸吊訓練系統認證教練</li>
+                        </ul>
+
+
                     </div>
 
                 </section>
@@ -253,321 +317,113 @@ function Coachintro() {
                         </div>
                     </div>
 
-                    <div className="calendar">
+                    <div className="calendar-reservetime">
                         <div className="caltitle">
                             <h3>教練可預約時間</h3>
                             <h4>Available Time</h4>
                         </div>
 
 
-                        <div class="main-container-wrapper"></div>
+                        <div className="body">
+                            <div class="container">
+                                <div class="calendar">
+                                    <header>
+                                        <pre class="left">←</pre>
 
-                        <header className="calendarname">
-                            <button className="header__btn header__btn--left" title="Menu">
-                                <svg className="icon" width="20px" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill="#fff" d="M0 0h20v2H0zM0 7h20v2H0zM0 14h20v2H0z" />
-                                </svg>
-                            </button>
-                            <button className="header__btn header__btn--right" title="Add event">
-                                <svg className="icon" width="26px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path fill="#fff" d="M416 277.333H277.333V416h-42.666V277.333H96v-42.666h138.667V96h42.666v138.667H416v42.666z" />
-                                </svg>
-                            </button>
-                        </header>
+                                        <div class="header-display">
+                                            <p class="display">""</p>
+                                        </div>
 
-                        <div class="calendar-container">
-                            <div class="calendar-container__header">
-                                <button class="calendar-container__btn calendar-container__btn--left" title="Previous">
-                                    <i class="icon ion-ios-arrow-back"></i>
-                                </button>
-                                <h2 class="calendar-container__title">October 2018</h2>
-                                <button class="calendar-container__btn calendar-container__btn--right" title="Next">
-                                    <i class="icon ion-ios-arrow-forward"></i>
-                                </button>
-                            </div>
-                            <div class="calendar-container__body">
-                                <div class="calendar-table">
-                                    <div class="calendar-table__header">
-                                        <div class="calendar-table__row">
-                                            <div class="calendar-table__col">S</div>
-                                            <div class="calendar-table__col">M</div>
-                                            <div class="calendar-table__col">T</div>
-                                            <div class="calendar-table__col">W</div>
-                                            <div class="calendar-table__col">T</div>
-                                            <div class="calendar-table__col">F</div>
-                                            <div class="calendar-table__col">S</div>
-                                        </div>
+                                        <pre class="right">→</pre>
+
+                                    </header>
+
+                                    <div class="week">
+                                        <div>Su</div>
+                                        <div>Mo</div>
+                                        <div>Tu</div>
+                                        <div>We</div>
+                                        <div>Th</div>
+                                        <div>Fr</div>
+                                        <div>Sa</div>
                                     </div>
-                                    <div class="calendar-table__body">
-                                        <div class="calendar-table__row">
-                                            <div class="calendar-table__col calendar-table__inactive">
-                                                <div class="calendar-table__item">
-                                                    <span>30</span>
-                                                </div>
-                                            </div>
-                                            <div class="calendar-table__col calendar-table__today">
-                                                <div class="calendar-table__item">
-                                                    <span>1</span>
-                                                </div>
-                                            </div>
-                                            <div class="calendar-table__col">
-                                                <div class="calendar-table__item">
-                                                    <span>2</span>
-                                                </div>
-                                            </div>
-                                            <div class="calendar-table__col">
-                                                <div class="calendar-table__item">
-                                                    <span>3</span>
-                                                </div>
-                                            </div>
-                                            <div className="calendar-table__col">
-                                                <div className="calendar-table__item">
-                                                    <span>4</span>
-                                                </div>
-                                            </div>
-                                            <div className="calendar-table__col calendar-table__event">
-                                                <div className="calendar-table__item">
-                                                    <span>5</span>
-                                                </div>
-                                            </div>
-                                            <div className="calendar-table__col">
-                                                <div className="calendar-table__item">
-                                                    <span>6</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__row">
-                                            <div className="calendar-table__item">
-                                                <span>7</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>8</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>9</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>10</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>11</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>12</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>13</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="calendar-table__row">
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>14</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>15</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col calendar-table__event calendar-table__event--long calendar-table__event--start">
-                                            <div className="calendar-table__item">
-                                                <span>16</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col calendar-table__event calendar-table__event--long">
-                                            <div className="calendar-table__item">
-                                                <span>17</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col calendar-table__event calendar-table__event--long calendar-table__event--end">
-                                            <div className="calendar-table__item">
-                                                <span>18</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>19</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>20</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="calendar-table__row">
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>21</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>22</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>23</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>24</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>25</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>26</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col calendar-table__event calendar-table__event--long calendar-table__event--start">
-                                            <div className="calendar-table__item">
-                                                <span>27</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="calendar-table__row">
-                                        <div className="calendar-table__col calendar-table__event calendar-table__event--long calendar-table__event--end">
-                                            <div className="calendar-table__item">
-                                                <span>28</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>29</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>30</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col">
-                                            <div className="calendar-table__item">
-                                                <span>31</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col calendar-table__event calendar-table__inactive">
-                                            <div className="calendar-table__item">
-                                                <span>1</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col calendar-table__inactive">
-                                            <div className="calendar-table__item">
-                                                <span>2</span>
-                                            </div>
-                                        </div>
-                                        <div className="calendar-table__col calendar-table__inactive">
-                                            <div className="calendar-table__item">
-                                                <span>3</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <div class="days"></div>
+                                </div>
+                                <div class="display-selected">
+                                    <p class="selected"></p>
                                 </div>
                             </div>
                         </div>
 
 
+
                     </div>
+
+
+
                 </section>
 
 
-                <section className="coacharticle">
+                <section id="coacharticle">
                     <div className="articletitle">
                         <h3 className="title">發表文章</h3>
                         <h4>Articles</h4>
                     </div>
 
-                    <div className="classcard">
-                        <div className="arrow">
-                            <button>&lt;</button>
+                    <div className="ViewArticles">
+                        <button>
+                            &lt;</button>
+
+                        <div className="Three-classcards">
+                            {cardsData.map((card, index) => (
+
+                                <Articlecards
+                                    key={index}
+                                    date={card.date}
+                                    img={card.img}
+                                    title={card.title}
+                                    content={card.content}
+                                    tags={card.tags}
+                                    category={card.category}
+                                    className={`card${index + 1}`}
+                                    onClick={() => navigate(`/article/${card.id}`)}
+                                />
+                            ))}
                         </div>
 
-                        <div className="Coachintrocard">
-                            <div className="card1">
-                                <p>2025/03/28</p>
-                                <div className="img-box"><img src="./images/article.png" alt="" /></div>
-                                <div className="content-box">
-                                    <h4>健身初學者必看：<br />如何開始你的運動旅程</h4>
-                                    <p>剛開始健身時，選擇合適的運動方式和計劃非常重要。無論你是想增強體能還是減脂，開始的時候不需要過於激烈，慢慢增加運動量。這篇文章將帶你了解一些基本的運動常識，並提供從簡單動作開始的計劃。
-                                    </p>
-                                    <div class="Coachintrocard-tag">
-                                        <p>#標籤</p>
-                                        <p>#標籤</p>
-                                        <p>#標籤</p>
-                                    </div>
-                                </div>
-                                <div className="tag-box">健身入門</div>
-                            </div>
-
-                            <div className="card2">
-                                <p>2025/03/28</p>
-                                <div class="img-box"><img src="./images/article.png" alt="" /></div>
-                                <div className="content-box">
-                                    <h4>健身初學者必看：<br />如何開始你的運動旅程</h4>
-                                    <p>剛開始健身時，選擇合適的運動方式和計劃非常重要。無論你是想增強體能還是減脂，開始的時候不需要過於激烈，慢慢增加運動量。這篇文章將帶你了解一些基本的運動常識，並提供從簡單動作開始的計劃。
-                                    </p>
-                                    <div className="tag">
-                                        <p>#標籤</p>
-                                        <p>#標籤</p>
-                                        <p>#標籤</p>
-                                    </div>
-                                </div>
-                                <div className="tag-box">健身入門</div>
-                            </div>
-
-                            <div className="card3">
-                                <p>2025/03/28</p>
-                                <div class="img-box"><img src="./images/article.png" alt="" /></div>
-                                <div className="content-box">
-                                    <h4>健身初學者必看：<br />如何開始你的運動旅程</h4>
-                                    <p>剛開始健身時，選擇合適的運動方式和計劃非常重要。無論你是想增強體能還是減脂，開始的時候不需要過於激烈，慢慢增加運動量。這篇文章將帶你了解一些基本的運動常識，並提供從簡單動作開始的計劃。
-                                    </p>
-                                    <div className="tag">
-                                        <p>#標籤</p>
-                                        <p>#標籤</p>
-                                        <p>#標籤</p>
-                                    </div>
-                                </div>
-                                <div className="tag-box">健身入門</div>
-                            </div>
-                        </div>
-
-                        <div className="arrow">
-                            <button>&gt;</button>
-                        </div>
-
+                        <button>
+                            &gt;</button>
                     </div>
+
+
                 </section>
 
-                <section className="comment">
+                <section id="comment">
                     <div className="commentitle">
                         <h3>學員評價</h3>
                         <h4>Rating</h4>
                     </div>
-                    <div className="star">
+                    <div className="star-rate">
                         <p>4.0</p>
-                        <p> &#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                        <div className="Star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
+                            <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
+                            <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
+                            <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
+                            <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
+                            <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
+                        </svg>
+
+                        </div>
+                    
                     </div>
                 </section >
             </main >
