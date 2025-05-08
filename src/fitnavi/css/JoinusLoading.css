@@ -127,3 +127,61 @@ a {
   color: #444;
   text-decoration: none;
 }
+
+@font-face {
+  font-family: "Mantou Sans";
+  src: url(../../assets/MantouSans-Regular.ttf);
+}
+.JoinusLoading-header {
+  margin-top: 80px;
+}
+
+.host {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 231px;
+}
+.host p {
+  color: var(--dark, #3A2C19);
+  text-align: center;
+  font-family: "Dela Gothic One";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  /* 57.6px */
+  letter-spacing: 12px;
+}
+.host .loading {
+  width: 10px;
+  height: 10px;
+  background: #FFF;
+  border-radius: 100%;
+  float: left;
+  margin-right: 10px;
+}
+.host .loading-0 {
+  -webkit-animation: bounce 1s infinite;
+  -webkit-animation-delay: 0.5s;
+  background: #3A2C19;
+}
+.host .loading-1 {
+  -webkit-animation: bounce 1s infinite;
+  -webkit-animation-delay: 0.8s;
+  background: #3A2C19;
+}
+.host .loading-2 {
+  -webkit-animation: bounce 1s infinite ease;
+  -webkit-animation-delay: 0.11s;
+  background: #3A2C19;
+}
+@-webkit-keyframes bounce {
+  0%, 100% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+}

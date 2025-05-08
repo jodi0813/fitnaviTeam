@@ -132,31 +132,9 @@ a {
   padding: 120px 50px;
 }
 
-.coachTitle {
-  display: flex;
-  align-items: baseline;
-}
-.coachTitle h2 {
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  letter-spacing: 9.6px;
-  color: #ff8740;
-  font-family: "Dela Gothic One", sans-serif;
-}
-.coachTitle h3 {
-  font-family: "Mantou Sans";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 50px;
-  letter-spacing: 2.4px;
-}
-
 .searchBox {
   display: flex;
-  padding: 0px 200px;
+  padding: 0px 150px;
 }
 
 #personal-search-form {
@@ -197,63 +175,17 @@ a {
   border: none;
 }
 
-.coach {
+.allCoachCards {
+  padding: 33px 143px;
+}
+.allCoachCards .coachNineCards {
   display: flex;
-  flex-direction: column;
-  margin: 31.55px 192.5px;
+  flex-wrap: wrap;
+  gap: 32px;
 }
-.coach .coach-name {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-.coach .all-coach {
+.allCoachCards .all-coach {
   color: #ff8740;
   font-family: "Dela Gothic One", sans-serif;
   font-size: 80px;
   font-weight: 400;
-}
-.coach .coach-card {
-  width: 330px;
-  height: 452px;
-  display: flex;
-  flex-direction: column;
-  padding: 12px 16px;
-  border-radius: 18px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
-}
-.coach .coach-card .image-container {
-  position: relative;
-}
-.coach .coach-card .label {
-  position: absolute;
-  left: 29px;
-  top: 24px;
-  border-radius: 8px;
-  background: #fefcf7;
-  padding: 4px 8px;
-  color: #ff8740;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 140%;
-  letter-spacing: 1.4px;
-}
-.coach .coach-card .hashtag {
-  display: flex;
-}
-.coach .coach-card .hashtag a {
-  color: #ff8740;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 140%;
-  letter-spacing: 1.4px;
-  display: flex;
-  margin: 0px 14px 0px 0px;
-}
-.coach .coach-card .coach-details {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 140%;
-  letter-spacing: 1.4px;
 }

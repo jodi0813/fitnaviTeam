@@ -193,6 +193,7 @@ a {
 .mapSearchAll .mapSearchLeft {
   display: flex;
   width: 20%;
+  justify-content: center;
 }
 .mapSearchAll .mapSearchLeft #center-search-form {
   display: flex;
@@ -215,18 +216,21 @@ a {
   align-items: flex-start;
   gap: 8px;
 }
+.mapSearchAll .mapSearchLeft #center-search-form .nameCityArea input {
+  width: 100%;
+}
 .mapSearchAll .mapSearchLeft #center-search-form .centerTitleItem {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  overflow: auto;
+  height: 350px;
 }
 .mapSearchAll .mapSearchLeft #center-search-form .centerTitleItem .centerItem {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 0px 24px;
-  height: 329px;
-  overflow: auto;
 }
 .mapSearchAll .mapSearchLeft #center-search-form .centerTitleItem .centerItem legend {
   font-family: Alata;
@@ -246,7 +250,8 @@ a {
 .mapSearchAll .centerResultPhoto {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  align-items: center;
+  width: 25%;
   gap: 12px;
 }
 .mapSearchAll .centerResultPhoto .photosNumber {
@@ -260,6 +265,11 @@ a {
 }
 .mapSearchAll .centerResultPhoto .gymCard {
   position: relative;
+}
+.mapSearchAll .centerResultPhoto .gymCard .centerPic {
+  width: 287px;
+  height: 162px;
+  overflow: crop;
 }
 .mapSearchAll .centerResultPhoto .gymCard .gymCardText {
   position: absolute;
@@ -276,4 +286,8 @@ a {
   font-size: 12px;
   line-height: 1.4;
   font-weight: 400;
+}
+.mapSearchAll .centerMapPhoto {
+  border-radius: 16px;
+  height: 766px;
 }
