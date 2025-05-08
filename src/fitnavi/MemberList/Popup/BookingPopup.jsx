@@ -2,7 +2,7 @@ import "./StudentChatPopup.scss";
 /* 預約彈窗 */
 function BookingPopup({ onClose }) {
     return (
-        <>
+        <> <div className="overlay">{/* 背景遮住 */}
             <section className="chat-popup">
                 <div>
                     <header className="chat-header ">
@@ -57,7 +57,7 @@ function BookingPopup({ onClose }) {
                     </p>
                 </div>
 
-            </section >
+            </section ></div>
         </>
     )
 } export default BookingPopup
