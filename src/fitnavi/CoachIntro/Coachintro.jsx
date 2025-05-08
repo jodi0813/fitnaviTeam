@@ -155,12 +155,12 @@ function Coachintro() {
                         <div class="place">
                             <p>上課地點<br />可選擇</p>
                             <div className="moreimg4">
-                                <img src="./public/images/上課地點-1.jpg/" alt="" />
+                                <img src="/images/上課地點-1.jpg" alt="" />
                                 <p>臺北市大安區Ａ健身房</p>
                             </div>
 
                             <div className="moreimg5">
-                                <img src="./public/images/上課地點-2.jpg/" alt="" />
+                                <img src="/images/上課地點-2.jpg" alt="" />
                                 <p>臺北市大安區B健身房</p>
                             </div>
                         </div>

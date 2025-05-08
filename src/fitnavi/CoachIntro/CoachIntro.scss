@@ -369,6 +369,8 @@
     .moreimg5 {
         margin-top: 5px;
 
+
+
         p {
             writing-mode: horizontal-tb;
             color: var(--dark, #3A2C19);
@@ -381,6 +383,10 @@
             /* 200% */
             letter-spacing: 0.4px;
 
+        }
+
+        img{
+            border-radius: 20px;
         }
     }
 
