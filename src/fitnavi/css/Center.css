@@ -42,6 +42,9 @@
   padding: 19px 100px;
   align-items: flex-start;
 }
+.main-content .centerPhotoBox {
+  position: relative;
+}
 
 .return {
   font-size: 20px;
@@ -79,15 +82,19 @@
   color: #ff8740;
 }
 
-.title2 {
+.centerTitle2 {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  position: absolute;
+  left: 34px;
+  bottom: -53.467px;
 }
 
 .title2 h2 {
   font-family: Alata;
   font-size: 32px;
   font-weight: 400;
+  color: #3A2C19;
 }
 
 .title2 h3 {
@@ -116,8 +123,8 @@
   margin: 24px;
 }
 
-.main {
+.centerMain {
   display: flex;
   flex-direction: column;
-  padding: 0px 122px;
+  padding: 87px 122px 24px 122px;
 }

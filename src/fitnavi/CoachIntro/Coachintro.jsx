@@ -155,12 +155,12 @@ function Coachintro() {
                         <div class="place">
                             <p>上課地點<br />可選擇</p>
                             <div className="moreimg4">
-                                <img src="./public/images上課地點-1.jpg/" alt="" />
+                                <img src="./public/images/上課地點-1.jpg/" alt="" />
                                 <p>臺北市大安區Ａ健身房</p>
                             </div>
 
                             <div className="moreimg5">
-                                <img src="./public/images上課地點-2.jpg/" alt="" />
+                                <img src="./public/images/上課地點-2.jpg/" alt="" />
                                 <p>臺北市大安區B健身房</p>
                             </div>
                         </div>
@@ -325,6 +325,13 @@ function Coachintro() {
                                 <p>教練確認預約</p>
                             </div>
                         </div>
+
+                        <div className="reserve-img">
+                            <img src="./public/images/reserved.png" alt="" />
+
+                            <p>預約成功！</p>
+
+                        </div>
                     </div>
 
                     <div className="calendar-reservetime">
@@ -447,7 +454,7 @@ function Coachintro() {
                                 commentperson={card.commentperson}
                                 commentdate={card.commentdate}
                                 className={`card${index + 1}`}
-                                // onClick={() => navigate(`/article/${card.id}`)}
+                            // onClick={() => navigate(`/article/${card.id}`)}
                             />
                         ))}
                     </div>
