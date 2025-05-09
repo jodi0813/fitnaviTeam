@@ -127,7 +127,7 @@ function NutriIntro() {
             date: "2025/05/26"
         },
         {
-            description: "這次的營養諮詢讓我發現，原來飲食的管理其實是這麼簡單！營養師不僅提供了個性化的建議，還幫我調整了我的飲食計劃，使我更容易達成目標。",
+            description: "這次的營養諮詢讓我發現，原來飲食的管理其實是這麼簡單！營養師不僅提供了個性化的建議，還幫我調整了我的飲食計劃，讓我容易達成目標。",
             color: "#F1F7D8",
             rate: "4.0",
             name: "7蔡Ｏ珊",
@@ -355,7 +355,7 @@ function NutriIntro() {
                     </div>
                 </section>
 
-                <section id="exp-cer">
+                <section id="Nutri-exp-cer">
                     <div className="expcontent">
                         <div className="exptitle">
                             <h3>工作經歷</h3>

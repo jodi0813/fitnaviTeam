@@ -630,7 +630,7 @@ body {
         align-items: center;
         position: relative;
         gap: 0px;
-        margin-left: 400px;
+        margin-left:20%;
         margin-top: 30px;
 
         .circle1,
@@ -702,16 +702,17 @@ body {
 
 
 
-#exp-cer {
+#Nutri-exp-cer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-self: flex-start;
     margin-top: 300px;
-    gap: 100px;
+    margin-left: 300px;
+    
 
     .expcontent {
-        margin-left: 300px;
+        flex: 1;
 
         .exptitle {
             display: flex;
@@ -776,6 +777,7 @@ body {
 
     .certificate {
 
+        flex: 1;
         .certitle {
             display: flex;
             flex-direction: row;
@@ -856,6 +858,7 @@ body {
         padding: 0px;
         gap: 70px;
         position: relative;
+        flex: 1;
 
         .restitle {
             display: flex;
@@ -1015,7 +1018,8 @@ body {
 
 
 
-.Nutri-Available-reservetime {
+.Nutri-calendar-reservetime {
+    flex: 1;
 
 
     .caltitle {
@@ -1229,7 +1233,7 @@ body {
             justify-content: center;
             align-items: center;
             margin-top: 80px;
-            gap: 50px;
+            gap: 10%;
         }
 
     }
