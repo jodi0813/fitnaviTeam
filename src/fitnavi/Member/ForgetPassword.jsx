@@ -1,7 +1,9 @@
 import React from 'react';
 import "./ForgetPassword.scss";
+import { useNavigate } from 'react-router-dom';
 
 function ForgetPassword() {
+    const navigate=useNavigate();
     return (
         <>
             <section className="ForgetPassword">
@@ -16,7 +18,7 @@ function ForgetPassword() {
 
                     <div className='ForgetPassword-option'>
                         <button className="Alreadyhavepassword">已經有帳號？</button>
-                        <button className="Returntologin">回到登入頁面</button>
+                        <button className="Returntologin" onClick={()=>navigate('/MemberLogin')}>回到登入頁面</button>
                     </div>
 
 

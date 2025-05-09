@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
+import { useNavigate } from 'react-router-dom';
+
+
 function Navbar() {
+  const navigate = useNavigate();
   return (
     <>
       <header id="navbarHeader">
@@ -35,7 +39,7 @@ function Navbar() {
                 <Link to="/memberlist">後台(暫放)</Link>
               </li> */}
             </ul>
-            <button type="button" className="nbr-login">
+            <button type="button" className="nbr-login" onClick={()=>navigate('MemberLogin')}>
               登入 / 註冊
             </button>
           </nav>

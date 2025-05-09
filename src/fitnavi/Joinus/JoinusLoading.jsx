@@ -1,8 +1,20 @@
 import React from 'react';
 import "./JoinusLoading.scss";
 import MainTitle from "../../components/Title/MainTitle";
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function JoinusLoading() {
+    const navigate=useNavigate();
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          navigate('/JoinusSuccess');
+        }, 3000); // 10秒
+    
+        return () => clearTimeout(timer); // 清理 timer 避免記憶體洩漏
+      }, [navigate]);
+    
+
     return (
         <>
             <section className="JoinusLoading-header">

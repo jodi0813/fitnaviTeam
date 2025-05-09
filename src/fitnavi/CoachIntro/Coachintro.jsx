@@ -170,7 +170,7 @@ function Coachintro() {
                     <div className="person-class-photo">
                         <div className="coachphotos">
                             <div className="selfie">
-                                <img src="./images/教練形象照-01.jpg" alt="" />
+                            <img src="./images/coach.jpg" alt="" />
                             </div>
                             <div className="more">
                                 <figure className="moreimg1">

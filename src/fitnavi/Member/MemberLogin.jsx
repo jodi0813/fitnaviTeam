@@ -1,8 +1,10 @@
 import React from 'react';
 import "./MemberLogin.scss";
+import { useNavigate } from 'react-router-dom';
 
 
 function MemberLogin() {
+    const navigate=useNavigate();
     return (
         <>
             <section className="MemberLogin">
@@ -19,8 +21,8 @@ function MemberLogin() {
                     </div>
 
                     <div className='MemberLogin-option'>
-                        <button className="MemberLogin-forgetpassword">忘記帳號密碼</button>
-                        <button className="MemberLogin-">還不是會員？會員加入</button>
+                        <button className="MemberLogin-forgetpassword" onClick={()=>navigate('/ForgetPassword')} >忘記帳號密碼</button>
+                        <button onClick={()=>navigate('/MemberSignup')}>還不是會員？會員加入</button>
                     </div>
 
 

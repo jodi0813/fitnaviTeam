@@ -1,10 +1,13 @@
 import React from 'react';
 import "./MemberSignup.scss";
+import { useNavigate } from 'react-router-dom';
+
 
 function MemberSignup() {
+    const navigate=useNavigate();
     return (
         <>
-            <section className="MemberSignup">
+            <div className="MemberSignup-wrapper">
                 <form action="" className='MemberSignup-form'>
                     <div className="MemberSignup-title">註冊會員</div>
 
@@ -56,7 +59,7 @@ function MemberSignup() {
                     </div>
 
                     <div className='Signup-button'>
-                        <button>下一步</button>
+                        <button onClick={()=>navigate('/SetAccountPassword')}>下一步</button>
                     </div>
 
 
@@ -72,7 +75,7 @@ function MemberSignup() {
 
                 </form>
 
-            </section>
+            </div>
 
         </>
     )
