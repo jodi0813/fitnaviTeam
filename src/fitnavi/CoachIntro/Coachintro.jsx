@@ -14,7 +14,7 @@ function Coachintro() {
         {
             id: "card1",
             date: "2025/04/11",
-            img: "./public/images/article-5.jpg",
+            img: "./images/article-5.jpg",
             title: "想練出理想線條？體態雕塑其實有方法",
             content: "想要雕塑迷人曲線，光靠減脂還不夠！針對臀部、腿部、核心等部位的專項訓練，搭配有氧運動，讓你的體態更加迷人，展現出最完美的曲線。",
             tags: ["曲線雕塑", "體態"],
@@ -25,7 +25,7 @@ function Coachintro() {
         {
             id: "card2",
             date: "2025/04/27",
-            img: "./public/images/article-4.jpg",
+            img: "./images/article-4.jpg",
             title: "為什麼肌力這麼重要？打造強韌體能的第一步",
             content: "你是否常常在訓練中感到停滯不前？增加重量、改變訓練方式或專注於大肌群訓練，都能有效突破瓶頸，提升力量，讓你進一步挑戰更高強度的訓練！",
             tags: ["力量突破", "肌力提升"],
@@ -35,7 +35,7 @@ function Coachintro() {
         {
             id: "card3",
             date: "2025/05/20",
-            img: "./public/images/article-3.jpg",
+            img: "./images/article-3.jpg",
             title: "想有效燃脂？必學這5種高效率運動法",
             content: "高強度間歇運動（HIIT）是現代最有效率的燃脂方式之一。短時間內提升心跳率，刺激脂肪燃燒，即使運動結束後，代謝仍持續上升，是減脂族群的秘密武器。供從簡單動作開始的計劃。",
             tags: ["燃脂", "HIIT訓練"],
@@ -86,9 +86,9 @@ function Coachintro() {
     const [cardData] = useState([
         {
 
-            description: "教練的課程設計非常貼心，每次訓練後都能感受到自己的一點點進步！",
+            description: "課程沒有想像中緊湊，不過教練人很好教學也還算清楚，還是有學到一些訓練技巧。",
             color: "#F1F7D8",
-            rate: "4.0",  // 評分為4顆星
+            rate: "3.0",  // 評分為4顆星
             name: "1鄭Ｏ翔",
             date: "2025/05/26"
 
@@ -170,19 +170,19 @@ function Coachintro() {
                     <div className="person-class-photo">
                         <div className="coachphotos">
                             <div className="selfie">
-                                <img src="./public/images/教練形象照-01.jpg" alt="" />
+                                <img src="./images/教練形象照-01.jpg" alt="" />
                             </div>
                             <div className="more">
                                 <figure className="moreimg1">
-                                    <img src="./public/images/教練輪播小圖-01.jpg" />
+                                    <img src="./images/教練輪播小圖-01.jpg" />
                                 </figure>
 
                                 <figure className="moreimg2">
-                                    <img src="./public/images/教練輪播小圖-02.jpg" alt="" />
+                                    <img src="./images/教練輪播小圖-02.jpg" alt="" />
                                 </figure>
 
                                 <figure className="moreimg3">
-                                    <img src="./public/images/教練輪播小圖-03.jpg" alt="" />
+                                    <img src="./images/教練輪播小圖-03.jpg" alt="" />
                                 </figure>
 
                             </div>
@@ -254,12 +254,12 @@ function Coachintro() {
                         <div class="Coach-place">
                             <p>上課地點<br />可選擇</p>
                             <div className="moreimg4">
-                                <img src="/images/上課地點-1.jpg" alt="" />
+                                <img src="/images/classplace-1.jpg" alt="" />
                                 <p>臺北市大安區Ａ健身房</p>
                             </div>
 
                             <div className="moreimg5">
-                                <img src="/images/上課地點-2.jpg" alt="" />
+                                <img src="/images/classplace-2.jpg" alt="" />
                                 <p>臺北市大安區B健身房</p>
                             </div>
                         </div>
@@ -273,11 +273,11 @@ function Coachintro() {
                     <div className="coachnav">
                         <nav className="intro">
                             <ul>
-                                <li><a href="#">關於教練</a></li>
-                                <li><a href="#">專長領域</a></li>
-                                <li><a href="#">工作經歷</a></li>
-                                <li><a href="#">專業證照</a></li>
-                                <li><a href="#">預約流程</a></li>
+                                <li><a href="#aboutCoach">關於教練</a></li>
+                                <li><a href="#spe">專長領域</a></li>
+                                <li><a href="#Coach-exp-cer">工作經歷</a></li>
+                                <li><a href="#certificate">專業證照</a></li>
+                                <li><a href="#reserve">預約流程</a></li>
                                 <li><a href="#">教練可預約時間</a></li>
                                 <li><a href="#">發表文章</a></li>
                                 <li><a href="#">學員評價</a></li>
@@ -384,7 +384,7 @@ function Coachintro() {
 
                     </div>
 
-                    <div className="certificate">
+                    <div id="certificate">
                         <div className="certitle">
                             <h3>專業證照</h3>
                             <h4>Certification</h4>
@@ -426,7 +426,7 @@ function Coachintro() {
                         </div>
 
                         <div className="reserve-img">
-                            <img src="./public/images/reserved.png" alt="" />
+                            <img src="./images/reserved.png" alt="" />
 
                             <p>預約成功！</p>
 
