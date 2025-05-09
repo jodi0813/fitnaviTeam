@@ -6,7 +6,6 @@
 .searchBox {
   display: flex;
   padding: 0px 150px;
-
 }
 #personal-search-form {
   margin-top: 50px;
@@ -46,16 +45,64 @@
     border: none;
   }
 }
-.allCoachCards{
-  padding:33px 143px;
-.coachNineCards {
-  display: flex;
-  flex-wrap:wrap;
-  gap:32px;
+.allCoachCards {
+  padding: 33px 143px;
+  .coachNineCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  .all-coach {
+    color: #ff8740;
+    font-family: "Dela Gothic One", sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+  }
 }
-.all-coach {
-  color: #ff8740;
-  font-family: "Dela Gothic One", sans-serif;
-  font-size: 80px;
-  font-weight: 400;
-}}
+.favoriteBt {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 24px;
+  align-items: center;
+  gap: 10px;
+
+  .favoriteActive {
+    outline: none;
+    border-radius: 999px;
+    border: 1px solid #ff8740;
+    background: #ff8740;
+    color: #3a2c19;
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+  }
+  .favoriteNoActive {
+    color: #3a2c19;
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    border-radius: 999px;
+    border: 1px solid #ff8740;
+    background: #fefcf7;
+  }
+  .favorite-count {
+    color: #3a2c19;
+    font-family: "Dela Gothic One";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    gap: 10px;
+     display: flex;
+   .c-count {
+      color: #ff8740;
+    }
+    .n-count{
+      color: #56BD49;
+    }
+  }
+}

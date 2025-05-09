@@ -10,24 +10,24 @@ function CenterNavbar() {
       <div id="centerMenu">
         {/* 中間的選單列 */}
         <div className="centerMenuBt">
-          <Link
+          <button
             className={activeTab === "centerInformation" ? "centerActive" : "centerNoActive"}
             onClick={() => setActiveTab("centerInformation")}
           >
             場館資料
-          </Link>
-          <Link
+          </button>
+          <button
             className={activeTab === "facility" ? "centerActive" : "centerNoActive"}
             onClick={() => setActiveTab("facility")}
           >
             環境設施
-          </Link>
-          <Link
+          </button>
+          <button
             className={activeTab === "fitnessTrainer" ? "centerActive" : "centerNoActive"}
             onClick={() => setActiveTab("fitnessTrainer")}
           >
             私人教練
-          </Link>
+          </button>
         </div>
       </div>
       <div >

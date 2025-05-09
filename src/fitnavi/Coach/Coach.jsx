@@ -131,7 +131,7 @@ function Coach() {
                 imageSrc={coach.imageSrc}
               />
             ))}
-          </div>{" "}
+          </div>
         </div>
       </div>
     </>

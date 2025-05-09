@@ -16,40 +16,37 @@
   align-items: center;
   gap: 80px;
   border-radius: 999px;
-  width: 510px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   background: #fff;
 
   .centerActive {
     color: #FF8740;
+    background-color: #fff;
     text-align: center;
     font-family: "Noto Sans TC";
     font-size: 14px;
     font-style: normal;
     font-weight: 900;
     line-height: 140%;
-    /* 19.6px */
     letter-spacing: 1.4px;
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-skip-ink: none;
     text-decoration-thickness: 10%;
-    /* 1.4px */
     text-underline-offset: 25%;
-    /* 3.5px */
+
   }
 
   .centerNoActive {
     color: #000;
+    background-color: #fff;
     text-align: center;
-    /* 段落/14 */
-    font-family: "Noto Sans TC";
+      font-family: "Noto Sans TC";
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
-    /* 19.6px */
-    letter-spacing: 1.4px;
+      letter-spacing: 1.4px;
   }
 
 }
