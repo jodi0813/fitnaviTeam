@@ -1,6 +1,7 @@
 import React from 'react';
 import Articlecards from '../../components/Articlecards';
 import "./AllArticle.scss";
+import { useNavigate } from 'react-router-dom';
 
 
 function Allarticle() {
