@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
+import HomePage from "./HomePage/HomePage";
 import Coach from "./Coach/Coach";
 import Nutritionist from "./Coach/Nutritionist";
 import CenterMap from "./Center/CenterMap";
@@ -30,7 +31,7 @@ function App() {
       <div className="wrap">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Coach />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/coach" element={<Coach />}/>
           <Route path="/nutritionist"element={<Nutritionist/>}/>
           <Route path="/centerMap" element={<CenterMap/>}/>
