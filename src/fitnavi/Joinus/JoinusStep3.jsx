@@ -127,8 +127,8 @@ function JoinusStep3() {
                     </div>
 
                     <div className='Step3-NextPreButton'>
-                        <button className='Pre-button' onClick={()=>navigate('/JoinusStep2')} >◀ 上一步</button>
-                        <button className='Next-button' onClick={()=>navigate('/JoinusStep4')}>下一步 ▶</button>
+                        <button className='Pre-button' onClick={()=>{navigate('/JoinusStep2');window.scrollTo(0, 0);}} >◀ 上一步</button>
+                        <button className='Next-button' onClick={()=>{navigate('/JoinusStep4');window.scrollTo(0, 0);}}>下一步 ▶</button>
                     </div>
                 </form>
 

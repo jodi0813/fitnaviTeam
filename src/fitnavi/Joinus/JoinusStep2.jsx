@@ -153,8 +153,8 @@ function JoinusStep2() {
                     </fieldset>
 
                     <div className='NextPreButton'>
-                        <button onClick={() => navigate('/JoinusStep1')} >◀ 上一步</button>
-                        <button onClick={() => navigate('/JoinusStep3')}>下一步 ▶</button>
+                        <button onClick={() => {navigate('/JoinusStep1');window.scrollTo(0, 0);}} >◀ 上一步</button>
+                        <button onClick={() => {navigate('/JoinusStep3');window.scrollTo(0, 0);}}>下一步 ▶</button>
                     </div>
 
 

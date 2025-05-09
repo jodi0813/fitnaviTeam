@@ -47,7 +47,7 @@ function JoinusStep1() {
 
 
                     <button className='Step1-form-button'
-                        onClick={() => navigate('/JoinusStep2')}>下一步 ▶</button>
+                        onClick={() => {navigate('/JoinusStep2');window.scrollTo(0, 0);}}>下一步 ▶</button>
 
                 </form>
             </div>

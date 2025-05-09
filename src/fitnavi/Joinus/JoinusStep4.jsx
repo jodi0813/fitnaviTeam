@@ -40,8 +40,8 @@ function JoinusStep4() {
                     </div>
 
                     <div className='PreSSendButton'>
-                        <button onClick={()=>navigate('/JoinusStep3')}>◀ 上一步</button>
-                        <button onClick={()=>navigate('/JoinusLoading')}>送出申請 ▶</button>
+                        <button onClick={()=>{navigate('/JoinusStep3');window.scrollTo(0, 0);}}>◀ 上一步</button>
+                        <button onClick={()=>{navigate('/JoinusLoading');window.scrollTo(0, 0);}}>送出申請 ▶</button>
                     </div>
                 </form>
             </div>

@@ -1,8 +1,9 @@
 import "./Footer.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 
 function Footer() {
+    const navigate=useNavigate();
     return (
         <>
             <section id="footer">
@@ -13,15 +14,20 @@ function Footer() {
                         <div className="footer-columntext">
                             <div className="explore">
                                 <h4>探索</h4>
-                                <p>課程搜尋</p>
-                                <p>場地介紹</p>
-                                <p>知識分享</p>
-                                <p>合作夥伴</p>
+                                <p onClick={()=>{navigate('/Coach');
+                                    window.scrollTo(0, 0);}} style={{cursor:"pointer"}}>課程搜尋</p>
+                                <p onClick={()=>{navigate('/CenterMap');
+                                    window.scrollTo(0, 0);}} style={{cursor:"pointer"}}>場地介紹</p>
+                                <p onClick={()=>{navigate('/Allarticle');
+                                    window.scrollTo(0, 0);}} style={{cursor:"pointer"}}>知識分享</p>
+                                <p onClick={()=>{navigate('/Joinus');
+                                    window.scrollTo(0, 0);}} style={{cursor:"pointer"}}>合作夥伴</p>
                             </div>
 
                             <div className="partner">
                                 <h4>合作夥伴</h4>
-                                <p>登入後台</p>
+                                <p onClick={()=>{navigate('/MemberLogin');
+                                    window.scrollTo(0, 0);}} style={{cursor:"pointer"}}>登入後台</p>
                                 <p>合作夥伴支援中心</p>
                                 <p>將您的課程上線</p>
                             </div>
