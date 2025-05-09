@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./Joinus.scss";
 
 function Joinus() {
+     const navigate = useNavigate();
     return (
         <>
             <section className="Joinus-header">
@@ -37,7 +39,12 @@ function Joinus() {
                         <p> 🤝撰寫實用訓練文章或影片</p>
                     </form>
 
-                    <button className='imcoach-joinbutton'>成為合作教練</button>
+                    <button
+                        className='imcoach-joinbutton'
+                        onClick={() => navigate('/JoinusStep1')}
+                    >
+                        成為合作教練
+                    </button>
                 </div>
 
                 <div className="imnutrionist">

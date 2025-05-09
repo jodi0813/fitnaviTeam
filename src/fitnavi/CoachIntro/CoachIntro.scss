@@ -704,10 +704,11 @@
     justify-content: flex-start;
     align-self: center;
     margin-top: 300px;
-    gap: 300px;
+    // gap: 300px;
 
     .expcontent {
         margin-left: 300px;
+        flex: 1;
 
         .exptitle {
             display: flex;
@@ -771,6 +772,7 @@
     }
 
     #certificate {
+        flex: 1;
 
         .certitle {
             display: flex;
@@ -843,7 +845,7 @@
     flex-direction: row;
     margin-left: 300px;
     margin-top: 100px;
-    gap: 30px;
+
 
     .reserve {
         display: flex;
@@ -852,6 +854,7 @@
         padding: 0px;
         gap: 70px;
         position: relative;
+        flex: 1;
 
         .restitle {
             display: flex;
@@ -943,68 +946,70 @@
                 }
             }
         }
+
+        .process {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 20px;
+
+            .number {
+                p {
+                    background-color: #FF8740;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 999px;
+                    color: #FEFCF7;
+                    font-family: Alata;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    line-height: 140%;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .resdetail {
+                p {
+                    display: flex;
+                    width: 300px;
+                    height: 40px;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    border-radius: 99px;
+                    border: 1px solid var(--primary, #FF8740);
+                    background: var(--white, #FEFCF7);
+
+                    color: var(--dark, #3A2C19);
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    white-space: nowrap;
+                    margin-bottom: 30px;
+                    margin-top: 10px;
+                }
+
+            }
+
+
+        }
     }
 
 }
 
-.process {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 20px;
 
-    .number {
-        p {
-            background-color: #FF8740;
-            width: 60px;
-            height: 60px;
-            border-radius: 999px;
-            color: #FEFCF7;
-            font-family: Alata;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            line-height: 140%;
-            margin-bottom: 10px;
-        }
-    }
-
-    .resdetail {
-        p {
-            display: flex;
-            width: 300px;
-            height: 40px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 15px;
-            border-radius: 99px;
-            border: 1px solid var(--primary, #FF8740);
-            background: var(--white, #FEFCF7);
-
-            color: var(--dark, #3A2C19);
-            /* 段落/14 */
-            font-family: "Noto Sans TC";
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%;
-            /* 19.6px */
-            letter-spacing: 1.4px;
-            white-space: nowrap;
-            margin-bottom: 30px;
-            margin-top: 10px;
-        }
-
-    }
-
-
-}
 
 
 
@@ -1012,6 +1017,8 @@
 
 .Coach-Available-reservetime {
 
+
+    flex: 1;
 
     .caltitle {
         display: flex;
@@ -1220,7 +1227,7 @@
             justify-content: center;
             align-items: center;
             margin-top: 80px;
-            gap: 50px;
+            gap: 10%;
         }
 
     }

@@ -1,7 +1,9 @@
 import React from 'react';
 import "./JoinusStep3.scss";
+import { useNavigate } from 'react-router-dom';
 
 function JoinusStep3() {
+    const navigate=useNavigate();
     return (
         <>
             <section className="JoinusStep1-header">

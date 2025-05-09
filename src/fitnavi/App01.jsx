@@ -18,9 +18,9 @@ import MemberLogin from "./MemberLogin/MemberLogin";
 import SetAccountPassword from "./SetAccountPassword/SetAccountPassword";
 import LoginSuccess from "./LoginSuccess/LoginSuccess";
 import MemberSignup from "./MemberSignup/MemberSignup";
-import JoinusStep1 from "./JoinusStep1/JoinusStep1";
-import JoinusStep2 from "./JoinusStep2/JoinusStep2";
-import JoinusStep3 from "./JoinusStep3/JoinusStep3";
+import JoinusStep1 from "./Joinus/JoinusStep1";
+import JoinusStep2 from "./Joinus/JoinusStep2";
+import JoinusStep3 from "./Joinus/JoinusStep3";
 import JoinusStep4 from "./JoinusStep4/JoinusStep4";
 import JoinusLoading from "./JoinusLoading/JoinusLoading";
 import NutriIntro from "./NutriIntro/NutriIntro";
@@ -43,7 +43,10 @@ function App() {
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
-          <Route path="/NutriIntro" element={<NutriIntro/>}></Route>
+          <Route path="/Joinus" element={<Joinus/>}></Route>
+           <Route path="/JoinusStep1" element={<JoinusStep1 />} />
+           <Route path="/JoinusStep2" element={<JoinusStep2 />} />
+           <Route path="/JoinusStep3" element={<JoinusStep3 />} />
         </Routes>
         <Footer />
       </div>
