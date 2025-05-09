@@ -4,7 +4,7 @@ import MainTitle from "../../components/Title/MainTitle";
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
 import Articlecards from '../../components/Articlecards';
-import CommentCard from "../../components/CommentCard";
+
 
 
 function NutriIntro() {
@@ -390,7 +390,7 @@ function NutriIntro() {
 
                 </section>
 
-                <section id="reservation">
+                <section id="reservation2">
                     <div className="reserve">
                         <div className="restitle">
                             <h3>預約流程</h3>
@@ -422,14 +422,14 @@ function NutriIntro() {
                         </div>
                     </div>
 
-                    <div className="calendar-reservetime">
+                    <div className="Nutri-calendar-reservetime">
                         <div className="caltitle">
                             <h3>營養師可預約時間</h3>
                             <h4>Available Time</h4>
                         </div>
 
 
-                        <div className="body">
+                        <div className="calendar-body">
                             <div class="container">
                                 <div class="calendar">
                                     <header>
@@ -531,7 +531,7 @@ function NutriIntro() {
 
                     </div>
 
-                     <div className="comment-line2" style={{
+                     <div className="Nutri-commentcard" style={{
                         display: "grid",
                         flexDirection: "column",
                         gridTemplateColumns: "repeat(3, 1fr)", // 每行 3 欄
@@ -559,6 +559,8 @@ function NutriIntro() {
                         ))}
 
                     </div>
+
+                    <img src="/images/32ca0342cdc3bbfb3f13d97e0294b41b76fc9df5.gif" alt="" style={{width:"300px", height:"400px"}}/>
                 </section >
             </main >
 
