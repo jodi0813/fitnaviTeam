@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./CommentCard.module.scss";
+import styles from "./CommentCard.module.css";
 
 function CommentCard({ rate, content, commentperson, commentdate, color }) {
     function renderStars() {

@@ -129,7 +129,7 @@
                 background: var(--white, #FEFCF7);
                 padding: 40px;
                 margin-top: 100px;
-                margin-bottom: 450px;
+                margin-bottom: 20px;
 
 
 
@@ -337,11 +337,11 @@
 
 
 
-.place {
+.Coach-place {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: 180px;
+    margin-top: 480px;
     margin-bottom: 0px;
     gap: 40px;
 
@@ -385,7 +385,7 @@
 
         }
 
-        img{
+        img {
             border-radius: 20px;
         }
     }
@@ -698,13 +698,13 @@
 
 
 
-#exp-cer {
+#Coach-exp-cer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-self: center;
     margin-top: 300px;
-    gap: 250px;
+    gap: 300px;
 
     .expcontent {
         margin-left: 300px;
@@ -841,8 +841,9 @@
 #reservation {
     display: flex;
     flex-direction: row;
-    margin-left: 300px;
+    margin-left: 100px;
     margin-top: 100px;
+    gap: 30px;
 
     .reserve {
         display: flex;
@@ -1009,8 +1010,8 @@
 
 
 
-.calendar-reservetime {
-    margin-left: 300px;
+.Coach-Available-reservetime {
+
 
     .caltitle {
         display: flex;
@@ -1061,7 +1062,7 @@
         background-color: #FEFCF7;
         border: 1px solid #3A2C19;
         border-radius: 35px;
-        padding: 0 1em;
+
         margin-top: 2em;
         display: flex;
         align-items: center;
@@ -1310,6 +1311,92 @@
             /* 150px */
             text-transform: capitalize;
         }
+    }
+
+    .comment-line2 {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        position: relative;
+        right: 300px;
+        top: 150px;
+
+        .Star-rate {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+
+
+            h3 {
+                color: #3A2C19;
+                font-family: Alata;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                /* 45px */
+                text-transform: capitalize;
+                margin-left: 60px;
+            }
+        }
+
+        p.description {
+            color: var(--dark, #3A2C19);
+            /* 段落/14 */
+            font-family: "Noto Sans TC";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+            margin-top: 30px;
+        }
+
+        .Name-date {
+            margin-top: 90px;
+            display: flex;
+            flex-direction: row;
+            gap: 120px;
+
+            p.Name {
+                color: #000;
+
+                /* 段落/14 */
+                font-family: "Noto Sans TC";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+                white-space: nowrap;
+            }
+
+            p.Date {
+                color: var(--dark, #3A2C19);
+                text-align: right;
+                /* 段落/14 */
+                font-family: "Noto Sans TC";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
+        }
+
+
+
+
+
+
+
+
+
     }
 
 

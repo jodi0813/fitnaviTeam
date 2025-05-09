@@ -4,7 +4,7 @@ import MainTitle from "../../components/Title/MainTitle";
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
 import Articlecards from '../../components/Articlecards';
-import CommentCard from "../../components/CommentCard";
+
 
 
 function Coachintro() {
@@ -19,7 +19,7 @@ function Coachintro() {
             content: "想要雕塑迷人曲線，光靠減脂還不夠！針對臀部、腿部、核心等部位的專項訓練，搭配有氧運動，讓你的體態更加迷人，展現出最完美的曲線。",
             tags: ["曲線雕塑", "體態"],
             category: "體態雕塑",
-           
+
 
         },
         {
@@ -46,61 +46,112 @@ function Coachintro() {
 
     ]
 
-    // const CommentData = [
-    //     {
-    //         rate: "4",
-    //         content: "教練的課程設計非常貼心，每次訓練後都能感受到自己的一點點進步！",
-    //         commentperson: "鄭Ｏ翔",
-    //         commentdate: "2025/5/26",
-    //         color: "#FF8740"
-    //     }
-    // ]
 
-    const ColorCard = ({ title, description, cardColor, rate }) => {
-        // 根據評分顯示星星
-        const stars = [];
-        for (let i = 0; i < 5; i++) {
-          const starColor = i < rate ? "#FF8740" : "#989794"; // 填充星星的顏色
-          stars.push(
+
+    const ColorCard = ({ description, cardColor, rate, name, date }) => {
+    // 將 rate 轉為數值
+    const numericRate = parseFloat(rate); 
+
+    // 根據評分顯示星星
+    const stars = [];
+    for (let i = 0; i < 5; i++) {
+        const starColor = i < numericRate ? "#FF8740" : "#989794"; // 填充星星的顏色
+        stars.push(
             <svg key={i} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill={starColor}>
-              <path d="M12 .587l3.668 7.431L24 9.748l-6 5.853L19.335 24 12 20.202 4.665 24 6 15.601 0 9.748l8.332-1.73z" />
+                <path d="M12 .587l3.668 7.431L24 9.748l-6 5.853L19.335 24 12 20.202 4.665 24 6 15.601 0 9.748l8.332-1.73z" />
             </svg>
-          );
-        }
-      
-        return (
-          <div style={{ backgroundColor: cardColor, padding: "20px", borderRadius: "10px", color: "#fff" }}>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <div>
-              {stars} {/* 顯示星星 */}
-            </div>
-          </div>
         );
-      };
+    }
 
-      const [cardData] = useState([
+    return (
+        <div style={{
+            backgroundColor: cardColor, padding: "20px", borderRadius: "10px", color: "#fff", width: "300px",
+            height: "298px"
+        }}>
+            <div>
+                <div className="Star-rate">
+                    {stars}
+                    <h3>{numericRate.toFixed(1)}</h3> {/* 確保顯示小數點 */}
+                </div>
+            </div>
+            <p className="description">{description}</p>
+            <div className="Name-date">
+                <p className="Name">{name}</p>
+                <p className="Date">{date}</p>
+            </div>
+        </div>
+    );
+};
+
+    const [cardData] = useState([
         {
-          title: "教練",
-          description: "專業的健身教練，擁有多年的經驗。",
-          color: "#FF5733",
-          rate: 4  // 評分為4顆星
+
+            description: "教練的課程設計非常貼心，每次訓練後都能感受到自己的一點點進步！",
+            color: "#F1F7D8",
+            rate: "4.0",  // 評分為4顆星
+            name: "1鄭Ｏ翔",
+            date: "2025/05/26"
+
         },
         {
-          title: "助理",
-          description: "協助教練與客戶的日常安排。",
-          color: "#33FF57",
-          rate: 3  // 評分為3顆星
+            description: "每堂課後都能夠清楚感受到自己肌肉的變化，對於健身的信心也逐漸增強。",
+            color: "#FEF6DD",
+            rate: "5.0",
+            name: "2陳Ｏ怡",
+            date: "2025/05/26"
         },
         {
-          title: "主管",
-          description: "負責整體健身計劃的管理。",
-          color: "#3357FF",
-          rate: 5  // 評分為5顆星
+            description: "訓練過程中，教練不僅會教我正確的動作技巧，還會鼓勵我不斷挑戰自我。每次突破自己的極限，我都感到非常有成就感。",
+            color: "#F1F7D8",
+            rate: "4.0",
+            name: "3林Ｏ偉",
+            date: "2025/05/26"
+        },
+        {
+            description: "非常感謝教練的耐心指導，讓我在短時間內見到了明顯的改變！",
+            color: "#FEECDD",
+            rate: "4.0",
+            name: "4曾Ｏ瑋",
+            date: "2025/05/26"
+        },
+        {
+            description: "教練的訓練方式讓我不再感到枯燥，每堂課都充滿驚喜！",
+            color: "#E3F3F8",
+            rate: "4.0",
+            name: "5吳Ｏ蓉",
+            date: "2025/05/26"
+        },
+        {
+            description: "我從來沒有想過自己能做到這麼多，謝謝教練讓我突破自己的極限！",
+            color: "#FEECDD",
+            rate: "4.0",
+            name: "6朱Ｏ瑄",
+            date: "2025/05/26"
+        },
+        {
+            description: "教練不僅是指導者，還是我的健身夥伴，總是給我正向的鼓勵！",
+            color: "#F1F7D8",
+            rate: "4.0",
+            name: "7陳Ｏ廷",
+            date: "2025/05/26"
+        },
+        {
+            description: "這是我參加過最有挑戰性的訓練，每次都感覺自己不斷突破自我！",
+            color: "#FEECDD",
+            rate: "4.0",
+            name: "8蔡Ｏ婷",
+            date: "2025/05/26"
+        },
+        {
+            description: "我喜歡教練總是能夠讓我挑戰自我，並且不會感到過度疲累，完美的平衡！",
+            color: "#F1F7D8",
+            rate: "4.0",
+            name: "9王Ｏ婷",
+            date: "2025/05/26"
         }
-      ]);
-    
-      
+    ]);
+
+
 
 
     return (
@@ -200,7 +251,7 @@ function Coachintro() {
 
                         </div>
 
-                        <div class="place">
+                        <div class="Coach-place">
                             <p>上課地點<br />可選擇</p>
                             <div className="moreimg4">
                                 <img src="/images/上課地點-1.jpg" alt="" />
@@ -316,7 +367,7 @@ function Coachintro() {
                     </div>
                 </section>
 
-                <section id="exp-cer">
+                <section id="Coach-exp-cer">
                     <div className="expcontent">
                         <div className="exptitle">
                             <h3>工作經歷</h3>
@@ -382,7 +433,7 @@ function Coachintro() {
                         </div>
                     </div>
 
-                    <div className="calendar-reservetime">
+                    <div className="Coach-Available-reservetime">
                         <div className="caltitle">
                             <h3>教練可預約時間</h3>
                             <h4>Available Time</h4>
@@ -491,33 +542,37 @@ function Coachintro() {
 
                     </div>
 
-                    <div>
-      {cardData.map((card, index) => (
-        <ColorCard 
-          key={index}
-          title={card.title}
-          description={card.description}
-          cardColor={card.color}
-          rate={card.rate}  // 傳遞評分
-        />
-      ))}
-    </div>
+                    <div className="comment-line1" style={{
+                        display: "grid",
+                        flexDirection: "column",
+                        gridTemplateColumns: "repeat(3, 1fr)", // 每行 3 欄
+                        gap: "50px",
+                        maxWidth: "960px", // 3 張卡片寬 + gap
+                        margin: "0 auto",  // 置中
+                    }}>
 
-                    {/* <div>
-                        {CommentData.map((Card, index) => (
-
-                            <CommentCard
+                        {cardData.slice(0, 9).map((card, index) => (
+                            <div
                                 key={index}
-                                rate={Card.rate}
-                                content={Card.content}
-                                commentperson={Card.commentperson}
-                                commentdate={Card.commentdate}
-                                color={Card.color}
-                                className={`Card${index + 1}`}
-                            // onClick={() => navigate(`/article/${card.id}`)}
-                            />
+                                style={{
+                                    marginTop: (index === 1 || index === 4 || index === 7) ? "60px" : "10px" // 設定 marginTop
+                                }}>
+
+                                <ColorCard
+                                    key={index}
+                                    description={card.description}
+                                    cardColor={card.color}
+                                    rate={parseFloat(card.rate)}
+                                    name={card.name}
+                                    date={card.date}
+                                />
+                            </div>
                         ))}
-                    </div> */}
+
+                    </div>
+
+
+
                 </section >
             </main >
 

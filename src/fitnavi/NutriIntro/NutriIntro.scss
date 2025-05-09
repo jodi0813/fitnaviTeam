@@ -57,7 +57,7 @@ body{
                     width: 100%;
                     display: flex;
                     flex-direction: row;
-                    gap: 30px;
+                    gap: 80px;
                     margin-left: 0px;
 
                     img {
@@ -344,7 +344,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: 180px;
+    margin-top: 650px;
     margin-bottom: 0px;
     gap: 40px;
 
@@ -513,7 +513,7 @@ body{
                 }
 
                 h4 {
-                    margin-left: 16px;
+                    margin-left: 40px;
                     width: 300px;
                     position: relative;
                     color: var(--dark, #3A2C19);
@@ -705,9 +705,9 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-self: center;
+    align-self: flex-start;
     margin-top: 300px;
-    gap: 250px;
+    gap: 100px;
 
     .expcontent {
         margin-left: 300px;
@@ -841,7 +841,7 @@ body{
 
 
 
-#reservation {
+#Nur-reservation {
     display: flex;
     flex-direction: row;
     margin-left: 300px;
@@ -1013,7 +1013,7 @@ body{
 
 
 .calendar-reservetime {
-    margin-left: 300px;
+    margin-left: 30px;
 
     .caltitle {
         display: flex;
@@ -1032,6 +1032,7 @@ body{
             line-height: normal;
             letter-spacing: 3.2px;
             margin-right: 16px;
+            white-space: nowrap;
         }
 
         h4 {

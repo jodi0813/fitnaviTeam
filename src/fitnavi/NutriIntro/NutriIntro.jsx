@@ -9,6 +9,42 @@ import CommentCard from "../../components/CommentCard";
 
 function NutriIntro() {
     const [liked, setLiked] = useState(false);
+    const ColorCard = ({ description, cardColor, rate, name, date }) => {
+        // 將 rate 轉為數值
+        const numericRate = parseFloat(rate);
+
+        // 根據評分顯示星星
+        const stars = [];
+        for (let i = 0; i < 5; i++) {
+            const starColor = i < numericRate ? "#FF8740" : "#989794"; // 填充星星的顏色
+            stars.push(
+                <svg key={i} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill={starColor}>
+                    <path d="M12 .587l3.668 7.431L24 9.748l-6 5.853L19.335 24 12 20.202 4.665 24 6 15.601 0 9.748l8.332-1.73z" />
+                </svg>
+            );
+        }
+
+        return (
+            <div style={{
+                backgroundColor: cardColor, padding: "20px", borderRadius: "10px", color: "#fff", width: "300px",
+                height: "298px"
+            }}>
+                <div>
+                    <div className="Star-rate">
+                        {stars}
+                        <h3>{numericRate.toFixed(1)}</h3> {/* 確保顯示小數點 */}
+                    </div>
+                </div>
+                <p className="description">{description}</p>
+                <div className="Name-date">
+                    <p className="Name">{name}</p>
+                    <p className="Date">{date}</p>
+                </div>
+            </div>
+        );
+    };
+
+
     const cardsData = [
 
         {
@@ -17,7 +53,7 @@ function NutriIntro() {
             img: "./images/article-7.jpg",
             title: "減脂只靠運動不夠？飲食管理才是關鍵",
             content: "減脂並不意味著無止境的節食，關鍵在於合理控制飲食，搭配有效的運動。減少糖分與不健康脂肪的攝取，讓你在消耗脂肪的同時保持活力。",
-            tags: ["減脂", "健康飲食","瘦身攻略"],
+            tags: ["減脂", "健康飲食", "瘦身攻略"],
             category: "減脂攻略"
 
         },
@@ -45,14 +81,73 @@ function NutriIntro() {
 
     ]
 
-    const CommentData = [
+    const [cardData] = useState([
         {
-            rate: "4",
-            content: "教練的課程設計非常貼心，每次訓練後都能感受到自己的一點點進步！",
-            commentperson: "鄭Ｏ翔",
-            commentdate: "2025/5/26"
+
+            description: "諮詢後，我能更有規律地吃飯，保持健康的飲食習慣。",
+            color: "#F1F7D8",
+            rate: "4.0",  // 評分為4顆星
+            name: "1李Ｏ儀",
+            date: "2025/05/26"
+
         },
-    ]
+        {
+            description: "營養師幫我調整了過去不健康的飲食方式，讓我每天都能夠保持適量的營養攝取。這樣的生活方式讓我更加輕鬆，也讓我的身體變得更加健康。",
+            color: "#FEF6DD",
+            rate: "5.0",
+            name: "2黃Ｏ傑",
+            date: "2025/05/26"
+        },
+        {
+            description: "營養師幫我調整飲食後，我的體能提升了不少，感覺更有活力。",
+            color: "#F1F7D8",
+            rate: "4.0",
+            name: "3張Ｏ如",
+            date: "2025/05/26"
+        },
+        {
+            description: "營養師幫我設計了一個非常實用的飲食計劃，並且根據我的需求調整了每一項建議。結果不僅是體重的減輕，整體健康狀況也明顯改善了。",
+            color: "#FEECDD",
+            rate: "4.0",
+            name: "4王Ｏ涵",
+            date: "2025/05/26"
+        },
+        {
+            description: "營養師的專業建議讓我找到了適合自己的飲食方式，效果很好。",
+            color: "#E3F3F8",
+            rate: "4.0",
+            name: "5邱Ｏ涵",
+            date: "2025/05/26"
+        },
+        {
+            description: "我從來沒有像這樣系統地了解過飲食與健康之間的關聯，營養師的諮詢讓我對自己的身體有了更多的了解。改變飲食後，我的能量更充沛。",
+            color: "#FEECDD",
+            rate: "4.0",
+            name: "6朱Ｏ瑄",
+            date: "2025/05/26"
+        },
+        {
+            description: "這次的營養諮詢讓我發現，原來飲食的管理其實是這麼簡單！營養師不僅提供了個性化的建議，還幫我調整了我的飲食計劃，使我更容易達成目標。",
+            color: "#F1F7D8",
+            rate: "4.0",
+            name: "7蔡Ｏ珊",
+            date: "2025/05/26"
+        },
+        {
+            description: "感謝營養師讓我對飲食有了全新認識，體重和健康都達到了目標。",
+            color: "#FEECDD",
+            rate: "4.0",
+            name: "8劉Ｏ霏",
+            date: "2025/05/26"
+        },
+        {
+            description: "這是我第一次進行營養師諮詢，經驗非常好！營養師提供了詳細的飲食計劃，並根據我的生活習慣給出了非常實用的建議。",
+            color: "#F1F7D8",
+            rate: "4.0",
+            name: "9許Ｏ傑",
+            date: "2025/05/26"
+        }
+    ]);
 
 
     return (
@@ -164,7 +259,7 @@ function NutriIntro() {
                                 <p>Zoom</p>
                             </div>
 
-                           
+
                         </div>
 
                     </div>
@@ -223,7 +318,7 @@ function NutriIntro() {
                             <span>
                                 <h4>減脂營養規畫
                                 </h4>
-                                <p>根據個人體質與目標，<br />設計科學化的飲食計畫、      
+                                <p>根據個人體質與目標，<br />設計科學化的飲食計畫、
                                 </p>
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="310" height="309" viewBox="0 0 310 309" fill="none">
@@ -235,7 +330,7 @@ function NutriIntro() {
                         <div className="circle2">
                             <span>
                                 <h4>運動表現提升</h4>
-                                <p>為健身族群與運動員<br/>提供能量補充與恢復策略
+                                <p>為健身族群與運動員<br />提供能量補充與恢復策略
                                 </p>
                             </span>
 
@@ -436,20 +531,33 @@ function NutriIntro() {
 
                     </div>
 
-                    <div>
-                        {CommentData.map((card, index) => (
+                     <div className="comment-line2" style={{
+                        display: "grid",
+                        flexDirection: "column",
+                        gridTemplateColumns: "repeat(3, 1fr)", // 每行 3 欄
+                        gap: "50px",
+                        maxWidth: "960px", // 3 張卡片寬 + gap
+                        margin: "0 auto",  // 置中
+                    }}>
 
-                            <CommentCard
+                        {cardData.slice(0, 9).map((card, index) => (
+                            <div
                                 key={index}
-                                rate={card.rate}
-                                // Stars={card.renderStars()}
-                                content={card.content}
-                                commentperson={card.commentperson}
-                                commentdate={card.commentdate}
-                                className={`card${index + 1}`}
-                            // onClick={() => navigate(`/article/${card.id}`)}
-                            />
+                                style={{
+                                    marginTop: (index === 1 || index === 4 || index === 7) ? "60px" : "10px" // 設定 marginTop
+                                }}>
+
+                                <ColorCard
+                                    key={index}
+                                    description={card.description}
+                                    cardColor={card.color}
+                                    rate={parseFloat(card.rate)}
+                                    name={card.name}
+                                    date={card.date}
+                                />
+                            </div>
                         ))}
+
                     </div>
                 </section >
             </main >
