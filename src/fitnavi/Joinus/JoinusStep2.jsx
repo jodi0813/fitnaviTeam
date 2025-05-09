@@ -1,17 +1,15 @@
 import React from 'react';
 import "./JoinusStep2.scss";
 import { useNavigate } from 'react-router-dom';
+import MainTitle from "../../components/Title/MainTitle";
 
 function JoinusStep2() {
     const  navigate = useNavigate();
     
     return (
         <>
-            <section className="JoinusStep1-header">
-                <div className='JoinusStep1-headertitle'>
-                    <h3>加入我們</h3>
-                    <h4>成為我們的合作夥伴</h4>
-                </div>
+            <section className="JoinusLoading-header">
+                <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
             </section>
 
             <div className='CoachJoinus-Step2-wrapper'>

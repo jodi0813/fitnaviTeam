@@ -5,57 +5,57 @@
     src: url(../../assets/MantouSans-Regular.ttf);
 }
 
-.Joinus-header {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-right: 50px;
-    width: 100%;
-    margin-bottom: 40px;
-    margin-top: 100px;
+// .Joinus-header {
+//     display: flex;
+//     flex-direction: column;
+//     margin-left: 10px;
+//     margin-right: 50px;
+//     width: 100%;
+//     margin-bottom: 40px;
+//     margin-top: 100px;
 
 
-    .Joinus-headertitle {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        justify-content: flex-start;
-        align-items: center;
-        border-bottom: 2px solid #3A2C19;
+//     .Joinus-headertitle {
+//         display: flex;
+//         flex-direction: row;
+//         gap: 20px;
+//         justify-content: flex-start;
+//         align-items: center;
+//         border-bottom: 2px solid #3A2C19;
 
-        h3 {
-            color: var(--primary, var(--primary, #FF8740));
-            font-family: "Mantou Sans";
-            font-size: 48px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 150%;
-            /* 72px */
-            letter-spacing: 9.6px;
-        }
+//         h3 {
+//             color: var(--primary, var(--primary, #FF8740));
+//             font-family: "Mantou Sans";
+//             font-size: 48px;
+//             font-style: normal;
+//             font-weight: 400;
+//             line-height: 150%;
+//             /* 72px */
+//             letter-spacing: 9.6px;
+//         }
 
-        h4 {
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: var(--dark, #3A2C19);
-            font-family: "Mantou Sans";
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 50px;
-            /* 208.333% */
-            letter-spacing: 2.4px;
-            color: white;
-            margin-top: 25px;
-        }
-    }
-}
+//         h4 {
+//             -webkit-text-stroke-width: 1px;
+//             -webkit-text-stroke-color: var(--dark, #3A2C19);
+//             font-family: "Mantou Sans";
+//             font-size: 24px;
+//             font-style: normal;
+//             font-weight: 400;
+//             line-height: 50px;
+//             /* 208.333% */
+//             letter-spacing: 2.4px;
+//             color: white;
+//             margin-top: 25px;
+//         }
+//     }
+// }
 
 .Joinus-form {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 10%;
     gap: 150px;
 
 
