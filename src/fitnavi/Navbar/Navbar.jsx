@@ -20,7 +20,7 @@ function Navbar() {
                 <Link to="/nutritionist">營養師</Link>
               </li>
               <li>
-                <Link>我的收藏</Link>
+                <Link to="/myfavorite">我的收藏</Link>
               </li>
               <li>
                 <Link to="/allarticle">知識文章</Link>

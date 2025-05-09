@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
 import HomePage from "./HomePage/HomePage";
 import Coach from "./Coach/Coach";
+import MyFavorite from "./MyFavorite/MyFavorite";
 import Nutritionist from "./Coach/Nutritionist";
 import CenterMap from "./Center/CenterMap";
 import Article from "./Article/Article";
@@ -25,6 +26,7 @@ import JoinusLoading from "./JoinusLoading/JoinusLoading";
 import NutriIntro from "./NutriIntro/NutriIntro";
 import "./reset.scss";
 
+
 function App() {
   return (
     <>
@@ -33,6 +35,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/coach" element={<Coach />}/>
+          <Route path="/myfavorite" element={<MyFavorite/>}/>
           <Route path="/nutritionist"element={<Nutritionist/>}/>
           <Route path="/centerMap" element={<CenterMap/>}/>
           <Route path="/allarticle" element={<Allarticle />}/>
