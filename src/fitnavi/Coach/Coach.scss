@@ -1,42 +1,45 @@
 @use "../reset.scss";
 #coachMain {
   padding: 120px 50px;
+  width: 100%;
 }
 
 .searchBox {
   display: flex;
+  justify-content:center;
   padding: 0px 150px;
+  width: 100%;
 }
 #personal-search-form {
   margin-top: 50px;
 
   #area {
-    width: 180px;
+   width: 180px;
     height: 40px;
     padding: 8px 20px;
     border-radius: 999px;
   }
   #trainingNeeds {
-    width: 180px;
+     width: 180px;
     height: 40px;
     padding: 8px 20px;
     border-radius: 999px;
   }
   #sex {
-    width: 180px;
+     width: 180px;
     height: 40px;
     padding: 8px 20px;
     border-radius: 999px;
   }
   #keyword-search {
-    width: 305px;
+    width: 300px;
     height: 40px;
     padding: 8px 20px;
     border-radius: 999px;
     border: 0.5px solid;
   }
   .submit {
-    width: 165px;
+       width: 170px;
     height: 40px;
     padding: 8px 8px;
     background: #ff8740;
