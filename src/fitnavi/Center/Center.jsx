@@ -1,34 +1,21 @@
+import MainTitleBread from "../../components/Title/MaintitleBread.jsx";
 import "./Center.scss";
 import CenterNavbar from "./CenterNavbar.jsx";
-
 
 function Center() {
   return (
     <>
       <div id="centerMain">
-        <header className="centerTitle">
-          <div className="centerTitleHead">
-            <div className="centerHead">
-              <h2>找場地</h2>
-              <h3>尋找專屬適合您的運動場地</h3>
-            </div>
-            <nav>
-              <ol className="breadcrumb">
-                <li>
-                  <a href="#">麵包屑1</a>
-                </li>
-                <li>
-                  <a href="#">麵包屑2</a>
-                </li>
-                <li>
-                  <a href="#">麵包屑3</a>
-                </li>
-              </ol>
-            </nav>
-          </div>
-          <hr />
-          <h5 className="return">&lt; 返回列表</h5>
-        </header>
+        <MainTitleBread
+          title1="找場地"
+          title2="尋找專屬適合您的運動場地"
+          breadcrumbList={[
+            { label: "首頁", link: "/" },
+            { label: "健身場地", link: "/centermap" },
+            { label: "TECHNOGym" },
+          ]}
+        />
+
         <section className="main-content">
           {/* <返回列表(待改) */}
 
@@ -58,7 +45,6 @@ function Center() {
               場館介紹內容會在這邊顯示，可能有有兩段，不會這邊顯示，可能有有兩段，不會太多，場館介紹內容會在這邊顯示，可能有有兩段，不會太多，場館介紹內容會在這邊顯示，可能有有兩段，不會太多，場館介紹內容會在這邊顯示，可能有有兩段，不會太多。
               這邊是第二段，內容大概也這樣呈現，這邊是第二段，內容大概也這樣呈現，這邊是第二段，內容大概也這樣呈現，這邊是第二段，內容大概也這樣呈現，這邊是第二段，內容大概也這樣呈現，這邊是第二段，內容大概也這樣呈現。
             </p>
-
           </div>
           <div className="expandContent">展開內容</div>
           <CenterNavbar />

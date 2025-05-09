@@ -1,0 +1,47 @@
+.mainTitleBread {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  .titleBoxBread {
+    display: flex;
+    align-items: baseline;
+
+    .title1 {
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: 9.6px;
+      color: #ff8740;
+      font-family: "Dela Gothic One", sans-serif;
+    }
+    .title2 {
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--dark, #3a2c19);
+      font-family: "Mantou Sans";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 50px; /* 208.333% */
+      letter-spacing: 2.4px;
+      color: white;
+    }
+  }
+  .breadcrumb {
+    display: flex;
+    .bread {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      a{
+      color: #3a2c19;
+    font-family: "Noto Sans TC";
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 19.6px */
+letter-spacing: 1.4px;}
+    }
+  }
+}
