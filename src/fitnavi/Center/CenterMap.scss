@@ -146,7 +146,8 @@
         align-items: center;
         width: 25%;
         gap: 12px;
-
+                overflow: auto; //卷軸
+                height:670px;
         .photosNumber {
             font-family: "Noto Sans TC";
             color: #3A2C19;
@@ -190,7 +191,8 @@
 
     .centerMapPhoto {
         border-radius: 16px;
-        height: 766px;
+        height: 650px;
+        padding-left: 10%;
     }
 
 
