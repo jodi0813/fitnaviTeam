@@ -92,9 +92,8 @@
 
 
 .Articleimgbox {
-  /* border: none;
-  outline: none; */
-  border: 2px solid red;
+  border: none  !important;
+  outline: none  !important;
   margin: 0 30px 5px 0;
   position: relative;
   max-width: 320px;

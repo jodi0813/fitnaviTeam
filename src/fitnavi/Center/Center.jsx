@@ -27,8 +27,11 @@ function Center() {
                 alt=""
                 className="centerLogoPic"
               />
-              <h2>TECHNOGym</h2>
-              <h3>(忠孝館)</h3>
+              {/* <div className="center-nameBox"> */}
+              <span className="center-name">TECHNOGym</span>
+              <span className="center-area">(忠孝館)</span>
+              {/* </div> */}
+
               <div className="hashtag">
                 <a href="#">#重訓器材</a>
                 <a href="#">#私人教練</a>
@@ -39,11 +42,11 @@ function Center() {
               </div>
             </div>
           </div>
-          <div className="centerMain">
+          <div className="centerIntroduction">
             <h3 className="introductionTitle">場館簡介</h3>
             <p className="introduction">
-              場館介紹內容會在這邊顯示，可能有有兩段，不會這邊顯示，可能有有兩段，不會太多，場館介紹內容會在這邊顯示，可能有有兩段，不會太多，場館介紹內容會在這邊顯示，可能有有兩段，不會太多，場館介紹內容會在這邊顯示，可能有有兩段，不會太多。
-              這邊是第二段，內容大概也這樣呈現，這邊是第二段，內容大概也這樣呈現，這邊是第二段，內容大概也這樣呈現，這邊是第二段，內容大概也這樣呈現，這邊是第二段，內容大概也這樣呈現，這邊是第二段，內容大概也這樣呈現。
+              本場館提供完整訓練空間，包含自由重量、有氧區與多樣器材，適合各類健身需求。場館乾淨明亮，動線流暢，提供舒適運動體驗。本場館提供完整訓練空間，包含自由重量、有氧區與多樣器材，適合各類健身需求。場館乾淨明亮，動線流暢，提供舒適運動體驗。
+              更衣室與淋浴間設備齊全，維護良好，方便運動前後使用。場館內提供飲水機與休息區，是放鬆與補水的好所在。更衣室與淋浴間設備齊全，維護良好，方便運動前後使用。場館內提供飲水機與休息區，是放鬆與補水的好所在。
             </p>
           </div>
           <div className="expandContent">展開內容</div>

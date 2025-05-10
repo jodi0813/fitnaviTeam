@@ -57,8 +57,27 @@
         justify-content: flex-start;
         align-items: flex-start;
         position: relative;
-        top: 10%;
+        top: 8%;
         left: 23%;
+
+        @media (max-width: 393px) {
+            width: 30%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1024px) {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1360px) {
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 1920px) {
+            width: 100%;
+        }
 
 
         .Hero-Section-Catchphrase {
@@ -111,7 +130,7 @@
             justify-content: flex-start;
             align-items: flex-start;
             width: 50%;
-            padding: 2%;
+            // padding: 2%;
 
             p {
                 color: #FFF;
