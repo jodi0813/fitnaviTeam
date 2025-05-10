@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
 import HomePage from "./HomePage/HomePage";
+import ArticleSection from "./HomePage/ArticleSection/ArticleSection";
 import Coach from "./Coach/Coach";
 import MyFavorite from "./MyFavorite/MyFavorite";
 import Nutritionist from "./Coach/Nutritionist";
@@ -34,6 +35,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/ArticleSection" element={<ArticleSection />} />
           <Route path="/coach" element={<Coach />}/>
           <Route path="/myfavorite" element={<MyFavorite/>}/>
           <Route path="/nutritionist"element={<Nutritionist/>}/>
