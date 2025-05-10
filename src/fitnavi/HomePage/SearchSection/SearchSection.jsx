@@ -28,18 +28,18 @@ function SearchSection() {
                   <option>請選擇鄉鎮市區</option>
                 </select>
                 <select>
-                  <option>請選擇路/捷</option>
+                  <option>請選擇路/街/道</option>
                 </select>
                 <select>
                   <option>場地特色</option>
                 </select>
-                <button className="home-search-button">搜尋</button>{" "}
+                <button className="home-search-button">搜尋</button>
               </div>
             </div>
           </div>
           {/* 課程區塊 */}
           <div className="home-search-block">
-         <div className="home-search-titleBox">
+            <div className="home-search-titleBox">
               <span className="home-search-title">課程</span>
               <span className="home-search-titleEn">course</span>
             </div>
@@ -51,17 +51,17 @@ function SearchSection() {
                   className="home-search-illustration"
                 />
               </div>
-              <div>
-                <div className="home-search-toggleBt">
-                  <button>健身教練</button>
-                  <button>營養師</button>
-                </div>
-                <div className="home-search-dropdowns">
+              <div className="home-search-dropdowns">
+                <div className="home-search-bottom">
+                  <div className="home-search-toggleBt">
+                    <button>健身教練</button>
+                    <button>營養師</button>
+                  </div>
+
                   <select>
                     <option>課程種類</option>
                   </select>
                 </div>
-
                 <button className="home-search-button">搜尋</button>
               </div>
             </div>
