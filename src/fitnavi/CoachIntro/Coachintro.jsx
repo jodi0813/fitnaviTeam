@@ -4,10 +4,12 @@ import MainTitle from "../../components/Title/MainTitle";
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
 import Articlecards from '../../components/Articlecards';
+import { useNavigate } from 'react-router-dom';
 
 
 
 function Coachintro() {
+    const navigate=useNavigate();
     const [liked, setLiked] = useState(false);
     const cardsData = [
 
@@ -245,7 +247,7 @@ function Coachintro() {
                                 <p>10堂優惠 ：$1,400/單堂</p>
                                 <div className="price-with-button">
                                     <p>20堂優惠 ：$1,200/單堂</p>
-                                    <button class="classinrto" type="button">立即報名</button>
+                                    <button class="classinrto" type="button" onClick={()=>navigate('/NutriIntro')}>立即報名</button>
                                 </div>
                             </div>
 

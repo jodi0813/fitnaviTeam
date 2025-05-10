@@ -23,8 +23,6 @@ import MemberLogin from "./Member/MemberLogin";
 import MemberSignup from "./Member/MemberSignup";
 import SetAccountPassword from "./Member/SetAccountPassword";
 import SignupSuccess from "./Member/SignupSuccess";
-
-
 import NutriIntro from "./NutriIntro/NutriIntro";
 import "./reset.scss";
 
@@ -44,6 +42,7 @@ function App() {
           <Route path="/article" element={<Article />}/>
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
+          <Route path="/NutriIntro" element={<NutriIntro/>}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
           <Route path="/memberlogin" element={<MemberLogin />}></Route>
           <Route path="/ForgetPassword" element={<ForgetPassword />}></Route>

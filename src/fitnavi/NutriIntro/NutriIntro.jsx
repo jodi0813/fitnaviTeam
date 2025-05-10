@@ -213,7 +213,7 @@ function NutriIntro() {
 
                         </div>
 
-                        <div className="classbox">
+                        <div className="Nutri-classbox">
                             <div className="classtime">
                                 <h2>一對一客製化線上諮詢</h2>
                                 <div className="timeblock">
@@ -237,7 +237,7 @@ function NutriIntro() {
                                 <p className="SingleClass">/單堂</p>
                             </div>
 
-                            <div className="prices-button">
+                            <div className="Nutri-prices-button">
                                 <p>10堂優惠 ：$1,400/單堂</p>
                                 <div className="price-with-button">
                                     <button class="classinrto" type="button">立即報名</button>
@@ -246,7 +246,7 @@ function NutriIntro() {
 
                         </div>
 
-                        <div class="place">
+                        <div class="Nutri-place">
                             <p>上課平台<br />可選擇</p>
 
                             <div className="moreimg5">
@@ -267,7 +267,7 @@ function NutriIntro() {
                 </section>
 
 
-                <section className="nav-about">
+                <section className="nav-nav-content">
                     <div className="Nutrinav">
                         <nav className="intro">
                             <ul>
@@ -307,159 +307,171 @@ function NutriIntro() {
                 </section>
 
 
-                <section id="spe">
-                    <div className="spetitle">
-                        <h3>專長領域</h3>
-                        <h4>Specialty</h4>
-                    </div>
-
-                    <div className="circlewrapper">
-                        <div className="circle1">
-                            <span>
-                                <h4>減脂營養規畫
-                                </h4>
-                                <p>根據個人體質與目標，<br />設計科學化的飲食計畫、
-                                </p>
-                            </span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="310" height="309" viewBox="0 0 310 309" fill="none">
-                                <path d="M155 0.5C170.633 0.5 185.723 2.81591 199.944 7.11914L199.896 7.17188C185.688 2.87573 170.614 0.56543 155 0.56543C69.7116 0.56543 0.569336 69.4828 0.569336 154.5C0.569336 239.517 69.7116 308.435 155 308.435C240.288 308.435 309.431 239.517 309.431 154.5C309.431 142.058 307.948 129.96 305.152 118.372L305.209 118.31C308.013 129.916 309.5 142.035 309.5 154.5C309.5 239.55 240.33 308.5 155 308.5C69.6705 308.5 0.5 239.55 0.5 154.5C0.5 69.4497 69.6705 0.5 155 0.5Z" fill="#3A2C19" stroke="#3A2C19" />
-
-                            </svg>
+                <section id="spefield">
+                    <div className="spefield-wrapper">
+                        <div className="spetitle">
+                            <h3>專長領域</h3>
+                            <h4>Specialty</h4>
                         </div>
 
-                        <div className="circle2">
-                            <span>
-                                <h4>運動表現提升</h4>
-                                <p>為健身族群與運動員<br />提供能量補充與恢復策略
-                                </p>
-                            </span>
+                        <div className="nutri-circlewrapper">
+                            <div className="circle1">
+                                <span>
+                                    <h4>減脂營養規畫
+                                    </h4>
+                                    <p>根據個人體質與目標，<br />設計科學化的飲食計畫、
+                                    </p>
+                                </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="310" height="309" viewBox="0 0 310 309" fill="none">
+                                    <path d="M155 0.5C170.633 0.5 185.723 2.81591 199.944 7.11914L199.896 7.17188C185.688 2.87573 170.614 0.56543 155 0.56543C69.7116 0.56543 0.569336 69.4828 0.569336 154.5C0.569336 239.517 69.7116 308.435 155 308.435C240.288 308.435 309.431 239.517 309.431 154.5C309.431 142.058 307.948 129.96 305.152 118.372L305.209 118.31C308.013 129.916 309.5 142.035 309.5 154.5C309.5 239.55 240.33 308.5 155 308.5C69.6705 308.5 0.5 239.55 0.5 154.5C0.5 69.4497 69.6705 0.5 155 0.5Z" fill="#3A2C19" stroke="#3A2C19" />
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="310" height="311" viewBox="0 0 310 311" fill="none">
-                                <path d="M309.132 147.411C309.713 158.822 309.029 170.478 306.96 182.211C292.157 266.163 212.1 322.219 128.148 307.416C121.289 306.206 114.616 304.56 108.153 302.513L108.219 302.462C114.665 304.502 121.32 306.143 128.16 307.35C212.075 322.146 292.097 266.114 306.894 182.199C308.959 170.489 309.642 158.854 309.065 147.461L309.132 147.411ZM181.755 3.39787C197.136 6.11005 211.58 11.0132 224.823 17.7281L224.764 17.7743C211.534 11.069 197.105 6.17399 181.743 3.46519C97.8277 -11.3314 17.8059 44.7005 3.00937 128.616C-0.669016 149.477 0.0310093 170.099 4.44824 189.538L4.3897 189.584C-0.0354096 170.128 -0.740217 149.487 2.94204 128.604C17.7451 44.6517 97.8026 -11.4052 181.755 3.39787Z" fill="#3A2C19" stroke="#3A2C19" />
-                            </svg>
+                                </svg>
+                            </div>
+
+                            <div className="circle2">
+                                <span>
+                                    <h4>運動表現提升</h4>
+                                    <p>為健身族群與運動員<br />提供能量補充與恢復策略
+                                    </p>
+                                </span>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="310" height="311" viewBox="0 0 310 311" fill="none">
+                                    <path d="M309.132 147.411C309.713 158.822 309.029 170.478 306.96 182.211C292.157 266.163 212.1 322.219 128.148 307.416C121.289 306.206 114.616 304.56 108.153 302.513L108.219 302.462C114.665 304.502 121.32 306.143 128.16 307.35C212.075 322.146 292.097 266.114 306.894 182.199C308.959 170.489 309.642 158.854 309.065 147.461L309.132 147.411ZM181.755 3.39787C197.136 6.11005 211.58 11.0132 224.823 17.7281L224.764 17.7743C211.534 11.069 197.105 6.17399 181.743 3.46519C97.8277 -11.3314 17.8059 44.7005 3.00937 128.616C-0.669016 149.477 0.0310093 170.099 4.44824 189.538L4.3897 189.584C-0.0354096 170.128 -0.740217 149.487 2.94204 128.604C17.7451 44.6517 97.8026 -11.4052 181.755 3.39787Z" fill="#3A2C19" stroke="#3A2C19" />
+                                </svg>
+                            </div>
+
+                            <div className="circle3">
+                                <span>
+                                    <h4>運動補充品解析</h4>
+                                    <p>蛋白粉、BCAA、Creatine 等補充品的科學應用
+                                    </p>
+                                </span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="310" height="311" viewBox="0 0 310 311" fill="none">
+                                    <path d="M309.208 147.411C309.79 158.822 309.105 170.478 307.036 182.211C292.233 266.163 212.177 322.219 128.225 307.416C121.365 306.206 114.692 304.56 108.229 302.513L108.295 302.462C114.741 304.502 121.396 306.143 128.236 307.35C212.151 322.146 292.173 266.114 306.97 182.199C309.035 170.489 309.719 158.854 309.141 147.461L309.208 147.411ZM181.831 3.39787C197.212 6.11005 211.656 11.0132 224.899 17.7281L224.841 17.7743C211.61 11.069 197.181 6.17399 181.819 3.46519C97.9039 -11.3314 17.8821 44.7005 3.08554 128.616C-0.592845 149.477 0.107181 170.099 4.52441 189.538L4.46587 189.584C0.0407623 170.128 -0.664045 149.487 3.01822 128.604C17.8213 44.6517 97.8788 -11.4052 181.831 3.39787Z" fill="#3A2C19" stroke="#3A2C19" />
+
+                                </svg>
+                            </div>
+
+
                         </div>
-
-                        <div className="circle3">
-                            <span>
-                                <h4>運動補充品解析</h4>
-                                <p>蛋白粉、BCAA、Creatine 等補充品的科學應用
-                                </p>
-                            </span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="310" height="311" viewBox="0 0 310 311" fill="none">
-                                <path d="M309.208 147.411C309.79 158.822 309.105 170.478 307.036 182.211C292.233 266.163 212.177 322.219 128.225 307.416C121.365 306.206 114.692 304.56 108.229 302.513L108.295 302.462C114.741 304.502 121.396 306.143 128.236 307.35C212.151 322.146 292.173 266.114 306.97 182.199C309.035 170.489 309.719 158.854 309.141 147.461L309.208 147.411ZM181.831 3.39787C197.212 6.11005 211.656 11.0132 224.899 17.7281L224.841 17.7743C211.61 11.069 197.181 6.17399 181.819 3.46519C97.9039 -11.3314 17.8821 44.7005 3.08554 128.616C-0.592845 149.477 0.107181 170.099 4.52441 189.538L4.46587 189.584C0.0407623 170.128 -0.664045 149.487 3.01822 128.604C17.8213 44.6517 97.8788 -11.4052 181.831 3.39787Z" fill="#3A2C19" stroke="#3A2C19" />
-
-                            </svg>
-                        </div>
-
-
-                    </div>
-                </section>
-
-                <section id="Nutri-exp-cer">
-                    <div className="expcontent">
-                        <div className="exptitle">
-                            <h3>工作經歷</h3>
-                            <h4>Working Experiences</h4>
-                        </div>
-
-                        <ul >
-                            <li >國防醫學院運動營養學系 碩士</li>
-                            <li>北健康生活診所 營養師，提供個人化營養諮詢與膳食規劃</li>
-                            <li>華碩企業健康講座講師，推廣職場健康飲食</li>
-                            <li>私人健身營養顧問，協助運動員、健身族群設計個人化飲食策略</li>
-                            <li>社群內容創作者，於 IG (@maomao_nutrition) 分享實用營養知識</li>
-                        </ul>
-
-
-                    </div>
-
-                    <div className="certificate">
-                        <div className="certitle">
-                            <h3>專業證照</h3>
-                            <h4>Certification</h4>
-                        </div>
-
-                        <ul>
-                            <li>國家高考營養師執照</li>
-                            <li>保健食品專業人才能力鑑定</li>
-                            <li>健康管理 / 代謝症候群營養規劃證書</li>
-                        </ul>
-
 
                     </div>
 
                 </section>
 
-                <section id="reservation2">
-                    <div className="reserve">
-                        <div className="restitle">
-                            <h3>預約流程</h3>
-                            <h4>Reserve Process</h4>
-                        </div>
-                        <div className="process">
-                            <div className="number">
-                                <p>1</p>
-                                <p>2</p>
-                                <p>3</p>
-                                <p>4</p>
-                                <p>5</p>
+                <section id="Nutri-exp-cer">
+                    <div className="Nutri-exp-cer-wrapper">
+                        <div className="expcontent">
+                            <div className="exptitle">
+                                <h3>工作經歷</h3>
+                                <h4>Working Experiences</h4>
                             </div>
 
-                            <div className="resdetail">
-                                <p>點選立即報名</p>
-                                <p>個人頁面＞我的訂單＞課程訂單</p>
-                                <p>點選剩餘堂數</p>
-                                <p>預約專屬時間並選擇上課地點</p>
-                                <p>教練確認預約</p>
+                            <ul >
+                                <li >國防醫學院運動營養學系 碩士</li>
+                                <li>北健康生活診所 營養師，提供個人化營養諮詢與膳食規劃</li>
+                                <li>華碩企業健康講座講師，推廣職場健康飲食</li>
+                                <li>私人健身營養顧問，協助運動員、健身族群設計個人化飲食策略</li>
+                                <li>社群內容創作者，於 IG (@maomao_nutrition) 分享實用營養知識</li>
+                            </ul>
+
+
+                        </div>
+
+                        <div className="certificate">
+                            <div className="certitle">
+                                <h3>專業證照</h3>
+                                <h4>Certification</h4>
                             </div>
+
+                            <ul>
+                                <li>國家高考營養師執照</li>
+                                <li>保健食品專業人才能力鑑定</li>
+                                <li>健康管理 / 代謝症候群營養規劃證書</li>
+                            </ul>
+
+
                         </div>
 
-                        <div className="reserve-img">
-                            <img src="./public/images/reserved.png" alt="" />
-
-                            <p>預約成功！</p>
-
-                        </div>
                     </div>
 
-                    <div className="Nutri-calendar-reservetime">
-                        <div className="caltitle">
-                            <h3>營養師可預約時間</h3>
-                            <h4>Available Time</h4>
+
+                </section>
+
+                <section id="Nutri-reservation">
+                    <div className="Nutri-reservation-wrapper">
+                        <div className="reserve">
+                            <div className="restitle">
+                                <h3>預約流程</h3>
+                                <h4>Reserve Process</h4>
+                            </div>
+                            <div className="process">
+                                <div className="number">
+                                    <p>1</p>
+                                    <p>2</p>
+                                    <p>3</p>
+                                    <p>4</p>
+                                    <p>5</p>
+                                </div>
+
+                                <div className="resdetail">
+                                    <p>點選立即報名</p>
+                                    <p>個人頁面＞我的訂單＞課程訂單</p>
+                                    <p>點選剩餘堂數</p>
+                                    <p>預約專屬時間並選擇上課地點</p>
+                                    <p>教練確認預約</p>
+                                </div>
+                            </div>
+
+                            <div className="reserve-img">
+                                <img src="./public/images/reserved.png" alt="" />
+
+                                <p>預約成功！</p>
+
+                            </div>
                         </div>
 
+                        <div className="Nutri-calendar-reservetime">
+                            <div className="caltitle">
+                                <h3>營養師可預約時間</h3>
+                                <h4>Available Time</h4>
+                            </div>
 
-                        <div className="calendar-body">
-                            <div class="container">
-                                <div class="calendar">
-                                    <header>
-                                        <pre class="left">←</pre>
 
-                                        <div class="header-display">
-                                            <p class="display">""</p>
+                            <div className="calendar-body">
+                                <div class="container">
+                                    <div class="calendar">
+                                        <header>
+                                            <pre class="left">←</pre>
+
+                                            <div class="header-display">
+                                                <p class="display">""</p>
+                                            </div>
+
+                                            <pre class="right">→</pre>
+
+                                        </header>
+
+                                        <div class="week">
+                                            <div>Su</div>
+                                            <div>Mo</div>
+                                            <div>Tu</div>
+                                            <div>We</div>
+                                            <div>Th</div>
+                                            <div>Fr</div>
+                                            <div>Sa</div>
                                         </div>
-
-                                        <pre class="right">→</pre>
-
-                                    </header>
-
-                                    <div class="week">
-                                        <div>Su</div>
-                                        <div>Mo</div>
-                                        <div>Tu</div>
-                                        <div>We</div>
-                                        <div>Th</div>
-                                        <div>Fr</div>
-                                        <div>Sa</div>
+                                        <div class="days"></div>
                                     </div>
-                                    <div class="days"></div>
-                                </div>
-                                <div class="display-selected">
-                                    <p class="selected"></p>
+                                    <div class="display-selected">
+                                        <p class="selected"></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
+
+
+                        </div>
 
 
                     </div>
@@ -470,97 +482,115 @@ function NutriIntro() {
 
 
                 <section id="Nutriarticle">
-                    <div className="articletitle">
-                        <h3 className="title">發表文章</h3>
-                        <h4>Articles</h4>
-                    </div>
 
-                    <div className="ViewArticles">
-                        <button>
-                            &lt;</button>
-
-                        <div className="Three-classcards">
-                            {cardsData.map((card, index) => (
-
-                                <Articlecards
-                                    key={index}
-                                    date={card.date}
-                                    img={card.img}
-                                    title={card.title}
-                                    content={card.content}
-                                    tags={card.tags}
-                                    category={card.category}
-                                    className={`card${index + 1}`}
-                                    onClick={() => navigate(`/article/${card.id}`)}
-                                />
-                            ))}
+                    <div className="Nutriarticle-wrapper">
+                        <div className="articletitle">
+                            <h3 className="title">發表文章</h3>
+                            <h4>Articles</h4>
                         </div>
 
-                        <button>
-                            &gt;</button>
+                        <div className="Nutri-ViewArticles">
+
+
+                            <div className="Three-classcards">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <path d="M30 36L18 24L30 12" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                {cardsData.map((card, index) => (
+
+                                    <Articlecards
+                                        key={index}
+                                        date={card.date}
+                                        img={card.img}
+                                        title={card.title}
+                                        content={card.content}
+                                        tags={card.tags}
+                                        category={card.category}
+                                        className={`card${index + 1}`}
+                                        onClick={() => navigate(`/article/${card.id}`)}
+                                    />
+                                ))}
+
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                        <path d="M18 36L30 24L18 12" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+
+
+                        </div>
                     </div>
+
 
 
                 </section>
 
-                <section id="comment">
-                    <div className="commentitle">
-                        <h3>學員評價</h3>
-                        <h4>Rating</h4>
-                    </div>
-                    <div className="star-rate">
-                        <p>4.0</p>
-                        <div className="Star">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
-                                <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
-                                <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
-                                <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
-                                <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
-                                <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
-                            </svg>
+                <section id="Nutri-comment">
+                    <div className="Nutri-comment-wrapper">
+                        <div className="commentitle">
+                            <h3>學員評價</h3>
+                            <h4>Rating</h4>
+                        </div>
+                        <div className="star-rate">
+                            <p>4.0</p>
+                            <div className="Star">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
+                                    <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
+                                    <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
+                                    <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
+                                    <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="57" viewBox="0 0 60 57" fill="none">
+                                    <path d="M28.0979 1.8541C28.6966 0.0114746 31.3034 0.0114799 31.9021 1.8541L37.409 18.8024C37.6767 19.6265 38.4446 20.1844 39.3111 20.1844L57.1316 20.1844C59.0691 20.1844 59.8746 22.6636 58.3072 23.8024L43.8901 34.2771C43.1891 34.7864 42.8958 35.6891 43.1635 36.5132L48.6704 53.4615C49.2691 55.3041 47.1601 56.8364 45.5927 55.6976L31.1756 45.2229C30.4746 44.7136 29.5254 44.7136 28.8244 45.2229L14.4073 55.6976C12.8399 56.8364 10.7309 55.3041 11.3296 53.4615L16.8365 36.5132C17.1042 35.6891 16.8109 34.7864 16.1099 34.2771L1.69281 23.8024C0.125385 22.6636 0.93094 20.1844 2.86839 20.1844L20.6889 20.1844C21.5554 20.1844 22.3233 19.6265 22.591 18.8024L28.0979 1.8541Z" fill="#FF8740" />
+                                </svg>
+
+                            </div>
 
                         </div>
 
-                    </div>
+                        <div className="Nutri-commentcard" style={{
+                            display: "grid",
+                            flexDirection: "column",
+                            gridTemplateColumns: "repeat(3, 1fr)", // 每行 3 欄
+                            gap: "50px",
+                            maxWidth: "960px", // 3 張卡片寬 + gap
+                            margin: "0 auto",  // 置中
+                        }}>
 
-                     <div className="Nutri-commentcard" style={{
-                        display: "grid",
-                        flexDirection: "column",
-                        gridTemplateColumns: "repeat(3, 1fr)", // 每行 3 欄
-                        gap: "50px",
-                        maxWidth: "960px", // 3 張卡片寬 + gap
-                        margin: "0 auto",  // 置中
-                    }}>
-
-                        {cardData.slice(0, 9).map((card, index) => (
-                            <div
-                                key={index}
-                                style={{
-                                    marginTop: (index === 1 || index === 4 || index === 7) ? "60px" : "10px" // 設定 marginTop
-                                }}>
-
-                                <ColorCard
+                            {cardData.slice(0, 9).map((card, index) => (
+                                <div
                                     key={index}
-                                    description={card.description}
-                                    cardColor={card.color}
-                                    rate={parseFloat(card.rate)}
-                                    name={card.name}
-                                    date={card.date}
-                                />
-                            </div>
-                        ))}
+                                    style={{
+                                        marginTop: (index === 1 || index === 4 || index === 7) ? "60px" : "10px" // 設定 marginTop
+                                    }}>
+
+                                    <ColorCard
+                                        key={index}
+                                        description={card.description}
+                                        cardColor={card.color}
+                                        rate={parseFloat(card.rate)}
+                                        name={card.name}
+                                        date={card.date}
+                                    />
+                                </div>
+                            ))}
+
+                        </div>
+
 
                     </div>
 
-                    <img src="/images/32ca0342cdc3bbfb3f13d97e0294b41b76fc9df5.gif" alt="" style={{width:"300px", height:"400px"}}/>
+
+                    <img src="/images/32ca0342cdc3bbfb3f13d97e0294b41b76fc9df5.gif" alt="" style={{ width: "300px", height: "400px" }} />
                 </section >
             </main >
 
