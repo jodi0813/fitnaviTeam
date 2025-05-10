@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 function Allarticle() {
 
     // const { id } = useParams();
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const cardsData = [
 
         {
