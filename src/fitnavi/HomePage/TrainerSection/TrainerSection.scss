@@ -1,1 +1,17 @@
 @use "../../reset.scss";
+.home-trainer {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .home-trainer-mainTitle {
+    color: #3a2c19;
+    font-family: "Mantou Sans";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 83.333% */
+    letter-spacing: 9.6px;
+  }
+}
