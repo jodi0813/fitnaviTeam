@@ -1,7 +1,10 @@
+.mainTitleBreadBox{
+ padding: 0px 50px;
 .mainTitleBread {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+ 
   .titleBoxBread {
     display: flex;
     align-items: baseline;
@@ -44,4 +47,4 @@ line-height: 140%; /* 19.6px */
 letter-spacing: 1.4px;}
     }
   }
-}
+}}
