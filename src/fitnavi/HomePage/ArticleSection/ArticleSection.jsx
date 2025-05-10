@@ -1,8 +1,17 @@
+
+// import Articlecards from '../../components/Articlecards';
 import "./ArticleSection.scss";
+
+
+
 function ArticleSection() {
-    return(
+
+
+
+    return ( 
         <>
-        首頁文章區(繼旻可刪)
+        <h2>你好</h2>
+            
         </>
     )
-}export default ArticleSection;
+} export default ArticleSection;

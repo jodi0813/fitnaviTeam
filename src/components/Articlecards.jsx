@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./Articlecards.module.css";
 import { useNavigate } from "react-router-dom";
 
-function Articlecards({ id, date, img, title, content, tags, category, className }) {
+function Articlecards({ date, img, title, content, tags, category, className }) {
     const navigate = useNavigate();
     return (
         <>
@@ -14,7 +13,7 @@ function Articlecards({ id, date, img, title, content, tags, category, className
             }}
                 style={{ cursor: "pointer" }}>
                 <p className={styles.data}>{date}</p>
-                <div className={styles.imgbox}>
+                <div className={styles.Articleimgbox}>
                     <img src={img} alt="" /></div>
                 <div className={styles.contentBox}>
                     {/* 因為帶有html標籤所以要輸入dangerouslySetInnerHtml */}
