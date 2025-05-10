@@ -1,8 +1,12 @@
-import "./TrainerSection.scss"
+import "./TrainerSection.scss";
 function TrainerSection() {
-    return(
-        <>
-        首頁健身教練(芝瑩可刪)
-        </>
-    )
-}export default TrainerSection;
+  return (
+    <>
+      <div className="home-trainer">
+        <header className="home-trainer-mainTitle">專業講師</header>
+        123
+      </div>
+    </>
+  );
+}
+export default TrainerSection;
