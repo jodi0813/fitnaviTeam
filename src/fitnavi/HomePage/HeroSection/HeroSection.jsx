@@ -4,7 +4,7 @@ function HeroSection() {
         <>
             <section className="HeroSection">
                 <div className="video-wrapper">
-                    {/* <video src="./images/HeroSection-video.mp4" autoPlay muted loop playsinline > </video> */}
+                    <video src="./images/HeroSection-video.mp4" autoPlay muted loop playsinline > </video>
 
                 </div>
 
