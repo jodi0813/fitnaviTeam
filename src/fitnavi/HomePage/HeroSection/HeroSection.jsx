@@ -1,6 +1,6 @@
 import "./HeroSection.scss"
 function HeroSection() {
-    return(
+    return (
         <>
        
             <section className="HeroSection">
@@ -30,4 +30,4 @@ function HeroSection() {
 
         </>
     )
-}export default HeroSection;
+} export default HeroSection;

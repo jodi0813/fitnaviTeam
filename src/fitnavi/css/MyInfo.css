@@ -1,0 +1,102 @@
+.myinfoCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 24px 36px;
+  gap: 36px;
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.myinfoCard .myinfoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.myinfoCard .myinfoHeader .myinfoAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.myinfoCard .myinfoHeader .myinfoNameSection {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.myinfoCard .myinfoHeader .myinfoNameSection .myinfoName {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.myinfoCard .myinfoHeader .myinfoNameSection .myinfoName .myinfoLabel {
+  color: #3a2c19;
+  font-family: "Noto Sans TC";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: 1.4px;
+}
+.myinfoCard .myinfoHeader .myinfoNameSection .myinfoName .myinfoValue {
+  color: #3a2c19;
+  font-family: "Noto Sans TC";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+.myinfoCard .myinfoHeader .myinfoEditButton {
+  padding: 8px 24px;
+  border-radius: 99px;
+  background-color: #ff8740;
+  color: #fefcf7;
+  font-family: "Noto Sans TC";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+  letter-spacing: 1.6px;
+}
+.myinfoCard .profileContent {
+  display: flex;
+  gap: 32px;
+}
+.myinfoCard .profileContent .profileContentLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.myinfoCard .profileContent .myinfoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.myinfoCard .profileContent .myinfoSection .myinfosectionTitle {
+  color: #ff8740;
+  font-family: "Noto Sans TC";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+.myinfoCard .profileContent .myinfoSection .myinfoItem {
+  display: flex;
+  padding: 0px 24px;
+  gap: 10px;
+  color: #3a2c19;
+  font-family: "Noto Sans TC";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+  letter-spacing: 1.6px;
+}
+.myinfoCard .profileContent .myinfoSection .myinfoItem .myinfoItem1 {
+  width: 100px;
+}
+.myinfoCard .profileContent .myinfoSection .myinfoItem .myinfoCheckbox .trShow {
+  font-size: 14px;
+}

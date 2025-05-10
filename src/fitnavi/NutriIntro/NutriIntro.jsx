@@ -590,7 +590,7 @@ function NutriIntro() {
                     </div>
 
 
-                    <img src="/images/32ca0342cdc3bbfb3f13d97e0294b41b76fc9df5.gif" alt="" style={{ width: "300px", height: "400px" }} />
+                
                 </section >
             </main >
 
