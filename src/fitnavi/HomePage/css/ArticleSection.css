@@ -136,7 +136,7 @@ a {
 .ArticleSection-wrapper {
   position: relative;
   bottom: 1;
-  background-image: url("/public/images/article-bg-pattern.png");
+  background-image: url("/images/article-bg-pattern.png");
   background-size: 100% 100%;
   background-position: center top;
   background-repeat: no-repeat;

@@ -424,7 +424,7 @@ function NutriIntro() {
                             </div>
 
                             <div className="reserve-img">
-                                <img src="./public/images/reserved.png" alt="" />
+                                <img src="./images/reserved.png" alt="" />
 
                                 <p>預約成功！</p>
 

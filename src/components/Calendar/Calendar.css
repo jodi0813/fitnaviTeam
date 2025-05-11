@@ -1,51 +1,4 @@
 
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 5%;
-    background-color: #f4f4f4;
-    background: radial-gradient(
-          35.36% 35.36% at 100% 25%,
-          #0000 66%,
-          rgba(0, 0, 0, 0.1) 68% 70%,
-          #0000 72%
-        )
-        16px 16px / calc(2 * 16px) calc(2 * 16px),
-      radial-gradient(
-          35.36% 35.36% at 0 75%,
-          #0000 66%,
-          rgba(0, 0, 0, 0.1) 68% 70%,
-          #0000 72%
-        )
-        16px 16px / calc(2 * 16px) calc(2 * 16px),
-      radial-gradient(
-          35.36% 35.36% at 100% 25%,
-          #0000 66%,
-          rgba(0, 0, 0, 0.1) 68% 70%,
-          #0000 72%
-        )
-        0 0 / calc(2 * 16px) calc(2 * 16px),
-      radial-gradient(
-          35.36% 35.36% at 0 75%,
-          #0000 66%,
-          rgba(0, 0, 0, 0.1) 68% 70%,
-          #0000 72%
-        )
-        0 0 / calc(2 * 16px) calc(2 * 16px),
-      repeating-conic-gradient(#ffffff 0 25%, #0000 0 50%) 0 0 / calc(2 * 16px)
-        calc(2 * 16px),
-      radial-gradient(#0000 66%, rgba(0, 0, 0, 0.1) 68% 70%, #0000 72%) 0
-        calc(16px / 2) / 16px 16px #ffffff;
-  }
   .calendar {
     background: #fff;
     border-radius: 16px;
@@ -124,4 +77,4 @@
       width: 100%;
     }
   }
-  
+   
