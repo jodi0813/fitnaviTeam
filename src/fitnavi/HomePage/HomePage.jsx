@@ -11,6 +11,7 @@ function HomePage() {
         <section>
           <HeroSection />
         </section>
+        <div className="gradient">
         <section>
           <SearchSection />
         </section>
@@ -23,6 +24,7 @@ function HomePage() {
         <section>
           <ArticleSection />
         </section>
+        </div>
       </main>
     </>
   );
