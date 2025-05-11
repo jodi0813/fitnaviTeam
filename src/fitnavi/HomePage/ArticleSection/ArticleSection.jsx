@@ -36,7 +36,7 @@ function ArticleSection() {
             category: "燃脂運動",
             type: 'card'
         },
-        { type: 'text', text: "articles" }
+        { type: 'text', text: "ARTICLES" }
     ];
 
     const cardData = [
@@ -62,7 +62,7 @@ function ArticleSection() {
 
     return (
         <>
-            <section>
+            <section id="Hero-Aricles">
                 <div className="ArticleSection-wrapper">
                     <div className="cards-text-container">
                         <div className="cards-column1">
@@ -93,29 +93,31 @@ function ArticleSection() {
                                 ))}
                         </div>
 
-                        <div className="Hompage-Cards2">
-                            <div className="cards-column2">
-                                {cardData
-                                    .map((item, index) => (
-                                        <Articlecards
-                                            key={index}
-                                            date={item.date}
-                                            img={item.img}
-                                            title={item.title}
-                                            content={item.content}
-                                            tags={item.tags}
-                                            category={item.category}
-                                            className={`card${index + 1}`}
-                                            onClick={() => navigate(`/article/${item.id}`)}
-                                        />
-                                    ))}
-                            </div>
-
-                            <div className="Hompagearticle-Chtitle">
-                                <h2>知識文章</h2>
-                                <button onClick={()=>navigate('/Allarticle')}>查看更多文章</button>
-                            </div>
+                        <div className="cards-column2">
+                            {cardData
+                                .map((item, index) => (
+                                    <Articlecards
+                                        key={index}
+                                        date={item.date}
+                                        img={item.img}
+                                        title={item.title}
+                                        content={item.content}
+                                        tags={item.tags}
+                                        category={item.category}
+                                        className={`card${index + 1}`}
+                                        onClick={() => navigate(`/article/${item.id}`)}
+                                    />
+                                ))}
                         </div>
+
+
+
+                    </div>
+
+
+                    <div className="Hompagearticle-Chtitle">
+                        <h2>知識文章</h2>
+                        <button onClick={() => navigate('/Allarticle')}>查看更多文章</button>
                     </div>
 
 

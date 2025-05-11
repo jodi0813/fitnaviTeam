@@ -1,11 +1,21 @@
 @use "../../reset.scss";
 
+#Hero-Aricles {
+    position: relative;
+    z-index: 1;
+
+}
+
 .ArticleSection-wrapper {
-    margin-top: 30%;
+
+    position: relative;
+    bottom: 1;
+    // margin-top: 30%;
     background-image: url('/public/images/article-bg-pattern.png');
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 100%;
+    background-position: center top;
     background-repeat: no-repeat;
+    width: 100%;
     // display: flex;
     // flex-direction: column;
     // position: relative;
@@ -15,52 +25,66 @@
     .cards-text-container {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: flex-start;
         position: relative;
-        gap: 0;
+        gap: 10rem;
 
 
-        .cards-column1{
-            margin: 0px;
+
+        .cards-column1 {
+            margin-left: 10%;
+            flex: 1;
+            width: 40%;
         }
-        
+
 
         .Article-text-column {
+            flex: 1;
             top: 250px;
-            position: relative; 
+            position: relative;
             color: var(--dark, #3A2C19);
             text-align: right;
             font-family: "Dela Gothic One";
             font-size: 128px;
             font-style: normal;
             font-weight: 400;
-            line-height: 100px;
+            max-width: 2%;
+            max-height: 400px;
             /* 78.125% */
             // text-transform: capitalize;
-            // transform: rotate(90deg);
-            text-transform: uppercase; // ← 建議改成 uppercase 全部大寫
-            transform: rotate(90deg) translateY(-250px); // ← 改這裡
+            // // transform: rotate(90deg);
+            // text-transform: uppercase; // ← 建議改成 uppercase 全部大寫
+            // transform: rotate(90deg) translateY(-250px); // ← 改這裡
+            transform: rotate(90deg);
             transform-origin: top left;
-            
+            margin: 0px;
+
+        }
+
+        .cards-column2 {
+            margin-top: 150px;
+            justify-content: flex-start;
+            position: relative;
+            margin-left: 0px;
+            flex: 1;
+            width: 40%;
         }
     }
 }
 
 
 
-.Hompage-Cards2{
-    margin-top: 150px;
-    justify-content: flex-start;
-    position: relative;
-}
 
 .Hompagearticle-Chtitle {
-    right: 50%;
-    margin-top: 0px;
+    right: 10%;
+    top:  50%;
+    transform: translateY(-100%); 
     position: relative;
+    display: flex;
+    flex-direction: column;
 
-    
+
     h2 {
         color: var(--dark, #3A2C19);
         text-align: right;
@@ -71,11 +95,13 @@
         line-height: normal;
         letter-spacing: 12.8px;
         white-space: nowrap;
-     
+
     }
 
     button {
-        display: inline-flex;
+        width: 30%;
+        height: 10%;
+        align-self: flex-end;
         padding: 16px 84px;
         justify-content: center;
         align-items: center;

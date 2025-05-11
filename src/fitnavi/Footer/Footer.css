@@ -139,7 +139,7 @@ a {
     bottom: 0;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 300px;
+    /* margin-top: 300px; */
 }
 
 .footerwrapper {
