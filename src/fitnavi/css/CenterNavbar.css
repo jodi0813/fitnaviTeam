@@ -1,0 +1,278 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box; /* 不累加邊框及內距 */
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 重置字體 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+  background-color: #FEFCF7;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 重置連接 */
+a {
+  display: block; /* a預設的行內元素，不支援寬高及上下間距，通常會改為區塊，方便設定 */
+  color: #444;
+  text-decoration: none;
+}
+
+/* 中間的選單列 */
+#centerMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.centerMenuBt {
+  display: flex;
+  padding: 12px 80px;
+  margin: 0px 0px 64px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: #fff;
+}
+.centerMenuBt .centerActive {
+  color: #ff8740;
+  background-color: #fff;
+  text-align: center;
+  font-family: "Noto Sans TC";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 140%;
+  letter-spacing: 1.4px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 10%;
+  text-underline-offset: 25%;
+}
+.centerMenuBt .centerNoActive {
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  font-family: "Noto Sans TC";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 1.4px;
+}
+
+.venueExterior {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.venueExterior .centerPhotos {
+  display: flex;
+  width: 315px;
+  height: 200px;
+}
+
+/* 一、場館資料 */
+#centerInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+  width: 100%;
+  width: 1140px;
+  /* 基本資料 */
+  /* 場景外觀 */
+  /* 入場費用+聯絡方式 */
+  /* 二、環境設施 */
+}
+#centerInformation ul li {
+  color: #3a2c19;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0.4px;
+}
+#centerInformation ul li strong {
+  color: #989794;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 1.6px;
+}
+#centerInformation .basicVenueInfo {
+  display: flex;
+  gap: 36px;
+  justify-content: space-between;
+  width: 100%;
+}
+#centerInformation .basicVenueInfo .informationLeft {
+  display: flex;
+  flex-direction: column;
+}
+#centerInformation .basicVenueInfo .informationLeft .informationList {
+  padding: 0px 36px;
+}
+#centerInformation .basicVenueInfo .informationRight {
+  width: 390px;
+  height: 382px;
+}
+#centerInformation .costContact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+}
+#centerInformation .costContact .contactInfo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+#centerInformation #facilities {
+  /* 有氧器材 */
+  /* 重訓器材 */
+  /* 更衣淋浴 */
+}
+#centerInformation #facilities .weightTrainingArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#centerInformation #facilities .weightTrainingArea .weightTrainingAreaPhotos {
+  display: flex;
+  width: 300px;
+  height: 200px;
+}
+#centerInformation #facilities .showerArea {
+  display: flex;
+  flex-direction: column;
+}
+#centerInformation #facilities .showerArea .showerAreaPhotos {
+  display: flex;
+  width: 300px;
+  height: 200px;
+}
+
+/* 教練卡 */
+#fitnessTrainer {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+#fitnessTrainer .threeCards {
+  display: flex;
+  gap: 64px;
+}

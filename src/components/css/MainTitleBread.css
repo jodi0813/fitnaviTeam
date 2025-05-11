@@ -1,13 +1,16 @@
-.mainTitleBread {
+.mainTitleBreadBox {
+  padding: 0px 50px;
+}
+.mainTitleBreadBox .mainTitleBread {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
-.mainTitleBread .titleBoxBread {
+.mainTitleBreadBox .mainTitleBread .titleBoxBread {
   display: flex;
   align-items: baseline;
 }
-.mainTitleBread .titleBoxBread .title1 {
+.mainTitleBreadBox .mainTitleBread .titleBoxBread .title1 {
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
@@ -16,7 +19,7 @@
   color: #ff8740;
   font-family: "Dela Gothic One", sans-serif;
 }
-.mainTitleBread .titleBoxBread .title2 {
+.mainTitleBreadBox .mainTitleBread .titleBoxBread .title2 {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--dark, #3a2c19);
   font-family: "Mantou Sans";
@@ -27,16 +30,16 @@
   letter-spacing: 2.4px;
   color: white;
 }
-.mainTitleBread .breadcrumb {
+.mainTitleBreadBox .mainTitleBread .breadcrumb {
   display: flex;
 }
-.mainTitleBread .breadcrumb .bread {
+.mainTitleBreadBox .mainTitleBread .breadcrumb .bread {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-.mainTitleBread .breadcrumb .bread a {
+.mainTitleBreadBox .mainTitleBread .breadcrumb .bread a {
   color: #3a2c19;
   font-family: "Noto Sans TC";
   font-size: 14px;

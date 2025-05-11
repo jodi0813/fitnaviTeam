@@ -1,77 +1,187 @@
-#centerMain {
-  padding: 120px 50px;
+@charset "UTF-8";
+* {
+  box-sizing: border-box; /* 不累加邊框及內距 */
 }
 
-.centerTitle {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-.centerTitle .centertitlehead {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+
+/* 重置字體 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+  background-color: #FEFCF7;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
   width: 100%;
 }
-.centerTitle .centertitlehead .head {
-  display: flex;
-  align-items: flex-end;
-}
-.centerTitle .centertitlehead .head h2 {
-  font-family: "Mantou Sans";
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  letter-spacing: 9.6px;
-  color: #ff8740;
-}
-.centerTitle .centertitlehead .head h3 {
-  font-family: "Mantou Sans";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 50px;
-  letter-spacing: 2.4px;
-}
-.centerTitle .centertitlehead nav .breadcrumb {
-  display: flex;
+
+/* 重置連接 */
+a {
+  display: block; /* a預設的行內元素，不支援寬高及上下間距，通常會改為區塊，方便設定 */
+  color: #444;
+  text-decoration: none;
 }
 
-.main-content {
+#centerMain {
+  display: flex;
+  flex-direction: column;
+  padding: 120px 0px;
+}
+#centerMain .main-content {
   padding: 19px 100px;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding: 19px 150px;
 }
-.main-content .centerPhotoBox {
+#centerMain .main-content .centerPhotoBox {
   position: relative;
+  width: 100%;
 }
-
-.return {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.centerPic {
+#centerMain .main-content .centerPhotoBox .centerPic {
   align-self: stretch;
   border-radius: 16px;
   max-height: 338px;
   object-fit: cover;
 }
-
-.centerLogoPic {
-  width: 143.253px;
-  height: 143.253px;
+#centerMain .main-content .centerPhotoBox .centerTitle2 {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  left: 34px;
+  bottom: -53px;
+  gap: 14px;
+}
+#centerMain .main-content .centerPhotoBox .centerTitle2 .centerLogoPic {
+  width: 143px;
+  height: 143px;
   aspect-ratio: 1;
-  border-radius: 143.253px;
+  border-radius: 143px;
   margin: 0px 14px 0px 0px;
 }
-
-.hashtag {
-  display: flex;
+#centerMain .main-content .centerPhotoBox .centerTitle2 .center-name {
+  color: #3a2c19;
+  font-family: Alata;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-
-.hashtag a {
+#centerMain .main-content .centerPhotoBox .centerTitle2 .center-area {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+#centerMain .main-content .centerPhotoBox .centerTitle2 .hashtag {
+  display: flex;
+  gap: 5px;
+}
+#centerMain .main-content .centerPhotoBox .centerTitle2 .hashtag a {
   font-family: "Noto Sans TC";
   font-size: 16px;
   font-style: normal;
@@ -81,50 +191,29 @@
   letter-spacing: 1.6px;
   color: #ff8740;
 }
-
-.centerTitle2 {
+#centerMain .main-content .centerIntroduction {
   display: flex;
-  align-items: flex-end;
-  position: absolute;
-  left: 34px;
-  bottom: -53.467px;
+  flex-direction: column;
+  padding: 87px 122px 24px 122px;
 }
-
-.title2 h2 {
-  font-family: Alata;
-  font-size: 32px;
-  font-weight: 400;
-  color: #3A2C19;
-}
-
-.title2 h3 {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.introductionTitle {
+#centerMain .main-content .centerIntroduction .introductionTitle {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 2px;
   color: #ff8740;
 }
-
-.introduction {
+#centerMain .main-content .centerIntroduction .introduction {
+  font-family: "Noto Sans TC";
   font-size: 16px;
+  font-style: normal;
   font-weight: 500;
-  line-height: 150%;
+  line-height: 150%; /* 24px */
   letter-spacing: 1.6px;
+  color: #3a2c19;
+  padding: 26px 48px;
 }
-
-.expandContent {
+#centerMain .main-content .expandContent {
   display: flex;
   justify-content: center;
   margin: 24px;
-}
-
-.centerMain {
-  display: flex;
-  flex-direction: column;
-  padding: 87px 122px 24px 122px;
 }

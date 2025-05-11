@@ -1,10 +1,11 @@
 import ReactPlayer from "react-player";
-import "./HeroSection.scss";
+import "../HeroSection/HeroSection.scss"
 
 function HeroSection() {
     return (
         <section className="HeroSection">
             <div className="video-wrapper">
+                
                 <ReactPlayer
                     url="https://res.cloudinary.com/dng64itcf/video/upload/v1746930225/HeroSection-video_2_qo5wof.mp4"
                     playing
