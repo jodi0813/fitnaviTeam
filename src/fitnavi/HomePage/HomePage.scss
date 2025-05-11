@@ -1,1 +1,9 @@
 @use "../reset.scss";
+.gradient{
+    background: linear-gradient(
+  180deg,
+  #FEFCF7 27.5%,
+  rgba(255, 135, 64, 0.4) 64.1%,
+  #FEFCF7 100%
+);
+}

@@ -47,9 +47,8 @@ function TrainerSection() {
               <img src={trainer.img} alt={trainer.name} />
 
               {i === focusIndex && (
-             
                 <div className="home-trainer-info">
-                     {/* <img src={trainer.img} alt={trainer.name} /> */}
+                  {/* <img src={trainer.img} alt={trainer.name} /> */}
                   <div className="home-trainer-name">
                     <span>{trainer.name} </span>
                     <span className="home-trainer-enname">
@@ -70,6 +69,21 @@ function TrainerSection() {
               )}
             </div>
           ))}
+        </div>
+        <div className="home-trainer-footer">
+          <div className="home-trainer-title">
+            <span className="home-trainer-titleCh">教練</span>
+            <span className="home-trainer-titleEn">PERSONAL TRAINER</span>
+            <p>
+              「有人帶，真的不一樣」
+              <br />
+              從動作觀察到訓練計畫，教練為你把關每一步，讓努力更有效、更安全。
+            </p>
+          </div>
+          <div className="home-trainer-button">
+            <button>成為合作教練</button>
+            <button>查看更多教練</button>
+          </div>
         </div>
       </div>
     </>
