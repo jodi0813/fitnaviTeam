@@ -1,4 +1,4 @@
-@use "/src/fitnavi/reset.scss";
+@use "../reset.scss";
 
 /* 中間的選單列 */
 #centerMenu {
@@ -20,7 +20,7 @@
   background: #fff;
 
   .centerActive {
-    color: #FF8740;
+    color: #ff8740;
     background-color: #fff;
     text-align: center;
     font-family: "Noto Sans TC";
@@ -34,50 +34,30 @@
     text-decoration-skip-ink: none;
     text-decoration-thickness: 10%;
     text-underline-offset: 25%;
-
   }
 
   .centerNoActive {
     color: #000;
     background-color: #fff;
     text-align: center;
-      font-family: "Noto Sans TC";
+    font-family: "Noto Sans TC";
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
-      letter-spacing: 1.4px;
+    letter-spacing: 1.4px;
   }
-
 }
 
-h2 {
-  color: #ff8740;
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 3.2px;
-  // padding-top: 64px;
-}
 
-.centerPhotos {
+.venueExterior {
   display: flex;
-  width: 315px;
-  height: 200px;
-}
-
-ul li {
-  color: #3a2c19;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 40px;
-  letter-spacing: 0.4px;
-
-  strong {
-    color: #989794;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 150%;
-    letter-spacing: 1.6px;
+  flex-direction: column;
+  align-items:flex-start ;
+  .centerPhotos {
+    display: flex;
+    width: 315px;
+    height: 200px;
   }
 }
 
@@ -88,17 +68,36 @@ ul li {
   align-items: flex-start;
   gap: 64px;
   width: 100%;
+  width: 1140px;
+  ul li {
+    color: #3a2c19;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0.4px;
 
+    strong {
+      color: #989794;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 150%;
+      letter-spacing: 1.6px;
+    }
+  }
   /* 基本資料 */
   .basicVenueInfo {
     display: flex;
     gap: 36px;
-    // justify-content: space-between;
-    align-items: flex-end;
+    justify-content: space-between;
+    // align-items: flex-end;
+    width: 100%;
 
     .informationLeft {
       display: flex;
       flex-direction: column;
+      .informationList {
+        padding: 0px 36px;
+      }
     }
 
     .informationRight {
@@ -109,14 +108,12 @@ ul li {
 
   /* 場景外觀 */
 
-
   /* 入場費用+聯絡方式 */
   .costContact {
     display: flex;
-    // justify-content: space-around;
-    gap: 200px;
+    justify-content: space-between;
+    align-items: flex-start;
     align-self: stretch;
-
     .contactInfo {
       display: flex;
       flex: 1;
@@ -126,12 +123,7 @@ ul li {
 
   /* 二、環境設施 */
   #facilities {
-
     /* 有氧器材 */
-    .venueExterior {
-      display: flex;
-      justify-content: flex-start;
-    }
 
     /* 重訓器材 */
     .weightTrainingArea {
@@ -161,7 +153,6 @@ ul li {
     }
   }
 }
-
 
 /* 教練卡 */
 #fitnessTrainer {

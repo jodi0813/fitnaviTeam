@@ -2,6 +2,7 @@ import "./MainTitleBread.scss";
 function MainTitleBread({ title1, title2, breadcrumbList = [] }) {
   return (
     <>
+    <div className="mainTitleBreadBox">
       <header className="mainTitleBread">
         <div className="titleBoxBread">
           <h2 className="title1">{title1}</h2>
@@ -23,7 +24,7 @@ function MainTitleBread({ title1, title2, breadcrumbList = [] }) {
         </nav>
       </header>
       <hr />
-      <h5 className="return">&lt; 返回列表</h5>
+      <h5 className="return">&lt; 返回列表</h5></div>
     </>
   );
 }

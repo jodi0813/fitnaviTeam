@@ -11,26 +11,34 @@ function CenterNavbar() {
         {/* 中間的選單列 */}
         <div className="centerMenuBt">
           <button
-            className={activeTab === "centerInformation" ? "centerActive" : "centerNoActive"}
+            className={
+              activeTab === "centerInformation"
+                ? "centerActive"
+                : "centerNoActive"
+            }
             onClick={() => setActiveTab("centerInformation")}
           >
             場館資料
           </button>
           <button
-            className={activeTab === "facility" ? "centerActive" : "centerNoActive"}
+            className={
+              activeTab === "facility" ? "centerActive" : "centerNoActive"
+            }
             onClick={() => setActiveTab("facility")}
           >
             環境設施
           </button>
           <button
-            className={activeTab === "fitnessTrainer" ? "centerActive" : "centerNoActive"}
+            className={
+              activeTab === "fitnessTrainer" ? "centerActive" : "centerNoActive"
+            }
             onClick={() => setActiveTab("fitnessTrainer")}
           >
             私人教練
           </button>
         </div>
       </div>
-      <div >
+      <div>
         {activeTab === "centerInformation" && (
           /* 一、場館資料 */
           <section id="centerInformation">
@@ -104,7 +112,7 @@ function CenterNavbar() {
                 </ul>
               </div>
               {/* 聯絡方式 */}
-              <div className="contactInfo">
+              <div className="venueExterior">
                 <Subtitle subtitle="聯絡方式" subtitleEN="Contact Info." />
 
                 <ul className="informationList">
@@ -137,18 +145,9 @@ function CenterNavbar() {
               {/* 有氧器材的照片 */}
               <div className="centerPhotos">
                 <button>‹</button>
-                <img
-                  src="/images/cardioEquipment01.jpg"
-                  alt="有氧器材照片1"
-                />
-                <img
-                  src="/images/cardioEquipment02.jpg"
-                  alt="有氧器材照片2"
-                />
-                <img
-                  src="/images/cardioEquipment03.jpg"
-                  alt="有氧器材照片3"
-                />
+                <img src="/images/cardioEquipment01.jpg" alt="有氧器材照片1" />
+                <img src="/images/cardioEquipment02.jpg" alt="有氧器材照片2" />
+                <img src="/images/cardioEquipment03.jpg" alt="有氧器材照片3" />
                 <button>›</button>
               </div>
               <div>設備器材</div>
@@ -156,11 +155,8 @@ function CenterNavbar() {
               <div>跑步機 飛輪機 滑步機 登階機 划船機 戰繩設備 壺鈴</div>
             </div>
             {/* 重訓器材(X) */}
-            <div className="weightTrainingArea">
-              <Subtitle
-                subtitle="重訓器材"
-                subtitleEN="Weight Training Area"
-              />
+            <div className="venueExterior">
+              <Subtitle subtitle="重訓器材" subtitleEN="Weight Training Area" />
               {/* 重訓器材的照片 */}
               <div className="centerPhotos">
                 <button>‹</button>
@@ -174,7 +170,7 @@ function CenterNavbar() {
               <div>跑步機 飛輪機 滑步機 登階機 划船機 戰繩設備 壺鈴</div>
             </div>
             {/* 更衣淋浴(X) */}
-            <div className="showerArea">
+            <div className="venueExterior">
               <Subtitle
                 subtitle="更衣淋浴"
                 subtitleEN="Changing & Shower Area"
@@ -253,8 +249,7 @@ function CenterNavbar() {
             </section>
           </div>
         )}
-
-      </div >
+      </div>
     </>
   );
 }
