@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { use } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -7,13 +8,15 @@ function Footer() {
     return (
         <>
             <section id="footer">
-                <div className="back-to-top-button">
-                    <button>
-                        <p>回頂部</p>
-                        <img src="./images/back-to-top.gif" alt="" />
+               
+                    <button className="Back-to-top-button" onClick=
+                    {()=>{navigate('/HomePage');window.scrollTo(0, 0);}}
+                    style={{ cursor: 'pointer' }} >
+                        <p style={{ cursor: 'pointer' }}>回頂部</p>
+                        <img src="./images/back-to-top.gif" alt="" style={{ cursor: 'pointer' }}/>
                     </button>
                  
-                </div>
+          
                 <div className="footerwrapper">
                     {/* <img src="/images/Footer.png" alt="Footer" /> */}
 
