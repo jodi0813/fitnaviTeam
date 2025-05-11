@@ -134,10 +134,6 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding: 0;
 }
 .ArticleSection-wrapper .cards-text-container {
   display: flex;

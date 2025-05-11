@@ -113,7 +113,7 @@ function ArticleSection() {
 
                             <div className="Hompagearticle-Chtitle">
                                 <h2>知識文章</h2>
-                                <button>查看更多文章</button>
+                                <button onClick={()=>navigate('/Allarticle')}>查看更多文章</button>
                             </div>
                         </div>
                     </div>
