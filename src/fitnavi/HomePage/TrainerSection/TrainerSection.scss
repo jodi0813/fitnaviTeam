@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  // align-items: center;
 
   .home-trainer-mainTitle {
     color: #3a2c19;
@@ -14,17 +16,20 @@
     font-weight: 400;
     line-height: 40px; /* 83.333% */
     letter-spacing: 9.6px;
+    text-align: center;
   }
   .home-trainer1 {
     display: flex;
     align-items: flex-end;
+    // justify-content: center;
+    padding-left: 25%;
     margin-top: 100px;
   }
   //被選的教練
   .home-trainer-active {
     display: flex;
     // width: 205px;
-    margin-right: 100px;
+    margin-right: 12%;
     border-radius: 20px;
     background: linear-gradient(180deg, #ffc9a9 0%, #ff8740 100%);
     width: 250px;
@@ -107,13 +112,18 @@
   //沒有被選的教練
   .home-trainer-none {
     width: 187px;
-    margin-right: -35px;
+    margin-right: -3%;
   }
   .home-trainer-footer {
     display: flex;
+    padding-top: 70px;
+    align-items: center;
+    gap: 10%;
+  padding-left: 8%;
     .home-trainer-title {
       display: flex;
       flex-direction: column;
+
       .home-trainer-titleCh {
         text-align: center;
         -webkit-text-stroke-width: 1px;
@@ -125,10 +135,39 @@
         line-height: normal;
         letter-spacing: 12.8px;
       }
+      .home-trainer-titleEn {
+        color: #fefcf7;
+        font-family: "Dela Gothic One";
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100px; /* 156.25% */
+        text-transform: capitalize;
+      }
+      p {
+        color: #3a2c19;
+        font-family: "Noto Sans TC";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 40px; /* 200% */
+        letter-spacing: 0.4px;
+      }
     }
     .home-trainer-button {
       display: flex;
       flex-direction: column;
+      // align-items: flex-start;
+      gap: 20px;
+      button {
+        display: flex;
+        padding: 16px 84px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 999px;
+        border: 1px solid #ff8740;
+        background: #fff;
+      }
     }
   }
 }
