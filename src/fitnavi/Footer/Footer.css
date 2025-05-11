@@ -227,3 +227,51 @@ a {
     /* 222.222% */
     letter-spacing: 0.36px;
 }
+
+.Back-to-top-button {
+    width: 15%;
+    height: 15%;
+    position: relative;
+    left: 80%;
+    top: 15rem;
+    background-color: transparent;
+
+    
+
+    p {
+        color: var(--primary, var(--primary, #FF8740));
+        /* 段落/16 */
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        /* 24px */
+        letter-spacing: 1.6px;
+        margin-bottom: 0px;
+
+        &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    width: 40px;
+                    height: 2px;
+                    background-color: #FF8740;
+
+                }
+
+                &::before {
+                    left: -10px;
+                    top: 30px;
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    right: -10px;
+                    top: 30px;
+                    transform: rotate(135deg);
+                }
+    }
+
+}

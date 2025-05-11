@@ -1,12 +1,22 @@
 import "./Footer.css";
+import { use } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
 function Footer() {
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     return (
         <>
             <section id="footer">
+               
+                    <button className="Back-to-top-button" onClick=
+                    {()=>{navigate('/HomePage');window.scrollTo(0, 0);}}
+                    style={{ cursor: 'pointer' }} >
+                        <p style={{ cursor: 'pointer' }}>回頂部</p>
+                        <img src="./images/back-to-top.gif" alt="" style={{ cursor: 'pointer' }}/>
+                    </button>
+                 
+          
                 <div className="footerwrapper">
                     {/* <img src="/images/Footer.png" alt="Footer" /> */}
 
@@ -14,20 +24,30 @@ function Footer() {
                         <div className="footer-columntext">
                             <div className="explore">
                                 <h4>探索</h4>
-                                <p onClick={()=>{navigate('/Coach');
-                                    window.scrollTo(0, 0);}} style={{cursor:"pointer"}}>課程搜尋</p>
-                                <p onClick={()=>{navigate('/CenterMap');
-                                    window.scrollTo(0, 0);}} style={{cursor:"pointer"}}>場地介紹</p>
-                                <p onClick={()=>{navigate('/Allarticle');
-                                    window.scrollTo(0, 0);}} style={{cursor:"pointer"}}>知識分享</p>
-                                <p onClick={()=>{navigate('/Joinus');
-                                    window.scrollTo(0, 0);}} style={{cursor:"pointer"}}>合作夥伴</p>
+                                <p onClick={() => {
+                                    navigate('/Coach');
+                                    window.scrollTo(0, 0);
+                                }} style={{ cursor: "pointer" }}>課程搜尋</p>
+                                <p onClick={() => {
+                                    navigate('/CenterMap');
+                                    window.scrollTo(0, 0);
+                                }} style={{ cursor: "pointer" }}>場地介紹</p>
+                                <p onClick={() => {
+                                    navigate('/Allarticle');
+                                    window.scrollTo(0, 0);
+                                }} style={{ cursor: "pointer" }}>知識分享</p>
+                                <p onClick={() => {
+                                    navigate('/Joinus');
+                                    window.scrollTo(0, 0);
+                                }} style={{ cursor: "pointer" }}>合作夥伴</p>
                             </div>
 
                             <div className="partner">
                                 <h4>合作夥伴</h4>
-                                <p onClick={()=>{navigate('/MemberLogin');
-                                    window.scrollTo(0, 0);}} style={{cursor:"pointer"}}>登入後台</p>
+                                <p onClick={() => {
+                                    navigate('/MemberLogin');
+                                    window.scrollTo(0, 0);
+                                }} style={{ cursor: "pointer" }}>登入後台</p>
                                 <p>合作夥伴支援中心</p>
                                 <p>將您的課程上線</p>
                             </div>
@@ -49,8 +69,8 @@ function Footer() {
                         <div className="copyright">Copyright © 2025 FITNAVI All rights reserved.</div>
                     </div>
 
-
                 </div>
+
 
 
 

@@ -5,11 +5,13 @@ import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
 import Articlecards from '../../components/Articlecards';
 import { useNavigate } from 'react-router-dom';
+import Calendar from "../../components/Calendar/Calendar.jsx"
+
 
 
 
 function Coachintro() {
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     const [liked, setLiked] = useState(false);
     const cardsData = [
 
@@ -51,39 +53,39 @@ function Coachintro() {
 
 
     const ColorCard = ({ description, cardColor, rate, name, date }) => {
-    // 將 rate 轉為數值
-    const numericRate = parseFloat(rate); 
+        // 將 rate 轉為數值
+        const numericRate = parseFloat(rate);
 
-    // 根據評分顯示星星
-    const stars = [];
-    for (let i = 0; i < 5; i++) {
-        const starColor = i < numericRate ? "#FF8740" : "#989794"; // 填充星星的顏色
-        stars.push(
-            <svg key={i} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill={starColor}>
-                <path d="M12 .587l3.668 7.431L24 9.748l-6 5.853L19.335 24 12 20.202 4.665 24 6 15.601 0 9.748l8.332-1.73z" />
-            </svg>
-        );
-    }
+        // 根據評分顯示星星
+        const stars = [];
+        for (let i = 0; i < 5; i++) {
+            const starColor = i < numericRate ? "#FF8740" : "#989794"; // 填充星星的顏色
+            stars.push(
+                <svg key={i} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill={starColor}>
+                    <path d="M12 .587l3.668 7.431L24 9.748l-6 5.853L19.335 24 12 20.202 4.665 24 6 15.601 0 9.748l8.332-1.73z" />
+                </svg>
+            );
+        }
 
-    return (
-        <div style={{
-            backgroundColor: cardColor, padding: "20px", borderRadius: "10px", color: "#fff", width: "300px",
-            height: "298px"
-        }}>
-            <div>
-                <div className="Star-rate">
-                    {stars}
-                    <h3>{numericRate.toFixed(1)}</h3> {/* 確保顯示小數點 */}
+        return (
+            <div style={{
+                backgroundColor: cardColor, padding: "20px", borderRadius: "10px", color: "#fff", width: "300px",
+                height: "298px"
+            }}>
+                <div>
+                    <div className="Star-rate">
+                        {stars}
+                        <h3>{numericRate.toFixed(1)}</h3> {/* 確保顯示小數點 */}
+                    </div>
+                </div>
+                <p className="description">{description}</p>
+                <div className="Name-date">
+                    <p className="Name">{name}</p>
+                    <p className="Date">{date}</p>
                 </div>
             </div>
-            <p className="description">{description}</p>
-            <div className="Name-date">
-                <p className="Name">{name}</p>
-                <p className="Date">{date}</p>
-            </div>
-        </div>
-    );
-};
+        );
+    };
 
     const [cardData] = useState([
         {
@@ -172,7 +174,7 @@ function Coachintro() {
                     <div className="person-class-photo">
                         <div className="coachphotos">
                             <div className="selfie">
-                            <img src="./images/coach.jpg" alt="" />
+                                <img src="./images/coach.jpg" alt="" />
                             </div>
                             <div className="more">
                                 <figure className="moreimg1">
@@ -247,7 +249,7 @@ function Coachintro() {
                                 <p>10堂優惠 ：$1,400/單堂</p>
                                 <div className="price-with-button">
                                     <p>20堂優惠 ：$1,200/單堂</p>
-                                    <button class="classinrto" type="button" onClick={()=>navigate('/NutriIntro')}>立即報名</button>
+                                    <button class="classinrto" type="button" onClick={() => navigate('/NutriIntro')}>立即報名</button>
                                 </div>
                             </div>
 
@@ -442,43 +444,11 @@ function Coachintro() {
                         </div>
 
 
-                        <div className="body">
-                            <div class="container">
-                                <div class="calendar">
-                                    <header>
-                                        <pre class="left">←</pre>
-
-                                        <div class="header-display">
-                                            <p class="display">""</p>
-                                        </div>
-
-                                        <pre class="right">→</pre>
-
-                                    </header>
-
-                                    <div class="week">
-                                        <div>Su</div>
-                                        <div>Mo</div>
-                                        <div>Tu</div>
-                                        <div>We</div>
-                                        <div>Th</div>
-                                        <div>Fr</div>
-                                        <div>Sa</div>
-                                    </div>
-                                    <div class="days"></div>
-                                </div>
-                                <div class="display-selected">
-                                    <p class="selected"></p>
-                                </div>
-                            </div>
-                        </div>
-
-
+                        {/* <div className="Coach-Available-calendar">
+                            <Calendar />
+                        </div> */}
 
                     </div>
-
-
-
                 </section>
 
 
