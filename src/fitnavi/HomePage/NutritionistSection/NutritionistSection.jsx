@@ -6,7 +6,7 @@ function NutritionistSection() {
     {
       name: "詹姆斯",
       enName: "James",
-       skills: ["重量訓練", "減脂雕塑"],
+      skills: ["重量訓練", "減脂雕塑"],
       img: "/images/homenutri1.png",
     },
     {
@@ -27,7 +27,7 @@ function NutritionistSection() {
     {
       name: "毛毛",
       enName: "Evelyn",
-       skills: ["體重控制", "營養攝取"],
+      skills: ["體重控制", "營養攝取"],
       img: "/images/homenutri5.png",
     },
   ];
@@ -37,7 +37,7 @@ function NutritionistSection() {
         <div className="home-nutritionist1">
           {nutritionistList.map((nutritionist, i) => (
             <div
-              className={`home-nutritionist-card ${
+              className={`${
                 i === focusIndex
                   ? "home-nutritionist-active"
                   : "home-nutritionist-none"
@@ -45,17 +45,18 @@ function NutritionistSection() {
               key={i}
               onClick={() => setFocusIndex(i)}
             >
-              <img src={nutritionist.img} alt={nutritionist.name} />
-
-              {i === focusIndex && (
+              <div className="home-nutritionist-img">
+                <img src={nutritionist.img} alt={nutritionist.name} />
+              </div>
+              {i === focusIndex && (    
                 <div className="home-nutritionist-info">
-                  <div className="home-nutritionist-name">
+                  <div className="home-nutritionist-name ">
                     <span>{nutritionist.name} </span>
                     <span className="home-nutritionist-enname">
                       {nutritionist.enName}
                     </span>
                   </div>
-         
+
                   <div className="home-nutritionist-tags">
                     {nutritionist.skills?.map((skill, i) => (
                       <span key={i}>{skill}</span>

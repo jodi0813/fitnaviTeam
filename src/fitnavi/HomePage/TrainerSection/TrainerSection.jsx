@@ -44,8 +44,9 @@ function TrainerSection() {
               key={i}
               onClick={() => setFocusIndex(i)}
             >
-              <img src={trainer.img} alt={trainer.name} />
-
+              <div className="home-trainer-img">
+                <img src={trainer.img} alt={trainer.name} />
+              </div>
               {i === focusIndex && (
                 <div className="home-trainer-info">
                   {/* <img src={trainer.img} alt={trainer.name} /> */}
