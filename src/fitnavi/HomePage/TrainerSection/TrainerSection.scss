@@ -1,11 +1,12 @@
 @use "../../reset.scss";
 .home-trainer {
-  padding: 48px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100vw;
   height: 100vh;
+    padding:10%;
   // align-items: center;
 
   .home-trainer-mainTitle {
@@ -117,9 +118,8 @@
   .home-trainer-footer {
     display: flex;
     padding-top: 70px;
+        justify-content: space-between;
     align-items: center;
-    gap: 10%;
-  padding-left: 8%;
     .home-trainer-title {
       display: flex;
       flex-direction: column;

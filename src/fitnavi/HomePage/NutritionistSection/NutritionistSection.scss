@@ -1,1 +1,164 @@
 @use "../../reset.scss";
+.home-nutritionist {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 10%;
+  // align-items: center;
+
+  .home-nutritionist1 {
+    display: flex;
+    align-items: flex-end;
+    // justify-content: center;
+    padding-left: 15%;
+    margin-top: 100px;
+  }
+  //被選的教練
+  .home-nutritionist-active {
+    display: flex;
+
+    margin-right: 12%;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #ffc9a9 0%, #ff8740 100%);
+    width: 250px;
+    height: 355px;
+    //教練姓名
+    .home-nutritionist-info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .home-nutritionist-name {
+        display: flex;
+        padding: 12px 24px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        border: 1px solid #ff8740;
+        background: #fff;
+        box-shadow: 8px 8px 0px 0px #ff8740;
+        width: 230px;
+        font-family: "Noto Sans TC";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 3.2px;
+        color: #3a2c19;
+        //教練英文名
+        .home-nutritionist-enname {
+          font-size: 20px;
+          letter-spacing: 2px;
+        }
+      }
+      //教練地區
+      .home-nutritionist-area {
+        display: flex;
+        width: 180px;
+        height: 40px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        border: 1px solid #ff8740;
+        background: #fff;
+        box-shadow: 8px 8px 0px 0px #ff8740;
+        color: #ff8740;
+        text-align: center;
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 1.4px;
+      }
+      .home-nutritionist-tags {
+        display: flex;
+        width: 190px;
+        height: 50px;
+        padding: 10px 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        border: 1px solid #ff8740;
+        background: #fff;
+        box-shadow: 8px 8px 0px 0px #ff8740;
+        color: #3a2c19;
+        text-align: right;
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 1.4px;
+      }
+    }
+  }
+  //沒有被選的教練
+  .home-nutritionist-none {
+    width: 187px;
+    margin-right: -3%;
+  }
+  .home-nutritionist-footer {
+    display: flex;
+    padding-top: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 8%;
+    .home-nutritionist-title {
+      display: flex;
+      flex-direction: column;
+
+      .home-nutritionist-titleCh {
+        text-align: center;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #3a2c19;
+        font-family: "Mantou Sans";
+        font-size: 128px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 12.8px;
+      }
+      .home-nutritionist-titleEn {
+        color: #fefcf7;
+        font-family: "Dela Gothic One";
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100px; /* 156.25% */
+        text-transform: capitalize;
+      }
+      p {
+        color: #3a2c19;
+        font-family: "Noto Sans TC";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 40px; /* 200% */
+        letter-spacing: 0.4px;
+      }
+    }
+    .home-nutritionist-button {
+      display: flex;
+      flex-direction: column;
+      // align-items: flex-start;
+      gap: 20px;
+      button {
+        display: flex;
+        padding: 16px 84px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 999px;
+        border: 1px solid #ff8740;
+        background: #fff;
+      }
+    }
+  }
+}
