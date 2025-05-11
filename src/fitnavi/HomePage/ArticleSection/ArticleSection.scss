@@ -1,24 +1,66 @@
 @use "../../reset.scss";
 
 .ArticleSection-wrapper {
+    margin-top: 30%;
     background-image: url('/public/images/article-bg-pattern.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    position: relative;
+    padding: 0;
 
-    .cards-text-container{
+
+    .cards-text-container {
         display: flex;
         flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
+        gap: 0;
+
+
+        .cards-column1{
+            margin: 0px;
+        }
+        
+
+        .Article-text-column {
+            top: 250px;
+            position: relative; 
+            color: var(--dark, #3A2C19);
+            text-align: right;
+            font-family: "Dela Gothic One";
+            font-size: 128px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100px;
+            /* 78.125% */
+            // text-transform: capitalize;
+            // transform: rotate(90deg);
+            text-transform: uppercase; // ← 建議改成 uppercase 全部大寫
+            transform: rotate(90deg) translateY(-250px); // ← 改這裡
+            transform-origin: top left;
+            
+        }
     }
 }
 
 
 
-
+.Hompage-Cards2{
+    margin-top: 150px;
+    justify-content: flex-start;
+    position: relative;
+}
 
 .Hompagearticle-Chtitle {
+    right: 50%;
+    margin-top: 0px;
+    position: relative;
+
+    
     h2 {
         color: var(--dark, #3A2C19);
         text-align: right;
@@ -28,6 +70,8 @@
         font-weight: 400;
         line-height: normal;
         letter-spacing: 12.8px;
+        white-space: nowrap;
+     
     }
 
     button {

@@ -36,7 +36,7 @@ function ArticleSection() {
             category: "燃脂運動",
             type: 'card'
         },
-        { type: 'text', text: "Articles" }
+        { type: 'text', text: "articles" }
     ];
 
     const cardData = [
@@ -83,7 +83,7 @@ function ArticleSection() {
                                 ))}
                         </div>
 
-                        <div className="text-column">
+                        <div className="Article-text-column">
                             {mixedData
                                 .filter((item) => item.type === 'text')
                                 .map((item, index) => (
@@ -111,8 +111,9 @@ function ArticleSection() {
                                     ))}
                             </div>
 
-                            <div>
+                            <div className="Hompagearticle-Chtitle">
                                 <h2>知識文章</h2>
+                                <button>查看更多文章</button>
                             </div>
                         </div>
                     </div>
@@ -121,10 +122,7 @@ function ArticleSection() {
 
 
 
-                    <div className="Hompagearticle-Chtitle">
-                        <h2>知識文章</h2>
-                        <button>查看更多文章</button>
-                    </div>
+
                 </div>
             </section>
 

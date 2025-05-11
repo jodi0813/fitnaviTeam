@@ -129,18 +129,54 @@ a {
 }
 
 .ArticleSection-wrapper {
+  margin-top: 30%;
   background-image: url("/public/images/article-bg-pattern.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  position: relative;
+  padding: 0;
 }
 .ArticleSection-wrapper .cards-text-container {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  gap: 0;
+}
+.ArticleSection-wrapper .cards-text-container .cards-column1 {
+  margin: 0px;
+}
+.ArticleSection-wrapper .cards-text-container .Article-text-column {
+  top: 250px;
+  position: relative;
+  color: var(--dark, #3A2C19);
+  text-align: right;
+  font-family: "Dela Gothic One";
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100px;
+  /* 78.125% */
+  text-transform: uppercase;
+  transform: rotate(90deg) translateY(-250px);
+  transform-origin: top left;
 }
 
+.Hompage-Cards2 {
+  margin-top: 150px;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.Hompagearticle-Chtitle {
+  right: 50%;
+  margin-top: 0px;
+  position: relative;
+}
 .Hompagearticle-Chtitle h2 {
   color: var(--dark, #3A2C19);
   text-align: right;
@@ -150,6 +186,7 @@ a {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 12.8px;
+  white-space: nowrap;
 }
 .Hompagearticle-Chtitle button {
   display: inline-flex;
