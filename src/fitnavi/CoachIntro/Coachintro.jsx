@@ -5,7 +5,8 @@ import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
 import Articlecards from '../../components/Articlecards';
 import { useNavigate } from 'react-router-dom';
-import Calendar from "../../components/Calendar/Calendar.jsx"
+import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
+
 
 
 
@@ -444,9 +445,12 @@ function Coachintro() {
                         </div>
 
 
-                        {/* <div className="Coach-Available-calendar">
-                            <Calendar />
-                        </div> */}
+                        <div>
+                        <CalendarComponent/>
+                        </div>
+
+
+                       
 
                     </div>
                 </section>
