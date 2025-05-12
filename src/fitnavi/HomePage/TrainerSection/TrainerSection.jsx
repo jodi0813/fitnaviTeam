@@ -38,9 +38,8 @@ function TrainerSection() {
         <div className="home-trainer1">
           {trainerList.map((trainer, i) => (
             <div
-              className={`home-trainer-card ${
-                i === focusIndex ? "home-trainer-active" : "home-trainer-none"
-              }`}
+              className={`home-trainer-card ${i === focusIndex ? "home-trainer-active" : "home-trainer-none"
+                }`}
               key={i}
               onClick={() => setFocusIndex(i)}
             >
@@ -72,6 +71,9 @@ function TrainerSection() {
           ))}
         </div>
         <div className="home-trainer-footer">
+          <div className="home-trainer-img">
+            <img src="/images/coach.png" alt="" />
+          </div>
           <div className="home-trainer-title">
             <span className="home-trainer-titleCh">教練</span>
             <span className="home-trainer-titleEn">PERSONAL TRAINER</span>
