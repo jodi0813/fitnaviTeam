@@ -9,11 +9,11 @@
 
 
 
-  .memberList {
+  .coachDashboardList {
     display: flex;
     height: 409px;
 
-    .memberBotton {
+    .coachDashboardBotton {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -24,12 +24,18 @@
       .coachDashboardBox {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+    
         border-radius: 20px 0px 0px 20px;
         background: #FBDBAD;
-        padding: 20px 20px 0px 20px;
+  
         width: 206px;
-        
+        .coachDashboardBox1{
+                 display: flex;
+        flex-direction: column;
+      padding: 20px 20px 0px 20px;
+          gap: 10px;
+        }
+
 
         .list-illustration {
           display: flex;
@@ -43,16 +49,33 @@
             display: flex;
             flex-direction: column;
 
+            .iAmCoach1 {
+              color: #3A2C19;
+              /* 段落/14 */
+              font-family: "Noto Sans TC";
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 140%;
+              /* 19.6px */
+              letter-spacing: 1.4px;
+            }
+
+            .iAmCoach2 {
+              color:#3A2C19;
+              text-align: center;
+              /* heading/標題4/Bold */
+              font-family: "Noto Sans TC";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              letter-spacing: 2px;
+            }
+
           }
 
         }
-      }
-
-      .member1 {
-        width: 160px;
-        position: relative;
-        top: -30px;
-        left: -50px;
       }
 
       /* 被選到跟沒選到的按鈕樣式 */

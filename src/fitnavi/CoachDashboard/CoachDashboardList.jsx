@@ -3,22 +3,20 @@
 // import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./CoachDashboardList.scss";
+import MainTitle from "../../components/Title/MainTitle";
 
 function CoachDashboardList() {
   const [memberTab, setMemberTab] = useState("myinfo");
   return (
     <>
       <div className="coachDashboardAll">
-        <div className="centerHead">
-          <h2>會員管理</h2>
-          <h3>在這裡管理您的課程及文章</h3>
-        </div>
-
-        <div className="memberList">
+        <MainTitle title1="會員管理" title2="在這裡管理您的課程及文章" />
+        <div className="coachDashboardList">
           {/* 左側選單 */}
-          <div className="memberBotton">
+          <div className="coachDashboardBotton">
             {/* 一般用戶 */}
             <div className="coachDashboardBox">
+              <div className="coachDashboardBox1">
               <button
                 className={memberTab === "myinfo" ? "memberBt memberActive" : "memberBt"}
                 onClick={() => setMemberTab("myinfo")}
@@ -48,14 +46,13 @@ function CoachDashboardList() {
                 onClick={() => setMemberTab("useOrder")}
               >
                 文章管理
-              </button>
+              </button></div>
               <div className="list-illustration">
-                <div className="list-illustration1">  
-                <img src="/images/coachnutri.png" alt=""  />
+                <div className="list-illustration1">
+                  <img src="/images/coachnutri.png" alt="" />
                 </div>
                 <div className="iAmCoach">
-
-                  <span>我是</span><span>教練/營養師</span></div>
+                  <span className="iAmCoach1">我是</span><span className="iAmCoach2">教練/營養師</span></div>
               </div></div>
           </div>
 
