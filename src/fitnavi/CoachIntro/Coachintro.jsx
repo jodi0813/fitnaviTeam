@@ -179,7 +179,7 @@ function Coachintro() {
                             </div>
                             <div className="more">
                                 <figure className="moreimg1">
-                                    <img src="./images/教練輪播小圖-01.jpg" />
+                                    <img src="./images/coach-carousel-01.jpg" />
                                 </figure>
 
                                 <figure className="moreimg2">
