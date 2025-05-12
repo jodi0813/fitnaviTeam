@@ -193,6 +193,7 @@
       
         .HeoSectionArrow {
           animation: arrowMove 1.6s infinite ease-in-out;
+          // 整段動畫時間1.6s
         }
       
         .Hero-section-scroll-p {
@@ -206,6 +207,7 @@
           }
           15.625% { /* 0.25s */
             transform: translateY(10px);
+            // (0.25 / 1.6) × 100 = 15.625%
           }
           50% { /* 到 0.8s 前都保持在下方 */
             transform: translateY(10px);
