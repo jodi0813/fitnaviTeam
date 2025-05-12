@@ -1,0 +1,65 @@
+/* 修改整個日曆背景和圓角 */
+.react-calendar {
+    border-radius: var(--Num-radius-base, 8px);
+    border: 1px solid #B6C1CA;
+    background: #FFF;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08);
+}
+
+/* 日期 tile 的樣式 */
+.react-calendar__tile {
+    color: var(--gray, #989794);
+    text-align: center;
+    /* Typography/text-base-500 */
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 21px */
+}
+
+/* hover 效果 */
+.react-calendar__tile:hover {
+    color: var(--primary, var(--primary, #FF8740));
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 140%; /* 21px */
+
+
+}
+
+/* 今天的樣式 */
+.react-calendar__tile--now {
+    background: #ffecb3;
+    font-weight: bold;
+}
+
+/* 被選到的日期 */
+.react-calendar__tile--active {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px !important;
+    background: var(--primary, #FF8740) !important;
+
+    color: #FFF !important;
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 140%;
+    /* 21px */
+    border: none;
+}
+
+/* 週標題（例如一、二、三） */
+.react-calendar__month-view__weekdays {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}

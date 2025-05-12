@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import './MyCalendar.css';
 
 const CalendarComponent = () => {
   const [date, setDate] = useState(new Date());
@@ -14,11 +15,16 @@ const CalendarComponent = () => {
     <div>
       <h1></h1>
       <Calendar
-        onChange={handleDateChange}
-        value={date}
-        locale="zh-CN"
+       onChange={handleDateChange}
+       value={date}
+       locale="zh-CN"
+       formatShortWeekday={(locale, date) =>
+         ['日', '一', '二', '三', '四', '五', '六'][date.getDay()]
+       }
+       formatDay={(locale, date) => String(date.getDate())} 
+        
       />
-      <p>選擇的日期: {date.toLocaleDateString()}</p>
+      {/* <p> {date.toLocaleDateString()}</p> */}
     </div>
   );
 };
