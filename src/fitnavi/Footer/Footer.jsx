@@ -8,15 +8,22 @@ function Footer() {
     return (
         <>
             <section id="footer">
-               
-                    <button className="Back-to-top-button" onClick=
-                    {()=>{navigate('/HomePage');window.scrollTo(0, 0);}}
+
+                <button className="Back-to-top-button" onClick=
+                    {() => {
+                        navigate('/HomePage');
+                        setTimeout(() => {
+                            window.scrollTo(0, 0);
+                        }, 100);
+
+                    }}
                     style={{ cursor: 'pointer' }} >
-                        <p style={{ cursor: 'pointer' }}>回頂部</p>
-                        <img src="./images/back-to-top.gif" alt="" style={{ cursor: 'pointer' }}/>
-                    </button>
-                 
-          
+                    <p style={{ cursor: 'pointer' }}>回頂部</p>
+                    <img src="/images/back-to-top.gif" alt="" style={{ cursor: 'pointer' }} />
+                </button>
+
+
+
                 <div className="footerwrapper">
                     {/* <img src="/images/Footer.png" alt="Footer" /> */}
 

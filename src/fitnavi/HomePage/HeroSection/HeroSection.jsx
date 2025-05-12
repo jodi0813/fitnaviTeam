@@ -5,7 +5,7 @@ function HeroSection() {
     return (
         <section className="HeroSection">
             <div className="video-wrapper">
-                
+
                 <ReactPlayer
                     url="https://res.cloudinary.com/dng64itcf/video/upload/v1746930225/HeroSection-video_2_qo5wof.mp4"
                     playing
@@ -29,10 +29,24 @@ function HeroSection() {
 
                 <div className="Hero-Section-content">
                     <p>
-                        每一次挑戰都是突破，訓練無極限，<br/> 專業教練與營養師助你達成目標，邁向更健康的自己！
+                        每一次挑戰都是突破，訓練無極限，<br /> 專業教練與營養師助你達成目標，邁向更健康的自己！
                     </p>
                 </div>
+
+                <div className="Hero-section-scroll">
+                    <p>scroll</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
+                        <path d="M36.5 18L24.5 30L12.5 18" stroke="#FEFCF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+
+
             </div>
+
+
+
+
         </section>
     );
 }
