@@ -100,7 +100,7 @@
 
 
         .Hero-Section-Catchphrase {
-  
+
 
             h2 {
                 color: #FEFCF7;
@@ -135,7 +135,7 @@
                     font-style: normal;
                     font-weight: 400;
                     line-height: 100%;
-                    
+
                 }
             }
 
@@ -170,56 +170,78 @@
 
 
     }
-
     .Hero-section-scroll {
         position: relative;
         left: 35%;
         top: 60%;
-
+      
+        @media screen and (min-width: 1359px) and (max-width: 1361px) {
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -20%);
+        }
+      
         p {
-            color: var(--white, var(--white, #FEFCF7));
-            text-align: center;
-            /* 段落/14 */
-            font-family: "Noto Sans TC";
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%;
-            /* 19.6px */
-            letter-spacing: 1.4px;
-
+          color: var(--white, #FEFCF7);
+          text-align: center;
+          font-family: "Noto Sans TC";
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 140%;
+          letter-spacing: 1.4px;
         }
-
-        .Hero-section-scroll-p,.HeoSectionArrow {
-            animation: bounce 1.5s infinite;
-            transition: transform 0.5s ease;
+      
+        .HeoSectionArrow {
+          animation: arrowMove 1.6s infinite ease-in-out;
         }
-
-
-
-        // &:hover {
-
-        //     .HeoSectionArrow {
-        //         transform: translateY(5px); // 向下微移
-        //         transform: scale(1.4);
-        //     }
-        // }
-
-        @keyframes bounce {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(10px);
-            }
-
-
+      
+        .Hero-section-scroll-p {
+          animation: textMove 1.6s infinite ease-in-out;
         }
-    }
-
-
+      
+        /* 箭頭動畫 */
+        @keyframes arrowMove {
+          0% {
+            transform: translateY(0);
+          }
+          15.625% { /* 0.25s */
+            transform: translateY(10px);
+          }
+          50% { /* 到 0.8s 前都保持在下方 */
+            transform: translateY(10px);
+          }
+          100% { /* 回到原位 0.8s */
+            transform: translateY(0);
+          }
+        }
+      
+        /* scroll 字動畫 */
+        @keyframes textMove {
+          0%,
+          18.75% { /* delay 0.3s */
+            transform: translateY(0);
+          }
+          34.375% { /* 0.55s, 完成下移 */
+            transform: translateY(10px);
+          }
+          50% { /* 保持在下方直到回復開始 */
+            transform: translateY(10px);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+      }
+      
+      
 
 }
+
+
+// &:hover {
+
+//     .HeoSectionArrow {
+//         transform: translateY(5px); // 向下微移
+//         transform: scale(1.4);
+//     }
+// }
