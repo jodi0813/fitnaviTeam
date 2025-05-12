@@ -40,7 +40,7 @@ function MyOrders() {
   ];
   /* 控制按鈕彈窗 */
   const [popupType, setPopupType] = useState(null);
-  const handleOpenList = () => setPopupType("list");
+  const handleOpenList = () => setPopupType("list");//訂單編號
   const handleOpenChat = () => setPopupType("chat");//聯絡教練
   const handleOpenProblem = () => setPopupType("problem");//問題
   const handleClosePopup = () => setPopupType(null);
@@ -89,11 +89,9 @@ function MyOrders() {
             </span>
             {/* 課程完成(按鈕待確認) */}
             <span>
-              <button
-                className={`status ${order.isFinished ? "done" : "pending"}`}
-              >
+              
                 {order.progress}
-              </button>
+            
             </span>
             {/* 問題反映 */}
             <span>
