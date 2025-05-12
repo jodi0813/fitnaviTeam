@@ -9,13 +9,13 @@
 
 
 
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    margin: 0;
-    overflow: auto;
-}
+// body {
+//     display: flex;
+//     flex-direction: column;
+//     height: 100vh;
+//     margin: 0;
+//     overflow: auto;
+// }
 
 .Nutriintro-header {
     display: flex;
@@ -42,12 +42,14 @@ body {
         margin-left: 100px;
 
         .Nutriphotos {
-            // width: 70%;
+            
 
             flex: 1;
 
-            .selfie {
+            .Nutri-selfie {
                 margin-bottom: 24px;
+                width: 60%;
+                height: 80%;
 
                 img {
                     border-radius: 20px;

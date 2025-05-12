@@ -165,8 +165,8 @@ function NutriIntro() {
 
                     <div className="person-class-photo">
                         <div className="Nutriphotos">
-                            <div className="selfie">
-                                <img src="/images/營養師形象照.jpg" alt="" />
+                            <div className="Nutri-selfie">
+                                <img src="/images/Nutri-selfie.jpg" alt="" />
                             </div>
                             <div className="more">
                                 <figure className="moreimg1">

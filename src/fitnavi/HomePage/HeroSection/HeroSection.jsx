@@ -29,7 +29,7 @@ function HeroSection() {
 
                 <div className="Hero-Section-content">
                     <p>
-                        每一次挑戰都是突破，訓練無極限， 專業教練與營養師助你達成目標，邁向更健康的自己！
+                        每一次挑戰都是突破，訓練無極限，<br/> 專業教練與營養師助你達成目標，邁向更健康的自己！
                     </p>
                 </div>
             </div>
