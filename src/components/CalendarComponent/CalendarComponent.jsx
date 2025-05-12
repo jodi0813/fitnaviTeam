@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
-// import 'react-calendar/dist/Calendar.css';
+import 'react-calendar/dist/Calendar.css';
 
 const CalendarComponent = () => {
   const [date, setDate] = useState(new Date());
@@ -12,7 +12,7 @@ const CalendarComponent = () => {
 
   return (
     <div>
-      <h1>React 月曆</h1>
+      <h1></h1>
       <Calendar
         onChange={handleDateChange}
         value={date}

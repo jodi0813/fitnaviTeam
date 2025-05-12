@@ -1,4 +1,3 @@
-
 @use "../../reset.scss";
 
 .HeroSection {
@@ -30,7 +29,7 @@
             object-fit: cover;
             display: block;
             z-index: 0;
-            
+
 
             @media (max-width: 393px) {
                 width: 30%;
@@ -51,14 +50,14 @@
                 width: 100%;
             }
 
-           
+
         }
 
 
     }
 
     .Hero-Section-Title {
-        position: relative;  
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -66,6 +65,7 @@
         margin-left: 15%;
         top: 8%;
         z-index: 1;
+        height: 100vh;
 
         @media (max-width: 393px) {
             width: 30%;
@@ -158,5 +158,56 @@
 
 
     }
-}
 
+    .Hero-section-scroll {
+        position: relative;
+        left: 35%;
+        top: 60%;
+
+        p {
+            color: var(--white, var(--white, #FEFCF7));
+            text-align: center;
+            /* 段落/14 */
+            font-family: "Noto Sans TC";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+
+        }
+
+        .HeoSectionArrow {
+            animation: bounce 1.5s infinite;
+            transition: transform 0.3s ease;
+        }
+
+
+
+        // &:hover {
+
+        //     .HeoSectionArrow {
+        //         transform: translateY(5px); // 向下微移
+        //         transform: scale(1.4);
+        //     }
+        // }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+
+
+        }
+    }
+
+
+
+}
