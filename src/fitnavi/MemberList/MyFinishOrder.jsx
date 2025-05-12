@@ -48,7 +48,7 @@ function MyFinishOrder() {
                         <span>
                             {finishOrder.location}
                             <br />
-                            {finishOrder.locationCH}{" "}
+                            {finishOrder.locationCH}
                         </span>
                         {/* 課程進度 */}
                         <span>
