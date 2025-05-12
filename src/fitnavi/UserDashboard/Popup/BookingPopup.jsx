@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./BookingPopup.scss";
 /* 預約彈窗 */
-function BookingPopup() {
+function BookingPopup({ onClose }) {
   const availableDays = [10, 11, 17, 18]; // 可預約的日期
   const selectedDay = 10; // 預設選中的日期
 
@@ -13,9 +13,8 @@ function BookingPopup() {
     days.push(
       <button
         key={day}
-        className={`calendar-day ${isAvailable ? "available" : ""} ${
-          isSelected ? "selected" : ""
-        }`}
+        className={`calendar-day ${isAvailable ? "available" : ""} ${isSelected ? "selected" : ""
+          }`}
       >
         {day}
       </button>
@@ -44,9 +43,8 @@ function BookingPopup() {
     timeButtons.push(
       <button
         key={time}
-        className={`time-button ${isAvailable ? "available" : ""} ${
-          isSelected ? "selected" : ""
-        }`}
+        className={`time-button ${isAvailable ? "available" : ""} ${isSelected ? "selected" : ""
+          }`}
       >
         {time}
       </button>
@@ -59,6 +57,9 @@ function BookingPopup() {
         <div className="popup-header">
           <h2>預約課程</h2>
           <span className="order-id">訂單編號:#00596</span>
+          <button className="order-close-btn" onClick={onClose}>
+            ✕
+          </button>
         </div>
 
         <div className="choseField">

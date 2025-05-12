@@ -33,7 +33,20 @@
         line-height: normal;
         letter-spacing: 2px;
       }
-
+        .order-close-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            fill: #fefcf7;
+            position: absolute;
+            right: 12px;
+            top: 10px;
+            opacity: 0.8;
+            padding: 0;
+        }
       .order-id {
         color: #fff;
         font-family: "Noto Sans TC";

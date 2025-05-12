@@ -1,0 +1,91 @@
+@use "../reset.scss";
+
+.coachDashboardAll {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  padding: 120px 80px;
+  gap: 28px;
+
+
+
+  .memberList {
+    display: flex;
+    height: 409px;
+
+    .memberBotton {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 20%;
+      padding-top: 70px;
+      padding-left: 30px;
+
+      .coachDashboardBox {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 20px 0px 0px 20px;
+        background: #FBDBAD;
+        padding: 20px 20px 0px 20px;
+        width: 206px;
+        
+
+        .list-illustration {
+          display: flex;
+
+          .list-illustration1 {
+            width: 85px;
+
+          }
+
+          .iAmCoach {
+            display: flex;
+            flex-direction: column;
+
+          }
+
+        }
+      }
+
+      .member1 {
+        width: 160px;
+        position: relative;
+        top: -30px;
+        left: -50px;
+      }
+
+      /* 被選到跟沒選到的按鈕樣式 */
+      .memberBt {
+        width: 162px;
+        height: 50px;
+        border-radius: 20px;
+        background: #fff;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        /* 24px */
+        letter-spacing: 1.6px;
+        outline: none;
+        display: flex;
+        padding: 13px 46px 13px 47px;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+      }
+
+      .memberBt.memberActive {
+        width: 216px;
+        color: #ff8740;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2px;
+        outline: none;
+        z-index: 1;
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@ import "./MyOrders.scss";
 import { useState } from "react";
 import StudentChatPopup from "./Popup/StudentChatPopup";
 import ProblemPopup from "./Popup/ProblemPopup";
+import ListPopup from "./Popup/ListPopup";
 /* 會員管理>我的訂單>我的預約 */
 function MyOrders() {
   /* 訂單資料 */
@@ -39,6 +40,7 @@ function MyOrders() {
   ];
   /* 控制按鈕彈窗 */
   const [popupType, setPopupType] = useState(null);
+  const handleOpenList = () => setPopupType("list");//訂單編號
   const handleOpenChat = () => setPopupType("chat");//聯絡教練
   const handleOpenProblem = () => setPopupType("problem");//問題
   const handleClosePopup = () => setPopupType(null);
@@ -63,7 +65,7 @@ function MyOrders() {
             {/* 序號 */}
             <span >{order.no}</span>
             {/* 訂單編號 */}
-            <span className="order-id">{order.id}</span>
+            <span onClick={handleOpenList} className="order-id" >{order.id}</span>
             {/* 講師名稱 */}
             <span>{order.teacher}</span>
             {/* 上課日期 */}
@@ -87,11 +89,9 @@ function MyOrders() {
             </span>
             {/* 課程完成(按鈕待確認) */}
             <span>
-              <button
-                className={`status ${order.isFinished ? "done" : "pending"}`}
-              >
+              
                 {order.progress}
-              </button>
+            
             </span>
             {/* 問題反映 */}
             <span>
@@ -101,6 +101,7 @@ function MyOrders() {
         ))}
       </div>
       {/* 根據 popupType 顯示彈窗 */}
+      {popupType === "list" && <ListPopup onClose={handleClosePopup} />}
       {popupType === "chat" && <StudentChatPopup onClose={handleClosePopup} />}
       {popupType === "problem" && <ProblemPopup onClose={handleClosePopup} />}
     </>
