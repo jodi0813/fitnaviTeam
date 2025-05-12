@@ -37,18 +37,17 @@ function NutritionistSection() {
         <div className="home-nutritionist1">
           {nutritionistList.map((nutritionist, i) => (
             <div
-              className={`${
-                i === focusIndex
-                  ? "home-nutritionist-active"
-                  : "home-nutritionist-none"
-              }`}
+              className={`${i === focusIndex
+                ? "home-nutritionist-active"
+                : "home-nutritionist-none"
+                }`}
               key={i}
               onClick={() => setFocusIndex(i)}
             >
               <div className="home-nutritionist-img">
                 <img src={nutritionist.img} alt={nutritionist.name} />
               </div>
-              {i === focusIndex && (    
+              {i === focusIndex && (
                 <div className="home-nutritionist-info">
                   <div className="home-nutritionist-name ">
                     <span>{nutritionist.name} </span>
@@ -72,7 +71,11 @@ function NutritionistSection() {
             <button>成為合作營養師</button>
             <button>查看更多營養師</button>
           </div>
+
           <div className="home-nutritionist-title">
+            <div className="home-nutritionist-img">
+              <img src="/images/nutritionist.png" alt="" />
+            </div>
             <span className="home-nutritionist-titleCh">營養師</span>
             <span className="home-nutritionist-titleEn">NUTRITIONIST</span>
             <p>

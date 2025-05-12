@@ -1,4 +1,5 @@
 @use "../../reset.scss";
+
 .home-trainer {
   display: flex;
   flex-direction: column;
@@ -13,16 +14,19 @@
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
-    line-height: 40px; /* 83.333% */
+    line-height: 40px;
+    /* 83.333% */
     letter-spacing: 9.6px;
     text-align: center;
   }
+
   .home-trainer1 {
     display: flex;
     align-items: flex-end;
     padding-left: 25%;
     margin-top: 100px;
   }
+
   //被選的教練
   .home-trainer-active {
     display: flex;
@@ -33,14 +37,17 @@
     width: 250px;
     height: 355px;
     transform: skew(-20deg, 0deg);
+
     .home-trainer-img {
       position: absolute;
       right: 50px;
       top: 10px;
+
       img {
         width: 200px;
         transform: none;
         transform: skew(20deg, 0deg);
+
       }
     }
 
@@ -52,6 +59,7 @@
       position: absolute;
       right: -80px;
       top: -50px;
+
       .home-trainer-name {
         display: flex;
         padding: 12px 24px;
@@ -69,18 +77,20 @@
         line-height: normal;
         letter-spacing: 3.2px;
         color: #3a2c19;
+
         //教練英文名
         .home-trainer-enname {
           font-size: 20px;
           letter-spacing: 2px;
         }
       }
+
       //教練地區
       .home-trainer-area {
         display: flex;
         position: absolute;
-        right: -20px;
-        top: 90px;
+        right: 0px;
+        top: 85px;
         width: 180px;
         height: 40px;
         padding: 10px;
@@ -101,6 +111,7 @@
         line-height: 140%;
         letter-spacing: 1.4px;
       }
+
       .home-trainer-tags {
         display: flex;
         position: absolute;
@@ -128,16 +139,29 @@
       }
     }
   }
+
   //沒有被選的教練
   .home-trainer-none {
     width: 187px;
     margin-right: -3%;
   }
+
   .home-trainer-footer {
     display: flex;
+    position: relative;
     padding-top: 70px;
     justify-content: space-between;
     align-items: center;
+
+    .home-trainer-img {
+      position: absolute;
+      width: 30%;
+      left: -100px;
+      bottom: 170px;
+    }
+
+
+
     .home-trainer-title {
       display: flex;
       flex-direction: column;
@@ -153,30 +177,36 @@
         line-height: normal;
         letter-spacing: 12.8px;
       }
+
       .home-trainer-titleEn {
         color: #fefcf7;
         font-family: "Dela Gothic One";
         font-size: 64px;
         font-style: normal;
         font-weight: 400;
-        line-height: 100px; /* 156.25% */
+        line-height: 100px;
+        /* 156.25% */
         text-transform: capitalize;
       }
+
       p {
         color: #3a2c19;
         font-family: "Noto Sans TC";
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
-        line-height: 40px; /* 200% */
+        line-height: 40px;
+        /* 200% */
         letter-spacing: 0.4px;
       }
     }
+
     .home-trainer-button {
       display: flex;
       flex-direction: column;
       // align-items: flex-start;
       gap: 20px;
+
       button {
         display: flex;
         padding: 16px 84px;
