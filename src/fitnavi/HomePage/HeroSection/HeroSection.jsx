@@ -7,7 +7,7 @@ function HeroSection() {
             <div className="video-wrapper">
 
                 <ReactPlayer
-                    url="https://res.cloudinary.com/dng64itcf/video/upload/v1746930225/HeroSection-video_2_qo5wof.mp4"
+                    url="https://res.cloudinary.com/dng64itcf/video/upload/v1747045686/%E9%A6%96%E9%A0%81%E5%BD%B1%E7%89%87_rrrirp.mp4"
                     playing
                     muted
                     loop
