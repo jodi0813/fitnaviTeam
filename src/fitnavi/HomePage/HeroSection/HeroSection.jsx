@@ -16,6 +16,8 @@ function HeroSection() {
                     height="100%"
                     className="hero-video"
                 />
+
+                <div className="overlay"></div>
             </div>
 
             <div className="Hero-Section-Title">
