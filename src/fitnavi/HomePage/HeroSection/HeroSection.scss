@@ -163,6 +163,7 @@
         position: relative;
         left: 35%;
         top: 60%;
+
         p {
             color: var(--white, var(--white, #FEFCF7));
             text-align: center;
@@ -176,7 +177,37 @@
             letter-spacing: 1.4px;
 
         }
+
+        .HeoSectionArrow {
+            animation: bounce 1.5s infinite;
+            transition: transform 0.3s ease;
+        }
+
+
+
+        // &:hover {
+
+        //     .HeoSectionArrow {
+        //         transform: translateY(5px); // 向下微移
+        //         transform: scale(1.4);
+        //     }
+        // }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+
+
+        }
     }
+
 
 
 }
