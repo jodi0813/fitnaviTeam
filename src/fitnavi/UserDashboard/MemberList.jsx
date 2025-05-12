@@ -3,17 +3,14 @@ import MyInfo from "./MyInfo";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./MemberList.scss";
+import MainTitle from "../../components/Title/MainTitle";
 
 function MemberList() {
   const [memberTab, setMemberTab] = useState("myinfo");
   return (
     <>
       <div id="memberListAll">
-        <div className="centerHead">
-          <h2>會員管理</h2>
-          <h3>在這裡管理您的課程及文章</h3>
-        </div>
-
+        <MainTitle title1="會員管理" title2="在這裡管理您的課程及文章"/>
         <div className="memberList">
           {/* 左側選單 */}
           <div className="memberBotton">
