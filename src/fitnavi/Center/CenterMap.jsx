@@ -1,15 +1,12 @@
 import { Link } from "react-router-dom";
 import "./CenterMap.scss";
+import MainTitle from "../../components/Title/MainTitle";
 
 function CenterMap() {
   return (
     <>
       <div id="centerMapMain">
-        <div className="centerHead">
-          <h2>找場地</h2>
-          <h3>尋找專屬適合您的運動場地</h3>
-        </div>
-        <hr />
+        <MainTitle title1="找場地" title2="找到專屬你的健身場地"/>
         <div className="mapSearchAll" >
           {/* 左邊 */}
           <div className="mapSearchLeft">
@@ -86,17 +83,25 @@ function CenterMap() {
                     <label htmlFor="order11">靠近捷運站(200m)</label>
                   </div>
                 </fieldset>
-                  <legend>課程項目</legend>
-                  <fieldset className="centerItem">
-                    <div className="checkboxItem">
-                      <input type="checkbox" name="order" id="order12" />
-                      <label htmlFor="order12">重訓器材</label>
-                    </div>
-                    <div className="checkboxItem">
-                      <input type="checkbox" name="order" id="order13" />
-                      <label htmlFor="order13">有氧器材</label>
-                    </div>
-                  </fieldset>
+                <legend>課程項目</legend>
+                <fieldset className="centerItem">
+                  <div className="checkboxItem">
+                    <input type="checkbox" name="order" id="order12" />
+                    <label htmlFor="order12">重訓訓練</label>
+                  </div>
+                  <div className="checkboxItem">
+                    <input type="checkbox" name="order" id="order13" />
+                    <label htmlFor="order13">有氧舞蹈</label>
+                  </div>
+                  <div className="checkboxItem">
+                    <input type="checkbox" name="order" id="order14" />
+                    <label htmlFor="order14">拳擊有氧</label>
+                  </div>
+                  <div className="checkboxItem">
+                    <input type="checkbox" name="order" id="order15" />
+                    <label htmlFor="order15">飛輪</label>
+                  </div>
+                </fieldset>
 
               </div>
               <button className="centermapSearch">搜尋</button>
@@ -104,7 +109,7 @@ function CenterMap() {
           </div>
           {/* 中間 */}
           <div className="centerResultPhoto">
-            <div className="photosNumber">共有 4 間符合條件的場館</div>
+            <div className="photosNumber">共有<span>4</span> 間符合條件的場館</div>
             <Link to="/center" className="gymCard">
               <div className="gymCard">
                 <img src="./images/center.jpg" alt="" className="centerPic" />

@@ -122,6 +122,7 @@
                         font-family: Alata;
                         font-size: 14px;
                     }
+
                     .checkboxItem {
                         display: flex;
                         gap: 14px;
@@ -146,16 +147,24 @@
         align-items: center;
         width: 25%;
         gap: 12px;
-                overflow: auto; //卷軸
-                height:670px;
+        overflow: auto; //卷軸
+        height: 670px;
+
         .photosNumber {
-            font-family: "Noto Sans TC";
-            color: #3A2C19;
+            color: var(--dark, #3A2C19);
             text-align: center;
+            /* heading/標題4/medium */
+            font-family: "Noto Sans TC";
             font-size: 20px;
+            font-style: normal;
             font-weight: 500;
             line-height: 40px;
+            /* 200% */
             letter-spacing: 0.4px;
+
+            span {
+                color: #FF8740;
+            }
         }
 
         .gymCard {
