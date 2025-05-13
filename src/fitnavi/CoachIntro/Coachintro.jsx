@@ -456,43 +456,48 @@ function Coachintro() {
                 </section>
 
 
-                <section id="coacharticle">
-                    <div className="articletitle">
-                        <h3 className="title">發表文章</h3>
-                        <h4>Articles</h4>
-                    </div>
-
-                    <div className="ViewArticles">
-                        <button className="ViewArticles-left">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <path d="M30 36L18 24L30 12" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg></button>
-
-                        <div className="Three-classcards">
-                            {cardsData.map((card, index) => (
-
-                                <Articlecards
-                                    key={index}
-                                    date={card.date}
-                                    img={card.img}
-                                    title={card.title}
-                                    content={card.content}
-                                    tags={card.tags}
-                                    category={card.category}
-                                    className={`card${index + 1}`}
-                                    onClick={() => navigate(`/article/${card.id}`)}
-                                />
-                            ))}
+                <div className="coacharticle-wrapper">
+                   
+                    <div id="coacharticle">
+                        <div className="articletitle">
+                            <h3 className="title">發表文章</h3>
+                            <h4>Articles</h4>
                         </div>
 
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="26" viewBox="0 0 14 26" fill="none">
-                                <path d="M1 25L13 13L1 1" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg></button>
+                        <div className="ViewArticles">
+                            <button className="ViewArticles-left">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <path d="M30 36L18 24L30 12" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></button>
+
+                            <div className="Three-classcards">
+                                {cardsData.map((card, index) => (
+
+                                    <Articlecards
+                                        key={index}
+                                        date={card.date}
+                                        img={card.img}
+                                        title={card.title}
+                                        content={card.content}
+                                        tags={card.tags}
+                                        category={card.category}
+                                        className={`card${index + 1}`}
+                                        onClick={() => navigate(`/article/${card.id}`)}
+                                    />
+                                ))}
+                            </div>
+
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="26" viewBox="0 0 14 26" fill="none">
+                                    <path d="M1 25L13 13L1 1" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></button>
+                        </div>
+
+
                     </div>
+                   
+                </div>
 
-
-                </section>
 
                 <section id="comment">
                     <div className="commentitle">
