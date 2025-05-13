@@ -2,6 +2,7 @@ import React from 'react';
 import Articlecards from '../../components/Articlecards';
 import "./AllArticle.scss";
 import { useNavigate } from 'react-router-dom';
+import MainTitle from "../../components/Title/MainTitle";
 
 
 function Allarticle() {
@@ -108,18 +109,14 @@ function Allarticle() {
     return (
         <>
 
-            <section className="Allarticle-header">
-                <div className='headertitle'>
-                    <h3>知識文章</h3>
-                    <h4>補足符合您需求的知識</h4>
-                </div>
-
-                <hr className='headerline' />
+        <section id='Allarticle-section'> 
+             <section className="Coachintro-header">
+                <MainTitle title1="知識文章" title2="補足符合您需求的知識" className="no-line" />
             </section>
 
 
 
-            <section className="Search">
+            <section className="Allarticle-Search">
                 <button className='Coach-Button'>健身教練</button>
                 <button className='Nutriton-Button'>營養師</button>
                 <input type="text" className='Search-Button' placeholder='關鍵字搜尋' />
@@ -180,7 +177,7 @@ function Allarticle() {
 
 
 
-                    <div className="Allarticle-Card">
+                    <div className="Allarticle-Card-article">
                         {cardsData.map((card, index) => (
 
                             <Articlecards
@@ -212,6 +209,9 @@ function Allarticle() {
                 <button className="page-button" onClick="goToPage(9)">9</button>
                 <button className="next-button">&raquo;</button>
             </div>
+        </section>
+
+           
         </>
 
     )

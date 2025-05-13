@@ -9,8 +9,10 @@
 
 
 
-#root {
-    width: 100%;
+#Allarticle-section{
+    margin-top: 5%;
+    margin-left: 5%;
+}
 
     .Allarticle-header {
         display: flex;
@@ -62,15 +64,16 @@
 
     }
 
-}
 
-.Search {
+
+.Allarticle-Search {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 17px;
     margin-top: 60px;
+    position: relative;
 
     .Coach-Button {
         height: 40px;
@@ -181,7 +184,7 @@
     margin-left: 60px;
     display: flex;
     flex-direction: row;
-    gap: 150px;
+    gap: 15%;
     justify-content: flex-start;
     align-items: first baseline;
 
@@ -328,7 +331,7 @@
             }
         }
 
-        .Allarticle-Card {
+        .Allarticle-Card-article {
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
@@ -336,7 +339,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             /* 三欄 */
-            gap: 10px;
+            gap: 5%;
             /* 卡片間距 */
 
             #card2>tag{
@@ -352,6 +355,7 @@
 
 .pagination {
     margin-top: 250px;
+    margin-left: 5%;
     display: flex;
     flex-direction: row;
     justify-content: center;
