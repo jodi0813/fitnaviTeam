@@ -12,7 +12,7 @@ function HomePage() {
           <HeroSection />
         </section>
         <div className="gradient">
-        <section>
+        <section className="homeSearchSection">
           <SearchSection />
         </section>
         <section>
