@@ -22,8 +22,8 @@ const CalendarComponent = () => {
   };
 
   return (
-    <div>
-      <h2>預約日曆</h2>
+    <div className='MyCalendar'>
+      {/* <h2>預約日曆</h2> */}
       <Calendar
         onChange={handleDateChange}
         value={selectedDate}
@@ -43,7 +43,7 @@ const CalendarComponent = () => {
                 onClick={() => handleTimeClick(time)}
                 style={{
                   padding: '8px 12px',
-                  backgroundColor: selectedTime === time ? '#4caf50' : '#f0f0f0',
+                  backgroundColor: selectedTime === time ? ' #FFE0B7' : '#F6F7F9',
                   border: '1px solid #ccc',
                   borderRadius: '4px',
                   cursor: 'pointer',
@@ -54,11 +54,11 @@ const CalendarComponent = () => {
             ))}
           </div>
 
-          {selectedTime && (
+          {/* {selectedTime && (
             <p style={{ marginTop: '10px', color: 'green' }}>
               ✅ 已選擇：{selectedDate.toLocaleDateString()} {selectedTime}
             </p>
-          )}
+          )} */}
         </div>
       )}
     </div>

@@ -4,6 +4,7 @@
     border: 1px solid #B6C1CA;
     background: #FFF;
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08);
+    
 }
 
 /* 日期 tile 的樣式 */
@@ -80,7 +81,25 @@
 
             border-radius: var(--Num-radius-base, 20px);
             background: #F6F7F9;
+
+            &:hover {
+                color: var(--primary, var(--primary, #FF8740));
+                text-align: center;
+                font-family: Inter;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 140%;
+                /* 21px */
+            }
         }
+
+
     }
 
+}
+
+.MyCalendar{
+   display: flex;
+  align-items: flex-start;
 }
