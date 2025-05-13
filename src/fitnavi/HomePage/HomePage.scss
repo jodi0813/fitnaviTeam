@@ -3,6 +3,7 @@
 
 
 .gradient{
+  // width: 100%;
     background: linear-gradient(
   180deg,
   #FEFCF7 27.5%,
@@ -12,17 +13,17 @@
     position: relative;
 
   margin-top: -200px; // 把白色區塊往上蓋住上面的影片
-  padding-top: 120px; // 上方留空，避免文字被切掉
-  border-top-left-radius: 100% 100px;
-  border-top-right-radius: 100% 100px;
+  // padding-top: 120px; // 上方留空，避免文字被切掉
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
   z-index: 10;
 
 }
 .homeSearchSection{
     position: relative;
   background-color: #fefcf7;
-  margin-top: -100px; // 把白色區塊往上蓋住上面的影片
-  padding-top: 120px; // 上方留空，避免文字被切掉
+  // margin-top: -100px; // 把白色區塊往上蓋住上面的影片
+  // padding-top: 120px; // 上方留空，避免文字被切掉
   border-top-left-radius: 100% 80px;
   border-top-right-radius: 100% 80px;
   z-index: 10;

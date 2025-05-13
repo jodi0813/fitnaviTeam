@@ -8,9 +8,9 @@ function HomePage() {
   return (
     <>
       <main id="homePage">
-        <section>
+        
           <HeroSection />
-        </section>
+        
         <div className="gradient">
         <section className="homeSearchSection">
           <SearchSection />
