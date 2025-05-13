@@ -236,13 +236,14 @@ a {
     left: 80%;
     top: 15rem;
     background-color: transparent;
-     z-index: 10;
+    z-index: 10;
 
-     &:hover{
+
+    &:hover {
         border: none;
-     }
+    }
 
-    
+
 
     p {
         color: var(--primary, var(--primary, #FF8740));
@@ -257,28 +258,34 @@ a {
         margin-bottom: 0px;
 
         &::before,
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    width: 40px;
-                    height: 2px;
-                    background-color: #FF8740;
-                    pointer-events: none;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 2px;
+            background-color: #FF8740;
+            pointer-events: none;
 
-                }
+        }
 
-                &::before {
-                    left: -10px;
-                    top: 30px;
-                    transform: rotate(45deg);
-                }
+        &::before {
+            left: -10px;
+            top: 30px;
+            transform: rotate(45deg);
+        }
 
-                &::after {
-                    right: -10px;
-                    top: 30px;
-                    transform: rotate(135deg);
-                }
+        &::after {
+            right: -10px;
+            top: 30px;
+            transform: rotate(135deg);
+        }
     }
 
+}
+
+.Back-to-top-button:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
 }

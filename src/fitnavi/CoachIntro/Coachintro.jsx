@@ -499,7 +499,7 @@ function Coachintro() {
                 </div>
 
 
-                <section id="comment">
+                <section id="Coach-comment">
                     <div className="commentitle">
                         <h3>學員評價</h3>
                         <h4>Rating</h4>
