@@ -47,6 +47,9 @@ function HeroSection() {
             </div>
 
 
+            {/* <div className="HeroSection-arc"></div> */}
+
+
 
 
         </section>
