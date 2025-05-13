@@ -10,7 +10,7 @@
 #spe,
 #Coach-exp-cer,
 #certificate,
-#reserve {
+#reservation1 {
   scroll-margin-top: 80px; /* 依你的 nav 高度調整 */
 }
 
@@ -44,8 +44,8 @@
             flex: 1;
 
             .coachphotos {
-                width: 60%;
-                height: 30%;
+                width: 40rem;
+                height:30rem;
 
 
                 .selfie {
@@ -63,12 +63,12 @@
                     width: 100%;
                     display: flex;
                     flex-direction: row;
-                    gap: 3%;
+                    gap: 10px;
                     margin-left: 0px;
 
                     img {
-                        width: 200px;
-                        height: 150px;
+                        width: 13rem;
+                        height: 10rem;
                         border-radius: 20px;
                     }
                 }
@@ -133,7 +133,7 @@
 
             }
 
-            .classbox {
+            .coach-classbox {
                 border-radius: 30px;
                 border: 1px solid var(--gray, #989794);
                 background: var(--white, #FEFCF7);
@@ -290,7 +290,7 @@
 
                 }
 
-                .prices-button {
+                .coach-prices-button {
                     margin-bottom: 15px;
 
                     p {
@@ -351,7 +351,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: 55%;
+    margin-top: 53%;
     margin-bottom: 0px;
     gap: 40px;
 
@@ -364,12 +364,12 @@
         font-weight: 700;
         line-height: normal;
         letter-spacing: 2px;
-        margin-bottom: 55px;
+        margin-top: 2%;
     }
 
     img {
-        width: 204px;
-        height: 112px;
+        width: 20rem;
+        height: 11rem;
         margin-bottom: 0px;
         padding: 0px;
         margin-top: 15px;
@@ -1071,99 +1071,10 @@
     }
 
 
-
-
-
-    .container {
-        display: inline-block;
-        background-color: #FEFCF7;
-        border: 1px solid #3A2C19;
-        border-radius: 35px;
-
-        margin-top: 2em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 600px;
-        height: 400px;
-
-        header {
-            margin: 20px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-
-            .header-display {
-                display: flex;
-                align-items: center;
-
-                p {
-                    color: var(--dark, #3A2C19);
-                    text-align: center;
-                    /* Typography/text-base-500 */
-                    font-family: Inter;
-                    font-size: 15px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
-                    /* 21px */
-                }
-
-
-            }
-
-            pre {
-                padding: 10px;
-                margin: 0;
-                cursor: pointer;
-                font-size: 1.2rem;
-                color: #FF8740;
-            }
-        }
-
-        .days,
-        .week {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            margin: auto;
-            padding: 0 20px;
-            justify-content: space-between;
-
-            div {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 3rem;
-                width: 3em;
-                border-radius: 100%;
-
-                &:hover {
-                    background: #FF8740;
-                    color: rgb(25, 25, 201);
-                    cursor: pointer;
-                }
-            }
-
-            .week div {
-                opacity: 0.5;
-            }
-        }
-
-    }
-
-
-    .current-date {
-        background-color: #FF8740;
-        color: #FEFCF7;
-    }
-
-    .display-selected {
-        margin-bottom: 10px;
-        padding: 20px 20px;
-        text-align: center;
-    }
+.Coach-Available-calendar{
+    margin-top: 10%;
+    align-items: center;
+}
 
 
 }
@@ -1223,12 +1134,16 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        gap: 70px;
+        gap: 10%;
 
 
         button {
             width: 48px;
             height: 48px;
+        }
+
+        .ViewArticles-left{
+            margin-right: 2%;
         }
 
         .Three-classcards {
@@ -1237,7 +1152,7 @@
             justify-content: center;
             align-items: center;
             margin-top: 80px;
-            gap: 10%;
+            gap: 5%;
         }
 
     }

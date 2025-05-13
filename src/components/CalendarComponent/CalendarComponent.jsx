@@ -7,13 +7,24 @@ const CalendarComponent = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
 
-  // 假設固定的時段
-  const availableTimes = ['10:00','10:00','10:00','10:00', '11:00', '14:00', '15:30','16:30','18:00', '20:00','20:30'];
+  // 假設可預約時間
+  const availableTimes = ['10:00','10:30','11:00','14:00','15:30','16:30','18:00','20:00','20:30'];
 
+  // 日期切換邏輯
   const handleDateChange = (newDate) => {
-    setSelectedDate(newDate);
-    setSelectedTime(null); // 切換日期時清除時間選擇
-    console.log("選擇的日期:", newDate);
+    const isSameDate =
+      selectedDate &&
+      newDate.toDateString() === selectedDate.toDateString();
+
+    if (isSameDate) {
+      // 點到同一天就收起
+      setSelectedDate(null);
+      setSelectedTime(null);
+    } else {
+      // 切換新日期
+      setSelectedDate(newDate);
+      setSelectedTime(null);
+    }
   };
 
   const handleTimeClick = (time) => {
@@ -23,7 +34,6 @@ const CalendarComponent = () => {
 
   return (
     <div className='MyCalendar'>
-      {/* <h2>預約日曆</h2> */}
       <Calendar
         onChange={handleDateChange}
         value={selectedDate}
@@ -36,14 +46,14 @@ const CalendarComponent = () => {
 
       {selectedDate && (
         <div className='selectedday-area'>
-          <div  className='selectedday-time'>
+          <div className='selectedday-time'>
             {availableTimes.map((time) => (
               <button
                 key={time}
                 onClick={() => handleTimeClick(time)}
                 style={{
                   padding: '8px 12px',
-                  backgroundColor: selectedTime === time ? ' #FFE0B7' : '#F6F7F9',
+                  backgroundColor: selectedTime === time ? '#FFE0B7' : '#F6F7F9',
                   border: '1px solid #ccc',
                   borderRadius: '4px',
                   cursor: 'pointer',
@@ -53,12 +63,6 @@ const CalendarComponent = () => {
               </button>
             ))}
           </div>
-
-          {/* {selectedTime && (
-            <p style={{ marginTop: '10px', color: 'green' }}>
-              ✅ 已選擇：{selectedDate.toLocaleDateString()} {selectedTime}
-            </p>
-          )} */}
         </div>
       )}
     </div>

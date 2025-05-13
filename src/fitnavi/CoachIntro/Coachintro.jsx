@@ -222,7 +222,7 @@ function Coachintro() {
 
                         </div>
 
-                        <div className="classbox">
+                        <div className="coach-classbox">
                             <div className="classtime">
                                 <h2>一對一訓練課程</h2>
                                 <div className="timeblock">
@@ -246,7 +246,7 @@ function Coachintro() {
                                 <p className="SingleClass">/單堂</p>
                             </div>
 
-                            <div className="prices-button">
+                            <div className="coach-prices-button">
                                 <p>10堂優惠 ：$1,400/單堂</p>
                                 <div className="price-with-button">
                                     <p>20堂優惠 ：$1,200/單堂</p>
@@ -282,9 +282,9 @@ function Coachintro() {
                                 <li><a href="#spe">專長領域</a></li>
                                 <li><a href="#Coach-exp-cer">工作經歷</a></li>
                                 <li><a href="#certificate">專業證照</a></li>
-                                <li><a href="#reserve">預約流程</a></li>
-                                <li><a href="#">教練可預約時間</a></li>
-                                <li><a href="#">發表文章</a></li>
+                                <li><a href="#reservation1">預約流程</a></li>
+                                <li><a href="reservation1">教練可預約時間</a></li>
+                                <li><a href="#coacharticle">發表文章</a></li>
                                 <li><a href="#">學員評價</a></li>
                             </ul>
                         </nav>
@@ -445,12 +445,12 @@ function Coachintro() {
                         </div>
 
 
-                        <div>
-                        <CalendarComponent/>
+                        <div className="Coach-Available-calendar">
+                            <CalendarComponent />
                         </div>
 
 
-                       
+
 
                     </div>
                 </section>
@@ -463,8 +463,10 @@ function Coachintro() {
                     </div>
 
                     <div className="ViewArticles">
-                        <button>
-                            &lt;</button>
+                        <button className="ViewArticles-left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <path d="M30 36L18 24L30 12" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></button>
 
                         <div className="Three-classcards">
                             {cardsData.map((card, index) => (
@@ -484,7 +486,9 @@ function Coachintro() {
                         </div>
 
                         <button>
-                            &gt;</button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="26" viewBox="0 0 14 26" fill="none">
+                                <path d="M1 25L13 13L1 1" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></button>
                     </div>
 
 
