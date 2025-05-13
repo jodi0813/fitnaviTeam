@@ -8,7 +8,7 @@ const CalendarComponent = () => {
   const [selectedTime, setSelectedTime] = useState(null);
 
   // 假設固定的時段
-  const availableTimes = ['10:00', '11:00', '14:00', '15:30', '20:00'];
+  const availableTimes = ['10:00','10:00','10:00','10:00', '11:00', '14:00', '15:30','16:30','18:00', '20:00','20:30'];
 
   const handleDateChange = (newDate) => {
     setSelectedDate(newDate);
@@ -35,8 +35,8 @@ const CalendarComponent = () => {
       />
 
       {selectedDate && (
-        <div className='selectedday-area' style={{ marginTop: '20px' }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }} className='selectedday-time'>
+        <div className='selectedday-area'>
+          <div  className='selectedday-time'>
             {availableTimes.map((time) => (
               <button
                 key={time}
