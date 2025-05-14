@@ -183,11 +183,11 @@ function Coachintro() {
                                 </figure>
 
                                 <figure className="moreimg2">
-                                    <img src="./images/教練輪播小圖-02.jpg" alt="" />
+                                    <img src="./images/coach-carousel-02.jpg" alt="" />
                                 </figure>
 
                                 <figure className="moreimg3">
-                                    <img src="./images/教練輪播小圖-03.jpg" alt="" />
+                                    <img src="./images/coach-carousel-03.jpg" alt="" />
                                 </figure>
 
                             </div>
@@ -258,7 +258,7 @@ function Coachintro() {
 
                         <div class="Coach-place">
                             <p>上課地點<br />可選擇</p>
-                            <div className="moreimg4">
+                            <div className="moreimg4" >
                                 <img src="/images/classplace-1.jpg" alt="" />
                                 <p>臺北市大安區Ａ健身房</p>
                             </div>
