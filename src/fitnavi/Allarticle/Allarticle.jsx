@@ -110,10 +110,9 @@ function Allarticle() {
         <>
 
         <section id='Allarticle-section'> 
-             <section className="Coachintro-header">
+             
                 <MainTitle title1="知識文章" title2="補足符合您需求的知識" className="no-line" />
-            </section>
-
+           
 
 
             <section className="Allarticle-Search">

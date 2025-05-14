@@ -163,10 +163,10 @@ function Coachintro() {
 
         <>
             <main id="Coachintro">
-                <section className="Coachintro-header">
+                
                     <MainTitle title1="加入我們" title2="成為我們的合作夥伴" className="no-line" />
                     <button>首頁&gt;健身教練&gt;張俐筠 Lila</button>
-                </section>
+              
 
                 <button className="BacktoPage">&lt;返回列表</button>
 

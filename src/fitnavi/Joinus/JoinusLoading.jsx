@@ -5,30 +5,32 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function JoinusLoading() {
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     useEffect(() => {
         const timer = setTimeout(() => {
-          navigate('/JoinusSuccess');
+            navigate('/JoinusSuccess');
         }, 3000); // 10秒
-    
+
         return () => clearTimeout(timer); // 清理 timer 避免記憶體洩漏
-      }, [navigate]);
-    
+    }, [navigate]);
+
 
     return (
         <>
-            <section className="JoinusLoading-header">
+            <section  id='Joinus-Loading'>
                 <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
-            </section>
 
-            <div className='Loading'> 
-                <div className="host">
-                    <p>送出表單中</p>
-                    <div className="loading loading-0"></div>
-                    <div className="loading loading-1"></div>
-                    <div className="loading loading-2"></div>
+
+                <div className='Loading'>
+                    <div className="host">
+                        <p>送出表單中</p>
+                        <div className="loading loading-0"></div>
+                        <div className="loading loading-1"></div>
+                        <div className="loading loading-2"></div>
+                    </div>
                 </div>
-            </div>
+
+            </section>
         </>
 
     )

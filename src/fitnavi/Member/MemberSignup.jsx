@@ -7,7 +7,9 @@ function MemberSignup() {
     const navigate=useNavigate();
     return (
         <>
-            <div className="MemberSignup-wrapper">
+
+        <section id='MemberSignup-form'> 
+             <div className="MemberSignup-wrapper">
                 <form action="" className='MemberSignup-form'>
                     <div className="MemberSignup-title">註冊會員</div>
 
@@ -67,7 +69,7 @@ function MemberSignup() {
 
                     <div className='MemberSignup-option'>
                         <button className="Alreadyhavepassword">已經有帳號？</button>
-                        <button className="Returntologin">回到登入頁面</button>
+                        <button className="Returntologin" onClick={()=>navigate('/MemberLogin')}>回到登入頁面</button>
                     </div>
 
 
@@ -76,6 +78,8 @@ function MemberSignup() {
                 </form>
 
             </div>
+        </section>
+           
 
         </>
     )
