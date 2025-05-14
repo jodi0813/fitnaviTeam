@@ -4,6 +4,7 @@ import MainTitle from "../../components/Title/MainTitle";
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
 import Articlecards from '../../components/Articlecards';
+import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
 
 
 
@@ -154,10 +155,10 @@ function NutriIntro() {
 
         <>
             <main id="Nutriintro">
-                <section className="Nutriintro-header">
-                    <MainTitle title1="加入我們" title2="成為我們的合作夥伴" className="no-line" />
-                    <button>首頁&gt;營養師&gt; 安娜 Anna</button>
-                </section>
+
+                <MainTitle title1="營養師" title2="找到專屬您的營養師" className="no-line" />
+                <button>首頁&gt;營養師&gt; 安娜 Anna</button>
+
 
                 <button className="BacktoPage">&lt;返回列表</button>
 
@@ -209,7 +210,7 @@ function NutriIntro() {
                                     )}
                                 </button>
                             </div>
-                            <p>＃營養配方#運動營養品＃飲食建議＃減脂規劃</p>
+                            <p>＃運動員營養#減脂瘦身＃營養配方＃飲食建議</p>
 
                         </div>
 
@@ -399,7 +400,7 @@ function NutriIntro() {
                 </section>
 
                 <section id="Nutri-reservation">
-                    <div className="Nutri-reservation-wrapper">
+                  
                         <div className="reserve">
                             <div className="restitle">
                                 <h3>預約流程</h3>
@@ -438,35 +439,8 @@ function NutriIntro() {
                             </div>
 
 
-                            <div className="calendar-body">
-                                <div class="container">
-                                    <div class="calendar">
-                                        <header>
-                                            <pre class="left">←</pre>
-
-                                            <div class="header-display">
-                                                <p class="display">""</p>
-                                            </div>
-
-                                            <pre class="right">→</pre>
-
-                                        </header>
-
-                                        <div class="week">
-                                            <div>Su</div>
-                                            <div>Mo</div>
-                                            <div>Tu</div>
-                                            <div>We</div>
-                                            <div>Th</div>
-                                            <div>Fr</div>
-                                            <div>Sa</div>
-                                        </div>
-                                        <div class="days"></div>
-                                    </div>
-                                    <div class="display-selected">
-                                        <p class="selected"></p>
-                                    </div>
-                                </div>
+                            <div className="Nutri-Available-calendar">
+                                <CalendarComponent />
                             </div>
 
 
@@ -474,7 +448,7 @@ function NutriIntro() {
                         </div>
 
 
-                    </div>
+                  
 
 
 
@@ -590,7 +564,7 @@ function NutriIntro() {
                     </div>
 
 
-                
+
                 </section >
             </main >
 

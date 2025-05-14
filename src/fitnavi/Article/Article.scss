@@ -2,12 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
 #card9 {
-  margin-top: 100px;
+  padding-top: 120px;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 100%;
 }
 
- #Article-content,#phase3{
-   scroll-margin-top: 80px;
- }
+#Article-content,
+#phase3,#phase4,#phase5,#phase6 {
+  scroll-margin-top: 80px;
+}
 
 
 .Coachintro-header {
@@ -145,9 +149,9 @@
 
 .phase2.content,
 .phase3.content .phase3img,
-.phase4.content1,
-.phase4.content2,
-.phase4.content3 {
+#phase4.content1,
+#phase4.content2,
+#phase4.content3 {
   display: inline-block;
   width: 40%;
   /* 設定相同的寬度 */
@@ -352,7 +356,7 @@
 
 }
 
-.phase4 {
+#phase4 {
   display: flex;
   flex-direction: row;
   margin-top: 70px;
@@ -391,7 +395,7 @@
   }
 }
 
-.phase5 {
+#phase5 {
   display: flex;
   flex-direction: row;
   margin-top: 70px;
@@ -430,7 +434,7 @@
   }
 }
 
-.phase6 {
+#phase6 {
   display: flex;
   flex-direction: row;
   margin-top: 70px;
