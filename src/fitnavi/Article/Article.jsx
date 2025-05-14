@@ -58,8 +58,8 @@ function Article() {
                             </div>
 
                             <div className="table">
-                                <a href="">●為什麼需要區分增肌與減脂？<br /></a>
-                                <a href="">●該先增肌還是先減脂？這樣判斷最有效<br /></a>
+                                <a href=" #Article-content">●為什麼需要區分增肌與減脂？<br /></a>
+                                <a href="#phase3">●該先增肌還是先減脂？這樣判斷最有效<br /></a>
                                 <a href="">●訓練與飲食策略建議<br /></a>
                                 <a href="">●體態重組：是否能同時增肌與減脂？<br /></a>
                                 <a href="">●正確順序，提升效率</a>
@@ -67,7 +67,7 @@ function Article() {
 
                         </div>
 
-                        <div className="article-content">
+                        <div id="Article-content">
                             <h3>為什麼需要區分增肌與減脂？</h3>
                             <p>增肌（Muscle Gain）與減脂（Fat Loss）是兩個方向不同的身體改變目標：
                                 增肌需要熱量盈餘與充足蛋白質，以支持肌肉合成。
@@ -88,7 +88,7 @@ function Article() {
                     </div>
 
                     {/* <!-- 文章內容，包含圖片文字 --> */}
-                    <div className="phase3">
+                    <div id="phase3">
                         <div></div>
                         <div className="content">
                             <h3>該先增肌還是先減脂？這樣判斷最有效</h3>
