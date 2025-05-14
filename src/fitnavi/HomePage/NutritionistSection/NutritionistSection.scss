@@ -122,14 +122,15 @@
       display: flex;
       flex-direction: column;
 
-          .home-nutritionist-img {
-      position: absolute;
-      width: 30%;
-      bottom: 150px;
-      right: -150px;
+      .home-nutritionist-img {
+        position: absolute;
+        width: 30%;
+        bottom: 150px;
+        right: -150px;
 
 
-    }
+      }
+
       .home-nutritionist-titleCh {
         text-align: center;
         -webkit-text-stroke-width: 1px;
@@ -179,6 +180,12 @@
         border-radius: 999px;
         border: 1px solid #ff8740;
         background: #fff;
+
+        &:hover {
+          background: #ff8740;
+          color: #fff;
+          opacity: 1;
+        }
       }
     }
   }

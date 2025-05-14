@@ -215,6 +215,11 @@
         border-radius: 999px;
         border: 1px solid #ff8740;
         background: #fff;
+                      &:hover {
+                background: #ff8740;
+                color: #fff;
+                opacity: 1;
+              }
       }
     }
   }

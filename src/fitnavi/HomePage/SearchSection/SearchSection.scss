@@ -137,8 +137,14 @@
               font-style: normal;
               font-weight: 700;
               line-height: 150%;
-              /* 27px */
+
+              &:hover {
+                background: #ff8740;
+                color: #fff;
+                opacity: 1;
+              }
             }
+
           }
 
           .home-search-bottom {
