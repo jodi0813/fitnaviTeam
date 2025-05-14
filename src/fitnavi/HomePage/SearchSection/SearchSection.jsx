@@ -1,5 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import "./SearchSection.scss";
+import { cities, taipeiDistricts } from "../../../data/locations";
 function SearchSection() {
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    const selectedCity = document.getElementById("home-city")?.value || "";
+    const selectedArea = document.getElementById("home-area")?.value || "";
+    navigate(`/centerMap?city=${encodeURIComponent(selectedCity)}&area=${encodeURIComponent(selectedArea)}`);
+  };
+
   return (
     <>
       <div className="home-search">
@@ -21,16 +31,23 @@ function SearchSection() {
                 />
               </div>
               <div className="home-search-dropdowns">
-
                 <div className="home-search-dropdowns1">
-                  <select>
-                  <option>請選擇縣市</option>
-                </select>
-                  <select>
-                    <option>請選擇鄉鎮市區</option>
+                  <select id="home-city">
+
+                    {cities.map((city) => (
+                      <option key={city} value={city}>{city}</option>
+                    ))}
+                  </select>
+                  <select id="home-area">
+
+                    {taipeiDistricts.map((taipeiDistrict) => (
+                      <option key={taipeiDistrict} value={taipeiDistrict}>{taipeiDistrict}</option>
+                    ))}
                   </select>
                 </div>
-                <button className="home-search-button">搜尋</button>
+                <button className="home-search-button" onClick={handleSearch}>
+                  搜尋
+                </button>
               </div>
             </div>
           </div>
