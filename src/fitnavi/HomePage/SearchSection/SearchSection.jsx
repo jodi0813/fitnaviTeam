@@ -21,18 +21,15 @@ function SearchSection() {
                 />
               </div>
               <div className="home-search-dropdowns">
-                <select>
+
+                <div className="home-search-dropdowns1">
+                  <select>
                   <option>請選擇縣市</option>
                 </select>
-                <select>
-                  <option>請選擇鄉鎮市區</option>
-                </select>
-                <select>
-                  <option>請選擇路/街/道</option>
-                </select>
-                <select>
-                  <option>場地特色</option>
-                </select>
+                  <select>
+                    <option>請選擇鄉鎮市區</option>
+                  </select>
+                </div>
                 <button className="home-search-button">搜尋</button>
               </div>
             </div>

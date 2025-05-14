@@ -1,7 +1,8 @@
 @use "../../reset.scss";
+
 .home-search {
   // padding: 191px 118px;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,6 +18,7 @@
     line-height: 40px;
     letter-spacing: 9.6px;
   }
+
   .home-search-section {
     display: flex;
     gap: 48px;
@@ -30,11 +32,13 @@
       box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.15);
       width: 578px;
       height: 516px;
+
       .home-search-titleBox {
         display: flex;
         align-items: flex-end;
         gap: 32px;
         margin: 36px;
+
         .home-search-title {
           color: #ff8740;
           font-family: "Noto Sans TC";
@@ -44,6 +48,7 @@
           line-height: normal;
           letter-spacing: 3.2px;
         }
+
         .home-search-titleEn {
           color: #ff8740;
           font-family: "Noto Sans TC";
@@ -53,30 +58,42 @@
           line-height: normal;
         }
       }
+
       .home-search-main {
         display: flex;
         justify-content: flex-end;
         margin-right: 50px;
+
         .home-search-button {
           border-radius: 999px;
           background: #ff8740;
           color: #fefcf7;
           width: 100%;
         }
+
         img {
           position: absolute;
           left: -30px;
           bottom: 60px;
         }
+
         .home-search-illustration {
           width: 300px;
         }
+
         .home-search-dropdowns {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           gap: 30px;
           height: 330px;
+
+          .home-search-dropdowns1 {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+          }
+
           select {
             display: flex;
             width: 300px;
@@ -96,16 +113,18 @@
             line-height: 140%;
             letter-spacing: 1.4px;
           }
+
           .home-search-toggleBt {
             display: flex;
             gap: 8px;
+
             button {
               display: flex;
               height: 40px;
               padding: 12px 36px;
               justify-content: center;
               align-items: center;
-            
+
               flex: 1;
               border-radius: 99px;
               border: 1px solid #ff8740;
@@ -117,9 +136,11 @@
               font-size: 18px;
               font-style: normal;
               font-weight: 700;
-              line-height: 150%; /* 27px */
+              line-height: 150%;
+              /* 27px */
             }
           }
+
           .home-search-bottom {
             display: flex;
             flex-direction: column;
