@@ -2,6 +2,7 @@ import "./Coach.scss";
 import CoachCard from "../../components/CoachCard";
 import MainTitle from "../../components/Title/MainTitle";
 import { cities, taipeiDistricts } from "../../data/locations";
+import { trainingOptions } from "../../data/hashtag";
 function Coach() {
   const coachList = [
     {
@@ -100,8 +101,9 @@ function Coach() {
             <label htmlFor="trainingNeeds"></label>
             <select name="trainingNeeds" id="trainingNeeds">
               <option value="">訓練需求</option>
-              <option value=""></option>
-              <option value=""></option>
+                {trainingOptions.map((training) => (
+                  <option key={training} value={training}>{training}</option>
+                ))}
             </select>
             <label htmlFor="sex"></label>
             <select name="sex" id="sex">
