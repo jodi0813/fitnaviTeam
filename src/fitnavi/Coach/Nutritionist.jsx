@@ -1,6 +1,8 @@
 import "./Coach.scss";
 import CoachCard from "../../components/CoachCard";
 import MainTitle from "../../components/Title/MainTitle";
+import { cities, taipeiDistricts } from "../../data/locations";
+import { nutritionOptions } from "../../data/hashtag";
 function Nutritionist() {
   const nutritionistList = [
     {
@@ -70,8 +72,8 @@ function Nutritionist() {
   return (
     <>
       <div id="coachMain">
-        <MainTitle title1="營養師" title2="找到專屬你的營養師"/>
-         <div className="searchBox">
+        <MainTitle title1="營養師" title2="找到專屬你的營養師" />
+        <div className="searchBox">
           <form
             action=""
             method="post"
@@ -81,15 +83,17 @@ function Nutritionist() {
           >
             <label htmlFor="area"></label>
             <select name="area" id="area">
-              <option value="">地區</option>
-              <option value="台北市">台北市</option>
-              <option value="新北市">新北市</option>
+              <option value="">請選擇縣市</option>
+              {cities.map((city) => (
+                <option key={city} value={city}>{city}</option>
+              ))}
             </select>
             <label htmlFor="trainingNeeds"></label>
             <select name="trainingNeeds" id="trainingNeeds">
               <option value="">諮詢需求</option>
-              <option value=""></option>
-              <option value=""></option>
+              {nutritionOptions.map((nutrition) => (
+                <option key={nutrition} value={nutrition}>{nutrition}</option>
+              ))}
             </select>
             <label htmlFor="sex"></label>
             <select name="sex" id="sex">

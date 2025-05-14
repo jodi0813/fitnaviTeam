@@ -33,13 +33,13 @@ function SearchSection() {
               <div className="home-search-dropdowns">
                 <div className="home-search-dropdowns1">
                   <select id="home-city">
-
+                    <option value="">請選擇縣市</option>
                     {cities.map((city) => (
                       <option key={city} value={city}>{city}</option>
                     ))}
                   </select>
                   <select id="home-area">
-
+                    <option value="">請選擇地區</option>
                     {taipeiDistricts.map((taipeiDistrict) => (
                       <option key={taipeiDistrict} value={taipeiDistrict}>{taipeiDistrict}</option>
                     ))}
