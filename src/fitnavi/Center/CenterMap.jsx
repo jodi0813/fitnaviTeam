@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./CenterMap.scss";
 import MainTitle from "../../components/Title/MainTitle";
+import { cities, taipeiDistricts } from "../../data/locations";
 
 
 function CenterMap() {
@@ -108,11 +109,7 @@ function CenterMap() {
       features: updatedFeatures,
     });
   };
-  const cities = [
-    "基隆市", "台北市", "新北市", "桃園市", "新竹市", "新竹縣", "苗栗縣", "台中市",
-    "彰化縣", "南投縣", "雲林縣", "嘉義市", "嘉義縣", "台南市", "高雄市", "屏東縣",
-    "宜蘭縣", "花蓮縣", "台東縣", "澎湖縣", "金門縣", "連江縣"
-  ];
+
   return (
     <div id="centerMapMain">
       <MainTitle title1="找場地" title2="找到專屬你的健身場地" />
@@ -136,8 +133,9 @@ function CenterMap() {
                 onChange={(e) => setSearchData({ ...searchData, city: e.target.value })}
               >
                 <option value="">請選擇縣市</option>
-                <option value="台北市">台北市</option>
-                <option value="新北市">新北市</option>
+                {cities.map((city) => (
+                  <option key={city} value={city}>{city}</option>
+                ))}
               </select>
 
               <label htmlFor="area">地區</label>
@@ -147,10 +145,9 @@ function CenterMap() {
                 onChange={(e) => setSearchData({ ...searchData, area: e.target.value })}
               >
                 <option value="">請選擇地區</option>
-                <option value="大安區">大安區</option>
-                <option value="板橋區">板橋區</option>
-                <option value="信義區">信義區</option>
-                <option value="新店區">新店區</option>
+                    {taipeiDistricts.map((taipeiDistrict) => (
+                      <option key={taipeiDistrict} value={taipeiDistrict}>{taipeiDistrict}</option>
+                    ))}
               </select>
             </div>
 

@@ -1,6 +1,7 @@
 import "./Coach.scss";
 import CoachCard from "../../components/CoachCard";
 import MainTitle from "../../components/Title/MainTitle";
+import { cities, taipeiDistricts } from "../../data/locations";
 function Nutritionist() {
   const nutritionistList = [
     {
@@ -81,9 +82,10 @@ function Nutritionist() {
           >
             <label htmlFor="area"></label>
             <select name="area" id="area">
-              <option value="">地區</option>
-              <option value="台北市">台北市</option>
-              <option value="新北市">新北市</option>
+                <option value="">請選擇縣市</option>
+                {cities.map((city) => (
+                  <option key={city} value={city}>{city}</option>
+                ))}
             </select>
             <label htmlFor="trainingNeeds"></label>
             <select name="trainingNeeds" id="trainingNeeds">
