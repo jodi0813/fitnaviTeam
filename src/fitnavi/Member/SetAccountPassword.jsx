@@ -15,8 +15,7 @@ function SetAccountPassword() {
                         <label htmlFor="">輸入帳號</label>
                         <input type="text" />
                         <label htmlFor="">輸入密碼</label>
-                        <input type="text" placeholder='密碼組合為英數字混合之8位數以上字元
-'/>
+                        <input type="text" placeholder='密碼組合為英數字混合之8位數以上字元'/>
                         <button onClick={()=>navigate('/SignupSuccess')}>立即加入</button>
                     </div>
 

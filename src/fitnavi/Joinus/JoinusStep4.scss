@@ -6,14 +6,21 @@
     src: url(../../assets/MantouSans-Regular.ttf);
 }
 
+#JoinusStep4-Form {
+    padding: 120px 50px;
+    max-width: 100vw;
+}
+
 .CoachJoinus-Step4-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; // 讓它垂直滿版置中
-    margin-top: 10%;
+
 
     .CoachJoinus-Step4 {
+        position: relative;
+        top: -10%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -33,7 +40,7 @@
         .JoinusStep4-title {
             display: flex;
             flex-direction: row;
-            gap: 60px;
+            gap: 50px;
             margin-bottom: 40px;
             border-bottom: 1px solid #3a2c19;
             width: 450px;

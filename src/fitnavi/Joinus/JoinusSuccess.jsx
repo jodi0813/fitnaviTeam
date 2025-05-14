@@ -8,9 +8,9 @@ function JoinusSuccess() {
     const navigate=useNavigate();
     return (
         <>
-            <section className="JoinusStep4-header">
+            <section id='Joinus-Success'> 
                 <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
-            </section>
+          
 
 
             <div className='Joinus-wrapper'>
@@ -29,6 +29,8 @@ function JoinusSuccess() {
                     </div>
                 </div>
             </div>
+
+            </section>
 
 
 

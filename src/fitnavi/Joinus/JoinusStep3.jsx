@@ -7,9 +7,10 @@ function JoinusStep3() {
     const navigate = useNavigate();
     return (
         <>
-            <section className="JoinusLoading-header">
-                <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
-            </section>
+
+        <section id='JoinusStep3-Form'>
+             <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
+        
 
 
             <div className='CoachJoinus-Step3-wrapper'>
@@ -133,6 +134,10 @@ function JoinusStep3() {
                 </form>
 
             </div>
+
+        </section>
+           
+               
 
         </>
     )
