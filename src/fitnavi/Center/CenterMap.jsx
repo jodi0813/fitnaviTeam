@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./CenterMap.scss";
 import MainTitle from "../../components/Title/MainTitle";
-import { useState } from "react";
+
 
 function CenterMap() {
+  const location = useLocation();
   // 定義搜尋欄位的狀態，包括場館名稱、縣市、地區與勾選的功能列表
   const [searchData, setSearchData] = useState({
     name: "",
@@ -11,6 +13,17 @@ function CenterMap() {
     area: "",
     features: [],
   });
+  // 如果來自其他頁面有帶 query 參數，自動設進狀態
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const city = params.get("city") || "";
+    const area = params.get("area") || "";
+    setSearchData((prev) => ({ ...prev, city, area }));
+  }, [location.search]);
+  //首頁跳轉過來要顯示在最上面
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // 模擬健身房資料，每間健身房都有自己的圖片路徑 img
   const gyms = [
