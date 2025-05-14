@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./TrainerSection.scss";
+import { Link } from "react-router-dom";
 function TrainerSection() {
   const [focusIndex, setFocusIndex] = useState(0);
   const trainerList = [
@@ -85,7 +86,7 @@ function TrainerSection() {
           </div>
           <div className="home-trainer-button">
             <button>成為合作教練</button>
-            <button>查看更多教練</button>
+           <Link to="/coach"> <button>查看更多教練</button></Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./NutritionistSection.scss";
+import { Link } from "react-router-dom";
 function NutritionistSection() {
   const [focusIndex, setFocusIndex] = useState(0);
   const nutritionistList = [
@@ -69,7 +70,8 @@ function NutritionistSection() {
         <div className="home-nutritionist-footer">
           <div className="home-nutritionist-button">
             <button>成為合作營養師</button>
-            <button>查看更多營養師</button>
+            <Link to="/nutritionist">
+            <button>查看更多營養師</button></Link>
           </div>
 
           <div className="home-nutritionist-title">
