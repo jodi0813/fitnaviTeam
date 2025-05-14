@@ -6,18 +6,15 @@ import { useNavigate } from 'react-router-dom';
 function Article() {
     // const { id } = useParams();
     // const article = cardsData.find(card => card.id === id); 
-    const navigate=useNavigate();  
+    const navigate = useNavigate();
 
     return (
         <>
 
             <main id="card9">
-                <section className="Coachintro-header">
-                    <MainTitle title1="加入我們" title2="成為我們的合作夥伴" className="no-line" />
-                    <button>
-                        <h3>知識文章 營養調配 文章內頁</h3>
-                    </button>
-                </section>
+
+                <MainTitle title1="加入我們" title2="成為我們的合作夥伴" className="no-line" />
+
                 {/* <!-- banner區域 --> */}
                 <section className="article-banner">
                     <button className="backbutton">返回列表</button>
@@ -60,9 +57,9 @@ function Article() {
                             <div className="table">
                                 <a href=" #Article-content">●為什麼需要區分增肌與減脂？<br /></a>
                                 <a href="#phase3">●該先增肌還是先減脂？這樣判斷最有效<br /></a>
-                                <a href="">●訓練與飲食策略建議<br /></a>
-                                <a href="">●體態重組：是否能同時增肌與減脂？<br /></a>
-                                <a href="">●正確順序，提升效率</a>
+                                <a href="#phase4">●訓練與飲食策略建議<br /></a>
+                                <a href="#phase5">●體態重組：是否能同時增肌與減脂？<br /></a>
+                                <a href="#phase6">●正確順序，提升效率</a>
                             </div>
 
                         </div>
@@ -106,7 +103,7 @@ function Article() {
                     </div>
 
 
-                    <div className="phase4">
+                    <div id="phase4">
                         <div></div>
                         <div className="content1">
                             <h3>訓練與飲食策略建議</h3>
@@ -122,7 +119,7 @@ function Article() {
                         <div></div>
                     </div>
 
-                    <div className="phase5">
+                    <div id="phase5">
                         <div></div>
                         <div className="content2">
                             <h3>體態重組：是否能同時增肌與減脂？</h3>
@@ -136,7 +133,7 @@ function Article() {
                         <div></div>
                     </div>
 
-                    <div className="phase6">
+                    <div id="phase6">
                         <div></div>
                         <div className="content3">
                             <h3>正確順序，提升效率</h3>
@@ -153,29 +150,29 @@ function Article() {
 
 
                 <section>
-                <div className="bottom">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1002" height="2" viewBox="0 0 1002 2" fill="none">
-                        <path d="M1 1L1001 1" stroke="var(--dark, #3A2C19)" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                    <div className="bottomcontent">
-                        <div className="hashtag">
-                            <p>#標籤</p>
-                            <p>#標籤</p>
-                            <p>#標籤</p>
-                            <p>#標籤</p>
-                            <p>#標籤</p>
-                        </div>
+                    <div className="bottom">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1002" height="2" viewBox="0 0 1002 2" fill="none">
+                            <path d="M1 1L1001 1" stroke="var(--dark, #3A2C19)" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <div className="bottomcontent">
+                            <div className="hashtag">
+                                <p>#標籤</p>
+                                <p>#標籤</p>
+                                <p>#標籤</p>
+                                <p>#標籤</p>
+                                <p>#標籤</p>
+                            </div>
 
-                        <div className="button">
-                            <button className="bottombutton" onClick={()=>{navigate('/Allarticle');window.scrollTo(0, 0);}}>←返回上一頁</button>
+                            <div className="button">
+                                <button className="bottombutton" onClick={() => { navigate('/Allarticle'); window.scrollTo(0, 0); }}>←返回上一頁</button>
+                            </div>
+
                         </div>
 
                     </div>
 
-                </div>
-
-            </section>
-        </main >
+                </section>
+            </main >
 
         </>
     )
