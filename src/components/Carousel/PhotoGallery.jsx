@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 
 const images = [
-  "./images/01.jpg",
-  "./images/02.jpg",
-  "./images/03.jpg",
-  "./images/04.jpg",
-  "./images/05.jpg",
+  "./images/coach.jpg",
+  "./images/coach-carousel-01.jpg",
+  "./images/coach-carousel-02.jpg",
+  "./images/coach-carousel-03.jpg",
+  "./images/coach-carousel-04.jpg",
 ];
 
 const PhotoGallery = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // 取出 activeIndex 開始的 3 張小圖，確保不超過陣列長度
   const getThumbnails = () => {
     if (activeIndex <= 1) return images.slice(0, 3);
     if (activeIndex >= images.length - 1) return images.slice(-3);
@@ -28,6 +27,8 @@ const PhotoGallery = () => {
         />
       </div>
 
+
+
       <div style={styles.thumbnailWrapper}>
         {getThumbnails().map((img, index) => {
           const actualIndex = images.indexOf(img);
@@ -39,12 +40,34 @@ const PhotoGallery = () => {
               onClick={() => setActiveIndex(actualIndex)}
               style={{
                 ...styles.thumbnail,
-                border: actualIndex === activeIndex ? "2px solid #007bff" : "2px solid transparent",
+                border:
+                  actualIndex === activeIndex
+                    ? "2px solid #007bff"
+                    : "2px solid transparent",
               }}
             />
           );
         })}
       </div>
+
+      <div style={styles.turnButton}>
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveIndex(index)}
+            style={{
+              ...styles.dotButton,
+              // backgroundColor: activeIndex === index ? "#007bff" : "transparent",
+            }}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <circle cx="5" cy="5" r="5" fill="#989794" />
+            </svg>
+          </button>
+        ))}
+      </div>
+
+
     </div>
   );
 };
@@ -56,25 +79,41 @@ const styles = {
   },
   mainImageWrapper: {
     marginBottom: "20px",
+
   },
   mainImage: {
-    width: "400px",
-    height: "300px",
+    width: "35rem",
+    height: "40rem",
     objectFit: "cover",
-    borderRadius: "8px",
+    borderRadius: "20px",
     boxShadow: "0 0 8px rgba(0,0,0,0.2)",
+  },
+  turnButton: {
+    marginBottom: "20px",
+    display: "flex",
+    justifyContent: "center",
+    gap: "8px",
+  },
+  dotButton: {
+    fontSize: "24px",
+    border: "none",
+    cursor: "pointer",
+    padding: "4px",
+    borderRadius: "50%",
+    transition: "background-color 0.3s",
   },
   thumbnailWrapper: {
     display: "flex",
-    justifyContent: "center",
-    gap: "10px",
+    justifyContent: "flex-start",
+    gap: "2rem",
   },
   thumbnail: {
-    width: "100px",
-    height: "75px",
+    width: "10rem",
+    height: "10rem",
+    borderRadius: "20px",
     objectFit: "cover",
     cursor: "pointer",
-    borderRadius: "4px",
+    borderRadius: "20px",
     transition: "border 0.3s",
   },
 };
