@@ -1,5 +1,5 @@
 export const trainingOptions = [
-    "全部類別",
+
     "減脂瘦身",
     "增肌塑形",
     "基礎體能",
@@ -21,7 +21,7 @@ export const trainingOptions = [
 
 
 export const nutritionOptions = [
-    "全部類別",
+
     "減脂瘦身",
     "增肌增重",
     "體態維持",
