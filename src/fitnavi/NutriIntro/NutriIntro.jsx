@@ -275,7 +275,7 @@ function NutriIntro() {
 
                 <section className="nav-nav-content">
                     <div className="Nutrinav">
-                        <nav className="intro">
+                        <nav className="Nutri-intro">
                             <ul>
                                 <li><a href="#aboutNutri">關於營養師</a></li>
                                 <li><a href="#spefield">專長領域</a></li>
