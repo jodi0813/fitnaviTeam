@@ -3,11 +3,13 @@ import Articlecards from '../../components/Articlecards';
 import "./AllArticle.scss";
 import { useNavigate } from 'react-router-dom';
 import MainTitle from "../../components/Title/MainTitle";
+// import Pagination from "../../components/Pagination/Pagination";
 
 
 function Allarticle() {
 
     // const { id } = useParams();
+    //   const [currentPage, setCurrentPage] = useState(0);
     const navigate = useNavigate();
     const cardsData = [
 
@@ -66,7 +68,7 @@ function Allarticle() {
             img: "./images/article-6.jpg",
             title: "每天10分鐘，伸展放鬆身體提升柔軟度",
             content: "很多人運動後忽略伸展，導致肌肉僵硬或拉傷。伸展不僅能放鬆肌肉，還有助於預防運動傷害。學會正確的伸展技巧，讓你的運動效果事半功倍。",
-            tags: ["運動傷害妨害", "放鬆肌肉"],
+            tags: ["伸展運動", "放鬆肌肉"],
             category: "伸展放鬆"
         },
         {
@@ -109,108 +111,103 @@ function Allarticle() {
     return (
         <>
 
-        <section id='Allarticle-section'> 
-             
+            <section id='Allarticle-section'>
+
                 <MainTitle title1="知識文章" title2="補足符合您需求的知識" className="no-line" />
-           
-
-
-            <section className="Allarticle-Search">
-                <button className='Coach-Button'>健身教練</button>
-                <button className='Nutriton-Button'>營養師</button>
-                <input type="text" className='Search-Button' placeholder='關鍵字搜尋' />
-                <button className='ClickSearch-Button'>搜尋</button>
-            </section>
 
 
 
-            <section className="Allarticle-content">
-                <div className="cat-tag">
-                    <div className="cat-tag-title">
-                        <p>Categories</p>
-                    </div>
+                <section className="Allarticle-Search">
+                    <button className='Coach-Button'>健身教練</button>
+                    <button className='Nutriton-Button'>營養師</button>
+                    <input type="text" className='Search-Button' placeholder='關鍵字搜尋' />
+                    <button className='ClickSearch-Button'>搜尋</button>
+                </section>
 
-                    <div className="Cat-name">
-                        <p>健身入門</p>
-                        <p>重量訓練</p>
-                        <p>燃脂運動</p>
-                        <p>肌力提升</p>
-                        <p>體態雕塑</p>
-                        <p>伸展放鬆</p>
-                        <p>減脂攻略</p>
-                        <p>增肌飲食</p>
-                        <p>營養調配</p>
-                    </div>
 
-                    <div className="Tag">
-                        <div className='TagName'>
-                            <h4>#HashTag</h4>
+
+                <section className="Allarticle-content">
+                    <div className="cat-tag">
+                        <div className="cat-tag-title">
+                            <p>Categories</p>
                         </div>
 
-                        <p>新手健身</p>
-                        <p>迷思破解</p>
-                        <p>養成習慣</p>
-                        <p>重訓</p>
-                        <p>燃脂</p>
-                        <p>HIIT訓練</p>
-                        <p>放鬆肌肉</p>
-                        <p>力量突破</p>
-                        <p>肌力提升</p>
-                        <p>曲線雕塑</p>
-                        <p>瘦身攻略</p>
-                        <p>體態</p>
-                        <p>減脂</p>
-                        <p>健康飲食</p>
-                        <p>增肌</p>
-                        <p>蛋白質補充</p>
-                        <p>健身營養</p>
-                        <p>飲食</p>
+                        <div className="Cat-name">
+                            <p>健身入門</p>
+                            <p>重量訓練</p>
+                            <p>燃脂運動</p>
+                            <p>肌力提升</p>
+                            <p>體態雕塑</p>
+                            <p>伸展放鬆</p>
+                            <p>減脂攻略</p>
+                            <p>增肌飲食</p>
+                            <p>營養調配</p>
+                        </div>
+
+                        <div className="Tag">
+                            <div className='TagName'>
+                                <h4>#HashTag</h4>
+                            </div>
+
+                            <p>新手健身</p>
+                            <p>迷思破解</p>
+                            <p>養成習慣</p>
+                            <p>重訓</p>
+                            <p>燃脂</p>
+                            <p>HIIT訓練</p>
+                            <p>放鬆肌肉</p>
+                            <p>力量突破</p>
+                            <p>肌力提升</p>
+                            <p>曲線雕塑</p>
+                            <p>瘦身攻略</p>
+                            <p>體態</p>
+                            <p>減脂</p>
+                            <p>健康飲食</p>
+                            <p>增肌</p>
+                            <p>蛋白質補充</p>
+                            <p>健身營養</p>
+                            <p>飲食</p>
+                        </div>
                     </div>
-                </div>
 
-                <div className='Allarticle-cards'>
-                    <div className="Allarticle-cards-title">
-                        <p>Articles</p>
-                        <h4>燃脂運動</h4>
+                    <div className='Allarticle-cards'>
+                        <div className="Allarticle-cards-title">
+                            <p>Articles</p>
+                            <h4>燃脂運動</h4>
+                        </div>
+
+
+
+                        <div className="Allarticle-Card-article">
+                            {cardsData.map((card, index) => (
+
+                                <Articlecards
+                                    key={index}
+                                    date={card.date}
+                                    img={card.img}
+                                    title={card.title}
+                                    content={card.content}
+                                    tags={card.tags}
+                                    category={card.category}
+                                    className={`card${index + 1}`}
+                                    onClick={() => navigate(`/article/${card.id}`)}
+                                />
+                            ))}</div>
                     </div>
+                </section>
 
 
+                {/* <div class="pagination">
 
-                    <div className="Allarticle-Card-article">
-                        {cardsData.map((card, index) => (
-
-                            <Articlecards
-                                key={index}
-                                date={card.date}
-                                img={card.img}
-                                title={card.title}
-                                content={card.content}
-                                tags={card.tags}
-                                category={card.category}
-                                className={`card${index + 1}`}
-                                onClick={() => navigate(`/article/${card.id}`)}
-                            />
-                        ))}</div>
-                </div>
+                    <Pagination
+                        pageCount={pageCount}
+                        currentPage={currentPage}
+                        onPageChange={setCurrentPage}
+                    />
+                </div> */}
             </section>
 
 
-            <div class="pagination">
-                <button className="pre-button">	&laquo;</button>
-                <button className="page-button" onClick="goToPage(1)">1</button>
-                <button className="page-button" onClick="goToPage(2)">2</button>
-                <button className="page-button" onClick="goToPage(3)">3</button>
-                <button className="page-button" onClick="goToPage(4)">4</button>
-                <button className="page-button5" onClick="goToPage(5)">5</button>
-                <button className="page-button" onClick="goToPage(6)">6</button>
-                <button className="page-button" onClick="goToPage(7)">7</button>
-                <button className="page-button" onClick="goToPage(8)">8</button>
-                <button className="page-button" onClick="goToPage(9)">9</button>
-                <button className="next-button">&raquo;</button>
-            </div>
-        </section>
-
-           
         </>
 
     )

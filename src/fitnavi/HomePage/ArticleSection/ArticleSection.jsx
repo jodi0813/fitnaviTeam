@@ -20,7 +20,7 @@ function ArticleSection() {
             id: "card2",
             date: "2025/05/26",
             img: "./images/article-2.jpg",
-            title: "重訓不等於變壯？破解迷思！",
+            title: "重訓不等於變壯？破解你的迷思！",
             content: "許多人擔心重量訓練會讓自己變得過於壯碩，實際上適當的重量訓練能幫助雕塑更好的線條，同時提升代謝率。正確觀念，讓你更接近理想體態。",
             tags: ["重訓", "迷思破解"],
             category: "重量訓練",
@@ -46,7 +46,7 @@ function ArticleSection() {
             img: "./images/article-6.jpg",
             title: "每天10分鐘，伸展放鬆身體提升柔軟度",
             content: "很多人運動後忽略伸展，導致肌肉僵硬或拉傷。伸展不僅能放鬆肌肉，還有助於預防運動傷害。學會正確的伸展技巧，讓你的運動效果事半功倍。",
-            tags: ["運動傷害妨害", "放鬆肌肉"],
+            tags: ["伸展運動", "放鬆肌肉"],
             category: "伸展放鬆"
         },
         {
