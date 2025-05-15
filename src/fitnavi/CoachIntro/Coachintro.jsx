@@ -6,7 +6,7 @@ import { BsClock } from "react-icons/bs";
 import Articlecards from '../../components/Articlecards';
 import { useNavigate } from 'react-router-dom';
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
-import PhotoGallery from "../../components/Carousel/PhotoGallery"
+import PhotoGallery1 from "../../components/Carousel/PhotoGallery1"
 
 
 
@@ -174,6 +174,8 @@ function Coachintro() {
 
                     <div className="person-class-photo">
                         <div className="coachphotos">
+                          <PhotoGallery1/>  
+
                             {/* <div className="selfie">
                                 <img src="./images/coach.jpg" alt="" />
                             </div>
@@ -191,7 +193,7 @@ function Coachintro() {
                                 </figure>
 
                             </div> */}
-                            <PhotoGallery/>
+                           
 
                             {/* <div className="TurnButton">
                                 <button>&#9675;</button>
