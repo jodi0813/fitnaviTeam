@@ -5,19 +5,36 @@ import { useNavigate } from "react-router-dom";
 function MemberLogin() {
   const navigate = useNavigate();
 
-  // 儲存使用者輸入帳號密碼
   const [account, setAccount] = useState("");
   const [password, setPassword] = useState("");
+
+  // 可以加入多組帳密
+  const validUsers = [
+    { account: "huahua0303@gmail.com", password: "1234" },
+    { account: "Jackcoach@gmail.com", password: "222" },
+    // 其他帳號
+  ];
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // 檢查或帳密比對
-    if (account === "huahua0303@gmail.com" && password === "1234") {
-      // 帳密正確就導頁
+    const match = validUsers.find(
+      (user) => user.account === account && user.password === password
+    );
+
+    if (match) {
       navigate("/memberlist");
     } else {
-      alert("帳號或密碼錯誤");
+      const accountExists = validUsers.some((user) => user.account === account);
+      const passwordMatches = validUsers.some((user) => user.password === password);
+
+      if (!accountExists && !passwordMatches) {
+        alert("帳號密碼錯誤");
+      } else if (!accountExists) {
+        alert("帳號錯誤");
+      } else {
+        alert("密碼錯誤");
+      }
     }
   };
 
@@ -53,7 +70,16 @@ function MemberLogin() {
           >
             忘記帳號密碼
           </button>
-          <button type="button" onClick={() => navigate("/MemberSignup")}>
+          <button
+            type="button"
+            onClick={() => {
+              if (account === "huahua0303@gmail.com") {
+                navigate("/MemberList");
+              } else if (account === "Jackcoach@gmail.com") {
+                navigate("/Allarticle");
+              }
+            }}
+          >
             還不是會員？會員加入
           </button>
         </div>
