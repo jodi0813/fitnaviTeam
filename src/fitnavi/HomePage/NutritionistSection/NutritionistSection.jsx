@@ -69,7 +69,7 @@ function NutritionistSection() {
         </div>
         <div className="home-nutritionist-footer">
           <div className="home-nutritionist-button">
-            <button>成為合作營養師</button>
+            <Link to="/Joinus"><button>成為合作營養師</button></Link>
             <Link to="/nutritionist">
             <button>查看更多營養師</button></Link>
           </div>

@@ -85,8 +85,8 @@ function TrainerSection() {
             </p>
           </div>
           <div className="home-trainer-button">
-            <button>成為合作教練</button>
-           <Link to="/coach"> <button>查看更多教練</button></Link>
+           <Link to="/Joinus"> <button>成為合作教練</button></Link>
+           <Link to="/Joinus"> <button>查看更多教練</button></Link>
           </div>
         </div>
       </div>

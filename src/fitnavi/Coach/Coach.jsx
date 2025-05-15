@@ -273,7 +273,6 @@ function Coach() {
   const handleSearch = (e) => {
     e.preventDefault();
     setCurrentPage(0); // 回到第一頁
-
     const result = coachList.filter((coach) => {
       const matchCity = selectedCity === "" || coach.city === selectedCity;
       const matchSex = selectedSex === "" || coach.sex === selectedSex;
@@ -287,9 +286,6 @@ function Coach() {
       return matchCity && matchSex && matchHashtag && matchKeyword;
     });
     setFilteredCoaches(result);
-  };
-  const handlePageClick = (data) => {
-    setCurrentPage(data.selected);
   };
 
   return (
