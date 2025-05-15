@@ -8,10 +8,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
 
-
 #Allarticle-section {
-    padding: 120px 50px;
-   width: 100vw;
+    padding-top: 120px;
+    padding-left: 50px;
+    padding-right: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    /* 隱藏橫向溢出 */
+    width: 100%;
+    border: 1px solid red;
+    box-sizing: border-box;
 }
 
 
@@ -19,6 +25,8 @@
 
 
 .Allarticle-Search {
+    width: 100%;
+    overflow-x: hidden;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -73,7 +81,7 @@
     .Search-Button {
         display: flex;
         height: 40px;
-        min-width: 479px;
+        width: 479px;
         padding: 8px 20px;
         align-items: center;
 
@@ -132,13 +140,16 @@
 }
 
 .Allarticle-content {
+    width: 100%;
+
     margin-top: 60px;
-    margin-left: 60px;
+    padding-left: 60px;
     display: flex;
     flex-direction: row;
-    gap: 15%;
+    gap: 10%;
     justify-content: flex-start;
     align-items: first baseline;
+
 
     .cat-tag {
         display: flex;
@@ -253,7 +264,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: baseline;
-            gap: 600px;
+            gap: 70%;
             margin-top: 0px;
             margin-left: 0px;
             margin-right: 0px;
@@ -284,6 +295,7 @@
             }
         }
 
+
         .Allarticle-Card-article {
             flex-direction: row;
             justify-content: flex-start;
@@ -294,6 +306,9 @@
             /* 三欄 */
             gap: 5%;
             /* 卡片間距 */
+
+            //調整測試
+            width: 100%;
 
             #card2>tag {
                 position: relative;
@@ -307,13 +322,16 @@
 
 
 .pagination {
+    max-width: 100%;
+
     margin-top: 250px;
-    margin-left: 5%;
+    // margin-left: 5%;
+    margin-left: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 35px;
+    gap: 1rem;
 
     button {
         color: var(--dark, #3A2C19);
