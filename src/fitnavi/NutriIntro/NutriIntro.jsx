@@ -5,6 +5,7 @@ import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
 import Articlecards from '../../components/Articlecards';
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
+import PhotoGallery2 from "../../components/Carousel/PhotoGallery2"
 
 
 
@@ -164,22 +165,26 @@ function NutriIntro() {
 
                 <section className="Nutriintro-person">
 
-                    <div className="person-class-photo">
-                        <div className="Nutriphotos">
+                    <div className="Nutri-person-class-photo">
+                        <div className="Nutri-photogallery">
+                            <PhotoGallery2/>  
+                        </div>
+                          
+                        {/* <div className="Nutriphotos">
                             <div className="Nutri-selfie">
                                 <img src="/images/Nutri-selfie.jpg" alt="" />
                             </div>
                             <div className="more">
                                 <figure className="moreimg1">
-                                    <img src="/images/營養師輪播小圖-01.jpg" />
+                                    <img src="/images/Nutri-carousel-01.jpg" />
                                 </figure>
 
                                 <figure className="moreimg2">
-                                    <img src="./images/營養師輪播小圖-02.jpg" alt="" />
+                                    <img src="./images/Nutri-carousel-02jpg" alt="" />
                                 </figure>
 
                                 <figure className="moreimg3">
-                                    <img src="./images/營養師輪播小圖-03.jpg" alt="" />
+                                    <img src="./images/Nutri-carousel-03.jpg" alt="" />
                                 </figure>
 
                             </div>
@@ -194,12 +199,12 @@ function NutriIntro() {
                             </div>
 
 
-                        </div>
+                        </div> */}
                     </div>
 
 
                     <div className="Nutriclass-container">
-                        <div className="personinfo">
+                        <div className="Nutri-personinfo">
                             <div className="namefavorite">
                                 <h2>安娜 Anna</h2>
                                 <button onClick={() => setLiked(!liked)} className="like-button">
@@ -240,7 +245,7 @@ function NutriIntro() {
 
                             <div className="Nutri-prices-button">
                                 <p>10堂優惠 ：$1,400/單堂</p>
-                                <div className="price-with-button">
+                                <div className="Nutri-price-with-button">
                                     <button class="classinrto" type="button">立即報名</button>
                                 </div>
                             </div>
