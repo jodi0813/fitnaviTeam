@@ -7,8 +7,17 @@
 }
 
 #Joinus-Form{
-    padding: 120px 50px;
-    width: 100vw;
+    // padding: 120px 50px;
+    // width: 100vw;
+       padding-top: 120px;
+    padding-left: 50px;
+    padding-right: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    /* 隱藏橫向溢出 */
+    width: 100%;
+    border: 1px solid red;
+    box-sizing: border-box;
 }
 
 .Joinus-form {
