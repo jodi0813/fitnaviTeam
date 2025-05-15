@@ -1,82 +1,166 @@
 import React, { useState } from "react";
 
 const images = [
-  "./images/01.jpg",
-  "./images/02.jpg",
-  "./images/03.jpg",
-  "./images/04.jpg",
-  "./images/05.jpg",
+  "./images/coach.jpg",
+  "./images/coach-carousel-01.jpg",
+  "./images/coach-carousel-02.jpg",
+  "./images/coach-carousel-03.jpg",
+  "./images/coach-carousel-04.jpg",
 ];
 
-const PhotoGallery = () => {
+export default function PhotoGallery() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
+  const [nextIndex, setNextIndex] = useState(null);
+  const [showFirstSet, setShowFirstSet] = useState(true);
 
-  // 取出 activeIndex 開始的 3 張小圖，確保不超過陣列長度
-  const getThumbnails = () => {
-    if (activeIndex <= 1) return images.slice(0, 3);
-    if (activeIndex >= images.length - 1) return images.slice(-3);
-    return images.slice(activeIndex - 1, activeIndex + 2);
+  const len = images.length;
+
+  const GALLERY_WIDTH = 480;
+  const GAP = 15;
+  const THUMB_WIDTH = (GALLERY_WIDTH - GAP * 2) / 3; // 150px
+
+  const getThumbIndices = (idx) => [
+    (idx + 1) % len,
+    (idx + 2) % len,
+    (idx + 3) % len,
+  ];
+
+  const firstSetIndices =
+    animating && !showFirstSet
+      ? getThumbIndices(nextIndex ?? activeIndex)
+      : getThumbIndices(activeIndex);
+
+  const secondSetIndices =
+    animating && showFirstSet
+      ? getThumbIndices(nextIndex ?? activeIndex)
+      : getThumbIndices(activeIndex);
+
+  const handleClick = (index) => {
+    if (animating || index === activeIndex) return;
+    setNextIndex(index);
+    setAnimating(true);
+    setTimeout(() => {
+      setActiveIndex(index);
+      setAnimating(false);
+      setNextIndex(null);
+      setShowFirstSet((prev) => !prev);
+    }, 600);
+  };
+
+  const getThumbStyle = (pos, animatingSet) => {
+    const baseLeft = pos * (THUMB_WIDTH + GAP);
+    const isAnimating = animating && showFirstSet === animatingSet;
+    return {
+      position: "absolute",
+      top: 0,
+      left: baseLeft,
+      width: THUMB_WIDTH,
+      height: 100,
+      borderRadius: 10,
+      objectFit: "cover",
+      boxShadow: "0 0 5px rgba(0,0,0,0.3)",
+      cursor: "pointer",
+      userSelect: "none",
+      transition: "transform 600ms ease, opacity 600ms ease",
+      opacity: isAnimating && pos === 0 ? 0 : 1,
+      transform:
+        isAnimating && pos > 0
+          ? `translateX(-${THUMB_WIDTH + GAP}px)`
+          : "translateX(0)",
+      border: pos === 1 ? "2px solid #007bff" : "none",
+      zIndex: pos === 1 ? 2 : 1,
+    };
   };
 
   return (
-    <div style={styles.container}>
-      <div style={styles.mainImageWrapper}>
-        <img
-          src={images[activeIndex]}
-          alt="main"
-          style={styles.mainImage}
-        />
+    <div style={{ textAlign: "center", padding: 50 }}>
+      {/* 主圖 */}
+      <img
+        src={images[animating ? activeIndex : nextIndex ?? activeIndex]}
+        alt="main"
+        style={{
+          width: GALLERY_WIDTH,
+          height: "40rem",
+          objectFit: "cover",
+          borderRadius: 20,
+          marginBottom: 20,
+          userSelect: "none",
+        }}
+        draggable={false}
+      />
+
+      {/* 縮圖列 */}
+      <div
+        style={{
+          position: "relative",
+          width: GALLERY_WIDTH,
+          height: 100,
+          userSelect: "none",
+        }}
+      >
+        {showFirstSet &&
+          firstSetIndices.map((idx, pos) => (
+            <img
+              key={"f" + pos}
+              src={images[idx]}
+              alt={`thumb${pos}`}
+              style={getThumbStyle(pos, true)}
+              draggable={false}
+            />
+          ))}
+
+        {!showFirstSet &&
+          secondSetIndices.map((idx, pos) => (
+            <img
+              key={"s" + pos}
+              src={images[idx]}
+              alt={`thumb${pos}`}
+              style={getThumbStyle(pos, false)}
+              draggable={false}
+            />
+          ))}
       </div>
 
-      <div style={styles.thumbnailWrapper}>
-        {getThumbnails().map((img, index) => {
-          const actualIndex = images.indexOf(img);
+      {/* SVG 圓點按鈕（皆為灰色） */}
+      <div
+        style={{
+          marginTop: 20,
+          display: "flex",
+          justifyContent: "center",
+          gap: 10,
+        }}
+      >
+        {images.map((_, i) => {
+          const svg = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+              <circle cx="5" cy="5" r="5" fill="#989794"/>
+            </svg>
+          `;
+
           return (
-            <img
-              key={index}
-              src={img}
-              alt={`thumb-${index}`}
-              onClick={() => setActiveIndex(actualIndex)}
+            <button
+              key={i}
+              onClick={() => handleClick(i)}
+              disabled={animating}
               style={{
-                ...styles.thumbnail,
-                border: actualIndex === activeIndex ? "2px solid #007bff" : "2px solid transparent",
+                background: "none",
+                border: "none",
+                padding: 0,
+                width: 10,
+                height: 10,
+                cursor: animating ? "not-allowed" : "pointer",
+                userSelect: "none",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
+              dangerouslySetInnerHTML={{ __html: svg }}
+              aria-label={`切換到第${i + 1}張圖`}
             />
           );
         })}
       </div>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    textAlign: "center",
-    padding: "20px",
-  },
-  mainImageWrapper: {
-    marginBottom: "20px",
-  },
-  mainImage: {
-    width: "400px",
-    height: "300px",
-    objectFit: "cover",
-    borderRadius: "8px",
-    boxShadow: "0 0 8px rgba(0,0,0,0.2)",
-  },
-  thumbnailWrapper: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "10px",
-  },
-  thumbnail: {
-    width: "100px",
-    height: "75px",
-    objectFit: "cover",
-    cursor: "pointer",
-    borderRadius: "4px",
-    transition: "border 0.3s",
-  },
-};
-
-export default PhotoGallery;
+}
