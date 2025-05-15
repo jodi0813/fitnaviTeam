@@ -1,37 +1,27 @@
-import React, { useState } from 'react';
-import ReactPaginate from 'react-paginate';
-import './Pagination.scss';
+import React from "react";
+import ReactPaginate from "react-paginate";
+import "./Pagination.scss";
 
-function PaginationComponent({ totalPages, onPageChange }) {
-  const [currentPage, setCurrentPage] = useState(0);
-
+function Pagination({ pageCount, forcePage, onPageChange }) {
   const handlePageClick = (data) => {
-    setCurrentPage(data.selected);
     onPageChange(data.selected);
   };
 
   return (
-    <ReactPaginate
+ <ReactPaginate
+      pageCount={pageCount}
+      onPageChange={handlePageClick}
+      forcePage={forcePage} // 告訴它目前在哪頁
       previousLabel="«"
       nextLabel="»"
       breakLabel="..."
-      pageCount={totalPages}
       marginPagesDisplayed={1}
       pageRangeDisplayed={3}
-      onPageChange={handlePageClick}
-      forcePage={currentPage} // 外部控制目前頁面
       containerClassName="pagination"
-      pageClassName="page-item"
-      pageLinkClassName="page-link"
       activeClassName="active"
-      previousClassName="page-item"
-      nextClassName="page-item"
-      previousLinkClassName="page-link"
-      nextLinkClassName="page-link"
-      breakClassName="page-item"
-      breakLinkClassName="page-link"
+      disabledClassName="disabled"
     />
   );
 }
 
-export default PaginationComponent;
+export default Pagination;
