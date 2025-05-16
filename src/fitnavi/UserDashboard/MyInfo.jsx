@@ -1,13 +1,13 @@
 
 import Subtitle from "../../components/Title/Subtitle";
 import "./MyInfo.scss";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 function MyInfo() {
   return (
     <>
       <div className="orderbox">
         {/* 個人資訊標題 */}
-        <Subtitle  subtitle="個人資訊" subtitleEN="My Info"/>
+        <Subtitle subtitle="個人資訊" subtitleEN="My Info" />
         {/* 個人資訊白卡 */}
         <div className="myinfoCard">
           {/* 大頭照姓名跟編輯按鈕 */}
@@ -23,8 +23,8 @@ function MyInfo() {
                 <span className="myinfoValue">阿華</span>
               </div>
             </div>
-             <Link to="/coachdashboardlist">{/* 綁後台會員管理(芝) */}
-            <button className="myinfoEditButton">編輯個人資訊</button></Link>
+            <Link to="/coachdashboardlist">{/* 綁後台會員管理(芝) */}
+              <button className="myinfoEditButton">編輯個人資訊</button></Link>
           </div>
 
           {/* 基本資料+健康資訊+聯絡資訊 */}

@@ -1,12 +1,10 @@
-// import UserOrder from "./UserOrder";
-// import MyInfo from "./MyInfo";
-// import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./CoachDashboardList.scss";
 import MainTitle from "../../components/Title/MainTitle";
+import CoachInfo from "./CoachInfo";
 
 function CoachDashboardList() {
-  const [memberTab, setMemberTab] = useState("myinfo");
+  const [memberTab, setMemberTab] = useState("coachInfo");
   return (
     <>
       <div className="coachDashboardAll">
@@ -17,36 +15,36 @@ function CoachDashboardList() {
             {/* 一般用戶 */}
             <div className="coachDashboardBox">
               <div className="coachDashboardBox1">
-              <button
-                className={memberTab === "myinfo" ? "memberBt memberActive" : "memberBt"}
-                onClick={() => setMemberTab("myinfo")}
-              >
-                個人資訊
-              </button>
-              <button
-                className={memberTab === "useOrder" ? "memberBt memberActive" : "memberBt"}
-                onClick={() => setMemberTab("useOrder")}
-              >
-                我的訂單
-              </button>
-              <button
-                className={memberTab === "useOrder" ? "memberBt memberActive" : "memberBt"}
-                onClick={() => setMemberTab("useOrder")}
-              >
-                學員訂單
-              </button>
-              <button
-                className={memberTab === "useOrder" ? "memberBt memberActive" : "memberBt"}
-                onClick={() => setMemberTab("useOrder")}
-              >
-                課程管理
-              </button>
-              <button
-                className={memberTab === "useOrder" ? "memberBt memberActive" : "memberBt"}
-                onClick={() => setMemberTab("useOrder")}
-              >
-                文章管理
-              </button></div>
+                <button
+                  className={memberTab === "coachInfo" ? "memberBt memberActive" : "memberBt"}
+                  onClick={() => setMemberTab("coachInfo")}
+                >
+                  個人資訊
+                </button>
+                <button
+                  className={memberTab === "useOrder" ? "memberBt memberActive" : "memberBt"}
+                  onClick={() => setMemberTab("useOrder")}
+                >
+                  我的訂單
+                </button>
+                <button
+                  className={memberTab === "useOrder" ? "memberBt memberActive" : "memberBt"}
+                  onClick={() => setMemberTab("useOrder")}
+                >
+                  學員訂單
+                </button>
+                <button
+                  className={memberTab === "useOrder" ? "memberBt memberActive" : "memberBt"}
+                  onClick={() => setMemberTab("useOrder")}
+                >
+                  課程管理
+                </button>
+                <button
+                  className={memberTab === "useOrder" ? "memberBt memberActive" : "memberBt"}
+                  onClick={() => setMemberTab("useOrder")}
+                >
+                  文章管理
+                </button></div>
               <div className="list-illustration">
                 <div className="list-illustration1">
                   <img src="/images/coachnutri.png" alt="" />
@@ -56,9 +54,9 @@ function CoachDashboardList() {
               </div></div>
           </div>
 
-          {/*         
-          {memberTab === "myinfo" && <MyInfo />}
-          {/* 訂單管理按鈕 */}
+
+          {memberTab === "coachInfo" && <CoachInfo />}
+
           {memberTab === "useOrder" && <UserOrder />}
 
         </div>

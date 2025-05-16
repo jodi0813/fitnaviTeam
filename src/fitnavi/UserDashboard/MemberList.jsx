@@ -1,6 +1,5 @@
 import UserOrder from "./UserOrder";
 import MyInfo from "./MyInfo";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./MemberList.scss";
 import MainTitle from "../../components/Title/MainTitle";
