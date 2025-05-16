@@ -1,12 +1,10 @@
-// import UserOrder from "./UserOrder";
-// import MyInfo from "./MyInfo";
-// import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./CoachDashboardList.scss";
 import MainTitle from "../../components/Title/MainTitle";
+import CoachInfo from "./CoachInfo";
 
 function CoachDashboardList() {
-  const [memberTab, setMemberTab] = useState("myinfo");
+  const [memberTab, setMemberTab] = useState("coachInfo");
   return (
     <>
       <div className="coachDashboardAll">

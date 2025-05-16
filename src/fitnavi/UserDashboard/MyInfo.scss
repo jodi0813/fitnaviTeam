@@ -1,4 +1,5 @@
 @use "../reset.scss";
+
 .myinfoCard {
   display: flex;
   flex-direction: column;
@@ -8,69 +9,108 @@
   background-color: #fff;
   border-radius: 24px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+
   .myinfoHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     .myinfoAvatar {
       width: 80px;
       height: 80px;
       border-radius: 50%;
       object-fit: cover;
     }
-    .myinfoNameSection {  
+
+    .myinfoNameSection {
       display: flex;
       align-items: center;
       gap: 32px;
-      .myinfoName {
+
+      .myinfoNameBox {
         display: flex;
-        align-items: center;
-        gap: 12px;
-        .myinfoLabel {
-          color: #3a2c19;
-          font-family: "Noto Sans TC";
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 140%; /* 19.6px */
-          letter-spacing: 1.4px;
-        }
-        .myinfoValue {
-          color: #3a2c19;
-          font-family: "Noto Sans TC";
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-          letter-spacing: 2px;
+          flex-direction: column;
+          gap: 12px;
+        .myinfoName {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          .myinfoLabel {
+            color: #3a2c19;
+            font-family: "Noto Sans TC";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+          }
+
+          .myinfoValue {
+            color: #3a2c19;
+            font-family: "Noto Sans TC";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 2px;
+          }
+
+          .coachinfoName {
+            display: flex;
+            padding: 4px 12px;
+            align-items: center;
+            gap: 12px;
+            border-radius: 99px;
+            border: 1px solid #FF8740;
+            color: #FF8740;
+            font-family: "Noto Sans TC";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 2px;
+          }
         }
       }
     }
-    .myinfoEditButton {
-      padding: 8px 24px;
-      border-radius: 99px;
-      background-color: #ff8740;
-      color: #fefcf7;
-      font-family: "Noto Sans TC";
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 150%; /* 24px */
-      letter-spacing: 1.6px;
+
+    .myinfoBt {
+      display: flex;
+      gap: 12px;
+
+      .myinfoBt1 {
+        padding: 8px 24px;
+        border-radius: 99px;
+        background-color: #ff8740;
+        color: #fefcf7;
+        font-family: "Noto Sans TC";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        /* 24px */
+        letter-spacing: 1.6px;
+      }
     }
   }
+
   .profileContent {
     display: flex;
     gap: 32px;
-    .profileContentLeft {
+
+    .profileContent1 {
       display: flex;
       flex-direction: column;
       gap: 24px;
     }
+
     .myinfoSection {
       display: flex;
       flex-direction: column;
       gap: 12px;
+
       .myinfosectionTitle {
         color: #ff8740;
         font-family: "Noto Sans TC";
@@ -80,6 +120,7 @@
         line-height: normal;
         letter-spacing: 2px;
       }
+
       .myinfoItem {
         display: flex;
         padding: 0px 24px;
@@ -89,15 +130,19 @@
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
-        line-height: 150%; /* 24px */
+        line-height: 150%;
+        /* 24px */
         letter-spacing: 1.6px;
-        .myinfoItem1{
-            width: 100px;
-        }    
-        .myinfoCheckbox{
-        .trShow {
-          font-size: 14px;
-        }}
+
+        .myinfoItem1 {
+          width: 100px;
+        }
+
+        .myinfoCheckbox {
+          .trShow {
+            font-size: 14px;
+          }
+        }
       }
     }
   }
