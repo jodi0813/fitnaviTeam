@@ -70,7 +70,7 @@ function Joinus() {
                             <p>🤝撰寫飲食知識文章或影片</p>
                         </form>
 
-                        <button className='imnutrionist-joinbutton'>成為合作營養師</button>
+                        <button className='imnutrionist-joinbutton' onClick={() => navigate('/JoinusStep1')}>成為合作營養師</button>
                     </div>
                 </section>
 

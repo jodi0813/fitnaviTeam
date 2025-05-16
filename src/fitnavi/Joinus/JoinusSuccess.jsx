@@ -24,7 +24,6 @@ function JoinusSuccess() {
                     <img src="./images/application-icon.png" alt="" />
 
                     <div className='Joinus-Success-button'>
-                        <button className='Joinus-btn'>查看申請進度</button>
                         <button className='Joinus-btn' onClick={()=>{navigate('/');window.scrollTo(0, 0);}}>返回首頁</button>
                     </div>
                 </div>
