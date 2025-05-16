@@ -3,7 +3,7 @@ import { useState } from "react";
 import StudentChatPopup from "./Popup/StudentChatPopup";
 import ProblemPopup from "./Popup/ProblemPopup";
 import ListPopup from "./Popup/ListPopup";
-/* 會員管理>我的訂單>我的預約 */
+/* 使用者管理>我的訂單>我的預約 */
 function MyOrders() {
   /* 訂單資料 */
   const orders = [
@@ -83,14 +83,15 @@ function MyOrders() {
             </span>
             {/* 預約確認(按鈕待確認) */}
             <span>
-              <span>{order.confirmStatus}</span>
-              {/* {order.confirmAction && (<button className="btn-cancel">{order.confirmAction}</button>)} */}
+              <div className="orderCheck">
+                <span>{order.confirmStatus}</span>
+                <span>
+                  {order.confirmAction && (<button className="btn-cancel">{order.confirmAction}</button>)}
+                </span></div>
             </span>
             {/* 課程完成(按鈕待確認) */}
             <span>
-              
-                {order.progress}
-            
+              {order.progress}
             </span>
             {/* 問題反映 */}
             <span>
