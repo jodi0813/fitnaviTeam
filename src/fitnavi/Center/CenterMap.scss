@@ -2,7 +2,8 @@
 
 #centerMapMain {
     padding: 120px 50px;
-    width: 100%;
+    // width: 100%;
+    // max-width: 100vw;
 
     .mapSearchAll {
         display: flex;
@@ -10,7 +11,7 @@
 
         .mapSearchLeft {
             display: flex;
-            width: 20%;
+            width: 30%;
             justify-content: center;
 
             #center-search-form {
@@ -89,7 +90,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 25%;
+            width: 30%;
             gap: 12px;
             overflow: auto; //卷軸
             height: 670px;
@@ -142,10 +143,11 @@
         }
 
         .mapPhotos {
-            width:100%;
+            width: 50%;
+
             .centerMapPhoto {
                 border-radius: 16px;
-                height: 650px;
+                height: 80%;
                 padding-left: 10%;
             }
         }
