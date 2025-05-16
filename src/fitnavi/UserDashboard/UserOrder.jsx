@@ -1,37 +1,18 @@
 import { useState } from "react";
 import MyOrders from "./MyOrders";
 import MyOrderView from "./MyOrderView";
-import { Link } from "react-router-dom";
 import "./UserOrder.scss";
 import MyFinishOrder from "./MyFinishOrder";
-import Subtitle from "../../components/Title/Subtitle";
-/*  會員管理>我的訂單管理  */
+import OrdersBox from "./OrdersBox";
+/*  使用者後台>我的訂單管理  */
 function UserOrder() {
   const [userTab, setUserTab] = useState("myorder");
 
   return (
     <>
       <div className="orderbox">
-        <Subtitle subtitle="我的訂單管理" subtitleEN="My Order Management" />
-        <div className="orderboxButtonText">
-          <div className="orderboxButton">
-            <button className={userTab === "myorder" ? "userBt" : "userBt"}
-              onClick={() => setUserTab("myorder")}>我的預約</button>
+         <OrdersBox userTab={userTab} setUserTab={setUserTab} />
 
-
-            <button className={userTab === "myorderview" ? "userBt" : "userBt"}
-              onClick={() => setUserTab("myorderview")}>訂單總覽</button>
-
-
-            <button className={userTab === "myfinishorder" ? "userBt" : "userBt"}
-              onClick={() => setUserTab("myfinishorder")}>完成的課程 </button>
-          </div>
-          <p>
-            *若教練確認您的預約申請，會在您的預約確認欄位中顯示"已確認"
-            <br />
-            *如有順利完成課程，請於7日內在課程完成欄位中點選"完成"，若有問題，請點選"聯絡客服"
-          </p>
-        </div>
         {/* 表格區 */}
         {userTab === "myorder" && <MyOrders />}
         {userTab === "myorderview" && <MyOrderView />}
@@ -42,4 +23,4 @@ function UserOrder() {
     </>
   );
 }
-export default UserOrder;
+export default UserOrder

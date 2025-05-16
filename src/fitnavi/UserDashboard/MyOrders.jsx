@@ -16,7 +16,6 @@ function MyOrders() {
       time: "17:00-18:00",
       location: "TECHNOgym",
       locationCH: "（忠孝館）",
-      // contactStatus: "留言",
       confirmStatus: "您已送出預約申請",
       confirmAction: "取消",
       progress: "尚未進行課程",
@@ -31,7 +30,7 @@ function MyOrders() {
       time: "17:00-18:00",
       location: "TECHNOgym",
       locationCH: "（忠孝館）",
-      // contactStatus: "留言",
+
       confirmStatus: "已確認",
       confirmAction: "",
       progress: "完成",
