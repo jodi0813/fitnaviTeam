@@ -155,7 +155,7 @@
       p {
         color: #FFF;
 
-        font-family: ""Noto Sans TC", sans-serif; Sans TC";
+        font-family: "Noto Sans TC";
         font-size: 24px;
         font-style: normal;
         font-weight: 500;
@@ -199,76 +199,56 @@
     p {
       color: var(--white, #FEFCF7);
       text-align: center;
-      font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
+      font-family: "Noto Sans TC", sans-serif; 
       font-size: 14px;
       font-weight: 500;
       line-height: 140%;
       letter-spacing: 1.4px;
     }
 
-    .HeoSectionArrow {
-      animation: arrowMove 1.6s infinite ease-in-out;
+    .HeroSectionArrow {
+      animation: arrowMove 2.4s infinite ease-in-out;
       // 整段動畫時間1.6s
     }
 
     .Hero-section-scroll-p {
-      animation: textMove 1.6s infinite ease-in-out;
+      animation: textMove 2.4s infinite ease-in-out;
     }
 
     /* 箭頭動畫 */
-    @keyframes arrowMove {
-      0% {
-        transform: translateY(0);
-      }
-
-      15.625% {
-        /* 0.25s */
-        transform: translateY(10px);
-        // (0.25 / 1.6) × 100 = 15.625%
-      }
-
-      50% {
-        /* 到 0.8s 前都保持在下方 */
-        transform: translateY(10px);
-      }
-
-      100% {
-        /* 回到原位 0.8s */
-        transform: translateY(0);
-      }
-    }
-
-    /* scroll 字動畫 */
-    @keyframes textMove {
-
-      0%,
-      18.75% {
-        /* delay 0.3s */
-        transform: translateY(0);
-      }
-
-      34.375% {
-        /* 0.55s, 完成下移 */
-        transform: translateY(10px);
-      }
-
-      50% {
-        /* 保持在下方直到回復開始 */
-        transform: translateY(10px);
-      }
-
-      100% {
-        transform: translateY(0);
-      }
-    }
+  @keyframes arrowMove {
+  0% {
+    transform: translateY(0);
   }
-
-
-
-
-
-
-
+  10.42% {
+    transform: translateY(20px); /* 箭頭往下完成 */
+  }
+  45.83% {
+    transform: translateY(20px); /* 停留在下方 */
+  }
+  66.67% {
+    transform: translateY(0); /* 往上回原位 */
+  }
+  100% {
+    transform: translateY(0); /* 停留原位 */
+  }
 }
 
-
+@keyframes textMove {
+  0%, 2.08% {
+    transform: translateY(0); /* 文字延遲 0.05s (2.08%) */
+  }
+  15.62% {
+    transform: translateY(15px); /* 文字往下完成 */
+  }
+  45.83% {
+    transform: translateY(15px); /* 停留 */
+  }
+  66.67% {
+    transform: translateY(0); /* 往上回原位 */
+  }
+  100% {
+    transform: translateY(0); /* 停留原位 */
+  }
+}
+  }}
