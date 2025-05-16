@@ -3,6 +3,7 @@ import "./CoachDashboardList.scss";
 import MainTitle from "../../components/Title/MainTitle";
 import CoachInfo from "./CoachInfo";
 import CoachOrder from "./CoachOrder";
+import StudentOrder from "./StudentOrder";
 
 
 function CoachDashboardList() {
@@ -24,14 +25,14 @@ function CoachDashboardList() {
                   個人資訊
                 </button>
                 <button
-                  className={memberTab === "useOrder" ? "memberBt memberActive" : "memberBt"}
-                  onClick={() => setMemberTab("useOrder")}
+                  className={memberTab === "coachOrder" ? "memberBt memberActive" : "memberBt"}
+                  onClick={() => setMemberTab("coachOrder")}
                 >
                   我的訂單
                 </button>
                 <button
-                  className={memberTab === "useOrder" ? "memberBt memberActive" : "memberBt"}
-                  onClick={() => setMemberTab("useOrder")}
+                  className={memberTab === "studentOrder" ? "memberBt memberActive" : "memberBt"}
+                  onClick={() => setMemberTab("studentOrder")}
                 >
                   學員訂單
                 </button>
@@ -59,8 +60,8 @@ function CoachDashboardList() {
 
           {memberTab === "coachInfo" && <CoachInfo />}
 
-          {memberTab === "useOrder" && <CoachOrder />}
-
+          {memberTab === "coachOrder" && <CoachOrder />}
+          {memberTab === "studentOrder" && <StudentOrder />}
         </div>
       </div>
     </>

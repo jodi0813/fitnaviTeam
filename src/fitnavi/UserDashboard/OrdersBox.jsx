@@ -1,27 +1,30 @@
-import { useState } from "react";
 import "./UserOrder.scss";
 import Subtitle from "../../components/Title/Subtitle";
-function OrdersBox({ userTab, setUserTab }) {
+function OrdersBox({ subtitle, subtitleEN, userTab, setUserTab, bt,p1, p2 }) {
     return (
         <>
-            <Subtitle subtitle="我的訂單管理" subtitleEN="My Order Management" />
+            <Subtitle subtitle={subtitle} subtitleEN={subtitleEN} />
             <div className="orderboxButtonText">
                 <div className="orderboxButton">
-                    <button className={userTab === "myorder" ? "userBt" : "userBt"}
-                        onClick={() => setUserTab("myorder")}>我的預約</button>
+                    <button className={userTab === "bt1" ? "userBt" : "userBt"}
+                        onClick={() => setUserTab("bt1")}>{bt}</button>
 
 
-                    <button className={userTab === "myorderview" ? "userBt" : "userBt"}
-                        onClick={() => setUserTab("myorderview")}>訂單總覽</button>
+                    <button className={userTab === "bt2" ? "userBt" : "userBt"}
+                        onClick={() => setUserTab("bt2")}>訂單總覽</button>
 
 
-                    <button className={userTab === "myfinishorder" ? "userBt" : "userBt"}
-                        onClick={() => setUserTab("myfinishorder")}>完成的課程 </button>
+                    <button className={userTab === "bt3" ? "userBt" : "userBt"}
+                        onClick={() => setUserTab("bt3")}>完成的課程 </button>
                 </div>
                 <p>
-                    *若教練確認您的預約申請，會在您的預約確認欄位中顯示"已確認"
+                    {p1}
+                    {/* *若教練確認您的預約申請，會在您的預約確認欄位中顯示已確認 */}
+                    {/* *至少須於上課前24小時確認預約時間，若無法配合該時段，請聯絡學員協助取消預約 */}
                     <br />
-                    *如有順利完成課程，請於7日內在課程完成欄位中點選"完成"，若有問題，請點選"聯絡客服"
+                    {p2}
+                    {/* *如有順利完成課程，請於7日內在課程完成欄位中點選完成，若有問題，請點選聯絡客服 */}
+                    {/* *若您確認時間可以安排，請在預約確認欄位中打勾 */}
                 </p>  </div>
         </>
     )
