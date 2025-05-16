@@ -17,7 +17,7 @@
     /* 隱藏橫向溢出 */
     width: 100%;
     height: auto;
-    border: 1px solid red;
+    // border: 1px solid red;
     box-sizing: border-box;
 }
 
@@ -49,7 +49,7 @@
         color: #FFF;
 
         text-align: center;
-        font-family: "Noto Sans TC";
+        font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
         font-size: var(--fontsize-H3, 18px);
         font-style: normal;
         font-weight: 700;
@@ -71,7 +71,7 @@
         color: #FF8740;
 
         text-align: center;
-        font-family: "Noto Sans TC";
+        font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
         font-size: var(--fontsize-H3, 18px);
         font-style: normal;
         font-weight: 700;
@@ -93,7 +93,7 @@
         &::placeholder {
             color: var(--gray, #989794);
             /* 段落/14 */
-            font-family: "Noto Sans TC";
+            font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
             font-size: 14px;
             font-style: normal;
             font-weight: 500;
@@ -130,7 +130,7 @@
 
         color: var(--white, var(--white, #FEFCF7));
         text-align: center;
-        font-family: "Noto Sans TC";
+        font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 900;
@@ -162,7 +162,7 @@
                 margin-bottom: 15px;
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
-                font-family: "Noto Sans TC";
+                font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -177,10 +177,10 @@
         .Cat-name {
             margin-top: 75px;
 
-            p {
+            button {
                 color: var(--dark, #3A2C19);
                 /* heading/標題4/medium */
-                font-family: "Noto Sans TC";
+                font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 500;
@@ -199,7 +199,7 @@
                 color: var(--primary, var(--primary, #FF8740));
 
                 /* heading/標題4/medium */
-                font-family: "Noto Sans TC";
+                font-family:""Noto Sans TC", sans-serif; Sans TC", sans-serif;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 500;
@@ -219,7 +219,7 @@
                 h4 {
                     color: var(--dark, #3A2C19);
                     /* 段落/14 */
-                    font-family: "Noto Sans TC";
+                    font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 500;
@@ -231,7 +231,7 @@
                 }
             }
 
-            p {
+            button {
                 display: flex;
                 padding: 3px 10px;
                 justify-content: center;
@@ -244,7 +244,7 @@
                 color: var(--white, var(--white, #FEFCF7));
                 text-align: right;
                 /* 段落/14 */
-                font-family: "Noto Sans TC";
+                font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -275,7 +275,7 @@
             p {
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
-                font-family: "Noto Sans TC";
+                font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -338,7 +338,7 @@
         color: var(--dark, #3A2C19);
         text-align: center;
         /* 段落/14 */
-        font-family: "Noto Sans TC";
+        font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
@@ -360,7 +360,7 @@
         color: var(--white, var(--white, #FEFCF7));
         text-align: center;
         /* 段落/14 */
-        font-family: "Noto Sans TC";
+        font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 500;

@@ -94,7 +94,7 @@ video {
 
 /* 重置字體 */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
   line-height: 1.5;
   background-color: #FEFCF7;
 }
@@ -172,7 +172,7 @@ a {
   background: #fff;
   box-shadow: 8px 8px 0px 0px #ff8740;
   width: 230px;
-  font-family: "Noto Sans TC";
+  font-family: ""Noto Sans TC", sans-serif; Sans TC";
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -199,7 +199,7 @@ a {
   box-shadow: 8px 8px 0px 0px #ff8740;
   color: #ff8740;
   text-align: center;
-  font-family: "Noto Sans TC";
+  font-family: ""Noto Sans TC", sans-serif; Sans TC";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -221,7 +221,7 @@ a {
   box-shadow: 8px 8px 0px 0px #ff8740;
   color: #3a2c19;
   text-align: right;
-  font-family: "Noto Sans TC";
+  font-family: ""Noto Sans TC", sans-serif; Sans TC";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;

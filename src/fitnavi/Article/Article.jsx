@@ -13,7 +13,7 @@ function Article() {
 
             <main id="card9">
 
-                <MainTitle title1="加入我們" title2="成為我們的合作夥伴" className="no-line" />
+                <MainTitle title1="知識文章" title2="補足符合您需求的知識" className="no-line" />
 
                 {/* <!-- banner區域 --> */}
                 <section className="article-banner">
