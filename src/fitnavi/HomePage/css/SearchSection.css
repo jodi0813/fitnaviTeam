@@ -94,7 +94,7 @@ video {
 
 /* 重置字體 */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
   line-height: 1.5;
   background-color: #FEFCF7;
 }
@@ -167,7 +167,7 @@ a {
 }
 .home-search .home-search-section .home-search-block .home-search-titleBox .home-search-title {
   color: #ff8740;
-  font-family: "Noto Sans TC";
+  font-family: ""Noto Sans TC", sans-serif; Sans TC";
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -176,7 +176,7 @@ a {
 }
 .home-search .home-search-section .home-search-block .home-search-titleBox .home-search-titleEn {
   color: #ff8740;
-  font-family: "Noto Sans TC";
+  font-family: ""Noto Sans TC", sans-serif; Sans TC";
   font-size: 32px;
   font-style: normal;
   font-weight: 100;
@@ -220,7 +220,7 @@ a {
   border: 0.5px solid #3a2c19;
   background: #fefcf7;
   color: #989794;
-  font-family: "Noto Sans TC";
+  font-family: ""Noto Sans TC", sans-serif; Sans TC";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -244,7 +244,7 @@ a {
   background: #fff;
   color: #ff8740;
   text-align: center;
-  font-family: "Noto Sans TC";
+  font-family: ""Noto Sans TC", sans-serif; Sans TC";
   font-size: 18px;
   font-style: normal;
   font-weight: 700;

@@ -33,7 +33,7 @@
     color: var(--dark, #3A2C19);
     text-align: center;
     /* heading/標題4/Bold */
-    font-family: "Noto Sans TC";
+    font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -70,7 +70,7 @@
         background: var(--primary, #FF8740);
         color: var(--white, var(--white, #FEFCF7));
         /* 段落/14 */
-        font-family: "Noto Sans TC";
+        font-family:""Noto Sans TC", sans-serif; Sans TC", sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
@@ -82,7 +82,7 @@
       >h2 {
         font-size: 40px;
         color: #3a2c19;
-        font-family: "Noto Sans TC";
+        font-family:""Noto Sans TC", sans-serif; Sans TC", sans-serif;
         font-weight: bolder;
         display: flex;
         justify-content: center;
@@ -100,7 +100,7 @@
 
         p {
           font-size: 14px;
-          font-family: "Noto Sans TC";
+          font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
           color: #3a2c19;
         }
 
@@ -129,7 +129,7 @@
   button.bread {
     flex: 0;
     font-size: 14px;
-    font-family: "Noto Sans TC";
+    font-family: ""Noto Sans TC", sans-serif; Sans TC";
     background-color: transparent;
     border: none;
     color: #3a2c19;
@@ -171,7 +171,7 @@
       align-items: center;
       margin: 90px 30px;
       color: "var(--dark, #3A2C19)";
-      font-family: "Noto Sans TC";
+      font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -199,7 +199,7 @@
       p {
         color: var(--dark, #3A2C19);
         /* 段落/14 */
-        font-family: "Noto Sans TC";
+        font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
@@ -216,7 +216,7 @@
     .table {
       a {
         font-size: 14px;
-        font-family: "Noto Sans TC";
+        font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
         color: #000000;
         line-height: 2;
       }
@@ -232,14 +232,14 @@
 
     h3 {
       font-size: 32px;
-      font-family: "Noto Sans TC";
+      font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
       color: #3a2c19;
       margin-bottom: 5%;
     }
 
     p {
       color: #3a2c19;
-      font-family: "Noto Sans TC";
+      font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -285,7 +285,7 @@
       align-items: flex-start;
       color: var(--dark, #3A2C19);
       /* 段落/14 */
-      font-family: "Noto Sans TC";
+      font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
@@ -321,7 +321,7 @@
 
     >h3 {
       color: var(--dark, #3A2C19);
-      font-family: "Noto Sans TC";
+      font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
       font-size: 32px;
       font-style: normal;
       font-weight: 400;
@@ -331,7 +331,7 @@
 
     >p {
       color: var(--dark, #3A2C19);
-      font-family: "Noto Sans TC";
+      font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -376,7 +376,7 @@
     >h3 {
       margin-bottom: 5%;
       color: var(--dark, #3A2C19);
-      font-family: "Noto Sans TC";
+      font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
       font-size: 32px;
       font-style: normal;
       font-weight: 400;
@@ -385,7 +385,7 @@
 
     p {
       color: var(--dark, #3A2C19);
-      font-family: "Noto Sans TC";
+      font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -415,7 +415,7 @@
     >h3 {
       margin-bottom: 5%;
       color: var(--dark, #3A2C19);
-      font-family: "Noto Sans TC";
+      font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
       font-size: 32px;
       font-style: normal;
       font-weight: 400;
@@ -424,7 +424,7 @@
 
     p {
       color: var(--dark, #3A2C19);
-      font-family: "Noto Sans TC";
+      font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -454,7 +454,7 @@
     >h3 {
       margin-bottom: 5%;
       color: var(--dark, #3A2C19);
-      font-family: "Noto Sans TC";
+      font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
       font-size: 32px;
       font-style: normal;
       font-weight: 400;
@@ -463,7 +463,7 @@
 
     p {
       color: var(--dark, #3A2C19);
-      font-family: "Noto Sans TC";
+      font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -513,7 +513,7 @@
         justify-content: center;
         align-items: center;
         font-size: 14px;
-        font-family: "Noto Sans TC";
+        font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
         color: white;
         background-color: #ff8740;
         border-radius: 8px;
@@ -530,7 +530,7 @@
         display: flex;
         flex-wrap: nowrap;
         font-size: 20px;
-        font-family: "Noto Sans TC";
+        font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
         color: #3a2c19;
         background-color: transparent;
         border: none;

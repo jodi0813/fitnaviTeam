@@ -40,7 +40,7 @@
         .JoinusStep4-title {
             display: flex;
             flex-direction: row;
-            gap: 50px;
+            gap: 30px;
             margin-bottom: 40px;
             border-bottom: 1px solid #3a2c19;
             width: 450px;
@@ -67,7 +67,7 @@
                 h4 {
                     color: var(--primary, var(--primary, #FF8740));
                     text-align: center;
-                    font-family: "Noto Sans TC";
+                    font-family: ""Noto Sans TC", sans-serif; Sans TC";
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 500;
@@ -110,7 +110,7 @@
 
             p {
                 color: var(--dark, #3A2C19);
-                font-family: "Noto Sans TC";
+                font-family: ""Noto Sans TC", sans-serif; Sans TC";
                 font-size: 10px;
                 font-style: normal;
                 font-weight: 500;
@@ -155,7 +155,7 @@
             label {
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
-                font-family: "Noto Sans TC";
+                font-family: ""Noto Sans TC", sans-serif; Sans TC";
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -178,7 +178,7 @@
                 border: 1px solid var(--primary, #FF8740);
                 text-align: center;
                 /* 段落/14 */
-                font-family: "Noto Sans TC";
+                font-family: ""Noto Sans TC", sans-serif; Sans TC";
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -192,7 +192,7 @@
 
                     color: var(--white, var(--white, #FEFCF7));
                     text-align: center;
-                    font-family: "Noto Sans TC";
+                    font-family: ""Noto Sans TC", sans-serif; Sans TC";
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 900;
