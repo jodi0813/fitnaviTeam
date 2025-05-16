@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./CoachDashboardList.scss";
 import MainTitle from "../../components/Title/MainTitle";
 import CoachInfo from "./CoachInfo";
+import CoachOrder from "./CoachOrder";
+
 
 function CoachDashboardList() {
   const [memberTab, setMemberTab] = useState("coachInfo");
@@ -57,7 +59,7 @@ function CoachDashboardList() {
 
           {memberTab === "coachInfo" && <CoachInfo />}
 
-          {memberTab === "useOrder" && <UserOrder />}
+          {memberTab === "useOrder" && <CoachOrder />}
 
         </div>
       </div>
