@@ -8,22 +8,22 @@ function HomePage() {
   return (
     <>
       <main id="homePage">
-        
+        <section>
           <HeroSection />
-        
+        </section>
         <div className="gradient">
-        <section className="homeSearchSection">
-          <SearchSection />
-        </section>
-        <section>
-          <TrainerSection />
-        </section>
-        <section>
-          <NutritionistSection />
-        </section>
-        <section>
-          <ArticleSection />
-        </section>
+          <section className="homeSearchSection">
+            <SearchSection />
+          </section>
+          <section>
+            <TrainerSection />
+          </section>
+          <section>
+            <NutritionistSection />
+          </section>
+          <section>
+            <ArticleSection />
+          </section>
         </div>
       </main>
     </>
