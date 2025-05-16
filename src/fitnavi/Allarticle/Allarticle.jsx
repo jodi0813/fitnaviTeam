@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Articlecards from '../../components/Articlecards';
 import "./AllArticle.scss";
 import { useNavigate } from 'react-router-dom';
@@ -8,8 +8,6 @@ import MainTitle from "../../components/Title/MainTitle";
 
 function Allarticle() {
 
-    // const { id } = useParams();
-    //   const [currentPage, setCurrentPage] = useState(0);
     const navigate = useNavigate();
     const cardsData = [
 
@@ -102,10 +100,21 @@ function Allarticle() {
 
     ]
 
-    // let filteredCards = cardsData;  // 預設是顯示所有文章
-    // if (id) {
-    //     filteredCards = cardsData.filter(card => card.category === id);  // 如果有id，就根據category篩選
-    // }
+    //Categories
+    const [category, setcategory] = useState('');
+    //Hottags
+    const [tag, setTag] = useState('');
+    const filteredCards = cardsData.filter(card => {
+        const matchCategory = !category || card.category === category;
+        const matchTag = !tag || card.tags.includes(tag);
+        return matchCategory && matchTag;
+    });
+
+    //待補上搜尋欄位
+
+
+
+
 
 
     return (
@@ -133,15 +142,16 @@ function Allarticle() {
                         </div>
 
                         <div className="Cat-name">
-                            <p>健身入門</p>
-                            <p>重量訓練</p>
-                            <p>燃脂運動</p>
-                            <p>肌力提升</p>
-                            <p>體態雕塑</p>
-                            <p>伸展放鬆</p>
-                            <p>減脂攻略</p>
-                            <p>增肌飲食</p>
-                            <p>營養調配</p>
+                            <button onClick={() => setcategory('健身入門')}>健身入門</button>
+                            <button onClick={() => setcategory('重量訓練')}>重量訓練</button>
+                            <button onClick={() => setcategory('燃脂運動')}>燃脂運動</button>
+                            <button onClick={() => setcategory('肌力提升')}>肌力提升</button>
+                            <button onClick={() => setcategory('體態雕塑')}>體態雕塑</button>
+                            <button onClick={() => setcategory('伸展放鬆')}>伸展放鬆</button>
+                            <button onClick={() => setcategory('減脂攻略')}>減脂攻略</button>
+                            <button onClick={() => setcategory('增肌飲食')}>增肌飲食</button>
+                            <button onClick={() => setcategory('營養調配')}>營養調配</button>
+
                         </div>
 
                         <div className="Tag">
@@ -149,24 +159,28 @@ function Allarticle() {
                                 <h4>#HashTag</h4>
                             </div>
 
-                            <p>新手健身</p>
-                            <p>迷思破解</p>
-                            <p>養成習慣</p>
-                            <p>重訓</p>
-                            <p>燃脂</p>
-                            <p>HIIT訓練</p>
-                            <p>放鬆肌肉</p>
-                            <p>力量突破</p>
-                            <p>肌力提升</p>
-                            <p>曲線雕塑</p>
-                            <p>瘦身攻略</p>
-                            <p>體態</p>
-                            <p>減脂</p>
-                            <p>健康飲食</p>
-                            <p>增肌</p>
-                            <p>蛋白質補充</p>
-                            <p>健身營養</p>
-                            <p>飲食</p>
+
+                            <div>
+                                <button onClick={() => setTag('新手健身')}>新手健身</button>
+                                <button onClick={() => setTag('迷思破解')}>迷思破解</button>
+                                <button onClick={() => setTag('養成習慣')}>養成習慣</button>
+                                <button onClick={() => setTag('重訓')}>重訓</button>
+                                <button onClick={() => setTag('燃脂')}>燃脂</button>
+                                <button onClick={() => setTag('HIIT訓練')}>HIIT訓練</button>
+                                <button onClick={() => setTag('放鬆肌肉')}>放鬆肌肉</button>
+                                <button onClick={() => setTag('力量突破')}>力量突破</button>
+                                <button onClick={() => setTag('肌力提升')}>肌力提升</button>
+                                <button onClick={() => setTag('曲線雕塑')}>曲線雕塑</button>
+                                <button onClick={() => setTag('瘦身攻略')}>瘦身攻略</button>
+                                <button onClick={() => setTag('體態')}>體態</button>
+                                <button onClick={() => setTag('減脂')}>減脂</button>
+                                <button onClick={() => setTag('健康飲食')}>健康飲食</button>
+                                <button onClick={() => setTag('增肌')}>增肌</button>
+                                <button onClick={() => setTag('蛋白質補充')}>蛋白質補充</button>
+                                <button onClick={() => setTag('健身營養')}>健身營養</button>
+                                <button onClick={() => setTag('飲食')}>飲食</button>
+                            </div>
+
                         </div>
                     </div>
 
@@ -179,7 +193,7 @@ function Allarticle() {
 
 
                         <div className="Allarticle-Card-article">
-                            {cardsData.map((card, index) => (
+                            {filteredCards.map((card, index) => (
 
                                 <Articlecards
                                     key={index}
@@ -190,7 +204,10 @@ function Allarticle() {
                                     tags={card.tags}
                                     category={card.category}
                                     className={`card${index + 1}`}
-                                    onClick={() => navigate(`/article/${card.id}`)}
+                                    onClick={() => {
+                                        navigate(`/article/${card.id}`);
+                                        window.scrollTo(0, 0);
+                                    }}
                                 />
                             ))}</div>
                     </div>

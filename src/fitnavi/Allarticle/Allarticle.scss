@@ -17,7 +17,7 @@
     /* 隱藏橫向溢出 */
     width: 100%;
     height: auto;
-    border: 1px solid red;
+    // border: 1px solid red;
     box-sizing: border-box;
 }
 
@@ -177,7 +177,7 @@
         .Cat-name {
             margin-top: 75px;
 
-            p {
+            button {
                 color: var(--dark, #3A2C19);
                 /* heading/標題4/medium */
                 font-family: "Noto Sans TC";
@@ -231,7 +231,7 @@
                 }
             }
 
-            p {
+            button {
                 display: flex;
                 padding: 3px 10px;
                 justify-content: center;
