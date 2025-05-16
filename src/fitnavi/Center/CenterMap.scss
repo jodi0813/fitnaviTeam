@@ -141,10 +141,13 @@
             }
         }
 
-        .centerMapPhoto {
-            border-radius: 16px;
-            height: 650px;
-            padding-left: 10%;
+        .mapPhotos {
+            width:100%;
+            .centerMapPhoto {
+                border-radius: 16px;
+                height: 650px;
+                padding-left: 10%;
+            }
         }
     }
 }

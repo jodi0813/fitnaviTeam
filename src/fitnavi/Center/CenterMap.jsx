@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./CenterMap.scss";
 import MainTitle from "../../components/Title/MainTitle";
