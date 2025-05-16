@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Nutri-JoinusStep2.scss";
+import "./NutriJoinusStep2.scss";
 import { useNavigate } from 'react-router-dom';
 import MainTitle from "../../components/Title/MainTitle";
 
@@ -9,7 +9,7 @@ function NutriJoinusStep2() {
     return (
         <>
             <section id='Nutri-JoinusStep2-Form'>
-                <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
+                <MainTitle title1="營養師" title2="我是營養師" />
 
 
                 <div className='CoachJoinus-Step2-wrapper'>

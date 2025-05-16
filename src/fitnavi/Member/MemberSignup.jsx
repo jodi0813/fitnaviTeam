@@ -68,8 +68,8 @@ function MemberSignup() {
 
 
                     <div className='MemberSignup-option'>
-                        <button className="Alreadyhavepassword">已經有帳號？</button>
-                        <button className="Returntologin" onClick={()=>navigate('/MemberLogin')}>回到登入頁面</button>
+   
+                        <button className="Returntologin" onClick={()=>navigate('/MemberLogin')}>已經有帳號？回到登入頁面</button>
                     </div>
 
 

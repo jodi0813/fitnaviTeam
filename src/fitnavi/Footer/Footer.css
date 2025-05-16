@@ -144,7 +144,7 @@ a {
     background-repeat: no-repeat;
     /* margin-top: 300px; */
     flex-shrink: 0;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 0;
 }
 
