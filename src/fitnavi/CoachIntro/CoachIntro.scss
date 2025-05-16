@@ -453,6 +453,7 @@
                     /* 19.6px */
                     letter-spacing: 1.4px;
                     padding-right: 5px;
+                    white-space: nowrap;
 
                     &:hover {
                         color: var(--primary, var(--primary, #FF8740));

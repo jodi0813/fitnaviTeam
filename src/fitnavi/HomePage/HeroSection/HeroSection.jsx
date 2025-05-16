@@ -35,8 +35,13 @@ function HeroSection() {
                     </p>
                 </div>
 
-                <div className="Hero-section-scroll">
-                    <p className="Hero-section-scroll-p">scroll</p>
+
+             
+
+            </div>
+
+               <div className="Hero-section-scroll">
+                    <p className="Hero-section-scroll-p">SCROLL</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none" className="HeoSectionArrow">
                         <path d="M36.5 18L24.5 30L12.5 18" stroke="#FEFCF7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
@@ -44,7 +49,6 @@ function HeroSection() {
 
 
 
-            </div>
 
 
             {/* <div className="HeroSection-arc"></div> */}
