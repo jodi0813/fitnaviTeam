@@ -178,7 +178,7 @@
         .Cat-name {
             margin-top: 20%;
 
-            button {
+            button{
                 color: var(--dark, #3A2C19);
                 /* heading/標題4/medium */
                 font-family:  "Noto Sans TC", sans-serif; 
@@ -232,7 +232,7 @@
                 }
             }
 
-            button {
+           button {
                 display: flex;
                 padding: 3px 10px;
                 justify-content: center;
@@ -262,6 +262,7 @@
 
         // width: 80%;
         .Allarticle-cards-title {
+           
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -294,6 +295,7 @@
                 font-weight: 400;
                 line-height: normal;
                 margin: 0px;
+                white-space: nowrap;
             }
         }
 
