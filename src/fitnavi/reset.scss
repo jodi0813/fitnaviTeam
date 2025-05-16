@@ -141,12 +141,12 @@ a {
 
 
 .wrap {
-  width: 100vw;
-  overflow-x: hidden;
+  width: 100%;
+  
   box-sizing: border-box;
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
+// html,
+// body {
+//    overflow-x: visible; 
+// }
