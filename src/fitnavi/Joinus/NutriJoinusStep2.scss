@@ -1,0 +1,43 @@
+@use "../reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+@font-face {
+    font-family: "Mantou Sans";
+    src: url(../../assets/MantouSans-Regular.ttf);
+}
+
+
+#Nutri-JoinusStep2-Form {
+    padding: 120px 50px;
+    width: 100vw;
+
+}
+
+.Nutri-NextPreButton {
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+    width: 100%;
+    margin-top: 40px;
+
+    Button {
+        margin: 0px;
+        white-space: nowrap;
+
+        border-radius: 999px;
+        border: 1px solid var(--primary, #FF8740);
+        color: var(--dark, #3A2C19);
+        text-align: center;
+        /* 段落/14 */
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        /* 19.6px */
+        letter-spacing: 1.4px;
+    }
+
+
+
+}

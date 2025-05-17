@@ -34,7 +34,47 @@ function NutriJoinusStep2() {
                             <div className='Step2Checkbox-group'>
                                 <label className="checkbox-item">
                                     <input type="checkbox" name="option1" />
-                                    新手教學
+                                    增肌減重
+                                </label>
+
+                                <label className="checkbox-item">
+                                    <input type="checkbox" name="option1" />
+                                    青少年營養
+                                </label>
+
+                                <label className="checkbox-item">
+                                    <input type="checkbox" name="option1" />
+                                    銀髮族營養
+                                </label>
+
+                                <label className="checkbox-item">
+                                    <input type="checkbox" name="option1" />
+                                    營養攝取
+                                </label>
+
+                                <label className="checkbox-item">
+                                    <input type="checkbox" name="option1" />
+                                    女性孕期營養
+                                </label>
+
+                                <label className="checkbox-item">
+                                    <input type="checkbox" name="option1" />
+                                    膳食平衡
+                                </label>
+
+                                <label className="checkbox-item">
+                                    <input type="checkbox" name="option1" />
+                                    外食族營養調整
+                                </label>
+
+                                <label className="checkbox-item">
+                                    <input type="checkbox" name="option1" />
+                                    客製化飲食計畫
+                                </label>
+
+                                <label className="checkbox-item">
+                                    <input type="checkbox" name="option1" />
+                                    運動員營養
                                 </label>
 
                                 <label className="checkbox-item">
@@ -44,62 +84,22 @@ function NutriJoinusStep2() {
 
                                 <label className="checkbox-item">
                                     <input type="checkbox" name="option1" />
-                                    核心訓練
+                                    健康飲食
                                 </label>
 
                                 <label className="checkbox-item">
                                     <input type="checkbox" name="option1" />
-                                    徒手訓練
+                                    素食營養規劃
                                 </label>
 
                                 <label className="checkbox-item">
                                     <input type="checkbox" name="option1" />
-                                    功能性訓練
+                                    營養配方
                                 </label>
 
                                 <label className="checkbox-item">
                                     <input type="checkbox" name="option1" />
-                                    肌力與爆發力
-                                </label>
-
-                                <label className="checkbox-item">
-                                    <input type="checkbox" name="option1" />
-                                    體適能訓練
-                                </label>
-
-                                <label className="checkbox-item">
-                                    <input type="checkbox" name="option1" />
-                                    術後復健訓練
-                                </label>
-
-                                <label className="checkbox-item">
-                                    <input type="checkbox" name="option1" />
-                                    運動按摩與伸展
-                                </label>
-
-                                <label className="checkbox-item">
-                                    <input type="checkbox" name="option1" />
-                                    銀髮族訓練
-                                </label>
-
-                                <label className="checkbox-item">
-                                    <input type="checkbox" name="option1" />
-                                    運動防護與傷害訓練
-                                </label>
-
-                                <label className="checkbox-item">
-                                    <input type="checkbox" name="option1" />
-                                    居家訓練規劃
-                                </label>
-
-                                <label className="checkbox-item">
-                                    <input type="checkbox" name="option1" />
-                                    體能雕塑
-                                </label>
-
-                                <label className="checkbox-item">
-                                    <input type="checkbox" name="option1" />
-                                    HIIT高強度間歇運動
+                                   飲食療法
                                 </label>
                             </div>
                         </div>
@@ -110,7 +110,7 @@ function NutriJoinusStep2() {
                                     <h4>專業證照：</h4>
                                     <h5>至少需有一張</h5>
                                 </div>
-                                <p>我們歡迎具備國際專業證照（如 NSCA、ACE、NASM）的教練加入，但若您仍在準備中，只要有豐富經驗與熱忱，也非常歡迎您與我們合作！</p>
+                                <p>必須包含由考選部核發的「營養師證書」（即通過營養師高等考試之證明），以確認您的專業資格。可另附學歷證明與其他專業證書作為加分資料。</p>
                             </div>
                         </div>
 
@@ -152,9 +152,9 @@ function NutriJoinusStep2() {
                             </div>
                         </fieldset>
 
-                        <div className='NextPreButton'>
+                        <div className='Nutri-NextPreButton'>
                             <button onClick={() => { navigate('/JoinusStep1'); window.scrollTo(0, 0); }} >◀ 上一步</button>
-                            <button onClick={() => { navigate('/JoinusStep3'); window.scrollTo(0, 0); }}>下一步 ▶</button>
+                            <button onClick={() => { navigate('/NutriJoinusStep3'); window.scrollTo(0, 0); }}>下一步 ▶</button>
                         </div>
 
 
