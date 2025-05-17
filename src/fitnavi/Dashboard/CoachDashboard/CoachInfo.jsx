@@ -1,4 +1,5 @@
-import Subtitle from "../../components/Title/Subtitle";
+
+import Subtitle from "../../../components/Title/Subtitle";
 import "../UserDashboard/MyInfo.scss";
 import { Link } from "react-router-dom";
 function CoachInfo() {

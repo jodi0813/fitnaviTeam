@@ -11,7 +11,7 @@ import Allarticle from "./Allarticle/Allarticle";
 import Center from "./Center/Center";
 import CoachIntro from "./CoachIntro/Coachintro";
 import Footer from "./Footer/Footer";
-import MemberList from "./UserDashboard/MemberList";
+import MemberList from "./Dashboard/UserDashboard/MemberList";
 import Joinus from "./Joinus/Joinus";
 import JoinusStep1 from "./Joinus/JoinusStep1";
 import JoinusStep2 from "./Joinus/JoinusStep2";
@@ -28,7 +28,7 @@ import SetAccountPassword from "./Member/SetAccountPassword";
 import SignupSuccess from "./Member/SignupSuccess";
 import NutriIntro from "./NutriIntro/NutriIntro";
 import "./reset.scss";
-import CoachDashboardList from "./CoachDashboard/CoachDashboardList";
+import CoachDashboardList from "./Dashboard/CoachDashboard/CoachDashboardList";
 
 
 function App() {
