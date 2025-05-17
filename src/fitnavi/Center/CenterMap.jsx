@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./CenterMap.scss";
 import MainTitle from "../../components/Title/MainTitle";
@@ -178,7 +178,8 @@ function CenterMap() {
 
           {filteredGyms.map((gym, i) => (
             <div className="gymCard" key={i}>
-              <img src={gym.img} alt={gym.name} className="centerPic" />
+              <Link to="/center">
+              <img src={gym.img} alt={gym.name} className="centerPic" /></Link>
               <div className="gymCardText">
                 <h3>{gym.name}</h3>
                 <p>{gym.features.map((f) => `#${f}`).join(" ")}</p>

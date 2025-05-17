@@ -11,6 +11,14 @@ function Articlemanagement() {
       classification: "新手健身",
       state: "公開",
     },
+        {
+      no: "2",
+      title: "健身初學者必看：如何開始你的運動旅程",
+      date: "2025.03.28",
+      editdate: "2025.04.01",
+      classification: "增肌減脂",
+      state: "不公開",
+    },
   ];
   return (
     <>
@@ -19,7 +27,7 @@ function Articlemanagement() {
           subtitle="文章管理"
           subtitleEN="Article Management & Editing"
         />
-      </div>
+  
       <div className="order-table">
         <div className="table-header">
           <span>No</span>
@@ -56,7 +64,7 @@ function Articlemanagement() {
             </span>
           </div>
         ))}
-      </div>
+      </div>    </div>
     </>
   );
 }

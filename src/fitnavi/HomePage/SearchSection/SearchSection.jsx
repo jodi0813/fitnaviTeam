@@ -20,7 +20,7 @@ function SearchSection() {
           <div className="home-search-block">
             <div className="home-search-titleBox">
               <span className="home-search-title">場地</span>
-              <span className="home-search-titleEn">Venue</span>
+              <span className="home-search-titleEn">venue</span>
             </div>
             <div className="home-search-main">
               <div>
