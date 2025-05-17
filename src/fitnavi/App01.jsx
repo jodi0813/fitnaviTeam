@@ -29,11 +29,14 @@ import SignupSuccess from "./Member/SignupSuccess";
 import NutriIntro from "./NutriIntro/NutriIntro";
 import "./reset.scss";
 import CoachDashboardList from "./Dashboard/CoachDashboard/CoachDashboardList";
+import ScrollToTop from "../components/ScrollToTop";
+
 
 
 function App() {
   return (
     <>
+    <ScrollToTop/>
       <div className="wrap">
         <Navbar />
         <Routes>
