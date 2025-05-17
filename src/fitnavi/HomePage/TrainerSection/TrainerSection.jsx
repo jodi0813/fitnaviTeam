@@ -35,12 +35,16 @@ function TrainerSection() {
   return (
     <>
       <div className="home-trainer">
-        <header className="home-trainer-mainTitle">專業講師</header>
+        <header className="home-trainer-mainTitle">
+          <span className="home-trainer-mainTitle1">讓專業陪你前進</span>
+          <span className="home-trainer-mainTitle2">效率與安全兼得</span>
+        </header>
         <div className="home-trainer1">
           {trainerList.map((trainer, i) => (
             <div
-              className={`home-trainer-card ${i === focusIndex ? "home-trainer-active" : "home-trainer-none"
-                }`}
+              className={`home-trainer-card ${
+                i === focusIndex ? "home-trainer-active" : "home-trainer-none"
+              }`}
               key={i}
               onClick={() => setFocusIndex(i)}
             >
@@ -76,17 +80,26 @@ function TrainerSection() {
             <img src="/images/coach.png" alt="" />
           </div>
           <div className="home-trainer-title">
-            <span className="home-trainer-titleCh">教練</span>
-            <span className="home-trainer-titleEn">PERSONAL TRAINER</span>
+            <div>
+            <div className="home-trainer-title1">
+              <span className="home-trainer-titleEn">PERSONAL TRAINER</span>
+              <span className="home-trainer-titleCh">教練</span>
+            </div>
             <p>
               「有人帶，真的不一樣」
               <br />
               從動作觀察到訓練計畫，教練為你把關每一步，讓努力更有效、更安全。
-            </p>
-          </div>
-          <div className="home-trainer-button">
-           <Link to="/Joinus"> <button>成為合作教練</button></Link>
-           <Link to="/Joinus"> <button>查看更多教練</button></Link>
+            </p></div>
+            <div className="home-trainer-button">
+              <Link to="/Joinus">
+                {" "}
+                <button>成為合作教練</button>
+              </Link>
+              <Link to="/Joinus">
+                {" "}
+                <button>查看更多教練</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -4,61 +4,60 @@ import "./CenterMap.scss";
 import MainTitle from "../../components/Title/MainTitle";
 import { cities, taipeiDistricts } from "../../data/locations";
 
-
 function CenterMap() {
   const location = useLocation();
-  // 定義搜尋欄位的狀態，包括場館名稱、縣市、地區與勾選的功能列表
+
   const [searchData, setSearchData] = useState({
     name: "",
     city: "",
     area: "",
     features: [],
   });
-  // 如果來自其他頁面有帶 query 參數，自動設進狀態
+
+  const [filteredResults, setFilteredResults] = useState([]);
+
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const city = params.get("city") || "";
     const area = params.get("area") || "";
     setSearchData((prev) => ({ ...prev, city, area }));
   }, [location.search]);
-  //首頁跳轉過來要顯示在最上面
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // 模擬健身房資料，每間健身房都有自己的圖片路徑 img
   const gyms = [
     {
-      name: "A健身房",
+      name: "TECHNOGym(忠孝館)",
       city: "台北市",
       area: "大安區",
-      features: ["重訓器材", "私人教練", "單次計費", "女性專區", "靠近捷運站"],
+      features: ["重訓器材", "有氧器材", "淋浴間", "24小時營業", "靠近捷運站"],
       img: "./images/center.jpg",
     },
     {
-      name: "B健身房",
-      city: "新北市",
-      area: "板橋區",
-      features: ["重訓器材", "團體課程", "月費", "女性專區"],
-      img: "./images/center.jpg",
-    },
-    {
-      name: "C健身房",
+      name: "日初健身(大安館)",
       city: "台北市",
-      area: "信義區",
-      features: ["淋浴間", "有氧舞蹈", "瑜珈"],
+      area: "大安區",
+      features: ["重訓器材", "有氧器材", "淋浴間", "女性專區"],
       img: "./images/center.jpg",
     },
     {
-      name: "D健身房",
-      city: "新北市",
-      area: "新店區",
-      features: ["飛輪", "TRX懸吊訓練", "補給品販賣機"],
+      name: "黃金gym(師大館)",
+      city: "台北市",
+      area: "大安區",
+      features: ["重訓器材", "有氧器材", "24小時營業"],
+      img: "./images/center.jpg",
+    },
+    {
+      name: "NITEGym(師大館)",
+      city: "台北市",
+      area: "大安區",
+      features: ["重訓器材", "有氧器材", "淋浴間"],
       img: "./images/center.jpg",
     },
   ];
 
-  // 所有功能選項，分成 label（顯示）與 value（比對用）
   const featureOptions = [
     { label: "重訓器材", value: "重訓器材" },
     { label: "有氧器材", value: "有氧器材" },
@@ -81,41 +80,40 @@ function CenterMap() {
     { label: "瑜珈", value: "瑜珈" },
   ];
 
-  // 篩選健身房清單：根據使用者輸入的條件過濾
-  const filteredGyms = gyms.filter((gym) => {
-    const matchName = gym.name.includes(searchData.name); // 名稱包含
-    const matchCity = !searchData.city || gym.city === searchData.city; // 城市相符或未選擇
-    const matchArea = !searchData.area || gym.area === searchData.area; // 地區相符或未選擇
-    const matchFeatures = searchData.features.every((f) => gym.features.includes(f)); // 所有勾選功能皆符合
-    return matchName && matchCity && matchArea && matchFeatures;
-  });
-
-  // 當使用者勾選或取消勾選 checkbox 時觸發
-  const handleCheckboxChange = (e) => {
-    const isChecked = e.target.checked; // 是否被勾選
-    const itemValue = e.target.value; // 功能名稱
-    const currentFeatures = searchData.features; // 目前所有已勾選功能
-
-    // 如果勾選就加入新項目，沒勾選就從列表中移除該項目
-    const updatedFeatures = isChecked
-      ? currentFeatures.concat(itemValue)
-      : currentFeatures.filter((f) => f !== itemValue);
-
-    // 建立新的 searchData，保留其他欄位，只更新 features
-    setSearchData({
-      name: searchData.name,
-      city: searchData.city,
-      area: searchData.area,
-      features: updatedFeatures,
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const results = gyms.filter((gym) => {
+      const matchName = gym.name.includes(searchData.name);
+      const matchCity = !searchData.city || gym.city === searchData.city;
+      const matchArea = !searchData.area || gym.area === searchData.area;
+      const matchFeatures = searchData.features.every((f) =>
+        gym.features.includes(f)
+      );
+      return matchName && matchCity && matchArea && matchFeatures;
     });
+    setFilteredResults(results);
   };
+
+  const handleCheckboxChange = (e) => {
+    const isChecked = e.target.checked;
+    const itemValue = e.target.value;
+    const updatedFeatures = isChecked
+      ? [...searchData.features, itemValue]
+      : searchData.features.filter((f) => f !== itemValue);
+
+    setSearchData((prev) => ({ ...prev, features: updatedFeatures }));
+  };
+
+  useEffect(() => {
+    setFilteredResults(gyms); // 預設顯示所有
+  }, []);
 
   return (
     <div id="centerMapMain">
       <MainTitle title1="找場地" title2="找到專屬你的健身場地" />
       <div className="mapSearchAll">
         <div className="mapSearchLeft">
-          <form name="center-search-form" id="center-search-form">
+          <form id="center-search-form" onSubmit={handleSearch}>
             <div className="nameCityArea">
               <label htmlFor="centername">場館名稱</label>
               <input
@@ -123,18 +121,24 @@ function CenterMap() {
                 id="centername"
                 placeholder="請輸入場館名稱"
                 value={searchData.name}
-                onChange={(e) => setSearchData({ ...searchData, name: e.target.value })}
+                onChange={(e) =>
+                  setSearchData({ ...searchData, name: e.target.value })
+                }
               />
 
               <label htmlFor="city">縣市</label>
               <select
                 id="city"
                 value={searchData.city}
-                onChange={(e) => setSearchData({ ...searchData, city: e.target.value })}
+                onChange={(e) =>
+                  setSearchData({ ...searchData, city: e.target.value })
+                }
               >
                 <option value="">請選擇縣市</option>
                 {cities.map((city) => (
-                  <option key={city} value={city}>{city}</option>
+                  <option key={city} value={city}>
+                    {city}
+                  </option>
                 ))}
               </select>
 
@@ -142,16 +146,19 @@ function CenterMap() {
               <select
                 id="area"
                 value={searchData.area}
-                onChange={(e) => setSearchData({ ...searchData, area: e.target.value })}
+                onChange={(e) =>
+                  setSearchData({ ...searchData, area: e.target.value })
+                }
               >
                 <option value="">請選擇地區</option>
-                    {taipeiDistricts.map((taipeiDistrict) => (
-                      <option key={taipeiDistrict} value={taipeiDistrict}>{taipeiDistrict}</option>
-                    ))}
+                {taipeiDistricts.map((taipeiDistrict) => (
+                  <option key={taipeiDistrict} value={taipeiDistrict}>
+                    {taipeiDistrict}
+                  </option>
+                ))}
               </select>
             </div>
 
-            {/* 服務與課程功能選擇清單 */}
             <fieldset className="centerItem">
               <legend>服務項目 / 課程項目</legend>
               {featureOptions.map((option, index) => (
@@ -167,19 +174,22 @@ function CenterMap() {
                 </div>
               ))}
             </fieldset>
+            <button type="submit" className="centerSearchBt">
+              搜尋
+            </button>
           </form>
         </div>
 
-        {/* 顯示搜尋結果數量與健身房列表 */}
         <div className="centerResultPhoto">
           <div className="photosNumber">
-            共有 <span>{filteredGyms.length}</span> 間符合條件的場館
+            共有 <span>{filteredResults.length}</span> 間符合條件的場館
           </div>
 
-          {filteredGyms.map((gym, i) => (
+          {filteredResults.map((gym, i) => (
             <div className="gymCard" key={i}>
               <Link to="/center">
-              <img src={gym.img} alt={gym.name} className="centerPic" /></Link>
+                <img src={gym.img} alt={gym.name} className="centerPic" />
+              </Link>
               <div className="gymCardText">
                 <h3>{gym.name}</h3>
                 <p>{gym.features.map((f) => `#${f}`).join(" ")}</p>
@@ -188,9 +198,12 @@ function CenterMap() {
           ))}
         </div>
 
-        {/* 地圖示意圖區塊 */}
         <div className="mapPhotos">
-          <img src="/images/mapicon.jpg" alt="地圖示意圖" className="centerMapPhoto" />
+          <img
+            src="/images/mapicon.jpg"
+            alt="地圖示意圖"
+            className="centerMapPhoto"
+          />
         </div>
       </div>
     </div>
@@ -198,3 +211,4 @@ function CenterMap() {
 }
 
 export default CenterMap;
+
