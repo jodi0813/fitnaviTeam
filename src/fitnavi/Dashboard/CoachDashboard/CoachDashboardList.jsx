@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./CoachDashboardList.scss";
-
 import CoachInfo from "./CoachInfo";
 import CoachOrder from "./CoachOrder";
 import StudentOrder from "./StudentOrder";
 import CourseManagement from "./CourseManagement";
 import MainTitle from "../../../components/Title/MainTitle";
+import Articlemanagement from "./Articlemanagement";
 
 function CoachDashboardList() {
   const [memberTab, setMemberTab] = useState("coachInfo");
@@ -65,7 +65,7 @@ function CoachDashboardList() {
                       ? "memberBt memberActive"
                       : "memberBt"
                   }
-                  onClick={() => setMemberTab("useOrder")}
+                  onClick={() => setMemberTab("articlemanagement")}
                 >
                   文章管理
                 </button>
@@ -86,6 +86,7 @@ function CoachDashboardList() {
           {memberTab === "coachOrder" && <CoachOrder />}
           {memberTab === "studentOrder" && <StudentOrder />}
           {memberTab === "courseManagement" && <CourseManagement />}
+          {memberTab === "articlemanagement"&&<Articlemanagement/>}
         </div>
       </div>
     </>
