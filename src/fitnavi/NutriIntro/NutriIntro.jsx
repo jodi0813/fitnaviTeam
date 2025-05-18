@@ -1,6 +1,6 @@
 import "./NutriIntro.scss";
 import { useState } from "react";
-import MainTitle from "../../components/Title/MainTitle";
+import MaintitleBread from '../../components/Title/MaintitleBread';
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
 import Articlecards from '../../components/Articlecards/Articlecards';
@@ -46,50 +46,13 @@ function NutriIntro() {
         );
     };
 
-
-    const cardsData = [
-
-        {
-            id: "card1",
-            date: "2025/03/28",
-            img: "./images/article-7.jpg",
-            title: "減脂只靠運動不夠？飲食管理才是關鍵",
-            content: "減脂並不意味著無止境的節食，關鍵在於合理控制飲食，搭配有效的運動。減少糖分與不健康脂肪的攝取，讓你在消耗脂肪的同時保持活力。",
-            tags: ["減脂", "健康飲食", "瘦身攻略"],
-            category: "減脂攻略"
-
-        },
-        {
-            id: "card2",
-            date: "2025/02/04",
-            img: "./images/article-8.jpg",
-            title: "增肌該怎麼吃？營養搭配與飲食策略分享",
-            content: "想要增肌，光靠訓練是不夠的，飲食也起著關鍵作用。適量增加蛋白質和碳水化合物的攝入，並確保攝取足夠的熱量，讓你在訓練後獲得更多肌肉增長。",
-            tags: ["增肌飲食", "蛋白質補充"],
-            category: "增肌飲食"
-
-        },
-        {
-            id: "card3",
-            date: "2025/01/02",
-            img: "/images/article-9.jpg",
-            title: "健身不只是動，營養均衡才是成功的秘密",
-            content: "健身營養的成功不僅是攝取足夠的卡路里，更重要的是如何搭配碳水化合物、蛋白質與脂肪。根據不同的健身目標，合理調整飲食比例，讓效果事半功倍！",
-            tags: ["健身營養", "飲食"],
-            category: "營養調配"
-        }
-
-
-
-    ]
-
     const [cardData] = useState([
         {
 
             description: "諮詢後，我能更有規律地吃飯，保持健康的飲食習慣。",
             color: "#F1F7D8",
             rate: "4.0",  // 評分為4顆星
-            name: "1李Ｏ儀",
+            name: "李Ｏ儀",
             date: "2025/05/26"
 
         },
@@ -97,59 +60,130 @@ function NutriIntro() {
             description: "營養師幫我調整了過去不健康的飲食方式，讓我每天都能夠保持適量的營養攝取。這樣的生活方式讓我更加輕鬆，也讓我的身體變得更加健康。",
             color: "#FEF6DD",
             rate: "5.0",
-            name: "2黃Ｏ傑",
+            name: "黃Ｏ傑",
             date: "2025/05/26"
         },
         {
             description: "營養師幫我調整飲食後，我的體能提升了不少，感覺更有活力。",
             color: "#F1F7D8",
             rate: "4.0",
-            name: "3張Ｏ如",
+            name: "張Ｏ如",
             date: "2025/05/26"
         },
         {
             description: "營養師幫我設計了一個非常實用的飲食計劃，並且根據我的需求調整了每一項建議。結果不僅是體重的減輕，整體健康狀況也明顯改善了。",
             color: "#FEECDD",
             rate: "4.0",
-            name: "4王Ｏ涵",
+            name: "王Ｏ涵",
             date: "2025/05/26"
         },
         {
             description: "營養師的專業建議讓我找到了適合自己的飲食方式，效果很好。",
             color: "#E3F3F8",
             rate: "4.0",
-            name: "5邱Ｏ涵",
+            name: "邱Ｏ涵",
             date: "2025/05/26"
         },
         {
             description: "我從來沒有像這樣系統地了解過飲食與健康之間的關聯，營養師的諮詢讓我對自己的身體有了更多的了解。改變飲食後，我的能量更充沛。",
             color: "#FEECDD",
             rate: "4.0",
-            name: "6朱Ｏ瑄",
+            name: "朱Ｏ瑄",
             date: "2025/05/26"
         },
         {
             description: "這次的營養諮詢讓我發現，原來飲食的管理其實是這麼簡單！營養師不僅提供了個性化的建議，還幫我調整了我的飲食計劃，讓我容易達成目標。",
             color: "#F1F7D8",
             rate: "4.0",
-            name: "7蔡Ｏ珊",
+            name: "蔡Ｏ珊",
             date: "2025/05/26"
         },
         {
             description: "感謝營養師讓我對飲食有了全新認識，體重和健康都達到了目標。",
             color: "#FEECDD",
             rate: "4.0",
-            name: "8劉Ｏ霏",
+            name: "劉Ｏ霏",
             date: "2025/05/26"
         },
         {
             description: "這是我第一次進行營養師諮詢，經驗非常好！營養師提供了詳細的飲食計劃，並根據我的生活習慣給出了非常實用的建議。",
             color: "#F1F7D8",
             rate: "4.0",
-            name: "9許Ｏ傑",
+            name: "許Ｏ傑",
             date: "2025/05/26"
         }
     ]);
+
+    const nutriArticleData = [
+        {
+            id: "card1",
+            date: "2025/06/27",
+            img: "./images/article-10.jpg",
+            title: "蛋白質怎麼補才有效？掌握時機最重要",
+            content: "減脂並不意味著無止境的節食，關鍵在於合理控制飲食，搭配有效的運動。減少糖分與不健康脂肪的攝取，讓你在消耗脂肪的同時保持活力。",
+            tags: ["#增肌", "#蛋白質補充"],
+            category: "減脂攻略"
+
+        },
+
+        {
+            id: "card2",
+            date: "2025/03/28",
+            img: "./images/article-7.jpg",
+            title: "減脂只靠運動不夠？飲食管理才是關鍵",
+            content: "減脂並不意味著無止境的節食，關鍵在於合理控制飲食，搭配有效的運動。減少糖分與不健康脂肪的攝取，讓你在消耗脂肪的同時保持活力。",
+            tags: ["#健康飲食", "#瘦身攻略"],
+            category: "減脂攻略"
+
+        },
+        {
+            id: "card3",
+            date: "2025/02/04",
+            img: "./images/article-8.jpg",
+            title: "增肌該怎麼吃？營養搭配與飲食策略分享",
+            content: "想要增肌，光靠訓練是不夠的，飲食也起著關鍵作用。適量增加蛋白質和碳水化合物的攝入，並確保攝取足夠的熱量，讓你在訓練後獲得更多肌肉增長。",
+            tags: ["#增肌飲食", "#蛋白質補充"],
+            category: "增肌飲食"
+
+        },
+        {
+            id: "card4",
+            date: "2025/01/02",
+            img: "/images/article-9.jpg",
+            title: "健身不只是動，營養均衡才是成功的秘密",
+            content: "健身營養的成功不僅是攝取足夠的卡路里，更重要的是如何搭配碳水化合物、蛋白質與脂肪。根據不同的健身目標，合理調整飲食比例，讓效果事半功倍！",
+            tags: ["#健身營養", "#飲食"],
+            category: "營養調配"
+
+        },
+        {
+            id: "card5",
+            date: "2024/09/13",
+            img: "/images/article-11.jpg",
+            title: "減脂不只是吃得少，吃對才是王道",
+            content: "一味節食容易導致代謝下降與肌肉流失。想健康減脂，關鍵在於選對食物、控制熱量並保持飽足感，讓你不挨餓也能慢慢瘦下來！",
+            tags: ["#減脂", "#健康飲食"],
+            category: "減脂攻略"
+        }
+
+    ];
+
+    const [index, setIndex] = useState(0);
+
+    const goNext = () => {
+        setIndex((prevIndex) => (prevIndex + 1) % nutriArticleData.length);
+    };
+
+    const goBack = () => {
+        setIndex((prevIndex) => (prevIndex - 1 + nutriArticleData.length) % nutriArticleData.length);
+    };
+
+    // 取得目前應該顯示的三張卡片（循環）
+    const nutrivisibleCards = [
+        nutriArticleData[index % nutriArticleData.length],
+        nutriArticleData[(index + 1) % nutriArticleData.length],
+        nutriArticleData[(index + 2) % nutriArticleData.length],
+    ];
 
 
     return (
@@ -157,19 +191,26 @@ function NutriIntro() {
         <>
             <main id="Nutriintro">
 
-                <MainTitle title1="營養師" title2="找到專屬您的營養師" className="no-line" />
-                <button>首頁&gt;營養師&gt; 安娜 Anna</button>
+                <MaintitleBread
+                    title1="營養師"
+                    title2="找到專屬你的營養師"
+                    breadcrumbList={[
+                        { label: "首頁", link: "/" },
+                        { label: "營養師", link: "/Nutritionist" },
+                        { label: "張俐筠 Lila" },
+                    ]}
+                />
 
 
-                <button className="BacktoPage">&lt;返回列表</button>
+
 
                 <section className="Nutriintro-person">
 
                     <div className="Nutri-person-class-photo">
                         <div className="Nutri-photogallery">
-                            <PhotoGallery2/>  
+                            <PhotoGallery2 />
                         </div>
-                          
+
                         {/* <div className="Nutriphotos">
                             <div className="Nutri-selfie">
                                 <img src="/images/Nutri-selfie.jpg" alt="" />
@@ -246,7 +287,10 @@ function NutriIntro() {
                             <div className="Nutri-prices-button">
                                 <p>10堂優惠 ：$1,400/單堂</p>
                                 <div className="Nutri-price-with-button">
-                                    <button class="classinrto" type="button">立即報名</button>
+                                    <button class="classinrto" type="button">
+                                        <span className="Nutriclassinrto-text">立即報名</span>
+                                        <img src="/images/search.svg" alt="" />
+                                    </button>
                                 </div>
                             </div>
 
@@ -405,55 +449,55 @@ function NutriIntro() {
                 </section>
 
                 <section id="Nutri-reservation">
-                  
-                        <div className="reserve">
-                            <div className="restitle">
-                                <h3>預約流程</h3>
-                                <h4>Reserve Process</h4>
-                            </div>
-                            <div className="process">
-                                <div className="number">
-                                    <p>1</p>
-                                    <p>2</p>
-                                    <p>3</p>
-                                    <p>4</p>
-                                    <p>5</p>
-                                </div>
 
-                                <div className="resdetail">
-                                    <p>點選立即報名</p>
-                                    <p>個人頁面＞我的訂單＞課程訂單</p>
-                                    <p>點選剩餘堂數</p>
-                                    <p>預約專屬時間並選擇上課地點</p>
-                                    <p>教練確認預約</p>
-                                </div>
+                    <div className="reserve">
+                        <div className="restitle">
+                            <h3>預約流程</h3>
+                            <h4>Reserve Process</h4>
+                        </div>
+                        <div className="process">
+                            <div className="number">
+                                <p>1</p>
+                                <p>2</p>
+                                <p>3</p>
+                                <p>4</p>
+                                <p>5</p>
                             </div>
 
-                            <div className="reserve-img">
-                                <img src="./images/reserved.png" alt="" />
-
-                                <p>預約成功！</p>
-
+                            <div className="resdetail">
+                                <p>點選立即報名</p>
+                                <p>個人頁面＞我的訂單＞課程訂單</p>
+                                <p>點選剩餘堂數</p>
+                                <p>預約專屬時間並選擇上課地點</p>
+                                <p>教練確認預約</p>
                             </div>
                         </div>
 
-                        <div className="Nutri-calendar-reservetime">
-                            <div className="caltitle">
-                                <h3>營養師可預約時間</h3>
-                                <h4>Available Time</h4>
-                            </div>
+                        <div className="reserve-img">
+                            <img src="./images/reserved.png" alt="" />
 
+                            <p>預約成功！</p>
 
-                            <div className="Nutri-Available-calendar">
-                                <CalendarComponent />
-                            </div>
+                        </div>
+                    </div>
 
-
-
+                    <div className="Nutri-calendar-reservetime">
+                        <div className="caltitle">
+                            <h3>營養師可預約時間</h3>
+                            <h4>Available Time</h4>
                         </div>
 
 
-                  
+                        <div className="Nutri-Available-calendar">
+                            <CalendarComponent />
+                        </div>
+
+
+
+                    </div>
+
+
+
 
 
 
@@ -472,12 +516,11 @@ function NutriIntro() {
 
 
                             <div className="Three-classcards">
-                                <button>
+                                <button className="NutriViewArticles-left" onClick={goNext}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                                         <path d="M30 36L18 24L30 12" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                                {cardsData.map((card, index) => (
+                                    </svg></button>
+                                {nutrivisibleCards.map((card, index) => (
 
                                     <Articlecards
                                         key={index}
@@ -492,11 +535,10 @@ function NutriIntro() {
                                     />
                                 ))}
 
-                                <button>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                        <path d="M18 36L30 24L18 12" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
+                                <button className=" .NutriViewArticles-right" onClick={goBack}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="26" viewBox="0 0 14 26" fill="none">
+                                        <path d="M1 25L13 13L1 1" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></button>
                             </div>
 
 

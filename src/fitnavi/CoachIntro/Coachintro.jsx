@@ -286,7 +286,7 @@ function Coachintro() {
                                 <p>10堂優惠 ：$1,400/單堂</p>
                                 <div className="price-with-button">
                                     <p>20堂優惠 ：$1,200/單堂</p>
-                                    <button class="classinrto" type="button" onClick={() => navigate('/NutriIntro')}>
+                                    <button class="classinrto-text" type="button" onClick={() => navigate('/NutriIntro')}>
                                         <span className="classinrto-text">立即報名</span>
                                         <img src="/images/search.svg" alt="" />
                                     </button>
