@@ -1,13 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import "./SearchSection.scss";
 import { cities, taipeiDistricts } from "../../../data/locations";
+import { IoSearch } from "react-icons/io5";
+import { FaSearch } from "react-icons/fa";
 function SearchSection() {
   const navigate = useNavigate();
 
   const handleSearch = () => {
     const selectedCity = document.getElementById("home-city")?.value || "";
     const selectedArea = document.getElementById("home-area")?.value || "";
-    navigate(`/centerMap?city=${encodeURIComponent(selectedCity)}&area=${encodeURIComponent(selectedArea)}`);
+    navigate(
+      `/centerMap?city=${encodeURIComponent(
+        selectedCity
+      )}&area=${encodeURIComponent(selectedArea)}`
+    );
   };
 
   return (
@@ -35,18 +41,26 @@ function SearchSection() {
                   <select id="home-city">
                     <option value="">請選擇縣市</option>
                     {cities.map((city) => (
-                      <option key={city} value={city}>{city}</option>
+                      <option key={city} value={city}>
+                        {city}
+                      </option>
                     ))}
                   </select>
                   <select id="home-area">
                     <option value="">請選擇地區</option>
                     {taipeiDistricts.map((taipeiDistrict) => (
-                      <option key={taipeiDistrict} value={taipeiDistrict}>{taipeiDistrict}</option>
+                      <option key={taipeiDistrict} value={taipeiDistrict}>
+                        {taipeiDistrict}
+                      </option>
                     ))}
                   </select>
                 </div>
-                <button className="home-search-button" onClick={handleSearch}>
+                <button className="homeSearchBt" onClick={handleSearch}>
                   搜尋
+                 <span className="faSearch">
+             
+                    <FaSearch />
+                  </span>
                 </button>
               </div>
             </div>
@@ -66,17 +80,23 @@ function SearchSection() {
                 />
               </div>
               <div className="home-search-dropdowns">
-                <div className="home-search-bottom">
+                <div className="home-search-botton">
                   <div className="home-search-toggleBt">
                     <button>健身教練</button>
                     <button>營養師</button>
                   </div>
-
-                  <select>
-                    <option>課程種類</option>
-                  </select>
+                  <div>
+                    <select>
+                      <option>課程種類</option>
+                    </select>
+                  </div>
                 </div>
-                <button className="home-search-button">搜尋</button>
+                <button className="homeSearchBt">
+                  搜尋
+                  <span className="faSearch">
+                    <FaSearch />
+                  </span>
+                </button>
               </div>
             </div>
           </div>

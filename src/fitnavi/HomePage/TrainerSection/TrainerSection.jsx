@@ -95,11 +95,11 @@ function TrainerSection() {
             </div>
             <div className="home-trainer-button">
               <Link to="/Joinus">
-                {" "}
+                
                 <button>成為合作教練</button>
               </Link>
               <Link to="/Joinus">
-                {" "}
+           
                 <button>查看更多教練</button>
               </Link>
             </div>

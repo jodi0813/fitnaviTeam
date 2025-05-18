@@ -64,13 +64,6 @@
         justify-content: flex-end;
         margin-right: 50px;
 
-        .home-search-button {
-          border-radius: 999px;
-          background: #ff8740;
-          color: #fefcf7;
-          width: 100%;
-        }
-
         img {
           position: absolute;
           left: -30px;
@@ -113,44 +106,74 @@
             line-height: 140%;
             letter-spacing: 1.4px;
           }
-
-          .home-search-toggleBt {
-            display: flex;
-            gap: 8px;
-
-            button {
-              display: flex;
-              height: 40px;
-              padding: 12px 36px;
-              justify-content: center;
-              align-items: center;
-
-              flex: 1;
-              border-radius: 99px;
-              border: 1px solid #ff8740;
-              opacity: 0.8;
-              background: #fff;
-              color: #ff8740;
-              text-align: center;
-              font-family: "Noto Sans TC", sans-serif;
-              font-size: 18px;
-              font-style: normal;
-              font-weight: 700;
-              line-height: 150%;
-
-              &:hover {
-                background: #ff8740;
-                color: #fff;
-                opacity: 1;
-              }
-            }
-
-          }
-
-          .home-search-bottom {
+          .home-search-botton {
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 29px;
+            .home-search-toggleBt {
+              display: flex;
+              gap: 8px;
+              button {
+                display: flex;
+                height: 40px;
+                padding: 12px 36px;
+                justify-content: center;
+                align-items: center;
+
+                flex: 1;
+                border-radius: 99px;
+                border: 1px solid #ff8740;
+                opacity: 0.8;
+                background: #fff;
+                color: #ff8740;
+                text-align: center;
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 150%;
+
+                &:hover {
+                  background: #ff8740;
+                  color: #fff;
+                  opacity: 1;
+                }
+              }
+            }
+          }
+          .homeSearchBt {
+            display: flex;
+            height: 40px;
+            padding: 8px 84px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            align-self: stretch;
+            border-radius: 999px;
+            background: #ff8740;
+            color: #fefcf7;
+            text-align: center;
+            /* heading/標題4/Bold */
+            font-family: "Noto Sans TC";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 2px;
+             transition: all 0.15s ease-out;
+            .faSearch {
+              margin-left: 8px;
+              display: none;
+            }
+          }
+          .homeSearchBt:hover {
+            background-color: #fff;
+            color: #ff8740;
+            border: 2px solid #ff8740;
+          }
+          .homeSearchBt:hover .faSearch {
+            display: inline-block;
           }
         }
       }

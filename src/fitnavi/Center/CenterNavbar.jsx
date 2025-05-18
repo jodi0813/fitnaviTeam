@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./CenterNavbar.scss";
 import Subtitle from "../../components/Title/Subtitle";
 import CoachCard from "../../components/CoachCard";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { SiLine } from "react-icons/si"; // LINE 要用 Simple Icons 庫
 function CenterNavbar() {
   const [activeTab, setActiveTab] = useState("centerInformation"); // 預設是場館資料
   return (
@@ -93,7 +95,7 @@ function CenterNavbar() {
               <div className="contactInfo">
                 {/* 標題 */}
                 <Subtitle subtitle="入場費用" subtitleEN="Entrance Fee" />
-                <ul className="informationList">
+                <ul>
                   <li>
                     <strong>單次入場</strong>
                     <br />
@@ -115,7 +117,7 @@ function CenterNavbar() {
               <div className="venueExterior">
                 <Subtitle subtitle="聯絡方式" subtitleEN="Contact Info." />
 
-                <ul className="informationList">
+                <ul >
                   <li>
                     <strong>連絡電話</strong>
                     <br />
@@ -127,6 +129,11 @@ function CenterNavbar() {
                   <li>
                     <strong>社群媒體</strong>
                     <br />
+                    <div className="social-icons">
+                      <SiLine size={32} color="#06C755" />
+                      <FaFacebookF size={32} color="#1877F2" />
+                      <FaInstagram size={32} color="#E1306C" />
+                    </div>
                   </li>
                 </ul>
               </div>

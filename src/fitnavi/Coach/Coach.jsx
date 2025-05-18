@@ -351,7 +351,7 @@ function Coach() {
         </div>
 
         {/* 教練卡牌 */}
-        <div className="allCoachCards" id="coachCardsSection">
+        <div className="allCoachCards" >
           <div className="all-coach">全部教練</div>
 
           {currentItems.length === 0 ? (

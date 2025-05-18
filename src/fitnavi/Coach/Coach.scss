@@ -51,15 +51,17 @@
 }
 
 .allCoachCards {
-  padding: 33px 143px;
+  padding: 2% 15%;
 
   .coachNineCards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 100px;
+ display: grid;
+  grid-template-columns: repeat(3, 1fr); // 一列三格
+  gap: 30px; // 同時控制橫向與直向間距
+
   }
 
   .all-coach {
+    
     color: #ff8740;
     font-family: "Dela Gothic One", sans-serif;
     font-size: 80px;
