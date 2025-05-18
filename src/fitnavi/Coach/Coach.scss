@@ -75,7 +75,10 @@
   padding: 6px 24px;
   align-items: center;
   gap: 10px;
-
+.favoriteBt1{
+    display: flex;
+      gap: 24px;
+}
   .favoriteActive {
     outline: none;
     border-radius: 999px;

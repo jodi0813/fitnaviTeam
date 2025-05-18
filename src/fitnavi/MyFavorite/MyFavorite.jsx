@@ -89,7 +89,7 @@ function MyFavorite() {
         <MainTitle title1="" title2="別錯過他們的精彩課程" />
 
         <div className="favoriteBt">
-          <div>
+          <div className="favoriteBt1">
             <button
               className={
                 activeTab === "allFavoriteCards"
