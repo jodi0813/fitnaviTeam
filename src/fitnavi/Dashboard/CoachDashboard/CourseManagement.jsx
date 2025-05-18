@@ -1,6 +1,7 @@
 import Subtitle from "../../../components/Title/Subtitle";
 import "../UserDashboard/UserOrder.scss";
 import "../UserDashboard/MyOrders.scss";
+
 /* 教練後台<課程管理 */
 function CourseManagement() {
   const orders = [
@@ -20,6 +21,7 @@ function CourseManagement() {
           subtitle="課程管理"
           subtitleEN="Courses Management & Editing"
         />
+        <div className="mini">課程狀態設定不公開後，您仍可以編輯課程資訊</div>
         <div className="order-table">
           <div className="table-header">
             <span>No</span>
@@ -48,11 +50,11 @@ function CourseManagement() {
               <span>{order.state}</span>
               {/* 編輯課程 */}
               <span>
-                <button>編輯</button>
+                <button className="editBT">編輯</button>
               </span>
               {/* 編輯狀態 */}
-                 <span>
-                <button>關閉</button>
+              <span>
+                <button className="closeBT">關閉</button>
               </span>
             </div>
           ))}

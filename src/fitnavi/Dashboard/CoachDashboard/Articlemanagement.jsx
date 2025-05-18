@@ -27,7 +27,7 @@ function Articlemanagement() {
           subtitle="文章管理"
           subtitleEN="Article Management & Editing"
         />
-  
+          <div className="mini">文章狀態設定不公開後，您仍可以編輯文章資訊</div>
       <div className="order-table">
         <div className="table-header">
           <span>No</span>
@@ -56,11 +56,11 @@ function Articlemanagement() {
             <span>{order.state}</span>
             {/* 編輯文章 */}
             <span>
-              <button>編輯</button>
+              <button className="editBT">編輯</button>
             </span>
             {/* 編輯狀態 */}
             <span>
-              <button>關閉</button>
+              <button className="closeBT">關閉</button>
             </span>
           </div>
         ))}

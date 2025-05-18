@@ -51,7 +51,7 @@ function CoachDashboardList() {
                 </button>
                 <button
                   className={
-                    memberTab === "useOrder"
+                    memberTab === "courseManagement"
                       ? "memberBt memberActive"
                       : "memberBt"
                   }
@@ -61,7 +61,7 @@ function CoachDashboardList() {
                 </button>
                 <button
                   className={
-                    memberTab === "useOrder"
+                    memberTab === "articlemanagement"
                       ? "memberBt memberActive"
                       : "memberBt"
                   }
