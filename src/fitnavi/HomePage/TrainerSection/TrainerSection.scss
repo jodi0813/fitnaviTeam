@@ -6,7 +6,7 @@
   justify-content: center;
   width: 100%;
   // height: 100vh;
-  padding: 0% 5%;
+  padding: 5% 5%;
 
   .home-trainer-mainTitle {
     display: flex;
@@ -235,12 +235,13 @@
         align-items: center;
         border-radius: 999px;
         border: 1px solid #ff8740;
-        background: #fff;
+               background: #ff8740;
+               color: #fff;
 
         &:hover {
-          background: #ff8740;
-          color: #fff;
+  
           opacity: 1;
+             box-shadow: 8px 8px 0px #3d2e1f;
         }
       }
     }
