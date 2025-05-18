@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import Articlecards from '../../components/Articlecards';
+import Articlecards from '../../components/Articlecards/Articlecards';
 import './AllArticle.scss';
 import { useNavigate } from 'react-router-dom';
 import MainTitle from '../../components/Title/MainTitle';

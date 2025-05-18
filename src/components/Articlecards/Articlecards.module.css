@@ -1,4 +1,4 @@
-/* ✅ Articlecards.module.css （不建議 reset css 放進 module）*/
+
 
 .card {
   position: relative;
@@ -79,7 +79,7 @@
   flex-wrap: wrap;
   margin-top: 8px;
   position: relative;
-  bottom: -20px;
+  bottom: -30px;
   left: 180px;
 }
 
@@ -148,7 +148,8 @@
 
 
 
-.card2 .tag {
+/* .card2 .tag {
+
   position: relative;
   bottom: -100px;
 }
@@ -156,4 +157,5 @@
 .card7TagAdjust .tag p {
   position: relative;
   left: 150px;
-}
+} */
+ 

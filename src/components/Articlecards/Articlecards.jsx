@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Articlecards.module.css";
+import styles from "../Articlecards/Articlecards.module.css";
 import { useNavigate } from "react-router-dom";
 
 function Articlecards({ date, img, title, content, tags, category, className }) {

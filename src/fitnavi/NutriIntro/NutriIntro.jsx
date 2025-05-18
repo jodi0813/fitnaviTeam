@@ -3,7 +3,7 @@ import { useState } from "react";
 import MainTitle from "../../components/Title/MainTitle";
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
-import Articlecards from '../../components/Articlecards';
+import Articlecards from '../../components/Articlecards/Articlecards';
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
 import PhotoGallery2 from "../../components/Carousel/PhotoGallery2"
 

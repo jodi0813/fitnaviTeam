@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"; // 引入 useNavigate
-import Articlecards from "../../../components/Articlecards";
+import Articlecards from "../../../components/Articlecards/Articlecards";
 import "./ArticleSection.scss";
 
 function ArticleSection() {

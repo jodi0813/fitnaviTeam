@@ -1,12 +1,13 @@
 import "./Coachintro.scss";
 import { useState } from "react";
-import MainTitle from "../../components/Title/MainTitle";
+import MaintitleBread from '../../components/Title/MaintitleBread';
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
-import Articlecards from '../../components/Articlecards';
+import Articlecards from "../../components/Articlecards/Articlecards";
 import { useNavigate } from 'react-router-dom';
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
-import PhotoGallery1 from "../../components/Carousel/PhotoGallery1"
+import PhotoGallery1 from "../../components/Carousel/PhotoGallery1";
+// import ArticlecardsCarousel from "../../components/Carousel/ArticlecardsCarousel/ArticlecardsCarousel"
 
 
 
@@ -14,7 +15,7 @@ import PhotoGallery1 from "../../components/Carousel/PhotoGallery1"
 function Coachintro() {
     const navigate = useNavigate();
     const [liked, setLiked] = useState(false);
-    const cardsData = [
+    const articlesData = [
 
         {
             id: "card1",
@@ -45,11 +46,39 @@ function Coachintro() {
             content: "高強度間歇運動（HIIT）是現代最有效率的燃脂方式之一。短時間內提升心跳率，刺激脂肪燃燒，即使運動結束後，代謝仍持續上升，是減脂族群的秘密武器。供從簡單動作開始的計劃。",
             tags: ["燃脂", "HIIT訓練"],
             category: "燃脂運動"
-        }
+        },
+        {
+            id: "card4",
+            date: "2025/06/15",
+            img: "./images/article-1.jpg",
+            title: "健身初學者必看：如何開始你的運動旅程",
+            content: "剛開始健身時，選擇合適的運動方式和計劃非常重要。無論你是想增強體能還是減脂，開始的時候不需要過於激烈，慢慢增加運動量。這篇文章將帶你了解一些基本的運動常識，並提供從簡單動作開始的計劃",
+            tags: ["新手健身", "養成習慣"],
+            category: "健身入門",
+        },
+    ];
+
+    // 取得目前應該顯示的三張卡片（循環）
+    //%是取餘數的意思，例如順序第五張，餘數5/4餘數1，這樣會顯示陣列1的卡牌
+    const [index, setIndex] = useState(0);
+
+    const goNext = () => {
+        setIndex((prevIndex) => (prevIndex + 1) % articlesData.length);
+    };
+
+    const goBack = () => {
+        setIndex((prevIndex) => (prevIndex - 1 + articlesData.length) % articlesData.length);
+    };
+
+    // 取得目前應該顯示的三張卡片（循環）
+    const visibleCards = [
+        articlesData[index % articlesData.length],
+        articlesData[(index + 1) % articlesData.length],
+        articlesData[(index + 2) % articlesData.length],
+    ];
 
 
 
-    ]
 
 
 
@@ -94,7 +123,7 @@ function Coachintro() {
             description: "課程沒有想像中緊湊，不過教練人很好教學也還算清楚，還是有學到一些訓練技巧。",
             color: "#F1F7D8",
             rate: "3.0",  // 評分為4顆星
-            name: "1鄭Ｏ翔",
+            name: "鄭Ｏ翔",
             date: "2025/05/26"
 
         },
@@ -102,56 +131,56 @@ function Coachintro() {
             description: "每堂課後都能夠清楚感受到自己肌肉的變化，對於健身的信心也逐漸增強。",
             color: "#FEF6DD",
             rate: "5.0",
-            name: "2陳Ｏ怡",
+            name: "陳Ｏ怡",
             date: "2025/05/26"
         },
         {
             description: "訓練過程中，教練不僅會教我正確的動作技巧，還會鼓勵我不斷挑戰自我。每次突破自己的極限，我都感到非常有成就感。",
             color: "#F1F7D8",
             rate: "4.0",
-            name: "3林Ｏ偉",
+            name: "林Ｏ偉",
             date: "2025/05/26"
         },
         {
             description: "非常感謝教練的耐心指導，讓我在短時間內見到了明顯的改變！",
             color: "#FEECDD",
             rate: "4.0",
-            name: "4曾Ｏ瑋",
+            name: "曾Ｏ瑋",
             date: "2025/05/26"
         },
         {
             description: "教練的訓練方式讓我不再感到枯燥，每堂課都充滿驚喜！",
             color: "#E3F3F8",
             rate: "4.0",
-            name: "5吳Ｏ蓉",
+            name: "吳Ｏ蓉",
             date: "2025/05/26"
         },
         {
             description: "我從來沒有想過自己能做到這麼多，謝謝教練讓我突破自己的極限！",
             color: "#FEECDD",
             rate: "4.0",
-            name: "6朱Ｏ瑄",
+            name: "朱Ｏ瑄",
             date: "2025/05/26"
         },
         {
             description: "教練不僅是指導者，還是我的健身夥伴，總是給我正向的鼓勵！",
             color: "#F1F7D8",
             rate: "4.0",
-            name: "7陳Ｏ廷",
+            name: "陳Ｏ廷",
             date: "2025/05/26"
         },
         {
             description: "這是我參加過最有挑戰性的訓練，每次都感覺自己不斷突破自我！",
             color: "#FEECDD",
             rate: "4.0",
-            name: "8蔡Ｏ婷",
+            name: "蔡Ｏ婷",
             date: "2025/05/26"
         },
         {
             description: "我喜歡教練總是能夠讓我挑戰自我，並且不會感到過度疲累，完美的平衡！",
             color: "#F1F7D8",
             rate: "4.0",
-            name: "9王Ｏ婷",
+            name: "王Ｏ婷",
             date: "2025/05/26"
         }
     ]);
@@ -163,18 +192,22 @@ function Coachintro() {
 
         <>
             <main id="Coachintro">
-                
-                    <MainTitle title1="加入我們" title2="成為我們的合作夥伴" className="no-line" />
-                    <button>首頁&gt;健身教練&gt;張俐筠 Lila</button>
-              
 
-                <button className="BacktoPage">&lt;返回列表</button>
+                <MaintitleBread
+                    title1="健身教練"
+                    title2="找到專屬你的健身教練"
+                    breadcrumbList={[
+                        { label: "首頁", link: "/" },
+                        { label: "健身教練", link: "/Coach" },
+                        { label: "張俐筠 Lila" },
+                    ]}
+                />
 
                 <section className="Coachintro-person">
 
                     <div className="person-class-photo">
                         <div className="coachphotos">
-                          <PhotoGallery1/>  
+                            <PhotoGallery1 />
 
                             {/* <div className="selfie">
                                 <img src="./images/coach.jpg" alt="" />
@@ -193,7 +226,7 @@ function Coachintro() {
                                 </figure>
 
                             </div> */}
-                           
+
 
                             {/* <div className="TurnButton">
                                 <button>&#9675;</button>
@@ -468,13 +501,15 @@ function Coachintro() {
                         </div>
 
                         <div className="ViewArticles">
-                            <button className="ViewArticles-left">
+                            {/* <ArticlecardsCarousel/> */}
+
+                            <button className="ViewArticles-left" onClick={goNext}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                                     <path d="M30 36L18 24L30 12" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg></button>
 
                             <div className="Three-classcards">
-                                {cardsData.map((card, index) => (
+                                {visibleCards.map((card, index) => (
 
                                     <Articlecards
                                         key={index}
@@ -490,7 +525,7 @@ function Coachintro() {
                                 ))}
                             </div>
 
-                            <button>
+                            <button className=" .ViewArticles-right" onClick={goBack}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="26" viewBox="0 0 14 26" fill="none">
                                     <path d="M1 25L13 13L1 1" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg></button>
