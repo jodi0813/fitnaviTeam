@@ -1,5 +1,4 @@
-
-import Subtitle from "../../components/Title/Subtitle";
+import Subtitle from "../../../components/Title/Subtitle";
 import "./MyInfo.scss";
 import { Link } from "react-router-dom";
 function MyInfo() {
@@ -23,8 +22,10 @@ function MyInfo() {
                 <span className="myinfoValue">阿華</span>
               </div>
             </div>
-            <Link to="/coachdashboardlist">{/* 綁後台會員管理(芝) */}
-              <button className="myinfoEditButton">編輯個人資訊</button></Link>
+            <Link to="/coachdashboardlist">
+              {/* 綁後台會員管理(芝) */}
+              <button className="myinfoEditButton">編輯個人資訊</button>
+            </Link>
           </div>
 
           {/* 基本資料+健康資訊+聯絡資訊 */}

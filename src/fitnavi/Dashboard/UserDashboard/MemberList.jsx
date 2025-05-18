@@ -2,7 +2,8 @@ import UserOrder from "./UserOrder";
 import MyInfo from "./MyInfo";
 import { useState } from "react";
 import "./MemberList.scss";
-import MainTitle from "../../components/Title/MainTitle";
+import MainTitle from "../../../components/Title/MainTitle";
+
 
 function MemberList() {
   const [memberTab, setMemberTab] = useState("myinfo");

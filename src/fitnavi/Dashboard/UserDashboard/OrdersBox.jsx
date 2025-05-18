@@ -1,5 +1,7 @@
+import Subtitle from "../../../components/Title/Subtitle";
 import "./UserOrder.scss";
-import Subtitle from "../../components/Title/Subtitle";
+
+
 function OrdersBox({ subtitle, subtitleEN, userTab, setUserTab, bt,p1, p2 }) {
     return (
         <>
