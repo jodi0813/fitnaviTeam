@@ -12,7 +12,7 @@ function MyInfo() {
           {/* 大頭照姓名跟編輯按鈕 */}
           <div className="myinfoHeader">
             <div className="myinfoNameSection">
-              <img src="/images/coach13.jpg" className="myinfoAvatar" />
+              <img src="/images/useravatar.jpg" className="myinfoAvatar" />
               <div className="myinfoName">
                 <span className="myinfoLabel">姓名</span>
                 <span className="myinfoValue">王明華</span>
@@ -22,10 +22,9 @@ function MyInfo() {
                 <span className="myinfoValue">阿華</span>
               </div>
             </div>
-            <Link to="/coachdashboardlist">
               {/* 綁後台會員管理(芝) */}
               <button className="myinfoEditButton">編輯個人資訊</button>
-            </Link>
+       
           </div>
 
           {/* 基本資料+健康資訊+聯絡資訊 */}

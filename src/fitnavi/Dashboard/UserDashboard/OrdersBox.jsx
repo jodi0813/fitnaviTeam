@@ -25,7 +25,7 @@ function OrdersBox({ subtitle, subtitleEN, userTab, setUserTab, bt, p1, p2 }) {
             className={userTab === "bt3" ? "userBt" : "userBt"}
             onClick={() => setUserTab("bt3")}
           >
-            完成的課程{" "}
+            完成的課程
           </button>
         </div>
         <div className="ordersBoxP">

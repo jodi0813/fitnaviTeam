@@ -14,7 +14,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+.myinfoEditButton{
+  color:  #FEFCF7;
+/* 段落/16 */
+font-family: "Noto Sans TC";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 24px */
+letter-spacing: 1.6px;
+border-radius: 99px;
+background: #FF8740;
+}
     .myinfoAvatar {
       width: 80px;
       height: 80px;
@@ -27,10 +38,7 @@
       align-items: center;
       gap: 32px;
 
-      .myinfoNameBox {
-        display: flex;
-          flex-direction: column;
-          gap: 12px;
+    
         .myinfoName {
           display: flex;
           align-items: center;
@@ -73,7 +81,7 @@
             letter-spacing: 2px;
           }
         }
-      }
+      
     }
 
     .myinfoBt {

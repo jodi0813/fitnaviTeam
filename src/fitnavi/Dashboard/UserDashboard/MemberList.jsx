@@ -28,7 +28,7 @@ function MemberList() {
               >
                 我的頁面
               </button>
-              <img src="/images/member1.png" alt="" className="member1" />
+              <img src="/images/member1.png" alt="插圖" className="member1" />
             </div>
           </div>
 
