@@ -16,7 +16,7 @@ function NutriJoinusStep3() {
 
                     <div className='Nutri-Joinus-Step3-wrapper'>
                         <form action="" className='NutriJoinus-Step3'>
-                            <div className='JoinusStep3-title'>
+                            <div className='NutriJoinusStep3-title'>
                                 <div className='Step3-title'>
                                     <h3>自我介紹</h3>
                                     <h4>Personal Introduction</h4>
