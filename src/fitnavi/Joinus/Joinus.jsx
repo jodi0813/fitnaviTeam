@@ -51,7 +51,8 @@ function Joinus() {
                             className='imcoach-joinbutton'
                             onClick={() => navigate('/JoinusStep1')}
                         >
-                            成為合作教練
+                            <span>成為合作教練</span>
+                            <img src="/images/Polygon.svg" alt="" />
                         </button>
                     </div>
 
@@ -87,7 +88,10 @@ function Joinus() {
                             <p>🤝撰寫飲食知識文章或影片</p>
                         </form>
 
-                        <button className='imnutrionist-joinbutton' onClick={() => navigate('/JoinusStep1')}>成為合作營養師</button>
+                        <button className='imnutrionist-joinbutton' onClick={() => navigate('/JoinusStep1')}>
+                            <span>成為合作營養師</span>
+                            <img src="/images/Polygon.svg" alt="" />
+                        </button>
                     </div>
 
 

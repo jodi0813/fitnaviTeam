@@ -124,6 +124,11 @@
                         align-items: center;
                         justify-content: center;
                         cursor: pointer;
+
+                        &:focus,
+                        &:focus-visible {
+                            outline: none;
+                        }
                     }
                 }
 
@@ -324,6 +329,10 @@
                         gap: 40%;
 
                         button {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
                             width: 203px;
                             height: 40px;
                             border-radius: 999px;
@@ -337,6 +346,63 @@
                             line-height: 140%;
                             /* 19.6px */
                             letter-spacing: 1.4px;
+
+                            img {
+                                width: 24px;
+                                height: 24px;
+                                position: absolute;
+                                right: 120px;
+                                opacity: 0;
+                                transform: translateX(10px); // 預設略偏右
+                                transition: opacity 0.3s ease, transform 0.3s ease;
+                            }
+
+                            &:hover {
+
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 999px;
+                                border: 1px solid var(--primary, #FF8740);
+                                background: var(--white, #FEFCF7);
+
+                                .Nutriclassinrto-text {
+                                    transform: translateX(-10px); // 文字左滑
+                                    color: var(--primary, var(--primary, #FF8740));
+                                    text-align: center;
+                                    /* heading/標題4/Bold */
+                                    font-family: "Noto Sans TC";
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    line-height: normal;
+                                    letter-spacing: 2px;
+                                }
+
+                                img {
+                                    opacity: 1;
+                                    transform: translateX(0); // icon 滑進來
+                                }
+                            }
+
+                            &:active {
+                                .Nutriclassinrto-text {
+                                    color: var(--primary, var(--primary, #FF8740));
+                                    text-align: center;
+                                    /* 段落/16 */
+                                    font-family: "Noto Sans TC";
+                                    font-size: 12px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 150%;
+                                    /* 24px */
+                                    letter-spacing: 1.6px;
+                                }
+
+                                img {
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                            }
                         }
 
                     }
@@ -421,7 +487,7 @@
         margin-bottom: 150px;
         margin-top: 100px;
         margin-left: 40px;
-       
+
 
         .Nutrinav {
             display: flex;
@@ -430,14 +496,14 @@
             align-items: flex-start;
             margin-top: 80px;
             width: 11%;
-    
+
 
 
             .Nutri-intro {
                 margin-top: 60px;
                 width: 100%;
-       
-              
+
+
 
                 ul {
                     display: flex;
@@ -447,10 +513,10 @@
                     border-right: 0.6px solid #3A2C19;
                     gap: 30px;
                     padding-right: 20px;
-          
-                   
-                
-                  
+
+
+
+
 
 
 
@@ -470,7 +536,7 @@
                         letter-spacing: 1.4px;
                         margin-right: 5px;
                         white-space: nowrap;
-             
+
 
                         &:hover {
                             color: var(--primary, var(--primary, #FF8740));
@@ -1196,11 +1262,33 @@
                 gap: 10%;
                 margin-left: 0px;
 
-                button {
+                .NutriViewArticles-left,
+                .NutriViewArticles-right {
                     width: 48px;
                     height: 48px;
-                    flex: 1;
+                    padding: 0;
+                    border: none;
+                    background: transparent;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
                 }
+
+                .NutriViewArticles-left:focus,
+                .NutriViewArticles-left:focus-visible {
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                .NutriViewArticles-right:focus,
+                .VNutriViewArticles-right:focus-visible {
+                    outline: none;
+                    box-shadow: none;
+                }
+
+
+                
 
                 .Three-classcards {
                     display: flex;
