@@ -20,7 +20,7 @@ import JoinusStep4 from "./Joinus/JoinusStep4";
 import JoinusLoading from "./Joinus/JoinusLoading";
 import JoinusSuccess from "./Joinus/JoinusSuccess";
 import NutriJoinusStep2 from "./Joinus/NutriJoinusStep2"
-
+import NutriJoinusStep3 from "./Joinus/NutriJoinusStep3"
 import ForgetPassword from "./Member/ForgetPassword";
 import MemberLogin from "./Member/MemberLogin";
 import MemberSignup from "./Member/MemberSignup";
@@ -63,6 +63,7 @@ function App() {
           <Route path="/JoinusLoading" element={<JoinusLoading />} />
           <Route path="/JoinusSuccess" element={<JoinusSuccess />} />
           <Route path="/NutriJoinusStep2" element={<NutriJoinusStep2 />} />
+          <Route path="/NutriJoinusStep3" element={<NutriJoinusStep3 />} />
         </Routes>
         <Footer />
       </div>
