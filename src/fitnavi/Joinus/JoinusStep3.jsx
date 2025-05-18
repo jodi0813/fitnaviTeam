@@ -15,7 +15,7 @@ function JoinusStep3() {
 
             <div className='CoachJoinus-Step3-wrapper'>
                 <form action="" className='CoachJoinus-Step3'>
-                    <div className='JoinusStep3-title'>
+                    <div className='Coach-JoinusStep3-title'>
                         <div className='Step3-title'>
                             <h3>自我介紹</h3>
                             <h4>Personal Introduction</h4>

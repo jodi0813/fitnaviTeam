@@ -57,10 +57,17 @@ function Joinus() {
 
                     <div className="imnutrionist">
                         <form action="">
-                            <label htmlFor="">
-                                <span className='imnutrionist-Iam' >我是</span>
-                                <span className='imnutrionist-nutrionist'>營養師</span>
-                            </label>
+
+                            <div className='nutri-label-img'>
+                                <label htmlFor="">
+                                    <span className='imnutrionist-Iam' >我是</span>
+                                    <span className='imnutrionist-nutrionist'>營養師</span>
+                                </label>
+
+                                <div className='imnutri-img'>
+                                    <img src="/images/Joinus-nutri-shadow.png" alt="" />
+                                </div>
+                            </div>
 
                             <div className='imnutrionist-youcan'>
                                 <h4>您可以</h4>

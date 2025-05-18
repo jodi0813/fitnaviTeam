@@ -58,41 +58,41 @@
                     position: relative;
                     top: -150%;
                     left: 70%;
-                    
-                }
-            }
 
-            label {
-                position: relative;
-                top: -15px;
-                left: 20px;
-                display: flex;
-                flex-direction: row;
-                margin-bottom: 33px;
-
-
-                .imcoach-Iam {
-                    color: var(--dark, #3A2C19);
-                    font-family: "Dela Gothic One";
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 40px;
-                    /* 166.667% */
-                    letter-spacing: 2.4px;
-                    // position: relative;
                 }
 
-                .imcoach-coach {
-                    color: var(--primary, var(--primary, #FF8740));
-                    font-family: "Dela Gothic One";
-                    font-size: 36px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 40px;
-                    letter-spacing: 3.6px;
-                }
+                label {
+                    position: relative;
+                    top: -15px;
+                    left: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 33px;
 
+
+                    .imcoach-Iam {
+                        color: var(--dark, #3A2C19);
+                        font-family: "Dela Gothic One";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+                        /* 166.667% */
+                        letter-spacing: 2.4px;
+                        // position: relative;
+                    }
+
+                    .imcoach-coach {
+                        color: var(--primary, var(--primary, #FF8740));
+                        font-family: "Dela Gothic One";
+                        font-size: 36px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+                        letter-spacing: 3.6px;
+                    }
+
+                }
             }
 
 
@@ -191,39 +191,56 @@
             width: 420px;
             position: relative;
 
-
-            label {
-                position: relative;
-                top: -15px;
-                left: 20px;
+            .nutri-label-img {
                 display: flex;
                 flex-direction: row;
-                margin-bottom: 33px;
+                gap: 150px;
+                position: relative;
+                height: 50px;
 
-
-                .imnutrionist-Iam {
-                    color: var(--dark, #3A2C19);
-                    font-family: "Dela Gothic One";
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 40px;
-                    /* 166.667% */
-                    letter-spacing: 2.4px;
-                    // position: relative;
+                img {
+                    width: 60px;
+                    height: 120px;
+                    position: relative;
+                    top: -150%;
+                    left: 30%;
                 }
 
-                .imnutrionist-nutrionist {
-                    color: var(--primary, var(--primary, #FF8740));
-                    font-family: "Dela Gothic One";
-                    font-size: 36px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 40px;
-                    letter-spacing: 3.6px;
+                label {
+                    position: relative;
+                    top: -15px;
+                    left: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 33px;
+    
+    
+                    .imnutrionist-Iam {
+                        color: var(--dark, #3A2C19);
+                        font-family: "Dela Gothic One";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+                        /* 166.667% */
+                        letter-spacing: 2.4px;
+                        // position: relative;
+                    }
+    
+                    .imnutrionist-nutrionist {
+                        color: var(--primary, var(--primary, #FF8740));
+                        font-family: "Dela Gothic One";
+                        font-size: 36px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+                        letter-spacing: 3.6px;
+                    }
+    
                 }
-
             }
+
+           
 
             .imnutrionist-youcan {
 

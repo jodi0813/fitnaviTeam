@@ -42,7 +42,7 @@
     .JoinusStep2-header {
         display: flex;
         flex-direction: row;
-        gap: 300px;
+        gap: 60%;
         width: 100%;
         margin-bottom: 40px;
         border-bottom: 1px solid #3a2c19;
@@ -102,11 +102,12 @@
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-            gap: 24px;
+            gap:270px;
             margin-bottom: 4px;
             width: 193px;
-            border-bottom: 1px solid #3A2C19;
-            ;
+            
+            // border-bottom: 1px solid #3A2C19;
+            
 
             h4 {
                 color: var(--dark, #3A2C19);
@@ -118,6 +119,7 @@
                 line-height: 140%;
                 /* 19.6px */
                 letter-spacing: 1.4px;
+                white-space: nowrap;
             }
 
             p {
@@ -130,6 +132,7 @@
                 line-height: 140%;
                 /* 19.6px */
                 letter-spacing: 1.4px;
+                white-space: nowrap;
             }
 
             &::after {
@@ -184,7 +187,8 @@
                 flex-direction: row;
                 width: 222px;
                 margin-bottom: 4px;
-                border-bottom: 1px solid #3A2C19;
+                gap: 250px;
+                // border-bottom: 1px solid #3A2C19;
 
                 h4 {
                     color: var(--dark, #3A2C19);
@@ -196,6 +200,7 @@
                     line-height: 140%;
                     /* 19.6px */
                     letter-spacing: 1.4px;
+                    white-space: nowrap;
                 }
 
                 h5 {
@@ -208,6 +213,7 @@
                     line-height: 140%;
                     /* 19.6px */
                     letter-spacing: 1.4px;
+                    white-space: nowrap;
                 }
             }
 
