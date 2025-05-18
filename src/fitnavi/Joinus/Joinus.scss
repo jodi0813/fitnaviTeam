@@ -156,7 +156,10 @@
         }
 
         .imcoach-joinbutton {
+            display: flex;
+            flex-direction: row;
             align-items: center;
+            gap: 12px;
             width: 320px;
             height: 50px;
             padding: 8px 84px;
@@ -173,6 +176,26 @@
             line-height: 140%;
             /* 22.4px */
             letter-spacing: 1.6px;
+
+            img {
+                width: 20px;
+                height: 23px;
+                position: absolute;
+                right: 100px;
+                opacity: 0;
+                transform: translateX(10px); // 預設略偏右
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 4px 8px 0px 0px #3A2C19;
+
+                img {
+                    opacity: 1;
+                    transform: translateX(0); // icon 滑進來
+                }
+            }
         }
 
     }
@@ -213,8 +236,8 @@
                     display: flex;
                     flex-direction: row;
                     margin-bottom: 33px;
-    
-    
+
+
                     .imnutrionist-Iam {
                         color: var(--dark, #3A2C19);
                         font-family: "Dela Gothic One";
@@ -226,7 +249,7 @@
                         letter-spacing: 2.4px;
                         // position: relative;
                     }
-    
+
                     .imnutrionist-nutrionist {
                         color: var(--primary, var(--primary, #FF8740));
                         font-family: "Dela Gothic One";
@@ -236,11 +259,11 @@
                         line-height: 40px;
                         letter-spacing: 3.6px;
                     }
-    
+
                 }
             }
 
-           
+
 
             .imnutrionist-youcan {
 
@@ -300,7 +323,10 @@
         }
 
         .imnutrionist-joinbutton {
+            display: flex;
+            flex-direction: row;
             align-items: center;
+            gap: 12px;
             width: 320px;
             height: 50px;
             padding: 8px 84px;
@@ -317,6 +343,26 @@
             line-height: 140%;
             /* 22.4px */
             letter-spacing: 1.6px;
+
+            img {
+                width: 20px;
+                height: 23px;
+                position: absolute;
+                right: 80px;
+                opacity: 0;
+                transform: translateX(10px); // 預設略偏右
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 4px 8px 0px 0px #3A2C19;
+
+                img {
+                    opacity: 1;
+                    transform: translateX(0); // icon 滑進來
+                }
+            }
         }
 
     }
