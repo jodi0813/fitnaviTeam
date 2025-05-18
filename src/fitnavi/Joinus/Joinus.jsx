@@ -14,11 +14,21 @@ function Joinus() {
 
                 <section className="Joinus-form">
                     <div className="imcoach">
+
                         <form action="">
-                            <label htmlFor="">
-                                <span className='imcoach-Iam'>我是</span>
-                                <span className='imcoach-coach'>教練</span>
-                            </label>
+
+                            <div className='coach-label-img'>
+                                <label htmlFor="">
+                                    <span className='imcoach-Iam'>我是</span>
+                                    <span className='imcoach-coach'>教練</span>
+                                </label>
+
+                                <div className='imcoach-img'>
+                                    <img src="/images/Joinus-coach-shadow.png" alt="" />
+                                </div>
+                            </div>
+
+
                             <div className='imcoach-youcan'>
                                 <h4>您可以</h4>
                                 <div className='imcoach-youcan-line'></div>
@@ -72,6 +82,8 @@ function Joinus() {
 
                         <button className='imnutrionist-joinbutton' onClick={() => navigate('/JoinusStep1')}>成為合作營養師</button>
                     </div>
+
+
                 </section>
 
             </section>
