@@ -38,10 +38,11 @@ function NutritionistSection() {
         <div className="home-nutritionist1">
           {nutritionistList.map((nutritionist, i) => (
             <div
-              className={`${i === focusIndex
-                ? "home-nutritionist-active"
-                : "home-nutritionist-none"
-                }`}
+              className={`${
+                i === focusIndex
+                  ? "home-nutritionist-active"
+                  : "home-nutritionist-none"
+              }`}
               key={i}
               onClick={() => setFocusIndex(i)}
             >
@@ -68,23 +69,31 @@ function NutritionistSection() {
           ))}
         </div>
         <div className="home-nutritionist-footer">
-          <div className="home-nutritionist-button">
-            <Link to="/Joinus"><button>成為合作營養師</button></Link>
-            <Link to="/nutritionist">
-            <button>查看更多營養師</button></Link>
+          <div className="home-nutritionist-img">
+            <img src="/images/nutritionistshadom.png" alt="" />
           </div>
-
           <div className="home-nutritionist-title">
-            <div className="home-nutritionist-img">
-              <img src="/images/nutritionist.png" alt="" />
+            <div className="home-nutritionist-title1">
+              <div className="home-nutritionist-title2">
+                <span className="home-nutritionist-titleCh">營養師</span>
+                <span className="home-nutritionist-titleEn">NUTRITIONIST</span>
+              </div>
+              <div>
+                <span>
+                  「有人帶，真的不一樣」
+                  <br />
+                  從動作觀察到訓練計畫，教練為你把關每一步，讓努力更有效、更安全。{" "}
+                </span>
+              </div>
             </div>
-            <span className="home-nutritionist-titleCh">營養師</span>
-            <span className="home-nutritionist-titleEn">NUTRITIONIST</span>
-            <p>
-              「有人帶，真的不一樣」
-              <br />
-              從動作觀察到訓練計畫，教練為你把關每一步，讓努力更有效、更安全。
-            </p>
+            <div className="home-nutritionist-button">
+              <Link to="/Joinus">
+                <button>成為合作營養師</button>
+              </Link>
+              <Link to="/nutritionist">
+                <button>查看更多營養師</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
