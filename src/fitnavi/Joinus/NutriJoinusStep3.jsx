@@ -130,7 +130,7 @@ function NutriJoinusStep3() {
 
                             <div className='NutriStep3-NextPreButton'>
                                 <button className='Pre-button' onClick={() => { navigate('/NutriJoinusStep2'); window.scrollTo(0, 0); }} >◀ 上一步</button>
-                                <button className='Next-button' onClick={() => { navigate('/JoinusStep4'); window.scrollTo(0, 0); }}>下一步 ▶</button>
+                                <button className='Next-button' onClick={() => { navigate('/NutriJoinusStep4'); window.scrollTo(0, 0); }}>下一步 ▶</button>
                             </div>
                         </form>
 

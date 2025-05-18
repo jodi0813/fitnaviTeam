@@ -12,9 +12,10 @@ function Articlecards({ date, img, title, content, tags, category, className }) 
                 window.scrollTo(0, 0); // 捲動到頁面頂部
             }}
                 style={{ cursor: "pointer" }}>
-                <p className={styles.data}>{date}</p>
+                {/* <p className={styles.data}>{date}</p> */}
                 <div className={styles.Articleimgbox}>
                     <img src={img} alt="" /></div>
+                    <p className={styles.data}>{date}</p>
                 <div className={styles.contentBox}>
                     {/* 因為帶有html標籤所以要輸入dangerouslySetInnerHtml */}
                     <h4 dangerouslySetInnerHTML={{ __html: title }} />
