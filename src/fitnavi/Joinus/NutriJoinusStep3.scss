@@ -13,7 +13,7 @@
 
 }
 
-.Nutri-Joinus-Step3-wrapper{
+.Nutri-Joinus-Step3-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +56,7 @@
                 white-space: nowrap;
 
                 h3 {
-                    color:  var(--dark, #3A2C19);
+                    color: var(--dark, #3A2C19);
                     text-align: center;
                     font-family: "Dela Gothic One";
                     font-size: 36px;
@@ -103,11 +103,11 @@
                     flex-direction: row;
                     justify-content: flex-start;
                     align-items: center;
-                    gap: 24px;
+                    gap: 120%;
                     margin-bottom: 4px;
                     width: 193px;
-                    border-bottom: 1px solid #3A2C19;
-                    ;
+                    // border-bottom: 1px solid #3A2C19;
+
 
 
 
@@ -121,6 +121,7 @@
                         line-height: 140%;
                         /* 19.6px */
                         letter-spacing: 1.4px;
+                        white-space: nowrap;
                     }
 
                     p {
@@ -133,6 +134,7 @@
                         line-height: 140%;
                         /* 19.6px */
                         letter-spacing: 1.4px;
+                        white-space: nowrap;
                     }
 
                 }
@@ -152,7 +154,7 @@
 
                 .Aboutme-uploadphotos-title {
                     width: 202px;
-                    border-bottom: 1px solid #3A2C19;
+                    // border-bottom: 1px solid #3A2C19;
                     margin-bottom: 12px;
 
                     h4 {
@@ -191,9 +193,9 @@
             .teachingExperiences {
                 display: flex;
                 flex-direction: row;
-                gap: 24px;
-                width: 199px;
-                border-bottom: 1px solid #3A2C19;
+                gap: 150%;
+                width: 199px; // border-bottom: 1px solid #3A2C19;
+
 
                 h4 {
                     color: var(--dark, #3A2C19);
@@ -205,6 +207,7 @@
                     line-height: 140%;
                     /* 19.6px */
                     letter-spacing: 1.4px;
+                    white-space: nowrap;
                 }
 
                 p {
@@ -217,6 +220,7 @@
                     line-height: 140%;
                     /* 19.6px */
                     letter-spacing: 1.4px;
+                    white-space: nowrap;
                 }
 
             }

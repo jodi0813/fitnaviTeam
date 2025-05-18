@@ -29,7 +29,7 @@ function NutriJoinusStep3() {
                                 <div className='Aboutme-textarea'>
                                     <div className='Aboutme-textarea-title'>
                                         <h4>關於我：</h4>
-                                        <p>（300字以內）</p>
+                                        <p>300字以內</p>
                                     </div>
 
                                     <textarea name="" id=""></textarea>
@@ -48,7 +48,7 @@ function NutriJoinusStep3() {
 
                                 <div className='teachingExperiences'>
                                     <h4>執業經歷：</h4>
-                                    <p>（最多6項）</p>
+                                    <p>最多6項</p>
                                 </div>
 
                                 <fieldset className="scrollFieldset-teachExperience">
