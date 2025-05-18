@@ -1,12 +1,31 @@
 
-import React, { useState } from 'react';
+
 import Articlecards from '../../components/Articlecards/Articlecards';
 import './AllArticle.scss';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation, } from 'react-router-dom';
 import MainTitle from '../../components/Title/MainTitle';
 
 function Allarticle() {
     const navigate = useNavigate();
+
+
+
+    //判斷搜尋的位置，決定麵包屑顯示的頁面
+    const location = useLocation();
+    useEffect(() => {
+
+        const params = new URLSearchParams(location.search);
+
+
+        const categoryFromURL = params.get('category');
+
+
+        if (categoryFromURL) {
+            setcategory(categoryFromURL);
+        }
+    }, [location.search]);
+
 
     const cardsData = [
         {
@@ -114,6 +133,8 @@ function Allarticle() {
     const [category, setcategory] = useState('');
     //Hottags
     const [tag, setTag] = useState('');
+
+    //搜尋欄位的功能
     const filteredCards = cardsData.filter(card => {
         // 判斷是否選擇了角色
         const roleMatches = selectedRole ? card.role === selectedRole : true;
@@ -145,8 +166,11 @@ function Allarticle() {
             <MainTitle title1="知識文章" title2="補足符合您需求的知識" className="no-line" />
 
             <section className="Allarticle-Search">
-                <button className='Coach-Button' onClick={() => handleRoleSelect("教練")}>健身教練</button>
-                <button className='Nutriton-Button' onClick={() => handleRoleSelect("營養師")}>營養師</button>
+                <div className='selected-button'>
+                    <button className={selectedRole === '教練' ? 'active' : ''} onClick={() => handleRoleSelect("教練")}>健身教練</button>
+                    <button className={selectedRole === '營養師' ? 'active' : ''} onClick={() => handleRoleSelect("營養師")}>營養師</button>
+                </div>
+
 
                 {/* 搜尋框 */}
                 <input
@@ -156,7 +180,10 @@ function Allarticle() {
                     value={inputTitle} // 顯示暫存的內容
                     onChange={(e) => setInputTitle(e.target.value)} // 更新暫存內容
                 />
-                <button className='ClickSearch-Button' onClick={handleSearch}>搜尋</button>
+                <button className='ClickSearch-Button' onClick={handleSearch}>
+                    <span className='text-search'>搜尋</span>
+                    <img src="/images/search.svg" alt="" />
+                    </button>
             </section>
 
             <section className="Allarticle-content">
@@ -209,7 +236,8 @@ function Allarticle() {
                 <div className='Allarticle-cards'>
                     <div className="Allarticle-cards-title">
                         <p>Articles</p>
-                        <h4>燃脂運動</h4>
+                        <h4>{<h4>{category || '全部分類'}</h4>
+                        }</h4>
                     </div>
 
                     <div className="Allarticle-Card-article">

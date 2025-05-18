@@ -37,48 +37,59 @@
     margin-top: 60px;
     position: relative;
 
-    .Coach-Button {
-        height: 40px;
-        min-width: 144px;
-        padding: 12px 36px;
+    .selected-button {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border-radius: 99px;
-        background: #FF8740;
-        color: #FFF;
+        gap: 5%;
 
-        text-align: center;
-        font-family: "Noto Sans TC", sans-serif; 
-        font-size: var(--fontsize-H3, 18px);
-        font-style: normal;
-        font-weight: 700;
-        line-height: 150%;
-        /* 27px */
+        button {
+            display: flex;
+            height: 40px;
+            min-width: 144px;
+            padding: 12px 36px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 99px;
+            border: 1px solid #FF8740;
+            opacity: 0.8;
+            background: #FFF;
+            color: #FF8740;
+
+            text-align: center;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: var(--fontsize-H3, 18px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+            white-space: nowrap;
+
+            /* 27px */
+        }
+
+        button:hover,
+        button:active {
+            display: flex;
+            height: 40px;
+            min-width: 144px;
+            padding: 12px 36px;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 99px;
+            background: #FF8740;
+            color: #FFF;
+
+            text-align: center;
+            font-family: "Noto Sans TC";
+            font-size: var(--fontsize-H3, 18px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: 150%;
+        }
+
     }
 
-    .Nutriton-Button {
-        display: flex;
-        height: 40px;
-        min-width: 144px;
-        padding: 12px 36px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 99px;
-        border: 1px solid #FF8740;
-        opacity: 0.8;
-        background: #FFF;
-        color: #FF8740;
 
-        text-align: center;
-        font-family: "Noto Sans TC", sans-serif; 
-        font-size: var(--fontsize-H3, 18px);
-        font-style: normal;
-        font-weight: 700;
-        line-height: 150%;
-        /* 27px */
-    }
 
     .Search-Button {
         display: flex;
@@ -120,25 +131,94 @@
 
     .ClickSearch-Button {
         display: flex;
-        height: 40px;
-        min-width: 236px;
-        padding: 8px 84px;
         justify-content: center;
         align-items: center;
-
+        position: relative; // 給 img 定位用
+        overflow: hidden;
+        width: 300px;
+        height: 40px;
+        padding: 8px 84px;
         border-radius: 999px;
         background: var(--primary, #FF8740);
-
-        color: var(--white, var(--white, #FEFCF7));
-        text-align: center;
-        font-family:  "Noto Sans TC", sans-serif; 
+        color: var(--white, #FEFCF7);
+        font-family: "Noto Sans TC", sans-serif;
         font-size: 14px;
-        font-style: normal;
         font-weight: 900;
-        line-height: 140%;
-        /* 19.6px */
         letter-spacing: 1.4px;
+        white-space: nowrap;
+        cursor: pointer;
+
+        .text-search {
+            transition: transform 0.3s ease; // 修正這裡的語法
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            right: 100px;
+            opacity: 0;
+            transform: translateX(10px); // 預設略偏右
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        &:hover {
+
+            width: 300px;
+            height: 40px;
+            padding: 8px 84px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 999px;
+            border: 1px solid var(--primary, #FF8740);
+            background: var(--white, #FEFCF7);
+
+            .text-search {
+                transform: translateX(-10px); // 文字左滑
+                color: var(--primary, var(--primary, #FF8740));
+                text-align: center;
+                /* heading/標題4/Bold */
+                font-family: "Noto Sans TC";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 2px;
+            }
+
+            img {
+                opacity: 1;
+                transform: translateX(0); // icon 滑進來
+            }
+        }
+
+        &:active {
+            .text-search {
+                color: var(--primary, var(--primary, #FF8740));
+                text-align: center;
+                /* 段落/16 */
+                font-family: "Noto Sans TC";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+                /* 24px */
+                letter-spacing: 1.6px;
+            }
+
+            img{
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+
     }
+
+
+
+
+
 }
 
 .Allarticle-content {
@@ -163,7 +243,7 @@
                 margin-bottom: 15px;
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
-                font-family:  "Noto Sans TC", sans-serif; 
+                font-family: "Noto Sans TC", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -178,10 +258,10 @@
         .Cat-name {
             margin-top: 20%;
 
-            button{
+            button {
                 color: var(--dark, #3A2C19);
                 /* heading/標題4/medium */
-                font-family:  "Noto Sans TC", sans-serif; 
+                font-family: "Noto Sans TC", sans-serif;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 500;
@@ -200,7 +280,7 @@
                 color: var(--primary, var(--primary, #FF8740));
 
                 /* heading/標題4/medium */
-                font-family: "Noto Sans TC", sans-serif; 
+                font-family: "Noto Sans TC", sans-serif;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 500;
@@ -220,7 +300,7 @@
                 h4 {
                     color: var(--dark, #3A2C19);
                     /* 段落/14 */
-                    font-family:  "Noto Sans TC", sans-serif; 
+                    font-family: "Noto Sans TC", sans-serif;
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 500;
@@ -232,7 +312,7 @@
                 }
             }
 
-           button {
+            button {
                 display: flex;
                 padding: 3px 10px;
                 justify-content: center;
@@ -245,7 +325,7 @@
                 color: var(--white, var(--white, #FEFCF7));
                 text-align: right;
                 /* 段落/14 */
-                font-family:  "Noto Sans TC", sans-serif; 
+                font-family: "Noto Sans TC", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -262,7 +342,7 @@
 
         // width: 80%;
         .Allarticle-cards-title {
-           
+
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -277,7 +357,7 @@
             p {
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
-                font-family:  "Noto Sans TC", sans-serif; 
+                font-family: "Noto Sans TC", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
@@ -341,7 +421,7 @@
         color: var(--dark, #3A2C19);
         text-align: center;
         /* 段落/14 */
-        font-family:  "Noto Sans TC", sans-serif; 
+        font-family: "Noto Sans TC", sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
@@ -363,7 +443,7 @@
         color: var(--white, var(--white, #FEFCF7));
         text-align: center;
         /* 段落/14 */
-        font-family: "Noto Sans TC", sans-serif; 
+        font-family: "Noto Sans TC", sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
