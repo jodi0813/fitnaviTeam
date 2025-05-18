@@ -85,21 +85,18 @@ function TrainerSection() {
                 <span className="home-trainer-titleEn">PERSONAL TRAINER</span>
                 <span className="home-trainer-titleCh">教練</span>
               </div>
-              <div>
+              <div className="home-trainer-title3">
+                <span>「有人帶，真的不一樣」 </span>
                 <span>
-                  「有人帶，真的不一樣」
-                  <br />
                   從動作觀察到訓練計畫，教練為你把關每一步，讓努力更有效、更安全。
                 </span>
               </div>
             </div>
             <div className="home-trainer-button">
               <Link to="/Joinus">
-                
                 <button>成為合作教練</button>
               </Link>
               <Link to="/Joinus">
-           
                 <button>查看更多教練</button>
               </Link>
             </div>

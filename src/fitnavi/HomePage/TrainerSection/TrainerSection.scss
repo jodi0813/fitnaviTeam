@@ -170,8 +170,8 @@
 
     .home-trainer-img {
       position: absolute;
-        left: 20px;
-     }
+      left: 20px;
+    }
 
     .home-trainer-title {
       display: flex;
@@ -210,6 +210,11 @@
             text-transform: capitalize;
           }
         }
+        .home-trainer-title3 {
+          display: flex;
+          flex-direction: column;
+              align-items: flex-end;
+        }
       }
 
       span {
@@ -235,14 +240,14 @@
         align-items: center;
         border-radius: 999px;
         border: 1px solid #ff8740;
-               background: #ff8740;
-               color: #fff;
+        background: #ff8740;
+        color: #fff;
 
         &:hover {
           background: #ff8740;
           color: #fff;
           opacity: 1;
-             box-shadow: 8px 8px 0px #3d2e1f;
+          box-shadow: 8px 8px 0px #3d2e1f;
         }
       }
     }
