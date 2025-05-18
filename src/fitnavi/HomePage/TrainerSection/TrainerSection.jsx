@@ -77,19 +77,22 @@ function TrainerSection() {
         </div>
         <div className="home-trainer-footer">
           <div className="home-trainer-img">
-            <img src="/images/coach.png" alt="" />
+            <img src="/images/coachshadom.png" alt="" />
           </div>
           <div className="home-trainer-title">
-            <div>
             <div className="home-trainer-title1">
-              <span className="home-trainer-titleEn">PERSONAL TRAINER</span>
-              <span className="home-trainer-titleCh">教練</span>
+              <div className="home-trainer-title2">
+                <span className="home-trainer-titleEn">PERSONAL TRAINER</span>
+                <span className="home-trainer-titleCh">教練</span>
+              </div>
+              <div>
+                <span>
+                  「有人帶，真的不一樣」
+                  <br />
+                  從動作觀察到訓練計畫，教練為你把關每一步，讓努力更有效、更安全。
+                </span>
+              </div>
             </div>
-            <p>
-              「有人帶，真的不一樣」
-              <br />
-              從動作觀察到訓練計畫，教練為你把關每一步，讓努力更有效、更安全。
-            </p></div>
             <div className="home-trainer-button">
               <Link to="/Joinus">
                 {" "}

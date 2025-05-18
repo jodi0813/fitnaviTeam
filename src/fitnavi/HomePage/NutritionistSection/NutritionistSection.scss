@@ -116,45 +116,53 @@
     align-items: center;
     padding-left: 8%;
 
-
+    .home-nutritionist-img {
+      position: absolute;
+      right: 20px;  
+    }
 
     .home-nutritionist-title {
       display: flex;
       flex-direction: column;
+      justify-content: flex-end;
+   
+      width: 100%;
+      gap: 56px;
 
-      .home-nutritionist-img {
-        position: absolute;
-        width: 30%;
-        bottom: 150px;
-        right: -150px;
+      .home-nutritionist-title1 {
+        display: flex;
+        flex-direction: column;
+        
+      }
+      .home-nutritionist-title2 {
+        display: flex;
+            align-items: center;
+        transform: skew(-20deg, 0deg);
+        .home-nutritionist-titleCh {
+          text-align: center;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #3a2c19;
+          font-family: "Mantou Sans";
+          font-size: 128px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 12.8px;
+        }
 
-
+        .home-nutritionist-titleEn {
+          color: #fefcf7;
+          font-family: "Dela Gothic One";
+          font-size: 64px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100px;
+          /* 156.25% */
+          text-transform: capitalize;
+        }
       }
 
-      .home-nutritionist-titleCh {
-        text-align: center;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #3a2c19;
-        font-family: "Mantou Sans";
-        font-size: 128px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 12.8px;
-      }
-
-      .home-nutritionist-titleEn {
-        color: #fefcf7;
-        font-family: "Dela Gothic One";
-        font-size: 64px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 100px;
-        /* 156.25% */
-        text-transform: capitalize;
-      }
-
-      p {
+      span {
         color: #3a2c19;
         font-family: "Noto Sans TC", sans-serif;
         font-size: 20px;
