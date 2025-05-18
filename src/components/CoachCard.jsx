@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import "./CoachCard.scss";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { useState } from "react";
 function CoachCard({ imageSrc, role, name, hashtags = [], description }) {
+  const [liked, setLiked] = useState(false);
   return (
     <>
       <div className="coach-card">
@@ -9,7 +12,16 @@ function CoachCard({ imageSrc, role, name, hashtags = [], description }) {
           <span className="label">{role}</span>
         </div>
         <div className="coach-box">
-          <span className="coach-name">{name}</span>
+          <span className="coach-name">
+            {name}
+            <button className="heart-button" onClick={() => setLiked(!liked)}>
+              {liked ? (
+                <AiFillHeart color="#ff8740" size={24} />
+              ) : (
+                <AiOutlineHeart color="#ff8740" size={24} />
+              )}
+            </button>
+          </span>
           <div className="hashtag">
             {hashtags.map((tag, index) => (
               <a href="#" key={index}>
@@ -18,13 +30,12 @@ function CoachCard({ imageSrc, role, name, hashtags = [], description }) {
             ))}
           </div>
           <p className="coach-details">{description}</p>
-          </div>
-          <Link to="/coachintro" className="more-button">
-            瞭解更多▶
-          </Link>
-       
+        </div>
+        <Link to="/coachintro" className="more-button">
+          瞭解更多▶
+        </Link>
       </div>
-      </>
+    </>
   );
 }
 export default CoachCard;

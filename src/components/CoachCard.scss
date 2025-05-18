@@ -25,7 +25,7 @@
       border-radius: 8px;
       background: #fefcf7;
       padding: 4px 8px;
-      font-family: "Noto Sans TC", sans-serif; 
+      font-family: "Noto Sans TC", sans-serif;
       color: #ff8740;
       font-size: 14px;
       font-weight: 500;
@@ -37,15 +37,30 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
-height: 116px;
+    height: 116px;
     .coach-name {
       color: #3a2c19;
-      font-family: "Noto Sans TC", sans-serif; 
+      font-family: "Noto Sans TC", sans-serif;
       font-size: 20px;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
       letter-spacing: 2px;
+      display: flex;
+      justify-content: space-between;
+      .heart-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0px;
+        transition: transform 0.2s ease;
+        outline: none;
+        // 如果有 focus 狀態也要清掉
+        &:focus {
+          outline: none;
+          
+        }
+      }
     }
 
     .hashtag {
@@ -63,12 +78,17 @@ height: 116px;
   }
   .coach-details {
     color: #3a2c19;
-    font-family: "Noto Sans TC", sans-serif; 
+    font-family: "Noto Sans TC", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 140%; /* 19.6px */
+    line-height: 140%;
     letter-spacing: 1.4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .more-button {
     display: flex;
