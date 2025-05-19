@@ -22,7 +22,7 @@ export const trainingOptions = [
 
 export const nutritionOptions = [
 
-    "減脂瘦身",
+    "營養攝取",
     "增肌增重",
     "體態維持",
     "健康飲食入門",
