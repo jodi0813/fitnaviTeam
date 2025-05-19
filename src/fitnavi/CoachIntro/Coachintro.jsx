@@ -610,9 +610,9 @@ function Coachintro() {
 
             </main >
 
-            {showPopup && (
-                <PopupWindow1 onClose={() => setShowPopup(false)} />
-            )}
+
+            {/* Overlay Modal */}
+            {showPopup && <PopupWindow1 onClose={() => setShowPopup(false)} />}
 
         </>
     )

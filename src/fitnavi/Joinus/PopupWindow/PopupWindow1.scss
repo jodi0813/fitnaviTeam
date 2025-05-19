@@ -1,8 +1,28 @@
 @use '../../reset.scss';
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
-.step-popup-step1-active {
+.popup-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    // .popup-overlay {
+    //     width: 800px;
+    //     height: 800px;
+    //     background-color: #FEFCF7;
+    //     border-radius: 20px;
+ 
+    // }
+}
+
+.step-popup {
     font-family: "Noto Sans TC", sans-serif;
     font-weight: 500;
     color: #3A2C19;
@@ -18,7 +38,7 @@
     display: flex;
     flex-direction: column;
 
-    .close {
+    .close{
         cursor: pointer;
         width: 48px;
         position: absolute;
@@ -37,8 +57,7 @@
 
 
     // 下一步按鈕、確認結帳按鈕、前往預約
-    .next-btn,
-    .reserve-btn {
+    .next-btn,.reserve-btn {
         width: 150px;
         height: 40px;
         background-color: #FF8740;
@@ -52,8 +71,7 @@
     }
 
     // 返回按鈕、回首頁按鈕
-    .prev-btn,
-    .home-btn {
+    .prev-btn,.home-btn {
         width: 150px;
         height: 40px;
         background-color: #FEFCF7;
@@ -65,8 +83,11 @@
         color: #FF8740;
 
     }
+}
 
-    .step-popup-step1-course {
+/* STEP1 選擇方案 */
+.step1 {
+    .course {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -89,8 +110,7 @@
         }
     }
 
-    .step-popup-step1-plan-list {
-
+    .plan-list {
         margin-bottom: 25px;
 
         li {
@@ -138,7 +158,7 @@
                     .align-left {
                         display: flex;
                         justify-content: flex-start;
-                        align-items: center;
+                        align-items: flex-start;
                         flex-wrap: nowrap;
                         // flex: 1;
 
@@ -177,9 +197,11 @@
         }
 
     }
-
-    .step-popup-step1-button {
+    /* 按鈕區 */
+    .button {
         display: flex;
         justify-content: flex-end;
+
     }
+
 }
