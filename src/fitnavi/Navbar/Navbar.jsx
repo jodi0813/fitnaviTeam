@@ -14,7 +14,11 @@ function Navbar() {
               <span className="fit">Fit</span>
               <span className="navi">NAVI</span>
             </Link>
-
+            <button class="navbarHamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
             <ul className="menu">
 
               <li>
@@ -39,7 +43,7 @@ function Navbar() {
                 <Link to="/memberlist">後台(暫放)</Link>
               </li> */}
             </ul>
-            <button type="button" className="nbr-login" onClick={()=>navigate('MemberLogin')}>
+            <button type="button" className="nbr-login" onClick={() => navigate('MemberLogin')}>
               登入 / 註冊
             </button>
           </nav>

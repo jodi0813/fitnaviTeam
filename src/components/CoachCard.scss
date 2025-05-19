@@ -1,7 +1,7 @@
 @use "/src/fitnavi/reset.scss";
 
 .coach-card {
-  width: 330px;
+  width: 100%;
   height: 452px;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   .image-container {
     position: relative;
     img {
-      width: 298px;
+      width: 100%;
       height: 270px;
       object-fit: cover;
       border-radius: 16px;
