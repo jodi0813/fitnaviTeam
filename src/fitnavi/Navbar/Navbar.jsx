@@ -14,10 +14,10 @@ function Navbar() {
               <span className="fit">Fit</span>
               <span className="navi">NAVI</span>
             </Link>
-            <button class="navbarHamburger">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
+            <button className="navbarHamburger">
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
             </button>
             <ul className="menu">
 

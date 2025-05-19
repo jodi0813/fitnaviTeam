@@ -11,6 +11,9 @@ import Allarticle from "./Allarticle/Allarticle";
 import Center from "./Center/Center";
 import CoachIntro from "./CoachIntro/Coachintro";
 import PopupWindow1 from "./CoachIntro/PopupWindow/PopupWindow1";
+import PopupWindow2 from "./CoachIntro/PopupWindow/PopupWindow2";
+import PopupWindow3 from "./CoachIntro/PopupWindow/PopupWindow3";
+import PopupWindow4 from "./CoachIntro/PopupWindow/PopupWindow4";
 import Footer from "./Footer/Footer";
 import MemberList from "./Dashboard/UserDashboard/MemberList";
 import Joinus from "./Joinus/Joinus";
@@ -53,6 +56,9 @@ function App() {
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
             <Route path="/PopupWindow1" element={<PopupWindow1 />}></Route>
+            <Route path="/PopupWindow2" element={<PopupWindow2 />}></Route>
+            <Route path="/PopupWindow3" element={<PopupWindow3/>}></Route>
+            <Route path="/PopupWindow4" element={<PopupWindow4 />}></Route>
           <Route path="/NutriIntro" element={<NutriIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
           <Route path="/memberlogin" element={<MemberLogin />}></Route>

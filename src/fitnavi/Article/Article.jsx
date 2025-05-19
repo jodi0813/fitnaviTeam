@@ -161,7 +161,7 @@ function Article() {
                 <section>
                     <div className="bottom">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1002" height="2" viewBox="0 0 1002 2" fill="none">
-                            <path d="M1 1L1001 1" stroke="var(--dark, #3A2C19)" stroke-width="2" stroke-linecap="round" />
+                            <path d="M1 1L1001 1" stroke="var(--dark, #3A2C19)" strokeWidth="2" strokeLinecap="round" />
                         </svg>
                         <div className="bottomcontent">
                             <div className="hashtag">

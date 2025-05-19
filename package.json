@@ -21,6 +21,7 @@
     "react-router-dom": "^7.6.0",
     "react-select": "^5.10.1",
     "sass": "^1.88.0"
+  
   },
   "devDependencies": {
     "@types/react": "^19.1.3",

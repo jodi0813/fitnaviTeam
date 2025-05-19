@@ -6,8 +6,8 @@ import { BsClock } from "react-icons/bs";
 import Articlecards from "../../components/Articlecards/Articlecards";
 import { useNavigate } from 'react-router-dom';
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
-import PhotoGallery1 from "../../components/Carousel/PhotoGallery1";
-import PopupWindow1 from "./PopupWindow/PopupWindow1";
+import PhotoGallery1 from '../../components/Carousel/PhotoGallery1';
+import  PopupWindow3 from "./PopupWindow/PopupWindow3";
 // import ArticlecardsCarousel from "../../components/Carousel/ArticlecardsCarousel/ArticlecardsCarousel"
 
 
@@ -495,7 +495,7 @@ function Coachintro() {
 
                             <button className="ViewArticles-left" onClick={goNext}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                    <path d="M30 36L18 24L30 12" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M30 36L18 24L30 12" stroke="#3A2C19" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg></button>
 
                             <div className="Three-classcards">
@@ -517,7 +517,7 @@ function Coachintro() {
 
                             <button className=" .ViewArticles-right" onClick={goBack}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="26" viewBox="0 0 14 26" fill="none">
-                                    <path d="M1 25L13 13L1 1" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M1 25L13 13L1 1" stroke="#3A2C19" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg></button>
                         </div>
 
@@ -593,7 +593,7 @@ function Coachintro() {
 
 
             {/* Overlay Modal */}
-            {showPopup && <PopupWindow1 onClose={() => setShowPopup(false)} />}
+            {showPopup && <PopupWindow3 onClose={() => setShowPopup(false)} />}
 
         </>
     )
