@@ -1,0 +1,331 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+* {
+  box-sizing: border-box;
+  /* 不累加邊框及內距 */
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 重置字體 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "" Noto Sans TC ", sans-serif; Sans TC", sans-serif, "Dela Gothic One";
+  line-height: 1.5;
+  background-color: #FEFCF7;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 重置連接 */
+a {
+  display: block;
+  /* a預設的行內元素，不支援寬高及上下間距，通常會改為區塊，方便設定 */
+  color: #444;
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #FEFCF7;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Mantou Sans";
+  src: url(../../assets/MantouSans-Regular.ttf);
+}
+#NuriJoinusStep4-Form {
+  padding: 120px 50px;
+  width: 100%;
+}
+
+.NutriJoinus-Step4-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 {
+  position: relative;
+  top: -10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 550px;
+  height: 700px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  padding-right: 32px;
+  padding-left: 32px;
+  border-radius: 32px;
+  border: 1px solid var(--dark, #3A2C19);
+  background: #FFF;
+  box-shadow: 8px 8px 0px 0px #3A2C19;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .JoinusStep4-title {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #3a2c19;
+  width: 450px;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .JoinusStep4-title .Step4-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+  white-space: nowrap;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .JoinusStep4-title .Step4-title h3 {
+  color: var(--dark, #3A2C19);
+  text-align: center;
+  font-family: "Dela Gothic One";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0px;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .JoinusStep4-title .Step4-title h4 {
+  color: var(--dark, #3A2C19);
+  opacity: 0.5;
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 250%;
+  /* 35px */
+  letter-spacing: 1.4px;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .JoinusStep4-title p {
+  color: var(--primary, var(--primary, #FF8740));
+  text-align: center;
+  font-family: "Dela Gothic One";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .scrollFieldset-CollabarationTerm {
+  display: flex;
+  padding: 14px 12px 10px 27px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 17px;
+  max-width: 393px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-left: 80px;
+  margin-right: 70px;
+  border-radius: 8px;
+  border: 1px solid var(--dark, #3A2C19);
+  background: var(--white, #FEFCF7);
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .scrollFieldset-CollabarationTerm p {
+  color: var(--dark, #3A2C19);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 14px */
+  letter-spacing: 1px;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .scrollFieldset-CollabarationTerm::-webkit-scrollbar {
+  width: 10px;
+  height: 143px;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .scrollFieldset-CollabarationTerm::-webkit-scrollbar-thumb {
+  width: 8px;
+  border-radius: 99px;
+  background: #D9D9D9;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .scrollFieldset-CollabarationTerm::-webkit-scrollbar-track {
+  background: transparent;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .AgreeTerm-checkbox {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .AgreeTerm-checkbox input {
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1/1;
+  border-radius: 3px;
+  border: 1px solid var(--dark, #3A2C19);
+  background: #FFF;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .AgreeTerm-checkbox label {
+  color: var(--dark, #3A2C19);
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .PreSSendButton {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .PreSSendButton button {
+  border-radius: 999px;
+  border: 1px solid var(--primary, #FF8740);
+  text-align: center;
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}
+.NutriJoinus-Step4-wrapper .NutriJoinus-Step4 .PreSSendButton button:active {
+  border-radius: 999px;
+  background: var(--primary, #FF8740);
+  color: var(--white, var(--white, #FEFCF7));
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}

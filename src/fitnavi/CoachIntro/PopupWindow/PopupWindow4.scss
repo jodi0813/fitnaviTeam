@@ -1,0 +1,138 @@
+@use '../../reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+
+.popup-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // .popup-overlay {
+    //     width: 800px;
+    //     height: 800px;
+    //     background-color: #FEFCF7;
+    //     border-radius: 20px;
+
+    // }
+}
+
+.step-popup {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 500;
+    color: #3A2C19;
+    position: relative;
+    padding: 50px 70px;
+    background: #FEFCF7;
+    border-radius: 1.2rem;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 680px;
+    height: 680px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    .close {
+        cursor: pointer;
+        width: 48px;
+        position: absolute;
+        top: 4%;
+        right: 5%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #3A2C19;
+        border-bottom: 0.5px solid #989794;
+        padding-bottom: 16px;
+        margin-bottom: 25px;
+    }
+
+
+    // 下一步按鈕、確認結帳按鈕、前往預約
+    .next-btn,
+    .reserve-btn {
+        width: 150px;
+        height: 40px;
+        background-color: #FF8740;
+        border-radius: 999px;
+        border: none;
+
+        font-size: 1rem;
+        font-weight: 700;
+        color: #FEFCF7;
+
+    }
+
+    // 返回按鈕、回首頁按鈕
+    .prev-btn,
+    .home-btn {
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        background-color: #FEFCF7;
+        border-radius: 999px;
+        border: 1px solid #FF8740;
+
+        font-size: 1rem;
+        font-weight: 700;
+        color: #FF8740;
+
+    }
+}
+
+.step4{
+    justify-content: center;
+   
+   .content{
+     padding-top: 30px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     
+     img{
+         width: 300px;
+     }
+     h1{
+         font-size: 2rem;
+         font-weight: 700;
+         color: #FF8740;
+         letter-spacing:12px ;
+      
+         padding-bottom: 20px;
+     }
+     .reminder{
+         font-size: 0.8rem;
+         color: #989794;
+     }
+     .steps{
+         font-size: 1.2rem;
+         font-weight: 700;
+         padding: 5px 0 25px 0;
+     }
+   }
+   .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+   }
+ }
+ 
+ .step-popup {
+   display: none;
+ }
+ 
+ .step-popup.active {
+   display: block;
+ }

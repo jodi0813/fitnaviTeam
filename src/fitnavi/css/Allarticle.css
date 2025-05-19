@@ -1,0 +1,515 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+* {
+  box-sizing: border-box;
+  /* 不累加邊框及內距 */
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 重置字體 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "" Noto Sans TC ", sans-serif; Sans TC", sans-serif, "Dela Gothic One";
+  line-height: 1.5;
+  background-color: #FEFCF7;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 重置連接 */
+a {
+  display: block;
+  /* a預設的行內元素，不支援寬高及上下間距，通常會改為區塊，方便設定 */
+  color: #444;
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #FEFCF7;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Mantou Sans";
+  src: url(../../assets/MantouSans-Regular.ttf);
+}
+#Allarticle-section {
+  padding-top: 120px;
+  padding-left: 50px;
+  padding-right: 0;
+  box-sizing: border-box;
+  /* 隱藏橫向溢出 */
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.Allarticle-Search {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  margin-top: 60px;
+  position: relative;
+}
+.Allarticle-Search .selected-button {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+.Allarticle-Search .selected-button button {
+  display: flex;
+  height: 40px;
+  min-width: 144px;
+  padding: 12px 36px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99px;
+  border: 1px solid #FF8740;
+  opacity: 0.8;
+  background: #FFF;
+  color: #FF8740;
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: var(--fontsize-H3, 18px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  white-space: nowrap;
+  /* 27px */
+}
+.Allarticle-Search .selected-button button:hover,
+.Allarticle-Search .selected-button button:active {
+  display: flex;
+  height: 40px;
+  min-width: 144px;
+  padding: 12px 36px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99px;
+  background: #FF8740;
+  color: #FFF;
+  text-align: center;
+  font-family: "Noto Sans TC";
+  font-size: var(--fontsize-H3, 18px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+.Allarticle-Search .Search-Button {
+  display: flex;
+  height: 40px;
+  width: 479px;
+  padding: 8px 20px;
+  align-items: center;
+  border-radius: 20px;
+  border: 0.5px solid var(--dark, #3A2C19);
+  background: var(--white, #FEFCF7);
+}
+.Allarticle-Search .Search-Button::placeholder {
+  color: var(--gray, #989794);
+  /* 段落/14 */
+  font-family: "" Sans TC ", sans-serif; Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}
+.Allarticle-Search .Search-Button::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url("/images/search-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.Allarticle-Search .ClickSearch-Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 40px;
+  padding: 8px 84px;
+  border-radius: 999px;
+  background: var(--primary, #FF8740);
+  color: var(--white, #FEFCF7);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.Allarticle-Search .ClickSearch-Button .text-search {
+  transition: transform 0.3s ease;
+}
+.Allarticle-Search .ClickSearch-Button img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 100px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.Allarticle-Search .ClickSearch-Button:hover {
+  width: 300px;
+  height: 40px;
+  padding: 8px 84px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--primary, #FF8740);
+  background: var(--white, #FEFCF7);
+}
+.Allarticle-Search .ClickSearch-Button:hover .text-search {
+  transform: translateX(-10px);
+  color: var(--primary, var(--primary, #FF8740));
+  text-align: center;
+  /* heading/標題4/Bold */
+  font-family: "Noto Sans TC";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+.Allarticle-Search .ClickSearch-Button:hover img {
+  opacity: 1;
+  transform: translateX(0);
+}
+.Allarticle-Search .ClickSearch-Button:active .text-search {
+  color: var(--primary, var(--primary, #FF8740));
+  text-align: center;
+  /* 段落/16 */
+  font-family: "Noto Sans TC";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  /* 24px */
+  letter-spacing: 1.6px;
+}
+.Allarticle-Search .ClickSearch-Button:active img {
+  width: 18px;
+  height: 18px;
+}
+
+.Allarticle-content {
+  width: 100%;
+  margin-top: 60px;
+  padding-left: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  justify-content: flex-start;
+  align-items: first baseline;
+}
+.Allarticle-content .cat-tag {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+}
+.Allarticle-content .cat-tag .cat-tag-title p {
+  margin-bottom: 15px;
+  color: var(--dark, #3A2C19);
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+  border-bottom: 2px solid #3A2C19;
+  padding-bottom: 14px;
+}
+.Allarticle-content .cat-tag .Cat-name {
+  margin-top: 20%;
+}
+.Allarticle-content .cat-tag .Cat-name button {
+  color: var(--dark, #3A2C19);
+  /* heading/標題4/medium */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  /* 200% */
+  letter-spacing: 0.4px;
+}
+.Allarticle-content .cat-tag .Cat-name button:hover {
+  color: var(--primary, var(--primary, #FF8740));
+  cursor: pointer;
+}
+.Allarticle-content .cat-tag .Cat-name h4 {
+  color: var(--primary, var(--primary, #FF8740));
+  /* heading/標題4/medium */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  /* 200% */
+  letter-spacing: 0.4px;
+}
+.Allarticle-content .cat-tag .Tag {
+  margin-top: 50%;
+}
+.Allarticle-content .cat-tag .Tag .TagName {
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.Allarticle-content .cat-tag .Tag .TagName h4 {
+  color: var(--dark, #3A2C19);
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+  border-bottom: 2px solid #3A2C19;
+  padding-bottom: 15px;
+}
+.Allarticle-content .cat-tag .Tag button {
+  display: flex;
+  padding: 3px 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: var(--primary, #FF8740);
+  color: var(--white, var(--white, #FEFCF7));
+  text-align: right;
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}
+.Allarticle-content .Allarticle-cards .Allarticle-cards-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  gap: 70%;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-bottom: 2px solid #3A2C19;
+  padding-bottom: 6px;
+}
+.Allarticle-content .Allarticle-cards .Allarticle-cards-title p {
+  color: var(--dark, #3A2C19);
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}
+.Allarticle-content .Allarticle-cards .Allarticle-cards-title h4 {
+  color: var(--primary, var(--primary, #FF8740));
+  text-align: right;
+  font-family: "Mantou Sans";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0px;
+  white-space: nowrap;
+}
+.Allarticle-content .Allarticle-cards .Allarticle-Card-article {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 三欄 */
+  gap: 5%;
+  /* 卡片間距 */
+  width: 100%;
+  margin-top: 5%;
+}
+.Allarticle-content .Allarticle-cards .Allarticle-Card-article #card2 > tag {
+  position: relative;
+  bottom: -15px;
+}
+
+.pagination {
+  max-width: 100%;
+  margin-top: 250px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.pagination button {
+  color: var(--dark, #3A2C19);
+  text-align: center;
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}
+.pagination .page-button5 {
+  width: 35px;
+  height: 35px;
+  background-color: var(--primary, #FF8740);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white, var(--white, #FEFCF7));
+  text-align: center;
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}

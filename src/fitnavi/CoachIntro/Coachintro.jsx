@@ -6,8 +6,8 @@ import { BsClock } from "react-icons/bs";
 import Articlecards from "../../components/Articlecards/Articlecards";
 import { useNavigate } from 'react-router-dom';
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
-import PhotoGallery1 from "../../components/Carousel/PhotoGallery1";
-import PopupWindow1 from "./PopupWindow/PopupWindow1";
+import PhotoGallery1 from '../../components/Carousel/PhotoGallery1';
+import  PopupWindow3 from "./PopupWindow/PopupWindow3";
 // import ArticlecardsCarousel from "../../components/Carousel/ArticlecardsCarousel/ArticlecardsCarousel"
 
 
@@ -593,7 +593,7 @@ function Coachintro() {
 
 
             {/* Overlay Modal */}
-            {showPopup && <PopupWindow1 onClose={() => setShowPopup(false)} />}
+            {showPopup && <PopupWindow3 onClose={() => setShowPopup(false)} />}
 
         </>
     )

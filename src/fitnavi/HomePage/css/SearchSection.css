@@ -1,6 +1,9 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 * {
-  box-sizing: border-box; /* 不累加邊框及內距 */
+  box-sizing: border-box;
+  /* 不累加邊框及內距 */
 }
 
 html,
@@ -94,7 +97,7 @@ video {
 
 /* 重置字體 */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "" Noto Sans TC ", sans-serif; Sans TC", sans-serif, "Dela Gothic One";
   line-height: 1.5;
   background-color: #FEFCF7;
 }
@@ -123,13 +126,30 @@ img {
 
 /* 重置連接 */
 a {
-  display: block; /* a預設的行內元素，不支援寬高及上下間距，通常會改為區塊，方便設定 */
+  display: block;
+  /* a預設的行內元素，不支援寬高及上下間距，通常會改為區塊，方便設定 */
   color: #444;
   text-decoration: none;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #FEFCF7;
+  overflow-x: hidden;
+}
+
 .home-search {
-  padding: 191px 118px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -187,12 +207,6 @@ a {
   justify-content: flex-end;
   margin-right: 50px;
 }
-.home-search .home-search-section .home-search-block .home-search-main .home-search-button {
-  border-radius: 999px;
-  background: #ff8740;
-  color: #fefcf7;
-  width: 100%;
-}
 .home-search .home-search-section .home-search-block .home-search-main img {
   position: absolute;
   left: -30px;
@@ -207,6 +221,11 @@ a {
   justify-content: space-between;
   gap: 30px;
   height: 330px;
+}
+.home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-dropdowns1 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns select {
   display: flex;
@@ -227,11 +246,16 @@ a {
   line-height: 140%;
   letter-spacing: 1.4px;
 }
-.home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-toggleBt {
+.home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-botton {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+.home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-botton .home-search-toggleBt {
   display: flex;
   gap: 8px;
 }
-.home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-toggleBt button {
+.home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-botton .home-search-toggleBt button {
   display: flex;
   height: 40px;
   padding: 12px 36px;
@@ -248,10 +272,44 @@ a {
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 27px */
+  line-height: 150%;
 }
-.home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-bottom {
+.home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-botton .home-search-toggleBt button:hover {
+  background: #ff8740;
+  color: #fff;
+  opacity: 1;
+}
+.home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .homeSearchBt {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  height: 40px;
+  padding: 8px 84px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 999px;
+  background: #ff8740;
+  color: #fefcf7;
+  text-align: center;
+  /* heading/標題4/Bold */
+  font-family: "Noto Sans TC";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  transition: all 0.15s ease-out;
+}
+.home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .homeSearchBt .faSearch {
+  margin-left: 8px;
+  display: none;
+}
+.home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .homeSearchBt:hover {
+  background-color: #fff;
+  color: #ff8740;
+  border: 2px solid #ff8740;
+}
+.home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .homeSearchBt:hover .faSearch {
+  display: inline-block;
 }
