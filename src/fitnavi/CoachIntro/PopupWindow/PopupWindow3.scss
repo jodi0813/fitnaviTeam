@@ -1,6 +1,7 @@
 @use '../../reset.scss';
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
+
 .popup-modal-overlay {
     position: fixed;
     top: 0;
@@ -13,13 +14,6 @@
     align-items: center;
     justify-content: center;
 
-    // .popup-overlay {
-    //     width: 800px;
-    //     height: 800px;
-    //     background-color: #FEFCF7;
-    //     border-radius: 20px;
-
-    // }
 }
 
 .step-popup {
