@@ -14,7 +14,7 @@ function Coach() {
     role: "教練",
     hashtags: ["TRX懸吊", "功能性訓練", "減脂訓練"],
     description:
-      "結合TRX、功能性訓練與減脂訓練，我專注於幫助學員提升全身力量與協調。透過有效的訓練計劃，快速達成減脂與塑形目標，讓你動作更靈活，體態更緊實。",
+      "結合TRX、功能性訓練與減脂訓練，我專注於幫助學員提升全身力量與協調。",
     imageSrc: "/images/coach09.jpg",
     city: "基隆市",
     sex: "女",
@@ -367,6 +367,7 @@ function Coach() {
                     hashtags={coach.hashtags}
                     description={coach.description}
                     imageSrc={coach.imageSrc}
+                    link="/coachintro"
                   />
                 ))}
               </div>
