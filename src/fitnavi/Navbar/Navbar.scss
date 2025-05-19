@@ -5,71 +5,154 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: transparent; /* 或透明 */
-  z-index: 999;//排序最高
+  background: transparent;
+  /* 或透明 */
+  z-index: 999; //排序最高
 }
+
 .container {
-  max-width: calc(100% - 240px); /* 左右各120px */
+  max-width: calc(100% - 240px);
+  /* 左右各120px */
   margin: 0 auto;
-}
 
-#navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 0px 24px;
-  background-color: rgba(237, 237, 237, 0.6);
-  border-radius: 999px;
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(12px);
-
-  .logo {
-    display: flex;
-    align-items: baseline;
-    width: 109px;
-    height: 35px;
-    margin: 13px;
-    font-weight: 400;
-    font-family: "Dela Gothic One";
-    .fit {
-      font-size: 16px;
-      color: #3a2c19;
-    }
-    .navi {
-      font-size: 24px;
-      color: #ff8740;
-    }
+  @media (max-width: 393px) {
+    max-width: 100%;
   }
-  .menu {
-    display: flex;
-    padding: 0px 25px;
 
-    li {
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px;
+    background-color: rgba(237, 237, 237, 0.6);
+    border-radius: 999px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(12px);
+
+    .navbarHamburger {
+
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+
+      @media (min-width: 394px) {
+        display: none;
+      }
+
+      .bar {
+        display: block;
+        width: 24px;
+        height: 3px;
+        background-color: black;
+        margin: 5px auto;
+      }
+
+    }
+
+    @media (max-width: 393px) {
+      display: flex;
+      width: 393px;
+      padding: 4px 20px;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+      background: #FFF;
+
+
+    }
+
+    .logo {
+      display: flex;
+      align-items: baseline;
+      width: 109px;
+      height: 35px;
+      margin: 13px;
+      font-weight: 400;
+      font-family: "Dela Gothic One";
+
+      .fit {
+        font-size: 16px;
+        color: #3a2c19;
+      }
+
+      .navi {
+        font-size: 24px;
+        color: #ff8740;
+
+
+      }
+    }
+
+    .menu {
       display: flex;
       padding: 0px 25px;
-      a {
-        font-family: "Noto Sans TC", sans-serif;
-        font-size: 14px;
-        font-weight: 500;
-        color: #3a2c19;
+
+      @media (max-width: 393px) {
+        display: none; // 預設隱藏
+
+
+      }
+
+
+      li {
+        display: flex;
+        padding: 0px 25px;
+
+        a {
+          font-family: "Noto Sans TC", sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          color: #3a2c19;
+        }
       }
     }
   }
+
+  .nbr-login {
+    background: #ff8740;
+    color: #fff;
+    display: flex;
+    padding: 10px 24px;
+    /* 內距 */
+    justify-content: center;
+    /* 置中 */
+    border-radius: 999px;
+    /* 邊角 */
+    font-size: 14px;
+    /* 字體大小 */
+    letter-spacing: 1.4px;
+
+    /* 字距 */
+    @media (max-width: 393px) {
+      display: none; // 預設隱藏
+
+
+    }
+  }
 }
 
-.nbr-login {
-  background: #ff8740;
-  color: #fff;
-  display: flex;
-  padding: 10px 24px;
-  /* 內距 */
-  justify-content: center;
-  /* 置中 */
-  border-radius: 999px;
-  /* 邊角 */
-  font-size: 14px;
-  /* 字體大小 */
-  letter-spacing: 1.4px;
-  /* 字距 */
-}
+// @media (max-width: 393px) {
+//   .container {
+//     max-width: 100%;
+//     padding: 0 16px;
+
+//     #navbar {
+//       flex-wrap: wrap;
+
+//       .menu {
+//         display: none; // 預設隱藏
+//         width: 100%;
+//         padding: 0;
+//       }
+
+//       .hamburger {
+//         display: block;
+//       }
+
+//       .nbr-login {
+//         margin-top: 12px;
+//              display: none; // 預設隱藏
+//       }
+//     }
+//   }
+// }

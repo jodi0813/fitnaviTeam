@@ -123,6 +123,7 @@ function Nutritionist() {
                 hashtags={coach.hashtags}
                 description={coach.description}
                 imageSrc={coach.imageSrc}
+                    link="/NutriIntro"
               />
             ))}
           </div>{" "}
