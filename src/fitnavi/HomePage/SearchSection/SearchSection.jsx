@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import "./SearchSection.scss";
 import { cities, taipeiDistricts } from "../../../data/locations";
-import { IoSearch } from "react-icons/io5";
 import { FaSearch } from "react-icons/fa";
+import { nutritionOptions, trainingOptions } from "../../../data/hashtag";
+import { useState } from "react";
+
 function SearchSection() {
   const navigate = useNavigate();
 
@@ -15,7 +17,8 @@ function SearchSection() {
       )}&area=${encodeURIComponent(selectedArea)}`
     );
   };
-
+  const [selectedRole, setSelectedRole] = useState("");
+  const [selectedTrainingNeed, setSelectedTrainingNeed] = useState("");
   return (
     <>
       <div className="home-search">
@@ -57,8 +60,7 @@ function SearchSection() {
                 </div>
                 <button className="homeSearchBt" onClick={handleSearch}>
                   搜尋
-                 <span className="faSearch">
-             
+                  <span className="faSearch">
                     <FaSearch />
                   </span>
                 </button>
@@ -82,16 +84,48 @@ function SearchSection() {
               <div className="home-search-dropdowns">
                 <div className="home-search-botton">
                   <div className="home-search-toggleBt">
-                    <button>健身教練</button>
-                    <button>營養師</button>
+                    <button onClick={() => setSelectedRole("coach")}>
+                      健身教練
+                    </button>
+                    <button onClick={() => setSelectedRole("nutritionist")}>
+                      營養師
+                    </button>
                   </div>
                   <div>
-                    <select>
-                      <option>課程種類</option>
+                    <select
+                      value={selectedTrainingNeed}
+                      onChange={(e) => setSelectedTrainingNeed(e.target.value)}
+                    >
+                      <option value="">訓練需求</option>
+                      {(selectedRole === "coach"
+                        ? trainingOptions
+                        : nutritionOptions
+                      ).map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
-                <button className="homeSearchBt">
+                <button
+                  className="homeSearchBt"
+                  onClick={() => {
+                    if (!selectedRole) {
+                      alert("請先選擇職業類型");
+                      return;
+                    }
+                    if (!selectedTrainingNeed) {
+                      alert("請選擇訓練／諮詢需求");
+                      return;
+                    }
+                    navigate(
+                      `/${
+                        selectedRole === "coach" ? "coach" : "nutritionist"
+                      }?hashtag=${encodeURIComponent(selectedTrainingNeed)}`
+                    );
+                  }}
+                >
                   搜尋
                   <span className="faSearch">
                     <FaSearch />
