@@ -518,7 +518,7 @@ function NutriIntro() {
                             <div className="Three-classcards">
                                 <button className="NutriViewArticles-left" onClick={goNext}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                        <path d="M30 36L18 24L30 12" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M30 36L18 24L30 12" stroke="#3A2C19" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg></button>
                                 {nutrivisibleCards.map((card, index) => (
 
@@ -537,7 +537,7 @@ function NutriIntro() {
 
                                 <button className=" .NutriViewArticles-right" onClick={goBack}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="26" viewBox="0 0 14 26" fill="none">
-                                        <path d="M1 25L13 13L1 1" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M1 25L13 13L1 1" stroke="#3A2C19" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg></button>
                             </div>
 
