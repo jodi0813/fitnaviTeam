@@ -10,6 +10,7 @@ import Article from "./Article/Article";
 import Allarticle from "./Allarticle/Allarticle";
 import Center from "./Center/Center";
 import CoachIntro from "./CoachIntro/Coachintro";
+import PopupWindow1 from "./Joinus/PopupWindow/PopupWindow1";
 import Footer from "./Footer/Footer";
 import MemberList from "./Dashboard/UserDashboard/MemberList";
 import Joinus from "./Joinus/Joinus";
@@ -51,6 +52,7 @@ function App() {
           <Route path="/article" element={<Article />} />
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
+            <Route path="/PopupWindow1" element={<PopupWindow1 />}></Route>
           <Route path="/NutriIntro" element={<NutriIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
           <Route path="/memberlogin" element={<MemberLogin />}></Route>

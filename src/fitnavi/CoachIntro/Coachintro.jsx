@@ -7,6 +7,7 @@ import Articlecards from "../../components/Articlecards/Articlecards";
 import { useNavigate } from 'react-router-dom';
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
 import PhotoGallery1 from "../../components/Carousel/PhotoGallery1";
+import PopupWindow1 from "../Joinus/PopupWindow/PopupWindow1";
 // import ArticlecardsCarousel from "../../components/Carousel/ArticlecardsCarousel/ArticlecardsCarousel"
 
 
@@ -14,6 +15,7 @@ import PhotoGallery1 from "../../components/Carousel/PhotoGallery1";
 
 function Coachintro() {
     const navigate = useNavigate();
+    const [showPopup, setShowPopup] = useState(false);
     const [liked, setLiked] = useState(false);
     const articlesData = [
 
@@ -286,7 +288,11 @@ function Coachintro() {
                                 <p>10堂優惠 ：$1,400/單堂</p>
                                 <div className="price-with-button">
                                     <p>20堂優惠 ：$1,200/單堂</p>
-                                    <button class="classinrto-text" type="button" onClick={() => navigate('/NutriIntro')}>
+                                    <button
+                                        className="classinrto-text"
+                                        type="button"
+                                        onClick={() => setShowPopup(true)}
+                                    >
                                         <span className="classinrto-text">立即報名</span>
                                         <img src="/images/search.svg" alt="" />
                                     </button>
@@ -295,7 +301,7 @@ function Coachintro() {
 
                         </div>
 
-                        <div class="Coach-place">
+                        <div className="Coach-place">
                             <p>上課地點<br />可選擇</p>
                             <div className="moreimg4" >
                                 <img src="/images/classplace-1.jpg" alt="" />
@@ -603,6 +609,10 @@ function Coachintro() {
                 </div>
 
             </main >
+
+            {showPopup && (
+                <PopupWindow1 onClose={() => setShowPopup(false)} />
+            )}
 
         </>
     )
