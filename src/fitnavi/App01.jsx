@@ -10,7 +10,7 @@ import Article from "./Article/Article";
 import Allarticle from "./Allarticle/Allarticle";
 import Center from "./Center/Center";
 import CoachIntro from "./CoachIntro/Coachintro";
-import PopupWindow1 from "./Joinus/PopupWindow/PopupWindow1";
+import PopupWindow1 from "./CoachIntro/PopupWindow/PopupWindow1";
 import Footer from "./Footer/Footer";
 import MemberList from "./Dashboard/UserDashboard/MemberList";
 import Joinus from "./Joinus/Joinus";

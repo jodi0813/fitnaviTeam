@@ -7,16 +7,24 @@ import Articlecards from "../../components/Articlecards/Articlecards";
 import { useNavigate } from 'react-router-dom';
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
 import PhotoGallery1 from "../../components/Carousel/PhotoGallery1";
-import PopupWindow1 from "../Joinus/PopupWindow/PopupWindow1";
+import PopupWindow1 from "./PopupWindow/PopupWindow1";
 // import ArticlecardsCarousel from "../../components/Carousel/ArticlecardsCarousel/ArticlecardsCarousel"
 
 
 
 
 function Coachintro() {
+    //管理導航
     const navigate = useNavigate();
+
+    //管理彈窗
     const [showPopup, setShowPopup] = useState(false);
+ 
+
+    //管理愛心
     const [liked, setLiked] = useState(false);
+
+    //文章卡牌
     const articlesData = [
 
         {
@@ -211,33 +219,6 @@ function Coachintro() {
                         <div className="coachphotos">
                             <PhotoGallery1 />
 
-                            {/* <div className="selfie">
-                                <img src="./images/coach.jpg" alt="" />
-                            </div>
-                            <div className="more">
-                                <figure className="moreimg1">
-                                    <img src="./images/coach-carousel-01.jpg" />
-                                </figure>
-
-                                <figure className="moreimg2">
-                                    <img src="./images/coach-carousel-02.jpg" alt="" />
-                                </figure>
-
-                                <figure className="moreimg3">
-                                    <img src="./images/coach-carousel-03.jpg" alt="" />
-                                </figure>
-
-                            </div> */}
-
-
-                            {/* <div className="TurnButton">
-                                <button>&#9675;</button>
-                                <button>&#9675;</button>
-                                <button>&#9675;</button>
-                                <button>&#9675;</button>
-                                <button>&#9675;</button>
-
-                            </div> */}
 
 
                         </div>
