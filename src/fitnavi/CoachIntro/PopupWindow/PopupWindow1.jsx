@@ -1,6 +1,6 @@
 import "./PopupWindow1.scss";
 
-export default function PopupWindow1({ onClose }) {
+export default function PopupWindow1({ onClose,onNext }) {
     return (
         <div className="popup-modal-overlay" onClick={onClose}>
             <div className="popup-overlay" onClick={(e) => e.stopPropagation()}>
@@ -74,7 +74,7 @@ export default function PopupWindow1({ onClose }) {
                     </ul>
 
                     <div className="button">
-                        <button className="next-btn">下一步</button>
+                         <button className="next-btn" onClick={onNext}>下一步</button>
                     </div>
                 </div>
             </div>

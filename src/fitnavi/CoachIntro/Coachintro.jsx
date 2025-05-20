@@ -8,6 +8,9 @@ import { useNavigate } from 'react-router-dom';
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
 import PhotoGallery1 from '../../components/Carousel/PhotoGallery1';
 import PopupWindow1 from "./PopupWindow/PopupWindow1";
+import PopupWindow2 from "./PopupWindow/PopupWindow2";
+import PopupWindow3 from "./PopupWindow/PopupWindow3";
+import PopupWindow4 from "./PopupWindow/PopupWindow4";
 // import ArticlecardsCarousel from "../../components/Carousel/ArticlecardsCarousel/ArticlecardsCarousel"
 
 
@@ -23,6 +26,26 @@ function Coachintro() {
 
     //管理愛心
     const [liked, setLiked] = useState(false);
+
+    //管理彈窗
+    const [stepIndex, setStepIndex] = useState(0);
+    const steps = [
+        PopupWindow1,
+        PopupWindow2,
+        PopupWindow3,
+        PopupWindow4
+    ];
+
+    const StepComponent = steps[stepIndex];
+
+    const nextStep = () => {
+        if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1);
+    };
+    const prevStep = () => {
+        if (stepIndex > 0) setStepIndex(stepIndex - 1);
+    };
+
+
 
     //文章卡牌
     const articlesData = [
@@ -625,7 +648,14 @@ function Coachintro() {
 
 
             {/* Overlay Modal */}
-            {showPopup && <PopupWindow1 onClose={() => setShowPopup(false)} />}
+            {/* {showPopup && <PopupWindow1 onClose={() => setShowPopup(false)} onNext={nextStep} onPrev={prevStep}/>} */}
+            {showPopup && (
+                <StepComponent
+                    onClose={() => setShowPopup(false)}
+                    onNext={nextStep}
+                    onPrev={prevStep}
+                />
+            )}
 
         </>
     )

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Cleave from "cleave.js/react";
 import './PopupWindow3.scss';
 
-export default function PopupWindow3({ onClose }) {
+export default function PopupWindow3({ onClose, onNext, onPrev }) {
     // 管理選擇的付款方式
     const [selectedMethod, setSelectedMethod] = useState("");
 
@@ -124,8 +124,8 @@ export default function PopupWindow3({ onClose }) {
 
                     {/* 按鈕區 */}
                     <div className="button">
-                        <button className="prev-btn">返回</button>
-                        <button className="next-btn">確認結帳</button>
+                        <button className="prev-btn" onClick={onPrev}>返回</button>
+                        <button className="next-btn" onClick={onNext}>確認結帳</button>
                     </div>
                 </div>
 

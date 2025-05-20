@@ -34,6 +34,7 @@ import SignupSuccess from "./Member/SignupSuccess";
 import NutriIntro from "./NutriIntro/NutriIntro";
 import "./reset.scss";
 import CoachDashboardList from "./Dashboard/CoachDashboard/CoachDashboardList";
+// import MyOrderView from "./Dashboard/UserDashboard/MyOrderView"
 import ScrollToTop from "../components/ScrollToTop";
 
 
@@ -77,6 +78,7 @@ function App() {
           <Route path="/NutriJoinusStep2" element={<NutriJoinusStep2 />} />
           <Route path="/NutriJoinusStep3" element={<NutriJoinusStep3 />} />
           <Route path="/NutriJoinusStep4" element={<NutriJoinusStep4/>} />
+          {/* <Route path="/MyOrderView " element={<MyOrderView />} /> */}
         </Routes>
         <Footer />
       </div>
