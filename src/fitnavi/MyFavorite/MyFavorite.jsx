@@ -2,6 +2,7 @@ import { useState } from "react";
 import CoachCard from "../../components/CoachCard";
 import MainTitle from "../../components/Title/MainTitle";
 import "../Coach/Coach.scss";
+import Pagination from "../../components/Pagination/Pagination";
 function MyFavorite() {
   const [activeTab, setActiveTab] = useState("allFavoriteCards");
 
@@ -86,7 +87,7 @@ function MyFavorite() {
   return (
     <>
       <div id="coachMain">
-        <MainTitle title1="" title2="別錯過他們的精彩課程" />
+        <MainTitle title1="我的收藏" title2="別錯過他們的精彩課程" />
 
         <div className="favoriteBt">
           <div className="favoriteBt1">
@@ -184,7 +185,10 @@ function MyFavorite() {
             </div>
           </div>
         )}
-      </div>
+        <Pagination 
+        pageCount="5"
+        
+        />      </div>
     </>
   );
 }
