@@ -7,7 +7,7 @@ import Articlecards from "../../components/Articlecards/Articlecards";
 import { useNavigate } from 'react-router-dom';
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
 import PhotoGallery1 from '../../components/Carousel/PhotoGallery1';
-import  PopupWindow1 from "./PopupWindow/PopupWindow1";
+import PopupWindow1 from "./PopupWindow/PopupWindow1";
 // import ArticlecardsCarousel from "../../components/Carousel/ArticlecardsCarousel/ArticlecardsCarousel"
 
 
@@ -19,7 +19,7 @@ function Coachintro() {
 
     //管理彈窗
     const [showPopup, setShowPopup] = useState(false);
- 
+
 
     //管理愛心
     const [liked, setLiked] = useState(false);
@@ -555,7 +555,7 @@ function Coachintro() {
 
                         </div>
 
-                        <div className="Coach-comment-line1" style={{
+                        {/* <div className="Coach-comment-line1" style={{
                             display: "grid",
                             flexDirection: "column",
                             gridTemplateColumns: "repeat(3, 1fr)", // 每行 3 欄
@@ -582,7 +582,39 @@ function Coachintro() {
                                 </div>
                             ))}
 
+                        </div> */}
+                        <div className="Coach-comment-line1" style={{
+                            display: "grid",
+                            gridTemplateColumns: "repeat(3, 1fr)", // 每行 3 欄
+                            gap: "50px",
+                            maxWidth: "960px", // 3 張卡片寬 + gap
+                            margin: "0 auto",  // 置中
+                        }}>
+                            {cardData.slice(0, 9).map((card, index) => (
+                                <div
+                                    key={index}
+                                    style={{
+                                        marginTop: (index === 1 || index === 4 || index === 7) ? "60px" : "10px" // 設定 marginTop
+                                    }}
+                                >
+                                    <ColorCard
+                                        description={card.description}
+                                        cardColor={card.color}
+                                        rate={parseFloat(card.rate)}
+                                        name={card.name}
+                                        date={card.date}
+                                    />
+                                </div>
+                            ))}
                         </div>
+
+                        <div className="seeMoreComment">
+                            <button>
+                                <span className="seeMore-text">查看更多評價</span>
+                                <img src="/images/search.svg" alt="" />
+                            </button>
+                        </div>
+
 
 
 

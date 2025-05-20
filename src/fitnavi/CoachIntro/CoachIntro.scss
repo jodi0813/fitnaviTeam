@@ -1344,11 +1344,41 @@
             }
 
             .Coach-comment-line1 {
-                display: flex;
-                flex-direction: column;
-                gap: 40px;
+                // display: flex;
+                // flex-direction: column;
+                // gap: 40px;
+                // position: relative;
+                // right: 10%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 50px;
+                max-width: 960px;
+                margin: 0 auto;
                 position: relative;
                 right: 10%;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 1px;
+                    border-left: 1px dashed #ccc;
+                }
+
+                &::before {
+                    left: calc(33.333% + 10px);
+                    /* 第一條虛線 */
+
+                }
+
+                &::after {
+                    left: calc(66.666% + 30px);
+                    /* 第二條虛線 */
+
+                }
+
 
                 .Star-rate {
                     display: flex;
@@ -1424,6 +1454,73 @@
 
 
 
+            }
+
+            .seeMoreComment {
+                position: relative;
+                margin-top: 10%;
+                left: 32%;
+                top: 50%;
+
+                button {
+                    display: flex;
+                    width: 300px;
+                    height: 40px;
+                    padding: 8px 84px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 999px;
+                    background: var(--primary, #FF8740);
+                    color: var(--white, var(--white, #FEFCF7));
+                    text-align: center;
+                    /* heading/標題4/Bold */
+                    font-family: "Noto Sans TC";
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 2px;
+                    white-space: nowrap;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        position: absolute;
+                        left: 65%;
+                        top: 30%;
+                        opacity: 0;
+                        transform: translateX(10px); // 預設略偏右
+                        transition: opacity 0.3s ease, transform 0.3s ease;
+                    }
+
+                    &:hover {
+
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 999px;
+                        border: 1px solid var(--primary, #FF8740);
+                        background: var(--white, #FEFCF7);
+
+                        .seeMore-text {
+                            transform: translateX(-10px); // 文字左滑
+                            color: var(--primary, var(--primary, #FF8740));
+                            text-align: center;
+                            /* heading/標題4/Bold */
+                            font-family: "Noto Sans TC";
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                            letter-spacing: 2px;
+                        }
+
+                        img {
+                            opacity: 1;
+                            transform: translateX(0); // icon 滑進來
+                        }
+                    }
+
+                }
             }
 
 

@@ -172,9 +172,9 @@ function Article() {
                                 <p>#標籤</p>
                             </div>
 
-                            <div className="button">
+                            {/* <div className="button">
                                 <button className="bottombutton" onClick={() => { navigate('/Allarticle'); window.scrollTo(0, 0); }}>←返回上一頁</button>
-                            </div>
+                            </div> */}
 
                         </div>
 
