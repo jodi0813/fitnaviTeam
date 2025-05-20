@@ -275,7 +275,7 @@ function Nutritionist() {
   const location = useLocation();
   useEffect(() => {
     const params = new URLSearchParams(location.search);
-    const hashtag = params.get("hashtags");
+    const hashtag = params.get("hashtag");
 
     if (hashtag) {
       setSelectedHashtag(hashtag);

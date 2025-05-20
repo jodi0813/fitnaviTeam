@@ -84,10 +84,13 @@ function SearchSection() {
               <div className="home-search-dropdowns">
                 <div className="home-search-botton">
                   <div className="home-search-toggleBt">
-                    <button onClick={() => setSelectedRole("coach")}>
+                    <button  className={selectedRole === "coach" ? "selected" : ""}
+                    onClick={() => setSelectedRole("coach")}
+                      >
                       健身教練
                     </button>
-                    <button onClick={() => setSelectedRole("nutritionist")}>
+                    <button  className={selectedRole === "nutritionist" ? "selected" : ""}
+                    onClick={() => setSelectedRole("nutritionist")}>
                       營養師
                     </button>
                   </div>
@@ -112,11 +115,11 @@ function SearchSection() {
                   className="homeSearchBt"
                   onClick={() => {
                     if (!selectedRole) {
-                      alert("請先選擇職業類型");
+                      alert("請先選擇健身教練或營養師");
                       return;
                     }
                     if (!selectedTrainingNeed) {
-                      alert("請選擇訓練／諮詢需求");
+                      alert("請選擇訓練需求");
                       return;
                     }
                     navigate(

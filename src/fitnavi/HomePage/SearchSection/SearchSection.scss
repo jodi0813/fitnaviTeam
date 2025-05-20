@@ -106,20 +106,22 @@
             line-height: 140%;
             letter-spacing: 1.4px;
           }
+
           .home-search-botton {
             display: flex;
             flex-direction: column;
             gap: 29px;
+
             .home-search-toggleBt {
               display: flex;
               gap: 8px;
+
               button {
                 display: flex;
                 height: 40px;
                 padding: 12px 36px;
                 justify-content: center;
                 align-items: center;
-
                 flex: 1;
                 border-radius: 99px;
                 border: 1px solid #ff8740;
@@ -137,10 +139,19 @@
                   background: #ff8740;
                   color: #fff;
                   opacity: 1;
+                  outline: none;
+                }
+
+                &.selected {
+                  background: #ff8740;
+                  color: #fff;
+                  opacity: 1;
+                  outline: none;
                 }
               }
             }
           }
+
           .homeSearchBt {
             display: flex;
             height: 40px;
@@ -161,19 +172,23 @@
             font-weight: 700;
             line-height: normal;
             letter-spacing: 2px;
-             transition: all 0.15s ease-out;
+            transition: all 0.15s ease-out;
             .faSearch {
               margin-left: 8px;
               display: none;
             }
           }
+
           .homeSearchBt:hover {
             background-color: #fff;
             color: #ff8740;
             border: 2px solid #ff8740;
+            outline: none;
           }
+
           .homeSearchBt:hover .faSearch {
             display: inline-block;
+            outline: none;
           }
         }
       }
