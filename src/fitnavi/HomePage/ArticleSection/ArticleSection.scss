@@ -11,13 +11,13 @@
 
 @media (max-width: 1360px) {
     .ArticleSection-wrapper {
-      max-width: 70%;
-      margin-left: 0;
-      margin-right: 0;
+        max-width: 70%;
+        margin-left: 0;
+        margin-right: 0;
     }
-  }
+}
 
- 
+
 
 .ArticleSection-wrapper {
 
@@ -92,15 +92,15 @@
 
 .Hompagearticle-Chtitle {
     right: 10%;
-    top:  50%;
-    transform: translateY(-100%); 
+    top: 50%;
+    transform: translateY(-100%);
     position: relative;
     display: flex;
     flex-direction: column;
 
     @media (max-width: 1360px) {
         right: 5%;
-       
+
     }
 
 
@@ -130,12 +130,19 @@
 
         color: var(--white, var(--white, #FEFCF7));
         text-align: center;
-        font-family: ""Noto Sans TC", sans-serif; Sans TC", sans-serif;
+        font-family: "" Noto Sans TC", sans-serif; Sans TC", sans-serif;
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
         letter-spacing: 2.4px;
         white-space: nowrap;
+
+        &:focus,
+        &:focus-visible,
+        &:hover {
+            outline: none;
+            border: none;
+        }
     }
 }

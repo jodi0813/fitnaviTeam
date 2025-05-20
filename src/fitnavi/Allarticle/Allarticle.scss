@@ -85,6 +85,9 @@
             font-style: normal;
             font-weight: 700;
             line-height: 150%;
+
+            border: none;
+            outline: none;
         }
 
     }
@@ -126,7 +129,13 @@
         }
 
 
-
+        &:focus,
+        &:focus-visible,
+        &:active,
+        &:hover {
+            border: none;
+            outline: none;
+        }
     }
 
     .ClickSearch-Button {
@@ -240,7 +249,7 @@
 
         .cat-tag-title {
             p {
-                margin-bottom: 15px;
+                margin-bottom: 5px;
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
@@ -256,10 +265,13 @@
         }
 
         .Cat-name {
-            margin-top: 20%;
+            // margin-top: 2%;
 
             button {
+                height: 40px;
+                bottom: 5px;
                 color: var(--dark, #3A2C19);
+                background-color: transparent;
                 /* heading/標題4/medium */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 20px;
@@ -268,11 +280,21 @@
                 line-height: 40px;
                 /* 200% */
                 letter-spacing: 0.4px;
+                border: none;
+                outline: none;
 
                 &:hover {
 
                     color: var(--primary, var(--primary, #FF8740));
                     cursor: pointer;
+                    border: none;
+                    outline: none;
+                }
+
+                &:focus,
+                &:focus-visible {
+                    outline: none;
+                    border: none;
                 }
             }
 
@@ -291,11 +313,11 @@
         }
 
         .Tag {
-            margin-top: 50%;
+            margin-top: 30%;
 
             .TagName {
-                gap: 15px;
-                margin-bottom: 30px;
+
+                margin-bottom: 10px;
 
                 h4 {
                     color: var(--dark, #3A2C19);

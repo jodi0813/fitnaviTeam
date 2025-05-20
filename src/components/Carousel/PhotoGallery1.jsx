@@ -146,6 +146,7 @@ export default function PhotoGallery() {
               style={{
                 background: "none",
                 border: "none",
+                outline:"none",
                 padding: 0,
                 width: 10,
                 height: 10,

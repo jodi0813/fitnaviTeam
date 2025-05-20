@@ -59,6 +59,8 @@
             line-height: 150%;
             /* 24px */
             letter-spacing: 1.6px;
+
+
         }
 
         input {
@@ -78,7 +80,14 @@
                 line-height: 140%;
                 /* 19.6px */
                 letter-spacing: 1.4px;
-                padding-left: 5px;
+                padding-left: 10px;
+            }
+
+            &:focus {
+                outline: none;
+                border-radius: 10px;
+                border: 2px solid var(--primary, #FF8740);
+                box-shadow: 1px 2px 4px 0px rgba(58, 44, 25, 0.20);
             }
         }
 
@@ -87,7 +96,7 @@
             width: 200px;
             height: 40px;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
             margin-top: 20px;
@@ -106,9 +115,42 @@
             color: var(--primary, var(--primary, #FF8740));
             border: 1px solid var(--primary, #FF8740);
 
+            img {
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                left: 52%;
+                top:59%;
+                opacity: 0;
+                transform: translateX(10px); // 預設略偏右
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
             &:hover {
-                background: var(--primary, #FF8740);
-                color: var(--white, var(--white, #FEFCF7));
+
+                justify-content: center;
+                align-items: center;
+                border-radius: 999px;
+                border: 1px solid var(--primary, #FF8740);
+                background: var(--white, #FEFCF7);
+
+                .login-text {
+                    transform: translateX(-10px); // 文字左滑
+                    color: var(--primary, var(--primary, #FF8740));
+                    text-align: center;
+                    /* heading/標題4/Bold */
+                    font-family: "Noto Sans TC";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 2px;
+                }
+
+                img {
+                    opacity: 1;
+                    transform: translateX(0); // icon 滑進來
+                }
             }
 
         }
@@ -136,6 +178,19 @@
             /* 24px */
             letter-spacing: 1.6px;
             padding: 0px;
+
+            &:hover {
+                border: none;
+                outline: none;
+            }
+        }
+
+        .MemberLogin-forgetpassword {
+            color: #FF8740;
+        }
+
+        span {
+            color: #FF8740;
         }
     }
 }
