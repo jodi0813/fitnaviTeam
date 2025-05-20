@@ -197,7 +197,7 @@ function NutriIntro() {
                     breadcrumbList={[
                         { label: "首頁", link: "/" },
                         { label: "營養師", link: "/Nutritionist" },
-                        { label: "張俐筠 Lila" },
+                        { label: "安娜 Anna" },
                     ]}
                 />
 
@@ -549,9 +549,10 @@ function NutriIntro() {
 
                 </section>
 
-                <section id="Nutri-comment">
-                    <div className="Nutri-comment-wrapper">
-                        <div className="commentitle">
+
+                <div className="Nutri-comment-wrapper">
+                    <div id="Nutri-comment">
+                        <div className="Nutricommentitle">
                             <h3>學員評價</h3>
                             <h4>Rating</h4>
                         </div>
@@ -607,12 +608,21 @@ function NutriIntro() {
 
                         </div>
 
-
+                        <div className="seeMoreComment">
+                            <button>
+                                <span className="seeMore-text">查看更多評價</span>
+                                <img src="/images/search.svg" alt="" />
+                            </button>
+                        </div>
                     </div>
 
 
 
-                </section >
+                </div>
+
+
+
+
             </main >
 
         </>
