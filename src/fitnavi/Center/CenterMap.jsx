@@ -40,21 +40,21 @@ function CenterMap() {
       city: "台北市",
       area: "大安區",
       features: ["重訓器材", "有氧器材", "淋浴間", "女性專區"],
-      img: "./images/center.jpg",
+      img: "./images/center2.jpg",
     },
     {
       name: "黃金gym(師大館)",
       city: "台北市",
       area: "大安區",
       features: ["重訓器材", "有氧器材", "24小時營業"],
-      img: "./images/center.jpg",
+      img: "./images/center3.jpg",
     },
     {
       name: "NITEGym(師大館)",
       city: "台北市",
       area: "大安區",
       features: ["重訓器材", "有氧器材", "淋浴間"],
-      img: "./images/center.jpg",
+      img: "./images/center4.jpg",
     },
   ];
 
