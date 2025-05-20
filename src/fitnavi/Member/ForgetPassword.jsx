@@ -3,7 +3,7 @@ import "./ForgetPassword.scss";
 import { useNavigate } from 'react-router-dom';
 
 function ForgetPassword() {
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     return (
         <>
             <section className="ForgetPassword">
@@ -13,12 +13,14 @@ function ForgetPassword() {
                     <div className='KeyinEmail'>
                         <label htmlFor="">Email</label>
                         <input type="text" />
-                        <button>寄送驗證信</button>
+                        <button>
+                            <span className="email-text">寄送驗證信</span>
+                            <img src="/images/search.svg" alt="" /></button>
                     </div>
 
                     <div className='ForgetPassword-option'>
                         {/* <button className="Alreadyhavepassword">已經有帳號？</button> */}
-                        <button className="Returntologin" onClick={()=>navigate('/MemberLogin')}>已經有帳號？回到登入頁面</button>
+                        <button className="Returntologin" onClick={() => navigate('/MemberLogin')}>已經有帳號？回到登入頁面</button>
                     </div>
 
 

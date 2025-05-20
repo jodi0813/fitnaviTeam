@@ -26,7 +26,7 @@ function Article() {
 
                 {/* <!-- banner區域 --> */}
                 <section className="article-banner">
-                    <button className="backbutton">返回列表</button>
+
                     <div className="article-content">
                         <div className="article-bannercontent">
                             <p>營養調配</p>

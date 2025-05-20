@@ -30,12 +30,16 @@
     border: 0.8px solid var(--dark, #3A2C19);
 
 
+
+
     .MemberSignup-form {
 
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+
+
 
 
         .MemberSignup-title {
@@ -93,6 +97,15 @@
                     border-radius: 10px;
                     border: 0.6px solid var(--dark, #3A2C19);
                     background: #FFF;
+
+                    &:focus {
+                        border-radius: 999px;
+                        border: 2px solid var(--primary, #FF8740);
+                        background: #FFF;
+                        box-shadow: 1px 2px 4px 0px rgba(58, 44, 25, 0.20);
+                        outline: none;
+                        border-radius: 10px;
+                    }
                 }
             }
 
@@ -121,6 +134,15 @@
                     border-radius: 10px;
                     border: 0.6px solid var(--dark, #3A2C19);
                     background: #FFF;
+
+                    &:focus {
+                        border-radius: 999px;
+                        border: 2px solid var(--primary, #FF8740);
+                        background: #FFF;
+                        box-shadow: 1px 2px 4px 0px rgba(58, 44, 25, 0.20);
+                        outline: none;
+                        border-radius: 10px;
+                    }
                 }
             }
 
@@ -182,54 +204,39 @@
                         font-weight: 700;
                         line-height: 150%;
                         /* 27px */
+                        outline: none;
+
                     }
 
+                    button.active {
+                        border: none;
+                        outline: none;
+                        border-radius: 99px;
+                        background: #FF8740;
+                        color: var(--white, var(--white, #FEFCF7));
+                        text-align: center;
+                        font-family: "Noto Sans TC";
+                        font-size: var(--fontsize-H3, 18px);
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 150%;
+                        /* 27px */
+                    }
                 }
-
-
 
             }
-
-            .KeyinTel {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                gap: 10px;
-                margin-left: 0px;
-
-                label {
-                    color: var(--dark, #3A2C19);
-                    /* 段落/16 */
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 150%;
-                    /* 24px */
-                    letter-spacing: 1.6px;
-                }
-
-                input {
-                    width: 400px;
-                    height: 40px;
-                    border-radius: 10px;
-                    border: 0.6px solid var(--dark, #3A2C19);
-                    background: #FFF;
-                }
-            }
-
-
 
 
 
         }
 
-        .KeyinBirthday {
-            margin-top: 10px;
+        .KeyinTel {
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
             gap: 10px;
+            margin-left: 0px;
 
             label {
                 color: var(--dark, #3A2C19);
@@ -249,125 +256,210 @@
                 border-radius: 10px;
                 border: 0.6px solid var(--dark, #3A2C19);
                 background: #FFF;
-            }
 
-        }
-
-        .TermsNext {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-self: center;
-            margin-top: 40px;
-            margin-bottom: 50PX;
-
-            span {
-                color: var(--gray, #989794);
-                /* 段落/14 */
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                /* 19.6px */
-                letter-spacing: 1.4px;
-            }
-
-            span.serviceterm,
-            span.privateterm {
-                color: var(--gray, #989794);
-                /* 段落/14 */
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                letter-spacing: 1.4px;
-                text-decoration-line: underline;
-                text-decoration-style: solid;
-                text-decoration-skip-ink: auto;
-                text-decoration-thickness: auto;
-                text-underline-offset: 50%;
-                text-underline-position: from-font;
-
+                &:focus {
+                    border-radius: 999px;
+                    border: 2px solid var(--primary, #FF8740);
+                    background: #FFF;
+                    box-shadow: 1px 2px 4px 0px rgba(58, 44, 25, 0.20);
+                    outline: none;
+                    border-radius: 10px;
+                }
             }
         }
 
-        .Signup-button {
-            align-self: center;
 
-            button {
-                border-radius: 999px;
-                background: var(--primary, #FF8740);
-                display: flex;
-                flex-direction: row;
-                width: 200px;
-                height: 40px;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-
-                color: var(--white, var(--white, #FEFCF7));
-                text-align: center;
-                /* heading/標題4/Bold */
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-                letter-spacing: 2px;
-            }
-
-        }
-
-        .MemberSignup-option {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 200px;
-            width: 100%;
-
-
-            button {
-                color: var(--dark, #3A2C19);
-                /* 段落/16 */
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 150%;
-                /* 24px */
-                letter-spacing: 1.6px;
-                border: none;
-                margin-bottom: 10px;
-            }
-
-            button:hover,
-            button:focus {
-                outline: 1px solid #3A2C19; 
-              
-            }
-        }
 
 
 
     }
 
+    .KeyinBirthday {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        label {
+            color: var(--dark, #3A2C19);
+            /* 段落/16 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+            /* 24px */
+            letter-spacing: 1.6px;
+        }
+
+        input {
+            width: 400px;
+            height: 40px;
+            border-radius: 10px;
+            border: 0.6px solid var(--dark, #3A2C19);
+            background: #FFF;
+
+            &:focus {
+                border-radius: 999px;
+                border: 2px solid var(--primary, #FF8740);
+                background: #FFF;
+                box-shadow: 1px 2px 4px 0px rgba(58, 44, 25, 0.20);
+                outline: none;
+                border-radius: 10px;
+            }
+        }
+
+    }
+
+    .TermsNext {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+        margin-top: 40px;
+        margin-bottom: 50PX;
+
+        span {
+            color: var(--gray, #989794);
+            /* 段落/14 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+        }
+
+        span.serviceterm,
+        span.privateterm {
+            color: var(--gray, #989794);
+            /* 段落/14 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            letter-spacing: 1.4px;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: auto;
+            text-decoration-thickness: auto;
+            text-underline-offset: 50%;
+            text-underline-position: from-font;
+
+        }
+    }
+
+    .Signup-button {
+        align-self: center;
+
+        button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-radius: 999px;
+            background: var(--primary, #FF8740);
+            display: flex;
+            flex-direction: row;
+            width: 200px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            color: var(--white, var(--white, #FEFCF7));
+            text-align: center;
+            /* heading/標題4/Bold */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 2px;
+
+            img {
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                left: 52%;
+                top: 80%;
+                opacity: 0;
+                transform: translateX(10px); // 預設略偏右
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+            &:hover {
+
+                justify-content: center;
+                align-items: center;
+                border-radius: 999px;
+                border: 1px solid var(--primary, #FF8740);
+                background: var(--white, #FEFCF7);
+
+                .Signup-text {
+                    transform: translateX(-10px); // 文字左滑
+                    color: var(--primary, var(--primary, #FF8740));
+                    text-align: center;
+                    /* heading/標題4/Bold */
+                    font-family: "Noto Sans TC";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 2px;
+                }
+
+                img {
+                    opacity: 1;
+                    transform: translateX(0); // icon 滑進來
+                }
+            }
+
+        }
+
+    }
+
+    .MemberSignup-option {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 200px;
+        width: 100%;
 
 
+        button {
+            background-color: transparent;
+            color: var(--dark, #3A2C19);
+            /* 段落/16 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+            /* 24px */
+            letter-spacing: 1.6px;
+            border: none;
+            margin-bottom: 10px;
+
+            span {
+                color: #FF8740;
+            }
+
+            &:hover,
+            &:focus,
+            &:focus-visible {
+                border: none;
+                outline: none;
+
+            }
+        }
 
 
-
-
-
-
-
-
-
-
-
+    }
 
 
 
