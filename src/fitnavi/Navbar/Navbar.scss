@@ -11,9 +11,10 @@
 }
 
 .container {
-  max-width: calc(100% - 240px);
-  /* 左右各120px */
+ width: 100%;
+  max-width: 1200px; // 上限寬度給桌機用
   margin: 0 auto;
+  padding: 0 24px; // 左右空間用 padding 做
 
   @media (max-width: 393px) {
     max-width: 100%;
@@ -51,7 +52,7 @@
 
     @media (max-width: 393px) {
       display: flex;
-      width: 393px;
+      width: 100%;
       padding: 4px 20px;
       justify-content: space-between;
       align-items: center;
