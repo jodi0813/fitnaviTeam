@@ -157,9 +157,9 @@
         white-space: nowrap;
         cursor: pointer;
 
-        .text-search {
-            transition: transform 0.3s ease; // 修正這裡的語法
-        }
+        // .text-search {
+        //     transition: transform 0.3s ease; // 修正這裡的語法
+        // }
 
         img {
             width: 24px;
@@ -167,7 +167,7 @@
             position: absolute;
             right: 100px;
             opacity: 0;
-            transform: translateX(10px); // 預設略偏右
+            // transform: translateX(10px); // 預設略偏右
             transition: opacity 0.3s ease, transform 0.3s ease;
         }
 
@@ -193,15 +193,17 @@
                 font-weight: 700;
                 line-height: normal;
                 letter-spacing: 2px;
+                transition: opacity 0.3s ease, transform 0.3s ease;
             }
 
             img {
                 opacity: 1;
-                transform: translateX(0); // icon 滑進來
+                // transform: translateX(0); // icon 滑進來
             }
         }
 
         &:active {
+            outline: none;
             .text-search {
                 color: var(--primary, var(--primary, #FF8740));
                 text-align: center;
@@ -219,6 +221,12 @@
                 width: 18px;
                 height: 18px;
             }
+        }
+
+        &:focus,
+        &:focus-visible {
+            border:1px solid #FF8740;
+            outline: none;
         }
 
 

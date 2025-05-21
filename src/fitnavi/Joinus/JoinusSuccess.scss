@@ -116,6 +116,11 @@
                 /* 19.6px */
                 letter-spacing: 1.4px;
             }
+
+            &:active{
+                outline: none;
+                border:1px solid #FF8740;
+            }
         }
 
 

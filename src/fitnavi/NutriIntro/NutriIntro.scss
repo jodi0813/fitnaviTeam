@@ -376,15 +376,19 @@
                                     font-weight: 700;
                                     line-height: normal;
                                     letter-spacing: 2px;
+                                    transition: opacity 0.3s ease, transform 0.3s ease;
                                 }
 
                                 img {
                                     opacity: 1;
-                                    transform: translateX(0); // icon 滑進來
+                                    transition: opacity 0.3s ease, transform 0.3s ease;
+                                    // transform: translateX(0); // icon 滑進來
                                 }
                             }
 
                             &:active {
+                                outline: none;
+
                                 .Nutriclassinrto-text {
                                     color: var(--primary, var(--primary, #FF8740));
                                     text-align: center;
@@ -1599,7 +1603,7 @@
                 }
 
 
-            
+
 
 
 
@@ -1703,7 +1707,7 @@
                         left: 65%;
                         top: 30%;
                         opacity: 0;
-                        transform: translateX(10px); // 預設略偏右
+                        // transform: translateX(10px); // 預設略偏右
                         transition: opacity 0.3s ease, transform 0.3s ease;
                     }
 
@@ -1726,14 +1730,43 @@
                             font-weight: 700;
                             line-height: normal;
                             letter-spacing: 2px;
+                            transition: opacity 0.3s ease, transform 0.3s ease;
                         }
 
                         img {
                             opacity: 1;
-                            transform: translateX(0); // icon 滑進來
+                            // transform: translateX(0); // icon 滑進來
                         }
                     }
 
+                  
+                    &:focus,
+                    &:focus-visible {
+                        border: 1px solid #FF8740;
+                        outline: none;
+                    }
+
+                    &:active {
+                        outline: none;
+
+                        .seeMore-text {
+                            color: var(--primary, var(--primary, #FF8740));
+                            text-align: center;
+                            /* 段落/16 */
+                            font-family: "Noto Sans TC";
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 150%;
+                            /* 24px */
+                            letter-spacing: 1.6px;
+                        }
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
                 }
             }
 
