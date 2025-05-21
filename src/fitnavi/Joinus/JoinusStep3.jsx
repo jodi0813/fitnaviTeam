@@ -1,15 +1,27 @@
 import React from 'react';
 import "./JoinusStep3.scss";
-import { useNavigate } from 'react-router-dom';
-import MainTitle from "../../components/Title/MainTitle";
+// import { useNavigate } from 'react-router-dom';
+// import MainTitle from "../../components/Title/MainTitle";
 
 function JoinusStep3() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
+
+    const handleNext = () => {
+        if (step < 3) {
+            setStep(step + 1);
+        }
+    };
+
+    const handlePre = () => {
+        if (step > 0) {
+            setStep(step - 1);
+        }
+    };
     return (
         <>
 
         <section id='JoinusStep3-Form'>
-             <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
+             {/* <MainTitle title1="加入我們" title2="成為我們的合作夥伴" /> */}
         
 
 
@@ -128,8 +140,8 @@ function JoinusStep3() {
                     </div>
 
                     <div className='Step3-NextPreButton'>
-                        <button className='Pre-button' onClick={()=>{navigate('/JoinusStep2');window.scrollTo(0, 0);}} >◀ 上一步</button>
-                        <button className='Next-button' onClick={()=>{navigate('/JoinusStep4');window.scrollTo(0, 0);}}>下一步 ▶</button>
+                        <button className='Pre-button' onClick={handlePre} >◀ 上一步</button>
+                        <button className='Next-button' onClick={handleNext}>下一步 ▶</button>
                     </div>
                 </form>
 

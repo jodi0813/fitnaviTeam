@@ -1,21 +1,28 @@
 import React from 'react';
 import "./JoinusStep2.scss";
-import { useNavigate } from 'react-router-dom';
-import MainTitle from "../../components/Title/MainTitle";
+// import { useNavigate } from 'react-router-dom';
+// import MainTitle from "../../components/Title/MainTitle";
 
-function JoinusStep2() {
-    const navigate = useNavigate();
+function JoinusStep2({onNext,onPre}) {
+    // const navigate = useNavigate();
+
 
     return (
         <>
             <section id='JoinusStep2-Form'>
-                <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
+                {/* <MainTitle title1="加入我們" title2="成為我們的合作夥伴" /> */}
 
 
                 <div className='CoachJoinus-Step2-wrapper'>
 
 
-                    <form action="" className='CoachJoinus-Step2'>
+                    <form action="" className='CoachJoinus-Step2'
+                    onSubmit={(e) => {
+                        e.preventDefault(); // 防止頁面重新整理
+                        onNext();
+                        onPre();           // 切換到下一步
+                        window.scrollTo(0, 0); // 捲動到最上方（可選）
+                      }}>
                         <div className='JoinusStep2-header'>
                             <div className='Step2-title'>
                                 <h4>專長</h4>
@@ -153,8 +160,8 @@ function JoinusStep2() {
                         </fieldset>
 
                         <div className='NextPreButton'>
-                            <button onClick={() => { navigate('/JoinusStep1'); window.scrollTo(0, 0); }} >◀ 上一步</button>
-                            <button onClick={() => { navigate('/JoinusStep3'); window.scrollTo(0, 0); }}>下一步 ▶</button>
+                            <button onClick={onPre} >◀ 上一步</button>
+                            <button onClick={onNext}>下一步 ▶</button>
                         </div>
 
 

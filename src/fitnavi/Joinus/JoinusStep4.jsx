@@ -14,7 +14,7 @@ function JoinusStep4() {
 
             <section id='JoinusStep4-Form'>
 
-                <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
+                {/* <MainTitle title1="加入我們" title2="成為我們的合作夥伴" /> */}
 
 
 

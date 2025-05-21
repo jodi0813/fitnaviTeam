@@ -17,6 +17,7 @@ import PopupWindow4 from "./CoachIntro/PopupWindow/PopupWindow4";
 import Footer from "./Footer/Footer";
 import MemberList from "./Dashboard/UserDashboard/MemberList";
 import Joinus from "./Joinus/Joinus";
+import JoinusCarousel from "./Joinus/JoinusCarousel/JoinusCarousel"
 import JoinusStep1 from "./Joinus/JoinusStep1";
 import JoinusStep2 from "./Joinus/JoinusStep2";
 import JoinusStep3 from "./Joinus/JoinusStep3";
@@ -69,6 +70,7 @@ function App() {
           <Route path="/SignupSuccess" element={<SignupSuccess />}></Route>
           <Route path="/CoachDashboardList" element={<CoachDashboardList/>}></Route>
           <Route path="/Joinus" element={<Joinus />}></Route>
+          <Route path="/JoinusCarousel" element={<JoinusCarousel/>}></Route>
           <Route path="/JoinusStep1/" element={<JoinusStep1/>} />
           <Route path="/JoinusStep2" element={<JoinusStep2 />} />
           <Route path="/JoinusStep3" element={<JoinusStep3 />} />
