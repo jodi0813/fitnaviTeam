@@ -1,8 +1,27 @@
+// CenterMap.jsx
+import { useState, useEffect, useRef } from "react";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
 import "./CenterMap.scss";
 import MainTitle from "../../components/Title/MainTitle";
 import { cities, taipeiDistricts } from "../../data/locations";
+
+// 解決圖釘圖示載入問題
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
+});
+
+function FlyToLocation({ position }) {
+  const map = useMap();
+  useEffect(() => {
+    if (position) map.flyTo(position, 15);
+  }, [position]);
+  return null;
+}
 
 function CenterMap() {
   const location = useLocation();
@@ -16,6 +35,8 @@ function CenterMap() {
 
   const [filteredResults, setFilteredResults] = useState([]);
   const [activeGymIndex, setActiveGymIndex] = useState(null);
+  const [activeLatLng, setActiveLatLng] = useState(null);
+  const popupRefs = useRef([]);
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -35,7 +56,7 @@ function CenterMap() {
       area: "大安區",
       features: ["重訓器材", "有氧器材", "淋浴間", "24小時營業", "靠近捷運站"],
       img: "./images/center.jpg",
-      mapPos: { left: "53%", top: "30%" }, // 手動對照地圖位置
+      latlng: [25.0418, 121.535],
     },
     {
       name: "日初健身(大安館)",
@@ -43,7 +64,7 @@ function CenterMap() {
       area: "大安區",
       features: ["重訓器材", "有氧器材", "淋浴間", "女性專區"],
       img: "./images/center2.jpg",
-      mapPos: { left: "79%", top: "40%" },
+      latlng: [25.0265, 121.5412],
     },
     {
       name: "黃金gym(師大館)",
@@ -51,7 +72,7 @@ function CenterMap() {
       area: "大安區",
       features: ["重訓器材", "有氧器材", "24小時營業"],
       img: "./images/center3.jpg",
-      mapPos: { left: "43%", top: "47%" },
+      latlng: [25.0269, 121.5283],
     },
     {
       name: "NITEGym(師大館)",
@@ -59,7 +80,31 @@ function CenterMap() {
       area: "大安區",
       features: ["重訓器材", "有氧器材", "淋浴間"],
       img: "./images/center4.jpg",
-      mapPos: { left: "71%", top: "62%" },
+      latlng: [25.0335, 121.5651],
+    },
+    {
+      name: "野獸工廠(台中館)",
+      city: "台中市",
+      area: "西區",
+      features: ["重訓器材", "月費"],
+      img: "./images/center5.jpg",
+      latlng: [24.1637, 120.6476],
+    },
+    {
+      name: "肌肉星球(高雄館)",
+      city: "高雄市",
+      area: "左營區",
+      features: ["重訓器材", "飛輪"],
+      img: "./images/center6.jpg",
+      latlng: [22.6307, 120.3014],
+    },
+    {
+      name: "汗水俱樂部(新竹館)",
+      city: "新竹市",
+      area: "東區",
+      features: ["有氧器材", "私人教練"],
+      img: "./images/center7.jpg",
+      latlng: [24.8047, 120.9714],
     },
   ];
 
@@ -110,9 +155,19 @@ function CenterMap() {
   };
 
   useEffect(() => {
-    setFilteredResults(gyms); // 預設顯示所有
+    setFilteredResults(gyms);
   }, []);
-
+  useEffect(() => {
+    popupRefs.current.forEach((ref, i) => {
+      if (ref) {
+        if (i === activeGymIndex) {
+          ref.openPopup();
+        } else {
+          ref.closePopup();
+        }
+      }
+    });
+  }, [activeGymIndex]);
   return (
     <div id="centerMapMain">
       <MainTitle title1="找場地" title2="找到專屬你的健身場地" />
@@ -183,57 +238,60 @@ function CenterMap() {
               搜尋
             </button>
           </form>
-        </div>
-
-        <div className="centerResultPhoto">
-          <div className="photosNumber">
-            共有 <span>{filteredResults.length}</span> 間符合條件的場館
-          </div>
-
-          {filteredResults.map((gym, i) => (
-            <div
-              className="gymCard"
-              key={i}
-              onClick={() => setActiveGymIndex(i)}
-            >
-              <img src={gym.img} alt={gym.name} className="centerPic" />
-              <div className="gymCardText">
-                <h3>{gym.name}</h3>
-                <p>{gym.features.map((f) => `#${f}`).join(" ")}</p>
-              </div>
+          <div className="centerResultPhoto">
+            <div className="photosNumber">
+              共有 <span>{filteredResults.length}</span> 間符合條件的場館
             </div>
-          ))}
+
+            {filteredResults.map((gym, i) => (
+              <div
+                className="gymCard"
+                key={i}
+                onClick={() => {
+                  setActiveGymIndex(i);
+                  setActiveLatLng(gym.latlng);
+                }}
+              >
+                <img src={gym.img} alt={gym.name} className="centerPic" />
+                <div className="gymCardText">
+                  <h3>{gym.name}</h3>
+                  <p>{gym.features.map((f) => `#${f}`).join(" ")}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="mapPhotos">
-          <img
-            src="/images/mapicon.jpg"
-            alt="地圖示意圖"
-            className="centerMapPhoto"
-          />
-          {filteredResults.map((gym, i) => (
-            <div
-              className={`mapMarker ${activeGymIndex === i ? "active" : ""}`}
-              style={{
-                position: "absolute",
-                top: gym.mapPos.top,
-                left: gym.mapPos.left,
-                transform: "translate(-50%, -100%)",
-              }}
-            >
-              {activeGymIndex === i && (
-                <div className="mapTooltip">
-                  <Link to="/center">
-                    <img src={gym.img} alt={gym.name} />
-                    <p>{gym.name}</p>
-                  </Link>
-                </div>
-              )}
-              <div className="pin">
-                <img src="/images/landmark.png" alt="" />
-              </div>
-            </div>
-          ))}
+          <MapContainer
+            center={[25.033, 121.5654]}
+            zoom={13}
+            style={{ width: "100%", height: "600px" }}
+          >
+            <TileLayer
+              attribution="© OpenStreetMap"
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+
+            {filteredResults.map((gym, i) => (
+              <Marker
+                key={i}
+                position={gym.latlng}
+                ref={(ref) => (popupRefs.current[i] = ref)}
+              >
+                <Popup>
+                  <div className="mapPopup">
+                    <Link to="/center">
+                      <img src={gym.img} alt={gym.name} width="100" />
+                      <p>{gym.name}</p>
+                    </Link>
+                  </div>
+                </Popup>
+              </Marker>
+            ))}
+
+            <FlyToLocation position={activeLatLng} />
+          </MapContainer>
         </div>
       </div>
     </div>
