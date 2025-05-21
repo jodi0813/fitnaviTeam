@@ -59,7 +59,7 @@ export default function PopupWindow1({ onClose, onNext }) {
                                             <span className="price">{plan.price}</span>
                                         </div>
                                         <button
-                                            className={clickedPlans[plan.name] ? 'selected-button' : 'select-btn'}
+                                            className={clickedPlans[plan.name] ? 'selected-btn' : 'select-btn'}
                                             onClick={() => handleClick(plan.name)} // 切換選中的狀態
                                         >
                                             {clickedPlans[plan.name] ? <img src="/images/check.svg" alt="check" /> : '選擇'}
