@@ -64,21 +64,20 @@
         overflow: hidden;
 
         .card {
-            //動畫的緩動函數cubic-bezier
-            transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.7s;
-            will-change: transform, opacity;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            transform: translate(200%, -30%) scale(0.95); // 預設放在視口右外
+            transition: transform 0.5s ease, opacity 0.5s ease;
             opacity: 0.35;
             position: absolute;
-
             z-index: 1;
-
         }
 
         .card-center {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -30%) rotate(0deg);
-            // transform: translateX(0) rotate(0deg);
             opacity: 1;
             z-index: 2;
         }
@@ -86,7 +85,7 @@
         .card-left {
             top: 50%;
             left: 50%;
-            transform: translate(-200%, -10%)rotate(-10deg);
+            transform: translate(-200%, -10%) rotate(-10deg); // 預設位置
             opacity: 0.5;
             z-index: 1;
         }
@@ -94,14 +93,56 @@
         .card-right {
             top: 50%;
             left: 50%;
-            transform: translate(90%, -10%)rotate(10deg);
-            // transform: translateX(120%) rotate(10deg);
+            transform: translate(90%, -10%) rotate(10deg);
             opacity: 0.5;
             z-index: 1;
         }
 
         .card-hidden {
-            display: none;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        &.forward {
+            .card-left {
+                // 往左移動並消失，確保在 forward 時完全隱藏並移出視口
+                transform: translate(-300%, -30%) rotate(-10deg); // 從左移出
+                opacity: 0; // 完全透明
+                z-index: 0; // 在最底層，避免影響其他卡片
+            }
+
+            .card-center {
+                transform: translate(50%, -30%) rotate(0deg); // 往右移動
+                opacity: 0.35;
+                z-index: 1;
+            }
+
+            .card-right {
+                transform: translate(200%, -30%) rotate(10deg); // 往右移動
+                opacity: 0.35;
+                z-index: 2; // 置於最上層
+            }
+        }
+
+        &.backward {
+            .card-left {
+                transform: translate(-200%, -30%) rotate(-10deg); // 從左邊進入
+                opacity: 1; // 恢復可見
+                z-index: 2; // 層級較高，位於中央卡片下面
+            }
+
+            .card-center {
+                transform: translate(100%, -30%) rotate(0deg); // 往右移動
+                opacity: 0.35;
+                z-index: 1;
+            }
+
+            .card-right {
+                transform: translate(200%, -30%) rotate(10deg); // 往右移動
+                opacity: 0.35;
+                z-index: 0; // 最底層
+            }
         }
     }
 }

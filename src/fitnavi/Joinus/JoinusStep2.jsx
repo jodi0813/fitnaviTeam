@@ -19,8 +19,7 @@ function JoinusStep2({onNext,onPre}) {
                     <form action="" className='CoachJoinus-Step2'
                     onSubmit={(e) => {
                         e.preventDefault(); // 防止頁面重新整理
-                        onNext();
-                        onPre();           // 切換到下一步
+                                // 切換到下一步
                         window.scrollTo(0, 0); // 捲動到最上方（可選）
                       }}>
                         <div className='JoinusStep2-header'>
@@ -160,7 +159,7 @@ function JoinusStep2({onNext,onPre}) {
                         </fieldset>
 
                         <div className='NextPreButton'>
-                            <button onClick={onPre} >◀ 上一步</button>
+                            <button onClick={onPre}>◀ 上一步</button>
                             <button onClick={onNext}>下一步 ▶</button>
                         </div>
 

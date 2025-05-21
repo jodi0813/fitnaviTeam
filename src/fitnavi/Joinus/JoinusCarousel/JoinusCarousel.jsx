@@ -8,27 +8,42 @@ import { useState } from "react";
 
 export default function JoinusCarousel() {
     const [step, setStep] = useState(0);
+    const [direction, setDirection] = useState("forward"); // 新增方向
 
-    // 步驟卡片資料陣列
+    // 事件處理
+    const handleNext = () => {
+        if (step < 3) {
+            setDirection("forward");
+            setStep(s => s + 1);
+        }
+    };
+
+    const handlePrev = () => {
+        if (step > 0) {
+            setDirection("backward");
+            setStep(s => s - 1);
+        }
+    };
+
+    // 步驟卡片（每張都傳入 onNext / onPre）
     const steps = [
-        <JoinusStep1 onNext={() => setStep(step + 1)} />,
-        <JoinusStep2 onNext={() => setStep(step + 1)} onPre={() => setStep(step - 1)} />,
-        <JoinusStep3 onNext={() => setStep(step + 1)} onPre={() => setStep(step - 1)} />,
-        <JoinusStep4 onPre={() => setStep(step - 1)} />,
+        <JoinusStep1 onNext={handleNext} />,
+        <JoinusStep2 onNext={handleNext} onPre={handlePrev} />,
+        <JoinusStep3 onNext={handleNext} onPre={handlePrev} />,
+        <JoinusStep4 onPre={handlePrev} />,
     ];
 
     return (
-        <div className="carousel-wrapper">
+        <div className={`carousel-wrapper ${direction}`}>
             <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
 
             <div className="card-area">
                 {steps.map((card, idx) => {
                     let className = "card";
-                    //如果index=step，將scss card-center的類別家過去
                     if (idx === step) className += " card-center";
                     else if (idx === step - 1) className += " card-left";
                     else if (idx === step + 1) className += " card-right";
-                    else className += " card-hidden"; // 其他未顯示的卡片給 hidden 狀態
+                    else className += " card-hidden";
 
                     return (
                         <div className={className} key={idx}>

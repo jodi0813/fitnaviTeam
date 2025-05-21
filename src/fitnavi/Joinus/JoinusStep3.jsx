@@ -3,20 +3,10 @@ import "./JoinusStep3.scss";
 // import { useNavigate } from 'react-router-dom';
 // import MainTitle from "../../components/Title/MainTitle";
 
-function JoinusStep3() {
+function JoinusStep3({onNext,onPre}) {
     // const navigate = useNavigate();
 
-    const handleNext = () => {
-        if (step < 3) {
-            setStep(step + 1);
-        }
-    };
-
-    const handlePre = () => {
-        if (step > 0) {
-            setStep(step - 1);
-        }
-    };
+ 
     return (
         <>
 
@@ -26,7 +16,11 @@ function JoinusStep3() {
 
 
             <div className='CoachJoinus-Step3-wrapper'>
-                <form action="" className='CoachJoinus-Step3'>
+                <form action="" className='CoachJoinus-Step3'
+                onSubmit={(e) => {
+                    e.preventDefault(); // 防止頁面重新整理
+                    window.scrollTo(0, 0); // 捲動到最上方（可選）
+                  }}>
                     <div className='Coach-JoinusStep3-title'>
                         <div className='Step3-title'>
                             <h3>自我介紹</h3>
@@ -140,8 +134,8 @@ function JoinusStep3() {
                     </div>
 
                     <div className='Step3-NextPreButton'>
-                        <button className='Pre-button' onClick={handlePre} >◀ 上一步</button>
-                        <button className='Next-button' onClick={handleNext}>下一步 ▶</button>
+                        <button className='Pre-button' onClick={onPre} >◀ 上一步</button>
+                        <button className='Next-button' onClick={onNext}>下一步 ▶</button>
                     </div>
                 </form>
 
