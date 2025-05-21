@@ -10,7 +10,7 @@ export default function JoinusCarousel() {
     const [step, setStep] = useState(0);
     const [direction, setDirection] = useState("forward"); // 新增方向
 
-    // 事件處理
+    // 步驟往前往後，s是參數名稱可以自己定義，Updater function用來更新狀態
     const handleNext = () => {
         if (step < 3) {
             setDirection("forward");
@@ -25,13 +25,48 @@ export default function JoinusCarousel() {
         }
     };
 
+
+
+    //第四步驟
+    const [submit, setSubmit] = useState(false);
+    const handleSubmit = () => {
+        setSubmit(true);
+    };
+
     // 步驟卡片（每張都傳入 onNext / onPre）
     const steps = [
         <JoinusStep1 onNext={handleNext} />,
         <JoinusStep2 onNext={handleNext} onPre={handlePrev} />,
         <JoinusStep3 onNext={handleNext} onPre={handlePrev} />,
-        <JoinusStep4 onPre={handlePrev} />,
+        <JoinusStep4 onPre={handleSubmit} onSubmit={handleSubmit} />,
     ];
+
+
+    
+    if (submit==true) {
+        const cardList = [
+            <JoinusStep1 key="1" />,
+            <JoinusStep2 key="2" />,
+            <JoinusStep3 key="3" />,
+            <JoinusStep4 key="4" />,
+        ];
+        return (
+            <section id="JoinusStep4-Cards">
+                <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
+                <div className="JoinusStep4-container">
+                    <div className="Joinuscard-row">
+                        {cardList.map((card, i) => (
+                            <div className="card" key={i}>
+                                {card}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        );
+    }
+
+
 
     return (
         <div className={`carousel-wrapper ${direction}`}>

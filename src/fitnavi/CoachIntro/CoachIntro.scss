@@ -380,7 +380,7 @@
 
                             &:active {
                                 outline: none;
-                               
+
                                 .classinrto-text {
                                     color: var(--primary, var(--primary, #FF8740));
                                     text-align: center;
@@ -1233,16 +1233,20 @@
                     cursor: pointer;
                 }
 
+                .ViewArticles-left:hover,
                 .ViewArticles-left:focus,
                 .ViewArticles-left:focus-visible {
                     outline: none;
                     box-shadow: none;
+                    border: none;
                 }
 
+                .ViewArticles-right:hover,
                 .ViewArticles-right:focus,
                 .ViewArticles-right:focus-visible {
                     outline: none;
                     box-shadow: none;
+                    border: none;
                 }
 
                 .Three-classcards {
