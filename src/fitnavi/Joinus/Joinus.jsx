@@ -88,7 +88,7 @@ function Joinus() {
                             <p>🤝撰寫飲食知識文章或影片</p>
                         </form>
 
-                        <button className='imnutrionist-joinbutton'>
+                        <button className='imnutrionist-joinbutton' onClick={()=>navigate('/NutriJoinusCarousel')}>
                             <span>成為合作營養師</span>
                             <img src="/images/Polygon.svg" alt="" />
                         </button>

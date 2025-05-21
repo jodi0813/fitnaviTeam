@@ -1,20 +1,18 @@
 import React from 'react';
 import "./NutriJoinusStep2.scss";
-import { useNavigate } from 'react-router-dom';
-import MainTitle from "../../components/Title/MainTitle";
+// import { useNavigate } from 'react-router-dom';
+// import MainTitle from "../../components/Title/MainTitle";
 
-function NutriJoinusStep2() {
-    const navigate = useNavigate();
+function NutriJoinusStep2({onNext,onPre}) {
+    // const navigate = useNavigate();
 
     return (
         <>
             <section id='Nutri-JoinusStep2-Form'>
-                <MainTitle title1="營養師" title2="我是營養師" />
+                {/* <MainTitle title1="營養師" title2="我是營養師" /> */}
 
 
                 <div className='CoachJoinus-Step2-wrapper'>
-
-
                     <form action="" className='CoachJoinus-Step2'>
                         <div className='JoinusStep2-header'>
                             <div className='Step2-title'>
@@ -99,7 +97,7 @@ function NutriJoinusStep2() {
 
                                 <label className="checkbox-item">
                                     <input type="checkbox" name="option1" />
-                                   飲食療法
+                                    飲食療法
                                 </label>
                             </div>
                         </div>
@@ -153,8 +151,8 @@ function NutriJoinusStep2() {
                         </fieldset>
 
                         <div className='Nutri-NextPreButton'>
-                            <button onClick={() => { navigate('/JoinusStep1'); window.scrollTo(0, 0); }} >◀ 上一步</button>
-                            <button onClick={() => { navigate('/NutriJoinusStep3'); window.scrollTo(0, 0); }}>下一步 ▶</button>
+                            <button onClick={onPre}>◀ 上一步</button>
+                            <button onClick={onNext}>下一步 ▶</button>
                         </div>
 
 
@@ -162,11 +160,12 @@ function NutriJoinusStep2() {
 
 
                     </form>
-
-
-
-
                 </div>
+
+
+
+
+
             </section>
 
 

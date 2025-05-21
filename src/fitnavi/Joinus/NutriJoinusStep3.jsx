@@ -1,16 +1,16 @@
 import React from 'react';
 import "./NutriJoinusStep3.scss";
-import { useNavigate } from 'react-router-dom';
-import MainTitle from "../../components/Title/MainTitle";
+// import { useNavigate } from 'react-router-dom';
+// import MainTitle from "../../components/Title/MainTitle";
 
-function NutriJoinusStep3() {
+function NutriJoinusStep3({onNext,onPre}) {
 
-            const navigate = useNavigate();
+            // const navigate = useNavigate();
             return (
             <>
 
                 <section id='Nutri-JoinusStep3-Form'>
-                    <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
+                    {/* <MainTitle title1="加入我們" title2="成為我們的合作夥伴" /> */}
 
 
 
@@ -129,12 +129,12 @@ function NutriJoinusStep3() {
                             </div>
 
                             <div className='NutriStep3-NextPreButton'>
-                                <button className='Pre-button' onClick={() => { navigate('/NutriJoinusStep2'); window.scrollTo(0, 0); }} >◀ 上一步</button>
-                                <button className='Next-button' onClick={() => { navigate('/NutriJoinusStep4'); window.scrollTo(0, 0); }}>下一步 ▶</button>
+                                <button className='Pre-button' onClick={onPre} >◀ 上一步</button>
+                                <button className='Next-button' onClick={onNext}>下一步 ▶</button>
                             </div>
                         </form>
 
-                    </div>
+                    </div> 
 
                 </section>
 
