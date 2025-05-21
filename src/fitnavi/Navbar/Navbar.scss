@@ -85,8 +85,9 @@
 
     .menu {
       display: flex;
-      padding: 0px 25px;
-
+      // padding: 0px 25px;
+      width: 100%;
+justify-content: space-evenly;
       @media (max-width: 393px) {
         display: none; // 預設隱藏
 
