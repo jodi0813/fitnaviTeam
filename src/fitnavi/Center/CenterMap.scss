@@ -7,11 +7,12 @@
 
   .mapSearchAll {
     display: flex;
-    gap: 8px;
-
+    gap: 2%;
+    overflow-x: hidden;
+    max-width: 100%; // 防止地圖撐破
     .mapSearchLeft {
       display: flex;
-      width: 20%;
+      // width: 20%;
       justify-content: center;
 
       #center-search-form {
@@ -108,7 +109,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 30%;
+      width: 50%;
       gap: 12px;
       overflow: auto; //卷軸
       height: 670px;
@@ -132,11 +133,12 @@
 
       .gymCard {
         position: relative;
-
+        cursor: pointer;
         .centerPic {
           width: 287px;
           height: 162px;
           overflow: crop;
+          border-radius: 8px;
         }
 
         .gymCardText {
@@ -162,11 +164,82 @@
 
     .mapPhotos {
       width: 50%;
+      position: relative;
+      overflow: hidden;
+      .mapPopup {
+        border: 5px silver #ff8740;
+        p {
+          margin: 4px 0 0;
+          font-weight: bold;
+          color: #3a2c19;
+          font-family: Alata;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        img {
+          width: 100%;
+          // height: 80px;
+          // object-fit: cover;
+          // border-radius: 4px;
+        }
+      }
+      .leaflet-container {
+        width: 100%;
+        height: 600px;
+        border-radius: 16px;
+      }
 
       .centerMapPhoto {
         border-radius: 16px;
         height: 80%;
         padding-left: 10%;
+      }
+      .mapMarker {
+        position: absolute;
+        transform: translate(-50%, -100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 5;
+
+        .pin {
+          font-size: 24px;
+          line-height: 1;
+        }
+
+        .mapTooltip {
+          position: relative;
+          bottom: 8px; // ✅ 這行讓圖片框往上浮，離開圖釘
+          width: 160px;
+          background: #fff;
+          border: 5px solid #ff8740;
+          border-radius: 8px;
+          padding: 4px;
+          text-align: center;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          z-index: 10;
+
+          img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+          }
+
+          p {
+            margin: 4px 0 0;
+            font-weight: bold;
+            color: #3a2c19;
+            font-family: Alata;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
       }
     }
   }
