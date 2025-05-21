@@ -69,10 +69,6 @@
         font-weight: 700;
         color: #FEFCF7;
 
-        // &:active{
-        //     outline: none;
-        // }
-
     }
 
     // 返回按鈕、回首頁按鈕
@@ -192,27 +188,12 @@
                     .select-btn {
                         width: 90px;
                         height: 40px;
-                        padding: 8px 24px;
-                        justify-content: center;
-                        align-items: center;
                         background-color: #FEFCF7;
                         border: 1px solid #FF8740;
                         border-radius: 999px;
                         font-size: 1rem;
                         font-weight: 700;
                         color: #FF8740;
-
-                        &:hover {
-                            display: inline-flex;
-                            height: 40px;
-                            padding: 8px 24px;
-                            justify-content: center;
-                            align-items: center;
-                            border-radius: 999px;
-                            border: 4px solid var(--primary, #FF8740);
-                            outline: none;
-                        }
-
                     }
                 }
 
@@ -234,37 +215,18 @@
     padding-left: 0 !important;
     margin-left: 0 !important;
     list-style: none;
-    width: 540px; // 或你想要的寬度
-}
-
-.plan-list li,
-.plan-list .first-experience {
+    width: 540px;  // 或你想要的寬度
+  }
+  
+  .plan-list li,
+  .plan-list .first-experience {
     margin-left: 0 !important;
     padding-left: 0 !important;
     box-sizing: border-box;
-}
+  }
 
-.plan-list .first-experience {
-    span {
+  .plan-list .first-experience{
+    span{
         margin-right: 5px;
     }
-}
-
-.selected-button {
-    display: flex;
-    width: 90px;
-    height: 40px;
-    padding: 8px 24px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 999px;
-    background: var(--primary, #FF8740);
-
-    &:hover,
-    &:focus,
-    &:focus-visible {
-        border: none;
-        outline: none;
-    }
-
-}
+  }

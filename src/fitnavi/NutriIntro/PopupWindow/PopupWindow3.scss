@@ -1,0 +1,213 @@
+@use '../../reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+
+.popup-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.step-popup {
+    z-index: 1000;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 500;
+    color: #3A2C19;
+    position: relative;
+    padding: 50px 70px;
+    background: #FEFCF7;
+    border-radius: 1.2rem;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 680px;
+    height: 680px;
+    margin: 0 auto;
+
+
+    display: flex;
+    flex-direction: column;
+
+    .close {
+        cursor: pointer;
+        width: 48px;
+        position: absolute;
+        top: 4%;
+        right: 5%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #3A2C19;
+        border-bottom: 0.5px solid #989794;
+        padding-bottom: 16px;
+        margin-bottom: 25px;
+    }
+
+
+    // 下一步按鈕、確認結帳按鈕、前往預約
+    .next-btn,
+    .reserve-btn {
+        width: 150px;
+        height: 40px;
+        background-color: #FF8740;
+        border-radius: 999px;
+        border: none;
+
+        font-size: 1rem;
+        font-weight: 700;
+        color: #FEFCF7;
+
+    }
+
+    // 返回按鈕、回首頁按鈕
+    .prev-btn,
+    .home-btn {
+        width: 150px;
+        height: 40px;
+        background-color: #FEFCF7;
+        border-radius: 999px;
+        border: 1px solid #FF8740;
+
+        font-size: 1rem;
+        font-weight: 700;
+        color: #FF8740;
+
+    }
+}
+
+.step3 {
+
+    /* 共用設定 */
+    img {
+        width: 48px;
+    }
+
+    // p {
+    //     font-size: 1.2rem;
+    // }
+
+    /* 結帳方式及價錢 */
+    .price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .method {
+            font-size: 1.2rem;
+        }
+
+        .align-right {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            .total {
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+
+            .currency {
+                font-size: 0.8rem;
+            }
+
+            .price {
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: #FF8740;
+            }
+        }
+    }
+
+    /* 輸入卡號 */
+    .credit-payment {
+        padding: 15px 0 20px 0;
+        border-bottom: 0.5px solid #989794;
+
+        .icon {
+            display: flex;
+        }
+
+        .input-credit {
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            width: 400px;
+            height: 200px;
+            background-color: #EAE8E2;
+            border-radius: 10px;
+
+            label {
+                font-size: 0.8rem;
+            }
+
+            .input {
+                width: 80%;
+                height: 40px;
+                border-radius: 5px;
+                border: none;
+
+                &::placeholder {
+                    background-color: #FEFCF7;
+                    color: #989794;
+                    padding: 3px;
+                }
+            }
+
+            .row2 {
+                display: flex;
+                margin-top: 10px;
+            }
+
+            .row1,
+            .col1,
+            .col2 {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+
+
+        }
+    }
+
+    /* 更改付款方式 */
+    .change-method {
+        padding: 15px 0;
+        border-bottom: 0.5px solid #989794;
+        margin-bottom: 21px;
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        fieldset {
+            display: flex;
+            gap: 20px;
+
+            .option1,
+            .option2 {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    }
+
+    /* 按鈕區 */
+    .button {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 10px;
+    }
+}

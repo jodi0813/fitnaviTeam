@@ -5,12 +5,41 @@ import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
 import Articlecards from '../../components/Articlecards/Articlecards';
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
-import PhotoGallery2 from "../../components/Carousel/PhotoGallery2"
+import PhotoGallery2 from "../../components/Carousel/PhotoGallery2";
+import PopupWindow1 from '../NutriIntro/PopupWindow/PopupWindow1';
+import PopupWindow2 from '../NutriIntro/PopupWindow/PopupWindow2';
+import PopupWindow3 from '../NutriIntro/PopupWindow/PopupWindow3';
+import PopupWindow4 from '../NutriIntro/PopupWindow/PopupWindow4';
 
 
 
 function NutriIntro() {
+    //管理愛心
     const [liked, setLiked] = useState(false);
+
+    //管理彈窗
+    //管理彈窗打開
+    const [showPopup, setShowPopup] = useState(false);
+    //管理彈窗下一步
+    const [stepIndex, setStepIndex] = useState(0);
+    const steps = [
+        PopupWindow1,
+        PopupWindow2,
+        PopupWindow3,
+        PopupWindow4
+    ];
+
+    const StepComponent = steps[stepIndex];
+
+    const nextStep = () => {
+        if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1);
+    };
+    const prevStep = () => {
+        if (stepIndex > 0) setStepIndex(stepIndex - 1);
+    };
+
+
+    //管理評價卡
     const ColorCard = ({ description, cardColor, rate, name, date }) => {
         // 將 rate 轉為數值
         const numericRate = parseFloat(rate);
@@ -45,7 +74,6 @@ function NutriIntro() {
             </div>
         );
     };
-
     const [cardData] = useState([
         {
 
@@ -114,6 +142,7 @@ function NutriIntro() {
         }
     ]);
 
+    //管理文章
     const nutriArticleData = [
         {
             id: "card1",
@@ -186,6 +215,8 @@ function NutriIntro() {
     ];
 
 
+
+
     return (
 
         <>
@@ -211,36 +242,7 @@ function NutriIntro() {
                             <PhotoGallery2 />
                         </div>
 
-                        {/* <div className="Nutriphotos">
-                            <div className="Nutri-selfie">
-                                <img src="/images/Nutri-selfie.jpg" alt="" />
-                            </div>
-                            <div className="more">
-                                <figure className="moreimg1">
-                                    <img src="/images/Nutri-carousel-01.jpg" />
-                                </figure>
 
-                                <figure className="moreimg2">
-                                    <img src="./images/Nutri-carousel-02jpg" alt="" />
-                                </figure>
-
-                                <figure className="moreimg3">
-                                    <img src="./images/Nutri-carousel-03.jpg" alt="" />
-                                </figure>
-
-                            </div>
-
-                            <div className="TurnButton">
-                                <button>&#9675;</button>
-                                <button>&#9675;</button>
-                                <button>&#9675;</button>
-                                <button>&#9675;</button>
-                                <button>&#9675;</button>
-
-                            </div>
-
-
-                        </div> */}
                     </div>
 
 
@@ -287,7 +289,7 @@ function NutriIntro() {
                             <div className="Nutri-prices-button">
                                 <p>10堂優惠 ：$1,400/單堂</p>
                                 <div className="Nutri-price-with-button">
-                                    <button class="classinrto" type="button">
+                                    <button class="classinrto" type="button" onClick={() => setShowPopup(true)}>
                                         <span className="Nutriclassinrto-text">立即報名</span>
                                         <img src="/images/search.svg" alt="" />
                                     </button>
@@ -624,6 +626,13 @@ function NutriIntro() {
 
 
             </main >
+            {showPopup && (
+                <StepComponent
+                    onClose={() => setShowPopup(false)}
+                    onNext={nextStep}
+                    onPrev={prevStep}
+                />
+            )}
 
         </>
     )

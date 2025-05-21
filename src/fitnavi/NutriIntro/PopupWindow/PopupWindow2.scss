@@ -1,0 +1,226 @@
+@use '../../reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+.popup-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    // z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // .popup-overlay {
+    //     width: 800px;
+    //     height: 800px;
+    //     background-color: #FEFCF7;
+    //     border-radius: 20px;
+
+    // }
+}
+
+.step-popup {
+    // z-index: 1000;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 500;
+    color: #3A2C19;
+    position: relative;
+    padding: 50px 70px;
+    background: #FEFCF7;
+    border-radius: 1.2rem;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 680px;
+    height: 680px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    .close {
+        cursor: pointer;
+        width: 48px;
+        position: absolute;
+        top: 4%;
+        right: 5%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #3A2C19;
+        border-bottom: 0.5px solid #989794;
+        padding-bottom: 16px;
+        margin-bottom: 25px;
+    }
+
+
+    // 下一步按鈕、確認結帳按鈕、前往預約
+    .next-btn,
+    .reserve-btn {
+        width: 150px;
+        height: 40px;
+        background-color: #FF8740;
+        border-radius: 999px;
+        border: none;
+
+        font-size: 1rem;
+        font-weight: 700;
+        color: #FEFCF7;
+
+    }
+
+    // 返回按鈕、回首頁按鈕
+    .prev-btn,
+    .home-btn {
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        background-color: #FEFCF7;
+        border-radius: 999px;
+        border: 1px solid #FF8740;
+
+        font-size: 1rem;
+        font-weight: 700;
+        color: #FF8740;
+
+    }
+}
+
+.step2 {
+    /* 共用設定 */
+
+
+    /* 課程方案 */
+    .course-plan {
+        display: flex;
+        flex-direction: column;
+
+        gap: 5px;
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .detail {
+            display: flex;
+            align-items: center;
+
+            .num {
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: #FF8740;
+                padding-right: 20px;
+            }
+
+            img {
+                width: 30px;
+                padding-right: 10px;
+            }
+
+            .time {
+                font-size: 1.2rem;
+                font-weight: 700;
+                padding-right: 10px;
+            }
+
+            .unit {
+                font-size: 0.8rem;
+                padding-right: 20px;
+            }
+
+            .expiry {
+                font-size: 0.8rem;
+            }
+        }
+
+        .price {
+            align-self: flex-end;
+
+            .total {
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+
+            .currency {
+                font-size: 0.8rem;
+            }
+
+            .price {
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: #FF8740;
+            }
+        }
+    }
+
+    /* 需求備註 */
+    .memo {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        gap: 10px;
+
+        label {
+            font-size: 1.2rem;
+        }
+
+        textarea {
+            border-radius: 10px;
+        }
+
+        textarea::placeholder {
+            font-size: 1rem;
+            color: #989794;
+            padding: 5px;
+        }
+    }
+
+    /* 選擇付款方式 */
+    .payment {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 8px;
+        border-bottom: .5px solid #989794;
+        margin-bottom: 35px;
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .method {
+            img {
+                width: 48px;
+            }
+
+            .row1,
+            .row2,
+            .row3 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .option {
+                    padding-right: 30px;
+                }
+
+                .icon {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    /* 按鈕區 */
+    .button {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 10px;
+    }
+}
