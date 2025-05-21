@@ -277,6 +277,7 @@ body {
 .Joinus-form .imcoach .imcoach-joinbutton {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   gap: 12px;
   width: 320px;
@@ -299,22 +300,29 @@ body {
   width: 20px;
   height: 23px;
   position: absolute;
-  right: 100px;
+  right: 80px;
   opacity: 0;
-  transform: translateX(10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .Joinus-form .imcoach .imcoach-joinbutton:hover {
   transform: translateY(-4px);
   box-shadow: 4px 8px 0px 0px #3A2C19;
+  border: none;
+  outline: none;
 }
 .Joinus-form .imcoach .imcoach-joinbutton:hover img {
   opacity: 1;
-  transform: translateX(0);
+}
+.Joinus-form .imcoach .imcoach-joinbutton:hover span {
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .Joinus-form .imcoach .imcoach-joinbutton:active {
   box-shadow: 3px 6px 0px 0px #3A2C19;
   font-size: 14px;
+  border: none;
+  outline: none;
+  transform: translate(2px, 2px);
 }
 .Joinus-form .imcoach .imcoach-joinbutton:active img {
   width: 18px;
@@ -424,6 +432,7 @@ body {
 .Joinus-form .imnutrionist .imnutrionist-joinbutton {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   gap: 12px;
   width: 320px;
@@ -448,20 +457,27 @@ body {
   position: absolute;
   right: 80px;
   opacity: 0;
-  transform: translateX(10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .Joinus-form .imnutrionist .imnutrionist-joinbutton:hover {
   transform: translateY(-4px);
   box-shadow: 4px 8px 0px 0px #3A2C19;
+  border: none;
+  outline: none;
 }
 .Joinus-form .imnutrionist .imnutrionist-joinbutton:hover img {
   opacity: 1;
-  transform: translateX(0);
+}
+.Joinus-form .imnutrionist .imnutrionist-joinbutton:hover span {
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .Joinus-form .imnutrionist .imnutrionist-joinbutton:active {
   box-shadow: 3px 6px 0px 0px #3A2C19;
   font-size: 14px;
+  border: none;
+  outline: none;
+  transform: translate(2px, 2px);
 }
 .Joinus-form .imnutrionist .imnutrionist-joinbutton:active img {
   width: 18px;

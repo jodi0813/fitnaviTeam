@@ -219,6 +219,8 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
+  border: none;
+  outline: none;
 }
 .Allarticle-Search .Search-Button {
   display: flex;
@@ -249,6 +251,9 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.Allarticle-Search .Search-Button:focus, .Allarticle-Search .Search-Button:focus-visible, .Allarticle-Search .Search-Button:active, .Allarticle-Search .Search-Button:hover {
+  outline: none;
+}
 .Allarticle-Search .ClickSearch-Button {
   display: flex;
   justify-content: center;
@@ -262,7 +267,7 @@ body {
   background: var(--primary, #FF8740);
   color: var(--white, #FEFCF7);
   font-family: "Noto Sans TC", sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 900;
   letter-spacing: 1.4px;
   white-space: nowrap;
@@ -339,7 +344,7 @@ body {
   width: 10%;
 }
 .Allarticle-content .cat-tag .cat-tag-title p {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   color: var(--dark, #3A2C19);
   /* 段落/14 */
   font-family: "Noto Sans TC", sans-serif;
@@ -352,11 +357,11 @@ body {
   border-bottom: 2px solid #3A2C19;
   padding-bottom: 14px;
 }
-.Allarticle-content .cat-tag .Cat-name {
-  margin-top: 20%;
-}
 .Allarticle-content .cat-tag .Cat-name button {
+  height: 40px;
+  bottom: 5px;
   color: var(--dark, #3A2C19);
+  background-color: transparent;
   /* heading/標題4/medium */
   font-family: "Noto Sans TC", sans-serif;
   font-size: 20px;
@@ -365,10 +370,18 @@ body {
   line-height: 40px;
   /* 200% */
   letter-spacing: 0.4px;
+  border: none;
+  outline: none;
 }
 .Allarticle-content .cat-tag .Cat-name button:hover {
   color: var(--primary, var(--primary, #FF8740));
   cursor: pointer;
+  border: none;
+  outline: none;
+}
+.Allarticle-content .cat-tag .Cat-name button:focus, .Allarticle-content .cat-tag .Cat-name button:focus-visible {
+  outline: none;
+  border: none;
 }
 .Allarticle-content .cat-tag .Cat-name h4 {
   color: var(--primary, var(--primary, #FF8740));
@@ -382,11 +395,10 @@ body {
   letter-spacing: 0.4px;
 }
 .Allarticle-content .cat-tag .Tag {
-  margin-top: 50%;
+  margin-top: 30%;
 }
 .Allarticle-content .cat-tag .Tag .TagName {
-  gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .Allarticle-content .cat-tag .Tag .TagName h4 {
   color: var(--dark, #3A2C19);

@@ -255,3 +255,7 @@ body {
   letter-spacing: 2.4px;
   white-space: nowrap;
 }
+.Hompagearticle-Chtitle button:focus, .Hompagearticle-Chtitle button:focus-visible, .Hompagearticle-Chtitle button:hover {
+  outline: none;
+  border: none;
+}

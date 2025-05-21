@@ -4,15 +4,15 @@ import "./JoinusStep4.scss";
 function JoinusStep4({ onPre, onSubmit }) {
     return (
         <section id='JoinusStep4-Form'>
-            <div className='CoachJoinus-Step4-wrapper'>
-                <form
-                    className='CoachJoinus-Step4'
-                    onSubmit={e => {
-                        e.preventDefault();
-                        window.scrollTo(0, 0);
-                        onSubmit(); // 通知父層切換到 summary
-                    }}
-                >
+        <div className='CoachJoinus-Step4-wrapper'>
+            <form
+                className='CoachJoinus-Step4'
+                onSubmit={e => {
+                    e.preventDefault();
+                    window.scrollTo(0, 0);
+                    onSubmit(); // 正確呼叫
+                }}
+            >
                     <div className='JoinusStep4-title'>
                         <div className='Step4-title'>
                             <h3>合作服務與條款</h3>
@@ -39,7 +39,7 @@ function JoinusStep4({ onPre, onSubmit }) {
                     </div>
                     <div className='PreSSendButton'>
                         <button type="button" onClick={onPre}>◀ 上一步</button>
-                        <button type='submit'>送出申請 ▶</button>
+                        <button type='submit' >送出申請 ▶</button>
                     </div>
                 </form>
             </div>

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
 * {
   box-sizing: border-box;
   /* 不累加邊框及內距 */
@@ -149,117 +150,109 @@ body {
   overflow-x: hidden;
 }
 
-#navbarHeader {
+.popup-modal-overlay {
   position: fixed;
-  top: 2.5%;
+  top: 0;
   left: 0;
-  width: 100%;
-  background: transparent;
-  /* 或透明 */
-  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.container {
-  max-width: calc(100% - 240px);
-  /* 左右各120px */
-  margin: 0 auto;
-}
-@media (max-width: 393px) {
-  .container {
-    max-width: 100%;
-  }
-}
-.container #navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 24px;
-  background-color: rgba(237, 237, 237, 0.6);
-  border-radius: 999px;
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(12px);
-}
-.container #navbar .navbarHamburger {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-}
-@media (min-width: 394px) {
-  .container #navbar .navbarHamburger {
-    display: none;
-  }
-}
-.container #navbar .navbarHamburger .bar {
-  display: block;
-  width: 24px;
-  height: 3px;
-  background-color: black;
-  margin: 5px auto;
-}
-@media (max-width: 393px) {
-  .container #navbar {
-    display: flex;
-    width: 393px;
-    padding: 4px 20px;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
-    background: #FFF;
-  }
-}
-.container #navbar .logo {
-  display: flex;
-  align-items: baseline;
-  width: 109px;
-  height: 35px;
-  margin: 13px;
-  font-weight: 400;
-  font-family: "Dela Gothic One";
-}
-.container #navbar .logo .fit {
-  font-size: 16px;
-  color: #3a2c19;
-}
-.container #navbar .logo .navi {
-  font-size: 24px;
-  color: #ff8740;
-}
-.container #navbar .menu {
-  display: flex;
-  padding: 0px 25px;
-}
-@media (max-width: 393px) {
-  .container #navbar .menu {
-    display: none;
-  }
-}
-.container #navbar .menu li {
-  display: flex;
-  padding: 0px 25px;
-}
-.container #navbar .menu li a {
+.step-popup {
   font-family: "Noto Sans TC", sans-serif;
-  font-size: 14px;
   font-weight: 500;
-  color: #3a2c19;
-}
-.container .nbr-login {
-  background: #ff8740;
-  color: #fff;
+  color: #3A2C19;
+  position: relative;
+  padding: 50px 70px;
+  background: #FEFCF7;
+  border-radius: 1.2rem;
+  width: 680px;
+  height: 680px;
+  margin: 0 auto;
   display: flex;
-  padding: 10px 24px;
-  /* 內距 */
-  justify-content: center;
-  /* 置中 */
-  border-radius: 999px;
-  /* 邊角 */
-  font-size: 14px;
-  /* 字體大小 */
-  letter-spacing: 1.4px;
-  /* 字距 */
+  flex-direction: column;
 }
-@media (max-width: 393px) {
-  .container .nbr-login {
-    display: none;
-  }
+.step-popup .close {
+  cursor: pointer;
+  width: 48px;
+  position: absolute;
+  top: 4%;
+  right: 5%;
+}
+.step-popup h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #3A2C19;
+  border-bottom: 0.5px solid #989794;
+  padding-bottom: 16px;
+  margin-bottom: 25px;
+}
+.step-popup .next-btn,
+.step-popup .reserve-btn {
+  width: 150px;
+  height: 40px;
+  background-color: #FF8740;
+  border-radius: 999px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FEFCF7;
+}
+.step-popup .prev-btn,
+.step-popup .home-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  background-color: #FEFCF7;
+  border-radius: 999px;
+  border: 1px solid #FF8740;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FF8740;
+}
+
+.step4 {
+  justify-content: center;
+}
+.step4 .content {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.step4 .content img {
+  width: 300px;
+}
+.step4 .content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FF8740;
+  letter-spacing: 12px;
+  padding-bottom: 20px;
+}
+.step4 .content .reminder {
+  font-size: 0.8rem;
+  color: #989794;
+}
+.step4 .content .steps {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 5px 0 25px 0;
+}
+.step4 .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.step-popup.active {
+  display: block;
 }

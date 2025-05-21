@@ -441,7 +441,7 @@ body {
   width: 24px;
   height: 24px;
   position: absolute;
-  right: 120px;
+  right: 150px;
   opacity: 0;
   transform: translateX(10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -468,6 +468,9 @@ body {
 #Coachintro .Coachintro-person .Coachclass-container .coach-classbox .coach-prices-button .price-with-button button:hover img {
   opacity: 1;
   transform: translateX(0);
+}
+#Coachintro .Coachintro-person .Coachclass-container .coach-classbox .coach-prices-button .price-with-button button:active {
+  outline: none;
 }
 #Coachintro .Coachintro-person .Coachclass-container .coach-classbox .coach-prices-button .price-with-button button:active .classinrto-text {
   color: var(--primary, var(--primary, #FF8740));
@@ -1150,15 +1153,19 @@ body {
   justify-content: center;
   cursor: pointer;
 }
+#Coachintro .coacharticle-wrapper #coacharticle .ViewArticles .ViewArticles-left:hover,
 #Coachintro .coacharticle-wrapper #coacharticle .ViewArticles .ViewArticles-left:focus,
 #Coachintro .coacharticle-wrapper #coacharticle .ViewArticles .ViewArticles-left:focus-visible {
   outline: none;
   box-shadow: none;
+  border: none;
 }
+#Coachintro .coacharticle-wrapper #coacharticle .ViewArticles .ViewArticles-right:hover,
 #Coachintro .coacharticle-wrapper #coacharticle .ViewArticles .ViewArticles-right:focus,
 #Coachintro .coacharticle-wrapper #coacharticle .ViewArticles .ViewArticles-right:focus-visible {
   outline: none;
   box-shadow: none;
+  border: none;
 }
 #Coachintro .coacharticle-wrapper #coacharticle .ViewArticles .Three-classcards {
   display: flex;
@@ -1235,11 +1242,29 @@ body {
   text-transform: capitalize;
 }
 #Coachintro .Coach-comment-wrapper #Coach-comment .Coach-comment-line1 {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  max-width: 960px;
+  margin: 0 auto;
   position: relative;
   right: 10%;
+}
+#Coachintro .Coach-comment-wrapper #Coach-comment .Coach-comment-line1::before, #Coachintro .Coach-comment-wrapper #Coach-comment .Coach-comment-line1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  border-left: 1px dashed #ccc;
+}
+#Coachintro .Coach-comment-wrapper #Coach-comment .Coach-comment-line1::before {
+  left: calc(33.333% + 10px);
+  /* 第一條虛線 */
+}
+#Coachintro .Coach-comment-wrapper #Coach-comment .Coach-comment-line1::after {
+  left: calc(66.666% + 30px);
+  /* 第二條虛線 */
 }
 #Coachintro .Coach-comment-wrapper #Coach-comment .Coach-comment-line1 .Star-rate {
   display: flex;
@@ -1299,4 +1324,63 @@ body {
   line-height: 140%;
   /* 19.6px */
   letter-spacing: 1.4px;
+}
+#Coachintro .Coach-comment-wrapper #Coach-comment .seeMoreComment {
+  position: relative;
+  margin-top: 10%;
+  left: 32%;
+  top: 50%;
+}
+#Coachintro .Coach-comment-wrapper #Coach-comment .seeMoreComment button {
+  display: flex;
+  width: 300px;
+  height: 40px;
+  padding: 8px 84px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  background: var(--primary, #FF8740);
+  color: var(--white, var(--white, #FEFCF7));
+  text-align: center;
+  /* heading/標題4/Bold */
+  font-family: "Noto Sans TC";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+#Coachintro .Coach-comment-wrapper #Coach-comment .seeMoreComment button img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 65%;
+  top: 30%;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#Coachintro .Coach-comment-wrapper #Coach-comment .seeMoreComment button:hover {
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--primary, #FF8740);
+  background: var(--white, #FEFCF7);
+}
+#Coachintro .Coach-comment-wrapper #Coach-comment .seeMoreComment button:hover .seeMore-text {
+  transform: translateX(-10px);
+  color: var(--primary, var(--primary, #FF8740));
+  text-align: center;
+  /* heading/標題4/Bold */
+  font-family: "Noto Sans TC";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+#Coachintro .Coach-comment-wrapper #Coach-comment .seeMoreComment button:hover img {
+  opacity: 1;
+  transform: translateX(0);
 }

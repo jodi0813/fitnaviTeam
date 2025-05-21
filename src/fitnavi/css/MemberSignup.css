@@ -234,6 +234,14 @@ body {
   border: 0.6px solid var(--dark, #3A2C19);
   background: #FFF;
 }
+.MemberSignup-wrapper .MemberSignup-form .KeyinNameEmail .KeyinName input:focus {
+  border-radius: 999px;
+  border: 2px solid var(--primary, #FF8740);
+  background: #FFF;
+  box-shadow: 1px 2px 4px 0px rgba(58, 44, 25, 0.2);
+  outline: none;
+  border-radius: 10px;
+}
 .MemberSignup-wrapper .MemberSignup-form .KeyinNameEmail .KeyinEmail {
   display: flex;
   flex-direction: column;
@@ -258,6 +266,14 @@ body {
   border-radius: 10px;
   border: 0.6px solid var(--dark, #3A2C19);
   background: #FFF;
+}
+.MemberSignup-wrapper .MemberSignup-form .KeyinNameEmail .KeyinEmail input:focus {
+  border-radius: 999px;
+  border: 2px solid var(--primary, #FF8740);
+  background: #FFF;
+  box-shadow: 1px 2px 4px 0px rgba(58, 44, 25, 0.2);
+  outline: none;
+  border-radius: 10px;
 }
 .MemberSignup-wrapper .MemberSignup-form .KeyinGenderTel {
   margin-top: 10px;
@@ -309,8 +325,23 @@ body {
   font-weight: 700;
   line-height: 150%;
   /* 27px */
+  outline: none;
 }
-.MemberSignup-wrapper .MemberSignup-form .KeyinGenderTel .KeyinTel {
+.MemberSignup-wrapper .MemberSignup-form .KeyinGenderTel .ChooseGender .ChooseGender-button button.active {
+  border: none;
+  outline: none;
+  border-radius: 99px;
+  background: #FF8740;
+  color: var(--white, var(--white, #FEFCF7));
+  text-align: center;
+  font-family: "Noto Sans TC";
+  font-size: var(--fontsize-H3, 18px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  /* 27px */
+}
+.MemberSignup-wrapper .MemberSignup-form .KeyinTel {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -318,7 +349,7 @@ body {
   gap: 10px;
   margin-left: 0px;
 }
-.MemberSignup-wrapper .MemberSignup-form .KeyinGenderTel .KeyinTel label {
+.MemberSignup-wrapper .MemberSignup-form .KeyinTel label {
   color: var(--dark, #3A2C19);
   /* 段落/16 */
   font-family: "Noto Sans TC", sans-serif;
@@ -329,20 +360,28 @@ body {
   /* 24px */
   letter-spacing: 1.6px;
 }
-.MemberSignup-wrapper .MemberSignup-form .KeyinGenderTel .KeyinTel input {
+.MemberSignup-wrapper .MemberSignup-form .KeyinTel input {
   width: 400px;
   height: 40px;
   border-radius: 10px;
   border: 0.6px solid var(--dark, #3A2C19);
   background: #FFF;
 }
-.MemberSignup-wrapper .MemberSignup-form .KeyinBirthday {
+.MemberSignup-wrapper .MemberSignup-form .KeyinTel input:focus {
+  border-radius: 999px;
+  border: 2px solid var(--primary, #FF8740);
+  background: #FFF;
+  box-shadow: 1px 2px 4px 0px rgba(58, 44, 25, 0.2);
+  outline: none;
+  border-radius: 10px;
+}
+.MemberSignup-wrapper .KeyinBirthday {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.MemberSignup-wrapper .MemberSignup-form .KeyinBirthday label {
+.MemberSignup-wrapper .KeyinBirthday label {
   color: var(--dark, #3A2C19);
   /* 段落/16 */
   font-family: "Noto Sans TC", sans-serif;
@@ -353,14 +392,22 @@ body {
   /* 24px */
   letter-spacing: 1.6px;
 }
-.MemberSignup-wrapper .MemberSignup-form .KeyinBirthday input {
+.MemberSignup-wrapper .KeyinBirthday input {
   width: 400px;
   height: 40px;
   border-radius: 10px;
   border: 0.6px solid var(--dark, #3A2C19);
   background: #FFF;
 }
-.MemberSignup-wrapper .MemberSignup-form .TermsNext {
+.MemberSignup-wrapper .KeyinBirthday input:focus {
+  border-radius: 999px;
+  border: 2px solid var(--primary, #FF8740);
+  background: #FFF;
+  box-shadow: 1px 2px 4px 0px rgba(58, 44, 25, 0.2);
+  outline: none;
+  border-radius: 10px;
+}
+.MemberSignup-wrapper .TermsNext {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -368,7 +415,7 @@ body {
   margin-top: 40px;
   margin-bottom: 50PX;
 }
-.MemberSignup-wrapper .MemberSignup-form .TermsNext span {
+.MemberSignup-wrapper .TermsNext span {
   color: var(--gray, #989794);
   /* 段落/14 */
   font-family: "Noto Sans TC", sans-serif;
@@ -379,8 +426,8 @@ body {
   /* 19.6px */
   letter-spacing: 1.4px;
 }
-.MemberSignup-wrapper .MemberSignup-form .TermsNext span.serviceterm,
-.MemberSignup-wrapper .MemberSignup-form .TermsNext span.privateterm {
+.MemberSignup-wrapper .TermsNext span.serviceterm,
+.MemberSignup-wrapper .TermsNext span.privateterm {
   color: var(--gray, #989794);
   /* 段落/14 */
   font-family: "Noto Sans TC", sans-serif;
@@ -396,10 +443,14 @@ body {
   text-underline-offset: 50%;
   text-underline-position: from-font;
 }
-.MemberSignup-wrapper .MemberSignup-form .Signup-button {
+.MemberSignup-wrapper .Signup-button {
   align-self: center;
 }
-.MemberSignup-wrapper .MemberSignup-form .Signup-button button {
+.MemberSignup-wrapper .Signup-button button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   border-radius: 999px;
   background: var(--primary, #FF8740);
   display: flex;
@@ -419,7 +470,40 @@ body {
   line-height: normal;
   letter-spacing: 2px;
 }
-.MemberSignup-wrapper .MemberSignup-form .MemberSignup-option {
+.MemberSignup-wrapper .Signup-button button img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 52%;
+  top: 80%;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.MemberSignup-wrapper .Signup-button button:hover {
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--primary, #FF8740);
+  background: var(--white, #FEFCF7);
+}
+.MemberSignup-wrapper .Signup-button button:hover .Signup-text {
+  transform: translateX(-10px);
+  color: var(--primary, var(--primary, #FF8740));
+  text-align: center;
+  /* heading/標題4/Bold */
+  font-family: "Noto Sans TC";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+.MemberSignup-wrapper .Signup-button button:hover img {
+  opacity: 1;
+  transform: translateX(0);
+}
+.MemberSignup-wrapper .MemberSignup-option {
   margin-top: 30px;
   display: flex;
   flex-direction: row;
@@ -428,7 +512,8 @@ body {
   gap: 200px;
   width: 100%;
 }
-.MemberSignup-wrapper .MemberSignup-form .MemberSignup-option button {
+.MemberSignup-wrapper .MemberSignup-option button {
+  background-color: transparent;
   color: var(--dark, #3A2C19);
   /* 段落/16 */
   font-family: "Noto Sans TC", sans-serif;
@@ -441,7 +526,10 @@ body {
   border: none;
   margin-bottom: 10px;
 }
-.MemberSignup-wrapper .MemberSignup-form .MemberSignup-option button:hover,
-.MemberSignup-wrapper .MemberSignup-form .MemberSignup-option button:focus {
-  outline: 1px solid #3A2C19;
+.MemberSignup-wrapper .MemberSignup-option button span {
+  color: #FF8740;
+}
+.MemberSignup-wrapper .MemberSignup-option button:hover, .MemberSignup-wrapper .MemberSignup-option button:focus, .MemberSignup-wrapper .MemberSignup-option button:focus-visible {
+  border: none;
+  outline: none;
 }

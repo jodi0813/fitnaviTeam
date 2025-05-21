@@ -278,6 +278,13 @@ body {
   background: #ff8740;
   color: #fff;
   opacity: 1;
+  outline: none;
+}
+.home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-botton .home-search-toggleBt button.selected {
+  background: #ff8740;
+  color: #fff;
+  opacity: 1;
+  outline: none;
 }
 .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .homeSearchBt {
   display: flex;
@@ -309,7 +316,9 @@ body {
   background-color: #fff;
   color: #ff8740;
   border: 2px solid #ff8740;
+  outline: none;
 }
 .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .homeSearchBt:hover .faSearch {
   display: inline-block;
+  outline: none;
 }

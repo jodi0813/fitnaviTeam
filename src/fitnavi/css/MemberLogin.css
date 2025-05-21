@@ -221,13 +221,19 @@ body {
   line-height: 140%;
   /* 19.6px */
   letter-spacing: 1.4px;
-  padding-left: 5px;
+  padding-left: 10px;
+}
+.MemberLogin .KeyinEmailAccount input:focus {
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid var(--primary, #FF8740);
+  box-shadow: 1px 2px 4px 0px rgba(58, 44, 25, 0.2);
 }
 .MemberLogin .KeyinEmailAccount button {
   width: 200px;
   height: 40px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
@@ -245,9 +251,38 @@ body {
   color: var(--primary, var(--primary, #FF8740));
   border: 1px solid var(--primary, #FF8740);
 }
+.MemberLogin .KeyinEmailAccount button img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 52%;
+  top: 59%;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 .MemberLogin .KeyinEmailAccount button:hover {
-  background: var(--primary, #FF8740);
-  color: var(--white, var(--white, #FEFCF7));
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--primary, #FF8740);
+  background: var(--white, #FEFCF7);
+}
+.MemberLogin .KeyinEmailAccount button:hover .login-text {
+  transform: translateX(-10px);
+  color: var(--primary, var(--primary, #FF8740));
+  text-align: center;
+  /* heading/標題4/Bold */
+  font-family: "Noto Sans TC";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+.MemberLogin .KeyinEmailAccount button:hover img {
+  opacity: 1;
+  transform: translateX(0);
 }
 .MemberLogin .MemberLogin-option {
   position: relative;
@@ -270,4 +305,14 @@ body {
   /* 24px */
   letter-spacing: 1.6px;
   padding: 0px;
+}
+.MemberLogin .MemberLogin-option button:hover {
+  border: none;
+  outline: none;
+}
+.MemberLogin .MemberLogin-option .MemberLogin-forgetpassword {
+  color: #FF8740;
+}
+.MemberLogin .MemberLogin-option span {
+  color: #FF8740;
 }

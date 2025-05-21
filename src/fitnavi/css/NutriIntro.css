@@ -436,7 +436,7 @@ body {
   width: 24px;
   height: 24px;
   position: absolute;
-  right: 150px;
+  right: 140px;
   opacity: 0;
   transform: translateX(10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -1179,30 +1179,32 @@ body {
   gap: 10%;
   flex: 2;
 }
-#Nutriintro #Nutri-comment {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-self: flex-start;
-  margin-top: 10%;
-  margin-left: 5%;
-  position: relative;
-}
-#Nutriintro #Nutri-comment .Nutri-comment-wrapper {
-  display: flex;
-  flex-direction: column;
+#Nutriintro .Nutri-comment-wrapper {
   margin-left: 15%;
 }
-#Nutriintro #Nutri-comment .Nutri-comment-wrapper .commentitle {
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 80px;
+  position: relative;
+  scroll-margin-top: 80px;
+  /* 如果有固定的 header，可調整此值 */
+  scroll-margin-left: 0;
+}
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .Nutricommentitle {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
 }
-#Nutriintro #Nutri-comment .Nutri-comment-wrapper .commentitle h3 {
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .Nutricommentitle h3 {
   color: var(--primary, var(--primary, #FF8740));
   /* heading/標題3 */
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "" Noto Sans TC ", sans-serif; Sans TC", sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -1210,11 +1212,11 @@ body {
   letter-spacing: 3.2px;
   margin-right: 15px;
 }
-#Nutriintro #Nutri-comment .Nutri-comment-wrapper .commentitle h4 {
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .Nutricommentitle h4 {
   width: 300px;
   color: var(--dark, #3A2C19);
   /* 段落/14 */
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "" Noto Sans TC ", sans-serif; Sans TC", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -1224,22 +1226,15 @@ body {
   border-bottom: 2px solid #3A2C19;
   padding-bottom: 15px;
 }
-#Nutriintro #Nutri-comment .Nutri-comment-wrapper .star-rate {
-  width: 100%;
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .star-rate {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  position: relative;
-  margin-left: 5%;
+  gap: 10px;
+  margin-left: 30%;
 }
-#Nutriintro #Nutri-comment .Nutri-comment-wrapper .star-rate .Star {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-#Nutriintro #Nutri-comment .Nutri-comment-wrapper .star-rate p {
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .star-rate p {
   color: var(--dark, #3A2C19);
   text-align: center;
   font-family: Alata;
@@ -1250,22 +1245,33 @@ body {
   /* 150px */
   text-transform: capitalize;
 }
-#Nutriintro #Nutri-comment .Nutri-comment-wrapper .Nutri-commentcard {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .Nutri-commentcard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  max-width: 960px;
+  margin: 0 auto;
   position: relative;
-  margin-left: 50%;
+  right: 10%;
 }
-#Nutriintro #Nutri-comment .Nutri-comment-wrapper .Nutri-commentcard .Star-rate {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .Nutri-commentcard::before, #Nutriintro .Nutri-comment-wrapper #Nutri-comment .Nutri-commentcard::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  border-left: 1px dashed #ccc;
 }
-#Nutriintro #Nutri-comment .Nutri-comment-wrapper .Nutri-commentcard .Star-rate h3 {
-  color: #3A2C19;
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .Nutri-commentcard::before {
+  left: calc(33.333% + 10px);
+  /* 第一條虛線 */
+}
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .Nutri-commentcard::after {
+  left: calc(66.666% + 30px);
+  /* 第二條虛線 */
+}
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .Nutri-commentcard h3 {
+  color: var(--dark, #3A2C19);
   font-family: Alata;
   font-size: 30px;
   font-style: normal;
@@ -1273,12 +1279,12 @@ body {
   line-height: 150%;
   /* 45px */
   text-transform: capitalize;
-  margin-left: 60px;
+  margin-left: 40%;
 }
-#Nutriintro #Nutri-comment .Nutri-comment-wrapper .Nutri-commentcard p.description {
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .Nutri-commentcard p.description {
   color: var(--dark, #3A2C19);
   /* 段落/14 */
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "" Noto Sans TC ", sans-serif; Sans TC", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -1287,16 +1293,16 @@ body {
   letter-spacing: 1.4px;
   margin-top: 30px;
 }
-#Nutriintro #Nutri-comment .Nutri-comment-wrapper .Nutri-commentcard .Name-date {
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .Nutri-commentcard .Name-date {
   margin-top: 90px;
   display: flex;
   flex-direction: row;
   gap: 120px;
 }
-#Nutriintro #Nutri-comment .Nutri-comment-wrapper .Nutri-commentcard .Name-date p.Name {
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .Nutri-commentcard .Name-date p.Name {
   color: #000;
   /* 段落/14 */
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "" Noto Sans TC ", sans-serif; Sans TC", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -1305,15 +1311,74 @@ body {
   letter-spacing: 1.4px;
   white-space: nowrap;
 }
-#Nutriintro #Nutri-comment .Nutri-comment-wrapper .Nutri-commentcard .Name-date p.Date {
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .Nutri-commentcard .Name-date p.Date {
   color: var(--dark, #3A2C19);
   text-align: right;
   /* 段落/14 */
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: " Sans TC";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
   /* 19.6px */
   letter-spacing: 1.4px;
+}
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .seeMoreComment {
+  position: relative;
+  margin-top: 10%;
+  left: 32%;
+  top: 50%;
+}
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .seeMoreComment button {
+  display: flex;
+  width: 300px;
+  height: 40px;
+  padding: 8px 84px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  background: var(--primary, #FF8740);
+  color: var(--white, var(--white, #FEFCF7));
+  text-align: center;
+  /* heading/標題4/Bold */
+  font-family: "Noto Sans TC";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .seeMoreComment button img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 65%;
+  top: 30%;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .seeMoreComment button:hover {
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--primary, #FF8740);
+  background: var(--white, #FEFCF7);
+}
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .seeMoreComment button:hover .seeMore-text {
+  transform: translateX(-10px);
+  color: var(--primary, var(--primary, #FF8740));
+  text-align: center;
+  /* heading/標題4/Bold */
+  font-family: "Noto Sans TC";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+#Nutriintro .Nutri-comment-wrapper #Nutri-comment .seeMoreComment button:hover img {
+  opacity: 1;
+  transform: translateX(0);
 }

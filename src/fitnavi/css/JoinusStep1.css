@@ -154,19 +154,6 @@ body {
   font-family: "Mantou Sans";
   src: url(../../assets/MantouSans-Regular.ttf);
 }
-#JoinusStep1-Form {
-  padding: 120px 50px;
-  width: 100vw;
-}
-
-.CoachJoinus-Step1-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
-}
-
 .CoachJoinus-Step1-form {
   position: relative;
   top: -10%;
@@ -298,6 +285,19 @@ body {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}
+.CoachJoinus-Step1-form .Step1-form-button:active {
+  border-radius: 999px;
+  background: var(--primary, #FF8740);
+  color: var(--white, var(--white, #FEFCF7));
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 900;
   line-height: 140%;
   /* 19.6px */
   letter-spacing: 1.4px;

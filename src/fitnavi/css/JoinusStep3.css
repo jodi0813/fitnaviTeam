@@ -154,18 +154,7 @@ body {
   font-family: "Mantou Sans";
   src: url(../../assets/MantouSans-Regular.ttf);
 }
-#JoinusStep3-Form {
-  padding: 120px 50px;
-  width: 100vw;
-}
-
-.CoachJoinus-Step3-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 {
+.CoachJoinus-Step3 {
   position: relative;
   top: -10%;
   display: flex;
@@ -183,14 +172,15 @@ body {
   background: #FFF;
   box-shadow: 8px 8px 0px 0px #3A2C19;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Coach-JoinusStep3-title {
+.CoachJoinus-Step3 .Coach-JoinusStep3-title {
   display: flex;
   flex-direction: row;
-  gap: 50%;
+  gap: 10%;
   width: 422px;
   margin-bottom: 40px;
+  border-bottom: 1px solid #3a2c19;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Coach-JoinusStep3-title .Step3-title {
+.CoachJoinus-Step3 .Coach-JoinusStep3-title .Step3-title {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -198,7 +188,7 @@ body {
   gap: 10px;
   white-space: nowrap;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Coach-JoinusStep3-title .Step3-title h3 {
+.CoachJoinus-Step3 .Coach-JoinusStep3-title .Step3-title h3 {
   color: var(--dark, #3A2C19);
   text-align: center;
   font-family: "Dela Gothic One";
@@ -208,7 +198,7 @@ body {
   line-height: normal;
   letter-spacing: 5.4px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Coach-JoinusStep3-title .Step3-title h4 {
+.CoachJoinus-Step3 .Coach-JoinusStep3-title .Step3-title h4 {
   color: var(--dark, #3A2C19);
   opacity: 0.5;
   text-align: center;
@@ -220,7 +210,7 @@ body {
   /* 35px */
   letter-spacing: 1.4px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Coach-JoinusStep3-title p {
+.CoachJoinus-Step3 .Coach-JoinusStep3-title p {
   color: var(--primary, var(--primary, #FF8740));
   text-align: center;
   font-family: "Dela Gothic One";
@@ -231,10 +221,10 @@ body {
   /* 19.6px */
   letter-spacing: 1.4px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form {
+.CoachJoinus-Step3 .Step3-form {
   position: relative;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .Aboutme-textarea .Aboutme-textarea-title {
+.CoachJoinus-Step3 .Step3-form .Aboutme-textarea .Aboutme-textarea-title {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -243,7 +233,7 @@ body {
   margin-bottom: 4px;
   width: 193px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .Aboutme-textarea .Aboutme-textarea-title h4 {
+.CoachJoinus-Step3 .Step3-form .Aboutme-textarea .Aboutme-textarea-title h4 {
   color: var(--dark, #3A2C19);
   /* 段落/14 */
   font-family: "Noto Sans TC", sans-serif;
@@ -255,7 +245,7 @@ body {
   letter-spacing: 1.4px;
   white-space: nowrap;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .Aboutme-textarea .Aboutme-textarea-title p {
+.CoachJoinus-Step3 .Step3-form .Aboutme-textarea .Aboutme-textarea-title p {
   color: var(--primary, var(--primary, #FF8740));
   /* 段落/14 */
   font-family: "Noto Sans TC", sans-serif;
@@ -267,7 +257,7 @@ body {
   letter-spacing: 1.4px;
   white-space: nowrap;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .Aboutme-textarea textarea {
+.CoachJoinus-Step3 .Step3-form .Aboutme-textarea textarea {
   height: 156px;
   width: 393px;
   border-radius: 8px;
@@ -275,14 +265,14 @@ body {
   background: var(--white, #FEFCF7);
   margin-top: 10px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .Aboutme-uploadphotos {
+.CoachJoinus-Step3 .Step3-form .Aboutme-uploadphotos {
   margin-top: 14px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .Aboutme-uploadphotos .Aboutme-uploadphotos-title {
+.CoachJoinus-Step3 .Step3-form .Aboutme-uploadphotos .Aboutme-uploadphotos-title {
   width: 202px;
   margin-bottom: 12px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .Aboutme-uploadphotos .Aboutme-uploadphotos-title h4 {
+.CoachJoinus-Step3 .Step3-form .Aboutme-uploadphotos .Aboutme-uploadphotos-title h4 {
   color: var(--dark, #3A2C19);
   /* 段落/14 */
   font-family: "Noto Sans TC", sans-serif;
@@ -293,10 +283,10 @@ body {
   /* 19.6px */
   letter-spacing: 1.4px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .Aboutme-uploadphotos .Aboutme-uploadphotos-button {
+.CoachJoinus-Step3 .Step3-form .Aboutme-uploadphotos .Aboutme-uploadphotos-button {
   margin-bottom: 36px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .Aboutme-uploadphotos .Aboutme-uploadphotos-button button {
+.CoachJoinus-Step3 .Step3-form .Aboutme-uploadphotos .Aboutme-uploadphotos-button button {
   margin-right: 18px;
   border-radius: 999px;
   border: 1px solid var(--primary, #FF8740);
@@ -310,13 +300,13 @@ body {
   /* 14px */
   letter-spacing: 1px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .teachingExperiences {
+.CoachJoinus-Step3 .Step3-form .teachingExperiences {
   display: flex;
   flex-direction: row;
   gap: 150%;
   width: 199px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .teachingExperiences h4 {
+.CoachJoinus-Step3 .Step3-form .teachingExperiences h4 {
   color: var(--dark, #3A2C19);
   /* 段落/14 */
   font-family: "Noto Sans TC", sans-serif;
@@ -328,7 +318,7 @@ body {
   letter-spacing: 1.4px;
   white-space: nowrap;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .teachingExperiences p {
+.CoachJoinus-Step3 .Step3-form .teachingExperiences p {
   color: var(--primary, var(--primary, #FF8740));
   /* 段落/14 */
   font-family: "Noto Sans TC", sans-serif;
@@ -340,7 +330,7 @@ body {
   letter-spacing: 1.4px;
   white-space: nowrap;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience {
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience {
   margin-top: 8px;
   border: 1px solid #d0cdc9;
   border-radius: 8px;
@@ -349,18 +339,18 @@ body {
   overflow-y: auto;
   width: 430px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable {
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable thead {
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable thead {
   display: table;
   width: 100%;
   table-layout: fixed;
   background-color: #f4f4f4;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable thead th {
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable thead th {
   padding: 8px;
   font-size: 10px;
   margin: 5px;
@@ -368,38 +358,38 @@ body {
   color: var(--gray, #989794);
   border-bottom: 1px solid #3a2c19;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody {
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody {
   display: block;
   max-height: 200px;
   overflow-y: auto;
   width: 100%;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody tr {
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody tr {
   display: table;
   width: 100%;
   table-layout: fixed;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody td {
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody td {
   padding: 8px;
   font-size: 14px;
   text-align: center;
   color: var(--dark, #3A2C19);
   border-bottom: 1px solid #3a2c19;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody input {
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody input {
   width: 20px;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 0.5px solid #989794;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody .buttonGroup {
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody .buttonGroup {
   display: flex;
   flex-direction: column;
   gap: 4px;
   align-items: center;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody .buttonGroup button {
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody .buttonGroup button {
   border-radius: 999px;
   border: 1px solid var(--primary, #FF8740);
   color: var(--dark, #3A2C19);
@@ -412,30 +402,30 @@ body {
   /* 14px */
   letter-spacing: 1px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable th:first-child,
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable td:first-child {
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable th:first-child,
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable td:first-child {
   width: 5px;
   padding-left: 5px;
   text-align: left;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody::-webkit-scrollbar {
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody::-webkit-scrollbar {
   width: 8px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody::-webkit-scrollbar-thumb {
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody::-webkit-scrollbar-thumb {
   background-color: #d9d9d9;
   border-radius: 4px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody::-webkit-scrollbar-track {
+.CoachJoinus-Step3 .Step3-form .scrollFieldset-teachExperience .simpleTable tbody::-webkit-scrollbar-track {
   background: transparent;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-NextPreButton {
+.CoachJoinus-Step3 .Step3-NextPreButton {
   display: flex;
   flex-direction: row;
   gap: 300px;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 80px;
 }
-.CoachJoinus-Step3-wrapper .CoachJoinus-Step3 .Step3-NextPreButton button {
+.CoachJoinus-Step3 .Step3-NextPreButton button {
   margin: 0px;
   white-space: nowrap;
   border-radius: 999px;
@@ -447,6 +437,19 @@ body {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}
+.CoachJoinus-Step3 .Step3-NextPreButton button:active {
+  border-radius: 999px;
+  background: var(--primary, #FF8740);
+  color: var(--white, var(--white, #FEFCF7));
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 900;
   line-height: 140%;
   /* 19.6px */
   letter-spacing: 1.4px;
