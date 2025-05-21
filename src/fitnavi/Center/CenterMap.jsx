@@ -15,6 +15,7 @@ function CenterMap() {
   });
 
   const [filteredResults, setFilteredResults] = useState([]);
+  const [activeGymIndex, setActiveGymIndex] = useState(null);
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -34,6 +35,7 @@ function CenterMap() {
       area: "大安區",
       features: ["重訓器材", "有氧器材", "淋浴間", "24小時營業", "靠近捷運站"],
       img: "./images/center.jpg",
+      mapPos: { left: "53%", top: "30%" }, // 手動對照地圖位置
     },
     {
       name: "日初健身(大安館)",
@@ -41,6 +43,7 @@ function CenterMap() {
       area: "大安區",
       features: ["重訓器材", "有氧器材", "淋浴間", "女性專區"],
       img: "./images/center2.jpg",
+      mapPos: { left: "79%", top: "40%" },
     },
     {
       name: "黃金gym(師大館)",
@@ -48,6 +51,7 @@ function CenterMap() {
       area: "大安區",
       features: ["重訓器材", "有氧器材", "24小時營業"],
       img: "./images/center3.jpg",
+      mapPos: { left: "43%", top: "47%" },
     },
     {
       name: "NITEGym(師大館)",
@@ -55,6 +59,7 @@ function CenterMap() {
       area: "大安區",
       features: ["重訓器材", "有氧器材", "淋浴間"],
       img: "./images/center4.jpg",
+      mapPos: { left: "71%", top: "62%" },
     },
   ];
 
@@ -186,10 +191,12 @@ function CenterMap() {
           </div>
 
           {filteredResults.map((gym, i) => (
-            <div className="gymCard" key={i}>
-              <Link to="/center">
-                <img src={gym.img} alt={gym.name} className="centerPic" />
-              </Link>
+            <div
+              className="gymCard"
+              key={i}
+              onClick={() => setActiveGymIndex(i)}
+            >
+              <img src={gym.img} alt={gym.name} className="centerPic" />
               <div className="gymCardText">
                 <h3>{gym.name}</h3>
                 <p>{gym.features.map((f) => `#${f}`).join(" ")}</p>
@@ -204,6 +211,29 @@ function CenterMap() {
             alt="地圖示意圖"
             className="centerMapPhoto"
           />
+          {filteredResults.map((gym, i) => (
+            <div
+              className={`mapMarker ${activeGymIndex === i ? "active" : ""}`}
+              style={{
+                position: "absolute",
+                top: gym.mapPos.top,
+                left: gym.mapPos.left,
+                transform: "translate(-50%, -100%)",
+              }}
+            >
+              {activeGymIndex === i && (
+                <div className="mapTooltip">
+                  <Link to="/center">
+                    <img src={gym.img} alt={gym.name} />
+                    <p>{gym.name}</p>
+                  </Link>
+                </div>
+              )}
+              <div className="pin">
+                <img src="/images/landmark.png" alt="" />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -211,4 +241,3 @@ function CenterMap() {
 }
 
 export default CenterMap;
-
