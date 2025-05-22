@@ -125,9 +125,15 @@ export default function PhotoGallery() {
       {/* SVG 圓點按鈕（皆為灰色） */}
       <div
         style={{
-          marginTop: 20,
+          // marginTop: 20,
+          // display: "flex",
+          // justifyContent: "center",
+          // gap: 10,
+          width: GALLERY_WIDTH,
+          margin: "20px auto 0", // 垂直間距 + 水平置中
           display: "flex",
           justifyContent: "center",
+          alignItems: "center",
           gap: 10,
         }}
       >
