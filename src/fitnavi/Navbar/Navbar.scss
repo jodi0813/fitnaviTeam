@@ -6,59 +6,42 @@
   left: 0;
   width: 100%;
   background: transparent;
-  /* 或透明 */
-  z-index: 999; //排序最高
+  z-index: 999;
+
+  @media (max-width: 1024px) {
+    top: 0;
+  }
 }
 
 .container {
-  max-width: calc(100% - 240px);
-  /* 左右各120px */
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 24px;
 
-  @media (max-width: 393px) {
+  @media (max-width: 1024px) {
     max-width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
   }
 
   #navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 24px;
+    padding: 0 24px;
     background-color: rgba(237, 237, 237, 0.6);
     border-radius: 999px;
-    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(12px);
 
-    .navbarHamburger {
-
-      cursor: pointer;
-      background-color: transparent;
-      border: none;
-
-      @media (min-width: 394px) {
-        display: none;
-      }
-
-      .bar {
-        display: block;
-        width: 24px;
-        height: 3px;
-        background-color: black;
-        margin: 5px auto;
-      }
-
-    }
-
-    @media (max-width: 393px) {
-      display: flex;
-      width: 393px;
-      padding: 4px 20px;
+    @media (max-width: 1024px) {
+      width: 100%;
+      padding: 0;
+      border-radius: 0;
+      background-color: #fff;
       justify-content: space-between;
-      align-items: center;
-      border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
-      background: #FFF;
-
-
     }
 
     .logo {
@@ -78,25 +61,24 @@
       .navi {
         font-size: 24px;
         color: #ff8740;
-
-
       }
     }
 
     .menu {
       display: flex;
-      padding: 0px 25px;
+      width: 100%;
+      justify-content: space-evenly;
 
-      @media (max-width: 393px) {
-        display: none; // 預設隱藏
-
-
+      @media (max-width: 1024px) {
+        display: none;
       }
 
+      ul {
+        display: flex;
+      }
 
       li {
-        display: flex;
-        padding: 0px 25px;
+        padding: 0 25px;
 
         a {
           font-family: "Noto Sans TC", sans-serif;
@@ -113,46 +95,120 @@
     color: #fff;
     display: flex;
     padding: 10px 24px;
-    /* 內距 */
     justify-content: center;
-    /* 置中 */
     border-radius: 999px;
-    /* 邊角 */
     font-size: 14px;
-    /* 字體大小 */
     letter-spacing: 1.4px;
+    width: 15%;
 
-    /* 字距 */
-    @media (max-width: 393px) {
-      display: none; // 預設隱藏
-
-
+    @media (max-width: 1024px) {
+      display: none;
     }
   }
 }
 
-// @media (max-width: 393px) {
-//   .container {
-//     max-width: 100%;
-//     padding: 0 16px;
+.navbarHamburger {
+  cursor: pointer;
+  background-color: transparent;
+  display: none;
 
-//     #navbar {
-//       flex-wrap: wrap;
+  .bar {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: black;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+    border: none;
+  }
 
-//       .menu {
-//         display: none; // 預設隱藏
-//         width: 100%;
-//         padding: 0;
-//       }
+  @media (max-width: 1024px) {
+    display: block;
+  }
 
-//       .hamburger {
-//         display: block;
-//       }
+  &.is-active {
+    .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 6px);
+    }
 
-//       .nbr-login {
-//         margin-top: 12px;
-//              display: none; // 預設隱藏
-//       }
-//     }
-//   }
-// }
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -6px);
+    }
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  transition: left 0.3s ease-in-out;
+  z-index: 998;
+  padding: 0px 24px;
+  gap: 80px;
+
+  .mobile-title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 8%;
+    padding: 6px;
+
+    img {
+      height: auto;
+      width: auto;
+
+    }
+
+    .mobile-close {
+      background-color: transparent;
+      padding: 0px;
+
+    }
+
+
+  }
+
+  .mobile-login {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: #FF8740;
+    width: 100%;
+    color: #fff;
+  }
+
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+
+    li a {
+      color: #3A2C19;
+      font-family: "Noto Sans TC";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2px;
+    }
+  }
+
+  &.show {
+    left: 0;
+  }
+}

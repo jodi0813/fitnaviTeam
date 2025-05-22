@@ -109,6 +109,12 @@
 
 
 
+
+
+
+
+
+
 #JoinusStep4-Cards {
     padding: 120px 50px;
     width: 100%;
@@ -119,17 +125,20 @@
 
 .Joinuscard-row {
     position: relative;
-    width: 400px;   /* 根據卡片數量和重疊量調整 */
-    height: 380px;
+    width: 600px;   /* 根據卡片數量和重疊量調整 */
+    height: 700px;
     margin-top: 200px; /* 控制整組區塊距離上方 */
     margin-left: 50%;
+    justify-content: center;
+
+   
 }
 
 .Joinuscard-row .card {
     position: absolute;
     width: 260px;
-    height: 340px;
-    top: 70px; /* 這裡就是所有卡牌的 margin-top 效果，調整這裡就對了 */
+    height: 700px;
+    // top: 70px; 
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     border-radius: 16px;
     background: #fff;
@@ -146,7 +155,7 @@
     left: -200px;
     z-index: 1;
     animation-delay: 0.1s;
-    margin-top: 70px;
+    // margin-top: 70px;
 }
 .Joinuscard-row .card:nth-child(2) {
     left: -50px;
@@ -155,8 +164,9 @@
 }
 .Joinuscard-row .card:nth-child(3) {
     left: 50px;
+   
     z-index: 3;
-    animation-delay: 0.3s;
+    animation-delay: 0.3s;    
 }
 .Joinuscard-row .card:nth-child(4) {
     left: 200px;
@@ -173,170 +183,7 @@
         opacity: 1;
     }
     100% {
-        transform: translateY(0) translateX(0);
+        transform: translateY(0px) translateX(0);
         opacity: 1;
     }
 }
-
-
-
-
-// #JoinusStep4-Cards {
-//     padding: 120px 50px;
-//     width: 100%;
-
-//     width: 100%;
-//     min-height: 800px;
-//     /* 給予高度，防止footer貼近 */
-//     box-sizing: border-box;
-//     position: relative;
-
-// }
-
-
-
-// .Joinuscard-row {
-
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-//     gap: -10px;
-//     /* 使卡片更接近 */
-//     position: relative;
-//     /* 用於控制重疊 */
-//     margin-top: 5%;
-
-// }
-
-// .Joinuscard-row .card {
-//     position: absolute;
-
-//     z-index: 1;
-//     justify-content: center;
-//     align-items: center;
-//     /* 確保卡片不被隱藏 */
-//     opacity: 0;
-//     /* 初始狀態透明 */
-//     animation: moveIn 2s forwards;
-//     /* 動畫 */
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%)
-// }
-
-// /* 第一張卡片 */
-// .Joinuscard-row .card:nth-child(1) {
-//     left: 0px;
-//     z-index: 1;
-//     animation-delay: 0.1s;
-// }
-
-// /* 第二張卡片 */
-// .Joinuscard-row .card:nth-child(2) {
-//     left: 80px;
-//     z-index: 2;
-//     animation-delay: 0.2s;
-// }
-
-// /* 第三張卡片 */
-// .Joinuscard-row .card:nth-child(3) {
-//     left: 160px;
-//     z-index: 3;
-//     animation-delay: 0.3s;
-// }
-
-// /* 第四張卡片 */
-// .Joinuscard-row .card:nth-child(4) {
-//     left: 240px;
-//     z-index: 4;
-//     animation-delay: 0.4s;
-// }
-
-// @keyframes moveIn {
-//     0% {
-//         transform: translateX(140px);
-//         opacity: 0;
-//     }
-
-//     70% {
-//         opacity: 1;
-//     }
-
-//     100% {
-//         transform: translateX(0);
-//         opacity: 1;
-//     }
-// }
-// #JoinusStep4-Cards {
-//     padding: 120px 50px;
-//     width: 100%;
-//     min-height: 800px;
-//     box-sizing: border-box;
-//     position: relative;
-// }
-
-// /* 設定父容器為 relative 使卡片能夠在此容器中絕對定位 */
-// .Joinuscard-row {
-//     display: flex;
-//     justify-content: center; /* 水平置中 */
-//     align-items: center; /* 垂直置中 */
-//     position: relative; /* 使卡片可以絕對定位 */
-//     width: 100%; /* 容器寬度占滿整個父容器 */
-//     margin-top: 5%;
-// }
-
-// /* 卡片樣式 */
-// .Joinuscard-row .card {
-//     position: absolute; /* 使用絕對定位來控制重疊 */
-//     opacity: 0; /* 初始透明 */
-//     animation: moveIn 2s forwards; /* 動畫 */
-//     top: 50%;
-//     transform: translate(-50%, -50%); /* 使卡片垂直和水平方向上都居中 */
-//     display: flex; /* 確保卡片內容居中 */
-//     justify-content: center;
-//     align-items: center;
-// }
-
-// /* 第一張卡片 */
-// .Joinuscard-row .card:nth-child(1) {
-//     left: 0px;
-//     z-index: 1;
-//     animation-delay: 0.1s;
-// }
-
-// /* 第二張卡片 */
-// .Joinuscard-row .card:nth-child(2) {
-//     left: 80px; /* 距離左側80px */
-//     z-index: 2;
-//     animation-delay: 0.2s;
-// }
-
-// /* 第三張卡片 */
-// .Joinuscard-row .card:nth-child(3) {
-//     left: 160px; /* 距離左側160px */
-//     z-index: 3;
-//     animation-delay: 0.3s;
-// }
-
-// /* 第四張卡片 */
-// .Joinuscard-row .card:nth-child(4) {
-//     left: 240px; /* 距離左側240px */
-//     z-index: 4;
-//     animation-delay: 0.4s;
-// }
-
-// /* 卡片的動畫效果 */
-// @keyframes moveIn {
-//     0% {
-//         transform: translateX(140px);
-//         opacity: 0;
-//     }
-//     70% {
-//         opacity: 1;
-//     }
-//     100% {
-//         transform: translateX(0);
-//         opacity: 1;
-//     }
-// }

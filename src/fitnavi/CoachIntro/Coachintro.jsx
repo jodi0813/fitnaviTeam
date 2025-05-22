@@ -224,6 +224,9 @@ function Coachintro() {
     return (
 
         <>
+        <main id="all">
+            
+        </main>
             <main id="Coachintro">
 
                 <MaintitleBread
@@ -260,7 +263,7 @@ function Coachintro() {
                                     )}
                                 </button>
                             </div>
-                            <p>＃健身教練#減脂訓練＃個人指導＃#功能性訓練＃TRX</p>
+                            <p>＃健身教練#減脂訓練＃個人指導＃功能性訓練＃TRX</p>
 
                         </div>
 

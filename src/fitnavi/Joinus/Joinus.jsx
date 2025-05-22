@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Joinus.scss";
 import MainTitle from "../../components/Title/MainTitle";
+import JoinButton from '../../components/joinButton/joinButton';
 
 function Joinus() {
     const navigate = useNavigate();
@@ -47,13 +48,19 @@ function Joinus() {
                             <p> 🤝撰寫實用訓練文章或影片</p>
                         </form>
 
-                        <button
+                        {/* <button
                             className='imcoach-joinbutton'
                             onClick={() => navigate('/JoinusCarousel')}
                         >
                             <span>成為合作教練</span>
                             <img src="/images/Polygon.svg" alt="" />
-                        </button>
+                        </button> */}
+                        <JoinButton
+                            text="成為合作教練"
+                            to="/JoinusCarousel"
+                        />
+
+
                     </div>
 
                     <div className="imnutrionist">
@@ -88,10 +95,14 @@ function Joinus() {
                             <p>🤝撰寫飲食知識文章或影片</p>
                         </form>
 
-                        <button className='imnutrionist-joinbutton' onClick={()=>navigate('/NutriJoinusCarousel')}>
-                            <span>成為合作營養師</span>
-                            <img src="/images/Polygon.svg" alt="" />
-                        </button>
+                        <JoinButton
+                            text="成為合作營養師"
+                            to="/NutriJoinusCarousel" />
+                        {/* <button className='imnutrionist-joinbutton' onClick={()=>navigate('/NutriJoinusCarousel')}> */}
+                        {/* <span>成為合作營養師</span>
+                            <img src="/images/Polygon.svg" alt="" /> */}
+
+                        {/* </button> */}
                     </div>
 
 

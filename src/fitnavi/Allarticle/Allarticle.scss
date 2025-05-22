@@ -204,6 +204,7 @@
 
         &:active {
             outline: none;
+
             .text-search {
                 color: var(--primary, var(--primary, #FF8740));
                 text-align: center;
@@ -225,7 +226,7 @@
 
         &:focus,
         &:focus-visible {
-            border:1px solid #FF8740;
+            border: 1px solid #FF8740;
             outline: none;
         }
 
@@ -242,11 +243,11 @@
     width: 100%;
 
     margin-top: 60px;
-    padding-left: 60px;
+    // padding-left: 60px;
     display: flex;
     flex-direction: row;
-    gap: 10%;
-    justify-content: flex-start;
+    gap: 5%;
+    justify-content: center;
     align-items: first baseline;
 
 
@@ -369,6 +370,11 @@
     }
 
     .Allarticle-cards {
+        max-width: 1000px;
+        width: 100%;
+        padding: 0 10px;
+        margin-left: 5%;
+        margin-right: auto;
 
         // width: 80%;
         .Allarticle-cards-title {
@@ -431,6 +437,10 @@
 
 
             }
+        }
+
+        @media (max-width: 1440px) {
+           margin-left: 2%;
         }
     }
 }
