@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./NutritionistSection.scss";
 import { Link } from "react-router-dom";
 import JoinButton from "../../../components/joinButton/joinButton";
+import JoinButton2 from "../../../components/joinButton/joinButton2";
 function NutritionistSection() {
   const [focusIndex, setFocusIndex] = useState(0);
   const nutritionistList = [
@@ -88,7 +89,7 @@ function NutritionistSection() {
             </div>
             <div className="home-nutritionist-button">
               <Link to="/Joinus">
-                <JoinButton
+                <JoinButton2
                   text="成為合作營養師"
                   to="/Joinus" />
            

@@ -99,11 +99,7 @@ function TrainerSection() {
               <JoinButton2
                text="成為合作教練"
                to="/Joinus" />
-              
-           
-                           
-                 
-              </Link>
+                            </Link>
               <Link to="/Joinus" >
                 <JoinButton
                   text="查看更多教練"
