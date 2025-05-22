@@ -216,7 +216,7 @@ a {
 
 .footer-overlaytext p {
     color: var(--dark, #3A2C19);
-    font-family: "Noto Sans TC", "Sans TC", sans-serif;
+    font-family: "Noto Sans TC", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 900;

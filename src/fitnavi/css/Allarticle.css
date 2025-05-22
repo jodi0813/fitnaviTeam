@@ -214,7 +214,7 @@ body {
   background: #FF8740;
   color: #FFF;
   text-align: center;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   font-size: var(--fontsize-H3, 18px);
   font-style: normal;
   font-weight: 700;
@@ -300,7 +300,7 @@ body {
   color: var(--primary, var(--primary, #FF8740));
   text-align: center;
   /* heading/標題4/Bold */
-  font-family: "Noto Sans TC";
+  font-family:"Noto Sans TC", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -315,7 +315,7 @@ body {
   color: var(--primary, var(--primary, #FF8740));
   text-align: center;
   /* 段落/16 */
-  font-family: "Noto Sans TC";
+  font-family:"Noto Sans TC", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

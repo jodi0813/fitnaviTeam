@@ -273,7 +273,7 @@ body {
   color: var(--primary, var(--primary, #FF8740));
   text-align: center;
   /* heading/標題4/Bold */
-  font-family: "Noto Sans TC";
+  font-family:"Noto Sans TC", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
