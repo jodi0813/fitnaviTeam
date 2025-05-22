@@ -156,6 +156,9 @@ body
   background-color: #FEFCF7; // 妳的底色
   overflow-x: hidden; // 有需要的話
 }
+label {
+  font-family: "Noto Sans TC", sans-serif;
+}
 
 // * {
 //   outline: 2px solid rgba(0, 0, 255, 0.2);
