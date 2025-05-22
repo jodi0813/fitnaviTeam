@@ -9,7 +9,6 @@ import Pagination from "../../components/Pagination/Pagination";
 
 //教練卡牌資料
 function Coach() {
-
   const coachList = [
     {
       name: "張莉筠 Lila",
@@ -255,15 +254,22 @@ function Coach() {
   const [filteredCoaches, setFilteredCoaches] = useState(coachList);
   const [currentPage, setCurrentPage] = useState(0);
 
-
   const handleSearch = (e) => {
     e.preventDefault();
     setCurrentPage(0); // 回到第一頁
     const result = coachList.filter((coach) => {
-      const matchCity = selectedCity === "" || coach.city === selectedCity;
-      const matchSex = selectedSex === "" || coach.sex === selectedSex;
+      const matchCity =
+        selectedCity === "all" ||
+        selectedCity === "" ||
+        coach.city === selectedCity;
+      const matchSex =
+        selectedSex === "all" ||
+        selectedSex === "" ||
+        coach.sex === selectedSex;
       const matchHashtag =
-        selectedHashtag === "" || coach.hashtags.includes(selectedHashtag);
+        selectedHashtag === "all" ||
+        selectedHashtag === "" ||
+        coach.hashtags.includes(selectedHashtag);
       const matchKeyword =
         keyword === "" ||
         coach.name.includes(keyword) ||
@@ -273,7 +279,6 @@ function Coach() {
     });
     setFilteredCoaches(result);
   };
-
 
   //一頁有九張卡牌
   const itemsPerPage = 9;
@@ -285,8 +290,7 @@ function Coach() {
     currentPage * itemsPerPage + itemsPerPage
   );
 
-
-/* 首頁連過來 */
+  /* 首頁連過來 */
   const location = useLocation();
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -294,14 +298,11 @@ function Coach() {
 
     if (hashtag) {
       setSelectedHashtag(hashtag);
+      setTimeout(() => {
+        handleSearch({ preventDefault: () => {} }); // 讓搜尋欄位顯示後再觸發搜尋
+      }, 0);
     }
-  }, [location.search]);
-  useEffect(() => {
-    if (selectedHashtag !== "") {
-      handleSearch({ preventDefault: () => {} }); // 模擬表單提交
-    }
-  }, [selectedHashtag]);
-
+  }, []);
 
   return (
     <>
@@ -311,7 +312,7 @@ function Coach() {
         {/* 上方搜尋列*/}
         <div className="searchBox">
           <form
-           action=""
+            action=""
             method="post"
             onSubmit={handleSearch}
             id="personal-search-form"
@@ -324,7 +325,10 @@ function Coach() {
               value={selectedCity}
               onChange={(e) => setSelectedCity(e.target.value)}
             >
-              <option value="">請選擇縣市</option>
+              <option value="" disabled hidden>
+                地區
+              </option>
+              <option value="all">全部區域</option>
               {cities.map((city) => (
                 <option key={city} value={city}>
                   {city}
@@ -338,7 +342,10 @@ function Coach() {
               value={selectedHashtag}
               onChange={(e) => setSelectedHashtag(e.target.value)}
             >
-              <option value="">訓練需求</option>
+              <option value="" disabled hidden>
+                訓練需求
+              </option>
+              <option value="all">全部類別</option>
               {trainingOptions.map((training) => (
                 <option key={training} value={training}>
                   {training}
@@ -352,7 +359,10 @@ function Coach() {
               value={selectedSex}
               onChange={(e) => setSelectedSex(e.target.value)}
             >
-              <option value="">性別</option>
+              <option value="" disabled hidden>
+                性別
+              </option>
+              <option value="all">全部</option>
               <option value="男">男</option>
               <option value="女">女</option>
             </select>

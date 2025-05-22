@@ -3,7 +3,6 @@
 #coachMain {
   padding: 120px 50px;
   width: 100%;
-
 }
 
 .searchBox {
@@ -15,8 +14,8 @@
 
 #personal-search-form {
   margin-top: 50px;
-   display: flex;
-   gap: 10px;
+  display: flex;
+  gap: 10px;
 
   #area,
   #trainingNeeds,
@@ -26,7 +25,6 @@
     padding: 8px 20px;
     border-radius: 999px;
     // appearance: none;
-
   }
 
   #keyword-search {
@@ -34,7 +32,16 @@
     height: 40px;
     padding: 8px 20px;
     border-radius: 999px;
-    border: 0.5px solid;
+    border: 0.5px solid #989794;
+    background-image: url("../../public/images/search-icon.svg");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+
+    &:focus {
+
+      border: 2px solid #ff8740;
+      // box-shadow: 1px 2px 4px 0px rgba(58, 44, 25, 0.2);
+    }
   }
 
   .submit {
@@ -52,14 +59,12 @@
   padding: 2% 15%;
 
   .coachNineCards {
- display: grid;
-  grid-template-columns: repeat(3, 1fr); // 一列三格
-  gap: 30px; // 同時控制橫向與直向間距
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 一列三格
+    gap: 30px; // 同時控制橫向與直向間距
   }
 
   .all-coach {
-    
     color: #ff8740;
     font-family: "Dela Gothic One", sans-serif;
     font-size: 80px;
@@ -73,10 +78,10 @@
   padding: 6px 24px;
   align-items: center;
   gap: 10px;
-.favoriteBt1{
+  .favoriteBt1 {
     display: flex;
-      gap: 24px;
-}
+    gap: 24px;
+  }
   .favoriteActive {
     outline: none;
     border-radius: 999px;
@@ -119,7 +124,7 @@
     }
 
     .n-count {
-      color: #56BD49;
+      color: #56bd49;
     }
   }
 }
