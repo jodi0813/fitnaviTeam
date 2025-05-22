@@ -12,8 +12,10 @@
       font-family: "Dela Gothic One", sans-serif;
     }
     .title2{
-      -webkit-text-strokeWidth: 1px;
-      -webkit-text-stroke-color: var(--dark, #3A2C19);
+      // -webkit-text-strokeWidth: 1px;
+      //   -webkit-text-stroke-color: var(--dark, #3a2c19);
+      // -webkit-text-stroke-color: var(--dark, #3A2C19); (繼旻改)
+      -webkit-text-stroke: 1px var(--dark, #3A2C19);
       font-family: "Mantou Sans";
       font-size: 24px;
       font-style: normal;

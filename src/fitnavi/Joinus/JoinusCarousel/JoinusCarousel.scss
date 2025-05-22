@@ -155,8 +155,11 @@
 }
 .Joinuscard-row .card:nth-child(3) {
     left: 50px;
+    top: 70px !important;
     z-index: 3;
     animation-delay: 0.3s;
+
+
 }
 .Joinuscard-row .card:nth-child(4) {
     left: 200px;
