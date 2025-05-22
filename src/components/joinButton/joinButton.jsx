@@ -11,7 +11,7 @@ const JoinButton = ({
 
   return (
     <button className='join-button' onClick={() => navigate(to)}>
-      <p>{text}</p>
+      <span>{text}</span>
       <img src={iconSrc} alt="button icon" />
     </button>
   );
