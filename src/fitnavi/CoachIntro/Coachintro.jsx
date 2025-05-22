@@ -224,6 +224,9 @@ function Coachintro() {
     return (
 
         <>
+        <main id="all">
+            
+        </main>
             <main id="Coachintro">
 
                 <MaintitleBread
