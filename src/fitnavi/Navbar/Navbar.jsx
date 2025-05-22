@@ -46,7 +46,7 @@ function Navbar() {
             登入 / 註冊
           </button>
 
-          {/* 手機版全畫面選單 */}
+          {/* 手機版全畫面選單
           <div className={`mobile-menu ${isMenuOpen ? "show" : ""}`}>
             <div className="mobile-title">
               <img src="/images/FitNAVI-favicon.png" alt="LOGO" />
@@ -68,7 +68,7 @@ function Navbar() {
             >
               登入 / 註冊
             </button>
-          </div>
+          </div> */}
         </nav>
       </div>
     </header>
