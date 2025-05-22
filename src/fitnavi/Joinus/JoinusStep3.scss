@@ -7,17 +7,17 @@
 }
 
 
-// #JoinusStep3-Form {
+// #Nutri-JoinusStep3-Form {
 //     padding: 120px 50px;
-//   width: 100vw;
+//     width: 100%;
 
 // }
 
-// .CoachJoinus-Step3-wrapper {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     height: 100vh; }// 讓它垂直滿版置中
+.CoachJoinus-Step3-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; // 讓它垂直滿版置中
 
 
     .CoachJoinus-Step3 {
@@ -43,8 +43,7 @@
         .Coach-JoinusStep3-title {
             display: flex;
             flex-direction: row;
-            gap: 10%;
-            width: 422px;
+            gap: 100px;
             margin-bottom: 40px;
             border-bottom: 1px solid #3a2c19;
 
@@ -57,7 +56,7 @@
                 white-space: nowrap;
 
                 h3 {
-                    color:  var(--dark, #3A2C19);
+                    color: var(--dark, #3A2C19);
                     text-align: center;
                     font-family: "Dela Gothic One";
                     font-size: 36px;
@@ -108,7 +107,7 @@
                     margin-bottom: 4px;
                     width: 193px;
                     // border-bottom: 1px solid #3A2C19;
-                    
+
 
 
 
@@ -195,8 +194,8 @@
                 display: flex;
                 flex-direction: row;
                 gap: 150%;
-                width: 199px;
-                // border-bottom: 1px solid #3A2C19;
+                width: 199px; // border-bottom: 1px solid #3A2C19;
+
 
                 h4 {
                     color: var(--dark, #3A2C19);
@@ -363,24 +362,10 @@
                 line-height: 140%;
                 /* 19.6px */
                 letter-spacing: 1.4px;
-
-                &:active {
-                    border-radius: 999px;
-                    background: var(--primary, #FF8740);
-
-                    color: var(--white, var(--white, #FEFCF7));
-                    text-align: center;
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 900;
-                    line-height: 140%;
-                    /* 19.6px */
-                    letter-spacing: 1.4px;
-                }
             }
 
 
 
         }
     }
+}
