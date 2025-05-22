@@ -80,7 +80,7 @@
                 .TurnButton {
                     display: flex;
                     flex-direction: row;
-                    align-items: flex-start;
+                    align-items: center;
                     gap: 17px;
                     // margin-left: 150px;
                     margin-top: 5%;
@@ -91,11 +91,11 @@
 
 
         .Nutriclass-container {
+            flex: 1;
 
-
-            box-sizing: border-box;
-            // flex: 1;
-            width: 50rem;
+            // box-sizing: border-box;
+            // // flex: 1;
+            // width: 50rem;
 
             .Nutri-personinfo {
                 .namefavorite {
@@ -1736,7 +1736,7 @@
                         }
                     }
 
-                  
+
                     &:focus,
                     &:focus-visible {
                         border: 1px solid #FF8740;

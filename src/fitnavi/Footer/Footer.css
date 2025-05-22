@@ -188,7 +188,7 @@ a {
     width: 50%;
     /* height: 50%; */
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 25%;
 
 }
@@ -199,8 +199,8 @@ a {
 .law {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     margin: 0px;
 }
 
@@ -211,7 +211,8 @@ a {
     font-size: 24px;
     font-style: normal;
     font-weight: 900;
-    line-height: 45px
+    /* line-height: 45px */
+    margin-bottom: 12px;
 }
 
 .footer-overlaytext p {
@@ -220,7 +221,7 @@ a {
     font-size: 16px;
     font-style: normal;
     font-weight: 900;
-    line-height: 45px;
+    line-height: 40px;
 }
 
 
@@ -279,13 +280,13 @@ a {
         }
 
         &::before {
-            left: -10px;
+            right: 150px;
             top: 30px;
             transform: rotate(45deg);
         }
 
         &::after {
-            right: -10px;
+            right: 80px;
             top: 30px;
             transform: rotate(135deg);
         }
