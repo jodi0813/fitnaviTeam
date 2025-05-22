@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./NutritionistSection.scss";
 import { Link } from "react-router-dom";
+import JoinButton from "../../../components/joinButton/joinButton";
 function NutritionistSection() {
   const [focusIndex, setFocusIndex] = useState(0);
   const nutritionistList = [
@@ -38,11 +39,10 @@ function NutritionistSection() {
         <div className="home-nutritionist1">
           {nutritionistList.map((nutritionist, i) => (
             <div
-              className={`${
-                i === focusIndex
+              className={`${i === focusIndex
                   ? "home-nutritionist-active"
                   : "home-nutritionist-none"
-              }`}
+                }`}
               key={i}
               onClick={() => setFocusIndex(i)}
             >
@@ -78,7 +78,7 @@ function NutritionistSection() {
                 <span className="home-nutritionist-titleCh">營養師</span>
                 <span className="home-nutritionist-titleEn">NUTRITIONIST</span>
               </div>
-              <div>
+              <div className="home-nutritionist-title3">
                 <span>
                   「有人帶，真的不一樣」
                   <br />
@@ -88,10 +88,16 @@ function NutritionistSection() {
             </div>
             <div className="home-nutritionist-button">
               <Link to="/Joinus">
-                <button>成為合作營養師</button>
+                <JoinButton
+                  text="成為合作營養師"
+                  to="/Joinus" />
+           
               </Link>
               <Link to="/nutritionist">
-                <button>查看更多營養師</button>
+                    <JoinButton
+                  text="成為合作營養師"
+                  to="/Joinus" />
+      
               </Link>
             </div>
           </div>
