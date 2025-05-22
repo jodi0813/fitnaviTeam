@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./TrainerSection.scss";
 import { Link } from "react-router-dom";
+import JoinButton from "../../../components/joinButton/joinButton";
 // import "../../../components/"
 function TrainerSection() {
   const [focusIndex, setFocusIndex] = useState(0);
@@ -94,7 +95,7 @@ function TrainerSection() {
             </div>
             <div className="home-trainer-button">
               <Link to="/Joinus">
-              {/* <Joinbutton></Joinbutton> */}
+              <JoinButton/>
                 <button>成為合作教練</button>
               </Link>
               <Link to="/Joinus">
