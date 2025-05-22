@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./TrainerSection.scss";
 import { Link } from "react-router-dom";
+// import "../../../components/"
 function TrainerSection() {
   const [focusIndex, setFocusIndex] = useState(0);
   const trainerList = [
@@ -42,9 +43,8 @@ function TrainerSection() {
         <div className="home-trainer1">
           {trainerList.map((trainer, i) => (
             <div
-              className={`home-trainer-card ${
-                i === focusIndex ? "home-trainer-active" : "home-trainer-none"
-              }`}
+              className={`home-trainer-card ${i === focusIndex ? "home-trainer-active" : "home-trainer-none"
+                }`}
               key={i}
               onClick={() => setFocusIndex(i)}
             >
@@ -94,6 +94,7 @@ function TrainerSection() {
             </div>
             <div className="home-trainer-button">
               <Link to="/Joinus">
+              {/* <Joinbutton></Joinbutton> */}
                 <button>成為合作教練</button>
               </Link>
               <Link to="/Joinus">
