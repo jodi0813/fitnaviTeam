@@ -16,7 +16,7 @@
   margin: 0 auto;
   padding: 0 24px; // 左右空間用 padding 做
 
-  @media (max-width: 393px) {
+  @media (max-width: 1024px) {
     max-width: 100%;
   }
 
@@ -36,7 +36,7 @@
       background-color: transparent;
       border: none;
 
-      @media (min-width: 394px) {
+      @media (min-width: 1024px) {
         display: none;
       }
 
@@ -50,7 +50,7 @@
 
     }
 
-    @media (max-width: 393px) {
+    @media (max-width: 1024px) {
       display: flex;
       width: 100%;
       padding: 4px 20px;
@@ -89,7 +89,7 @@
       // padding: 0px 25px;
       width: 100%;
 justify-content: space-evenly;
-      @media (max-width: 393px) {
+      @media (max-width: 1024px) {
         display: none; // 預設隱藏
 
 
@@ -125,7 +125,7 @@ justify-content: space-evenly;
     letter-spacing: 1.4px;
 
     /* 字距 */
-    @media (max-width: 393px) {
+    @media (max-width: 1024px) {
       display: none; // 預設隱藏
 
 
