@@ -95,19 +95,19 @@ video {
   vertical-align: baseline;
 }
 
-/* 重置字體 */
+/* 字體 */
 body {
   font-family:
-    /*西文*/
+    "Noto Sans TC", sans-serif,
+    /* 西文 */
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial,
-    /*中文*/
-    "蘋方-繁",
-    "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei",
-    "" Noto Sans TC", sans-serif; Sans TC", sans-serif, "Dela Gothic One";
+    /* 中文 */
+    "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC",
+    "微軟正黑體", "Microsoft JhengHei",
+    "Dela Gothic One";
   line-height: 1.5;
   background-color: #FEFCF7;
-
 }
 
 /* 重置標題 */
