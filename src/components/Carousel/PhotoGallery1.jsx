@@ -128,6 +128,7 @@ export default function PhotoGallery() {
           marginTop: 20,
           display: "flex",
           justifyContent: "center",
+          alignItems: "center",
           gap: 10,
         }}
       >
@@ -146,7 +147,7 @@ export default function PhotoGallery() {
               style={{
                 background: "none",
                 border: "none",
-                outline:"none",
+                outline: "none",
                 padding: 0,
                 width: 10,
                 height: 10,
