@@ -28,10 +28,10 @@
     //     flex-direction: row;
     // }
 
-    .BacktoPage {
-        display: flex;
-        flex-direction: row;
-    }
+    // .BacktoPage {
+    //     display: flex;
+    //     flex-direction: row;
+    // }
 
 
 
@@ -40,16 +40,16 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
-        // gap: 10%;
+        gap: 5%;
         width: 100%;
 
         .Nutri-person-class-photo {
-            margin-left: 100px;
-            flex: 2;
+            margin-left: 10%;
+            // flex: 2;
 
             .Nutri-photogallery {
-                width: 40rem;
-                height: 30rem;
+                width: 40%;
+                height: 30%;
 
 
                 .selfie {
@@ -82,7 +82,7 @@
                     flex-direction: row;
                     align-items: center;
                     gap: 17px;
-                    // margin-left: 150px;
+                    margin-left: 150px;
                     margin-top: 5%;
                 }
             }
@@ -91,11 +91,11 @@
 
 
         .Nutriclass-container {
-            flex: 1;
+            // flex: 1;
 
-            // box-sizing: border-box;
-            // // flex: 1;
-            // width: 50rem;
+            // // box-sizing: border-box;
+            // // // flex: 1;
+            // // width: 50rem;
 
             .Nutri-personinfo {
                 .namefavorite {
@@ -154,7 +154,8 @@
                 padding: 40px;
                 margin-top: 100px;
                 margin-bottom: 20px;
-
+                width: 120%;
+                white-space: nowrap;
 
 
                 .classtime {
@@ -162,7 +163,7 @@
                     flex-direction: row;
                     justify-content: flex-start;
                     align-items: center;
-                    gap: 20%;
+                    gap: 23%;
 
                     h2 {
                         color: var(--dark, #3A2C19);
@@ -307,7 +308,8 @@
                 }
 
                 .Nutri-prices-button {
-                    margin-bottom: 15px;
+                    // margin-bottom: 5px;
+                    margin-top: 5%;
 
                     p {
                         color: var(--dark, #3A2C19);
