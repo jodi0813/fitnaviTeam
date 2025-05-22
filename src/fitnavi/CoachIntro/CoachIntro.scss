@@ -1395,13 +1395,13 @@
             }
 
             &::before {
-                left: calc(33.333% + 10px);
+                left: calc(33.333% + 0px);
                 /* 第一條虛線 */
 
             }
 
             &::after {
-                left: calc(66.666% + 30px);
+                left: calc(66.666% + 3px);
                 /* 第二條虛線 */
 
             }
