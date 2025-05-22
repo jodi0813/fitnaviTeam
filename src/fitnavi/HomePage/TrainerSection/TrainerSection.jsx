@@ -42,9 +42,8 @@ function TrainerSection() {
         <div className="home-trainer1">
           {trainerList.map((trainer, i) => (
             <div
-              className={`home-trainer-card ${
-                i === focusIndex ? "home-trainer-active" : "home-trainer-none"
-              }`}
+              className={`home-trainer-card ${i === focusIndex ? "home-trainer-active" : "home-trainer-none"
+                }`}
               key={i}
               onClick={() => setFocusIndex(i)}
             >
