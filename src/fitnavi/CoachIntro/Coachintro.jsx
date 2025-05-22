@@ -312,7 +312,7 @@ function Coachintro() {
                             <p>上課地點<br />可選擇</p>
                             <div className="moreimg4" >
                                 <img src="/images/classplace-1.jpg" alt="" />
-                                <p>臺北市大安區Ａ健身房</p>
+                                <p>World Gym 台北大安店</p>
                             </div>
 
                             <div className="moreimg5">
@@ -372,7 +372,7 @@ function Coachintro() {
                         <h4>Specialty</h4>
                     </div>
 
-                    <div className="circlewrapper">
+                    <div className="coach-circlewrapper">
                         <div className="circle1">
                             <span>
                                 <h4>減脂訓練

@@ -56,7 +56,7 @@ export default function PhotoGallery() {
       top: 0,
       left: baseLeft,
       width: THUMB_WIDTH,
-      height: 100,
+      height: 130,
       borderRadius: 10,
       objectFit: "cover",
       boxShadow: "0 0 5px rgba(0,0,0,0.3)",
@@ -75,6 +75,15 @@ export default function PhotoGallery() {
 
   return (
     <div style={{ textAlign: "center", padding: 50 }}>
+      {/* ✅ 全局移除 img focus 的藍框 */}
+      <style>
+        {`
+          img:focus {
+            outline: none !important;
+          }
+        `}
+      </style>
+
       {/* 主圖 */}
       <img
         src={images[animating ? activeIndex : nextIndex ?? activeIndex]}
@@ -88,6 +97,7 @@ export default function PhotoGallery() {
           userSelect: "none",
         }}
         draggable={false}
+        tabIndex={-1} // ✅ 防止聚焦藍框
       />
 
       {/* 縮圖列 */}
@@ -95,7 +105,7 @@ export default function PhotoGallery() {
         style={{
           position: "relative",
           width: GALLERY_WIDTH,
-          height: 100,
+          height: 130,
           userSelect: "none",
         }}
       >
@@ -107,6 +117,7 @@ export default function PhotoGallery() {
               alt={`thumb${pos}`}
               style={getThumbStyle(pos, true)}
               draggable={false}
+              tabIndex={-1} // ✅ 防止聚焦藍框
             />
           ))}
 
@@ -118,25 +129,32 @@ export default function PhotoGallery() {
               alt={`thumb${pos}`}
               style={getThumbStyle(pos, false)}
               draggable={false}
+              tabIndex={-1} // ✅ 防止聚焦藍框
             />
           ))}
       </div>
 
-      {/* SVG 圓點按鈕（皆為灰色） */}
+      {/* 圓點按鈕 */}
       <div
         style={{
           marginTop: 20,
+          width: GALLERY_WIDTH,
+          margin: "20px auto 0",
           display: "flex",
           justifyContent: "center",
+          alignItems: "center",
           gap: 10,
         }}
       >
         {images.map((_, i) => {
-          const svg = `
-            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-              <circle cx="5" cy="5" r="5" fill="#989794"/>
-            </svg>
-          `;
+          const svg =
+            i === activeIndex
+              ? `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <circle cx="5" cy="5" r="5" fill="#f97316"/>
+                </svg>`
+              : `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <circle cx="5" cy="5" r="5" fill="#989794"/>
+                </svg>`;
 
           return (
             <button
@@ -146,6 +164,7 @@ export default function PhotoGallery() {
               style={{
                 background: "none",
                 border: "none",
+                outline: "none",
                 padding: 0,
                 width: 10,
                 height: 10,

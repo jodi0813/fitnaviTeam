@@ -336,7 +336,7 @@ function NutriIntro() {
                     </div>
 
                     <div id="aboutNutri">
-                        <div className="aboutcontent">
+                        <div className="Nutriaboutcontent">
                             <div className="about">
                                 <h3>關於營養師</h3>
                                 <h4>About</h4>
@@ -452,7 +452,7 @@ function NutriIntro() {
 
                 <section id="Nutri-reservation">
 
-                    <div className="reserve">
+                    <div className="nutrireserve">
                         <div className="restitle">
                             <h3>預約流程</h3>
                             <h4>Reserve Process</h4>
@@ -587,15 +587,16 @@ function NutriIntro() {
                             gridTemplateColumns: "repeat(3, 1fr)", // 每行 3 欄
                             gap: "50px",
                             maxWidth: "960px", // 3 張卡片寬 + gap
+                            
                             margin: "0 auto",  // 置中
                         }}>
 
                             {cardData.slice(0, 9).map((card, index) => (
                                 <div
-                                    key={index}
-                                    style={{
-                                        marginTop: (index === 1 || index === 4 || index === 7) ? "60px" : "10px" // 設定 marginTop
-                                    }}>
+                                key={index}
+                                style={{
+                                    marginTop: (index === 1 || index === 4 || index === 7) ? "60px" : "10px" // 設定 marginTop
+                                }}>
 
                                     <ColorCard
                                         key={index}
