@@ -308,102 +308,105 @@ function Coach() {
     <>
       <div id="coachMain">
         <MainTitle title1="健身教練" title2="找到專屬你的健身教練" />
-
-        {/* 上方搜尋列*/}
-        <div className="searchBox">
-          <form
-            action=""
-            method="post"
-            onSubmit={handleSearch}
-            id="personal-search-form"
-            title="健身教練搜尋"
-          >
-            {/* 搜尋地區 */}
-            <select
-              name="area"
-              id="area"
-              value={selectedCity}
-              onChange={(e) => setSelectedCity(e.target.value)}
-            >
-              <option value="" disabled hidden>
-                地區
-              </option>
-              <option value="all">全部區域</option>
-              {cities.map((city) => (
-                <option key={city} value={city}>
-                  {city}
-                </option>
-              ))}
-            </select>
-            {/* 搜尋訓練需求 */}
-            <select
-              name="trainingNeeds"
-              id="trainingNeeds"
-              value={selectedHashtag}
-              onChange={(e) => setSelectedHashtag(e.target.value)}
-            >
-              <option value="" disabled hidden>
-                訓練需求
-              </option>
-              <option value="all">全部類別</option>
-              {trainingOptions.map((training) => (
-                <option key={training} value={training}>
-                  {training}
-                </option>
-              ))}
-            </select>
-            {/* 搜尋性別 */}
-            <select
-              name="sex"
-              id="sex"
-              value={selectedSex}
-              onChange={(e) => setSelectedSex(e.target.value)}
-            >
-              <option value="" disabled hidden>
-                性別
-              </option>
-              <option value="all">全部</option>
-              <option value="男">男</option>
-              <option value="女">女</option>
-            </select>
-            {/* 搜尋關鍵字 */}
-            <label htmlFor="keyword-search"></label>
-            <input
-              type="search"
-              name="keyword-search"
-              id="keyword-search"
-              placeholder="關鍵字搜尋"
-              value={keyword}
-              onChange={(e) => setKeyword(e.target.value)}
-            ></input>
-            {/* 搜尋按鈕 */}
-            <input type="submit" value="搜尋" className="submit" />
-          </form>
-        </div>
-
-        {/* 教練卡牌 */}
         <div className="allCoachCards">
-          <div className="all-coach">全部教練</div>
-
-          {currentItems.length === 0 ? (
-            <div className="noResult">找不到符合條件的教練</div>
-          ) : (
-            <div>
-              <div className="coachNineCards">
-                {currentItems.map((coach, i) => (
-                  <CoachCard
-                    key={i}
-                    name={coach.name}
-                    role={coach.role}
-                    hashtags={coach.hashtags}
-                    description={coach.description}
-                    imageSrc={coach.imageSrc}
-                    link="/coachintro"
-                  />
+          {/* 上方搜尋列*/}
+          <div className="searchBox">
+            <form
+              action=""
+              method="post"
+              onSubmit={handleSearch}
+              id="personal-search-form"
+              title="健身教練搜尋"
+            >
+              {/* 搜尋地區 */}
+              <select
+                name="area"
+                id="area"
+                value={selectedCity}
+                onChange={(e) => setSelectedCity(e.target.value)}
+              >
+                <option value="" disabled hidden>
+                  地區
+                </option>
+                <option value="all">全部區域</option>
+                {cities.map((city) => (
+                  <option key={city} value={city}>
+                    {city}
+                  </option>
                 ))}
+              </select>
+              {/* 搜尋訓練需求 */}
+              <select
+                name="trainingNeeds"
+                id="trainingNeeds"
+                value={selectedHashtag}
+                onChange={(e) => setSelectedHashtag(e.target.value)}
+              >
+                <option value="" disabled hidden>
+                  訓練需求
+                </option>
+                <option value="all">全部類別</option>
+                {trainingOptions.map((training) => (
+                  <option key={training} value={training}>
+                    {training}
+                  </option>
+                ))}
+              </select>
+              {/* 搜尋性別 */}
+              <select
+                name="sex"
+                id="sex"
+                value={selectedSex}
+                onChange={(e) => setSelectedSex(e.target.value)}
+              >
+                <option value="" disabled hidden>
+                  性別
+                </option>
+                <option value="all">全部</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+              </select>
+              {/* 搜尋關鍵字 */}
+              <label htmlFor="keyword-search"></label>
+              <input
+                type="search"
+                name="keyword-search"
+                id="keyword-search"
+                placeholder="關鍵字搜尋"
+                value={keyword}
+                onChange={(e) => setKeyword(e.target.value)}
+              ></input>
+              {/* 搜尋按鈕 */}
+              <button type="button" value="搜尋" className="submit">
+                搜尋
+              </button>
+            </form>
+          </div>
+
+          {/* 教練卡牌 */}
+          <div>
+            <span className="all-coach">全部教練</span>
+
+            {currentItems.length === 0 ? (
+              <div className="noResult">找不到符合條件的教練</div>
+            ) : (
+              <div>
+                <div className="coachNineCards">
+                  {currentItems.map((coach, i) => (
+                    <CoachCard
+                      key={i}
+                      name={coach.name}
+                      role={coach.role}
+                      hashtags={coach.hashtags}
+                      description={coach.description}
+                      imageSrc={coach.imageSrc}
+                      link="/coachintro"
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
         <Pagination
           pageCount={pageCount}
