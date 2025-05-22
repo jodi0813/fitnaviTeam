@@ -13,11 +13,7 @@ function Navbar() {
               <span className="fit">Fit</span>
               <span className="navi">NAVI</span>
             </Link>
-            <button className="navbarHamburger">
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
-            </button>
+
             <div>
             <ul className="menu">
               <div>
@@ -58,7 +54,13 @@ function Navbar() {
             >
               登入 / 註冊
             </button>
+             <button className="navbarHamburger">
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
+            </button>
           </nav>
+          
         </div>
       </header>
     </>

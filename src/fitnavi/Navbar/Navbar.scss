@@ -7,8 +7,11 @@
   width: 100%;
   background: transparent;
   z-index: 999; //排序最高
-    @media (max-width: 1024px) {
+
+  @media (max-width: 1024px) {
     top: 0px;
+    display: flex;
+
   }
 }
 
@@ -24,6 +27,7 @@
   }
 
   #navbar {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,19 +38,17 @@
     backdrop-filter: blur(12px);
 
     @media (max-width: 1024px) {
-    border-radius:0px;
+      width: 100%;
+      border-radius: 0px;
+      display: flex;
+      background-color: #fff;
+
     }
 
     .navbarHamburger {
-
       cursor: pointer;
       background-color: transparent;
-      border: none;
-
-      @media (max-width: 1024px) {
-        display: flex;
-         border: 1px;
-      }
+      display: none;
 
       .bar {
         display: block;
@@ -54,21 +56,15 @@
         height: 3px;
         background-color: black;
         margin: 5px auto;
+        border: none;
+      }
+
+      @media (max-width: 1024px) {
+        display: block;
       }
 
     }
 
-    @media (max-width: 1024px) {
-      display: flex;
-      width: 100%;
-      padding: 4px 20px;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
-      background: #FFF;
-
-
-    }
 
     .logo {
       display: flex;
@@ -78,7 +74,10 @@
       margin: 13px;
       font-weight: 400;
       font-family: "Dela Gothic One";
+      @media (max-width: 1024px) {
 
+        
+      }
       .fit {
         font-size: 16px;
         color: #3a2c19;
@@ -101,9 +100,7 @@
       @media (max-width: 1024px) {
         display: none; // 預設隱藏
 
-
       }
-
 
       li {
         display: flex;
@@ -124,46 +121,13 @@
     color: #fff;
     display: flex;
     padding: 10px 24px;
-    /* 內距 */
     justify-content: center;
-    /* 置中 */
     border-radius: 999px;
-    /* 邊角 */
     font-size: 14px;
-    /* 字體大小 */
     letter-spacing: 1.4px;
 
-    /* 字距 */
     @media (max-width: 1024px) {
       display: none; // 預設隱藏
-
-
     }
   }
 }
-
-// @media (max-width: 393px) {
-//   .container {
-//     max-width: 100%;
-//     padding: 0 16px;
-
-//     #navbar {
-//       flex-wrap: wrap;
-
-//       .menu {
-//         display: none; // 預設隱藏
-//         width: 100%;
-//         padding: 0;
-//       }
-
-//       .hamburger {
-//         display: block;
-//       }
-
-//       .nbr-login {
-//         margin-top: 12px;
-//              display: none; // 預設隱藏
-//       }
-//     }
-//   }
-// }
