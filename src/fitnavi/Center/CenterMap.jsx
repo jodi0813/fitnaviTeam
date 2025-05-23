@@ -253,72 +253,74 @@ function CenterMap() {
       <MainTitle title1="找場地" title2="找到專屬你的健身場地" />
       <div className="mapSearchAll">
         <div className="mapSearchLeft">
-          <form id="center-search-form" onSubmit={handleSearch}>
-            <div className="nameCityArea">
-              <label htmlFor="centername">場館名稱</label>
-              <input
-                type="text"
-                id="centername"
-                placeholder="請輸入場館名稱"
-                value={searchData.name}
-                onChange={(e) =>
-                  setSearchData({ ...searchData, name: e.target.value })
-                }
-              />
+          <div className="mapSearchLeft1">
+            <form id="center-search-form" onSubmit={handleSearch}>
+              <div className="nameCityArea">
+                <label htmlFor="centername">場館名稱</label>
+                <input
+                  type="text"
+                  id="centername"
+                  placeholder="請輸入場館名稱"
+                  value={searchData.name}
+                  onChange={(e) =>
+                    setSearchData({ ...searchData, name: e.target.value })
+                  }
+                />
 
-              <label htmlFor="city">縣市</label>
-              <select
-                id="city"
-                value={searchData.city}
-                onChange={(e) =>
-                  setSearchData({ ...searchData, city: e.target.value })
-                }
-              >
-                <option value="">請選擇縣市</option>
-                {cities.map((city) => (
-                  <option key={city} value={city}>
-                    {city}
-                  </option>
+                <label htmlFor="city">縣市</label>
+                <select
+                  id="city"
+                  value={searchData.city}
+                  onChange={(e) =>
+                    setSearchData({ ...searchData, city: e.target.value })
+                  }
+                >
+                  <option value="">請選擇縣市</option>
+                  {cities.map((city) => (
+                    <option key={city} value={city}>
+                      {city}
+                    </option>
+                  ))}
+                </select>
+
+                <label htmlFor="area">地區</label>
+                <select
+                  id="area"
+                  value={searchData.area}
+                  onChange={(e) =>
+                    setSearchData({ ...searchData, area: e.target.value })
+                  }
+                >
+                  <option value="">請選擇地區</option>
+                  {taipeiDistricts.map((taipeiDistrict) => (
+                    <option key={taipeiDistrict} value={taipeiDistrict}>
+                      {taipeiDistrict}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <legend>服務項目</legend>
+              <fieldset className="centerItem">
+
+                {featureOptions.map((option, index) => (
+                  <div className="checkboxItem" key={index}>
+                    <input
+                      type="checkbox"
+                      id={`order${index + 1}`}
+                      value={option.value}
+                      checked={searchData.features.includes(option.value)}
+                      onChange={handleCheckboxChange}
+                    />
+                    <label htmlFor={`order${index + 1}`}>{option.label}</label>
+                  </div>
                 ))}
-              </select>
-
-              <label htmlFor="area">地區</label>
-              <select
-                id="area"
-                value={searchData.area}
-                onChange={(e) =>
-                  setSearchData({ ...searchData, area: e.target.value })
-                }
-              >
-                <option value="">請選擇地區</option>
-                {taipeiDistricts.map((taipeiDistrict) => (
-                  <option key={taipeiDistrict} value={taipeiDistrict}>
-                    {taipeiDistrict}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <fieldset className="centerItem">
-              <legend>服務項目 / 課程項目</legend>
-              {featureOptions.map((option, index) => (
-                <div className="checkboxItem" key={index}>
-                  <input
-                    type="checkbox"
-                    id={`order${index + 1}`}
-                    value={option.value}
-                    checked={searchData.features.includes(option.value)}
-                    onChange={handleCheckboxChange}
-                  />
-                  <label htmlFor={`order${index + 1}`}>{option.label}</label>
-                </div>
-              ))}
-            </fieldset>
-            <button type="submit" className="centerSearchBt">
-              搜尋
-            </button>
-          </form>
-          <div className="centerResultPhoto">
+              </fieldset>
+              <button type="submit" className="centerSearchBt">
+                搜尋
+              </button>
+            </form>
+          </div>
+          <div className="mapSearchLeft2">
             <div className="photosNumber">
               共有 <span>{filteredResults.length}</span> 間符合條件的場館
             </div>
@@ -334,7 +336,7 @@ function CenterMap() {
               >
                 <img src={gym.img} alt={gym.name} className="centerPic" />
                 {/* 遮罩效果：只有沒被選中的才顯示 */}
-                 <div className="overlay" />
+                <div className="overlay" />
 
 
                 <div className="gymCardText">

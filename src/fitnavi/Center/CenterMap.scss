@@ -7,187 +7,202 @@
 
   .mapSearchAll {
     display: flex;
-    gap: 2%;
+    flex: 1;
+  gap: 1%;
     overflow-x: hidden;
-    max-width: 100%; // 防止地圖撐破
+    width: 100%;
 
     .mapSearchLeft {
       display: flex;
-      // width: 20%;
+      width: 50%;
       justify-content: center;
-      gap: 10%;
+      gap: 4%;
 
-      #center-search-form {
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
+      .mapSearchLeft1 {
+        width: 50%;
 
-        .centerSearchBt {
+        #center-search-form {
           display: flex;
-          height: 40px;
-          max-width: 350px;
-          padding: 8px 84px;
-          justify-content: center;
-          align-items: center;
-          gap: 10px;
-          align-self: stretch;
-          border-radius: 999px;
-          background: #ff8740;
-          color: #fefcf7;
-          text-align: center;
-          /* heading/標題4/Bold */
-          font-family: "Noto Sans TC";
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-          letter-spacing: 2px;
+          flex-direction: column;
+          gap: 18px;
 
-        }
-
-        .nameCityArea {
-          label {
-            color: #3a2c19;
-            font-size: 14px;
+          .centerSearchBt {
+            display: flex;
+            height: 40px;
+            max-width: 350px;
+            padding: 8px 84px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+            border-radius: 999px;
+            background: #ff8740;
+            color: #fefcf7;
+            text-align: center;
+            /* heading/標題4/Bold */
+            font-family: "Noto Sans TC";
+            font-size: 20px;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 700;
             line-height: normal;
-          }
+            letter-spacing: 2px;
 
-          #centername,
-          #city,
-          #area {
-            font-size: 14px;
-            padding: 12px 16px;
-            border-radius: 20px;
-            border: 0.5px solid #3a2c19;
-            // background: #fefcf7;
-            width: 100%;
           }
 
           .nameCityArea {
+            label {
+              color: #3a2c19;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+
+            #centername,
+            #city,
+            #area {
+              font-size: 14px;
+              padding: 8px 20px;
+              border-radius: 20px;
+              border: 0.5px solid #3a2c19;
+              // background: #fefcf7;
+              width: 100%;
+            }
+
+            .nameCityArea {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 8px;
+
+              input {
+                width: 100%;
+              }
+            }
+          }
+
+          .centerItem {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
+            gap: 12px;
+            padding: 0px 24px;
 
-            input {
-              width: 100%;
+            overflow-y: auto; //卷軸
+            height: 350px;
+
+            legend {
+
+              font-size: 14px;
+            }
+
+            .checkboxItem {
+              display: flex;
+              gap: 14px;
+            }
+
+            label {
+              color: #3a2c19;
+              text-align: center;
+
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
             }
           }
         }
+      }
 
-        .centerItem {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-          padding: 0px 24px;
-          overflow: auto; //卷軸
-          height: 350px;
+      .mapSearchLeft2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        gap: 12px;
+        overflow: auto; //卷軸
+        height: 670px;
+        padding-right: 12px;
 
-          legend {
+        .photosNumber {
+          color: #3a2c19;
+          text-align: center;
+          font-family: "Noto Sans TC", sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+          letter-spacing: 1.6px;
 
-            font-size: 14px;
-          }
-
-          .checkboxItem {
-            display: flex;
-            gap: 14px;
-          }
-
-          label {
-            color: #3a2c19;
-            text-align: center;
-
-            font-size: 14px;
+          span {
+            color: #ff8740;
+            font-family: "Noto Sans TC";
+            font-size: 16px;
             font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+            font-weight: 500;
+            line-height: 150%;
+            letter-spacing: 1.6px;
           }
         }
-      }
-    }
 
-    .centerResultPhoto {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 60%;
-      gap: 12px;
-      overflow: auto; //卷軸
-      height: 670px;
-
-      .photosNumber {
-        color: var(--dark, #3a2c19);
-        text-align: center;
-        /* heading/標題4/medium */
-        font-family: "Noto Sans TC", sans-serif;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 40px;
-        /* 200% */
-        letter-spacing: 0.4px;
-
-        span {
-          color: #ff8740;
-        }
-      }
-
-      .gymCard {
-        position: relative;
-        cursor: pointer;
-       
-
-        &.active {
-          border: 5px solid #ff8740; // 橘色邊框
-          border-radius:12px;
-          box-sizing: border-box;
-        }
-
-        .centerPic {
-          width: 287px;
-          height: 162px;
-          // overflow: crop;
-          border-radius: 8px;
-        }
-
-        .overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
+        .gymCard {
+          position: relative;
+          cursor: pointer;
           width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.4); // 遮罩的黑色與透明度
-          z-index: 1;
-          transition: opacity 0.3s ease;
-             border-radius: 8px;
-        }
+          height: 162px;
 
-        .gymCardText {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          padding: 16px;
-          color: white;
-          z-index: 2;
-
-          h3 {
-            font-size: 14px;
+          &.active {
+            border: 5px solid #ff8740; // 橘色邊框
+            border-radius: 12px;
+            box-sizing: border-box;
           }
 
-          p {
-            margin: 0;
-            font-size: 12px;
-            line-height: 1.4;
-            font-weight: 400;
+          .centerPic {
+            width: 100%;
+            height: 162px;
+            overflow: crop;
+            border-radius: 8px;
+            display: block;
+          }
+
+          .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); // 遮罩的黑色與透明度
+            z-index: 1;
+            transition: opacity 0.3s ease;
+            border-radius: 8px;
+          }
+
+          .gymCardText {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 16px;
+            color: white;
+            z-index: 2;
+
+            h3 {
+              font-size: 14px;
+            }
+
+            p {
+              margin: 0;
+              font-size: 12px;
+              line-height: 1.4;
+              font-weight: 400;
+            }
           }
         }
       }
     }
+
+
 
     .mapPhotos {
-      width: 60%;
+      width: 50%;
       position: relative;
       overflow: hidden;
 
@@ -211,6 +226,7 @@
           // object-fit: cover;
           border-radius: 4px;
         }
+
       }
 
       .leaflet-container {
