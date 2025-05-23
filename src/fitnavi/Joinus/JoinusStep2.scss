@@ -102,12 +102,12 @@
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-            gap:270px;
+            gap: 270px;
             margin-bottom: 4px;
             width: 193px;
-            
+
             // border-bottom: 1px solid #3A2C19;
-            
+
 
             h4 {
                 color: var(--dark, #3A2C19);
@@ -303,13 +303,17 @@
         width: 100%;
         margin-top: 40px;
 
-        Button {
+
+
+
+        .Step2Pre-button {
+            width: 100px;
+            height: 40px;
+            border: 1px solid var(--dark, #3A2C19);
+            color: var(--dark, #3A2C19);
             margin: 0px;
             white-space: nowrap;
-
             border-radius: 999px;
-            border: 1px solid var(--primary, #FF8740);
-            color: var(--dark, #3A2C19);
             text-align: center;
             /* 段落/14 */
             font-family: "Noto Sans TC", sans-serif;
@@ -320,22 +324,35 @@
             /* 19.6px */
             letter-spacing: 1.4px;
 
-            &:active {
-                border-radius: 999px;
-                background: var(--primary, #FF8740);
-
-                color: var(--white, var(--white, #FEFCF7));
-                text-align: center;
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 900;
-                line-height: 140%;
-                /* 19.6px */
-                letter-spacing: 1.4px;
+            &:focus,
+            &:focus-visible {
+                outline: none;
             }
         }
 
+        .Step2Next-button {
+            width: 100px;
+            height: 40px;
+            border: 1px solid  #FF8740;
+            color:  #FF8740;
+            margin: 0px;
+            white-space: nowrap;
+            border-radius: 999px;
+            text-align: center;
+            /* 段落/14 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+
+            &:focus,
+            &:focus-visible {
+                outline: none;
+            }
+        }
 
 
     }

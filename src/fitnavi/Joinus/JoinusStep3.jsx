@@ -134,8 +134,8 @@ function JoinusStep3({onNext,onPre}) {
                     </div>
 
                     <div className='Step3-NextPreButton'>
-                        <button className='Pre-button' onClick={onPre} >◀ 上一步</button>
-                        <button className='Next-button' onClick={onNext}>下一步 ▶</button>
+                        <button className='Step3Pre-button' onClick={onPre} >◀ 上一步</button>
+                        <button className='Step3Next-button' onClick={onNext}>下一步 ▶</button>
                     </div>
                 </form>
 

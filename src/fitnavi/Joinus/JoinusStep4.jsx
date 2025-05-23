@@ -38,8 +38,8 @@ function JoinusStep4({ onPre, onSubmit }) {
                         </div>
                     </div>
                     <div className='PreSSendButton'>
-                        <button type="button" onClick={onPre}>◀ 上一步</button>
-                        <button type='submit' >送出申請 ▶</button>
+                        <button type="button" onClick={onPre} className='Step4Pre-button'>◀ 上一步</button>
+                        <button type='submit' className='SendButton'>送出申請 ▶</button>
                     </div>
                 </form>
             </div>

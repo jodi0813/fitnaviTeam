@@ -177,9 +177,35 @@
             align-items: center;
             width: 100%;
 
-            button {
+            .Step4Pre-button {
+                width: 100px;
+                height: 40px;
+                border: 1px solid var(--dark, #3A2C19);
+                color: var(--dark, #3A2C19);
+                margin: 0px;
+                white-space: nowrap;
+                border-radius: 999px;
+                text-align: center;
+                /* 段落/14 */
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+
+                &:focus,
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+
+            .SendButton {
+                outline: none;
                 border-radius: 999px;
                 border: 1px solid var(--primary, #FF8740);
+                color: #FF8740;
                 text-align: center;
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
