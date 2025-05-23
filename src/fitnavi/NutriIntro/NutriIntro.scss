@@ -38,13 +38,13 @@
     .Nutriintro-person {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         gap: 5%;
         width: 100%;
 
         .Nutri-person-class-photo {
-            margin-left: 10%;
+            margin-left: 5%;
             // flex: 2;
 
             .Nutri-photogallery {
@@ -154,7 +154,7 @@
                 padding: 40px;
                 margin-top: 100px;
                 margin-bottom: 20px;
-                width: 120%;
+                width: 100%;
                 white-space: nowrap;
 
 
@@ -163,7 +163,7 @@
                     flex-direction: row;
                     justify-content: flex-start;
                     align-items: center;
-                    gap: 23%;
+                    gap: 10%;
 
                     h2 {
                         color: var(--dark, #3A2C19);
@@ -493,7 +493,7 @@
         // margin-bottom: 150px;
         // margin-top: 100px;
         // margin-left: 40px;
-        gap: 10%;
+        gap: 2%;
         margin-bottom: 150px;
         margin-top: 100px;
 
@@ -594,7 +594,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
-                gap: 5%;
+                gap: 2%;
                 position: relative;
                 margin-top: 0px;
 
@@ -691,19 +691,19 @@
         justify-content: center;
         align-items: flex-start;
         margin-top: 80px;
-        margin-left: 5%;
+        // margin-left: 4%;
         // width: 100%;
 
 
         .spefield-wrapper {
-            margin-left: 14%;
-            padding-left: 0;
+
 
             .spetitle {
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
+                margin-left: 22%;
 
                 h3 {
                     color: #FF8740;
@@ -735,6 +735,9 @@
                     padding-bottom: 15px;
                 }
 
+                @media (min-width: 1440px) {
+                    margin-left: 25%;
+                }
 
             }
 
@@ -745,7 +748,7 @@
                 align-items: center;
                 position: relative;
                 gap: 0px;
-                margin-left: 40%;
+                margin-left: 60%;
                 margin-top: 30px;
 
                 .circle1,
@@ -807,6 +810,9 @@
                 }
 
 
+                @media (min-width: 1440px) {
+                    margin-left: 70%;
+                }
 
 
             }
@@ -830,11 +836,11 @@
         .Nutri-exp-cer-wrapper {
             display: flex;
             flex-direction: row;
-            gap: 15%;
+            gap: 5%;
 
             .expcontent {
-                // margin-left: 350px;
-                flex: 1;
+                margin-left: 10%;
+                // flex: 1;
 
                 .exptitle {
                     display: flex;
@@ -895,6 +901,10 @@
                         /* 200% */
                         letter-spacing: 0.4px;
                     }
+                }
+
+                @media (min-width: 1440px) {
+                    margin-left: 15%;
                 }
             }
 
@@ -980,26 +990,12 @@
         justify-content: center;
         align-self: flex-start;
         margin-top: 10%;
-        gap: 1%;
+        // gap: 1%;
 
 
         .nutrireserve {
-            // display: flex;
-            // flex-direction: column;
-            // margin: 0px;
-            // padding: 0px;
-            // gap: 70px;
-            // position: relative;
-            // flex: 1;
-            // display: flex;
-            // flex-direction: column;
-            // margin: 0px;
-            // padding: 0px;
-            // gap: 70px;
-            // position: relative;
-            // flex: 1;
-            // margin-right: -70px;
-            margin-left: 18%;
+
+            margin-left: 25%;
             flex: 1;
 
 
@@ -1153,6 +1149,10 @@
                     }
                 }
             }
+
+            @media (min-width: 1440px) {
+                margin-left: 30%;
+            }
         }
 
         .Nutri-calendar-reservetime {
@@ -1236,7 +1236,7 @@
         // margin-left: 300px;
         margin-top: 80px;
         position: relative;
-        margin-left: 4%;
+        margin-left: 2%;
 
 
         scroll-margin-top: 80px;
@@ -1246,7 +1246,7 @@
         .Nutriarticle-wrapper {
             display: flex;
             flex-direction: column;
-            margin-left: 15%;
+
 
 
             .articletitle {
@@ -1255,6 +1255,7 @@
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: flex-start;
+                margin-left: 15%;
 
                 h3 {
                     color: var(--primary, var(--primary, #FF8740));
@@ -1291,37 +1292,9 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                // padding-left: 0;
-                // margin-left: 0;
                 align-items: center;
-                gap: 10%;
+                gap: 4%;
                 margin-left: 0px;
-
-                .NutriViewArticles-left,
-                .NutriViewArticles-right {
-                    width: 48px;
-                    height: 48px;
-                    padding: 0;
-                    border: none;
-                    background: transparent;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-                }
-
-                .NutriViewArticles-left:focus,
-                .NutriViewArticles-left:focus-visible {
-                    outline: none;
-                    box-shadow: none;
-                }
-
-                .NutriViewArticles-right:focus,
-                .VNutriViewArticles-right:focus-visible {
-                    outline: none;
-                    box-shadow: none;
-                }
-
 
 
 
@@ -1331,13 +1304,45 @@
                     justify-content: center;
                     align-items: center;
                     margin-top: 80px;
-                    gap: 10%;
-                    flex: 2;
+                    gap: 2%;
+                    // flex: 2;
+
+                    .NutriViewArticles-left,
+                    .NutriViewArticles-right {
+                        width: 48px;
+                        height: 48px;
+                        padding: 0;
+                        border: none;
+                        background: transparent;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                    }
+
+                    .NutriViewArticles-left:focus,
+                    .NutriViewArticles-left:focus-visible {
+                        outline: none;
+                        box-shadow: none;
+                    }
+
+                    .NutriViewArticles-right:focus,
+                    .VNutriViewArticles-right:focus-visible {
+                        outline: none;
+                        box-shadow: none;
+                    }
+
+
+
                 }
 
             }
 
 
+        }
+
+        @media (min-width: 1440px) {
+            margin-left: 4%;
         }
 
     }
@@ -1370,7 +1375,7 @@
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: flex-start;
-                margin-left: 20%;
+                margin-left: 18%;
 
 
                 h3 {
@@ -1441,7 +1446,7 @@
                 position: relative;
                 justify-content: center;
 
-                
+
 
                 &::before,
                 &::after {
@@ -1471,7 +1476,7 @@
                     justify-content: flex-start;
                     align-items: center;
                 }
-    
+
 
 
 

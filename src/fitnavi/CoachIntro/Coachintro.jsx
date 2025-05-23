@@ -235,7 +235,7 @@ function Coachintro() {
                     breadcrumbList={[
                         { label: "首頁", link: "/" },
                         { label: "健身教練", link: "/Coach" },
-                        { label: "張俐筠 Lila" },
+                        { label: "張莉筠 Lila" },
                     ]}
                 />
 
@@ -254,7 +254,7 @@ function Coachintro() {
                     <div className="Coachclass-container">
                         <div className="personinfo">
                             <div className="namefavorite">
-                                <h2>張俐筠 Lila</h2>
+                                <h2>張莉筠Lila</h2>
                                 <button onClick={() => setLiked(!liked)} className="like-button">
                                     {liked ? (
                                         <IoMdHeart size={30} color="#FF8740" />

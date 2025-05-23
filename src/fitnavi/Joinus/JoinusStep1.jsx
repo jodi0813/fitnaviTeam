@@ -44,7 +44,11 @@ function JoinusStep1({ onNext }) {
         </div>
 
         <button className="Step1-form-button" type="submit">
-          下一步 ▶
+          <span>下一步</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+            <path d="M10 6L0 0.226497V11.7735L10 6Z" fill="#FF8740" />
+          </svg>
+
         </button>
       </form>
     </section>

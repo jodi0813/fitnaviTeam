@@ -280,13 +280,13 @@ a {
         }
 
         &::before {
-            right: 150px;
+            right: 60%;
             top: 30px;
             transform: rotate(45deg);
         }
 
         &::after {
-            right: 80px;
+            right: 20%;
             top: 30px;
             transform: rotate(135deg);
         }

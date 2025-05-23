@@ -515,13 +515,13 @@ function NutriIntro() {
                         </div>
 
                         <div className="Nutri-ViewArticles">
-
+                            <button className="NutriViewArticles-left" onClick={goNext}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <path d="M30 36L18 24L30 12" stroke="#3A2C19" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg></button>
 
                             <div className="Three-classcards">
-                                <button className="NutriViewArticles-left" onClick={goNext}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                        <path d="M30 36L18 24L30 12" stroke="#3A2C19" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg></button>
+
                                 {nutrivisibleCards.map((card, index) => (
 
                                     <Articlecards
@@ -537,12 +537,12 @@ function NutriIntro() {
                                     />
                                 ))}
 
-                                <button className=" NutriViewArticles-right" onClick={goBack}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="26" viewBox="0 0 14 26" fill="none">
-                                        <path d="M1 25L13 13L1 1" stroke="#3A2C19" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg></button>
-                            </div>
 
+                            </div>
+                            <button className=" NutriViewArticles-right" onClick={goBack}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="26" viewBox="0 0 14 26" fill="none">
+                                    <path d="M1 25L13 13L1 1" stroke="#3A2C19" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg></button>
 
                         </div>
                     </div>
@@ -587,16 +587,16 @@ function NutriIntro() {
                             gridTemplateColumns: "repeat(3, 1fr)", // 每行 3 欄
                             gap: "50px",
                             maxWidth: "960px", // 3 張卡片寬 + gap
-                            
+
                             margin: "0 auto",  // 置中
                         }}>
 
                             {cardData.slice(0, 9).map((card, index) => (
                                 <div
-                                key={index}
-                                style={{
-                                    marginTop: (index === 1 || index === 4 || index === 7) ? "60px" : "10px" // 設定 marginTop
-                                }}>
+                                    key={index}
+                                    style={{
+                                        marginTop: (index === 1 || index === 4 || index === 7) ? "60px" : "10px" // 設定 marginTop
+                                    }}>
 
                                     <ColorCard
                                         key={index}

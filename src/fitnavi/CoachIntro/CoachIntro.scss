@@ -37,14 +37,14 @@
     .Coachintro-person {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         gap: 5%;
         width: 100%;
 
 
         .person-class-photo {
-            margin-left: 10%;
+            margin-left: 5%;
             // flex: 1;
 
             .coachphotos {
@@ -150,7 +150,7 @@
                 padding: 40px;
                 margin-top: 100px;
                 margin-bottom: 20px;
-                width: 105%;
+                width: 100%;
                 white-space: nowrap;
 
 
@@ -194,7 +194,7 @@
                     p {
                         color: var(--dark, #3A2C19);
                         /* heading/標題4/medium */
-                        font-family: "Noto Sans TC", sans-serif; 
+                        font-family: "Noto Sans TC", sans-serif;
                         font-size: 20px;
                         font-style: normal;
                         font-weight: 500;
@@ -309,7 +309,7 @@
                     p {
                         color: var(--dark, #3A2C19);
                         /* heading/標題4/medium */
-                        font-family:"Noto Sans TC", sans-serif;
+                        font-family: "Noto Sans TC", sans-serif;
                         font-size: 20px;
                         font-style: normal;
                         font-weight: 500;
@@ -356,7 +356,7 @@
                                 transition: opacity 0.3s ease, transform 0.3s ease;
                             }
 
-                         
+
 
                             &:hover {
 
@@ -371,7 +371,7 @@
                                     color: var(--primary, var(--primary, #FF8740));
                                     text-align: center;
                                     /* heading/標題4/Bold */
-                                    font-family:"Noto Sans TC", sans-serif;
+                                    font-family: "Noto Sans TC", sans-serif;
                                     font-size: 14px;
                                     font-style: normal;
                                     font-weight: 700;
@@ -448,8 +448,8 @@
         }
 
         img {
-            width: 15rem;
-            height: 11rem;
+            width: 14rem;
+            height: 10rem;
             margin-bottom: 0px;
             padding: 0px;
             margin-top: 15px;
@@ -465,7 +465,7 @@
                 writing-mode: horizontal-tb;
                 color: var(--dark, #3A2C19);
                 /* heading/標題4/medium */
-                font-family:"Noto Sans TC", sans-serif;
+                font-family: "Noto Sans TC", sans-serif;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 500;
@@ -491,8 +491,8 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
-        gap: 10%;
-        margin-bottom: 150px;
+        gap: 5%;
+        margin-bottom: 100px;
         margin-top: 100px;
 
         .coachnav {
@@ -559,7 +559,7 @@
         }
 
         #aboutCoach {
-            width: 80%;
+            width: 100%;
             margin-top: 20px;
             justify-content: center;
 
@@ -580,7 +580,7 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
-                gap: 5%;
+                gap: 2%;
                 position: relative;
                 margin-top: 0px;
 
@@ -634,7 +634,7 @@
 
                     svg {
                         position: relative;
-                        bottom: 70px;
+                        bottom: 80px;
                         left: 150px;
                     }
 
@@ -676,7 +676,7 @@
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-            margin-left: 17%;
+            margin-left: 15%;
 
             h3 {
                 color: #FF8740;
@@ -708,6 +708,9 @@
                 padding-bottom: 15px;
             }
 
+            @media (min-width: 1440px) {
+                margin-left: 18%;
+            }
 
         }
 
@@ -718,7 +721,7 @@
             align-items: center;
             position: relative;
             gap: 0px;
-            margin-left: 20%;
+            margin-left: 12%;
             margin-top: 30px;
 
             .circle1,
@@ -802,7 +805,7 @@
         gap: 1%;
 
         .expcontent {
-            margin-left: 18%;
+            margin-left: 15%;
             flex: 1;
 
             .exptitle {
@@ -863,6 +866,10 @@
                     /* 200% */
                     letter-spacing: 0.4px;
                 }
+            }
+
+            @media (min-width: 1440px) {
+                margin-left: 18%;
             }
         }
 
@@ -947,7 +954,7 @@
 
 
         .reserve {
-            margin-left: 18%;
+            margin-left: 15%;
             flex: 1;
 
 
@@ -1103,6 +1110,10 @@
 
 
             }
+
+            @media (min-width: 1440px) {
+                margin-left: 18%;
+            }
         }
 
         .Coach-Available-reservetime {
@@ -1200,7 +1211,7 @@
             flex-direction: row;
             justify-content: flex-start;
             align-items: flex-start;
-            margin-left: 18%;
+            margin-left: 15%;
 
             h3 {
                 color: var(--primary, var(--primary, #FF8740));
@@ -1229,15 +1240,19 @@
                 letter-spacing: 1.4px;
                 margin-left: 15px;
             }
+
+            @media (min-width: 1440px) {
+                margin-left: 18%;
+            }
         }
 
         .ViewArticles {
 
             display: flex;
             flex-direction: row;
-            justify-content: space-between; // 或 center 看需求
+            justify-content: space-between; 
             align-items: center;
-            gap: 8%;
+            gap: 6%;
 
             margin-left: auto;
             margin-right: auto;
@@ -1318,7 +1333,7 @@
             flex-direction: row;
             justify-content: flex-start;
             align-items: flex-start;
-            margin-left: 18%;
+            margin-left: 15%;
 
 
             h3 {
@@ -1348,6 +1363,9 @@
                 padding-bottom: 15px;
             }
 
+            @media (min-width: 1440px) {
+                margin-left: 18%;
+            }
 
         }
 
@@ -1537,7 +1555,7 @@
                         color: var(--primary, var(--primary, #FF8740));
                         text-align: center;
                         /* heading/標題4/Bold */
-                        font-family:"Noto Sans TC", sans-serif;
+                        font-family: "Noto Sans TC", sans-serif;
                         font-size: 14px;
                         font-style: normal;
                         font-weight: 700;
