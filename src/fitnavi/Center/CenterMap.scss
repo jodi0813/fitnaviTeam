@@ -21,6 +21,7 @@
         display: flex;
         flex-direction: column;
         gap: 18px;
+
         .centerSearchBt {
           display: flex;
           height: 40px;
@@ -42,7 +43,8 @@
           line-height: normal;
           letter-spacing: 2px;
 
-        }  
+        }
+
         .nameCityArea {
           label {
             color: #3a2c19;
@@ -110,7 +112,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 50%;
+      width: 60%;
       gap: 12px;
       overflow: auto; //卷軸
       height: 670px;
@@ -135,11 +137,31 @@
       .gymCard {
         position: relative;
         cursor: pointer;
+       
+
+        &.active {
+          border: 5px solid #ff8740; // 橘色邊框
+          border-radius:12px;
+          box-sizing: border-box;
+        }
+
         .centerPic {
           width: 287px;
           height: 162px;
-          overflow: crop;
+          // overflow: crop;
           border-radius: 8px;
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.4); // 遮罩的黑色與透明度
+          z-index: 1;
+          transition: opacity 0.3s ease;
+             border-radius: 8px;
         }
 
         .gymCardText {
@@ -148,6 +170,7 @@
           left: 0;
           padding: 16px;
           color: white;
+          z-index: 2;
 
           h3 {
             font-size: 14px;
@@ -167,8 +190,9 @@
       width: 60%;
       position: relative;
       overflow: hidden;
+
       .mapPopup {
-      
+
         p {
           margin: 4px 0 0;
           font-weight: bold;
@@ -177,7 +201,8 @@
           font-size: 12px;
           font-style: normal;
           font-weight: 400;
-          line-height: normal;  text-align: center;
+          line-height: normal;
+          text-align: center;
         }
 
         img {
@@ -187,6 +212,7 @@
           border-radius: 4px;
         }
       }
+
       .leaflet-container {
         width: 100%;
         height: 600px;
@@ -198,6 +224,7 @@
         // height: 80%;
         padding-left: 10%;
       }
+
       .mapMarker {
         position: absolute;
         transform: translate(-50%, -100%);
@@ -234,7 +261,7 @@
             margin: 4px 0 0;
             font-weight: bold;
             color: #3a2c19;
-  
+
             font-size: 14px;
             font-style: normal;
             font-weight: 400;

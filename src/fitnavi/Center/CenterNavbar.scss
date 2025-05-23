@@ -30,6 +30,7 @@
     font-weight: 900;
     line-height: 140%;
     letter-spacing: 1.4px;
+    outline: none;
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-skip-ink: none;
@@ -47,6 +48,8 @@
     font-weight: 500;
     line-height: 140%;
     letter-spacing: 1.4px;
+    outline: none;
+
   }
 }
 
@@ -54,16 +57,73 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  .centerPhotos {
+  width: 100%;
+  gap: 24px;
+
+  .centerPhotosBox {
     display: flex;
-    width: 315px;
-    height: 200px;
-  }
-    .social-icons {
-    display: flex;
-    gap: 36px;
-    justify-content: center;
     align-items: center;
+    width: 100%;
+
+    .centerPhotos {
+      display: flex;
+      width: 100%;
+      height: 200px;
+      gap: 11px;
+
+      img {
+        border-radius: 8px;
+      }
+    }
+
+    button {
+      border: none;
+      background: transparent;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 36px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .center-introduce {
+    display: flex;
+    padding: 0px 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    .center-sTitle {
+      width: 250px;
+      position: relative;
+      color: #3A2C19;
+      text-align: center;
+      /* 段落/16 */
+      font-family: "Noto Sans TC";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      /* 24px */
+      letter-spacing: 1.6px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px; // 距離文字的距離
+        width: 100%;
+        height: 1px;
+        background-color: #ff8740;
+      }
+    }
   }
 }
 
@@ -75,6 +135,7 @@
   gap: 64px;
   width: 100%;
   width: 1140px;
+
   ul li {
     color: #3a2c19;
     font-size: 20px;
@@ -90,6 +151,7 @@
       letter-spacing: 1.6px;
     }
   }
+
   /* 基本資料 */
   .basicVenueInfo {
     display: flex;
@@ -101,6 +163,7 @@
     .informationLeft {
       display: flex;
       flex-direction: column;
+
       .informationList {
         padding: 0px 36px;
       }
@@ -109,6 +172,11 @@
     .informationRight {
       width: 390px;
       height: 382px;
+
+      img {
+
+        border-radius: 16px;
+      }
     }
   }
 
@@ -120,6 +188,7 @@
     justify-content: space-between;
     align-items: flex-start;
     align-self: stretch;
+
     .contactInfo {
       display: flex;
       flex: 1;
@@ -127,35 +196,41 @@
     }
   }
 
-  /* 二、環境設施 */
-  #facilities {
-    /* 有氧器材 */
 
-    /* 重訓器材 */
-    .weightTrainingArea {
+}
+
+/* 二、環境設施 */
+#facilities {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  /* 有氧器材 */
+
+  /* 重訓器材 */
+  .weightTrainingArea {
+    display: flex;
+    // padding: 0px 400px;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .weightTrainingAreaPhotos {
       display: flex;
-      // padding: 0px 400px;
-      flex-direction: column;
-      justify-content: flex-start;
-
-      .weightTrainingAreaPhotos {
-        display: flex;
-        width: 300px;
-        height: 200px;
-      }
+      width: 300px;
+      height: 200px;
     }
+  }
 
-    /* 更衣淋浴 */
-    .showerArea {
+  /* 更衣淋浴 */
+  .showerArea {
+    display: flex;
+    // padding: 0px 400px;
+    flex-direction: column;
+
+    .showerAreaPhotos {
       display: flex;
-      // padding: 0px 400px;
-      flex-direction: column;
-
-      .showerAreaPhotos {
-        display: flex;
-        width: 300px;
-        height: 200px;
-      }
+      width: 300px;
+      height: 200px;
     }
   }
 }

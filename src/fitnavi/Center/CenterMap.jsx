@@ -107,85 +107,85 @@ function CenterMap() {
       latlng: [24.8047, 120.9714],
     },
     {
-    name: "力與美健身館(台北館)",
-    city: "台北市",
-    area: "信義區",
-    features: ["重訓器材", "有氧器材", "淋浴間", "24小時營業"],
-    img: "./images/center8.jpg",
-    latlng: [25.0338, 121.5623],
-  },
-  {
-    name: "鋼鐵體能(新北板橋館)",
-    city: "新北市",
-    area: "板橋區",
-    features: ["有氧器材", "團體課程", "女性專區"],
-    img: "./images/center9.jpg",
-    latlng: [25.0142, 121.4671],
-  },
-  {
-    name: "動能基地(桃園藝文館)",
-    city: "桃園市",
-    area: "桃園區",
-    features: ["私人教練", "月費", "重訓器材"],
-    img: "./images/center10.jpg",
-    latlng: [24.9917, 121.3116],
-  },
-  {
-    name: "爆汗健身俱樂部(新竹館)",
-    city: "新竹市",
-    area: "北區",
-    features: ["有氧器材", "拳擊有氧", "淋浴間"],
-    img: "./images/center11.jpg",
-    latlng: [24.8056, 120.9712],
-  },
-  {
-    name: "野訓場Fitness(台中西屯館)",
-    city: "台中市",
-    area: "西屯區",
-    features: ["重訓器材", "飛輪", "24小時營業"],
-    img: "./images/center12.jpg",
-    latlng: [24.1807, 120.6427],
-  },
-  {
-    name: "全能健身中心(嘉義館)",
-    city: "嘉義市",
-    area: "東區",
-    features: ["私人教練", "TRX懸吊訓練", "淋浴間"],
-    img: "./images/center13.jpg",
-    latlng: [23.4836, 120.4524],
-  },
-  {
-    name: "力量製造所(台南永康館)",
-    city: "台南市",
-    area: "永康區",
-    features: ["重訓器材", "團體課程", "補給品販賣機"],
-    img: "./images/center14.jpg",
-    latlng: [23.0212, 120.2530],
-  },
-  {
-    name: "鐵魂訓練所(高雄三民館)",
-    city: "高雄市",
-    area: "三民區",
-    features: ["淋浴間", "有氧舞蹈", "女性專區"],
-    img: "./images/center15.jpg",
-    latlng: [22.6477, 120.3233],
-  },
-  {
-    name: "FitZone(屏東館)",
-    city: "屏東縣",
-    area: "屏東市",
-    features: ["重訓器材", "瑜珈", "月費"],
-    img: "./images/center16.jpg",
-    latlng: [22.6783, 120.4903],
-  },
-  {
-    name: "北方健身工廠(基隆館)",
-    city: "基隆市",
-    area: "仁愛區",
-    features: ["飛輪", "重訓器材", "女性專區"],
-    img: "./images/center17.jpg",
-    latlng: [25.1290, 121.7415],
-  },
+      name: "力與美健身館(台北館)",
+      city: "台北市",
+      area: "信義區",
+      features: ["重訓器材", "有氧器材", "淋浴間", "24小時營業"],
+      img: "./images/center8.jpg",
+      latlng: [25.0338, 121.5623],
+    },
+    {
+      name: "鋼鐵體能(新北板橋館)",
+      city: "新北市",
+      area: "板橋區",
+      features: ["有氧器材", "團體課程", "女性專區"],
+      img: "./images/center9.jpg",
+      latlng: [25.0142, 121.4671],
+    },
+    {
+      name: "動能基地(桃園藝文館)",
+      city: "桃園市",
+      area: "桃園區",
+      features: ["私人教練", "月費", "重訓器材"],
+      img: "./images/center10.jpg",
+      latlng: [24.9917, 121.3116],
+    },
+    {
+      name: "爆汗健身俱樂部(新竹館)",
+      city: "新竹市",
+      area: "北區",
+      features: ["有氧器材", "拳擊有氧", "淋浴間"],
+      img: "./images/center11.jpg",
+      latlng: [24.8056, 120.9712],
+    },
+    {
+      name: "野訓場Fitness(台中西屯館)",
+      city: "台中市",
+      area: "西屯區",
+      features: ["重訓器材", "飛輪", "24小時營業"],
+      img: "./images/center12.jpg",
+      latlng: [24.1807, 120.6427],
+    },
+    {
+      name: "全能健身中心(嘉義館)",
+      city: "嘉義市",
+      area: "東區",
+      features: ["私人教練", "TRX懸吊訓練", "淋浴間"],
+      img: "./images/center13.jpg",
+      latlng: [23.4836, 120.4524],
+    },
+    {
+      name: "力量製造所(台南永康館)",
+      city: "台南市",
+      area: "永康區",
+      features: ["重訓器材", "團體課程", "補給品販賣機"],
+      img: "./images/center14.jpg",
+      latlng: [23.0212, 120.2530],
+    },
+    {
+      name: "鐵魂訓練所(高雄三民館)",
+      city: "高雄市",
+      area: "三民區",
+      features: ["淋浴間", "有氧舞蹈", "女性專區"],
+      img: "./images/center15.jpg",
+      latlng: [22.6477, 120.3233],
+    },
+    {
+      name: "FitZone(屏東館)",
+      city: "屏東縣",
+      area: "屏東市",
+      features: ["重訓器材", "瑜珈", "月費"],
+      img: "./images/center16.jpg",
+      latlng: [22.6783, 120.4903],
+    },
+    {
+      name: "北方健身工廠(基隆館)",
+      city: "基隆市",
+      area: "仁愛區",
+      features: ["飛輪", "重訓器材", "女性專區"],
+      img: "./images/center17.jpg",
+      latlng: [25.1290, 121.7415],
+    },
   ];
 
   const featureOptions = [
@@ -325,7 +325,7 @@ function CenterMap() {
 
             {filteredResults.map((gym, i) => (
               <div
-                className="gymCard"
+                className={`gymCard ${activeGymIndex === i ? "active" : ""}`}
                 key={i}
                 onClick={() => {
                   setActiveGymIndex(i);
@@ -333,6 +333,10 @@ function CenterMap() {
                 }}
               >
                 <img src={gym.img} alt={gym.name} className="centerPic" />
+                {/* 遮罩效果：只有沒被選中的才顯示 */}
+                 <div className="overlay" />
+
+
                 <div className="gymCardText">
                   <h3>{gym.name}</h3>
                   <p>{gym.features.map((f) => `#${f}`).join(" ")}</p>
