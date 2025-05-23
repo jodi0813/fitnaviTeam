@@ -103,7 +103,7 @@
                     flex-direction: row;
                     justify-content: flex-start;
                     align-items: center;
-                    gap: 120%;
+                    gap: 150%;
                     margin-bottom: 4px;
                     width: 193px;
                     // border-bottom: 1px solid #3A2C19;
@@ -141,7 +141,7 @@
 
                 textarea {
                     height: 156px;
-                    width: 393px;
+                    width: 440px;
                     border-radius: 8px;
                     border: 1px solid var(--dark, #3A2C19);
                     background: var(--white, #FEFCF7);
@@ -176,7 +176,7 @@
                     button {
                         margin-right: 18px;
                         border-radius: 999px;
-                        border: 1px solid var(--primary, #FF8740);
+                        border: 1px solid var(--primary, #3A2C19);
                         color: var(--dark, #3A2C19);
                         text-align: center;
                         font-family: "Noto Sans TC", sans-serif;
@@ -186,6 +186,11 @@
                         line-height: 140%;
                         /* 14px */
                         letter-spacing: 1px;
+                    }
+
+                    .Aboutme-upload{
+                        border: 1px solid #FF8740;
+                        color:#FF8740;
                     }
                 }
             }

@@ -112,9 +112,8 @@
             letter-spacing: 1.4px;
         }
 
-        input:focus+label {
-            color: var(--dark, #3A2C19);
-            /* 段落/14 */
+        input:focus {
+            outline: #FF8740;
 
         }
 
