@@ -488,8 +488,8 @@
     .nav-nav-content {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         // margin-bottom: 150px;
         // margin-top: 100px;
         // margin-left: 40px;
@@ -588,6 +588,7 @@
                 line-height: 40px;
                 /* 200% */
                 letter-spacing: 0.4px;
+                margin-left: 20px;
             }
 
             .Nutriaboutcontent {
@@ -602,8 +603,9 @@
                 .about {
                     display: flex;
                     flex-direction: row;
-                    justify-content: flex-start;
+                    justify-content: center;
                     align-items: center;
+                    margin-left: 25px;
 
                     h3 {
                         width: 138px;
@@ -689,7 +691,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         margin-top: 80px;
         // margin-left: 4%;
         // width: 100%;
@@ -703,7 +705,7 @@
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
-                margin-left: 22%;
+                // margin-left: 22%;
 
                 h3 {
                     color: #FF8740;
@@ -735,9 +737,9 @@
                     padding-bottom: 15px;
                 }
 
-                @media (min-width: 1440px) {
-                    margin-left: 25%;
-                }
+                // @media (min-width: 1440px) {
+                //     margin-left: 25%;
+                // }
 
             }
 
@@ -748,7 +750,7 @@
                 align-items: center;
                 position: relative;
                 gap: 0px;
-                margin-left: 60%;
+                // margin-left: 60%;
                 margin-top: 30px;
 
                 .circle1,
@@ -829,7 +831,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-self: flex-start;
+        align-self: center;
         margin-top: 300px;
 
 
@@ -903,9 +905,9 @@
                     }
                 }
 
-                @media (min-width: 1440px) {
-                    margin-left: 15%;
-                }
+                // @media (min-width: 1440px) {
+                //     margin-left: 15%;
+                // }
             }
 
             .certificate {
@@ -1579,9 +1581,8 @@
                     img {
                         width: 24px;
                         height: 24px;
-                        position: absolute;
-                        left: 65%;
-                        top: 30%;
+                        position: relative;
+                       
                         opacity: 0;
                         // transform: translateX(10px); // 預設略偏右
                         transition: opacity 0.3s ease, transform 0.3s ease;

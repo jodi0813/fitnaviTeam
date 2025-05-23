@@ -96,11 +96,11 @@ video {
   vertical-align: baseline;
 }
 
-/* 重置字體 */
+/* 字體 */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "" Noto Sans TC ", sans-serif; Sans TC", sans-serif, "Dela Gothic One";
+  font-family: "Noto Sans TC", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Dela Gothic One";
   line-height: 1.5;
-  background-color: #FEFCF7;
+  background-color: #fefcf7;
 }
 
 /* 重置標題 */
@@ -146,8 +146,32 @@ body {
   width: 100%;
   max-width: 100vw;
   min-height: 100vh;
-  background-color: #FEFCF7;
+  background-color: #fefcf7;
   overflow-x: hidden;
+}
+
+input,
+textarea,
+select,
+option,
+button,
+label {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../../public/images/Vector1.svg");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  color: #989794;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: 1.4px;
 }
 
 .popup-modal-overlay {

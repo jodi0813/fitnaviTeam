@@ -1,0 +1,389 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+* {
+  box-sizing: border-box;
+  /* 不累加邊框及內距 */
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 字體 */
+body {
+  font-family: "Noto Sans TC", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Dela Gothic One";
+  line-height: 1.5;
+  background-color: #fefcf7;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 重置連接 */
+a {
+  display: block;
+  /* a預設的行內元素，不支援寬高及上下間距，通常會改為區塊，方便設定 */
+  color: #444;
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #fefcf7;
+  overflow-x: hidden;
+}
+
+input,
+textarea,
+select,
+option,
+button,
+label {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../../public/images/Vector1.svg");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  color: #989794;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: 1.4px;
+}
+
+/* 中間的選單列 */
+#centerMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  gap: 64px;
+}
+
+.centerMenuBt {
+  display: flex;
+  padding: 12px 80px;
+  margin: 0px 0px 64px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: #fff;
+}
+.centerMenuBt .centerActive {
+  color: #ff8740;
+  background-color: #fff;
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 140%;
+  letter-spacing: 1.4px;
+  outline: none;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 10%;
+  text-underline-offset: 25%;
+}
+.centerMenuBt .centerNoActive {
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 1.4px;
+  outline: none;
+}
+
+.venueExterior {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 24px;
+}
+.venueExterior .centerPhotosBox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.venueExterior .centerPhotosBox .centerPhotos {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  gap: 11px;
+}
+.venueExterior .centerPhotosBox .centerPhotos img {
+  border-radius: 8px;
+}
+.venueExterior .centerPhotosBox button {
+  border: none;
+  background: transparent;
+}
+.venueExterior .centerPhotosBox button:focus {
+  outline: none;
+}
+.venueExterior .centerPhotosBox .social-icons {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  align-items: center;
+}
+.venueExterior .center-introduce {
+  display: flex;
+  padding: 0px 48px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.venueExterior .center-introduce .center-sTitle {
+  width: 250px;
+  position: relative;
+  color: #3A2C19;
+  text-align: center;
+  /* 段落/16 */
+  font-family: "Noto Sans TC";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  /* 24px */
+  letter-spacing: 1.6px;
+}
+.venueExterior .center-introduce .center-sTitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background-color: #ff8740;
+}
+
+/* 一、場館資料 */
+#centerInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+  width: 100%;
+  width: 1140px;
+  /* 基本資料 */
+  /* 場景外觀 */
+  /* 入場費用+聯絡方式 */
+}
+#centerInformation ul li {
+  color: #3a2c19;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0.4px;
+}
+#centerInformation ul li strong {
+  color: #989794;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 1.6px;
+}
+#centerInformation .basicVenueInfo {
+  display: flex;
+  gap: 36px;
+  justify-content: space-between;
+  width: 100%;
+}
+#centerInformation .basicVenueInfo .informationLeft {
+  display: flex;
+  flex-direction: column;
+}
+#centerInformation .basicVenueInfo .informationLeft .informationList {
+  padding: 0px 36px;
+}
+#centerInformation .basicVenueInfo .informationRight {
+  width: 390px;
+  height: 382px;
+}
+#centerInformation .basicVenueInfo .informationRight img {
+  border-radius: 16px;
+}
+#centerInformation .costContact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+}
+#centerInformation .costContact .contactInfo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+/* 二、環境設施 */
+#facilities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  /* 有氧器材 */
+  /* 重訓器材 */
+  /* 更衣淋浴 */
+}
+#facilities .weightTrainingArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#facilities .weightTrainingArea .weightTrainingAreaPhotos {
+  display: flex;
+  width: 300px;
+  height: 200px;
+}
+#facilities .showerArea {
+  display: flex;
+  flex-direction: column;
+}
+#facilities .showerArea .showerAreaPhotos {
+  display: flex;
+  width: 300px;
+  height: 200px;
+}
+
+/* 教練卡 */
+#fitnessTrainer {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+#fitnessTrainer .threeCards {
+  display: flex;
+  gap: 64px;
+}

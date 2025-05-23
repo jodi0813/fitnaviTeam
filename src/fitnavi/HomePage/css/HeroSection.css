@@ -1,0 +1,386 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+* {
+  box-sizing: border-box;
+  /* 不累加邊框及內距 */
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 字體 */
+body {
+  font-family: "Noto Sans TC", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Dela Gothic One";
+  line-height: 1.5;
+  background-color: #fefcf7;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 重置連接 */
+a {
+  display: block;
+  /* a預設的行內元素，不支援寬高及上下間距，通常會改為區塊，方便設定 */
+  color: #444;
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #fefcf7;
+  overflow-x: hidden;
+}
+
+input,
+textarea,
+select,
+option,
+button,
+label {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../../public/images/Vector1.svg");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  color: #989794;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: 1.4px;
+}
+
+.HeroSection {
+  position: relative;
+  width: 100%;
+  height: 150vh;
+  overflow: hidden;
+  z-index: 0;
+  left: 0;
+}
+.HeroSection .video-wrapper {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 99%);
+}
+.HeroSection .video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 0;
+}
+@media (max-width: 393px) {
+  .HeroSection .video-wrapper video {
+    width: 30%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1024px) {
+  .HeroSection .video-wrapper video {
+    width: 0%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1360px) {
+  .HeroSection .video-wrapper video {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1920px) {
+  .HeroSection .video-wrapper video {
+    width: 100%;
+  }
+}
+.HeroSection .video-wrapper .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  pointer-events: none;
+}
+.HeroSection .Hero-Section-Title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 10%;
+  top: 8%;
+  z-index: 2;
+  height: 100%;
+}
+@media (max-width: 393px) {
+  .HeroSection .Hero-Section-Title {
+    width: 30%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1024px) {
+  .HeroSection .Hero-Section-Title {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1360px) {
+  .HeroSection .Hero-Section-Title {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1920px) {
+  .HeroSection .Hero-Section-Title {
+    width: 100%;
+  }
+}
+.HeroSection .Hero-Section-Title .Hero-Section-Catchphrase h2 {
+  color: #FEFCF7;
+  font-family: "Dela Gothic One";
+  font-size: 180px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  /* 180px */
+}
+.HeroSection .Hero-Section-Title .Hero-Section-Catchphrase .h3-HeroTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+.HeroSection .Hero-Section-Title .Hero-Section-Catchphrase .h3-HeroTitle h3.S-HeroTitle {
+  color: #EB7223;
+  font-family: "Dela Gothic One";
+  font-size: 220px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: capitalize;
+}
+.HeroSection .Hero-Section-Title .Hero-Section-Catchphrase .h3-HeroTitle h3.tronger-HeroTitle {
+  color: #EB7223;
+  font-family: "Dela Gothic One";
+  font-size: 180px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+.HeroSection .Hero-Section-Title .Hero-Section-content {
+  display: inline-block;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  padding: 1%;
+}
+.HeroSection .Hero-Section-Title .Hero-Section-content p {
+  color: #FFF;
+  font-family: "Noto Sans TC";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  /* 36px */
+  letter-spacing: 2.4px;
+}
+.HeroSection .Hero-section-scroll {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  /* 箭頭動畫 */
+}
+@media screen and (min-width: 1359px) and (max-width: 1361px) {
+  .HeroSection .Hero-section-scroll {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -20%);
+  }
+}
+.HeroSection .Hero-section-scroll p {
+  color: var(--white, #FEFCF7);
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 1.4px;
+}
+.HeroSection .Hero-section-scroll .HeroSectionArrow {
+  animation: arrowMove 2.4s infinite ease-in-out;
+}
+.HeroSection .Hero-section-scroll .Hero-section-scroll-p {
+  animation: textMove 2.4s infinite ease-in-out;
+}
+@keyframes arrowMove {
+  0% {
+    transform: translateY(0);
+  }
+  10.42% {
+    transform: translateY(20px); /* 箭頭往下完成 */
+  }
+  45.83% {
+    transform: translateY(20px); /* 停留在下方 */
+  }
+  66.67% {
+    transform: translateY(0); /* 往上回原位 */
+  }
+  100% {
+    transform: translateY(0); /* 停留原位 */
+  }
+}
+@keyframes textMove {
+  0%, 2.08% {
+    transform: translateY(0); /* 文字延遲 0.05s (2.08%) */
+  }
+  15.62% {
+    transform: translateY(15px); /* 文字往下完成 */
+  }
+  45.83% {
+    transform: translateY(15px); /* 停留 */
+  }
+  66.67% {
+    transform: translateY(0); /* 往上回原位 */
+  }
+  100% {
+    transform: translateY(0); /* 停留原位 */
+  }
+}

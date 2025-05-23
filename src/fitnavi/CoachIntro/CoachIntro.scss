@@ -22,15 +22,15 @@
     padding: 120px 50px;
 
 
-    .Coachintro-header {
-        display: flex;
-        flex-direction: row;
-    }
+    // .Coachintro-header {
+    //     display: flex;
+    //     flex-direction: row;
+    // }
 
-    .BacktoPage {
-        display: flex;
-        flex-direction: row;
-    }
+    // .BacktoPage {
+    //     display: flex;
+    //     flex-direction: row;
+    // }
 
 
 
@@ -489,8 +489,8 @@
     .nav-about {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         gap: 5%;
         margin-bottom: 100px;
         margin-top: 100px;
@@ -675,7 +675,7 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
-            align-items: center;
+            align-items: flex-start;
             margin-left: 15%;
 
             h3 {
@@ -721,7 +721,7 @@
             align-items: center;
             position: relative;
             gap: 0px;
-            margin-left: 12%;
+            // margin-left: 12%;
             margin-top: 30px;
 
             .circle1,
@@ -1534,9 +1534,7 @@
                 img {
                     width: 24px;
                     height: 24px;
-                    position: absolute;
-                    left: 65%;
-                    top: 30%;
+                    position: relative;
                     opacity: 0;
                     // transform: translateX(10px); // 預設略偏右
                     transition: opacity 0.3s ease, transform 0.3s ease;

@@ -1,0 +1,311 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+* {
+  box-sizing: border-box;
+  /* 不累加邊框及內距 */
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 字體 */
+body {
+  font-family: "Noto Sans TC", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Dela Gothic One";
+  line-height: 1.5;
+  background-color: #fefcf7;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 重置連接 */
+a {
+  display: block;
+  /* a預設的行內元素，不支援寬高及上下間距，通常會改為區塊，方便設定 */
+  color: #444;
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #fefcf7;
+  overflow-x: hidden;
+}
+
+input,
+textarea,
+select,
+option,
+button,
+label {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../../public/images/Vector1.svg");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  color: #989794;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: 1.4px;
+}
+
+.myinfoCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 24px 36px;
+  gap: 36px;
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.myinfoCard .myinfoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.myinfoCard .myinfoHeader .myinfoEditButton {
+  color: #FEFCF7;
+  /* 段落/16 */
+  font-family: "Noto Sans TC";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+  letter-spacing: 1.6px;
+  border-radius: 99px;
+  background: #FF8740;
+}
+.myinfoCard .myinfoHeader .myinfoAvatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.myinfoCard .myinfoHeader .myinfoNameSection {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.myinfoCard .myinfoHeader .myinfoNameSection .myinfoName {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.myinfoCard .myinfoHeader .myinfoNameSection .myinfoName .myinfoLabel {
+  color: #3a2c19;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}
+.myinfoCard .myinfoHeader .myinfoNameSection .myinfoName .myinfoValue {
+  color: #3a2c19;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+.myinfoCard .myinfoHeader .myinfoNameSection .myinfoName .coachinfoName {
+  display: flex;
+  padding: 4px 12px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 99px;
+  border: 1px solid #FF8740;
+  color: #FF8740;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+.myinfoCard .myinfoHeader .myinfoBt {
+  display: flex;
+  gap: 12px;
+}
+.myinfoCard .myinfoHeader .myinfoBt .myinfoBt1 {
+  padding: 8px 24px;
+  border-radius: 99px;
+  background-color: #ff8740;
+  color: #fefcf7;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  /* 24px */
+  letter-spacing: 1.6px;
+}
+.myinfoCard .profileContent {
+  display: flex;
+  gap: 32px;
+}
+.myinfoCard .profileContent .profileContent1 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.myinfoCard .profileContent .myinfoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.myinfoCard .profileContent .myinfoSection .myinfosectionTitle {
+  color: #ff8740;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+.myinfoCard .profileContent .myinfoSection .myinfoItem {
+  display: flex;
+  padding: 0px 24px;
+  gap: 10px;
+  color: #3a2c19;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  /* 24px */
+  letter-spacing: 1.6px;
+}
+.myinfoCard .profileContent .myinfoSection .myinfoItem .myinfoItem1 {
+  width: 100px;
+}
+.myinfoCard .profileContent .myinfoSection .myinfoItem .myinfoCheckbox .trShow {
+  font-size: 14px;
+}
