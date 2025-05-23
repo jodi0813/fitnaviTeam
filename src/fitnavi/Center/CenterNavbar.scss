@@ -203,6 +203,8 @@
 #facilities {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 64px;
 
   /* 有氧器材 */
