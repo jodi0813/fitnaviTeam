@@ -321,14 +321,14 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                
+
                             width: 200px;
                             height: 40px;
                             border-radius: 999px;
                             background: var(--primary, #FF8740);
                             border: none;
                             cursor: pointer;
-                
+
                             font-family: "Noto Sans TC", sans-serif;
                             font-size: 20px;
                             font-weight: 700;
@@ -337,11 +337,11 @@
                             text-align: center;
                             position: relative;
                             overflow: hidden;
-                
+
                             .classinrto-text {
                                 transition: transform 0.3s ease, color 0.3s ease;
                             }
-                
+
                             img {
                                 width: 24px;
                                 height: 24px;
@@ -350,42 +350,42 @@
                                 right: 30px;
                                 transition: opacity 0.3s ease;
                             }
-                
+
                             &:hover {
-                
+
                                 justify-content: center;
                                 align-items: center;
                                 border-radius: 999px;
                                 background: var(--white, #FEFCF7);
                                 border: 1px solid var(--primary, #FF8740);
-                
+
                                 .classinrto-text {
                                     transform: translateX(-10px); // 向左滑動
                                     color: var(--primary, #FF8740);
                                 }
-                
+
                                 img {
                                     opacity: 1;
                                     // transform: translateX(0); // icon 滑進來
                                 }
                             }
-                
+
                             &:active {
                                 outline: none;
-                
+
                                 .classinrto-text {
                                     color: var(--primary, var(--primary, #FF8740));
                                     font-size: 16px;
                                     font-weight: 500;
                                     letter-spacing: 1.6px;
                                 }
-                
+
                                 img {
                                     width: 20px;
                                     height: 20px;
                                 }
                             }
-                
+
                         }
 
 
@@ -789,6 +789,10 @@
         display: flex;
         flex-direction: row;
 
+        @media (min-width: 1680px) {
+            gap: 300px;
+        }
+
 
         .expcontent {
             // margin-left: 15%;
@@ -948,6 +952,10 @@
         display: flex;
         flex-direction: row;
         gap: 50px;
+
+        @media (min-width: 1680px) {
+            gap: 300px;
+        }
 
         .reserve {
             // margin-left: 15%;
@@ -1246,6 +1254,12 @@
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
+            align-items: center;
+            gap: 60px;
+
+            @media (min-width: 1680px) {
+                margin-left: 20%;
+            }
 
             .ViewArticles-left,
             .ViewArticles-right {
@@ -1279,12 +1293,15 @@
                 border: none;
             }
 
-            .Three-classcards {
+            .Three-classcards{
                 display: flex;
                 flex-direction: row;
-                align-items: center;
                 gap: 24px;
                 width: auto;
+                // 不需要 align-items: center
+                @media (min-width: 1680px) {
+                    gap: 30px;
+                }
             }
 
         }
@@ -1360,14 +1377,14 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-    
+
                 width: 300px;
                 height: 40px;
                 border-radius: 999px;
                 background: var(--primary, #FF8740);
                 border: none;
                 cursor: pointer;
-    
+
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 20px;
                 font-weight: 700;
@@ -1376,11 +1393,11 @@
                 text-align: center;
                 position: relative;
                 overflow: hidden;
-    
+
                 .seeMore-text {
                     transition: transform 0.3s ease, color 0.3s ease;
                 }
-    
+
                 img {
                     width: 24px;
                     height: 24px;
@@ -1389,44 +1406,44 @@
                     right: 30px;
                     transition: opacity 0.3s ease;
                 }
-    
+
                 &:hover {
-    
+
                     justify-content: center;
                     align-items: center;
                     border-radius: 999px;
                     background: var(--white, #FEFCF7);
                     border: 1px solid var(--primary, #FF8740);
-    
+
                     .seeMore-text {
                         transform: translateX(-10px); // 向左滑動
                         color: var(--primary, #FF8740);
                     }
-    
+
                     img {
                         opacity: 1;
                         // transform: translateX(0); // icon 滑進來
                     }
                 }
-    
+
                 &:active {
                     outline: none;
-    
+
                     .seeMore-text {
                         color: var(--primary, var(--primary, #FF8740));
                         font-size: 16px;
                         font-weight: 500;
                         letter-spacing: 1.6px;
                     }
-    
+
                     img {
                         width: 20px;
                         height: 20px;
                     }
                 }
-    
+
             }
-    
+
         }
 
     }
@@ -1465,6 +1482,7 @@
         margin: 0 auto;
         position: relative;
         justify-content: center;
+
 
         &::before,
         &::after {
@@ -1574,7 +1592,8 @@
 .coachsvg {
     position: relative;
     right: 30%;
-    top: -10%;
+    top: 5%;
+    margin-top: 50px;
 
     @media (min-width: 1680px) {
         right: 10%;

@@ -636,7 +636,8 @@
 .nutrisvg {
     position: relative;
     right: 30%;
-    top: -10%;
+    top: 5%;
+    margin-top: 50px;
 
     @media (min-width: 1680px) {
         right: 10%;
@@ -834,6 +835,10 @@
         display: flex;
         flex-direction: row;
 
+        @media (min-width: 1680px) {
+            gap: 300px;
+        }
+
         .expcontent {
             // margin-left: 10%;
             // flex: 1;
@@ -992,6 +997,10 @@
         display: flex;
         flex-direction: row;
         gap: 50px;
+
+        @media (min-width: 1680px) {
+            gap: 300px;
+        }
 
         .nutrireserve {
             .restitle {
@@ -1319,7 +1328,12 @@
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            /* 防止換行 */
+            align-items: center;
+            gap: 60px;
+
+            @media (min-width: 1680px) {
+                margin-left: 20%;
+            }
 
         }
 
@@ -1329,6 +1343,10 @@
             align-items: center;
             gap: 24px;
             width: auto;
+
+            @media (min-width: 1680px) {
+                gap: 30px;
+            }
         }
 
         .NutriViewArticles-left,
