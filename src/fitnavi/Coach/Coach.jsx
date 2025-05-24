@@ -310,6 +310,7 @@ function Coach() {
         <MainTitle title1="健身教練" title2="找到專屬你的健身教練" />
         <div className="allCoachCards">
           {/* 上方搜尋列*/}
+  
           <div className="searchBox">
             <form
               action=""
@@ -382,32 +383,32 @@ function Coach() {
               </button>
             </form>
           </div>
+           <div className="coachTitleBox">
+          <span className="all-coach">全部教練</span></div>
 
           {/* 教練卡牌 */}
-          <div>
-            <span className="all-coach">全部教練</span>
 
-            {currentItems.length === 0 ? (
-              <div className="noResult">找不到符合條件的教練</div>
-            ) : (
-              <div>
-                <div className="coachNineCards">
-                  {currentItems.map((coach, i) => (
-                    <CoachCard
-                      key={i}
-                      name={coach.name}
-                      role={coach.role}
-                      hashtags={coach.hashtags}
-                      description={coach.description}
-                      imageSrc={coach.imageSrc}
-                      link="/coachintro"
-                    />
-                  ))}
-                </div>
+          {currentItems.length === 0 ? (
+            <div className="noResult">找不到符合條件的教練</div>
+          ) : (
+            <div>
+              <div className="coachNineCards">
+                {currentItems.map((coach, i) => (
+                  <CoachCard
+                    key={i}
+                    name={coach.name}
+                    role={coach.role}
+                    hashtags={coach.hashtags}
+                    description={coach.description}
+                    imageSrc={coach.imageSrc}
+                    link="/coachintro"
+                  />
+                ))}
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
+        \
         <Pagination
           pageCount={pageCount}
           currentPage={currentPage}
