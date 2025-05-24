@@ -576,8 +576,8 @@ function NutriIntro() {
                                     gridTemplateColumns: "repeat(3, 1fr)", // 每行 3 欄
                                     gap: "50px",
                                     maxWidth: "960px", // 3 張卡片寬 + gap
-
                                     margin: "0 auto",  // 置中
+                                    width: "100%",
                                 }}>
 
                                     {cardData.slice(0, 9).map((card, index) => (
