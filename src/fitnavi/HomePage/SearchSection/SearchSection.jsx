@@ -84,13 +84,13 @@ function SearchSection() {
               <div className="home-search-dropdowns">
                 <div className="home-search-botton">
                   <div className="home-search-toggleBt">
-                    <button  className={selectedRole === "coach" ? "selected" : ""}
-                    onClick={() => setSelectedRole("coach")}
-                      >
+                    <button className={selectedRole === "coach" ? "selected" : ""}
+                      onClick={() => setSelectedRole("coach")}
+                    >
                       健身教練
                     </button>
-                    <button  className={selectedRole === "nutritionist" ? "selected" : ""}
-                    onClick={() => setSelectedRole("nutritionist")}>
+                    <button className={selectedRole === "nutritionist" ? "selected" : ""}
+                      onClick={() => setSelectedRole("nutritionist")}>
                       營養師
                     </button>
                   </div>
@@ -123,8 +123,7 @@ function SearchSection() {
                       return;
                     }
                     navigate(
-                      `/${
-                        selectedRole === "coach" ? "coach" : "nutritionist"
+                      `/${selectedRole === "coach" ? "coach" : "nutritionist"
                       }?hashtag=${encodeURIComponent(selectedTrainingNeed)}`
                     );
                   }}
