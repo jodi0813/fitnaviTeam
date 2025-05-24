@@ -2036,7 +2036,7 @@
     //介紹區
     #aboutCoach {
 
-        width: 60% !important;
+        width: 70% !important;
         margin: 32px 0 0 0 !important; // 左右 margin 設 0，讓他貼齊左側
         padding: 0 12px !important;
         box-sizing: border-box;
@@ -2062,9 +2062,15 @@
         }
 
         p {
-            font-size: 15px !important;
-            line-height: 28px !important;
-            margin-top: 14px !important;
+            color: var(--dark, #3A2C19);
+            /* heading/標題4/medium */
+            font-family: "Noto Sans TC";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 40px;
+            /* 200% */
+            letter-spacing: 0.4px;
         }
 
     }
@@ -2102,12 +2108,22 @@
         margin-left: 5% !important;
     }
 
+    .coach-circlewrapper {
+        img {
+            width: 822px !important;
+            height: 228px !important;
+        }
+    }
+
+
+    //工作經歷區
     #Coach-exp-cer {
         width: 100% !important;
         max-width: none;
         padding: 0 10px;
         overflow-x: auto;
-        margin-top: 100px; // 視需求調整
+        margin-top: 150px !important; // 視需求調整
+        margin-left: 5% !important;
     }
 
     .coach-exp-cer-wrapper {
@@ -2127,6 +2143,20 @@
         h4 {
             width: 200px !important;
         }
+    }
+
+    .expcontent {
+        width: 350px !important;
+    }
+
+    .certitle {
+        h4 {
+            width: 200px !important;
+        }
+    }
+
+    .certificate {
+        width: 350px !important;
     }
 
     // 文章、專區
