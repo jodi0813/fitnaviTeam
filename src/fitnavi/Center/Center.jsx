@@ -27,30 +27,34 @@ function Center() {
                 alt=""
                 className="centerLogoPic"
               />
-              {/* <div className="center-nameBox"> */}
-              <span className="center-name">TECHNOGym</span>
-              <span className="center-area">(忠孝館)</span>
-              {/* </div> */}
-
-              <div className="hashtag">
-                <a href="#">#重訓器材</a>
-                <a href="#">#私人教練</a>
-                <a href="#">#單次計費</a>
-                <a href="#">#女性專區</a>
-                <a href="#">#補給品販賣機</a>
-                <a href="#">#靠近捷運站</a>
+              <div className="center-nameBox">
+                <div>
+                  <span className="center-name">TECHNOGym</span>
+                  <span className="center-area">(忠孝館)</span>
+                </div>
+                <div className="hashtag">
+                  <a href="#">#重訓器材</a>
+                  <a href="#">#私人教練</a>
+                  <a href="#">#單次計費</a>
+                  <a href="#">#女性專區</a>
+                  <a href="#">#補給品販賣機</a>
+                  <a href="#">#靠近捷運站</a>
+                </div>
               </div>
             </div>
           </div>
           <div className="centerIntroduction">
-            <h3 className="introductionTitle">場館簡介</h3>
+            <div className="introductionTitle">
+              <span>場館簡介</span>
+              <div class="introductionTitleLine"></div>
+            </div>
             <p className="introduction">
               本場館提供完整訓練空間，包含自由重量、有氧區與多樣器材，適合各類健身需求。場館乾淨明亮，動線流暢，提供舒適運動體驗。本場館提供完整訓練空間，包含自由重量、有氧區與多樣器材，適合各類健身需求。場館乾淨明亮，動線流暢，提供舒適運動體驗。
+              <br />
               更衣室與淋浴間設備齊全，維護良好，方便運動前後使用。場館內提供飲水機與休息區，是放鬆與補水的好所在。更衣室與淋浴間設備齊全，維護良好，方便運動前後使用。場館內提供飲水機與休息區，是放鬆與補水的好所在。
             </p>
+            <CenterNavbar />
           </div>
-          <div className="expandContent">展開內容</div>
-          <CenterNavbar />
         </section>
       </div>
     </>
