@@ -361,7 +361,8 @@ function Coachintro() {
                                 </div>
 
                                 <div className="coach-circlewrapper">
-                                    <div className="circle1">
+                                    <img src="/images/spe-field.png" alt="" />
+                                    {/* <div className="circle1">
                                         <span>
                                             <h4>減脂訓練
                                             </h4>
@@ -407,7 +408,7 @@ function Coachintro() {
 
 
                                         </svg>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </section>

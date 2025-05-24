@@ -701,63 +701,69 @@
         margin-left: 0;
         box-sizing: border-box;
 
-        .circle1,
-        .circle2,
-        .circle3,
-        .circle4 {
-            width: 310px;
-            height: 310px;
-            position: relative;
-            margin-left: -30px;
-
-            span {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                max-width: 250px;
-                position: relative;
-                left: 50px;
-                bottom: -200px;
-
-
-                h4 {
-                    color: var(--primary, var(--primary, #FF8740));
-                    text-align: center;
-                    /* heading/標題4/Bold */
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                    letter-spacing: 2px;
-                    text-decoration-line: underline;
-                    text-decoration-style: solid;
-                    text-decoration-skip-ink: auto;
-                    text-decoration-thickness: 11%;
-                    /* 2.2px */
-                    text-underline-offset: 50%;
-                    /* 10px */
-                    padding-bottom: 15px;
-
-
-                }
-
-                p {
-                    color: var(--dark, #3A2C19);
-                    /* heading/標題4/medium */
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 40px;
-                    /* 200% */
-                    letter-spacing: 0.4px;
-                }
-
-            }
-
+        img {
+            justify-content: center;
+            margin-top: 80px;
+            max-width: 1350px;
         }
+
+        // .circle1,
+        // .circle2,
+        // .circle3,
+        // .circle4 {
+        //     width: 310px;
+        //     height: 310px;
+        //     position: relative;
+        //     margin-left: -30px;
+
+        //     span {
+        //         display: flex;
+        //         flex-direction: column;
+        //         justify-content: flex-start;
+        //         align-items: flex-start;
+        //         max-width: 250px;
+        //         position: relative;
+        //         left: 50px;
+        //         bottom: -200px;
+
+
+        //         h4 {
+        //             color: var(--primary, var(--primary, #FF8740));
+        //             text-align: center;
+        //             /* heading/標題4/Bold */
+        //             font-family: "Noto Sans TC", sans-serif;
+        //             font-size: 20px;
+        //             font-style: normal;
+        //             font-weight: 700;
+        //             line-height: normal;
+        //             letter-spacing: 2px;
+        //             text-decoration-line: underline;
+        //             text-decoration-style: solid;
+        //             text-decoration-skip-ink: auto;
+        //             text-decoration-thickness: 11%;
+        //             /* 2.2px */
+        //             text-underline-offset: 50%;
+        //             /* 10px */
+        //             padding-bottom: 15px;
+
+
+        //         }
+
+        //         p {
+        //             color: var(--dark, #3A2C19);
+        //             /* heading/標題4/medium */
+        //             font-family: "Noto Sans TC", sans-serif;
+        //             font-size: 20px;
+        //             font-style: normal;
+        //             font-weight: 500;
+        //             line-height: 40px;
+        //             /* 200% */
+        //             letter-spacing: 0.4px;
+        //         }
+
+        //     }
+
+        // }
 
         // @media (min-width: 1920px) {
         //     margin-left: 20%;
@@ -780,7 +786,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start; // 內容靠左
-    margin-top: 300px;
+    margin-top: 150px;
 
     .coach-exp-cer-wrapper {
         width: 100%;
@@ -943,7 +949,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start; // 內容靠左
-    margin-top: 200px;
+    margin-top: 150px;
 
     .coach-reservation-wrapper {
         width: 100%;
@@ -1293,11 +1299,12 @@
                 border: none;
             }
 
-            .Three-classcards{
+            .Three-classcards {
                 display: flex;
                 flex-direction: row;
                 gap: 24px;
                 width: auto;
+
                 // 不需要 align-items: center
                 @media (min-width: 1680px) {
                     gap: 30px;
@@ -1595,6 +1602,10 @@
     top: 5%;
     margin-top: 50px;
 
+    @media screen and (max-width: 1024px) {
+        right: 60%;
+    }
+
     @media (min-width: 1680px) {
         right: 10%;
     }
@@ -1669,4 +1680,496 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+
+
+
+
+//響應式1024
+// @media screen and (max-width: 1024px) {
+//     .Coachintro-person {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: stretch;
+//         gap: 4px; // 讓兩區更近
+//         width: 38%; // 再往內縮（你可改 35%、40% 視覺需求）
+//         margin: 0 auto;
+//         box-sizing: border-box;
+//         padding: 0 16px;
+
+//         .person-class-photo {
+//             width: 100%;
+//             box-sizing: border-box;
+//             margin: 0;
+//             padding: 0;
+
+//             .coachphotos {
+//                 width: 100%;
+//                 max-width: 100%;
+//                 margin: 0;
+//                 padding: 0;
+
+//                 .selfie img {
+//                     width: 80%;
+//                     max-width: 180px; // 或 150px，看你想多小
+//                     height: auto;
+//                     object-fit: cover;
+//                     display: block;
+//                     margin: 0 auto;
+//                 }
+
+//                 .more img {
+//                     width: 80px; // 原本 124px，可改更小
+//                     height: 65px; // 原本 133px，可改更小
+//                     object-fit: cover;
+//                     border-radius: 12px;
+//                     display: block;
+//                 }
+
+//                 .TurnButton {
+//                     margin-top: 16px;
+//                     justify-content: flex-start;
+//                 }
+//             }
+//         }
+
+//         .Coachclass-container {
+//             box-sizing: border-box;
+//             margin: 0 auto;
+//             padding: 0; // 如果父層已經 padding，這層就不用
+//             word-break: break-all;
+//             overflow-wrap: break-word;
+
+//             .personinfo {
+//                 .namefavorite {
+//                     gap: 16px;
+//                     flex-direction: row;
+//                     align-items: flex-start;
+
+//                     h2 {
+//                         font-size: 24px;
+//                         white-space: nowrap;
+//                     }
+//                 }
+
+//                 p {
+//                     font-size: 16px;
+//                     margin-bottom: 12px;
+//                 }
+//             }
+
+//             .coach-classbox {
+//                 padding: 24px 8px;
+//                 gap: 24px;
+
+//                 .classtime {
+//                     flex-direction: column;
+//                     align-items: flex-start;
+//                     gap: 8px;
+
+//                     h2 {
+//                         font-size: 24px;
+//                     }
+//                 }
+
+//                 .p-linethrough-color {
+//                     flex-direction: column;
+//                     align-items: flex-start;
+//                     margin-top: 16px;
+
+//                     p,
+//                     p.p-linethrough {
+//                         font-size: 16px;
+//                         line-height: 28px;
+//                     }
+
+//                     span {
+//                         .Arrow-price {
+//                             .Arrow-orange {
+//                                 width: 18px;
+//                                 height: 18px;
+//                             }
+
+//                             p.OrangePrice {
+//                                 font-size: 28px;
+//                                 line-height: 32px;
+//                             }
+//                         }
+
+//                         p.SingleClass {
+//                             font-size: 16px;
+//                         }
+//                     }
+
+//                     p.SingleClass {
+//                         font-size: 16px;
+//                     }
+//                 }
+
+//                 .coach-prices-button {
+//                     p {
+//                         font-size: 16px;
+//                     }
+
+//                     .price-with-button {
+//                         flex-direction: column;
+//                         gap: 12px;
+
+//                         button {
+//                             width: 100%;
+//                             font-size: 18px;
+//                             margin-top: 16px;
+//                             height: 44px;
+//                         }
+//                     }
+//                 }
+//             }
+
+//             .Coach-place {
+//                 flex-direction: column;
+//                 gap: 8px;
+//                 margin-top: 10px;
+
+//                 .moreimg4,
+//                 .moreimg5 {
+//                     max-width: 100%;
+//                     height: auto;
+//                     aspect-ratio: unset;
+//                     border-radius: 16px;
+
+//                     img {
+//                         width: 120px;
+//                         height: 80px;
+//                         object-fit: cover;
+//                         border-radius: 12px;
+//                         display: block;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+@media screen and (max-width: 1024px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    // 主內容外層
+    #Coachintro,
+    #aboutCoach,
+    #spe,
+    #Coach-exp-cer,
+    #certificate,
+    #reservation1,
+    #coacharticle,
+    .Coach-comment-wrapper {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        min-width: 0;
+        padding: 0 10px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box;
+    }
+
+    // 主要兩區塊
+    .Coachintro-person {
+        display: flex !important;
+        flex-direction: row !important; // 這裡關鍵，維持水平排列
+        align-items: flex-start !important;
+        gap: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box;
+        padding: 0 8px !important;
+        margin: 0 auto !important;
+
+        .person-class-photo {
+            margin-left: 0 !important;
+            width: 100% !important;
+            margin-top: 0;
+
+            .coachphotos {
+                width: 100% !important;
+                height: auto !important;
+
+                .selfie {
+                    margin-bottom: 10px !important;
+
+                    img {
+                        border-radius: 16px !important;
+                        width: 90% !important;
+                        max-width: 160px !important;
+                        height: auto !important;
+                        display: block;
+                        margin: 0 auto !important;
+                    }
+                }
+
+                .more {
+                    gap: 6px !important;
+                    margin-left: 0 !important;
+
+                    img {
+                        width: 70px !important;
+                        height: 54px !important;
+                        border-radius: 12px !important;
+                    }
+                }
+
+                .TurnButton {
+                    margin-left: 0 !important;
+                    margin-top: 16px !important;
+                    gap: 6px !important;
+                }
+            }
+        }
+
+        .Coachclass-container {
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 0 !important;
+            margin-top: 50px;
+            display: flex; // 必須設定
+            flex-direction: column; // 或 row，看你要直向或橫向排列
+            gap: 100px;
+
+
+            .personinfo .namefavorite {
+                gap: 32px !important;
+                margin-bottom: 8px !important;
+            }
+
+            .personinfo p {
+                font-size: 16px !important;
+                margin-bottom: 10px !important;
+            }
+
+            .coach-classbox {
+                border-radius: 18px !important;
+                padding: 16px 8px !important;
+                margin-top: 32px !important;
+                margin-bottom: 12px !important;
+            }
+
+            .coach-classbox .classtime {
+                gap: 10px !important;
+
+                h2 {
+                    font-size: 22px !important;
+                }
+            }
+
+            .p-linethrough-color {
+                margin-top: 10px !important;
+                flex-direction: row;
+
+                p,
+                p.p-linethrough {
+                    font-size: 15px !important;
+                    line-height: 22px !important;
+                }
+
+                span .Arrow-price .Arrow-orange {
+                    width: 14px !important;
+                    height: 14px !important;
+                }
+
+                span .Arrow-price p.OrangePrice {
+                    font-size: 20px !important;
+                    line-height: 24px !important;
+                }
+
+                span p.SingleClass,
+                p.SingleClass {
+                    font-size: 13px !important;
+                    line-height: 20px !important;
+                }
+            }
+
+            .coach-prices-button {
+                margin-bottom: 8px !important;
+
+                p {
+                    font-size: 15px !important;
+                }
+
+                .price-with-button {
+                    gap: 8px !important;
+
+                    button {
+                        width: 100% !important;
+                        font-size: 15px !important;
+                        margin-top: 10px !important;
+                        height: 36px !important;
+                    }
+                }
+            }
+
+            .Coach-place {
+                flex-direction: row !important;
+                gap: 10px;
+                margin-bottom: 0 !important;
+
+                p {
+                    font-size: 14px !important;
+                    margin-top: 4px !important;
+                }
+
+                img {
+                    width: 150px !important;
+                    height: 120px !important;
+                    margin-top: 6px !important;
+                }
+
+                .moreimg4,
+                .moreimg5 {
+                    img {
+                        border-radius: 10px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    //介紹區
+    #aboutCoach {
+
+        width: 60% !important;
+        margin: 32px 0 0 0 !important; // 左右 margin 設 0，讓他貼齊左側
+        padding: 0 12px !important;
+        box-sizing: border-box;
+        margin-top: 250px !important;
+        margin-left: 5% !important;
+
+        .about-title {
+            gap: 18px !important; // 標題區間距縮小
+            flex-direction: column; // 標題副標題上下疊
+            align-items: flex-start; // 靠左對齊
+
+            h3 {
+                font-size: 32px !important;
+                width: auto !important;
+            }
+
+            h4 {
+                width: 300px !important;
+                font-size: 14px !important;
+                padding-bottom: 6px !important;
+                border-bottom: 2px solid #3A2C19;
+            }
+        }
+
+        p {
+            font-size: 15px !important;
+            line-height: 28px !important;
+            margin-top: 14px !important;
+        }
+
+    }
+
+
+
+
+    //導覽區
+
+    .coachnav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end !important;
+        width: 15% !important;
+        min-width: 90px;
+        align-self: stretch;
+        background: #fff;
+        margin-top: 200px !important;
+    }
+
+    .coachnav ul {
+        width: 100%;
+        align-items: flex-end !important;
+        text-align: right !important;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+
+
+
+    #spe {
+        margin-top: 200px !important;
+        margin-left: 5% !important;
+    }
+
+    #Coach-exp-cer {
+        width: 100% !important;
+        max-width: none;
+        padding: 0 10px;
+        overflow-x: auto;
+        margin-top: 100px; // 視需求調整
+    }
+
+    .coach-exp-cer-wrapper {
+        min-width: 700px; // 根據內容調整，確保不會壓縮
+        display: flex;
+        flex-direction: row; // 維持橫向排列
+        gap: 40px; // 或你想要的間距
+    }
+
+    .coach-exp-cer-wrapper .expcontent,
+    .coach-exp-cer-wrapper #certificate {
+        min-width: 320px; // 根據內容調整
+        flex: 0 0 auto;
+    }
+
+    .exptitle {
+        h4 {
+            width: 200px !important;
+        }
+    }
+
+    // 文章、專區
+    .ViewArticles {
+        gap: 18px !important;
+        margin-top: 18px !important;
+        flex-wrap: wrap !important;
+        width: 50%;
+
+        .Three-classcards {
+            gap: 8px !important;
+        }
+    }
+
+    // 評價區
+    .Coach-comment-line1 {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+
+        &::before,
+        &::after {
+            display: none !important;
+        }
+    }
+
+    .Coach-comment-wrapper .star-rate-title p {
+        font-size: 30px !important;
+    }
+
+    // 預約流程圖片
+    .reserve-img img {
+        width: 80px !important;
+        height: auto !important;
+        right: 0 !important;
+        top: 0 !important;
+    }
+
+    // 保證所有圖片、按鈕都不會超出
+    img,
+    button {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
 }
