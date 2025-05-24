@@ -2,9 +2,13 @@
 
 #navbarHeader {
   position: fixed;
-  top: 2.5%;
+  // top: 2.5%;
+  // left: 0;
+  // width: 100%;
+  //修改防止動畫跑版(繼旻)
+  top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background: transparent;
   z-index: 999;
 
@@ -218,4 +222,9 @@
   &.show {
     left: 0;
   }
+}
+
+//防止出現水平卷軸
+html, body {
+  overflow-x: hidden;
 }

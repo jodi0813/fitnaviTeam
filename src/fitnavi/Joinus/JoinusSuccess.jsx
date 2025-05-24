@@ -16,16 +16,16 @@ function JoinusSuccess() {
             <div className='Joinus-wrapper'>
                 <div className='Joinus-Success-content'>
                     <div>
-                        <h4>申請成功</h4>
-                        <h5>請留意信箱通知</h5>
+                        <h4>申請成功🎉</h4>
+                        <h5>請留意信箱通知📢</h5>
                         <p>約4-7工作天內</p>
                     </div>
 
-                    <img src="./images/application-icon.png" alt="" />
+                    <img src="./images/applicationSuccess-icon.png" alt="" />
 
-                    <div className='Joinus-Success-button'>
+                    
                         <button className='Joinus-btn' onClick={()=>{navigate('/');window.scrollTo(0, 0);}}>返回首頁</button>
-                    </div>
+                    
                 </div>
             </div>
 
