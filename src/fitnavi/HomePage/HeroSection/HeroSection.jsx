@@ -15,7 +15,9 @@ function HeroSection() {
                     width="100%"
                     height="100%"
                     className="hero-video"
+
                 />
+
 
                 <div className="overlay"></div>
             </div>
@@ -36,22 +38,24 @@ function HeroSection() {
                 </div>
 
 
-             
+
 
             </div>
 
-               <div className="Hero-section-scroll">
-                    <p className="Hero-section-scroll-p">SCROLL</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none" className="HeroSectionArrow">
-                        <path d="M36.5 18L24.5 30L12.5 18" stroke="#FEFCF7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                </div>
+            <div className="Hero-section-scroll">
+                <p className="Hero-section-scroll-p">SCROLL</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none" className="HeroSectionArrow">
+                    <path d="M36.5 18L24.5 30L12.5 18" stroke="#FEFCF7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+            </div>
 
 
 
+            {/* 銜接到下面區塊的圓角 */}
+            {/* <div className="Hero-bottom-curve"></div> */}
 
 
-            {/* <div className="HeroSection-arc"></div> */}
+
 
 
 

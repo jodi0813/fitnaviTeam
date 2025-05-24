@@ -6,164 +6,228 @@
   justify-content: center;
   width: 100%;
   // height: 100vh;
-  padding: 5% ;
+  padding: 10% 5% 5%;
 
   .home-trainer-mainTitle {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+    padding-left: 2%;
+    align-items: center;
     gap: 24px;
-    width: 40%;
+    width: 100%;
     transform: skew(-20deg, 0deg);
 
-    .home-trainer-mainTitle1 {
-      color: #3a2c19;
-      font-family: "Mantou Sans";
-      font-size: 64px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 40px;
-      /* 62.5% */
-      letter-spacing: 12.8px;
-    }
+    .mainTitle-col1 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1.5rem;
 
-    .home-trainer-mainTitle2 {
-      color: #ff8740;
-      font-family: "Mantou Sans";
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 40px;
-      /* 100% */
-      letter-spacing: 8px;
-    }
-  }
+      .home-trainer-mainTitle1 {
 
-  .home-trainer1 {
-    display: flex;
-    align-items: flex-end;
-    padding-left: 25%;
-    margin-top: 100px;
-  }
+        color: #3a2c19;
+        font-family: "Mantou Sans";
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        /* 62.5% */
+        letter-spacing: 12.8px;
+        white-space: nowrap;
+      }
 
-  //被選的教練
-  .home-trainer-active {
-    display: flex;
-    position: relative;
-    margin-right: 12%;
-    border-radius: 20px;
-    background: linear-gradient(180deg, #ffc9a9 0%, #ff8740 100%);
-    width: 250px;
-    height: 355px;
-    transform: skew(-20deg, 0deg);
-
-    .home-trainer-img {
-      position: absolute;
-      right: 50px;
-      top: 10px;
-
-      img {
-        width: 200px;
-        transform: none;
-        transform: skew(20deg, 0deg);
+      .home-trainer-mainTitle2 {
+        color: #ff8740;
+        font-family: "Mantou Sans";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        /* 100% */
+        letter-spacing: 8px;
+        white-space: nowrap;
       }
     }
 
-    //教練姓名
-    .home-trainer-info {
+    img {
+      width: 38%;
+      height: auto;
+    }
+
+  }
+
+
+  //卡牌輪播區域
+  .trainer-card-box {
+    display: flex;
+    align-items: flex-end;
+
+    .home-trainer-maincard {
+      align-self: flex-end;
       display: flex;
-      flex-direction: column;
-      gap: 15px;
-      position: absolute;
-      right: -80px;
-      top: -50px;
+      position: relative;
+      margin-right: 12%;
+      border-radius: 20px;
+      border: 1px solid #ff8740;
+      background: #fff;
+      box-shadow: 8px 8px 0px 0px #ff8740;
+      width: 250px;
+      height: 355px;
+      transform: skew(-20deg, 0deg);
 
-      .home-trainer-name {
-        display: flex;
-        padding: 12px 24px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 12px;
-        border: 1px solid #ff8740;
-        background: #fff;
-        box-shadow: 8px 8px 0px 0px #ff8740;
-        width: 230px;
-        font-family: "Noto Sans TC", sans-serif;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: 3.2px;
-        color: #3a2c19;
+      .home-trainer-img {
+        position: absolute;
+        right: 74px;
+        top: -56px;
 
-        //教練英文名
-        .home-trainer-enname {
-          font-size: 20px;
-          letter-spacing: 2px;
+        img {
+          width: 234px;
+          transform: none;
+          transform: skew(20deg, 0deg);
         }
       }
 
-      //教練地區
-      .home-trainer-area {
+      //教練姓名
+      .home-trainer-info {
         display: flex;
+        flex-direction: column;
+        gap: 15px;
         position: absolute;
-        right: 0px;
-        top: 85px;
-        width: 180px;
-        height: 40px;
-        padding: 10px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        flex-shrink: 0;
-        border-radius: 12px;
-        border: 1px solid #ff8740;
-        background: #fff;
-        box-shadow: 8px 8px 0px 0px #ff8740;
-        color: #ff8740;
-        text-align: center;
-        font-family: "Noto Sans TC", sans-serif;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 140%;
-        letter-spacing: 1.4px;
+        right: -80px;
+        top: -50px;
+
+        .home-trainer-name {
+          display: flex;
+          padding: 12px 24px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 12px;
+          border: 1px solid #ff8740;
+          background: #fff;
+          box-shadow: 8px 8px 0px 0px #ff8740;
+          width: 230px;
+          font-family: "Noto Sans TC", sans-serif;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 3.2px;
+          color: #3a2c19;
+
+          //教練英文名
+          .home-trainer-enname {
+            font-size: 20px;
+            letter-spacing: 2px;
+          }
+        }
+
+        //教練地區
+        .home-trainer-area {
+          img {
+            width: 24px;
+          }
+
+          display: flex;
+          position: absolute;
+          right: 0px;
+          top: 85px;
+          width: 180px;
+          height: 40px;
+          padding: 10px;
+          justify-content: center;
+          align-items: center;
+          gap: 2px;
+          flex-shrink: 0;
+          border-radius: 12px;
+          border: 1px solid #ff8740;
+          background: #fff;
+          box-shadow: 8px 8px 0px 0px #ff8740;
+          color: #ff8740;
+          text-align: center;
+          font-family: "Noto Sans TC",
+          sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          letter-spacing: 1.4px;
+        }
+
+        .home-trainer-tags {
+          display: flex;
+          position: absolute;
+          right: -40px;
+          top: 140px;
+          width: 190px;
+          height: 50px;
+          padding: 10px 12px;
+          justify-content: center;
+          align-items: center;
+          gap: 2px;
+          flex-shrink: 0;
+          border-radius: 12px;
+          border: 1px solid #ff8740;
+          background: #fff;
+          box-shadow: 8px 8px 0px 0px #ff8740;
+          color: #3a2c19;
+          text-align: right;
+          font-family: "Noto Sans TC", sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          letter-spacing: 1.4px;
+        }
       }
 
-      .home-trainer-tags {
-        display: flex;
-        position: absolute;
-        right: -40px;
-        top: 140px;
-        width: 190px;
-        height: 50px;
-        padding: 10px 12px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        flex-shrink: 0;
-        border-radius: 12px;
-        border: 1px solid #ff8740;
-        background: #fff;
-        box-shadow: 8px 8px 0px 0px #ff8740;
-        color: #3a2c19;
-        text-align: right;
-        font-family: "Noto Sans TC", sans-serif;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 140%;
-        letter-spacing: 1.4px;
+    }
+
+    .home-trainer-queue {
+      display: inline-flex;
+      width: fit-content;
+      height: 280px;
+
+      .trainer-card-small {
+        width: 160px;
+        height: auto;
+        
+
+        img {
+          width: 100%;
+          display: block;
+        }
       }
     }
   }
 
-  //沒有被選的教練
-  .home-trainer-none {
-    width: 187px;
-    margin-right: -3%;
+  .home-trainer-controls {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+
+    button {
+      all: unset;
+      /* optional: 為了確保可以點擊 */
+      cursor: pointer;
+      color: #3a2c19;
+      font-family: "Noto Sans TC", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      /* 24px */
+      letter-spacing: 1.6px;
+      display: flex;
+      flex-direction: column;
+      width: 82px;
+      gap: 4px;
+      transform: skew(-20deg, 0deg);
+    }
+
+
   }
+
+
+
+
 
   .home-trainer-footer {
     display: flex;
@@ -222,14 +286,14 @@
           display: flex;
           flex-direction: column;
           align-items: flex-end;
-            color: #3a2c19;
-               font-family: "Noto Sans TC", sans-serif;
-                   font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 40px;
-        /* 200% */
-        letter-spacing: 0.4px;
+          color: #3a2c19;
+          font-family: "Noto Sans TC", sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 40px;
+          /* 200% */
+          letter-spacing: 0.4px;
         }
       }
     }
