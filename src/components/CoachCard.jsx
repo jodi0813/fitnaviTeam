@@ -6,35 +6,37 @@ function CoachCard({ imageSrc, role, name, hashtags = [], description, link }) {
   const [liked, setLiked] = useState(false);
   return (
     <>
-      <div className="coach-card">
-        <div className="image-container">
-          <img src={imageSrc || "./images/coach03.jpg"} alt="教練照片" />
-          <span className="label">{role}</span>
-        </div>
-        <div className="coach-box">
-          <span className="coach-name">
-            {name}
-            <button className="heart-button" onClick={() => setLiked(!liked)}>
-              {liked ? (
-                <AiFillHeart color="#ff8740" size={24} />
-              ) : (
-                <AiOutlineHeart color="#ff8740" size={24} />
-              )}
-            </button>
-          </span>
-          <div className="hashtag">
-            {hashtags.map((tag, index) => (
-              <a href="#" key={index}>
-                #{tag}
-              </a>
-            ))}
+     
+      <Link to={link} >
+        <div className="coach-card">
+          <div className="image-container">
+            <img src={imageSrc || "./images/coach03.jpg"} alt="教練照片" />
+            <span className="label">{role}</span>
           </div>
-          <p className="coach-details">{description}</p>
+          <div className="coach-box">
+            <span className="coach-name">
+              {name}
+              <button className="heart-button" onClick={() => setLiked(!liked)}>
+                {liked ? (
+                  <AiFillHeart color="#ff8740" size={24} />
+                ) : (
+                  <AiOutlineHeart color="#ff8740" size={24} />
+                )}
+              </button>
+            </span>
+            <div className="hashtag">
+              {hashtags.map((tag, index) => (
+                <a href="#" key={index}>
+                  #{tag}
+                </a>
+              ))}
+            </div>
+            <p className="coach-details">{description}</p>
+          </div>
+<div className="more-button">
+          瞭解更多▶</div>
         </div>
-        <Link to={link} className="more-button">
-          瞭解更多▶
-        </Link>
-      </div>
+      </Link>
     </>
   );
 }
