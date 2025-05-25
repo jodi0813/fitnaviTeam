@@ -408,7 +408,7 @@ function Coach() {
             </div>
           )}
         </div>
-        \
+        
         <Pagination
           pageCount={pageCount}
           currentPage={currentPage}

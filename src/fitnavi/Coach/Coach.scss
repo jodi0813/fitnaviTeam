@@ -140,12 +140,13 @@
     border-radius: 999px;
     border: 1px solid #ff8740;
     background: #ff8740;
-    color: #3a2c19;
+    color: #FFF;
     font-family: "Noto Sans TC", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 150%;
+    padding: 6px 24px;
     /* 24px */
   }
 
@@ -160,6 +161,7 @@
     border-radius: 999px;
     border: 1px solid #ff8740;
     background: #fefcf7;
+    padding: 6px 24px;
   }
 
   .favorite-count {

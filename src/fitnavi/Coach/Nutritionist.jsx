@@ -251,7 +251,8 @@ function Nutritionist() {
         selectedCity === "" || nutritionist.city === selectedCity;
       const matchSex = selectedSex === "" || nutritionist.sex === selectedSex;
       const matchHashtag =
-        selectedHashtag === "" || nutritionist.hashtags.includes(selectedHashtag);
+        selectedHashtag === "" ||
+        nutritionist.hashtags.includes(selectedHashtag);
       const matchKeyword =
         keyword === "" ||
         nutritionist.name.includes(keyword) ||
@@ -269,9 +270,7 @@ function Nutritionist() {
     currentPage * itemsPerPage + itemsPerPage
   );
 
-
-  
-/* 首頁連過來 */
+  /* 首頁連過來 */
   const location = useLocation();
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -291,86 +290,90 @@ function Nutritionist() {
     <>
       <div id="coachMain">
         <MainTitle title1="營養師" title2="找到專屬你的營養師" />
-        <div className="searchBox">
-          <form
-            action=""
-            method="post"
-            name="personal-search-form"
-            id="personal-search-form"
-            title="營養師搜尋"
-            onSubmit={handleSearch}
-          >
-            <label htmlFor="area"></label>
-            <select
-              name="area"
-              id="area"
-              value={selectedCity}
-              onChange={(e) => setSelectedCity(e.target.value)}
-            >
-              <option value="">請選擇縣市</option>
-              {cities.map((city) => (
-                <option key={city} value={city}>
-                  {city}
-                </option>
-              ))}
-            </select>
-            <label htmlFor="trainingNeeds"></label>
-            <select
-              name="trainingNeeds"
-              id="trainingNeeds"
-              value={selectedHashtag}
-              onChange={(e) => setSelectedHashtag(e.target.value)}
-            >
-              <option value="">諮詢需求</option>
-              {nutritionOptions.map((nutrition) => (
-                <option key={nutrition} value={nutrition}>
-                  {nutrition}
-                </option>
-              ))}
-            </select>
-            <label htmlFor="sex"></label>
-            <select
-              name="sex"
-              id="sex"
-              value={selectedSex}
-              onChange={(e) => setSelectedSex(e.target.value)}
-            >
-              <option value="性別">性別</option>
-              <option value="男">男</option>
-              <option value="女">女</option>
-            </select>
-            <label htmlFor="keyword-search"></label>
-            <input
-              type="search"
-              name="keyword-search"
-              id="keyword-search"
-              placeholder="關鍵字搜尋"
-              value={keyword}
-              onChange={(e) => setKeyword(e.target.value)}
-            ></input>
-            <input type="submit" value="搜尋" className="submit" />
-          </form>
-        </div>
-
         <div className="allCoachCards">
-          <div className="all-coach">全部營養師</div>
+          <div className="searchBox">
+            <form
+              action=""
+              method="post"
+              name="personal-search-form"
+              id="personal-search-form"
+              title="營養師搜尋"
+              onSubmit={handleSearch}
+            >
+              <label htmlFor="area"></label>
+              <select
+                name="area"
+                id="area"
+                value={selectedCity}
+                onChange={(e) => setSelectedCity(e.target.value)}
+              >
+                <option value="">請選擇縣市</option>
+                {cities.map((city) => (
+                  <option key={city} value={city}>
+                    {city}
+                  </option>
+                ))}
+              </select>
+              <label htmlFor="trainingNeeds"></label>
+              <select
+                name="trainingNeeds"
+                id="trainingNeeds"
+                value={selectedHashtag}
+                onChange={(e) => setSelectedHashtag(e.target.value)}
+              >
+                <option value="">諮詢需求</option>
+                {nutritionOptions.map((nutrition) => (
+                  <option key={nutrition} value={nutrition}>
+                    {nutrition}
+                  </option>
+                ))}
+              </select>
+              <label htmlFor="sex"></label>
+              <select
+                name="sex"
+                id="sex"
+                value={selectedSex}
+                onChange={(e) => setSelectedSex(e.target.value)}
+              >
+                <option value="性別">性別</option>
+                <option value="男">男</option>
+                <option value="女">女</option>
+              </select>
+              <label htmlFor="keyword-search"></label>
+              <input
+                type="search"
+                name="keyword-search"
+                id="keyword-search"
+                placeholder="關鍵字搜尋"
+                value={keyword}
+                onChange={(e) => setKeyword(e.target.value)}
+              ></input>
+              <input type="submit" value="搜尋" className="submit" />
+            </form>
+          </div>
+
+          <div className="coachTitleBox">
+            <span className="all-coach">全部營養師</span>
+          </div>
           {/* 教練小卡 */}
 
           {currentItems.length === 0 ? (
             <div className="noResult">找不到符合條件的教練</div>
           ) : (
-            <div className="coachNineCards">
-              {currentItems.map((coach, i) => (
-                <CoachCard
-                  key={i}
-                  name={coach.name}
-                  role={coach.role}
-                  hashtags={coach.hashtags}
-                  description={coach.description}
-                  imageSrc={coach.imageSrc}
-                  link="/NutriIntro"
-                />
-              ))}
+            <div>
+              <div className="coachNineCards">
+                {currentItems.map((coach, i) => (
+                  <CoachCard
+                    key={i}
+                    name={coach.name}
+                    role={coach.role}
+                    hashtags={coach.hashtags}
+                    description={coach.description}
+                    imageSrc={coach.imageSrc}
+                    link="/NutriIntro"
+                  />
+                ))}
+              </div>{" "}
             </div>
           )}
         </div>
