@@ -53,7 +53,9 @@ function CenterNavbar() {
                 <div className="informationLeft">
                   <ul>
                     <li>
-                      <strong><span class="dot">•</span>地址</strong>
+                      <strong>
+                        <span class="dot">•</span>地址
+                      </strong>
                       <br />
                       100 台北市 中正區 濟南路一段 321號 1、2樓
                     </li>
@@ -63,11 +65,15 @@ function CenterNavbar() {
                       24小時
                     </li>
                     <li>
-                      <strong><span class="dot">•</span>有無停車場</strong>
+                      <strong>
+                        <span class="dot">•</span>有無停車場
+                      </strong>
                       <br />有 100 台北市 中正區 濟南路一段 321號 B1
                     </li>
                     <li>
-                      <strong><span class="dot">•</span>大眾運輸</strong>
+                      <strong>
+                        <span class="dot">•</span>大眾運輸
+                      </strong>
                       <br />
                       捷運善導寺站3號出口、公車123號、456號、789號
                     </li>
@@ -103,47 +109,56 @@ function CenterNavbar() {
               <div className="contactInfo">
                 {/* 標題 */}
                 <Subtitle subtitle="入場費用" subtitleEN="Entrance Fee" />
-                <ul>
-                  <li>
-                    <strong><span class="dot">•</span>單次入場</strong>
-                    <br />
-                    $50/小時
-                    <br />
-                    $150/單日無限時
-                  </li>
-                  <li>
-                    <strong><span class="dot">•</span>合作會員</strong>
-                    <br />
-                    $788/月
-                    <br />
-                    $9000/年
-                    <br />
-                  </li>
-                </ul>
+                <div className="contactInfoBox">
+                  <div className="contactInfo1">
+                    <div className="contactInfo2">
+                      <span class="dot">•</span>
+                      單次入場
+                    </div>
+                    <div className="contactInfo3">
+                      <div className="contactInfo4">$50/小時</div>
+                      <div className="contactInfo4">$150/單日無限時</div>
+                    </div>
+                  </div>
+                  <div className="contactInfo1">
+                    <div className="contactInfo2">
+                      <span class="dot">•</span>
+                      合作會員
+                    </div>
+                    <div className="contactInfo3">
+                      <div className="contactInfo4">$788/月</div>
+                      <div className="contactInfo4"> $9000/年</div>
+                    </div>
+                  </div>
+                </div>
               </div>
               {/* 聯絡方式 */}
               <div className="contactInfo">
                 <Subtitle subtitle="聯絡方式" subtitleEN="Contact Info." />
-
-                <ul>
-                  <li>
-                    <strong><span class="dot">•</span>連絡電話</strong>
-                    <br />
-                    (02)12345678
-                    <br />
-                    (02)12345678
-                    <br />
-                  </li>
-                  <li>
-                    <strong><span class="dot">•</span>社群媒體</strong>
-                    <br />
+                <div className="contactInfoBox">
+                  <div className="contactInfo1">
+                    <div className="contactInfo2">
+                      <span class="dot">•</span>
+                     連絡電話
+                    </div>
+                    <div className="contactInfo3">
+                      <div className="contactInfo4">(02)12345678</div>
+                      <div className="contactInfo4">(02)12345678</div>
+                    </div>
+                  </div>
+                  <div className="contactInfo1">
+                    <div className="contactInfo2">
+                      <span class="dot">•</span>
+                     社群媒體
+                    </div>
                     <div className="social-icons">
                       <SiLine size={32} color="#06C755" />
                       <FaFacebookF size={32} color="#1877F2" />
                       <FaInstagram size={32} color="#E1306C" />
                     </div>
-                  </li>
-                </ul>
+                  </div>
+                </div>
+
               </div>
             </div>
           </section>

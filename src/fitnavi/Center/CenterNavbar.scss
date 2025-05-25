@@ -60,38 +60,39 @@
   align-items: flex-start;
   width: 100%;
   gap: 24px;
-
   .centerPhotosBox {
     display: flex;
     align-items: center;
-    width: 100%;
+    justify-content: center;
+    max-width: 1200px;
+
+    gap: 16px;
+    overflow: hidden;
+    button {
+      flex-shrink: 0;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+
+      img {
+        width: 48px;
+        height: auto;
+      }
+    }
 
     .centerPhotos {
       display: flex;
-      width: 100%;
-      height: 200px;
       gap: 11px;
 
       img {
+        flex: 1 1 0;
+        max-width: calc((100% - 22px) / 3); // ✅ 三張塞進去 + gap
+        height: auto;
+        object-fit: cover;
         border-radius: 8px;
-        flex: 1;
+        aspect-ratio: 3 / 2;
       }
-    }
-
-    button {
-      border: none;
-      background: transparent;
-
-      &:focus {
-        outline: none;
-      }
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 36px;
-      justify-content: center;
-      align-items: center;
     }
   }
 
@@ -151,7 +152,6 @@
       font-weight: 500;
       line-height: 150%;
       letter-spacing: 1.6px;
-
     }
   }
 
@@ -169,7 +169,6 @@
       .informationLeft {
         padding: 0px 36px;
         flex: 1;
-        
       }
     }
 
@@ -199,6 +198,61 @@
       display: flex;
       flex: 1;
       flex-direction: column;
+      gap: 24px;
+      .contactInfoBox {
+        display: flex;
+        padding: 0px 36px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        align-self: stretch;
+        .contactInfo1 {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          align-self: stretch;
+          .contactInfo2 {
+            display: flex;
+
+            align-items: flex-start;
+            gap: 4px;
+            align-self: stretch;
+            color: #989794;
+
+            font-family: "Noto Sans TC";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%; /* 24px */
+            letter-spacing: 1.6px;
+          }
+          .contactInfo3 {
+            display: flex;
+            padding: 0px 32px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            align-self: stretch;
+            .contactInfo4 {
+              color: #3a2c19;
+              font-family: "Noto Sans TC";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 40px;
+              letter-spacing: 0.4px;
+            }
+          }
+          .social-icons {
+            display: flex;
+            padding: 0px 36px;
+            align-items: flex-start;
+            gap: 48px;
+            align-self: stretch;
+            margin-top: 16px;
+          }
+        }
+      }
     }
   }
 }
