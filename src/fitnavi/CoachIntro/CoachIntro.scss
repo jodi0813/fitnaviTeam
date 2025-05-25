@@ -595,6 +595,8 @@
                     left: 20%; // 只有1920以上用20%
                 }
 
+
+
                 svg {
                     position: relative;
                     bottom: 80px;
@@ -975,6 +977,7 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 margin-bottom: 5%;
+                margin: 0;
 
                 h3 {
                     color: #FF8740;
@@ -1018,6 +1021,7 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 gap: 20px;
+                margin-top: 80px;
 
                 .number {
                     p {
@@ -1184,8 +1188,9 @@
 
 
         .Coach-Available-calendar {
-            margin-top: 10%;
-            align-items: center;
+            width: fit-content;
+            margin: 0 auto;
+            margin-top: 80px;
         }
 
 
@@ -1198,7 +1203,7 @@
 
 
 #coacharticle {
-    width: 95%;
+    width: 100%;
     max-width: 1200px;
     margin: 80px auto 0 auto; // 上下可調整，左右 auto
     display: flex;
@@ -1335,7 +1340,6 @@
         /* 如果有固定的 header，可調整此值 */
         scroll-margin-left: 0;
 
-
         .commentitle {
             display: flex;
             flex-direction: row;
@@ -1371,228 +1375,307 @@
             padding-bottom: 15px;
         }
 
-        .Coach-seeMoreComment {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .star-card-wrapper {
             width: 100%;
-            margin-top: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; // 主軸置中
+            justify-content: center; // 次軸（如有需要）也置中
+            box-sizing: border-box;
 
-            button {
-                align-self: center;
-                margin-top: 40px;
+            @media (max-width: 1024px) {
+                // 這句讓所有直系子元素都置中
+                max-width: 822px;
+                width: 100%;
+                > * {
+                  align-self: center !important;
+                  margin-left: auto !important;
+                  margin-right: auto !important;
+                  text-align: center !important;
+                }
+              }
+
+            .star-rate-title {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                width: 100%;
+                text-align: center;
+    
+    
+                p {
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    font-size: 100px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    /* 150px */
+                    text-transform: capitalize;
+                }
+            }
+    
+            .Coach-comment-line1 {
+    
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 50px;
+                max-width: 960px;
+                position: relative;
+                margin: 0 auto;
+                justify-content: center;
+    
+                @media (max-width: 1024px) {
+                    grid-template-columns: repeat(3, 200px);
+                    gap: 16px;
+                    max-width: 632px; // 200*3 + 16*2
+                    margin: 0 auto; // 置中
+                    justify-content: center;
+                }
+    
+                .Coach-comment-card {
+                    @media (max-width: 1024px) {
+                        width: 200px !important;
+                        height: 300px !important;
+                        box-sizing: border-box;
+                    }
+                }
+    
+                .Coach-comment-card>* {
+                    @media (max-width: 1024px) {
+                        width: 100% !important;
+                        height: 100% !important;
+                        box-sizing: border-box;
+                    }
+                }
+    
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 1px;
+                    border-left: 1px dashed #ccc;
+                }
+    
+                &::before {
+                    left: calc(33.333% + 0px);
+                    /* 第一條虛線 */
+    
+                }
+    
+                &::after {
+                    left: calc(66.666% + 3px);
+                    /* 第二條虛線 */
+    
+                }
+    
+    
+                .Star-rate {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+    
+    
+    
+                h3 {
+                    color: var(--dark, #3A2C19);
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 150%;
+                    /* 45px */
+                    text-transform: capitalize;
+                    margin-left: 40%;
+                }
+    
+    
+    
+                p.description {
+                    color: var(--dark, #3A2C19);
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    margin-top: 30px;
+    
+                    @media (max-width: 1024px) {
+                        overflow: hidden;
+                        color: var(--dark, #3A2C19);
+                        text-overflow: ellipsis;
+                        /* 段落/14 */
+                        font-family: "Noto Sans TC";
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                        overflow: hidden;
+                        color: var(--dark, #3A2C19);
+                        text-overflow: ellipsis;
+                        /* 段落/14 */
+                        font-family: "Noto Sans TC";
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                    }
+                }
+    
+                .Name-date {
+                    margin-top: 90px;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 120px;
+    
+                    @media (max-width: 1024px) {
+                        gap: 50px;
+    
+                    }
+    
+                    p.Name {
+                        color: #000;
+    
+                        /* 段落/14 */
+                        font-family: "Noto Sans TC", sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                        white-space: nowrap;
+                    }
+    
+                    p.Date {
+                        color: var(--dark, #3A2C19);
+                        text-align: right;
+                        /* 段落/14 */
+                        font-family: " Sans TC";
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                    }
+    
+    
+                }
+    
+            }
+
+
+            .Coach-seeMoreComment {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                width: 100%;
+                margin-top: 5%;
 
-                width: 300px;
-                height: 40px;
-                border-radius: 999px;
-                background: var(--primary, #FF8740);
-                border: none;
-                cursor: pointer;
-
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 20px;
-                font-weight: 700;
-                letter-spacing: 2px;
-                color: var(--white, #FEFCF7);
-                text-align: center;
-                position: relative;
-                overflow: hidden;
-
-                .seeMore-text {
-                    transition: transform 0.3s ease, color 0.3s ease;
-                }
-
-                img {
-                    width: 24px;
-                    height: 24px;
-                    opacity: 0;
-                    position: absolute;
-                    right: 30px;
-                    transition: opacity 0.3s ease;
-                }
-
-                &:hover {
-
+                button {
+                    align-self: center;
+                    margin-top: 40px;
+                    display: flex;
                     justify-content: center;
                     align-items: center;
+
+                    width: 300px;
+                    height: 40px;
                     border-radius: 999px;
-                    background: var(--white, #FEFCF7);
-                    border: 1px solid var(--primary, #FF8740);
+                    background: var(--primary, #FF8740);
+                    border: none;
+                    cursor: pointer;
+
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 20px;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    color: var(--white, #FEFCF7);
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
 
                     .seeMore-text {
-                        transform: translateX(-10px); // 向左滑動
-                        color: var(--primary, #FF8740);
+                        transition: transform 0.3s ease, color 0.3s ease;
                     }
 
                     img {
-                        opacity: 1;
-                        // transform: translateX(0); // icon 滑進來
+                        width: 24px;
+                        height: 24px;
+                        opacity: 0;
+                        position: absolute;
+                        right: 30px;
+                        transition: opacity 0.3s ease;
                     }
+
+                    &:hover {
+
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 999px;
+                        background: var(--white, #FEFCF7);
+                        border: 1px solid var(--primary, #FF8740);
+
+                        .seeMore-text {
+                            transform: translateX(-10px); // 向左滑動
+                            color: var(--primary, #FF8740);
+                        }
+
+                        img {
+                            opacity: 1;
+                            // transform: translateX(0); // icon 滑進來
+                        }
+                    }
+
+                    &:active {
+                        outline: none;
+
+                        .seeMore-text {
+                            color: var(--primary, var(--primary, #FF8740));
+                            font-size: 16px;
+                            font-weight: 500;
+                            letter-spacing: 1.6px;
+                        }
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
                 }
 
-                &:active {
-                    outline: none;
-
-                    .seeMore-text {
-                        color: var(--primary, var(--primary, #FF8740));
-                        font-size: 16px;
-                        font-weight: 500;
-                        letter-spacing: 1.6px;
-                    }
-
-                    img {
-                        width: 20px;
-                        height: 20px;
-                    }
-                }
-
-            }
-
-        }
-
-    }
-
-
-
-
-    .star-rate-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        width: 100%;
-        text-align: center;
-
-
-        p {
-            color: var(--dark, #3A2C19);
-            text-align: center;
-            font-size: 100px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 150%;
-            /* 150px */
-            text-transform: capitalize;
-        }
-    }
-
-    .Coach-comment-line1 {
-
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 50px;
-        max-width: 960px;
-        margin: 0 auto;
-        position: relative;
-        justify-content: center;
-
-
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 1px;
-            border-left: 1px dashed #ccc;
-        }
-
-        &::before {
-            left: calc(33.333% + 0px);
-            /* 第一條虛線 */
-
-        }
-
-        &::after {
-            left: calc(66.666% + 3px);
-            /* 第二條虛線 */
-
-        }
-
-
-        .Star-rate {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-
-
-        h3 {
-            color: var(--dark, #3A2C19);
-            font-size: 30px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 150%;
-            /* 45px */
-            text-transform: capitalize;
-            margin-left: 40%;
-        }
-
-
-
-        p.description {
-            color: var(--dark, #3A2C19);
-            /* 段落/14 */
-            font-family: "Noto Sans TC", sans-serif;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%;
-            /* 19.6px */
-            letter-spacing: 1.4px;
-            margin-top: 30px;
-        }
-
-        .Name-date {
-            margin-top: 90px;
-            display: flex;
-            flex-direction: row;
-            gap: 120px;
-
-            p.Name {
-                color: #000;
-
-                /* 段落/14 */
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                /* 19.6px */
-                letter-spacing: 1.4px;
-                white-space: nowrap;
-            }
-
-            p.Date {
-                color: var(--dark, #3A2C19);
-                text-align: right;
-                /* 段落/14 */
-                font-family: " Sans TC";
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                /* 19.6px */
-                letter-spacing: 1.4px;
             }
 
 
+
         }
+
+
 
 
 
     }
-
-
-
-
 }
+
+
+
+
+
+
 
 
 
@@ -1641,17 +1724,31 @@
     flex-direction: row;
     align-items: flex-start;
 
-    .coachnav {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-self: stretch;
-        flex-shrink: 0;
-        width: 10%;
-        margin-top: 200px;
-
+    .coachnav ul {
+        width: 100%;
+        padding: 10px 0; // 只上下
+        margin: 0;
+        list-style: none;
+        text-align: right;
     }
+
+    .coachnav li {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .coachnav li a {
+        display: block;
+        width: 100%;
+        text-align: right;
+        padding: 8px 0;
+        padding-right: 30px; // 文字離線距離
+        color: #000;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+
 
     .coachintro-all {
         flex: 1 1 0;
@@ -1686,170 +1783,8 @@
 
 
 
-//響應式1024
-// @media screen and (max-width: 1024px) {
-//     .Coachintro-person {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: stretch;
-//         gap: 4px; // 讓兩區更近
-//         width: 38%; // 再往內縮（你可改 35%、40% 視覺需求）
-//         margin: 0 auto;
-//         box-sizing: border-box;
-//         padding: 0 16px;
 
-//         .person-class-photo {
-//             width: 100%;
-//             box-sizing: border-box;
-//             margin: 0;
-//             padding: 0;
 
-//             .coachphotos {
-//                 width: 100%;
-//                 max-width: 100%;
-//                 margin: 0;
-//                 padding: 0;
-
-//                 .selfie img {
-//                     width: 80%;
-//                     max-width: 180px; // 或 150px，看你想多小
-//                     height: auto;
-//                     object-fit: cover;
-//                     display: block;
-//                     margin: 0 auto;
-//                 }
-
-//                 .more img {
-//                     width: 80px; // 原本 124px，可改更小
-//                     height: 65px; // 原本 133px，可改更小
-//                     object-fit: cover;
-//                     border-radius: 12px;
-//                     display: block;
-//                 }
-
-//                 .TurnButton {
-//                     margin-top: 16px;
-//                     justify-content: flex-start;
-//                 }
-//             }
-//         }
-
-//         .Coachclass-container {
-//             box-sizing: border-box;
-//             margin: 0 auto;
-//             padding: 0; // 如果父層已經 padding，這層就不用
-//             word-break: break-all;
-//             overflow-wrap: break-word;
-
-//             .personinfo {
-//                 .namefavorite {
-//                     gap: 16px;
-//                     flex-direction: row;
-//                     align-items: flex-start;
-
-//                     h2 {
-//                         font-size: 24px;
-//                         white-space: nowrap;
-//                     }
-//                 }
-
-//                 p {
-//                     font-size: 16px;
-//                     margin-bottom: 12px;
-//                 }
-//             }
-
-//             .coach-classbox {
-//                 padding: 24px 8px;
-//                 gap: 24px;
-
-//                 .classtime {
-//                     flex-direction: column;
-//                     align-items: flex-start;
-//                     gap: 8px;
-
-//                     h2 {
-//                         font-size: 24px;
-//                     }
-//                 }
-
-//                 .p-linethrough-color {
-//                     flex-direction: column;
-//                     align-items: flex-start;
-//                     margin-top: 16px;
-
-//                     p,
-//                     p.p-linethrough {
-//                         font-size: 16px;
-//                         line-height: 28px;
-//                     }
-
-//                     span {
-//                         .Arrow-price {
-//                             .Arrow-orange {
-//                                 width: 18px;
-//                                 height: 18px;
-//                             }
-
-//                             p.OrangePrice {
-//                                 font-size: 28px;
-//                                 line-height: 32px;
-//                             }
-//                         }
-
-//                         p.SingleClass {
-//                             font-size: 16px;
-//                         }
-//                     }
-
-//                     p.SingleClass {
-//                         font-size: 16px;
-//                     }
-//                 }
-
-//                 .coach-prices-button {
-//                     p {
-//                         font-size: 16px;
-//                     }
-
-//                     .price-with-button {
-//                         flex-direction: column;
-//                         gap: 12px;
-
-//                         button {
-//                             width: 100%;
-//                             font-size: 18px;
-//                             margin-top: 16px;
-//                             height: 44px;
-//                         }
-//                     }
-//                 }
-//             }
-
-//             .Coach-place {
-//                 flex-direction: column;
-//                 gap: 8px;
-//                 margin-top: 10px;
-
-//                 .moreimg4,
-//                 .moreimg5 {
-//                     max-width: 100%;
-//                     height: auto;
-//                     aspect-ratio: unset;
-//                     border-radius: 16px;
-
-//                     img {
-//                         width: 120px;
-//                         height: 80px;
-//                         object-fit: cover;
-//                         border-radius: 12px;
-//                         display: block;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
 @media screen and (max-width: 1024px) {
 
     html,
@@ -1939,14 +1874,19 @@
             .personinfo .namefavorite {
                 gap: 32px !important;
                 margin-bottom: 8px !important;
+
+
+
             }
 
             .personinfo p {
                 font-size: 16px !important;
                 margin-bottom: 10px !important;
+
             }
 
             .coach-classbox {
+                width: 400px !important;
                 border-radius: 18px !important;
                 padding: 16px 8px !important;
                 margin-top: 32px !important;
@@ -1999,7 +1939,7 @@
                     gap: 8px !important;
 
                     button {
-                        width: 100% !important;
+                        width: 200px !important;
                         font-size: 15px !important;
                         margin-top: 10px !important;
                         height: 36px !important;
@@ -2041,7 +1981,7 @@
         padding: 0 12px !important;
         box-sizing: border-box;
         margin-top: 250px !important;
-        margin-left: 5% !important;
+        margin-left: 1% !important;
 
         .about-title {
             gap: 18px !important; // 標題區間距縮小
@@ -2058,6 +1998,7 @@
                 font-size: 14px !important;
                 padding-bottom: 6px !important;
                 border-bottom: 2px solid #3A2C19;
+
             }
         }
 
@@ -2087,7 +2028,6 @@
         width: 15% !important;
         min-width: 90px;
         align-self: stretch;
-        background: #fff;
         margin-top: 200px !important;
     }
 
@@ -2102,10 +2042,10 @@
 
 
 
-
+    //專長區
     #spe {
         margin-top: 200px !important;
-        margin-left: 5% !important;
+        margin-left: 1% !important;
     }
 
     .coach-circlewrapper {
@@ -2123,7 +2063,7 @@
         padding: 0 10px;
         overflow-x: auto;
         margin-top: 150px !important; // 視需求調整
-        margin-left: 5% !important;
+        margin-left: 1% !important;
     }
 
     .coach-exp-cer-wrapper {
@@ -2159,42 +2099,94 @@
         width: 350px !important;
     }
 
-    // 文章、專區
+    //預約區
+
+    #reservation1 {
+        width: 100% !important;
+        max-width: none;
+        padding: 0 10px;
+        overflow-x: auto;
+        margin-top: 150px !important; // 視需求調整
+        margin-left: 1% !important;
+    }
+
+    .coach-reservation-wrapper {
+        min-width: 200px; // 根據內容調整
+        flex: 0 0 auto;
+    }
+
+    .restitle h4,
+    .caltitle h4 {
+        margin: 0;
+        padding: 0;
+        width: 200px !important;
+    }
+
+
+
+
+
+    .reserve {
+        max-width: 350px;
+    }
+
+
+    #coacharticle {
+        width: 100% !important;
+        max-width: none;
+        margin-top: 80px !important;
+        margin-left: 1% !important;
+        /* 讓內容盡量靠左，或視情況調整 */
+        overflow-x: unset;
+    }
+
     .ViewArticles {
-        gap: 18px !important;
-        margin-top: 18px !important;
-        flex-wrap: wrap !important;
-        width: 50%;
-
-        .Three-classcards {
-            gap: 8px !important;
-        }
+        max-width: 80% !important;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* padding-left/right 可預留箭頭空間，如果有需要 */
     }
 
-    // 評價區
-    .Coach-comment-line1 {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-
-        &::before,
-        &::after {
-            display: none !important;
-        }
+    //   
+    .ViewArticles-left {
+        width: 12px;
+        height: 24px;
+        left: 5px;
     }
 
-    .Coach-comment-wrapper .star-rate-title p {
-        font-size: 30px !important;
+    .ViewArticles-right {
+        width: 12px;
+        height: 24px;
+        right: 5px;
     }
 
-    // 預約流程圖片
-    .reserve-img img {
-        width: 80px !important;
-        height: auto !important;
-        right: 0 !important;
-        top: 0 !important;
+    .Three-classcards {
+        display: flex;
+        flex-direction: row;
+        gap: 16px !important;
+        max-width: 90% !important;
+        margin: 0 auto;
+        padding: 0 50px;
+        /* 預留空間給左右箭頭 */
+        box-sizing: border-box;
     }
+
+    #Coach-comment{
+        width: 100% !important;
+        max-width: none;
+        padding: 0 10px;
+        overflow-x: auto;
+        margin-top: 150px !important; // 視需求調整
+        margin-left: 1% !important;
+    }
+
+
+
+
+
+
 
     // 保證所有圖片、按鈕都不會超出
     img,

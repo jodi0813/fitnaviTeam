@@ -71,12 +71,12 @@
     .selectedday-time {
         display: flex;
         flex-direction: column;
+        width: 90px;
         max-height: 290px;
         margin-top: 0px;
         padding: 20px;
         gap: 10px;
         overflow-y: auto;
-        /* 刪除橫向滾輪 */
         overflow-x: hidden; 
         align-items: center;
         background-color: white;
@@ -123,6 +123,8 @@
         }
 
 
+
+
     }
 
 }
@@ -131,3 +133,7 @@
     display: flex;
     align-items: flex-start;
 }
+
+
+
+  
