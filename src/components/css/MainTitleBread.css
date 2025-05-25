@@ -1,7 +1,4 @@
 @charset "UTF-8";
-.mainTitleBreadBox {
-  padding: 0px 50px;
-}
 .mainTitleBreadBox .mainTitleBread {
   display: flex;
   align-items: baseline;
@@ -58,4 +55,5 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 2px;
+  padding: 0;
 }

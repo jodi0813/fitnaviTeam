@@ -307,7 +307,7 @@ select {
 
 .Joinuscard-row .card:nth-child(3) {
   left: 50px;
-  top: 165px !important;
+  top: 160px !important;
   z-index: 3;
   animation-delay: 0.3s;
 }

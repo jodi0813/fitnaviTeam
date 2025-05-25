@@ -268,63 +268,104 @@ select {
 
 .Joinuscard-row {
   position: relative;
-  width: 600px; /* 根據卡片數量和重疊量調整 */
-  height: 700px;
-  margin-top: 200px; /* 控制整組區塊距離上方 */
-  margin-left: 50%;
-  justify-content: center;
+  width: 700px;
+  height: 650px;
+  margin: 0 auto;
+  margin-top: 120px;
+  display: block;
 }
 
 .Joinuscard-row .card {
   position: absolute;
-  width: 260px;
-  height: 700px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  border-radius: 16px;
-  background: #fff;
+  width: 550px;
+  height: 650px;
+  left: 0;
+  border-radius: 32px;
+  border: 1px solid var(--dark, #3A2C19);
+  background: #FFF;
+  box-shadow: 8px 8px 0px 0px #3A2C19;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   opacity: 0;
-  animation: moveIn 0.7s forwards;
+  transform: translateY(100px) scale(0.95);
+  animation: cardDropIn 0.5s forwards;
 }
 
-/* 卡牌橫向部分重疊+動畫延遲，z-index 疊放 */
 .Joinuscard-row .card:nth-child(1) {
-  left: -200px;
+  top: 0;
+  left: 0;
   z-index: 1;
   animation-delay: 0.1s;
 }
 
 .Joinuscard-row .card:nth-child(2) {
-  left: -50px;
+  top: 30px;
+  left: 25px;
   z-index: 2;
-  animation-delay: 0.2s;
+  animation-delay: 0.22s;
 }
 
 .Joinuscard-row .card:nth-child(3) {
+  top: 60px;
   left: 50px;
   z-index: 3;
-  animation-delay: 0.3s;
+  animation-delay: 0.34s;
 }
 
 .Joinuscard-row .card:nth-child(4) {
-  left: 200px;
+  top: 90px;
+  left: 75px;
   z-index: 4;
-  animation-delay: 0.4s;
+  animation-delay: 0.46s;
 }
 
-@keyframes moveIn {
+@keyframes cardDropIn {
   0% {
-    transform: translateY(40px) translateX(80px);
     opacity: 0;
+    transform: translateY(100px) scale(0.95);
   }
-  70% {
+  80% {
     opacity: 1;
+    transform: translateY(-10px) scale(1.02);
   }
   100% {
-    transform: translateY(0px) translateX(0);
     opacity: 1;
+    transform: translateY(0) scale(1);
   }
+}
+.CoachJoinus-Step1-form,
+.CoachJoinus-Step2,
+.CoachJoinus-Step3,
+.CoachJoinus-Step4 {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 19px 32px;
+  border-radius: 32px;
+  border: 1px solid var(--dark, #3A2C19);
+  background: #FFF;
+  box-shadow: 8px 8px 0px 0px #3A2C19;
+  display: flex;
+  flex-direction: column;
+}
+
+.Joinuscard-row .card,
+.CoachJoinus-Step1-form,
+.CoachJoinus-Step2,
+.CoachJoinus-Step3,
+.CoachJoinus-Step4 {
+  width: 550px;
+  height: 650px;
+  min-width: 550px;
+  min-height: 650px;
+  max-width: 550px;
+  max-height: 650px;
+  box-sizing: border-box;
+  border-radius: 32px;
+  border: 1px solid var(--dark, #3A2C19);
+  background: #FFF;
+  box-shadow: 8px 8px 0px 0px #3A2C19;
+  display: flex;
+  flex-direction: column;
 }

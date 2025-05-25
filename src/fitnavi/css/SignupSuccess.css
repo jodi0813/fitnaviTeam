@@ -234,29 +234,55 @@ select {
   margin-bottom: 40px;
 }
 .LoginSuccess .LoginSuccess-content button {
-  width: 200px;
-  height: 40px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  width: 200px;
+  height: 40px;
   border-radius: 999px;
-  text-align: center;
-  /* heading/標題4/Bold */
+  background: var(--primary, #FF8740);
+  border: none;
+  cursor: pointer;
   font-family: "Noto Sans TC", sans-serif;
   font-size: 20px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 2px;
-  background-color: #FFF;
-  color: var(--primary, var(--primary, #FF8740));
-  border: 1px solid var(--primary, #FF8740);
+  color: var(--white, #FEFCF7);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.LoginSuccess .LoginSuccess-content button .success-text {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.LoginSuccess .LoginSuccess-content button img {
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  position: absolute;
+  right: 30px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }
 .LoginSuccess .LoginSuccess-content button:hover {
-  background: var(--primary, #FF8740);
-  color: var(--white, var(--white, #FEFCF7));
+  background: var(--white, #FEFCF7);
+  border: 1px solid var(--primary, #FF8740);
+}
+.LoginSuccess .LoginSuccess-content button:hover .success-text {
+  transform: translateX(-10px);
+  color: var(--primary, #FF8740);
+}
+.LoginSuccess .LoginSuccess-content button:hover img {
+  opacity: 1;
+}
+.LoginSuccess .LoginSuccess-content button:active .success-text {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+}
+.LoginSuccess .LoginSuccess-content button:active img {
+  width: 20px;
+  height: 20px;
 }
 .LoginSuccess .SetAccountPassword-option {
   position: relative;

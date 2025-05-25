@@ -472,73 +472,49 @@ select {
 }
 .MemberSignup-wrapper .Signup-button button {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-radius: 999px;
-  background: var(--primary, #FF8740);
-  display: flex;
-  flex-direction: row;
   width: 200px;
   height: 40px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  color: var(--white, var(--white, #FEFCF7));
-  text-align: center;
-  /* heading/標題4/Bold */
+  border-radius: 999px;
+  background: var(--primary, #FF8740);
+  border: none;
+  cursor: pointer;
   font-family: "Noto Sans TC", sans-serif;
   font-size: 20px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 2px;
+  color: var(--white, #FEFCF7);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.MemberSignup-wrapper .Signup-button button .Signup-text {
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 .MemberSignup-wrapper .Signup-button button img {
   width: 24px;
   height: 24px;
-  position: absolute;
-  left: 52%;
-  top: 80%;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  right: 30px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }
 .MemberSignup-wrapper .Signup-button button:hover {
-  justify-content: center;
-  align-items: center;
-  border-radius: 999px;
-  border: 1px solid var(--primary, #FF8740);
   background: var(--white, #FEFCF7);
+  border: 1px solid var(--primary, #FF8740);
 }
 .MemberSignup-wrapper .Signup-button button:hover .Signup-text {
   transform: translateX(-10px);
-  color: var(--primary, var(--primary, #FF8740));
-  text-align: center;
-  /* heading/標題4/Bold */
-  font-family: "Noto Sans TC";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 2px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  color: var(--primary, #FF8740);
 }
 .MemberSignup-wrapper .Signup-button button:hover img {
   opacity: 1;
 }
-.MemberSignup-wrapper .Signup-button button:active {
-  outline: none;
-}
 .MemberSignup-wrapper .Signup-button button:active .Signup-text {
-  color: var(--primary, var(--primary, #FF8740));
-  text-align: center;
-  /* 段落/16 */
-  font-family: "Noto Sans TC";
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 150%;
-  /* 24px */
   letter-spacing: 1.6px;
 }
 .MemberSignup-wrapper .Signup-button button:active img {

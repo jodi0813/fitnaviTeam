@@ -181,7 +181,7 @@ select {
 #homePage .homeSearchSection {
   position: relative;
   background-color: #FEFCF7;
-  padding: 140px;
+  padding: 191px 0;
   border-top-left-radius: 80% 10%;
   border-top-right-radius: 80% 10%;
   top: -400px;

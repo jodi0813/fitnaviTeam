@@ -181,7 +181,7 @@ select {
 #centerMapMain .mapSearchAll {
   display: flex;
   flex: 1;
-  gap: 1%;
+  gap: 8px;
   overflow-x: hidden;
   width: 100%;
 }
@@ -189,7 +189,7 @@ select {
   display: flex;
   width: 50%;
   justify-content: center;
-  gap: 4%;
+  gap: 8px;
 }
 #centerMapMain .mapSearchAll .mapSearchLeft .mapSearchLeft1 {
   width: 50%;
@@ -276,7 +276,7 @@ select {
   gap: 12px;
   overflow: auto;
   height: 653px;
-  padding-right: 12px;
+  padding-right: 4px;
 }
 #centerMapMain .mapSearchAll .mapSearchLeft .mapSearchLeft2 .photosNumber {
   color: #3a2c19;

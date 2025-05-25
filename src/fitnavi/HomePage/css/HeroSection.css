@@ -240,11 +240,7 @@ select {
   justify-content: flex-start;
   align-items: flex-start;
   margin-left: 10%;
-<<<<<<< HEAD
   top: 20%;
-=======
-  top: 8%;
->>>>>>> 446a7d7088579f794e3b5551f6da9f85771f9726
   z-index: 2;
   height: 100%;
 }
@@ -320,18 +316,11 @@ select {
   line-height: 150%;
   /* 36px */
   letter-spacing: 2.4px;
-<<<<<<< HEAD
   white-space: nowrap;
 }
 .HeroSection .Hero-section-scroll {
   position: absolute;
   top: 63%;
-=======
-}
-.HeroSection .Hero-section-scroll {
-  position: absolute;
-  top: 60%;
->>>>>>> 446a7d7088579f794e3b5551f6da9f85771f9726
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -367,7 +356,6 @@ select {
     transform: translateY(0);
   }
   10.42% {
-<<<<<<< HEAD
     transform: translateY(20px);
     /* 箭頭往下完成 */
   }
@@ -382,23 +370,10 @@ select {
   100% {
     transform: translateY(0);
     /* 停留原位 */
-=======
-    transform: translateY(20px); /* 箭頭往下完成 */
-  }
-  45.83% {
-    transform: translateY(20px); /* 停留在下方 */
-  }
-  66.67% {
-    transform: translateY(0); /* 往上回原位 */
-  }
-  100% {
-    transform: translateY(0); /* 停留原位 */
->>>>>>> 446a7d7088579f794e3b5551f6da9f85771f9726
   }
 }
 @keyframes textMove {
   0%, 2.08% {
-<<<<<<< HEAD
     transform: translateY(0);
     /* 文字延遲 0.05s (2.08%) */
   }
@@ -418,21 +393,4 @@ select {
     transform: translateY(0);
     /* 停留原位 */
   }
-}/*# sourceMappingURL=HeroSection.css.map */
-=======
-    transform: translateY(0); /* 文字延遲 0.05s (2.08%) */
-  }
-  15.62% {
-    transform: translateY(15px); /* 文字往下完成 */
-  }
-  45.83% {
-    transform: translateY(15px); /* 停留 */
-  }
-  66.67% {
-    transform: translateY(0); /* 往上回原位 */
-  }
-  100% {
-    transform: translateY(0); /* 停留原位 */
-  }
 }
->>>>>>> 446a7d7088579f794e3b5551f6da9f85771f9726

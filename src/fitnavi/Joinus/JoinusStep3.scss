@@ -13,14 +13,12 @@
 
 // }
 
-.CoachJoinus-Step3-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; // 讓它垂直滿版置中
+
+
 
 
     .CoachJoinus-Step3 {
+        box-sizing: border-box;
         position: relative;
         top: -10%;
         display: flex;
@@ -39,6 +37,7 @@
         background: #FFF;
         // box-shadow: 4px 4px 24px 0px rgba(58, 44, 25, 0.30);
         box-shadow: 8px 8px 0px 0px #3A2C19;
+        
 
         .Coach-JoinusStep3-title {
             display: flex;
@@ -405,4 +404,3 @@
 
         }
     }
-}

@@ -254,55 +254,47 @@ select {
   box-shadow: 1px 2px 4px 0px rgba(58, 44, 25, 0.2);
 }
 .MemberLogin .KeyinEmailAccount button {
-  width: 200px;
-  height: 40px;
+  align-self: center;
+  margin-top: 40px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  margin-left: 100px;
+  width: 200px;
+  height: 40px;
   border-radius: 999px;
-  text-align: center;
-  /* heading/標題4/Bold */
+  background: var(--primary, #FF8740);
+  border: none;
+  cursor: pointer;
   font-family: "Noto Sans TC", sans-serif;
   font-size: 20px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 2px;
-  background-color: #FFF;
-  color: var(--primary, var(--primary, #FF8740));
-  border: 1px solid var(--primary, #FF8740);
+  color: var(--white, #FEFCF7);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.MemberLogin .KeyinEmailAccount button .login-text {
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 .MemberLogin .KeyinEmailAccount button img {
   width: 24px;
   height: 24px;
-  position: absolute;
-  left: 52%;
-  top: 59%;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  right: 30px;
+  transition: opacity 0.3s ease;
 }
 .MemberLogin .KeyinEmailAccount button:hover {
   justify-content: center;
   align-items: center;
   border-radius: 999px;
-  border: 1px solid var(--primary, #FF8740);
   background: var(--white, #FEFCF7);
+  border: 1px solid var(--primary, #FF8740);
 }
 .MemberLogin .KeyinEmailAccount button:hover .login-text {
   transform: translateX(-10px);
-  color: var(--primary, var(--primary, #FF8740));
-  text-align: center;
-  /* heading/標題4/Bold */
-  font-family: "Noto Sans TC";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 2px;
-  transition: transform 0.3s ease;
+  color: var(--primary, #FF8740);
 }
 .MemberLogin .KeyinEmailAccount button:hover img {
   opacity: 1;
@@ -312,14 +304,8 @@ select {
 }
 .MemberLogin .KeyinEmailAccount button:active .login-text {
   color: var(--primary, var(--primary, #FF8740));
-  text-align: center;
-  /* 段落/16 */
-  font-family: "Noto Sans TC";
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 150%;
-  /* 24px */
   letter-spacing: 1.6px;
 }
 .MemberLogin .KeyinEmailAccount button:active img {
@@ -347,6 +333,7 @@ select {
   /* 24px */
   letter-spacing: 1.6px;
   padding: 0px;
+  background-color: transparent;
 }
 .MemberLogin .MemberLogin-option button:hover {
   border: none;

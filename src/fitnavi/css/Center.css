@@ -176,16 +176,19 @@ select {
 #centerMain {
   width: 100%;
   padding: 120px 50px;
+  display: flex;
+  flex-direction: column;
 }
 #centerMain .main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin-top: 19px;
 }
 #centerMain .main-content .centerPhotoBox {
   position: relative;
-  width: 75%;
+  width: 85%;
 }
 #centerMain .main-content .centerPhotoBox .centerPic {
   align-self: stretch;
@@ -199,33 +202,37 @@ select {
   align-items: flex-end;
   position: absolute;
   left: 34px;
-  bottom: -53px;
-  gap: 14px;
+  bottom: -70px;
+  gap: 6px;
+  width: 100%;
 }
 #centerMain .main-content .centerPhotoBox .centerTitle2 .centerLogoPic {
   width: 143px;
   height: 143px;
   aspect-ratio: 1;
   border-radius: 143px;
-  margin: 0px 14px 0px 0px;
 }
-#centerMain .main-content .centerPhotoBox .centerTitle2 .center-name {
+#centerMain .main-content .centerPhotoBox .centerTitle2 .center-nameBox {
+  display: flex;
+  flex-direction: column;
+}
+#centerMain .main-content .centerPhotoBox .centerTitle2 .center-nameBox .center-name {
   color: #3a2c19;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-#centerMain .main-content .centerPhotoBox .centerTitle2 .center-area {
+#centerMain .main-content .centerPhotoBox .centerTitle2 .center-nameBox .center-area {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 2px;
 }
-#centerMain .main-content .centerPhotoBox .centerTitle2 .hashtag {
+#centerMain .main-content .centerPhotoBox .centerTitle2 .center-nameBox .hashtag {
   display: flex;
-  gap: 5px;
+  gap: 10px;
 }
-#centerMain .main-content .centerPhotoBox .centerTitle2 .hashtag a {
+#centerMain .main-content .centerPhotoBox .centerTitle2 .center-nameBox .hashtag a {
   font-family: "Noto Sans TC", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -242,10 +249,20 @@ select {
   width: 75%;
 }
 #centerMain .main-content .centerIntroduction .introductionTitle {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+#centerMain .main-content .centerIntroduction .introductionTitle span {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 2px;
   color: #ff8740;
+}
+#centerMain .main-content .centerIntroduction .introductionTitle .introductionTitleLine {
+  flex: 1;
+  height: 1px;
+  background-color: #3a2c19;
 }
 #centerMain .main-content .centerIntroduction .introduction {
   font-family: "Noto Sans TC", sans-serif;
@@ -255,9 +272,4 @@ select {
   letter-spacing: 1.6px;
   color: #3a2c19;
   padding: 26px 48px;
-}
-#centerMain .main-content .expandContent {
-  display: flex;
-  justify-content: center;
-  margin: 24px;
 }

@@ -175,9 +175,9 @@ select {
 
 #navbarHeader {
   position: fixed;
-  top: 2.5%;
+  top: 25px;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background: transparent;
   z-index: 999;
 }
@@ -370,4 +370,8 @@ select {
 }
 .mobile-menu.show {
   left: 0;
+}
+
+html, body {
+  overflow-x: hidden;
 }
