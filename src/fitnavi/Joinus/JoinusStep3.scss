@@ -18,15 +18,14 @@
 
 
     .CoachJoinus-Step3 {
-        box-sizing: border-box;
         position: relative;
-        top: -10%;
+        
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         width: 550px;
-        height: 700px;
+        height: 650px;
         padding-top: 19px;
         padding-bottom: 19px;
         padding-right: 32px;
@@ -95,6 +94,7 @@
 
         .Step3-form {
             position: relative;
+         
 
             .Aboutme-textarea {
                 .Aboutme-textarea-title {
@@ -404,3 +404,47 @@
 
         }
     }
+
+
+    .CoachJoinus-Step3 {
+        width: 550px;
+        height: 650px;
+        border-radius: 32px;
+        border: 1px solid var(--dark, #3A2C19);
+        background: #FFF;
+        box-shadow: 8px 8px 0px 0px #3A2C19;
+        box-sizing: border-box;
+        padding: 19px 32px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+      
+      .Step3-form {
+        flex: 1 1 0;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px; // 內部元件間距
+      }
+      
+      .Step3-NextPreButton {
+        margin-top: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 300px;
+        width: 100%;
+      }
+      
+      /* 其餘 Aboutme-textarea、Aboutme-uploadphotos、teachingExperiences、scrollFieldset-teachExperience 可維持原本設計 */
+      
+      .scrollFieldset-teachExperience {
+        max-height: 114px;
+        overflow-y: auto;
+        width: 430px;
+        border: 1px solid #d0cdc9;
+        border-radius: 8px;
+        margin-top: 8px;
+        background: #fff;
+        /* 其他滾動條樣式略 */
+      }

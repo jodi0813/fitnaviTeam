@@ -4,7 +4,7 @@ import JoinusStep2 from "../JoinusStep2";
 import JoinusStep3 from "../JoinusStep3";
 import JoinusStep4 from "../JoinusStep4";
 import MainTitle from "../../../components/Title/MainTitle";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function JoinusCarousel() {
@@ -13,26 +13,35 @@ export default function JoinusCarousel() {
     const [submitCount, setSubmitCount] = useState(0);
     const navigate = useNavigate();
 
+    // 監聽 submitCount 的變化，當它達到 2 時執行跳轉
+    useEffect(() => {
+        if (submitCount === 2) {
+            navigate("/JoinusLoading");
+        }
+    }, [submitCount, navigate]);
+
     const handleNext = () => {
         if (step < 3) {
             setDirection("forward");
-            setStep(s => s + 1);
+            setStep((s) => s + 1);
         }
     };
+
     const handlePrev = () => {
         if (step > 0) {
             setDirection("backward");
-            setStep(s => s - 1);
+            setStep((s) => s - 1);
         }
     };
 
     const handleSubmit = () => {
-        console.log("submitCount:", submitCount);
-        if (submitCount === 0) {
-            setSubmitCount(1);
-        } else {
-            navigate("/JoinusLoading");
-        }
+        setSubmitCount((prev) => {
+            // 第一次點擊，將 submitCount 設為 1 (觸發 JoinusRow 顯示)
+            if (prev === 0) return 1;
+            // 第二次點擊，將 submitCount 設為 2 (觸發跳轉)
+            if (prev === 1) return 2;
+            return prev; // 保持現有值，以防意外情況
+        });
     };
 
     const steps = [
@@ -42,13 +51,17 @@ export default function JoinusCarousel() {
         () => <JoinusStep4 onPre={handlePrev} onSubmit={handleSubmit} />
     ];
 
+    // 當 submitCount 為 1 時，顯示 JoinusRow 效果
     if (submitCount === 1) {
         const cardList = [
+            // 注意：這裡直接渲染組件，如果這些組件需要特定的 props 才能正常運作，請確保在這裡提供
+            // 例如，如果 JoinusStep1 內部有表單或互動，可能需要傳遞相關的 state 或 setState 函數
             () => <JoinusStep1 key="1" />,
             () => <JoinusStep2 key="2" />,
             () => <JoinusStep3 key="3" />,
             () => <JoinusStep4 key="4" onPre={handlePrev} onSubmit={handleSubmit} />
         ];
+
         return (
             <section id="JoinusStep4-Cards">
                 <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
@@ -60,20 +73,13 @@ export default function JoinusCarousel() {
                             </div>
                         ))}
                     </div>
-                    <div style={{ textAlign: "center", marginTop: 32 }}>
-                        <button
-                            type="button"
-                            className="final-submit-btn"
-                            onClick={handleSubmit}
-                        >
-                            送出申請 ▶
-                        </button>
-                    </div>
+                    {/* 這裡不再顯示額外的「送出申請」按鈕 */}
                 </div>
             </section>
         );
     }
 
+    // 預設的輪播步驟顯示
     return (
         <div className={`carousel-wrapper ${direction}`}>
             <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />

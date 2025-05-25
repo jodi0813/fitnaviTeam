@@ -26,7 +26,7 @@
         .card {
             top: 50%;
             left: 50%;
-            opacity: 0;
+           
             transform: translate(200%, -30%) scale(0.95); // 預設放在視口右外
             transition: transform 0.5s ease, opacity 0.5s ease;
             opacity: 0.35;
@@ -119,64 +119,42 @@
 
 .Joinuscard-row {
     position: relative;
-    width: 400px;   /* 根據卡片數量和重疊量調整 */
-    height: 380px;
-    margin-top: 200px; /* 控制整組區塊距離上方 */
-    margin-left: 50%;
-    justify-content: center;
+    width: 800px;   /* 根據卡片數量和重疊量調整 */
+    height: 650px;  /* 必須大於等於卡片最大高度 + 疊放偏移 */
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+    margin-top: 100px;
+   
 }
 
 .Joinuscard-row .card {
     position: absolute;
-    width: 260px;
-    height: 340px;
-    top: 70px; /* 這裡就是所有卡牌的 margin-top 效果，調整這裡就對了 */
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    border-radius: 16px;
-    background: #fff;
+    width: 550px;
+    height: 650px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    animation: moveIn 0.7s forwards;
-}
-
-/* 卡牌橫向部分重疊+動畫延遲，z-index 疊放 */
-.Joinuscard-row .card:nth-child(1) {
-    left: -200px;
-    z-index: 1;
-    animation-delay: 0.1s;
-    margin-top: 70px;
-}
-.Joinuscard-row .card:nth-child(2) {
-    left: -50px;
-    z-index: 2;
-    animation-delay: 0.2s;
-}
-.Joinuscard-row .card:nth-child(3) {
-    left: 50px;
-    top:160px !important;
-    z-index: 3;
-    animation-delay: 0.3s;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    animation: cardDropIn 0.5s forwards
     
 }
+.Joinuscard-row .card:nth-child(1) {
+    left: 0px;
+    z-index: 1;
+}
+.Joinuscard-row .card:nth-child(2) {
+    left: 50px;
+    z-index: 2;
+}
+.Joinuscard-row .card:nth-child(3) {
+    left: 100px;
+    z-index: 3;
+}
 .Joinuscard-row .card:nth-child(4) {
-    left: 200px;
+    left: 150px;
     z-index: 4;
-    animation-delay: 0.4s;
 }
 
-@keyframes moveIn {
-    0% {
-        transform: translateY(40px) translateX(80px);
-        opacity: 0;
-    }
-    70% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(0) translateX(0);
-        opacity: 1;
-    }
-}

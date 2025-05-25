@@ -20,13 +20,13 @@
 
     .CoachJoinus-Step4 {
         position: relative;
-        top: -10%;
+        
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         width: 550px;
-        height: 700px;
+        height: 650px;
         padding-top: 19px;
         padding-bottom: 19px;
         padding-right: 32px;
@@ -202,6 +202,7 @@
             }
 
             .SendButton {
+                height: 40px;
                 outline: none;
                 border-radius: 999px;
                 border: 1px solid var(--primary, #FF8740);
@@ -239,3 +240,51 @@
 
 
 // }
+
+
+.CoachJoinus-Step4 {
+    width: 550px;
+    height: 650px;
+    border-radius: 32px;
+    border: 1px solid var(--dark, #3A2C19);
+    background: #FFF;
+    box-shadow: 8px 8px 0px 0px #3A2C19;
+    box-sizing: border-box;
+    padding: 19px 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .Step4-form {
+    flex: 1 1 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .scrollFieldset-CollabarationTerm {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid var(--dark, #3A2C19);
+    border-radius: 8px;
+    background: #fff;
+    margin: 0 0 0 0; // 移除多餘 margin
+    padding: 14px 12px 10px 27px;
+  }
+  
+  .AgreeTerm-checkbox {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .PreSSendButton {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }

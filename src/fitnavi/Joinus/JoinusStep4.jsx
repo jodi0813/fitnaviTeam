@@ -4,15 +4,15 @@ import "./JoinusStep4.scss";
 function JoinusStep4({ onPre, onSubmit }) {
     return (
         <section id='JoinusStep4-Form'>
-        <div className='CoachJoinus-Step4-wrapper'>
-            <form
-                className='CoachJoinus-Step4'
-                onSubmit={e => {
-                    e.preventDefault();
-                    window.scrollTo(0, 0);
-                    onSubmit(); // 正確呼叫
-                }}
-            >
+            <div className='CoachJoinus-Step4-wrapper'>
+                <form
+                    className='CoachJoinus-Step4'
+                    onSubmit={e => {
+                        e.preventDefault(); // 阻止表單的預設提交行為
+                        window.scrollTo(0, 0); // 滾動到頁面頂部
+                        onSubmit(); // 呼叫從父組件傳遞的 onSubmit 函數
+                    }}
+                >
                     <div className='JoinusStep4-title'>
                         <div className='Step4-title'>
                             <h3>合作服務與條款</h3>

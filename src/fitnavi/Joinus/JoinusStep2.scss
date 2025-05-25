@@ -10,23 +10,24 @@
 
 .CoachJoinus-Step2 {
     position: relative;
-    top: -10%;
+        
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     width: 550px;
     height: 650px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-right: 32px;
+    padding-left: 32px;
+
     border-radius: 32px;
     border: 1px solid var(--dark, #3A2C19);
     background: #FFF;
+    // box-shadow: 4px 4px 24px 0px rgba(58, 44, 25, 0.30);
     box-shadow: 8px 8px 0px 0px #3A2C19;
-    box-sizing: border-box;
-    padding: 19px 32px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: -10%;
+    
 
     .JoinusStep2-header {
         display: flex;
@@ -85,6 +86,7 @@
 
     .Step2Checkbox {
         position: relative;
+     
 
         .Specitialty-title {
             display: flex;
@@ -421,3 +423,47 @@
 
     }
 }
+
+.CoachJoinus-Step2 {
+    width: 550px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    padding: 19px 32px;
+    border-radius: 32px;
+    border: 1px solid var(--dark, #3A2C19);
+    background: #FFF;
+    box-shadow: 8px 8px 0px 0px #3A2C19;
+    box-sizing: border-box;
+  }
+  
+  .Step2Checkbox,
+  .Step2-certification,
+  .scrollFieldset {
+    width: 100%;
+  }
+  
+  // 讓主內容區塊填滿剩餘空間（按鈕永遠貼底）
+  .Step2Checkbox,
+  .Step2-certification,
+  .scrollFieldset {
+    // 這三個可以包一個 div (如 <div className="Step2-main">)，然後：
+    // .Step2-main { flex: 1 1 0; min-height: 0; display: flex; flex-direction: column; }
+    // 如果沒包，可給 scrollFieldset flex: 1 1 0; min-height: 0;
+  }
+  
+  .scrollFieldset {
+    flex: 1 1 0;    // 關鍵：讓這區塊自動把空間填滿
+    min-height: 0;
+    max-height: 300px; // 可以限制最大高度避免超出卡片
+    overflow-y: auto;
+  }
+  
+  // 最底部按鈕組，讓它永遠在底部
+  .NextPreButton {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+  }
