@@ -183,27 +183,32 @@ function Allarticle() {
                 <button className='ClickSearch-Button' onClick={handleSearch}>
                     <span className='text-search'>搜尋</span>
                     <img src="/images/search.svg" alt="" />
-                    </button>
+                </button>
             </section>
 
             <section className="Allarticle-content">
                 <div className="cat-tag">
-                    <div className="cat-tag-title">
-                        <p>Categories</p>
+                    <div className='cat'>
+                        <div className="cat-tag-title">
+                            <p>Categories</p>
+                        </div>
+
+                        <div className="Cat-name">
+                            <button onClick={() => setcategory('健身入門')}>健身入門</button>
+                            <button onClick={() => setcategory('重量訓練')}>重量訓練</button>
+                            <button onClick={() => setcategory('燃脂運動')}>燃脂運動</button>
+                            <button onClick={() => setcategory('肌力提升')}>肌力提升</button>
+                            <button onClick={() => setcategory('體態雕塑')}>體態雕塑</button>
+                            <button onClick={() => setcategory('伸展放鬆')}>伸展放鬆</button>
+                            <button onClick={() => setcategory('減脂攻略')}>減脂攻略</button>
+                            <button onClick={() => setcategory('增肌飲食')}>增肌飲食</button>
+                            <button onClick={() => setcategory('營養調配')}>營養調配</button>
+
+                        </div>
                     </div>
 
-                    <div className="Cat-name">
-                        <button onClick={() => setcategory('健身入門')}>健身入門</button>
-                        <button onClick={() => setcategory('重量訓練')}>重量訓練</button>
-                        <button onClick={() => setcategory('燃脂運動')}>燃脂運動</button>
-                        <button onClick={() => setcategory('肌力提升')}>肌力提升</button>
-                        <button onClick={() => setcategory('體態雕塑')}>體態雕塑</button>
-                        <button onClick={() => setcategory('伸展放鬆')}>伸展放鬆</button>
-                        <button onClick={() => setcategory('減脂攻略')}>減脂攻略</button>
-                        <button onClick={() => setcategory('增肌飲食')}>增肌飲食</button>
-                        <button onClick={() => setcategory('營養調配')}>營養調配</button>
 
-                    </div>
+
 
                     <div className="Tag">
                         <div className='TagName'>
