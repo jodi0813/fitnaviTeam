@@ -50,6 +50,28 @@ function CenterNavbar() {
             <div className="basicVenueInfo">
               <Subtitle subtitle="基本資料" subtitleEN="Basic Venue Info" />
               <div className="informationSection">
+                {/* <div className="contactInfoBox">
+                  <div className="contactInfo1">
+                    <div className="contactInfo2">
+                      <span class="dot">•</span>
+                      單次入場
+                    </div>
+                    <div className="contactInfo3">
+                      <div className="contactInfo4">$50/小時</div>
+                      <div className="contactInfo4">$150/單日無限時</div>
+                    </div>
+                  </div>
+                  <div className="contactInfo1">
+                    <div className="contactInfo2">
+                      <span class="dot">•</span>
+                      合作會員
+                    </div>
+                    <div className="contactInfo3">
+                      <div className="contactInfo4">$788/月</div>
+                      <div className="contactInfo4"> $9000/年</div>
+                    </div>
+                  </div>
+                </div> */}
                 <div className="informationLeft">
                   <ul>
                     <li>
@@ -139,7 +161,7 @@ function CenterNavbar() {
                   <div className="contactInfo1">
                     <div className="contactInfo2">
                       <span class="dot">•</span>
-                     連絡電話
+                      連絡電話
                     </div>
                     <div className="contactInfo3">
                       <div className="contactInfo4">(02)12345678</div>
@@ -149,7 +171,7 @@ function CenterNavbar() {
                   <div className="contactInfo1">
                     <div className="contactInfo2">
                       <span class="dot">•</span>
-                     社群媒體
+                      社群媒體
                     </div>
                     <div className="social-icons">
                       <SiLine size={32} color="#06C755" />
@@ -158,7 +180,6 @@ function CenterNavbar() {
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </section>
