@@ -2,6 +2,9 @@
 #centerMain {
   width: 100%;
   padding: 120px 50px;
+      display: flex;
+    flex-direction: column;
+ 
   .main-content {
     display: flex;
     flex-direction: column;
@@ -10,7 +13,7 @@
     margin-top: 19px;
     .centerPhotoBox {
       position: relative;
-      width: 80%;
+      width: 85%;
       .centerPic {
         align-self: stretch;
         border-radius: 16px;

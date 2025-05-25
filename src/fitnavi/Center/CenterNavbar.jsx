@@ -50,28 +50,6 @@ function CenterNavbar() {
             <div className="basicVenueInfo">
               <Subtitle subtitle="基本資料" subtitleEN="Basic Venue Info" />
               <div className="informationSection">
-                {/* <div className="contactInfoBox">
-                  <div className="contactInfo1">
-                    <div className="contactInfo2">
-                      <span class="dot">•</span>
-                      單次入場
-                    </div>
-                    <div className="contactInfo3">
-                      <div className="contactInfo4">$50/小時</div>
-                      <div className="contactInfo4">$150/單日無限時</div>
-                    </div>
-                  </div>
-                  <div className="contactInfo1">
-                    <div className="contactInfo2">
-                      <span class="dot">•</span>
-                      合作會員
-                    </div>
-                    <div className="contactInfo3">
-                      <div className="contactInfo4">$788/月</div>
-                      <div className="contactInfo4"> $9000/年</div>
-                    </div>
-                  </div>
-                </div> */}
                 <div className="informationLeft">
                   <ul>
                     <li>
@@ -218,7 +196,21 @@ function CenterNavbar() {
               </div>
               <div className="center-introduce">
                 <div className="center-sTitle">設備器材</div>
-                <div>跑步機 飛輪機 滑步機 登階機 划船機 戰繩設備 壺鈴</div>
+                <div className="center-introduceBox">
+                  <span>跑步機 </span>
+                  <span class="orandge-dot">•</span>
+                  <span>飛輪機 </span>
+                  <span class="orandge-dot">•</span>
+                  <span>滑步機 </span>
+                  <span class="orandge-dot">•</span>
+                  <span>登階機 </span>
+                  <span class="orandge-dot">•</span>
+                  <span>划船機 </span>
+                  <span class="orandge-dot">•</span>
+                  <span> 戰繩設備 </span>
+                  <span class="orandge-dot">•</span>
+                  <span> 壺鈴 </span>
+                </div>
               </div>
             </div>
             {/* 重訓器材(X) */}
@@ -238,9 +230,22 @@ function CenterNavbar() {
                   <img src="/images/arrow-right.svg" alt="右箭頭" />
                 </button>
               </div>
-              <div>設備器材</div>
-              <hr />
-              <div>跑步機 飛輪機 滑步機 登階機 划船機 戰繩設備 壺鈴</div>
+              <div className="center-introduce">
+                <div className="center-sTitle">設備器材</div>
+                <div className="center-introduceBox">
+                  <span>啞鈴</span>
+                  <span class="orandge-dot">•</span>
+                  <span>深蹲架 </span>
+                  <span class="orandge-dot">•</span>
+                  <span>槓鈴 </span>
+                  <span class="orandge-dot">•</span>
+                  <span>Cable </span>
+                  <span class="orandge-dot">•</span>
+                  <span>槓片式機械式器材 </span>
+                  <span class="orandge-dot">•</span>
+                  <span> 機械式器材 </span>
+                </div>
+              </div>
             </div>
             {/* 更衣淋浴(X) */}
             <div className="venueExterior">
@@ -261,72 +266,83 @@ function CenterNavbar() {
                   <img src="/images/arrow-right.svg" alt="右箭頭" />
                 </button>
               </div>
-              <div>設備器材</div>
-              <hr className="divider"></hr>
-              <div>跑步機 飛輪機 滑步機 登階機 划船機 戰繩設備 壺鈴</div>
+              <div className="center-introduce">
+                <div className="center-sTitle">設備器材</div>
+                <div className="center-introduceBox">
+                  <span>置物櫃</span>
+                  <span class="orandge-dot">•</span>
+                  <span>吹風機 </span>
+                  <span class="orandge-dot">•</span>
+                  <span>小便斗 </span>
+                  <span class="orandge-dot">•</span>
+                  <span>蹲式馬桶 </span>
+                  <span class="orandge-dot">•</span>
+                  <span>洗手台 </span>
+                  <span class="orandge-dot">•</span>
+                  <span> 淋浴間 </span>
+                </div>
+              </div>
             </div>
           </section>
         )}
         {/* 三、私人教練 */}
         {activeTab === "fitnessTrainer" && (
-          <div className="content">
-            <section id="fitnessTrainer">
-              <div className="trainersCards">
-                {/* 男性教練 */}
-                <Subtitle subtitle="男性教練" subtitleEN="Male Trainers" />
-                <div className="threeCards">
-                  <CoachCard
-                    name="飛飛 Feifei"
-                    role="教練"
-                    hashtags={["增肌減脂", "健身計畫", "個人訓練"]}
-                    description="具有多年健身教學經驗，幫助學員設定合適的健身目標與計劃。讓你以專業的指導達到最佳成果。"
-                    imageSrc="/images/coach03.jpg"
-                  />
-                  <CoachCard
-                    name="文彥 Wenyen"
-                    role="教練"
-                    hashtags={["運動目標", "體能提升", "燃燒脂肪"]}
-                    description="專注於運動後的恢復與預防傷害，讓你在安全的環境中達到最佳效果。健康和成果，我一起陪伴你實現。"
-                    imageSrc="/images/coach07.jpg"
-                  />
-                  <CoachCard
-                    name="詹姆斯 James"
-                    role="教練"
-                    hashtags={["健身啟發", "運動挑戰", "燃燒脂肪"]}
-                    description="無論是增肌還是減脂，我會為你量身打造最佳的訓練計劃。讓我們一起實現更健康的未來。"
-                    imageSrc="/images/coach08.jpg"
-                  />
-                </div>
+          <section id="fitnessTrainer">
+            <div className="trainersCards">
+              {/* 男性教練 */}
+              <Subtitle subtitle="男性教練" subtitleEN="Male Trainers" />
+              <div className="threeCards">
+                <CoachCard
+                  name="飛飛 Feifei"
+                  role="教練"
+                  hashtags={["增肌減脂", "健身計畫", "個人訓練"]}
+                  description="具有多年健身教學經驗，幫助學員設定合適的健身目標與計劃。讓你以專業的指導達到最佳成果。"
+                  imageSrc="/images/coach03.jpg"
+                />
+                <CoachCard
+                  name="文彥 Wenyen"
+                  role="教練"
+                  hashtags={["運動目標", "體能提升", "燃燒脂肪"]}
+                  description="專注於運動後的恢復與預防傷害，讓你在安全的環境中達到最佳效果。健康和成果，我一起陪伴你實現。"
+                  imageSrc="/images/coach07.jpg"
+                />
+                <CoachCard
+                  name="詹姆斯 James"
+                  role="教練"
+                  hashtags={["健身啟發", "運動挑戰", "燃燒脂肪"]}
+                  description="無論是增肌還是減脂，我會為你量身打造最佳的訓練計劃。讓我們一起實現更健康的未來。"
+                  imageSrc="/images/coach08.jpg"
+                />
               </div>
-              {/* 女性教練 */}
-              <div className="trainersCards">
-                <Subtitle subtitle="女性教練" subtitleEN="Female Trainers" />
-                <div className="threeCards">
-                  <CoachCard
-                    name="蘇菲亞 Sophia"
-                    role="教練"
-                    hashtags={["專業指導", "體能提升", "科學健身"]}
-                    description="擅長增肌、減脂與身體雕塑，根據學員的需求制定訓練目標。無論你的目標是什麼，我都能幫助你實現。"
-                    imageSrc="/images/coach01.jpg"
-                  />
-                  <CoachCard
-                    name="蘭娜 Lanna"
-                    role="教練"
-                    hashtags={["正確訓練", "體能提升"]}
-                    description="提供專業的健身計劃與飲食建議，讓你在最短的時間內達成最好的效果。讓每一個動作都充滿目的。"
-                    imageSrc="/images/coach02.jpg"
-                  />
-                  <CoachCard
-                    name="莉莉 Lily"
-                    role="教練"
-                    hashtags={["健身生活", "增肌減脂", "個人訓練"]}
-                    description="結合TRX、功能性訓練與減脂訓練，我專注於幫助學員提升全身力量與協調。透過有效的訓練計劃，快速達成減脂與塑形目標。"
-                    imageSrc="/images/coach04.jpg"
-                  />
-                </div>
+            </div>
+            {/* 女性教練 */}
+            <div className="trainersCards">
+              <Subtitle subtitle="女性教練" subtitleEN="Female Trainers" />
+              <div className="threeCards">
+                <CoachCard
+                  name="蘇菲亞 Sophia"
+                  role="教練"
+                  hashtags={["專業指導", "體能提升", "科學健身"]}
+                  description="擅長增肌、減脂與身體雕塑，根據學員的需求制定訓練目標。無論你的目標是什麼，我都能幫助你實現。"
+                  imageSrc="/images/coach01.jpg"
+                />
+                <CoachCard
+                  name="蘭娜 Lanna"
+                  role="教練"
+                  hashtags={["正確訓練", "體能提升"]}
+                  description="提供專業的健身計劃與飲食建議，讓你在最短的時間內達成最好的效果。讓每一個動作都充滿目的。"
+                  imageSrc="/images/coach02.jpg"
+                />
+                <CoachCard
+                  name="莉莉 Lily"
+                  role="教練"
+                  hashtags={["健身生活", "增肌減脂", "個人訓練"]}
+                  description="結合TRX、功能性訓練與減脂訓練，我專注於幫助學員提升全身力量與協調。透過有效的訓練計劃，快速達成減脂與塑形目標。"
+                  imageSrc="/images/coach04.jpg"
+                />
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
         )}
       </div>
     </>
