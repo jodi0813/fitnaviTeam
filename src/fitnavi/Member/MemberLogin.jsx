@@ -69,7 +69,11 @@ function MemberLogin() {
           />
 
           <label>輸入密碼</label>
-          <div style={{ position: "relative" }}>
+          <div style={{
+            position: "relative", // 確保眼睛 icon 相對於這個 div 定位
+            display: "flex",      // 將這個 div 變成 Flex 容器
+            alignItems: "center"  // **關鍵：讓所有 Flex 子元素（包括 input）垂直置中**
+          }}>
             <input
               type={showPassword ? "text" : "password"}
               placeholder="密碼組合為英數字混合之8位數以上字元"
@@ -78,17 +82,17 @@ function MemberLogin() {
               style={{ width: "400px", paddingRight: "40px" }}
             />
 
-            {/* 眼睛icon的div */}
+            {/* 眼睛 icon 的 div */}
             <div
-              //js反邏輯寫法 如果式前面的狀態點擊後變成相反狀態
               onClick={() => setShowPassword(!showPassword)}
               style={{
-                position: "absolute",
-                right: "10px",
-                top: "50%",
-                transform: "translateY(-50%)",
+                position: "absolute", // 保持絕對定位，讓它可以靠右邊
+                right: "10px",        // 定位在右側 10px
+                top: "80%",           // 保持垂直置中邏輯
+                transform: "translateY(-80%)", // 保持垂直置中邏輯
                 cursor: "pointer",
               }}
+
             >
               {/* js三源=元運算子，如果現在式showpassword狀態眼睛打開，不是的話關閉 */}
               {showPassword ? (

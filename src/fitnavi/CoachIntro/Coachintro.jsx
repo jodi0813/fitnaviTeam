@@ -132,9 +132,14 @@ function Coachintro() {
 
         return (
             <div style={{
-                backgroundColor: cardColor, padding: "20px", borderRadius: "10px", color: "#fff", width: "300px",
-                height: "298px"
+                backgroundColor: cardColor,
+                padding: "30px 30px 18px 30px",
+                borderRadius: "10px",
+                color: "#fff",
+                width: "300px",
+                height: "300px"
             }}>
+            
                 <div>
                     <div className="Star-rate">
                         {stars}

@@ -484,8 +484,8 @@
                 ul {
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
-                    align-items: baseline;
+                    justify-content: flex-end;
+                    align-items: flex-end;
                     border-right: 0.6px solid #3A2C19;
                     gap: 30px;
 
@@ -1319,14 +1319,14 @@
         }
 
         .star-card-wrapper {
-            width: 100%; // 預設 100% 寬度
-            margin: 0 auto !important; // 水平置中
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            align-self: center;
-            box-sizing: border-box;
+            align-items: center; // 水平置中 .star-rate-title 和 .Coach-comment-line1
+            justify-content: center; // 垂直置中 .star-rate-title 和 .Coach-comment-line1
+            width: 100%;
+            box-sizing: border-box;  
+            min-height: 100vh; 
+          
 
             // 新增這裡的媒體查詢
             @media (min-width: 1680px) {
@@ -1340,12 +1340,7 @@
                 max-width: 822px;
                 width: 100%;
 
-                // >* {
-                //     align-self: center !important;
-                //     margin-left: auto !important;
-                //     margin-right: auto !important;
-                //     text-align: center !important;
-                // }
+
             }
 
             .star-rate-title {
@@ -1372,21 +1367,19 @@
 
             .Coach-comment-line1 {
 
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 50px;
-                max-width: 960px;
-                position: relative;
+                width: 100%;
                 margin: 0 auto;
-                justify-content: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center; 
+                align-items: center; 
+                gap: 50px;
+                position: relative;
+                margin-left: -50px;
 
-                // @media (max-width: 1024px) {
-                //     grid-template-columns: repeat(3, 200px);
-                //     gap: 16px;
-                //     max-width: 632px; // 200*3 + 16*2
-                //     margin: 0 auto; // 置中
-                //     justify-content: center;
-                // }
+
+
+
                 @media (max-width: 1024px) {
                     grid-template-columns: repeat(3, 200px);
                     gap: 16px;
@@ -1399,6 +1392,10 @@
                 }
 
                 .Coach-comment-card {
+                    width: 300px;
+                    height: 300px;
+                    padding: 30px 30px 18px 30px;
+
                     @media (max-width: 1024px) {
                         width: 200px !important;
                         height: 300px !important;
@@ -1417,6 +1414,7 @@
                 &::before,
                 &::after {
                     content: "";
+                    content: "";
                     position: absolute;
                     top: 0;
                     bottom: 0;
@@ -1425,42 +1423,89 @@
                 }
 
                 &::before {
-                    left: calc(33.333% + 0px);
-                    /* 第一條虛線 */
-
+                    left: calc(33.33% - 5px + 50px);
                 }
 
                 &::after {
-                    left: calc(66.666% + 3px);
-                    /* 第二條虛線 */
-
+                    left: calc(66.66% + 20px);
                 }
+            }
 
 
-                .Star-rate {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-items: center;
-                }
+            .Star-rate {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+            }
 
 
 
-                h3 {
+            h3 {
+                color: var(--dark, #3A2C19);
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                /* 45px */
+                text-transform: capitalize;
+                margin-left: 40%;
+            }
+
+
+
+            p.description {
+                color: var(--dark, #3A2C19);
+                /* 段落/14 */
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+                margin-top: 30px;
+
+                @media (max-width: 1024px) {
+                    overflow: hidden;
                     color: var(--dark, #3A2C19);
-                    font-size: 30px;
+                    text-overflow: ellipsis;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC";
+                    font-size: 14px;
                     font-style: normal;
-                    font-weight: 400;
-                    line-height: 150%;
-                    /* 45px */
-                    text-transform: capitalize;
-                    margin-left: 40%;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    overflow: hidden;
+                    color: var(--dark, #3A2C19);
+                    text-overflow: ellipsis;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                }
+            }
+
+            .Name-date {
+                margin-top: 90px;
+                display: flex;
+                flex-direction: row;
+                gap: 120px;
+
+                @media (max-width: 1024px) {
+                    gap: 50px;
+
                 }
 
+                p.Name {
+                    color: #000;
 
-
-                p.description {
-                    color: var(--dark, #3A2C19);
                     /* 段落/14 */
                     font-family: "Noto Sans TC", sans-serif;
                     font-size: 14px;
@@ -1469,171 +1514,122 @@
                     line-height: 140%;
                     /* 19.6px */
                     letter-spacing: 1.4px;
-                    margin-top: 30px;
-
-                    @media (max-width: 1024px) {
-                        overflow: hidden;
-                        color: var(--dark, #3A2C19);
-                        text-overflow: ellipsis;
-                        /* 段落/14 */
-                        font-family: "Noto Sans TC";
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 140%;
-                        /* 19.6px */
-                        letter-spacing: 1.4px;
-                        overflow: hidden;
-                        color: var(--dark, #3A2C19);
-                        text-overflow: ellipsis;
-                        /* 段落/14 */
-                        font-family: "Noto Sans TC";
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 140%;
-                        /* 19.6px */
-                        letter-spacing: 1.4px;
-                    }
+                    white-space: nowrap;
                 }
 
-                .Name-date {
-                    margin-top: 90px;
-                    display: flex;
-                    flex-direction: row;
-                    gap: 120px;
-
-                    @media (max-width: 1024px) {
-                        gap: 50px;
-
-                    }
-
-                    p.Name {
-                        color: #000;
-
-                        /* 段落/14 */
-                        font-family: "Noto Sans TC", sans-serif;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 140%;
-                        /* 19.6px */
-                        letter-spacing: 1.4px;
-                        white-space: nowrap;
-                    }
-
-                    p.Date {
-                        color: var(--dark, #3A2C19);
-                        text-align: right;
-                        /* 段落/14 */
-                        font-family: " Sans TC";
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 140%;
-                        /* 19.6px */
-                        letter-spacing: 1.4px;
-                    }
-
-
+                p.Date {
+                    color: var(--dark, #3A2C19);
+                    text-align: right;
+                    /* 段落/14 */
+                    font-family: " Sans TC";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
                 }
+
 
             }
 
+        }
 
-            .Coach-seeMoreComment {
+
+        .Coach-seeMoreComment {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 5%;
+            margin-left: -50px;
+
+
+            button {
+                align-self: center;
+                margin-top: 40px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 100%;
-                margin-top: 5%;
 
+                width: 300px;
+                height: 40px;
+                border-radius: 999px;
+                background: var(--primary, #FF8740);
+                border: none;
+                cursor: pointer;
 
-                button {
-                    align-self: center;
-                    margin-top: 40px;
-                    display: flex;
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                color: var(--white, #FEFCF7);
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+
+                .seeMore-text {
+                    transition: transform 0.3s ease, color 0.3s ease;
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                    opacity: 0;
+                    position: absolute;
+                    right: 30px;
+                    transition: opacity 0.3s ease;
+                }
+
+                &:hover {
+
                     justify-content: center;
                     align-items: center;
-
-                    width: 300px;
-                    height: 40px;
                     border-radius: 999px;
-                    background: var(--primary, #FF8740);
-                    border: none;
-                    cursor: pointer;
-
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 20px;
-                    font-weight: 700;
-                    letter-spacing: 2px;
-                    color: var(--white, #FEFCF7);
-                    text-align: center;
-                    position: relative;
-                    overflow: hidden;
+                    background: var(--white, #FEFCF7);
+                    border: 1px solid var(--primary, #FF8740);
 
                     .seeMore-text {
-                        transition: transform 0.3s ease, color 0.3s ease;
+                        transform: translateX(-10px); // 向左滑動
+                        color: var(--primary, #FF8740);
                     }
 
                     img {
-                        width: 24px;
-                        height: 24px;
-                        opacity: 0;
-                        position: absolute;
-                        right: 30px;
-                        transition: opacity 0.3s ease;
+                        opacity: 1;
+                        // transform: translateX(0); // icon 滑進來
+                    }
+                }
+
+                &:active {
+                    outline: none;
+
+                    .seeMore-text {
+                        color: var(--primary, var(--primary, #FF8740));
+                        font-size: 16px;
+                        font-weight: 500;
+                        letter-spacing: 1.6px;
                     }
 
-                    &:hover {
-
-                        justify-content: center;
-                        align-items: center;
-                        border-radius: 999px;
-                        background: var(--white, #FEFCF7);
-                        border: 1px solid var(--primary, #FF8740);
-
-                        .seeMore-text {
-                            transform: translateX(-10px); // 向左滑動
-                            color: var(--primary, #FF8740);
-                        }
-
-                        img {
-                            opacity: 1;
-                            // transform: translateX(0); // icon 滑進來
-                        }
+                    img {
+                        width: 20px;
+                        height: 20px;
                     }
-
-                    &:active {
-                        outline: none;
-
-                        .seeMore-text {
-                            color: var(--primary, var(--primary, #FF8740));
-                            font-size: 16px;
-                            font-weight: 500;
-                            letter-spacing: 1.6px;
-                        }
-
-                        img {
-                            width: 20px;
-                            height: 20px;
-                        }
-                    }
-
                 }
 
             }
-
-
 
         }
 
 
 
-
-
     }
+
+
+
+
+
 }
+
 
 
 
@@ -1715,11 +1711,14 @@
 
 
 .coachintro-all {
-    flex: 1 1 0;
     display: flex;
     flex-direction: column;
+    /* 或 row，看你需求 */
+    justify-content: center;
+    /* 主軸置中 */
     align-items: center;
     /* 由 flex-start 改成 center，讓子元素置中 */
+    width: 100%;
 
     >* {
         width: 100%;
@@ -1741,12 +1740,12 @@
 
 
 // 主要內容 wrapper 標準化
-.Nutriaboutcontent,
+
 .coachspefield-wrapper,
 .coach-exp-cer-wrapper,
 .coach-reservation-wrapper,
 .article-wrapper,
-#Nutri-comment {
+#Coach-comment {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -2186,4 +2185,61 @@
         max-width: 100% !important;
         box-sizing: border-box !important;
     }
+}
+
+@media screen and (max-width: 1440px) {
+
+    .reserve-img {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+
+        img {
+            width: 50%;
+            height: 90%;
+            position: relative;
+            left: 40px !important;
+            top: -100px !important;
+        }
+
+        p {
+            color: var(--primary, var(--primary, #FF8740));
+            /* heading/標題3 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 3.2px;
+
+            position: relative;
+            left: 30px;
+            top: -10px;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                width: 40px;
+                height: 2px;
+                background-color: #FF8740;
+
+            }
+
+            &::before {
+                left: -40px;
+                top: 30px;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                right: -30px;
+                top: 30px;
+                transform: rotate(135deg);
+            }
+        }
+    }
+
 }
