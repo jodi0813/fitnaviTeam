@@ -74,7 +74,7 @@ export default function PhotoGallery() {
   };
 
   return (
-    <div style={{ textAlign: "center", padding: 50 }}>
+    <div style={{ textAlign: "center", padding: 20 }}>
       {/* ✅ 全局移除 img focus 的藍框 */}
       <style>
         {`

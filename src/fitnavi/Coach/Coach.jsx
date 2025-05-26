@@ -7,6 +7,37 @@ import { cities } from "../../data/locations";
 import { trainingOptions } from "../../data/hashtag";
 import Pagination from "../../components/Pagination/Pagination";
 
+
+function CustomDropdown({ label, selected, onSelect, options }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="custom-dropdown">
+      <button className="dropdown-btn" onClick={() => setOpen(!open)}>
+        {selected || label}
+      </button>
+      {open && (
+        <div className="dropdown-list">
+          {options.map((option) => (
+            <div
+              key={option}
+              className="dropdown-item"
+              onClick={() => {
+                const value = option.startsWith("全部") ? "all" : option;
+                onSelect(value);
+                setOpen(false);
+              }}
+            >
+              {option}
+              <span className="arrow">›</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 //教練卡牌資料
 function Coach() {
   const coachList = [
@@ -282,9 +313,7 @@ function Coach() {
 
   //一頁有九張卡牌
   const itemsPerPage = 9;
-  //總共頁數=全部的卡片數量除一頁9張(Math.ceil無條件進位)
   const pageCount = Math.ceil(filteredCoaches.length / itemsPerPage);
-  //第0頁 全部卡牌(0*9~0*9+9)顯示第0~9個卡牌
   const currentItems = filteredCoaches.slice(
     currentPage * itemsPerPage,
     currentPage * itemsPerPage + itemsPerPage
@@ -299,7 +328,7 @@ function Coach() {
     if (hashtag) {
       setSelectedHashtag(hashtag);
       setTimeout(() => {
-        handleSearch({ preventDefault: () => {} }); // 讓搜尋欄位顯示後再觸發搜尋
+        handleSearch({ preventDefault: () => { } });
       }, 0);
     }
   }, []);
@@ -309,65 +338,38 @@ function Coach() {
       <div id="coachMain">
         <MainTitle title1="健身教練" title2="找到專屬你的健身教練" />
         <div className="allCoachCards">
-          {/* 上方搜尋列*/}
-  
           <div className="searchBox">
             <form
               action=""
               method="post"
-              onSubmit={handleSearch}
+              onSubmit={(e) => e.preventDefault()}
               id="personal-search-form"
               title="健身教練搜尋"
             >
-              {/* 搜尋地區 */}
-              <select
-                name="area"
-                id="area"
-                value={selectedCity}
-                onChange={(e) => setSelectedCity(e.target.value)}
-              >
-                <option value="" disabled hidden>
-                  地區
-                </option>
-                <option value="all">全部區域</option>
-                {cities.map((city) => (
-                  <option key={city} value={city}>
-                    {city}
-                  </option>
-                ))}
-              </select>
-              {/* 搜尋訓練需求 */}
-              <select
-                name="trainingNeeds"
-                id="trainingNeeds"
-                value={selectedHashtag}
-                onChange={(e) => setSelectedHashtag(e.target.value)}
-              >
-                <option value="" disabled hidden>
-                  訓練需求
-                </option>
-                <option value="all">全部類別</option>
-                {trainingOptions.map((training) => (
-                  <option key={training} value={training}>
-                    {training}
-                  </option>
-                ))}
-              </select>
-              {/* 搜尋性別 */}
-              <select
-                name="sex"
-                id="sex"
-                value={selectedSex}
-                onChange={(e) => setSelectedSex(e.target.value)}
-              >
-                <option value="" disabled hidden>
-                  性別
-                </option>
-                <option value="all">全部</option>
-                <option value="男">男</option>
-                <option value="女">女</option>
-              </select>
-              {/* 搜尋關鍵字 */}
+              <CustomDropdown
+                label="選擇地區"
+                selected={
+                  selectedCity === "all" || selectedCity === "" ? "全部區域" : selectedCity
+                }
+                onSelect={setSelectedCity}
+                options={["全部區域", ...cities]}
+              />
+              <CustomDropdown
+                label="訓練需求"
+                selected={
+                  selectedHashtag === "all" || selectedHashtag === "" ? "全部訓練需求" : selectedHashtag
+                }
+                onSelect={setSelectedHashtag}
+                options={["全部訓練需求", ...trainingOptions]}
+              />
+              <CustomDropdown
+                label="性別"
+                selected={
+                  selectedSex === "all" || selectedSex === "" ? "全部性別" : selectedSex
+                }
+                onSelect={setSelectedSex}
+                options={["全部性別", "男", "女"]}
+              />
               <label htmlFor="keyword-search"></label>
               <input
                 type="search"
@@ -377,16 +379,13 @@ function Coach() {
                 value={keyword}
                 onChange={(e) => setKeyword(e.target.value)}
               ></input>
-              {/* 搜尋按鈕 */}
-              <button type="button" value="搜尋" className="submit">
+              <button type="button" className="submit" onClick={handleSearch}>
                 搜尋
               </button>
             </form>
           </div>
-           <div className="coachTitleBox">
-          <span className="all-coach">全部教練</span></div>
-
-          {/* 教練卡牌 */}
+          <div className="coachTitleBox">
+            <span className="all-coach">全部教練</span></div>
 
           {currentItems.length === 0 ? (
             <div className="noResult">找不到符合條件的教練</div>
@@ -408,7 +407,7 @@ function Coach() {
             </div>
           )}
         </div>
-        
+
         <Pagination
           pageCount={pageCount}
           currentPage={currentPage}
