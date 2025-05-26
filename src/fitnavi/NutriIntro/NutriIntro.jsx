@@ -150,7 +150,7 @@ function NutriIntro() {
             img: "./images/article-10.jpg",
             title: "蛋白質怎麼補才有效？掌握時機最重要",
             content: "減脂並不意味著無止境的節食，關鍵在於合理控制飲食，搭配有效的運動。減少糖分與不健康脂肪的攝取，讓你在消耗脂肪的同時保持活力。",
-            tags: ["#增肌", "#蛋白質補充"],
+            tags: ["增肌", "蛋白質補充"],
             category: "減脂攻略"
 
         },
@@ -161,7 +161,7 @@ function NutriIntro() {
             img: "./images/article-7.jpg",
             title: "減脂只靠運動不夠？飲食管理才是關鍵",
             content: "減脂並不意味著無止境的節食，關鍵在於合理控制飲食，搭配有效的運動。減少糖分與不健康脂肪的攝取，讓你在消耗脂肪的同時保持活力。",
-            tags: ["#健康飲食", "#瘦身攻略"],
+            tags: ["健康飲食", "瘦身攻略"],
             category: "減脂攻略"
 
         },
@@ -171,7 +171,7 @@ function NutriIntro() {
             img: "./images/article-8.jpg",
             title: "增肌該怎麼吃？營養搭配與飲食策略分享",
             content: "想要增肌，光靠訓練是不夠的，飲食也起著關鍵作用。適量增加蛋白質和碳水化合物的攝入，並確保攝取足夠的熱量，讓你在訓練後獲得更多肌肉增長。",
-            tags: ["#增肌飲食", "#蛋白質補充"],
+            tags: ["增肌飲食", "蛋白質補充"],
             category: "增肌飲食"
 
         },
@@ -181,7 +181,7 @@ function NutriIntro() {
             img: "/images/article-9.jpg",
             title: "健身不只是動，營養均衡才是成功的秘密",
             content: "健身營養的成功不僅是攝取足夠的卡路里，更重要的是如何搭配碳水化合物、蛋白質與脂肪。根據不同的健身目標，合理調整飲食比例，讓效果事半功倍！",
-            tags: ["#健身營養", "#飲食"],
+            tags: ["健身營養", "飲食"],
             category: "營養調配"
 
         },
@@ -191,7 +191,7 @@ function NutriIntro() {
             img: "/images/article-11.jpg",
             title: "減脂不只是吃得少，吃對才是王道",
             content: "一味節食容易導致代謝下降與肌肉流失。想健康減脂，關鍵在於選對食物、控制熱量並保持飽足感，讓你不挨餓也能慢慢瘦下來！",
-            tags: ["#減脂", "#健康飲食"],
+            tags: ["減脂", "健康飲食"],
             category: "減脂攻略"
         }
 
@@ -546,6 +546,8 @@ function NutriIntro() {
                                     <h3>學員評價</h3>
                                     <h4>Rating</h4>
                                 </div>
+
+                                <div className="Nutristar-card-wrapper">
                                 <div className="star-rate">
                                     <p>4.0</p>
                                     <div className="Star">
@@ -604,6 +606,7 @@ function NutriIntro() {
                                         <span className="seeMore-text">查看更多評價</span>
                                         <img src="/images/search.svg" alt="" />
                                     </button>
+                                </div>
                                 </div>
                             </div>
 
