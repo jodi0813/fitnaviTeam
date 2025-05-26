@@ -61,7 +61,7 @@ const CalendarComponent = () => {
                   key={time}
                   onClick={() => handleTimeClick(time)}
                   style={{
-                    padding: '8px 12px',
+                    padding: '8px 8px',
                     backgroundColor: selectedTime === time ? '#FFE0B7' : '#F6F7F9',
                     border: '1px solid #ccc',
                     borderRadius: '4px',

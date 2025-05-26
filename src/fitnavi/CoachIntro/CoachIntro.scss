@@ -698,77 +698,20 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        width: 70%; // 或 100%，兩者要一樣
+        // width: 70%; // 或 100%，兩者要一樣
         margin-left: 0;
         box-sizing: border-box;
 
         img {
-            justify-content: center;
-            margin-top: 80px;
+            display: block;
+            /* 讓 margin 生效，尤其是 auto */
+            margin: 80px auto 0 auto;
+            width: 100%;
             max-width: 1350px;
+            height: auto;
+
         }
 
-        // .circle1,
-        // .circle2,
-        // .circle3,
-        // .circle4 {
-        //     width: 310px;
-        //     height: 310px;
-        //     position: relative;
-        //     margin-left: -30px;
-
-        //     span {
-        //         display: flex;
-        //         flex-direction: column;
-        //         justify-content: flex-start;
-        //         align-items: flex-start;
-        //         max-width: 250px;
-        //         position: relative;
-        //         left: 50px;
-        //         bottom: -200px;
-
-
-        //         h4 {
-        //             color: var(--primary, var(--primary, #FF8740));
-        //             text-align: center;
-        //             /* heading/標題4/Bold */
-        //             font-family: "Noto Sans TC", sans-serif;
-        //             font-size: 20px;
-        //             font-style: normal;
-        //             font-weight: 700;
-        //             line-height: normal;
-        //             letter-spacing: 2px;
-        //             text-decoration-line: underline;
-        //             text-decoration-style: solid;
-        //             text-decoration-skip-ink: auto;
-        //             text-decoration-thickness: 11%;
-        //             /* 2.2px */
-        //             text-underline-offset: 50%;
-        //             /* 10px */
-        //             padding-bottom: 15px;
-
-
-        //         }
-
-        //         p {
-        //             color: var(--dark, #3A2C19);
-        //             /* heading/標題4/medium */
-        //             font-family: "Noto Sans TC", sans-serif;
-        //             font-size: 20px;
-        //             font-style: normal;
-        //             font-weight: 500;
-        //             line-height: 40px;
-        //             /* 200% */
-        //             letter-spacing: 0.4px;
-        //         }
-
-        //     }
-
-        // }
-
-        // @media (min-width: 1920px) {
-        //     margin-left: 20%;
-        // }
 
 
 
@@ -2079,9 +2022,16 @@
     }
 
     .coach-circlewrapper {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 16px; // 可視情況調整左右留白
+
         img {
-            width: 822px !important;
-            height: 228px !important;
+            display: block;
+            margin-left: 0 !important;
+            width: 100%; // 響應式寬度
+            max-width: 800px !important; // 可自訂最大寬度
+            height: auto;
         }
     }
 
@@ -2153,8 +2103,20 @@
     }
 
 
+    .reserve-img {
+        display: flex;
+        flex-direction: row;
+        position: relative;
 
 
+        img {
+            width: 50%;
+            height: 90%;
+            position: relative;
+            right: 10px !important;
+            top: -60px;
+        }
+    }
 
     .reserve {
         max-width: 350px;
