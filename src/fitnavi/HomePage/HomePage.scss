@@ -51,9 +51,9 @@
   max-width: 100vw;
   height: auto; // 🔧 改成 auto 比 height: 5700px 安全很多
 
-  .view {
-    // ✅ 不用寫任何動畫，交給 Framer Motion 控制
-  }
+  // .view {
+  //   // ✅ 不用寫任何動畫，交給 Framer Motion 控制
+  // }
 
   .homeSearchSection {
     position: relative;
