@@ -7,6 +7,35 @@ import { cities, taipeiDistricts } from "../../data/locations";
 import { nutritionOptions } from "../../data/hashtag";
 import Pagination from "../../components/Pagination/Pagination";
 
+function CustomDropdown({ label, selected, onSelect, options }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="custom-dropdown">
+      <button className="dropdown-btn" onClick={() => setOpen(!open)}>
+        {selected || label}
+      </button>
+      {open && (
+        <div className="dropdown-list">
+          {options.map((option) => (
+            <div
+              key={option}
+              className="dropdown-item"
+              onClick={() => {
+                const value = option.startsWith("全部") ? "all" : option;
+                onSelect(value);
+                setOpen(false);
+              }}
+            >
+              {option}
+              <span className="arrow">›</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 function Nutritionist() {
   const nutritionistList = [
     {
@@ -278,13 +307,11 @@ function Nutritionist() {
 
     if (hashtag) {
       setSelectedHashtag(hashtag);
+      setTimeout(() => {
+        handleSearch({ preventDefault: () => { } });
+      }, 0);
     }
-  }, [location.search]);
-  useEffect(() => {
-    if (selectedHashtag !== "") {
-      handleSearch({ preventDefault: () => {} }); // 模擬表單提交
-    }
-  }, [selectedHashtag]);
+  }, []);
 
   return (
     <>
@@ -298,47 +325,33 @@ function Nutritionist() {
               name="personal-search-form"
               id="personal-search-form"
               title="營養師搜尋"
-              onSubmit={handleSearch}
+              onSubmit={(e) => e.preventDefault()}
             >
-              <label htmlFor="area"></label>
-              <select
-                name="area"
-                id="area"
-                value={selectedCity}
-                onChange={(e) => setSelectedCity(e.target.value)}
-              >
-                <option value="">請選擇縣市</option>
-                {cities.map((city) => (
-                  <option key={city} value={city}>
-                    {city}
-                  </option>
-                ))}
-              </select>
-              <label htmlFor="trainingNeeds"></label>
-              <select
-                name="trainingNeeds"
-                id="trainingNeeds"
-                value={selectedHashtag}
-                onChange={(e) => setSelectedHashtag(e.target.value)}
-              >
-                <option value="">諮詢需求</option>
-                {nutritionOptions.map((nutrition) => (
-                  <option key={nutrition} value={nutrition}>
-                    {nutrition}
-                  </option>
-                ))}
-              </select>
-              <label htmlFor="sex"></label>
-              <select
-                name="sex"
-                id="sex"
-                value={selectedSex}
-                onChange={(e) => setSelectedSex(e.target.value)}
-              >
-                <option value="性別">性別</option>
-                <option value="男">男</option>
-                <option value="女">女</option>
-              </select>
+              <CustomDropdown
+                label="選擇地區"
+                selected={
+                  selectedCity === "all" || selectedCity === "" ? "全部區域" : selectedCity
+                }
+                onSelect={setSelectedCity}
+                options={["全部區域", ...cities]}
+              />
+              <CustomDropdown
+                label="諮詢需求"
+                selected={
+                  selectedHashtag === "all" || selectedHashtag === "" ? "全部諮詢需求" : selectedHashtag
+                }
+                onSelect={setSelectedHashtag}
+                options={["全部諮詢需求", ...nutritionOptions]}
+              />
+
+              <CustomDropdown
+                label="性別"
+                selected={
+                  selectedSex === "all" || selectedSex === "" ? "全部性別" : selectedSex
+                }
+                onSelect={setSelectedSex}
+                options={["全部性別", "男", "女"]}
+              />
               <label htmlFor="keyword-search"></label>
               <input
                 type="search"
@@ -348,7 +361,9 @@ function Nutritionist() {
                 value={keyword}
                 onChange={(e) => setKeyword(e.target.value)}
               ></input>
-              <input type="submit" value="搜尋" className="submit" />
+              <button type="button" className="submit" onClick={handleSearch}>
+                搜尋
+              </button>
             </form>
           </div>
 
