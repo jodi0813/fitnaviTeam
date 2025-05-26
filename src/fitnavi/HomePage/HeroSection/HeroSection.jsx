@@ -52,7 +52,7 @@ function HeroSection() {
 
 
             {/* 銜接到下面區塊的圓角 */}
-            <div className="Hero-bottom-curve"></div>
+            {/* <div className="Hero-bottom-curve"></div> */}
 
 
 

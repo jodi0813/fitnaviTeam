@@ -23,21 +23,21 @@
     animation-range: entry 30%;
   }
 
-  // .homeSearchSection {
+  .homeSearchSection {
 
 
 
-  //   position: relative;
-  //   background-color: #FEFCF7;
-  //   // padding: 140px;
-  //   padding: 191px 0;
-  //   border-top-left-radius: 80% 10%;
-  //   border-top-right-radius: 80% 10%;
-  //   top: -400px;
-  //   background: linear-gradient(180deg,
-  //       #FEFCF7 8.5%,
-  //       rgba(255, 135, 64, 0.4) 40.1%,
-  //       #FEFCF7 100%);
+    position: relative;
+    background-color: #FEFCF7;
+    // padding: 140px;
+    padding: 191px 0;
+    border-top-left-radius: 400vw 107vw;
+    border-top-right-radius: 400vw 107vw;
+    top: -400px;
+    background: linear-gradient(180deg,
+        #FEFCF7 8.5%,
+        rgba(255, 135, 64, 0.4) 40.1%,
+        #FEFCF7 100%);
 
-  // }
+  }
 }

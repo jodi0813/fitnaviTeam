@@ -62,7 +62,9 @@ function TrainerSection() {
   const focusTrainer = trainers[0];
 
   return (
+    // 所有內容
     <div className="home-trainer">
+      {/* 區塊大標題 */}
       <header className="home-trainer-mainTitle">
         <div className="mainTitle-col1">
           <span className="home-trainer-mainTitle1">讓專業陪你前進</span>
@@ -70,6 +72,7 @@ function TrainerSection() {
         </div>
         <img src="/images/home-trainer-arrow.svg" alt="" />
       </header>
+      {/* 卡牌輪播區 */}
       <div className="trainer-card-box">
         <div className="home-trainer-maincard">
           <div className="home-trainer-card home-trainer-active">
