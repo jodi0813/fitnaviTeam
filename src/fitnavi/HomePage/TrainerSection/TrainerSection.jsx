@@ -62,7 +62,9 @@ function TrainerSection() {
   const focusTrainer = trainers[0];
 
   return (
+    // 所有內容
     <div className="home-trainer">
+      {/* 區塊大標題 */}
       <header className="home-trainer-mainTitle">
         <div className="mainTitle-col1">
           <span className="home-trainer-mainTitle1">讓專業陪你前進</span>
@@ -70,6 +72,7 @@ function TrainerSection() {
         </div>
         <img src="/images/home-trainer-arrow.svg" alt="" />
       </header>
+      {/* 卡牌輪播區 */}
       <div className="trainer-card-box">
         <div className="home-trainer-maincard">
           <div className="home-trainer-card home-trainer-active">
@@ -105,9 +108,16 @@ function TrainerSection() {
         </div>
       </div>
 
+      {/* 按鈕區 */}
       <div className="home-trainer-controls">
-        <button onClick={handleNext}>NEXT <img src="/images/carousel-arrow-left.svg" alt="carousel-arrow-left" /></button>
-        <button onClick={handlePrev}>PREV <img src="/images/carousel-arrow-right.svg" alt="carousel-arrow-left" /></button>
+        <button className="next-btn" onClick={handleNext}>
+          <span className="label"></span>
+          <img className="arrow" src="/images/carousel-arrow-left.svg" alt="next" />
+        </button>
+        <button className="prev-btn" onClick={handlePrev}>
+          <span className="label"></span>
+          <img className="arrow" src="/images/carousel-arrow-right.svg" alt="prev" />
+        </button>
       </div>
 
 

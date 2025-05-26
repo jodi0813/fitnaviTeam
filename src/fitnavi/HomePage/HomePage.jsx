@@ -11,17 +11,20 @@ function HomePage() {
         <section>
           <HeroSection />
         </section>
-   
+
+        <div className="view">
           <section className="homeSearchSection">
             <SearchSection />
-       
+
             <TrainerSection />
-         
+
             <NutritionistSection />
-      
+
             <ArticleSection />
           </section>
-  
+        </div>
+
+
       </main>
     </>
   );
