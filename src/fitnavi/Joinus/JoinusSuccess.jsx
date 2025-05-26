@@ -21,7 +21,7 @@ function JoinusSuccess() {
                         <p>約4-7工作天內</p>
                     </div>
 
-                    <img src="./images/applicationSuccess-icon.png" alt="" />
+                    <img src="/images/applicationSuccess-icon.png" alt="" />
 
                     
                         <button className='Joinus-btn' onClick={()=>{navigate('/');window.scrollTo(0, 0);}}>返回首頁</button>
