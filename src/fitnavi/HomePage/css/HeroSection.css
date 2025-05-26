@@ -394,3 +394,12 @@ select {
     /* 停留原位 */
   }
 }
+.HeroSection .Hero-bottom-curve {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background-color: #FEFCF7;
+  border-top-left-radius: 400vw 107vw;
+  border-top-right-radius: 400vw 107vw;
+  bottom: 0;
+}/*# sourceMappingURL=HeroSection.css.map */
