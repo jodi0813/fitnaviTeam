@@ -379,7 +379,7 @@
                             /* 19.6px */
                             letter-spacing: 1.4px;
 
-                            .Nutriclassinrto-text{
+                            .Nutriclassinrto-text {
                                 transition: transform 0.3s ease, color 0.3s ease;
                             }
 
@@ -638,6 +638,9 @@
     right: 30%;
     top: 5%;
     margin-top: 50px;
+    @media (max-width: 1024px) {
+        right: 60%;
+    }
 
     @media (min-width: 1680px) {
         right: 10%;
@@ -1689,4 +1692,419 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    // 主內容外層
+    #Nutriintro,
+    #aboutnutri,
+    #spefield,
+    #Nutri-exp-cer,
+    #certificate,
+    #Nutri-reservation,
+    #Nutriarticle {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        min-width: 0;
+        padding: 0 10px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box;
+    }
+
+    // 主要兩區塊
+    .Nutriintro-person {
+        display: flex !important;
+        flex-direction: row !important; // 這裡關鍵，維持水平排列
+        align-items: flex-start !important;
+        gap: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box;
+        padding: 0 8px !important;
+        margin: 0 auto !important;
+
+        .Nutri-person-class-photo {
+            margin-left: 0 !important;
+            width: 100% !important;
+            margin-top: 0;
+
+            .Nutri-photogallery {
+                width: 100% !important;
+                height: auto !important;
+
+                .selfie {
+                    margin-bottom: 10px !important;
+
+                    img {
+                        border-radius: 16px !important;
+                        width: 90% !important;
+                        max-width: 160px !important;
+                        height: auto !important;
+                        display: block;
+                        margin: 0 auto !important;
+                    }
+                }
+
+                .more {
+                    gap: 6px !important;
+                    margin-left: 0 !important;
+
+                    img {
+                        width: 70px !important;
+                        height: 54px !important;
+                        border-radius: 12px !important;
+                    }
+                }
+
+                .TurnButton {
+                    margin-left: 0 !important;
+                    margin-top: 16px !important;
+                    gap: 6px !important;
+                }
+            }
+        }
+
+        .Nutriclass-container {
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 0 !important;
+
+            display: flex; // 必須設定
+            flex-direction: column; // 或 row，看你要直向或橫向排列
+
+
+
+            .personinfo .namefavorite {
+                gap: 32px !important;
+                margin-bottom: 8px !important;
+
+
+
+            }
+
+            .personinfo p {
+                font-size: 16px !important;
+                margin-bottom: 10px !important;
+
+            }
+
+            .Nutri-classbox {
+                width: 400px !important;
+                border-radius: 18px !important;
+                padding: 16px 8px !important;
+                margin-top: 32px !important;
+                margin-bottom: 12px !important;
+            }
+
+            .Nutri-classbox .classtime {
+                gap: 10px !important;
+
+                h2 {
+                    font-size: 22px !important;
+                }
+            }
+
+            .p-linethrough-color {
+                margin-top: 10px !important;
+                flex-direction: row;
+
+                p,
+                p.p-linethrough {
+                    font-size: 15px !important;
+                    line-height: 22px !important;
+                }
+
+                span .Arrow-price .Arrow-orange {
+                    width: 14px !important;
+                    height: 14px !important;
+                }
+
+                span .Arrow-price p.OrangePrice {
+                    font-size: 20px !important;
+                    line-height: 24px !important;
+                }
+
+                span p.SingleClass,
+                p.SingleClass {
+                    font-size: 13px !important;
+                    line-height: 20px !important;
+                }
+            }
+
+            .Nutri-prices-button {
+                margin-bottom: 8px !important;
+
+                p {
+                    font-size: 15px !important;
+                }
+
+                .price-with-button {
+                    gap: 8px !important;
+
+                    button {
+                        width: 200px !important;
+                        font-size: 15px !important;
+                        margin-top: 10px !important;
+                        height: 36px !important;
+                    }
+                }
+            }
+
+            .Nutri-place {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                margin-top: 15rem !important;
+                margin-bottom: 0px;
+                gap: 40px;
+
+                p {
+                    font-size: 14px !important;
+                    margin-top: 4px !important;
+                }
+
+                img {
+                    width: 150px !important;
+                    height: 120px !important;
+                    margin-top: 6px !important;
+                }
+
+                .moreimg4,
+                .moreimg5 {
+                    img {
+                        border-radius: 10px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    //介紹區
+    #aboutnutri {
+
+        width: 70% !important;
+        margin: 32px 0 0 0 !important; // 左右 margin 設 0，讓他貼齊左側
+        padding: 0 12px !important;
+        box-sizing: border-box;
+        margin-top: 250px !important;
+        margin-left: 1% !important;
+
+        .about-title {
+            gap: 18px !important; // 標題區間距縮小
+            flex-direction: column; // 標題副標題上下疊
+            align-items: flex-start; // 靠左對齊
+
+            h3 {
+                font-size: 32px !important;
+                width: auto !important;
+            }
+
+            h4 {
+                width: 300px !important;
+                font-size: 14px !important;
+                padding-bottom: 6px !important;
+                border-bottom: 2px solid #3A2C19;
+
+            }
+        }
+
+        p {
+            color: var(--dark, #3A2C19);
+            /* heading/標題4/medium */
+            font-family: "Noto Sans TC";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 40px;
+            /* 200% */
+            letter-spacing: 0.4px;
+        }
+
+    }
+
+
+
+
+    //導覽區
+
+    .Nutrinav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end !important;
+        width: 15% !important;
+        min-width: 90px;
+        align-self: stretch;
+        margin-top: 250px !important;
+    }
+
+    .Nutrinav ul {
+        width: 100%;
+        align-items: flex-end !important;
+        text-align: right !important;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+
+
+    //專長區
+    #spefield {
+        margin-top: 200px !important;
+        margin-left: 1% !important;
+    }
+
+    .nutri-circlewrapper {
+        img {
+            width: 822px !important;
+            height: 228px !important;
+        }
+    }
+
+
+    //工作經歷區
+    #Nutri-exp-cer {
+        width: 100% !important;
+        max-width: none;
+        padding: 0 10px;
+        overflow-x: auto;
+        margin-top: 200px !important; // 視需求調整
+        margin-left: 1% !important;
+    }
+
+    .Nutri-exp-cer-wrapper {
+        min-width: 700px; // 根據內容調整，確保不會壓縮
+        display: flex;
+        flex-direction: row; // 維持橫向排列
+        gap: 40px; // 或你想要的間距
+    }
+
+    .Nutri-exp-cer-wrapper .expcontent,
+    .Nutri-exp-cer-wrapper #certificate {
+        min-width: 320px; // 根據內容調整
+        flex: 0 0 auto;
+    }
+
+    .exptitle {
+        h4 {
+            width: 200px !important;
+        }
+    }
+
+    .expcontent {
+        width: 350px !important;
+    }
+
+    .certitle {
+        h4 {
+            width: 200px !important;
+        }
+    }
+
+    .certificate {
+        width: 350px !important;
+    }
+
+    //預約區
+
+    #Nutri-reservation {
+        width: 100% !important;
+        max-width: none;
+        padding: 0 10px;
+        overflow-x: auto;
+        margin-top: 150px !important; // 視需求調整
+        margin-left: 1% !important;
+    }
+
+    .Nutri-reservation-wrapper {
+        min-width: 200px; // 根據內容調整
+        flex: 0 0 auto;
+    }
+
+    .restitle h4,
+    .caltitle h4 {
+        margin: 0;
+        padding: 0;
+        width: 200px !important;
+    }
+
+
+
+
+
+    .reserve {
+        max-width: 350px;
+    }
+
+
+    #Nutriarticl {
+        width: 100% !important;
+        max-width: none;
+        margin-top: 80px !important;
+        margin-left: 1% !important;
+        /* 讓內容盡量靠左，或視情況調整 */
+        overflow-x: unset;
+    }
+
+    .Nutri-ViewArticles {
+        max-width: 80% !important;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* padding-left/right 可預留箭頭空間，如果有需要 */
+    }
+
+    //   
+    .NutriViewArticles-left {
+        width: 12px;
+        height: 24px;
+        left: 5px;
+    }
+
+    .NutriViewArticles-right {
+        width: 12px;
+        height: 24px;
+        right: 5px;
+    }
+
+    .Three-classcards {
+        display: flex;
+        flex-direction: row;
+        gap: 16px !important;
+        max-width: 90% !important;
+        margin: 0 auto;
+        padding: 0 50px;
+        /* 預留空間給左右箭頭 */
+        box-sizing: border-box;
+    }
+
+    #Nutri-comment {
+        width: 100% !important;
+        max-width: none;
+        padding: 0 10px;
+        overflow-x: auto;
+        margin-top: 150px !important; // 視需求調整
+        margin-left: 1% !important;
+    }
+
+
+
+
+
+
+
+    // 保證所有圖片、按鈕都不會超出
+    img,
+    button {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
 }

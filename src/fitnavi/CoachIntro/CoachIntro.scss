@@ -592,10 +592,8 @@
                 left: 30px; // 預設小於 1920 都是 30px
 
                 @media (min-width: 1920px) {
-                    left: 20%; // 只有1920以上用20%
+                    left: calc((100vw - 1487px) / 2 + 30px); // 跟 max-width 對齊並往右一點
                 }
-
-
 
                 svg {
                     position: relative;
@@ -616,6 +614,7 @@
                     transform: rotate(-4.964deg);
                 }
             }
+
 
             // @media (min-width: 1920px) {
             //     gap: 10%; // 只有1920以上用20%
@@ -1327,18 +1326,19 @@
 
 
 .Coach-comment-wrapper {
-    width: 90%;
-    max-width: 1200px;
-    margin: 80px auto 0 auto;
-    margin-top: 300px;
+    width: 100%;
+    max-width: 1920px;
+    margin: 300px auto 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     #Coach-comment {
         width: 100%;
-        padding: 0;
-        box-sizing: border-box;
-        scroll-margin-top: 80px;
-        /* 如果有固定的 header，可調整此值 */
-        scroll-margin-left: 0;
+        max-width: 1487px;
+        margin: 0 auto;
+
 
         .commentitle {
             display: flex;
@@ -1376,24 +1376,34 @@
         }
 
         .star-card-wrapper {
-            width: 100%;
+            width: 100%; // 預設 100% 寬度
+            margin: 0 auto !important; // 水平置中
             display: flex;
             flex-direction: column;
-            align-items: center; // 主軸置中
-            justify-content: center; // 次軸（如有需要）也置中
+            align-items: center;
+            justify-content: center;
+            align-self: center;
             box-sizing: border-box;
+
+            // 新增這裡的媒體查詢
+            @media (min-width: 1680px) {
+                width: 100%; // 確保它不會超過這個寬度
+                max-width: 1487px !important;
+                margin: 0 auto;
+            }
 
             @media (max-width: 1024px) {
                 // 這句讓所有直系子元素都置中
                 max-width: 822px;
                 width: 100%;
-                > * {
-                  align-self: center !important;
-                  margin-left: auto !important;
-                  margin-right: auto !important;
-                  text-align: center !important;
-                }
-              }
+
+                // >* {
+                //     align-self: center !important;
+                //     margin-left: auto !important;
+                //     margin-right: auto !important;
+                //     text-align: center !important;
+                // }
+            }
 
             .star-rate-title {
                 display: flex;
@@ -1403,8 +1413,8 @@
                 gap: 10px;
                 width: 100%;
                 text-align: center;
-    
-    
+
+
                 p {
                     color: var(--dark, #3A2C19);
                     text-align: center;
@@ -1416,9 +1426,9 @@
                     text-transform: capitalize;
                 }
             }
-    
+
             .Coach-comment-line1 {
-    
+
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 50px;
@@ -1426,15 +1436,25 @@
                 position: relative;
                 margin: 0 auto;
                 justify-content: center;
-    
+
+                // @media (max-width: 1024px) {
+                //     grid-template-columns: repeat(3, 200px);
+                //     gap: 16px;
+                //     max-width: 632px; // 200*3 + 16*2
+                //     margin: 0 auto; // 置中
+                //     justify-content: center;
+                // }
                 @media (max-width: 1024px) {
                     grid-template-columns: repeat(3, 200px);
                     gap: 16px;
-                    max-width: 632px; // 200*3 + 16*2
-                    margin: 0 auto; // 置中
+                    max-width: 632px;
+                    /* 200*3 + 16*2 */
+                    margin: 0 auto;
+                    /* 確保在小螢幕下也置中 */
                     justify-content: center;
+                    /* 確保在小螢幕下也置中 */
                 }
-    
+
                 .Coach-comment-card {
                     @media (max-width: 1024px) {
                         width: 200px !important;
@@ -1442,7 +1462,7 @@
                         box-sizing: border-box;
                     }
                 }
-    
+
                 .Coach-comment-card>* {
                     @media (max-width: 1024px) {
                         width: 100% !important;
@@ -1450,7 +1470,7 @@
                         box-sizing: border-box;
                     }
                 }
-    
+
                 &::before,
                 &::after {
                     content: "";
@@ -1460,29 +1480,29 @@
                     width: 1px;
                     border-left: 1px dashed #ccc;
                 }
-    
+
                 &::before {
                     left: calc(33.333% + 0px);
                     /* 第一條虛線 */
-    
+
                 }
-    
+
                 &::after {
                     left: calc(66.666% + 3px);
                     /* 第二條虛線 */
-    
+
                 }
-    
-    
+
+
                 .Star-rate {
                     display: flex;
                     flex-direction: row;
                     justify-content: flex-start;
                     align-items: center;
                 }
-    
-    
-    
+
+
+
                 h3 {
                     color: var(--dark, #3A2C19);
                     font-size: 30px;
@@ -1493,9 +1513,9 @@
                     text-transform: capitalize;
                     margin-left: 40%;
                 }
-    
-    
-    
+
+
+
                 p.description {
                     color: var(--dark, #3A2C19);
                     /* 段落/14 */
@@ -1507,7 +1527,7 @@
                     /* 19.6px */
                     letter-spacing: 1.4px;
                     margin-top: 30px;
-    
+
                     @media (max-width: 1024px) {
                         overflow: hidden;
                         color: var(--dark, #3A2C19);
@@ -1533,21 +1553,21 @@
                         letter-spacing: 1.4px;
                     }
                 }
-    
+
                 .Name-date {
                     margin-top: 90px;
                     display: flex;
                     flex-direction: row;
                     gap: 120px;
-    
+
                     @media (max-width: 1024px) {
                         gap: 50px;
-    
+
                     }
-    
+
                     p.Name {
                         color: #000;
-    
+
                         /* 段落/14 */
                         font-family: "Noto Sans TC", sans-serif;
                         font-size: 14px;
@@ -1558,7 +1578,7 @@
                         letter-spacing: 1.4px;
                         white-space: nowrap;
                     }
-    
+
                     p.Date {
                         color: var(--dark, #3A2C19);
                         text-align: right;
@@ -1571,10 +1591,10 @@
                         /* 19.6px */
                         letter-spacing: 1.4px;
                     }
-    
-    
+
+
                 }
-    
+
             }
 
 
@@ -1584,6 +1604,7 @@
                 align-items: center;
                 width: 100%;
                 margin-top: 5%;
+
 
                 button {
                     align-self: center;
@@ -1694,7 +1715,7 @@
     }
 
     @media (min-width: 1920px) {
-        right: -5%;
+        right: 50px
     }
 
 
@@ -1719,52 +1740,62 @@
 
 
 
-.nav-about {
+// .nav-about {
+//     display: flex;
+//     flex-direction: row;
+//     align-items: flex-start;
+
+//     .coachnav ul {
+//         width: 100%;
+//         padding: 10px 0; // 只上下
+//         margin: 0;
+//         list-style: none;
+//         text-align: right;
+//     }
+
+//     .coachnav li {
+//         display: block;
+//         width: 100%;
+//         box-sizing: border-box;
+//     }
+
+//     .coachnav li a {
+//         display: block;
+//         width: 100%;
+//         text-align: right;
+//         padding: 8px 0;
+//         padding-right: 30px; // 文字離線距離
+//         color: #000;
+//         text-decoration: none;
+//         box-sizing: border-box;
+//     }
+
+
+.coachintro-all {
+    flex: 1 1 0;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    /* 由 flex-start 改成 center，讓子元素置中 */
 
-    .coachnav ul {
+    >* {
         width: 100%;
-        padding: 10px 0; // 只上下
-        margin: 0;
-        list-style: none;
-        text-align: right;
-    }
-
-    .coachnav li {
-        display: block;
-        width: 100%;
+        max-width: 1200px;
+        margin: 80px 0 0 0;
+        /* 取消左右 auto */
+        padding: 0 16px;
         box-sizing: border-box;
     }
 
-    .coachnav li a {
-        display: block;
-        width: 100%;
-        text-align: right;
-        padding: 8px 0;
-        padding-right: 30px; // 文字離線距離
-        color: #000;
-        text-decoration: none;
-        box-sizing: border-box;
-    }
-
-
-    .coachintro-all {
-        flex: 1 1 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        // 關鍵：所有主內容區塊 wrapper 標準化
+    @media (min-width: 1680px) {
         >* {
-            width: 100%;
-            max-width: 1200px;
-            margin: 80px auto 0 auto;
-            box-sizing: border-box;
+            max-width: 1487px;
         }
     }
 }
+
+
+
 
 // 主要內容 wrapper 標準化
 .Nutriaboutcontent,
@@ -1799,8 +1830,7 @@
     #Coach-exp-cer,
     #certificate,
     #reservation1,
-    #coacharticle,
-    .Coach-comment-wrapper {
+    #coacharticle {
         width: 100vw !important;
         max-width: 100vw !important;
         min-width: 0;
@@ -2173,7 +2203,7 @@
         box-sizing: border-box;
     }
 
-    #Coach-comment{
+    #Coach-comment {
         width: 100% !important;
         max-width: none;
         padding: 0 10px;
