@@ -173,32 +173,20 @@ select {
   letter-spacing: 1.4px;
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-    scale: 0.5;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
 #homePage {
+  background-color: transparent;
   width: 100%;
   max-width: 100vw;
-  height: 5700px;
-}
-#homePage .view {
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 30%;
+  height: auto;
 }
 #homePage .homeSearchSection {
   position: relative;
-  background-color: #FEFCF7;
+  position: relative;
+  z-index: 2;
+  background-color: #fefcf7;
   padding: 191px 0;
   border-top-left-radius: 400vw 107vw;
   border-top-right-radius: 400vw 107vw;
-  top: -400px;
-  background: linear-gradient(180deg, #FEFCF7 8.5%, rgba(255, 135, 64, 0.4) 40.1%, #FEFCF7 100%);
+  margin-top: -400px;
+  background: linear-gradient(180deg, #fefcf7 8.5%, rgba(255, 135, 64, 0.4) 40.1%, #fefcf7 100%);
 }
