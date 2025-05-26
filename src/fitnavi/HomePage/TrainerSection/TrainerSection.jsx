@@ -75,28 +75,28 @@ function TrainerSection() {
       {/* 卡牌輪播區 */}
       <div className="trainer-card-box">
         <div className="home-trainer-maincard">
-          <div className="home-trainer-card home-trainer-active">
-            <div className="home-trainer-img">
-              <img src={focusTrainer.img} alt={focusTrainer.name} />
+
+          <div className="home-trainer-img">
+            <img src={focusTrainer.img} alt={focusTrainer.name} />
+          </div>
+          <div className="home-trainer-info">
+            <div className="trainer-info-box home-trainer-name">
+              <span>{focusTrainer.name}</span>
+              <span className="home-trainer-enname">{focusTrainer.enName}</span>
             </div>
-            <div className="home-trainer-info">
-              <div className="trainer-info-box home-trainer-name">
-                <span>{focusTrainer.name}</span>
-                <span className="home-trainer-enname">{focusTrainer.enName}</span>
-              </div>
-              <div className="trainer-info-box home-trainer-area">
-                <img src="/images/homepage-icon-map.svg" alt="" />
-                {focusTrainer.areas.map((area, i) => (
-                  <span key={i}>{area}</span>
-                ))}
-              </div>
-              <div className="trainer-info-box home-trainer-tags">
-                {focusTrainer.skills.map((skill, i) => (
-                  <span key={i}>{skill}</span>
-                ))}
-              </div>
+            <div className="trainer-info-box home-trainer-area">
+              <img src="/images/homepage-icon-map.svg" alt="" />
+              {focusTrainer.areas.map((area, i) => (
+                <span key={i}>{area}</span>
+              ))}
+            </div>
+            <div className="trainer-info-box home-trainer-tags">
+              {focusTrainer.skills.map((skill, i) => (
+                <span key={i}>{skill}</span>
+              ))}
             </div>
           </div>
+
         </div>
         {/* 四張排隊小卡 */}
         <div className="home-trainer-queue">
