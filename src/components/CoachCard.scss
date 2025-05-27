@@ -5,7 +5,7 @@
   height: 452px;
   min-width: 284px;
   max-width: 400px;
- 
+
   flex-direction: column;
   // justify-content: space-between;
   padding: 12px 16px;
@@ -13,6 +13,17 @@
   border-radius: 18px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    border-radius: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    background: #FFF;
+    box-shadow: 2px 4px 16px 0px rgba(0, 0, 0, 0.40);
+
+    .more-button {
+      color: #ff8740;
+    }
+  }
 
   .image-container {
     position: relative;
@@ -47,6 +58,7 @@
     gap: 6px;
     height: 116px;
 
+
     .coach-name {
       color: #3a2c19;
       font-family: "Noto Sans TC", sans-serif;
@@ -75,7 +87,7 @@
 
     .hashtag {
       display: flex;
-      gap:4%;
+      gap: 4%;
 
       a {
         color: #ff8740;
@@ -115,5 +127,6 @@
     line-height: 140%;
     /* 19.6px */
     letter-spacing: 1.4px;
+
   }
 }
