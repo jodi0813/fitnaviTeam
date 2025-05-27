@@ -13,7 +13,7 @@ function CoachInfo() {
           {/* 大頭照姓名跟編輯按鈕 */}
           <div className="myinfoHeader">
             <div className="myinfoNameSection">
-              <img src="/images/coach13.jpg" className="myinfoAvatar" />
+              <img src="./images/coach13.jpg" className="myinfoAvatar" />
               <div className="myinfoNameBox">
                 <div className="myinfoName">
                   <span className="coachinfoName">健身教練</span>

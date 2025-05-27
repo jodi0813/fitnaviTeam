@@ -113,11 +113,11 @@ function TrainerSection() {
         <div className="home-trainer-controls">
           <button className="next-btn" onClick={handleNext}>
             <span className="label"></span>
-            <img className="arrow" src="/images/carousel-arrow-left.svg" alt="next" />
+            <img className="arrow" src="./images/carousel-arrow-left.svg" alt="next" />
           </button>
           <button className="prev-btn" onClick={handlePrev}>
             <span className="label"></span>
-            <img className="arrow" src="/images/carousel-arrow-right.svg" alt="prev" />
+            <img className="arrow" src="./images/carousel-arrow-right.svg" alt="prev" />
           </button>
         </div>
       </div>

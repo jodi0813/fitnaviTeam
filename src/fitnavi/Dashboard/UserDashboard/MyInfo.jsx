@@ -12,7 +12,7 @@ function MyInfo() {
           {/* 大頭照姓名跟編輯按鈕 */}
           <div className="myinfoHeader">
             <div className="myinfoNameSection">
-              <img src="/images/useravatar.jpg" className="myinfoAvatar" />
+              <img src="./images/useravatar.jpg" className="myinfoAvatar" />
               <div className="myinfoName">
                 <span className="myinfoLabel">姓名</span>
                 <span className="myinfoValue">王明華</span>

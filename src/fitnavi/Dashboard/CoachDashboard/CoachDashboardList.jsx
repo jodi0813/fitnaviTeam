@@ -72,7 +72,7 @@ function CoachDashboardList() {
               </div>
               <div className="list-illustration">
                 <div className="list-illustration1">
-                  <img src="/images/coachnutri.png" alt="" />
+                  <img src="./images/coachnutri.png" alt="" />
                 </div>
                 <div className="iAmCoach">
                   <span className="iAmCoach1">我是</span>
