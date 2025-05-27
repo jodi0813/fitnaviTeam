@@ -112,7 +112,7 @@ function MemberLogin() {
 
           <button type="submit">
             <span className="login-text">登入</span>
-            <img src="/images/search.svg" alt="" />
+            <img src="./images/search.svg" alt="" />
           </button>
         </div>
 

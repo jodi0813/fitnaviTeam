@@ -78,7 +78,7 @@ function MemberSignup() {
                         <div className='Signup-button'>
                             <button onClick={() => navigate('/SetAccountPassword')}>
                                 <span className="Signup-text">下一步</span>
-                                <img src="/images/search.svg" alt="" />
+                                <img src="./images/search.svg" alt="" />
                             </button>
                         </div>
 

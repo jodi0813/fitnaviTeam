@@ -93,7 +93,7 @@ export default function PopupWindow3({ onClose, onNext, onPrev }) {
                                     </div>
                                     <div className="icon">
                                         <img
-                                            src="/images/icon-applePay.svg"
+                                            src="./images/icon-applePay.svg"
                                             alt="applePay-icon"
                                         />
                                     </div>
@@ -113,7 +113,7 @@ export default function PopupWindow3({ onClose, onNext, onPrev }) {
                                     </div>
                                     <div className="icon">
                                         <img
-                                            src="/images/icon-linePay.svg"
+                                            src="./images/icon-linePay.svg"
                                             alt="linePay-icon"
                                         />
                                     </div>

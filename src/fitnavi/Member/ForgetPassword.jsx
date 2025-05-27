@@ -15,7 +15,7 @@ function ForgetPassword() {
                         <input type="text" />
                         <button>
                             <span className="email-text">寄送驗證信</span>
-                            <img src="/images/search.svg" alt="" /></button>
+                            <img src="./images/search.svg" alt="" /></button>
                     </div>
 
                     <div className='ForgetPassword-option'>

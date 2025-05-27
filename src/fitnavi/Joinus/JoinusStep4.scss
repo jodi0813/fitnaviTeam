@@ -18,224 +18,227 @@
 //     height: 100vh; // 讓它垂直滿版置中
 
 
-    .CoachJoinus-Step4 {
-        position: relative;
-        
+.CoachJoinus-Step4 {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 550px;
+    height: 650px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-right: 32px;
+    padding-left: 32px;
+
+    border-radius: 32px;
+    border: 1px solid var(--dark, #3A2C19);
+    background: #FFF;
+    // box-shadow: 4px 4px 24px 0px rgba(58, 44, 25, 0.30);
+    box-shadow: 8px 8px 0px 0px #3A2C19;
+
+
+
+    .JoinusStep4-title {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 550px;
-        height: 650px;
-        padding-top: 19px;
-        padding-bottom: 19px;
-        padding-right: 32px;
-        padding-left: 32px;
+        flex-direction: row;
+        gap: 5px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #3a2c19;
+        width: 450px;
 
-        border-radius: 32px;
-        border: 1px solid var(--dark, #3A2C19);
-        background: #FFF;
-        // box-shadow: 4px 4px 24px 0px rgba(58, 44, 25, 0.30);
-        box-shadow: 8px 8px 0px 0px #3A2C19;
-
-
-
-        .JoinusStep4-title {
-            display: flex;
-            flex-direction: row;
-            gap: 5px;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #3a2c19;
-            width: 450px;
-
-            .Step4-title {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: baseline;
-                gap: 10px;
-                white-space: nowrap;
-
-                h3 {
-                    color: var(--dark, #3A2C19);
-                    text-align: center;
-                    font-family: "Dela Gothic One";
-                    font-size: 36px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                    letter-spacing: 0px;
-                }
-
-                h4 {
-                    color: var(--dark, #3A2C19);
-                    opacity: 0.5;
-                    text-align: center;
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 250%;
-                    /* 35px */
-                    letter-spacing: 1.4px;
-                }
-            }
-
-            p {
-                color: var(--primary, var(--primary, #FF8740));
-                text-align: center;
-                font-family: "Dela Gothic One";
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 140%;
-                /* 19.6px */
-                letter-spacing: 1.4px;
-            }
-
-        }
-
-        .scrollFieldset-CollabarationTerm {
-            display: flex;
-            padding: 14px 12px 10px 27px;
-            justify-content: flex-end;
-            align-items: flex-start;
-            gap: 17px;
-            max-width: 393px;
-            max-height: 300px;
-            overflow-y: auto;
-            margin-left: 80px;
-            margin-right: 70px;
-
-
-            border-radius: 8px;
-            border: 1px solid var(--dark, #3A2C19);
-            background: var(--white, #FEFCF7);
-
-            p {
-                color: var(--dark, #3A2C19);
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                /* 14px */
-                letter-spacing: 1px;
-            }
-
-            &::-webkit-scrollbar {
-                width: 10px;
-                height: 143px;
-            }
-
-            &::-webkit-scrollbar-thumb {
-                width: 8px;
-                border-radius: 99px;
-                background: #D9D9D9;
-            }
-
-            &::-webkit-scrollbar-track {
-                background: transparent;
-            }
-
-        }
-
-        .AgreeTerm-checkbox {
-            margin-top: 40px;
+        .Step4-title {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            align-items: center;
+            align-items: baseline;
+            gap: 10px;
+            white-space: nowrap;
 
-            input {
-                width: 16px;
-                height: 16px;
-                aspect-ratio: 1/1;
-                border-radius: 3px;
-                border: 1px solid var(--dark, #3A2C19);
-                background: #FFF;
+            h3 {
+                color: var(--dark, #3A2C19);
+                text-align: center;
+                font-family: "Dela Gothic One";
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0px;
             }
 
-            label {
+            h4 {
                 color: var(--dark, #3A2C19);
-                /* 段落/14 */
+                opacity: 0.5;
+                text-align: center;
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 140%;
-                /* 19.6px */
+                line-height: 250%;
+                /* 35px */
                 letter-spacing: 1.4px;
             }
         }
 
-        .PreSSendButton {
-            margin-top: 160px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
+        p {
+            color: var(--primary, var(--primary, #FF8740));
+            text-align: center;
+            font-family: "Dela Gothic One";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+        }
 
-            .Step4Pre-button {
-                width: 100px;
-                height: 40px;
-                border: 1px solid var(--dark, #3A2C19);
-                color: var(--dark, #3A2C19);
-                margin: 0px;
-                white-space: nowrap;
-                border-radius: 999px;
-                text-align: center;
-                /* 段落/14 */
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                /* 19.6px */
-                letter-spacing: 1.4px;
+    }
 
-                &:focus,
-                &:focus-visible {
-                    outline: none;
-                }
-            }
+    .scrollFieldset-CollabarationTerm {
+        display: flex;
+        padding: 14px 12px 10px 27px;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 17px;
+        max-width: 393px;
+        max-height: 300px;
+        overflow-y: auto;
+        margin-left: 80px;
+        margin-right: 70px;
 
-            .SendButton {
-                height: 40px;
-                outline: none;
-                border-radius: 999px;
-                border: 1px solid var(--primary, #FF8740);
-                color: #FF8740;
-                text-align: center;
-                /* 段落/14 */
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                /* 19.6px */
-                letter-spacing: 1.4px;
 
-                &:active {
-                    border-radius: 999px;
-                    background: var(--primary, #FF8740);
+        border-radius: 8px;
+        border: 1px solid var(--dark, #3A2C19);
+        background: var(--white, #FEFCF7);
 
-                    color: var(--white, var(--white, #FEFCF7));
-                    text-align: center;
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 900;
-                    line-height: 140%;
-                    /* 19.6px */
-                    letter-spacing: 1.4px;
-                }
+        p {
+            color: var(--dark, #3A2C19);
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 14px */
+            letter-spacing: 1px;
+        }
 
-            }
+        &::-webkit-scrollbar {
+            width: 10px;
+            height: 143px;
+        }
 
+        &::-webkit-scrollbar-thumb {
+            width: 8px;
+            border-radius: 99px;
+            background: #D9D9D9;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+    }
+
+    .AgreeTerm-checkbox {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            width: 16px;
+            height: 16px;
+            aspect-ratio: 1/1;
+            border-radius: 3px;
+            border: 1px solid var(--dark, #3A2C19);
+            background: #FFF;
+        }
+
+        label {
+            color: var(--dark, #3A2C19);
+            /* 段落/14 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
         }
     }
+
+    .PreSSendButton {
+        margin-top: 160px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .Step4Pre-button {
+            width: 100px;
+            height: 40px;
+            border: 1px solid var(--dark, #3A2C19);
+            color: var(--dark, #3A2C19);
+            margin: 0px;
+            white-space: nowrap;
+            border-radius: 999px;
+            text-align: center;
+            /* 段落/14 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+
+            &:focus,
+            &:focus-visible {
+                outline: none;
+            }
+        }
+
+        .SendButton {
+            height: 40px;
+            outline: none;
+            border-radius: 999px;
+            border: 1px solid var(--primary, #FF8740);
+            color: #FF8740;
+            text-align: center;
+            /* 段落/14 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+            padding: 10px 16px;
+            justify-content: center;
+            align-items: center;
+
+            &:active {
+                border-radius: 999px;
+                background: var(--primary, #FF8740);
+
+                color: var(--white, var(--white, #FEFCF7));
+                text-align: center;
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
+
+        }
+
+    }
+}
 
 
 
@@ -254,17 +257,17 @@
     display: flex;
     flex-direction: column;
     position: relative;
-  }
-  
-  .Step4-form {
+}
+
+.Step4-form {
     flex: 1 1 0;
     min-height: 0;
     display: flex;
     flex-direction: column;
     gap: 16px;
-  }
-  
-  .scrollFieldset-CollabarationTerm {
+}
+
+.scrollFieldset-CollabarationTerm {
     max-height: 300px;
     overflow-y: auto;
     border: 1px solid var(--dark, #3A2C19);
@@ -272,19 +275,19 @@
     background: #fff;
     margin: 0 0 0 0; // 移除多餘 margin
     padding: 14px 12px 10px 27px;
-  }
-  
-  .AgreeTerm-checkbox {
+}
+
+.AgreeTerm-checkbox {
     margin-top: 40px;
     display: flex;
     align-items: center;
-  }
-  
-  .PreSSendButton {
+}
+
+.PreSSendButton {
     margin-top: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-  }
+}

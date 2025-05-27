@@ -25,7 +25,7 @@ function Joinus() {
                                 </label>
 
                                 <div className='imcoach-img'>
-                                    <img src="/images/Joinus-coach-shadow.png" alt="" />
+                                    <img src="./images/Joinus-coach-shadow.png" alt="" />
                                 </div>
                             </div>
 
@@ -73,7 +73,7 @@ function Joinus() {
                                 </label>
 
                                 <div className='imnutri-img'>
-                                    <img src="/images/Joinus-nutri-shadow.png" alt="" />
+                                    <img src="./images/Joinus-nutri-shadow.png" alt="" />
                                 </div>
                             </div>
 
