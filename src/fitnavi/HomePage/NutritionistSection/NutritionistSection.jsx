@@ -7,37 +7,40 @@ import JoinButton2 from "../../../components/joinButton/joinButton2";
 function NutritionistSection() {
 
   const initialList2 = [
-    {
-      name: "詹姆斯",
-      enName: "James",
-      skills: ["＃重量訓練", "＃減脂雕塑"],
-      img: "/images/homenutri1.png",
-    },
-    {
-      name: "蘇菲亞",
-      enName: "Sophia",
-      skills: ["＃重量訓練", "＃減脂雕塑"],
-      img: "/images/homenutri2.png",
-    },
-    {
-      name: "蘭娜",
-      enName: "Lanna",
-      skills: ["＃重量訓練", "＃減脂雕塑"],
-      img: "/images/homenutri3.png",
-    },
-    {
-      name: "飛飛",
-      enName: "Feifei",
-      skills: ["＃重量訓練", "＃減脂雕塑"],
-      img: "/images/homenutri4.png",
-    },
+
+
     {
       name: "毛毛",
       enName: "Evelyn",
-      skills: ["＃體重控制", "＃營養攝取"],
+      skills: ["＃體態維持", "＃營養攝取"],
+      img: "/images/homenutri1.png",
+    },
+    {
+      name: "彤彤",
+      enName: "Iris",
+      skills: ["＃素食營養", "＃外食調整"],
       img: "/images/homenutri5.png",
     },
+    {
+      name: "沛琪",
+      enName: "Emily",
+      skills: ["＃重量訓練", "＃減脂瘦身"],
+      img: "/images/homenutri4.png",
+    },
+    {
+      name: "芷瑄",
+      enName: "Chloe",
+      skills: ["＃重量訓練", "＃增肌增重"],
+      img: "/images/homenutri3.png",
+    },
+    {
+      name: "承昱",
+      enName: "Nathan",
+      skills: ["＃飲食計畫", "＃運動營養"],
+      img: "/images/homenutri2.png",
+    }
   ];
+
 
   const [nutritionists, setNutritionists] = useState(initialList2);
 
@@ -132,8 +135,8 @@ function NutritionistSection() {
               </Link>
               <Link to="/nutritionist">
                 <JoinButton
-                  text="成為合作營養師"
-                  to="/Joinus" />
+                  text="查看更多營養師"
+                  to="/nutritionist" />
 
               </Link>
             </div>
