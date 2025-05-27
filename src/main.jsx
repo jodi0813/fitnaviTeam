@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './fitnavi/App01'
+// import App from './fitnavi/HomePage/Index'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 

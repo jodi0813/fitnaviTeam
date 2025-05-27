@@ -30,11 +30,11 @@ function Navbar() {
           <div className="menu">
             <ul>
               <li><NavLink to="/coach" className={({ isActive }) => isActive ? "active" : ""}>健身教練</NavLink></li>
-<li><NavLink to="/nutritionist" className={({ isActive }) => isActive ? "active" : ""}>營養師</NavLink></li>
+              <li><NavLink to="/nutritionist" className={({ isActive }) => isActive ? "active" : ""}>營養師</NavLink></li>
               <li><NavLink to="/myfavorite" className={({ isActive }) => isActive ? "active" : ""}>我的收藏</NavLink></li>
               <li><NavLink to="/allarticle" className={({ isActive }) => isActive ? "active" : ""}>知識文章</NavLink></li>
               <li><NavLink to="/centerMap" className={({ isActive }) => isActive ? "active" : ""}>健身場地</NavLink></li>
-<li><NavLink to="/Joinus" className={({ isActive }) => isActive ? "active" : ""}>加入我們</NavLink></li>
+              <li><NavLink to="/Joinus" className={({ isActive }) => isActive ? "active" : ""}>加入我們</NavLink></li>
             </ul>
           </div>
 
