@@ -26,9 +26,9 @@ function MemberList() {
                 className={memberTab === "useOrder" ? "memberBt memberActive" : "memberBt"}
                 onClick={() => setMemberTab("useOrder")}
               >
-                我的頁面
+                我的訂單
               </button>
-              <img src="/images/member1.png" alt="插圖" className="member1" />
+              <img src="./images/member1.png" alt="插圖" className="member1" />
             </div>
           </div>
 

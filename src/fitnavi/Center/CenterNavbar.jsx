@@ -178,15 +178,15 @@ function CenterNavbar() {
                 </button>
                 <div className="centerPhotos">
                   <img
-                    src="/images/cardioEquipment01.jpg"
+                    src="./images/cardioEquipment01.jpg"
                     alt="有氧器材照片1"
                   />
                   <img
-                    src="/images/cardioEquipment02.jpg"
+                    src="./images/cardioEquipment02.jpg"
                     alt="有氧器材照片2"
                   />
                   <img
-                    src="/images/cardioEquipment03.jpg"
+                    src="./images/cardioEquipment03.jpg"
                     alt="有氧器材照片3"
                   />
                 </div>

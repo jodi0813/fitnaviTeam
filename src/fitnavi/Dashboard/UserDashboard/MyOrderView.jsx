@@ -3,6 +3,7 @@ import { useState } from "react";
 import BookingPopup from "./Popup/BookingPopup";
 import ReviewPopup from "./Popup/ReviewPopup";
 import ListPopup from "./Popup/ListPopup";
+import BookingOkPopup from "./Popup/BookingOkPopup"; 
 /* 使用者後台>我的訂單>訂單總覽 */
 function MyOrderView() {
   const orderview = [
@@ -20,10 +21,17 @@ function MyOrderView() {
   ];
   /* 控制按鈕彈窗 */
   const [popupType, setPopupType] = useState(null);
+  const [showBookingOk, setShowBookingOk] = useState(false);
   const handleOpenList = () => setPopupType("list");//訂單編號
   const handleOpenBooking = () => setPopupType("booking");//預約
   const handleOpenReview = () => setPopupType("review");//評價
   const handleClosePopup = () => setPopupType(null);
+  const handleShowBookingOk = () => {
+    setPopupType(null); // 關掉 BookingPopup
+    setTimeout(() => setShowBookingOk(true), 0); // 顯示 BookingOkPopup
+  };
+
+  const handleCloseBookingOk = () => setShowBookingOk(false); // 關閉 BookingOkPopup
   return (
     <>
       <div className="orderview-table">
@@ -77,8 +85,13 @@ function MyOrderView() {
       </div>
       {/* 根據 popupType 顯示彈窗 */}
       {popupType === "list" && <ListPopup onClose={handleClosePopup} />}
-      {popupType === "booking" && <BookingPopup onClose={handleClosePopup} />}
+      {popupType === "booking" && (
+        <BookingPopup
+          onClose={handleClosePopup}
+          onSubmitBooking={handleShowBookingOk} // 傳進 BookingPopup
+        />)}
       {popupType === "review" && <ReviewPopup onClose={handleClosePopup} />}
+       {showBookingOk && <BookingOkPopup onClose={handleCloseBookingOk} />}
     </>
   );
 }
