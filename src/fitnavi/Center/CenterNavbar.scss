@@ -319,16 +319,21 @@
 #fitnessTrainer {
   display: flex;
   flex-direction: column;
+      justify-content: center;
   align-items: center;
   gap: 64px;
-  margin-top: 64px;
+ padding-top: 64px;
+  width:100%;
+  // margin: 0 auto;
   .trainersCards {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    width:90%;
     .threeCards {
       display: flex;
       gap: 32px;
+   margin: 0 auto;
     }
   }
 }
