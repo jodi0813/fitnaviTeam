@@ -24,19 +24,18 @@ function SearchSection() {
       <div className="home-search">
         <header className="home-search-mainTitle">找尋專屬於您的</header>
 
-        {/* 場地區塊 */}
         <div className="home-search-section">
+          {/* 場地區塊 */}
           <div className="home-search-block">
             <div className="home-search-titleBox">
               <span className="home-search-title">場地</span>
               <span className="home-search-titleEn">venue</span>
             </div>
             <div className="home-search-main">
-              <div>
+              <div className="home-search-illustration">
                 <img
                   src="/images/findGym.png"
                   alt="走路的角色插圖"
-                  className="home-search-illustration"
                 />
               </div>
               <div className="home-search-dropdowns">
@@ -74,11 +73,11 @@ function SearchSection() {
               <span className="home-search-titleEn">course</span>
             </div>
             <div className="home-search-main">
-              <div>
+              <div className="home-search-illustration">
                 <img
                   src="/images/findLesson.png"
                   alt="指著白板的角色插圖"
-                  className="home-search-illustration"
+
                 />
               </div>
               <div className="home-search-dropdowns">
