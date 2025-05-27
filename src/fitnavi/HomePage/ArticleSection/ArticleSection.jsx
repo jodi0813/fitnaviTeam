@@ -35,8 +35,7 @@ function ArticleSection() {
             tags: ["燃脂", "HIIT訓練"],
             category: "燃脂運動",
             type: 'card'
-        },
-        { type: 'text', text: "ARTICLES" }
+        }
     ];
 
     const cardData = [
@@ -62,9 +61,14 @@ function ArticleSection() {
 
     return (
         <>
-            <section id="Hero-Aricles">
-                <div className="ArticleSection-wrapper">
-                    <div className="cards-text-container">
+            {/* 整個區塊 */}
+
+            <section className="ArticleSection-wrapper">
+                {/* 英文標題加兩欄文章 */}
+                <div className="cards-text-container">
+                    {/* 兩欄文章 */}
+                    <div className="cards-all">
+                        {/* 文章col1 */}
                         <div className="cards-column1">
                             {mixedData
                                 .filter((item) => item.type === 'card')
@@ -82,19 +86,11 @@ function ArticleSection() {
                                     />
                                 ))}
                         </div>
-
-                        <div className="Article-text-column">
-                            {mixedData
-                                .filter((item) => item.type === 'text')
-                                .map((item, index) => (
-                                    <div key={index} className="interlaced-text">
-                                        <p>{item.text}</p>
-                                    </div>
-                                ))}
-                        </div>
-
+                        {/* 文章col2 */}
                         <div className="cards-column2">
+
                             {cardData
+
                                 .map((item, index) => (
                                     <Articlecards
                                         key={index}
@@ -109,33 +105,31 @@ function ArticleSection() {
                                     />
                                 ))}
                         </div>
-
-
-
                     </div>
-
-
-                    <div className="Hompagearticle-Chtitle">
-                        <h2>知識文章</h2>
-                        <div className="subTitle">
-                            <p>
-                                「來自現場的知識，走得穩，也走得遠」<br />
-                                教練與營養師親自撰寫，分享訓練與飲食中的實戰經驗，讓你在改變的路上不迷路。
-                            </p>
-                        </div>
-                        <button onClick={() => {
-                            navigate('/Allarticle');
-                            window.scrollTo(0, 0);
-                        }} style={{ cursor: "pointer" }}>查看更多文章</button>
+                    {/* 英文直標題 */}
+                    <div className="Article-text-column">
+                        ARTICLES
                     </div>
-
-
-
-
-
-
                 </div>
+
+                {/* 底下標題小語跟按鈕 */}
+                <div className="Hompagearticle-Chtitle">
+                    <h2>知識文章</h2>
+                    <div className="subTitle">
+                        <p>
+                            「來自現場的知識，走得穩，也走得遠」<br />
+                            教練與營養師親自撰寫，分享訓練與飲食中的實戰經驗，讓你在改變的路上不迷路。
+                        </p>
+                    </div>
+                    <button onClick={() => {
+                        navigate('/Allarticle');
+                        window.scrollTo(0, 0);
+                    }} style={{ cursor: "pointer" }}>查看更多文章</button>
+                </div>
+
+
             </section>
+
 
         </>
 
