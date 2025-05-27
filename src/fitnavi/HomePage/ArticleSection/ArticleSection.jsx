@@ -117,8 +117,16 @@ function ArticleSection() {
 
                     <div className="Hompagearticle-Chtitle">
                         <h2>知識文章</h2>
-                        <button onClick={() => {navigate('/Allarticle');
-                                    window.scrollTo(0, 0);}} style={{cursor:"pointer"}}>查看更多文章</button>
+                        <div className="subTitle">
+                            <p>
+                                「來自現場的知識，走得穩，也走得遠」<br />
+                                教練與營養師親自撰寫，分享訓練與飲食中的實戰經驗，讓你在改變的路上不迷路。
+                            </p>
+                        </div>
+                        <button onClick={() => {
+                            navigate('/Allarticle');
+                            window.scrollTo(0, 0);
+                        }} style={{ cursor: "pointer" }}>查看更多文章</button>
                     </div>
 
 

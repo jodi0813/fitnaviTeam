@@ -27,7 +27,7 @@ function HomePage() {
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setStartAnim(true);
-        window.removeEventListener("scroll", handleScroll); // ✅ 只觸發一次
+        window.removeEventListener("scroll", handleScroll); //只觸發一次
       }
     };
 
