@@ -5,7 +5,7 @@ import './JoinButton.scss';
 const JoinButton = ({
   text = '',
   to = '',
-  iconSrc = '/images/Polygon.svg',
+  iconSrc = './images/Polygon.svg',
 }) => {
   const navigate = useNavigate();
 

@@ -178,7 +178,7 @@ function NutriIntro() {
         {
             id: "card4",
             date: "2025/01/02",
-            img: "/images/article-9.jpg",
+            img: "./images/article-9.jpg",
             title: "健身不只是動，營養均衡才是成功的秘密",
             content: "健身營養的成功不僅是攝取足夠的卡路里，更重要的是如何搭配碳水化合物、蛋白質與脂肪。根據不同的健身目標，合理調整飲食比例，讓效果事半功倍！",
             tags: ["健身營養", "飲食"],
@@ -291,7 +291,7 @@ function NutriIntro() {
                                 <div className="Nutri-price-with-button">
                                     <button class="classinrto" type="button" onClick={() => setShowPopup(true)}>
                                         <span className="Nutriclassinrto-text">立即報名</span>
-                                        <img src="/images/search.svg" alt="" />
+                                        <img src="./images/search.svg" alt="" />
                                     </button>
                                 </div>
                             </div>
@@ -302,12 +302,12 @@ function NutriIntro() {
                             <p>上課平台<br />可選擇</p>
 
                             <div className="moreimg5">
-                                <img src="/images/googleMeet.svg" alt="" />
+                                <img src="./images/googleMeet.svg" alt="" />
                                 <p>Google Meet</p>
                             </div>
 
                             <div className="moreimg4">
-                                <img src="/images/zoom.svg" alt="" />
+                                <img src="./images/zoom.svg" alt="" />
                                 <p>Zoom</p>
                             </div>
 
@@ -395,7 +395,7 @@ function NutriIntro() {
                                         </svg>
                                     </div> */}
 
-                                    <img src="/images/spe-field.png" alt="" />
+                                    <img src="./images/spe-field.png" alt="" />
                                 </div>
 
                             </div>
@@ -604,7 +604,7 @@ function NutriIntro() {
                                 <div className="seeMoreComment">
                                     <button>
                                         <span className="seeMore-text">查看更多評價</span>
-                                        <img src="/images/search.svg" alt="" />
+                                        <img src="./images/search.svg" alt="" />
                                     </button>
                                 </div>
                                 </div>
