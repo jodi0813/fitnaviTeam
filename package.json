@@ -1,6 +1,7 @@
 {
   "name": "fitnavi-my-demo",
   "private": true,
+  "homepage": "https://jodi0813.github.io/fitnaviTeam",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
