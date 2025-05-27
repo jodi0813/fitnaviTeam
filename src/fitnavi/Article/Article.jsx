@@ -1,6 +1,6 @@
 import "./Article.scss";
 import MaintitleBread from "../../components/Title/MaintitleBread";
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 
 
 function Article() {
@@ -12,16 +12,18 @@ function Article() {
         <>
 
             <main id="card9">
+                <div className="card9-title">
+                    <MaintitleBread
+                        title1="知識文章"
+                        title2="補足符合您需求的知識"
+                        breadcrumbList={[
+                            { label: "知識文章", link: "/Allarticle" },
+                            { label: "營養調配", link: "/Allarticle?category=營養調配" },
+                            { label: "文章內頁" },
+                        ]}
+                    />
+                </div>
 
-            <MaintitleBread
-                    title1="知識文章"
-                    title2="補足符合您需求的知識"
-                    breadcrumbList={[
-                        { label: "知識文章", link: "/Allarticle" },
-                        { label: "營養調配", link: "/Allarticle?category=營養調配" },
-                        { label: "文章內頁" },
-                    ]}
-                />
 
 
                 {/* <!-- banner區域 --> */}
