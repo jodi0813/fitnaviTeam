@@ -34,7 +34,7 @@ function SearchSection() {
             <div className="home-search-main">
               <div className="home-search-illustration">
                 <img
-                  src="/images/findGym.png"
+                  src="./images/findGym.png"
                   alt="走路的角色插圖"
                 />
               </div>
@@ -75,7 +75,7 @@ function SearchSection() {
             <div className="home-search-main">
               <div className="home-search-illustration">
                 <img
-                  src="/images/findLesson.png"
+                  src="./images/findLesson.png"
                   alt="指著白板的角色插圖"
 
                 />
