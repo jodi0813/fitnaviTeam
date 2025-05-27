@@ -13,7 +13,9 @@
     display: flex;
     align-items: flex-end;
     align-self: center;
-    margin-right: 7%;
+    margin-left: 13%;
+    width: 100%;
+    gap: 50px;
 
     .home-nutritionist-maincard {
       display: flex;
@@ -22,18 +24,20 @@
       border: 1px solid #ff8740;
       background: #fff;
       box-shadow: 8px 8px 0px 0px #ff8740;
-      width: 250px;
-      height: 355px;
+      width: 20%;
+      aspect-ratio: 5 / 7;
       transform: skew(-20deg, 0deg);
-      margin-left: 70px;
+
 
       .home-nutritionist-img {
         position: absolute;
-        right: 48px;
-        top: -68px;
+        right: 20%;
+        bottom: 0%;
+        width: 100%;
+        z-index: 99;
 
         img {
-          width: 241px;
+          width: 92%;
           transform: none;
           transform: skew(20deg, 0deg);
         }
@@ -45,6 +49,7 @@
         flex-direction: column;
         gap: 15px;
         position: absolute;
+        height: fit-content;
         right: -80px;
         top: -50px;
 
@@ -106,13 +111,13 @@
     // 四張排隊小卡
     .home-nutritionist-queue {
       display: inline-flex;
-      width: fit-content;
-      height: 280px;
+      width: 50%;
+      height: auto;
       // margin-left:14%;
 
 
       .nutritionist-card-small {
-        width: 160px;
+        width: 100%;
         height: auto;
 
 
@@ -122,151 +127,153 @@
         }
       }
     }
-  }
 
-  // 按鈕區
-  .home-nutritionist-controls {
-    display: flex;
-    width: 85%;
-    justify-content: space-between;
-    position: absolute;
-    top: 345px;
-    right: 10%;
-
-    button {
-      all: unset;
-      /* optional: 為了確保可以點擊 */
-      cursor: pointer;
-      color: #3a2c19;
-      font-family: "Noto Sans TC", sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 150%;
-      /* 24px */
-      letter-spacing: 1.6px;
+    // 按鈕區
+    .home-nutritionist-controls {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      width: 85%;
+      justify-content: space-between;
+      position: absolute;
+      top: 35%;
+      right: 13%;
 
-      width: 82px;
-      gap: 4px;
-      transform: skew(-20deg, 0deg);
-      // transition: all 0.3s ease;
+      button {
+        all: unset;
+        /* optional: 為了確保可以點擊 */
+        cursor: pointer;
+        color: #3a2c19;
+        font-family: "Noto Sans TC", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        /* 24px */
+        letter-spacing: 1.6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 82px;
+        gap: 4px;
+        transform: skew(-20deg, 0deg);
+        // transition: all 0.3s ease;
 
 
 
 
-      // 文字改變
-      .label {
-        position: relative;
-        display: inline-block;
-        transition: all 0.3s ease;
-        white-space: nowrap;
-
-        &::after {
-          position: absolute;
-          top: 0;
-          left: 0;
-          opacity: 0;
-          // transition: all 0.3s ease;
-        }
-      }
-
-    }
-
-    .next-btn {
-      .label {
-        &::before {
-          content: 'NEXT';
-        }
-
-        &::after {
-          content: '下一位';
-        }
-      }
-
-      &:hover {
+        // 文字改變
         .label {
-          color: #ff8740;
+          position: relative;
+          display: inline-block;
+          transition: all 0.3s ease;
+          white-space: nowrap;
 
-          &::before {
+          &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
             opacity: 0;
+            // transition: all 0.3s ease;
+          }
+        }
+
+      }
+
+      .next-btn {
+        .label {
+          &::before {
+            content: 'NEXT';
           }
 
           &::after {
-            opacity: 1;
-            transform: skew(-10deg, 0deg);
+            content: '下一位';
           }
         }
 
-        .arrow {
-          content: url('/images/carousel-arrow-right-orange.svg');
-          transform: scaleX(1.4);
+        &:hover {
+          .label {
+            color: #ff8740;
+
+            &::before {
+              opacity: 0;
+            }
+
+            &::after {
+              opacity: 1;
+              transform: skew(-10deg, 0deg);
+            }
+          }
+
+          .arrow {
+            content: url('/images/carousel-arrow-right-orange.svg');
+            transform: scaleX(1.4);
+          }
         }
+
+        &:active {
+          .arrow {
+            transform: scaleX(0.95);
+            transition: transform 0.3s ease;
+          }
+
+          .label {
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+          }
+        }
+
       }
 
-      &:active {
-        .arrow {
-          transform: scaleX(0.95);
-          transition: transform 0.3s ease;
-        }
-
+      .prev-btn {
         .label {
-          transform: scale(0.9);
-          transition: transform 0.3s ease;
-        }
-      }
-
-    }
-
-    .prev-btn {
-      .label {
-        &::before {
-          content: 'PREV';
-        }
-
-        &::after {
-          content: '上一位';
-        }
-      }
-
-      &:hover {
-        transition: all 0.3s ease;
-
-        .label {
-          color: #ff8740;
-
           &::before {
-            opacity: 0;
+            content: 'PREV';
           }
 
           &::after {
-            opacity: 1;
-            transform: skew(-10deg, 0deg);
+            content: '上一位';
           }
         }
 
-        .arrow {
-          content: url('/images/carousel-arrow-left-orange.svg');
+        &:hover {
+          transition: all 0.3s ease;
 
-          transform: scaleX(1.4);
+          .label {
+            color: #ff8740;
+
+            &::before {
+              opacity: 0;
+            }
+
+            &::after {
+              opacity: 1;
+              transform: skew(-10deg, 0deg);
+            }
+          }
+
+          .arrow {
+            content: url('/images/carousel-arrow-left-orange.svg');
+
+            transform: scaleX(1.4);
+          }
         }
+
+        &:active {
+          .arrow {
+            transform: scaleX(0.95);
+            transition: transform 0.3s ease;
+          }
+
+          .label {
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+          }
+        }
+
       }
-
-      &:active {
-        .arrow {
-          transform: scaleX(0.95);
-          transition: transform 0.3s ease;
-        }
-
-        .label {
-          transform: scale(0.9);
-          transition: transform 0.3s ease;
-        }
-      }
-
     }
+
   }
+
 
 
   // 底部內容
@@ -276,12 +283,14 @@
     padding-top: 30px;
     justify-content: space-between;
     align-items: center;
-    
+    width: 100%;
+
 
     .home-nutritionist-img {
       position: absolute;
       right: 0%;
-      top:-66px;
+      bottom: -24%;
+      width: 17%;
     }
 
     .home-nutritionist-title {
@@ -289,67 +298,73 @@
       flex-direction: column;
       justify-content: flex-end;
 
+
       width: 100%;
       gap: 45px;
 
       .home-nutritionist-title1 {
         display: flex;
         flex-direction: column;
-        gap:10px;
+        gap: 10px;
 
-      }
 
-      .home-nutritionist-title2 {
-        display: flex;
-        align-items: center;
-        transform: skew(-20deg, 0deg);
-        gap:32px;
-        padding-left: 7%;
 
-        .home-nutritionist-titleCh {
-          // text-align: center;
-          // -webkit-text-strokeWidth: 1px;
-          // -webkit-text-stroke-color: #3a2c19;
-          font-family: "Mantou Sans";
-          font-size: 84px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-          letter-spacing: 12.8px;
+        .home-nutritionist-title2 {
+          display: flex;
+          align-items: center;
+          transform: skew(-20deg, 0deg);
+          gap: 32px;
+          padding-left: 7%;
+
+          .home-nutritionist-titleCh {
+            // text-align: center;
+            // -webkit-text-strokeWidth: 1px;
+            // -webkit-text-stroke-color: #3a2c19;
+            font-family: "Mantou Sans";
+            font-size: 84px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 12.8px;
+            color: #3a2c19;
+            white-space: nowrap;
+          }
+
+          .home-nutritionist-titleEn {
+            color: #fefcf7;
+            font-family: "Dela Gothic One";
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100px;
+            /* 156.25% */
+            text-transform: capitalize;
+
+            @media (max-width: 1150px) {
+              font-size: 56px;
+            }
+          }
+
+        }
+
+        .home-nutritionist-title3 {
           color: #3a2c19;
-        }
-
-        .home-nutritionist-titleEn {
-          color: #fefcf7;
-          font-family: "Dela Gothic One";
-          font-size: 64px;
+          font-family: "Noto Sans TC", sans-serif;
+          font-size: 20px;
           font-style: normal;
-          font-weight: 400;
-          line-height: 100px;
-          /* 156.25% */
-          text-transform: capitalize;
+          font-weight: 500;
+          line-height: 40px;
+          /* 200% */
+          letter-spacing: 0.4px;
+          padding-left: 4%;
         }
       }
 
-      .home-nutritionist-title3 {
-        color: #3a2c19;
-        font-family: "Noto Sans TC", sans-serif;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 40px;
-        /* 200% */
-        letter-spacing: 0.4px;
-        padding-left: 4%;
+      .home-nutritionist-button {
+        display: flex;
+        gap: 20px;
+
       }
-
-
-    }
-
-    .home-nutritionist-button {
-      display: flex;
-      gap: 20px;
-
     }
   }
 }
