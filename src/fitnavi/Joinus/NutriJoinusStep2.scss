@@ -180,13 +180,14 @@
   .scrollFieldset {
     flex: 1 1 0;
     min-height: 0;
-    max-height: 300px;
+    max-height: 400px;
     overflow-y: auto;
     padding: 16px;
     border-bottom: 1px solid #D0CDC9;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+   
 
     legend {
       color: var(--dark, #3A2C19);
