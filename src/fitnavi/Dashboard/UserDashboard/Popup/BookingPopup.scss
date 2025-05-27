@@ -85,17 +85,16 @@
         background: #fefcf7;
       }
     }
-      .calendar-hint {
-        font-family: "Noto Sans TC";
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 140%; /* 19.6px */
-        letter-spacing: 1.4px;
-        color: #fefcf7;
-        text-align: right;
-
-      }
+    .calendar-hint {
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; /* 19.6px */
+      letter-spacing: 1.4px;
+      color: #fefcf7;
+      text-align: right;
+    }
     .calendar-section {
       display: flex;
       flex-direction: column;
@@ -122,15 +121,16 @@
 
   .submit-button {
     width: 100%;
-    padding: 12px 0;
+    padding: 7px 0;
     border-radius: 20px;
     background: #ff8740;
     color: #fff;
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 16px;
+    font-family: "Noto Sans TC";
+    font-size: 14px;
     font-style: normal;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: 1.4px;
     border: none;
     cursor: pointer;
   }
