@@ -2,42 +2,309 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
 @font-face {
-    font-family: "Mantou Sans";
-    src: url(../../assets/MantouSans-Regular.ttf);
+  font-family: "Mantou Sans";
+  src: url(../../assets/MantouSans-Regular.ttf);
 }
 
+.CoachJoinus-Step2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 550px;
+  height: 650px;
+  padding: 19px 32px;
+  border-radius: 32px;
+  border: 1px solid var(--dark, #3A2C19);
+  background: #FFF;
+  box-shadow: 8px 8px 0px 0px #3A2C19;
+  box-sizing: border-box;
 
-// #Nutri-JoinusStep2-Form {
-//     padding: 120px 50px;
-//     width: 100%;
-
-// }
-
-.Nutri-NextPreButton {
+  .JoinusStep2-header {
     display: flex;
     flex-direction: row;
-    gap: 300px;
+    gap: 60%;
     width: 100%;
-    margin-top: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #3a2c19;
 
-    Button {
-        margin: 0px;
-        white-space: nowrap;
+    .Step2-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: baseline;
+      gap: 12px;
+      white-space: nowrap;
 
-        border-radius: 999px;
-        border: 1px solid var(--primary, #FF8740);
+      h4 {
         color: var(--dark, #3A2C19);
         text-align: center;
-        /* 段落/14 */
+        font-family: "Dela Gothic One";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 5.4px;
+      }
+
+      h5 {
+        color: var(--dark, #3A2C19);
+        opacity: 0.5;
+        text-align: center;
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 250%;
+        letter-spacing: 1.4px;
+      }
+    }
+
+    p {
+      color: var(--primary, #FF8740);
+      text-align: center;
+      font-family: "Dela Gothic One";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: 1.4px;
+    }
+  }
+
+  .Step2Checkbox,
+  .Step2-certification,
+  .scrollFieldset {
+    width: 100%;
+  }
+
+  .Step2Checkbox {
+    position: relative;
+
+    .Specitialty-title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 270px;
+      margin-bottom: 4px;
+      width: 193px;
+
+      h4, p {
         font-family: "Noto Sans TC", sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 140%;
-        /* 19.6px */
         letter-spacing: 1.4px;
+        white-space: nowrap;
+      }
+
+      h4 {
+        color: var(--dark, #3A2C19);
+      }
+
+      p {
+        color: var(--primary, #FF8740);
+      }
     }
 
+    .Step2Checkbox-group {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
 
+      label {
+        color: var(--dark, #3A2C19);
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1.4px;
+      }
 
+      input {
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+        border: 1px solid var(--dark, #3A2C19);
+        background: #FFF;
+      }
+    }
+  }
+
+  .Step2-certification {
+    margin-top: 30px;
+    margin-bottom: 18px;
+
+    .Step2-certification-header {
+      display: flex;
+      flex-direction: column;
+
+      .Step2-certification-title {
+        display: flex;
+        flex-direction: row;
+        width: 222px;
+        margin-bottom: 4px;
+        gap: 250px;
+
+        h4, h5 {
+          font-family: "Noto Sans TC", sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 140%;
+          letter-spacing: 1.4px;
+          white-space: nowrap;
+        }
+
+        h4 {
+          color: var(--dark, #3A2C19);
+        }
+
+        h5 {
+          color: var(--primary, #FF8740);
+        }
+      }
+
+      p {
+        color: var(--gray, #989794);
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 140%;
+      }
+    }
+  }
+
+  .scrollFieldset {
+    flex: 1 1 0;
+    min-height: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 16px;
+    border-bottom: 1px solid #D0CDC9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    legend {
+      color: var(--dark, #3A2C19);
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      padding-top: 18px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #D9D9D9;
+      border-radius: 99px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    input {
+      height: 30px;
+      border-radius: 99px;
+      border: 0.5px solid var(--dark, #3A2C19);
+      background: #FFF;
+      margin-right: 18px;
+    }
+
+    button.upload,
+    button.delete {
+      height: 25px;
+      padding: 4px 12px;
+      margin-right: 18px;
+      margin-bottom: 8px;
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: 1.2px;
+      border-radius: 999px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    button.upload {
+      border: 1px solid var(--primary, #FF8740);
+      color: #FF8740;
+    }
+
+    button.delete {
+      border: 1px solid #3A2C19;
+      color: #3A2C19;
+      width: 50px;
+    }
+
+    .update-button {
+      display: flex;
+      justify-content: end;
+      margin-right: 11%;
+
+      .update {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 25px;
+        padding: 4px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--primary, #FF8740);
+        background: var(--primary, #FF8740);
+        color: #FEFCF7;
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1.2px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .Nutri-NextPreButton {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+
+    .Step2Pre-button,
+    .Step2Next-button {
+      width: 100px;
+      height: 40px;
+      margin: 0;
+      border-radius: 999px;
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: 1.4px;
+      white-space: nowrap;
+      text-align: center;
+
+      &:focus,
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    .Step2Pre-button {
+      border: 1px solid var(--dark, #3A2C19);
+      color: var(--dark, #3A2C19);
+    }
+
+    .Step2Next-button {
+      border: 1px solid #FF8740;
+      color: #FF8740;
+    }
+  }
 }

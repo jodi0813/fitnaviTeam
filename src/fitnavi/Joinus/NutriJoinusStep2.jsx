@@ -151,8 +151,8 @@ function NutriJoinusStep2({onNext,onPre}) {
                         </fieldset>
 
                         <div className='Nutri-NextPreButton'>
-                            <button onClick={onPre}>◀ 上一步</button>
-                            <button onClick={onNext}>下一步 ▶</button>
+                            <button onClick={onPre} className='Step2Pre-button'>◀ 上一步</button>
+                            <button onClick={onNext} className='Step2Next-button'>下一步 ▶</button>
                         </div>
 
 

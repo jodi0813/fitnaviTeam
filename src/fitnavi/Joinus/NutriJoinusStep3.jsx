@@ -129,7 +129,7 @@ function NutriJoinusStep3({onNext,onPre}) {
                             </div>
 
                             <div className='NutriStep3-NextPreButton'>
-                                <button className='Pre-button' onClick={onPre} >◀ 上一步</button>
+                                <button className='Pre-button' onClick={onPre}>◀ 上一步</button>
                                 <button className='Next-button' onClick={onNext}>下一步 ▶</button>
                             </div>
                         </form>

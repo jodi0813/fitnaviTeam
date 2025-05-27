@@ -2,370 +2,312 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
 @font-face {
-    font-family: "Mantou Sans";
-    src: url(../../assets/MantouSans-Regular.ttf);
+  font-family: "Mantou Sans";
+  src: url(../../assets/MantouSans-Regular.ttf);
 }
 
+.NutriJoinus-Step3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 550px;
+  height: 650px;
+  padding: 19px 32px;
+  border-radius: 32px;
+  border: 1px solid var(--dark, #3A2C19);
+  background: #FFF;
+  box-shadow: 8px 8px 0px 0px #3A2C19;
+  box-sizing: border-box;
 
-// #Nutri-JoinusStep3-Form {
-//     padding: 120px 50px;
-//     width: 100%;
-
-// }
-
-.Nutri-Joinus-Step3-wrapper {
+  .NutriJoinusStep3-title {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; // 讓它垂直滿版置中
+    flex-direction: row;
+    gap: 100px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #3a2c19;
 
+    .Step3-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: baseline;
+      gap: 10px;
+      white-space: nowrap;
 
-    .NutriJoinus-Step3 {
-        position: relative;
-        top: -10%;
+      h3 {
+        color: var(--dark, #3A2C19);
+        font-family: "Dela Gothic One";
+        font-size: 36px;
+        letter-spacing: 5.4px;
+        text-align: center;
+      }
+
+      h4 {
+        color: var(--dark, #3A2C19);
+        opacity: 0.5;
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 250%;
+        letter-spacing: 1.4px;
+      }
+    }
+
+    p {
+      color: var(--primary, #FF8740);
+      font-family: "Dela Gothic One";
+      font-size: 14px;
+      line-height: 140%;
+      letter-spacing: 1.4px;
+      text-align: center;
+    }
+  }
+
+  .Step3-form {
+    flex: 1 1 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .Aboutme-textarea {
+      .Aboutme-textarea-title {
         display: flex;
-        flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-start;
-        width: 550px;
-        height: 700px;
-        padding-top: 19px;
-        padding-bottom: 19px;
-        padding-right: 32px;
-        padding-left: 32px;
+        align-items: center;
+        gap: 150%;
+        margin-bottom: 4px;
+        width: 193px;
 
-        border-radius: 32px;
+        h4,
+        p {
+          font-family: "Noto Sans TC", sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 140%;
+          letter-spacing: 1.4px;
+          white-space: nowrap;
+        }
+
+        h4 {
+          color: var(--dark, #3A2C19);
+        }
+
+        p {
+          color: var(--primary, #FF8740);
+        }
+      }
+
+      textarea {
+        height: 156px;
+        width: 440px;
+        border-radius: 8px;
         border: 1px solid var(--dark, #3A2C19);
-        background: #FFF;
-        // box-shadow: 4px 4px 24px 0px rgba(58, 44, 25, 0.30);
-        box-shadow: 8px 8px 0px 0px #3A2C19;
+        background: var(--white, #FEFCF7);
+        margin-top: 10px;
+      }
+    }
 
-        .NutriJoinusStep3-title {
-            display: flex;
-            flex-direction: row;
-            gap: 100px;
-            margin-bottom: 40px;
+    .Aboutme-uploadphotos {
+      margin-top: 14px;
+
+      .Aboutme-uploadphotos-title {
+        width: 202px;
+        margin-bottom: 12px;
+
+        h4 {
+          color: var(--dark, #3A2C19);
+          font-family: "Noto Sans TC", sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 140%;
+          letter-spacing: 1.4px;
+        }
+      }
+
+      .Aboutme-uploadphotos-button {
+        margin-bottom: 36px;
+
+        button {
+          margin-right: 18px;
+          border-radius: 999px;
+          border: 1px solid var(--primary, #3A2C19);
+          color: var(--dark, #3A2C19);
+          font-family: "Noto Sans TC", sans-serif;
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 140%;
+          letter-spacing: 1px;
+          text-align: center;
+        }
+
+        .Aboutme-upload {
+          border-color: #FF8740;
+          color: #FF8740;
+        }
+      }
+    }
+
+    .teachingExperiences {
+      display: flex;
+      flex-direction: row;
+      gap: 150%;
+      width: 199px;
+
+      h4,
+      p {
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 1.4px;
+        white-space: nowrap;
+      }
+
+      h4 {
+        color: var(--dark, #3A2C19);
+      }
+
+      p {
+        color: var(--primary, #FF8740);
+      }
+    }
+
+    .scrollFieldset-teachExperience {
+      margin-top: 8px;
+      width: 430px;
+      max-height: 114px;
+      border: 1px solid #d0cdc9;
+      border-radius: 8px;
+      overflow-y: auto;
+      background: #fff;
+
+      .simpleTable {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+
+        thead {
+          display: table;
+          width: 100%;
+          table-layout: fixed;
+          background-color: #f4f4f4;
+
+          th {
+            padding: 8px;
+            font-size: 10px;
+            text-align: center;
+            color: var(--gray, #989794);
             border-bottom: 1px solid #3a2c19;
-
-            .Step3-title {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: baseline;
-                gap: 10px;
-                white-space: nowrap;
-
-                h3 {
-                    color: var(--dark, #3A2C19);
-                    text-align: center;
-                    font-family: "Dela Gothic One";
-                    font-size: 36px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                    letter-spacing: 5.4px;
-                }
-
-                h4 {
-                    color: var(--dark, #3A2C19);
-                    opacity: 0.5;
-                    text-align: center;
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 250%;
-                    /* 35px */
-                    letter-spacing: 1.4px;
-                }
-            }
-
-            p {
-                color: var(--primary, var(--primary, #FF8740));
-                text-align: center;
-                font-family: "Dela Gothic One";
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 140%;
-                /* 19.6px */
-                letter-spacing: 1.4px;
-            }
-
+          }
         }
 
-        .Step3-form {
-            position: relative;
+        tbody {
+          display: block;
+          max-height: 200px;
+          overflow-y: auto;
+          width: 100%;
 
-            .Aboutme-textarea {
-                .Aboutme-textarea-title {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-items: center;
-                    gap: 120%;
-                    margin-bottom: 4px;
-                    width: 193px;
-                    // border-bottom: 1px solid #3A2C19;
-
-
-
-
-                    h4 {
-                        color: var(--dark, #3A2C19);
-                        /* 段落/14 */
-                        font-family: "Noto Sans TC", sans-serif;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 140%;
-                        /* 19.6px */
-                        letter-spacing: 1.4px;
-                        white-space: nowrap;
-                    }
-
-                    p {
-                        color: var(--primary, var(--primary, #FF8740));
-                        /* 段落/14 */
-                        font-family: "Noto Sans TC", sans-serif;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 140%;
-                        /* 19.6px */
-                        letter-spacing: 1.4px;
-                        white-space: nowrap;
-                    }
-
-                }
-
-                textarea {
-                    height: 156px;
-                    width: 393px;
-                    border-radius: 8px;
-                    border: 1px solid var(--dark, #3A2C19);
-                    background: var(--white, #FEFCF7);
-                    margin-top: 10px;
-                }
-            }
-
-            .Aboutme-uploadphotos {
-                margin-top: 14px;
-
-                .Aboutme-uploadphotos-title {
-                    width: 202px;
-                    // border-bottom: 1px solid #3A2C19;
-                    margin-bottom: 12px;
-
-                    h4 {
-                        color: var(--dark, #3A2C19);
-                        /* 段落/14 */
-                        font-family: "Noto Sans TC", sans-serif;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 140%;
-                        /* 19.6px */
-                        letter-spacing: 1.4px;
-                    }
-                }
-
-                .Aboutme-uploadphotos-button {
-                    margin-bottom: 36px;
-
-                    button {
-                        margin-right: 18px;
-                        border-radius: 999px;
-                        border: 1px solid var(--primary, #FF8740);
-                        color: var(--dark, #3A2C19);
-                        text-align: center;
-                        font-family: "Noto Sans TC", sans-serif;
-                        font-size: 10px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 140%;
-                        /* 14px */
-                        letter-spacing: 1px;
-                    }
-                }
-            }
-
-            .teachingExperiences {
-                display: flex;
-                flex-direction: row;
-                gap: 150%;
-                width: 199px; // border-bottom: 1px solid #3A2C19;
-
-
-                h4 {
-                    color: var(--dark, #3A2C19);
-                    /* 段落/14 */
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
-                    /* 19.6px */
-                    letter-spacing: 1.4px;
-                    white-space: nowrap;
-                }
-
-                p {
-                    color: var(--primary, var(--primary, #FF8740));
-                    /* 段落/14 */
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
-                    /* 19.6px */
-                    letter-spacing: 1.4px;
-                    white-space: nowrap;
-                }
-
-            }
-
-            .scrollFieldset-teachExperience {
-                margin-top: 8px;
-                border: 1px solid #d0cdc9;
-                border-radius: 8px;
-                max-height: 114px;
-                /* 設置最大高度以啟用滾動條 */
-                overflow-y: auto;
-                width: 430px;
-
-                .simpleTable {
-                    width: 100%;
-                    border-collapse: collapse;
-                    table-layout: fixed;
-
-                    thead {
-                        display: table;
-                        width: 100%;
-                        table-layout: fixed; // 讓寬度對齊
-                        background-color: #f4f4f4;
-
-                        th {
-                            padding: 8px;
-                            font-size: 10px;
-                            margin: 5px;
-                            text-align: center;
-                            color: var(--gray, #989794);
-                            border-bottom: 1px solid #3a2c19;
-                        }
-
-
-                    }
-
-                    tbody {
-                        display: block;
-                        max-height: 200px;
-                        overflow-y: auto;
-                        width: 100%;
-
-                        tr {
-                            display: table;
-                            width: 100%;
-                            table-layout: fixed;
-                        }
-
-                        td {
-                            padding: 8px;
-                            font-size: 14px;
-                            text-align: center;
-                            color: var(--dark, #3A2C19);
-                            border-bottom: 1px solid #3a2c19;
-                        }
-
-                        input {
-                            width: 20px;
-                            border-top: none;
-                            border-left: none;
-                            border-right: none;
-                            border-bottom: 0.5px solid #989794;
-                        }
-
-                        .buttonGroup {
-                            display: flex;
-                            flex-direction: column;
-                            gap: 4px; // 按鈕間距
-                            align-items: center; // 水平置中
-
-                            button {
-                                border-radius: 999px;
-                                border: 1px solid var(--primary, #FF8740);
-                                color: var(--dark, #3A2C19);
-                                text-align: center;
-                                font-family: "Noto Sans TC", sans-serif;
-                                font-size: 10px;
-                                font-style: normal;
-                                font-weight: 500;
-                                line-height: 140%;
-                                /* 14px */
-                                letter-spacing: 1px;
-
-                            }
-                        }
-                    }
-
-                    th:first-child,
-                    td:first-child {
-                        width: 5px; // 或根據需要調整
-                        padding-left: 5px; // 可以更小一點
-                        text-align: left; // 如果你希望文字貼齊左側
-                    }
-
-                    // 滾軸樣式
-                    tbody::-webkit-scrollbar {
-                        width: 8px;
-                    }
-
-                    tbody::-webkit-scrollbar-thumb {
-                        background-color: #d9d9d9;
-                        border-radius: 4px;
-                    }
-
-                    tbody::-webkit-scrollbar-track {
-                        background: transparent;
-                    }
-                }
-            }
-
-
-
-
-
-
-
-
-        }
-
-        .NutriStep3-NextPreButton {
-            display: flex;
-            flex-direction: row;
-            gap: 300px;
+          tr {
+            display: table;
             width: 100%;
-            margin-top: 80px;
+            table-layout: fixed;
+          }
+
+          td {
+            padding: 8px;
+            font-size: 14px;
+            text-align: center;
+            color: var(--dark, #3A2C19);
+            border-bottom: 1px solid #3a2c19;
+          }
+
+          input {
+            width: 20px;
+            border: none;
+            border-bottom: 0.5px solid #989794;
+          }
+
+          .buttonGroup {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            align-items: center;
 
             button {
-                margin: 0px;
-                white-space: nowrap;
-                border-radius: 999px;
-                border: 1px solid var(--primary, #FF8740);
-                color: var(--dark, #3A2C19);
-                text-align: center;
-                /* 段落/14 */
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                /* 19.6px */
-                letter-spacing: 1.4px;
+              border-radius: 999px;
+              border: 1px solid var(--primary, #FF8740);
+              color: var(--dark, #3A2C19);
+              font-family: "Noto Sans TC", sans-serif;
+              font-size: 10px;
+              font-weight: 500;
+              line-height: 140%;
+              letter-spacing: 1px;
+              text-align: center;
             }
-
-
-
+          }
         }
+
+        th:first-child,
+        td:first-child {
+          width: 5px;
+          padding-left: 5px;
+          text-align: left;
+        }
+
+        tbody::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        tbody::-webkit-scrollbar-thumb {
+          background-color: #d9d9d9;
+          border-radius: 4px;
+        }
+
+        tbody::-webkit-scrollbar-track {
+          background: transparent;
+        }
+      }
     }
+  }
+
+  .NutriStep3-NextPreButton {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+    width: 100%;
+
+    .Pre-button,
+    .Next-button {
+      width: 100px;
+      height: 40px;
+      border-radius: 999px;
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: 1.4px;
+      text-align: center;
+      white-space: nowrap;
+
+      &:focus,
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    .Pre-button {
+      border: 1px solid var(--dark, #3A2C19);
+      color: var(--dark, #3A2C19);
+    }
+
+    .Next-button {
+      border: 1px solid #FF8740;
+      color: #FF8740;
+    }
+  }
 }
+
