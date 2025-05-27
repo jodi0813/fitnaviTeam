@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
-import HomePage from "./HomePage/HomePage";
 import ArticleSection from "./HomePage/ArticleSection/ArticleSection";
 import Coach from "./Coach/Coach";
 import MyFavorite from "./MyFavorite/MyFavorite";
@@ -38,6 +37,7 @@ import "./reset.scss";
 import CoachDashboardList from "./Dashboard/CoachDashboard/CoachDashboardList";
 // import MyOrderView from "./Dashboard/UserDashboard/MyOrderView"
 import ScrollToTop from "../components/ScrollToTop";
+import Index from "./HomePage/Index";
 
 
 
@@ -48,7 +48,7 @@ function App() {
       <div className="wrap">
         <Navbar />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Index />} />
           <Route path="/ArticleSection" element={<ArticleSection />} />
           <Route path="/coach" element={<Coach />} />
           <Route path="/myfavorite" element={<MyFavorite />} />
