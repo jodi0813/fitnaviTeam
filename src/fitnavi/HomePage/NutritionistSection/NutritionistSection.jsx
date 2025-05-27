@@ -62,6 +62,7 @@ function NutritionistSection() {
 
   return (
     <>
+      {/* 所有內容 */}
       <div className="home-nutritionist">
         <div className="nutritionist-card-box">
           {/* 四張排隊小卡 */}
@@ -74,38 +75,37 @@ function NutritionistSection() {
           </div>
           {/* 主要小卡 */}
           <div className="home-nutritionist-maincard">
-            <div className="home-nutritionist-card home-nutritionist-active">
-              <div className="home-nutritionist-img">
-                <img src={focusNutritionist.img} alt={focusNutritionist.name} />
+
+            <div className="home-nutritionist-img">
+              <img src={focusNutritionist.img} alt={focusNutritionist.name} />
+            </div>
+            <div className="home-nutritionist-info">
+              <div className="nutritionist-info-box home-nutritionist-name">
+                <span>{focusNutritionist.name}</span>
+                <span className="home-nutritionist-enname">{focusNutritionist.enName}</span>
               </div>
-              <div className="home-nutritionist-info">
-                <div className="nutritionist-info-box home-nutritionist-name">
-                  <span>{focusNutritionist.name}</span>
-                  <span className="home-nutritionist-enname">{focusNutritionist.enName}</span>
-                </div>
-                <div className="nutritionist-info-box home-nutritionist-tags">
-                  {focusNutritionist.skills.map((skill, i) => (
-                    <span key={i}>{skill}</span>
-                  ))}
-                </div>
+              <div className="nutritionist-info-box home-nutritionist-tags">
+                {focusNutritionist.skills.map((skill, i) => (
+                  <span key={i}>{skill}</span>
+                ))}
               </div>
             </div>
           </div>
-
+          {/* 按鈕區 */}
+          <div className="home-nutritionist-controls">
+            <button className="prev-btn" onClick={handlePrev}>
+              <span className="label"></span>
+              <img className="arrow" src="/images/carousel-arrow-left.svg" alt="next" />
+            </button>
+            <button className="next-btn" onClick={handleNext}>
+              <span className="label"></span>
+              <img className="arrow" src="/images/carousel-arrow-right.svg" alt="prev" />
+            </button>
+          </div>
         </div>
 
 
-        {/* 按鈕區 */}
-        <div className="home-nutritionist-controls">
-          <button className="prev-btn" onClick={handlePrev}>
-            <span className="label"></span>
-            <img className="arrow" src="/images/carousel-arrow-left.svg" alt="next" />
-          </button>
-          <button className="next-btn" onClick={handleNext}>
-            <span className="label"></span>
-            <img className="arrow" src="/images/carousel-arrow-right.svg" alt="prev" />
-          </button>
-        </div>
+
 
         {/* 底部內容 */}
         <div className="home-nutritionist-footer">
@@ -122,7 +122,7 @@ function NutritionistSection() {
                 <span>
                   「吃對，比少吃更重要」
                   <br />
-                  營養師協助你規劃均衡又可持續的飲食，從生活習慣出發，讓每一餐都為目標加分。{" "}
+                  營養師協助你規劃均衡又可持續的飲食，從生活習慣出發，讓每一餐都為目標加分。
                 </span>
               </div>
             </div>
@@ -131,13 +131,11 @@ function NutritionistSection() {
                 <JoinButton2
                   text="成為合作營養師"
                   to="/Joinus" />
-
               </Link>
               <Link to="/nutritionist">
                 <JoinButton
                   text="查看更多營養師"
                   to="/nutritionist" />
-
               </Link>
             </div>
           </div>

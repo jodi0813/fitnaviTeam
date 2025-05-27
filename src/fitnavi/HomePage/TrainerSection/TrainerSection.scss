@@ -6,7 +6,6 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  // height: 100vh;
   padding: 10% 5% 5%;
 
   // 上方標題區
@@ -64,8 +63,8 @@
 
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
-    padding-right: 5%;
+    align-self: center;
+    margin-left: 34%;
     width: 100%;
     gap: 90px;
 
@@ -77,15 +76,15 @@
       border: 1px solid #ff8740;
       background: #fff;
       box-shadow: 8px 8px 0px 0px #ff8740;
-      width: 20.6%;          
-      aspect-ratio: 5 / 7;  // 自動維持比例，不需寫 height
+      width: 20%;
+      aspect-ratio: 5 / 7; // 自動維持比例，不需寫 height
       // min-width: 180px;
       transform: skew(-20deg, 0deg);
 
       .home-trainer-img {
         position: absolute;
         right: 20%;
-        bottom:0%;
+        bottom: 0%;
         width: 100%;
         z-index: 99;
 
@@ -194,9 +193,9 @@
 
     .home-trainer-queue {
       display: inline-flex;
-      width: 52%;
+      width: 50%;
       height: auto;
-     
+
 
 
       .trainer-card-small {
@@ -210,149 +209,150 @@
         }
       }
     }
-      // 按鈕區
-  .home-trainer-controls {
-    display: flex;
-    width: 89%;
-    justify-content: space-between;
-    position: absolute;
-    bottom:49%;
-    right: 2%;
 
-    button {
-      all: unset;
-      /* optional: 為了確保可以點擊 */
-      cursor: pointer;
-      color: #3a2c19;
-      font-family: "Noto Sans TC", sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 150%;
-      /* 24px */
-      letter-spacing: 1.6px;
+    // 按鈕區
+    .home-trainer-controls {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      width: 89%;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 49%;
+      right: 2%;
 
-      width: 82px;
-      gap: 4px;
-      transform: skew(-20deg, 0deg);
-      // transition: all 0.3s ease;
+      button {
+        all: unset;
+        /* optional: 為了確保可以點擊 */
+        cursor: pointer;
+        color: #3a2c19;
+        font-family: "Noto Sans TC", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        /* 24px */
+        letter-spacing: 1.6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 82px;
+        gap: 4px;
+        transform: skew(-20deg, 0deg);
+        // transition: all 0.3s ease;
 
 
 
 
-      // 文字改變
-      .label {
-        position: relative;
-        display: inline-block;
-        transition: all 0.3s ease;
-        white-space: nowrap;
-
-        &::after {
-          position: absolute;
-          top: 0;
-          left: 0;
-          opacity: 0;
-          // transition: all 0.3s ease;
-        }
-      }
-
-    }
-
-    .prev-btn {
-      .label {
-        &::before {
-          content: 'PREV';
-        }
-
-        &::after {
-          content: '上一位';
-        }
-      }
-
-      &:hover {
+        // 文字改變
         .label {
-          color: #ff8740;
+          position: relative;
+          display: inline-block;
+          transition: all 0.3s ease;
+          white-space: nowrap;
 
-          &::before {
+          &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
             opacity: 0;
+            // transition: all 0.3s ease;
+          }
+        }
+
+      }
+
+      .prev-btn {
+        .label {
+          &::before {
+            content: 'PREV';
           }
 
           &::after {
-            opacity: 1;
-            transform: skew(-10deg, 0deg);
+            content: '上一位';
           }
         }
 
-        .arrow {
-          content: url('/images/carousel-arrow-right-orange.svg');
-          transform: scaleX(1.4);
+        &:hover {
+          .label {
+            color: #ff8740;
+
+            &::before {
+              opacity: 0;
+            }
+
+            &::after {
+              opacity: 1;
+              transform: skew(-10deg, 0deg);
+            }
+          }
+
+          .arrow {
+            content: url('/images/carousel-arrow-right-orange.svg');
+            transform: scaleX(1.4);
+          }
         }
+
+        &:active {
+          .arrow {
+            transform: scaleX(0.95);
+            transition: transform 0.3s ease;
+          }
+
+          .label {
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+          }
+        }
+
       }
 
-      &:active {
-        .arrow {
-          transform: scaleX(0.95);
-          transition: transform 0.3s ease;
-        }
-
+      .next-btn {
         .label {
-          transform: scale(0.9);
-          transition: transform 0.3s ease;
-        }
-      }
-
-    }
-
-    .next-btn {
-      .label {
-        &::before {
-          content: 'NEXT';
-        }
-
-        &::after {
-          content: '下一位';
-        }
-      }
-
-      &:hover {
-        transition: all 0.3s ease;
-
-        .label {
-          color: #ff8740;
-
           &::before {
-            opacity: 0;
+            content: 'NEXT';
           }
 
           &::after {
-            opacity: 1;
-            transform: skew(-10deg, 0deg);
+            content: '下一位';
           }
         }
 
-        .arrow {
-          content: url('/images/carousel-arrow-left-orange.svg');
+        &:hover {
+          transition: all 0.3s ease;
 
-          transform: scaleX(1.4);
+          .label {
+            color: #ff8740;
+
+            &::before {
+              opacity: 0;
+            }
+
+            &::after {
+              opacity: 1;
+              transform: skew(-10deg, 0deg);
+            }
+          }
+
+          .arrow {
+            content: url('/images/carousel-arrow-left-orange.svg');
+
+            transform: scaleX(1.4);
+          }
         }
+
+        &:active {
+          .arrow {
+            transform: scaleX(0.95);
+            transition: transform 0.3s ease;
+          }
+
+          .label {
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+          }
+        }
+
       }
-
-      &:active {
-        .arrow {
-          transform: scaleX(0.95);
-          transition: transform 0.3s ease;
-        }
-
-        .label {
-          transform: scale(0.9);
-          transition: transform 0.3s ease;
-        }
-      }
-
     }
-  }
 
   }
 
@@ -369,7 +369,7 @@
   .home-trainer-footer {
     display: flex;
     position: relative;
-    
+
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -377,6 +377,8 @@
     .home-trainer-img {
       position: absolute;
       width: 17%;
+      left:-1%;
+      bottom:-22%;
     }
 
     .home-trainer-title {
@@ -414,7 +416,7 @@
           }
 
           .home-trainer-titleEn {
-           text-align: end;
+            text-align: end;
             color: #fefcf7;
             font-family: "Dela Gothic One";
             font-size: 64px;

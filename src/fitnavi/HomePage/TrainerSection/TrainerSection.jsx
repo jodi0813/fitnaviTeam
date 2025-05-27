@@ -74,6 +74,7 @@ function TrainerSection() {
       </header>
       {/* 卡牌輪播區 */}
       <div className="trainer-card-box">
+        {/* 主要小卡 */}
         <div className="home-trainer-maincard">
 
           <div className="home-trainer-img">
@@ -122,7 +123,7 @@ function TrainerSection() {
       </div>
 
 
-
+      {/* 底部內容 */}
       <div className="home-trainer-footer">
         <div className="home-trainer-img">
           <img src="/images/coachshadom.png" alt="" />

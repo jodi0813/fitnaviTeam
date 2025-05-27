@@ -306,7 +306,7 @@ function Coachintro() {
                                         onClick={() => setShowPopup(true)}
                                     >
                                         <span className="classinrto-text">立即報名</span>
-                                        <img src="/images/search.svg" alt="" />
+                                        <img src="./images/search.svg" alt="" />
                                     </button>
                                 </div>
                             </div>
@@ -316,12 +316,12 @@ function Coachintro() {
                         <div className="Coach-place">
                             <p>上課地點<br />可選擇</p>
                             <div className="moreimg4" >
-                                <img src="/images/classplace-1.jpg" alt="" />
+                                <img src="./images/classplace-1.jpg" alt="" />
                                 <p>World Gym 台北大安店</p>
                             </div>
 
                             <div className="moreimg5">
-                                <img src="/images/classplace-2.jpg" alt="" />
+                                <img src="./images/classplace-2.jpg" alt="" />
                                 <p>臺北市大安區B健身房</p>
                             </div>
                         </div>
@@ -376,7 +376,7 @@ function Coachintro() {
                                 </div>
 
                                 <div className="coach-circlewrapper">
-                                    <img src="/images/spe-field.png" alt="" />
+                                    <img src="./images/spe-field.png" alt="" />
 
                                 </div>
                             </div>
@@ -569,7 +569,7 @@ function Coachintro() {
                                     <div className="Coach-seeMoreComment">
                                         <button>
                                             <span className="seeMore-text">查看更多評價</span>
-                                            <img src="/images/search.svg" alt="" />
+                                            <img src="./images/search.svg" alt="" />
                                         </button>
                                     </div>
 

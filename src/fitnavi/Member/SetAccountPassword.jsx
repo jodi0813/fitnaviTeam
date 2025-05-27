@@ -49,7 +49,7 @@ function SetAccountPassword() {
 
                     <button onClick={() => navigate('/SignupSuccess')}>
                         <span className="join-text">立即加入</span>
-                        <img src="/images/search.svg" alt="" />
+                        <img src="./images/search.svg" alt="" />
                     </button>
                 </div>
 
