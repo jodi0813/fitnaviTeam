@@ -85,17 +85,16 @@
         background: #fefcf7;
       }
     }
-      .calendar-hint {
-        font-family: "Noto Sans TC";
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 140%; /* 19.6px */
-        letter-spacing: 1.4px;
-        color: #fefcf7;
-        text-align: right;
-
-      }
+    .calendar-hint {
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; /* 19.6px */
+      letter-spacing: 1.4px;
+      color: #fefcf7;
+      text-align: right;
+    }
     .calendar-section {
       display: flex;
       flex-direction: column;
@@ -107,33 +106,19 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: #fefcf7;
+        background-color: transparent;
         width: 447px;
         height: 366px;
         padding: 16px;
         gap: 8px;
-        border-radius: var(--Num-radius-base, 8px);
-        border: 1px solid #b6c1ca;
-        background: #fff;
+    
+
+ 
         box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08);
       }
     }
   }
 
-  .submit-button {
-    width: 100%;
-    padding: 12px 0;
-    border-radius: 20px;
-    background: #ff8740;
-    color: #fff;
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 2px;
-    border: none;
-    cursor: pointer;
-  }
 
   .info-text {
     margin-top: 16px;
@@ -148,3 +133,19 @@
     letter-spacing: 1.4px;
   }
 }
+
+  .submit-button {
+    width: 100%;
+    padding: 7px 0;
+    border-radius: 20px;
+    background: #ff8740;
+    color: #fff;
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: 1.4px;
+    border: none;
+    cursor: pointer;
+  }

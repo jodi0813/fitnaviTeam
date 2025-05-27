@@ -3,7 +3,8 @@ import { useState } from "react";
 import BookingPopup from "./Popup/BookingPopup";
 import ReviewPopup from "./Popup/ReviewPopup";
 import ListPopup from "./Popup/ListPopup";
-import BookingOkPopup from "./Popup/BookingOkPopup"; 
+import BookingOkPopup from "./Popup/BookingOkPopup";
+import BookingSuccessPopup from "./Popup/BookingSuccessPopup";
 /* 使用者後台>我的訂單>訂單總覽 */
 function MyOrderView() {
   const orderview = [
@@ -22,16 +23,23 @@ function MyOrderView() {
   /* 控制按鈕彈窗 */
   const [popupType, setPopupType] = useState(null);
   const [showBookingOk, setShowBookingOk] = useState(false);
-  const handleOpenList = () => setPopupType("list");//訂單編號
-  const handleOpenBooking = () => setPopupType("booking");//預約
-  const handleOpenReview = () => setPopupType("review");//評價
+  const [showBookingSuccess, setShowBookingSuccess] = useState(false);
+  /* 控制彈窗顯示 */
+  const handleOpenList = () => setPopupType("list"); //訂單編號
+  const handleOpenBooking = () => setPopupType("booking"); //預約
+  const handleOpenReview = () => setPopupType("review"); //評價
   const handleClosePopup = () => setPopupType(null);
+  /* 從預約彈窗跳到確認彈窗 */
   const handleShowBookingOk = () => {
     setPopupType(null); // 關掉 BookingPopup
     setTimeout(() => setShowBookingOk(true), 0); // 顯示 BookingOkPopup
   };
-
-  const handleCloseBookingOk = () => setShowBookingOk(false); // 關閉 BookingOkPopup
+  /* 從確認彈窗跳到成功彈窗 */
+  const handleCloseBookingOk = () => {
+    setShowBookingOk(false);
+    setTimeout(() => setShowBookingSuccess(true), 0);
+  };
+  const handleCloseBookingSuccess = () => setShowBookingSuccess(false);
   return (
     <>
       <div className="orderview-table">
@@ -55,7 +63,9 @@ function MyOrderView() {
             {/* 序號 */}
             <span>{orderview.no}</span>
             {/* 訂單編號 */}
-            <span onClick={handleOpenList} className="order-id">{orderview.id}</span>
+            <span onClick={handleOpenList} className="order-id">
+              {orderview.id}
+            </span>
             {/* 講師名稱 */}
             <span>{orderview.teacher}</span>
             {/* 購買日期 */}
@@ -70,11 +80,15 @@ function MyOrderView() {
             <span>{orderview.lastClasses}</span>
             {/* 預約課程 */}
             <span>
-              <button onClick={handleOpenBooking} className="btn-orange">預約</button>
+              <button onClick={handleOpenBooking} className="btn-orange">
+                預約
+              </button>
             </span>
             {/* 匿名評價 */}
             <span>
-              <button onClick={handleOpenReview} className="btn-outline">評價</button>
+              <button onClick={handleOpenReview} className="btn-outline-orange">
+                評價
+              </button>
             </span>
             {/* 問題反映 */}
             <span>
@@ -89,9 +103,13 @@ function MyOrderView() {
         <BookingPopup
           onClose={handleClosePopup}
           onSubmitBooking={handleShowBookingOk} // 傳進 BookingPopup
-        />)}
+        />
+      )}
       {popupType === "review" && <ReviewPopup onClose={handleClosePopup} />}
-       {showBookingOk && <BookingOkPopup onClose={handleCloseBookingOk} />}
+      {showBookingOk && <BookingOkPopup onClose={handleCloseBookingOk} />}
+      {showBookingSuccess && (
+        <BookingSuccessPopup onClose={handleCloseBookingSuccess} />
+      )}
     </>
   );
 }

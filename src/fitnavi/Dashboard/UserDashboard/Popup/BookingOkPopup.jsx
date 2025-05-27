@@ -12,7 +12,7 @@ function BookingOkPopup({ onClose }) {
           <p>一對一重量訓練指導</p>
         </div>
         <div>
-          <p className="time">2025年5月27日</p>
+          <p className="time">2025年6月15日</p>
           <p className="time">10:00 - 11:00</p>
         </div>
         <div className="button-group">

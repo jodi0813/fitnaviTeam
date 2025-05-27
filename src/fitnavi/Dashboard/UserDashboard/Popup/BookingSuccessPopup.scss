@@ -1,0 +1,53 @@
+@use "../../../reset.scss";
+
+.booking-success-popup {
+  background-color: #6c6461;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  color: #fff;
+  width: 246px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(67, 61, 61, 0.7);
+  box-shadow: 2px 2px 2px 0px rgba(255, 255, 255, 0.25) inset,
+    10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(25px);
+  .booking-success-popup1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    .booking-success-title {
+      color: #fefcf7;
+      text-align: center;
+      /* 段落/16 */
+      font-family: "Noto Sans TC";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%; /* 24px */
+      letter-spacing: 1.6px;
+
+      .check-icon {
+        width: 24px;
+      }
+    }
+  }
+  .confirm-btn {
+    background-color: #ff8740;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 999px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}

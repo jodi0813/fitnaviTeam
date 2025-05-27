@@ -14,7 +14,7 @@
     padding: 12px;
     border-bottom: 1px solid #ddd;
     font-size: 14px;
-    background-color: #F9FAFC;
+    background-color: #f9fafc;
 
     .order-id {
       cursor: pointer;
@@ -24,32 +24,35 @@
         text-decoration: underline;
       }
     }
-    .orderCheck{
+    .orderCheck {
       display: flex;
       flex-direction: column;
     }
   }
 
   .table-header {
-    background-color: #FFF;
+    background-color: #fff;
     font-weight: bold;
   }
 
   .btn-orange {
-    background-color: #FF8740;
-    color: #fff;
+    background-color: #ff8740;
     border: none;
     border-radius: 999px;
     padding: 4px 12px;
-    font-size: 12px;
-  }
-
-  .btn-outline {
-    border: 1px solid #000;
-    border-radius: 999px;
-    padding: 4px 12px;
-    font-size: 12px;
-    background: transparent;
+    color: #fefcf7;
+    text-align: center;
+    /* 段落/14 */
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: 1.4px;
+    &:focus {
+  outline: none;
+  box-shadow: none;
+}
   }
 
   //課程完成按鈕(完成&未進行)
@@ -60,23 +63,27 @@
     font-size: 12px;
 
     &.done {
-      background-color: #FFF;
-      color: #FF8740;
-      border: 1px solid #FF8740;
+      background-color: #fff;
+      color: #ff8740;
+      border: 1px solid #ff8740;
       padding: 4px 12px;
-
     }
 
     &.pending {
       color: #999;
-
     }
   }
 }
-.nothing{
-      display: flex;
-flex-direction: column;
-gap: 10vh;
-
-
+.nothing {
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+}
+.btn-outline-orange {
+  border: 1px solid #ff8740;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12px;
+  background: transparent;
+  color: #ff8740;
 }
