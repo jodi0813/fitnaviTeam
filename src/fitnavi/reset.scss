@@ -178,3 +178,7 @@ select {
   line-height: 140%; /* 19.6px */
   letter-spacing: 1.4px;
 }
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
