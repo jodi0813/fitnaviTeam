@@ -86,7 +86,7 @@ function MyOrderView() {
             </span>
             {/* 匿名評價 */}
             <span>
-              <button onClick={handleOpenReview} className="btn-outline">
+              <button onClick={handleOpenReview} className="btn-outline-orange">
                 評價
               </button>
             </span>
