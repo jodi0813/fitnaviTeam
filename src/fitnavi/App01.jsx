@@ -37,17 +37,19 @@ import "./reset.scss";
 import CoachDashboardList from "./Dashboard/CoachDashboard/CoachDashboardList";
 // import MyOrderView from "./Dashboard/UserDashboard/MyOrderView"
 import ScrollToTop from "../components/ScrollToTop";
-import Index from "./HomePage/Index";
+import Home from "./HomePage/Home";
+
 
 
 function App() {
   return (
     <>
-    <ScrollToTop/>
+    
+      <ScrollToTop />
       <div className="wrap">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Index />} />
+        <Routes>          
+          <Route path="/" element={<Home/>} />
           <Route path="/ArticleSection" element={<ArticleSection />} />
           <Route path="/coach" element={<Coach />} />
           <Route path="/myfavorite" element={<MyFavorite />} />
@@ -57,10 +59,10 @@ function App() {
           <Route path="/article" element={<Article />} />
           <Route path="/center" element={<Center />}></Route>
           <Route path="/coachintro" element={<CoachIntro />}></Route>
-            <Route path="/PopupWindow1" element={<PopupWindow1 />}></Route>
-            <Route path="/PopupWindow2" element={<PopupWindow2 />}></Route>
-            <Route path="/PopupWindow3" element={<PopupWindow3/>}></Route>
-            <Route path="/PopupWindow4" element={<PopupWindow4 />}></Route>
+          <Route path="/PopupWindow1" element={<PopupWindow1 />}></Route>
+          <Route path="/PopupWindow2" element={<PopupWindow2 />}></Route>
+          <Route path="/PopupWindow3" element={<PopupWindow3 />}></Route>
+          <Route path="/PopupWindow4" element={<PopupWindow4 />}></Route>
           <Route path="/NutriIntro" element={<NutriIntro />}></Route>
           <Route path="/memberlist" element={<MemberList />}></Route>
           <Route path="/memberlogin" element={<MemberLogin />}></Route>
@@ -68,11 +70,11 @@ function App() {
           <Route path="/membersignup" element={<MemberSignup />}></Route>
           <Route path="/SetAccountPassword" element={<SetAccountPassword />}></Route>
           <Route path="/SignupSuccess" element={<SignupSuccess />}></Route>
-          <Route path="/CoachDashboardList" element={<CoachDashboardList/>}></Route>
+          <Route path="/CoachDashboardList" element={<CoachDashboardList />}></Route>
           <Route path="/Joinus" element={<Joinus />}></Route>
-          <Route path="/JoinusCarousel" element={<JoinusCarousel/>}></Route>
-          <Route path="/NutriJoinusCarousel" element={<NutriJoinusCarousel/>}></Route>
-          <Route path="/JoinusStep1/" element={<JoinusStep1/>} />
+          <Route path="/JoinusCarousel" element={<JoinusCarousel />}></Route>
+          <Route path="/NutriJoinusCarousel" element={<NutriJoinusCarousel />}></Route>
+          <Route path="/JoinusStep1/" element={<JoinusStep1 />} />
           <Route path="/JoinusStep2" element={<JoinusStep2 />} />
           <Route path="/JoinusStep3" element={<JoinusStep3 />} />
           <Route path="/JoinusStep4" element={<JoinusStep4 />} />
@@ -80,7 +82,7 @@ function App() {
           <Route path="/JoinusSuccess" element={<JoinusSuccess />} />
           <Route path="/NutriJoinusStep2" element={<NutriJoinusStep2 />} />
           <Route path="/NutriJoinusStep3" element={<NutriJoinusStep3 />} />
-          <Route path="/NutriJoinusStep4" element={<NutriJoinusStep4/>} />
+          <Route path="/NutriJoinusStep4" element={<NutriJoinusStep4 />} />
           {/* <Route path="/MyOrderView " element={<MyOrderView />} /> */}
         </Routes>
         <Footer />

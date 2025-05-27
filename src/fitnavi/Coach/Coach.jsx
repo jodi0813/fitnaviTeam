@@ -47,7 +47,7 @@ function Coach() {
       hashtags: ["TRX懸吊", "功能性訓練", "減脂訓練"],
       description:
         "結合TRX、功能性訓練與減脂訓練，我專注於幫助學員提升全身力量與協調。",
-      imageSrc: "/images/coach09.jpg",
+      imageSrc: "./images/coach09.jpg",
       city: "基隆市",
       sex: "女",
     },
