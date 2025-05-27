@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import "./Navbar.scss";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { HiX } from "react-icons/hi";
 
 
 function Navbar() {
@@ -17,7 +18,9 @@ function Navbar() {
             <span className="fit">Fit</span>
             <span className="navi">NAVI</span>
           </Link>
-
+          <div className="mobile-logo">
+            <img src="./images/FitNAVI-favicon.png" alt="LOGO" />
+          </div>
           <button
             className={`navbarHamburger ${isMenuOpen ? "is-active" : ""}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -46,10 +49,10 @@ function Navbar() {
             登入 / 註冊
           </button>
 
-          {/* 手機版全畫面選單
+          {/* 手機版全畫面選單 */}
           <div className={`mobile-menu ${isMenuOpen ? "show" : ""}`}>
             <div className="mobile-title">
-              <img src="/images/FitNAVI-favicon.png" alt="LOGO" />
+              <img src="./images/FitNAVI-favicon.png" alt="LOGO" />
               <button className="mobile-close" onClick={() => setIsMenuOpen(false)}><HiX /></button>
             </div>
             <div>
@@ -60,15 +63,17 @@ function Navbar() {
                 <li><Link to="/allarticle" onClick={() => setIsMenuOpen(false)}>知識文章</Link></li>
                 <li><Link to="/centerMap" onClick={() => setIsMenuOpen(false)}>健身場地</Link></li>
                 <li><Link to="/Joinus" onClick={() => setIsMenuOpen(false)}>加入我們</Link></li>
-              </ul></div>
-            <button
-              type="button"
-              className="mobile-login"
-              onClick={() => navigate("/MemberLogin")}
-            >
-              登入 / 註冊
-            </button>
-          </div> */}
+              </ul>
+            </div>
+            <Link to="/MemberLogin" onClick={() => setIsMenuOpen(false)}>
+              <button
+                type="button"
+                className="mobile-login"
+              >
+                登入 / 註冊
+              </button>
+            </Link>
+          </div>
         </nav>
       </div>
     </header>
