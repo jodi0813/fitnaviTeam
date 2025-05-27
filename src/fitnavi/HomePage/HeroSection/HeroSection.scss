@@ -8,7 +8,7 @@
   overflow: hidden;
   z-index: 0;
   left: 0;
-  
+
   // 影片讓下面邊界不要這麼明顯的濾鏡
   &::after {
     content: "";
@@ -97,26 +97,8 @@
     top: 20%;
     z-index: 2;
     height: 100%;
+    width: 100%;
 
-    @media (max-width: 393px) {
-      width: 30%;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 1024px) {
-      width: 50%;
-      margin: 0 auto;
-
-    }
-
-    @media (max-width: 1360px) {
-      width: 95%;
-      margin: 0 auto;
-    }
-
-    @media (min-width: 1920px) {
-      width: 100%;
-    }
 
 
     .Hero-Section-Catchphrase {
@@ -129,7 +111,10 @@
         font-style: normal;
         font-weight: 400;
         line-height: 100%;
-        /* 180px */
+
+        @media (max-width: 1200px) {
+          font-size: 155px;
+        }
       }
 
       .h3-HeroTitle {
@@ -146,6 +131,10 @@
           font-weight: 400;
           line-height: 100%;
           text-transform: capitalize;
+
+          @media (max-width: 1200px) {
+            font-size: 180px;
+          }
         }
 
         h3.tronger-HeroTitle {
@@ -155,6 +144,10 @@
           font-style: normal;
           font-weight: 400;
           line-height: 100%;
+
+          @media (max-width: 1200px) {
+            font-size: 155px;
+          }
 
         }
       }
@@ -169,7 +162,8 @@
       justify-content: flex-start;
       align-items: flex-start;
       width: 50%;
-      padding: 1%;
+      padding-top: 3%;
+      padding-left: 1%;
 
       p {
         color: #FFF;
@@ -202,7 +196,7 @@
     // // top: -10%;
     // border: none;
     position: absolute;
-    top: 63%;
+    top: 64%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
