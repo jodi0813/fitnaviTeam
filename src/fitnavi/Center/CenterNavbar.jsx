@@ -298,21 +298,21 @@ function CenterNavbar() {
                   role="教練"
                   hashtags={["增肌減脂", "健身計畫", "個人訓練"]}
                   description="具有多年健身教學經驗，幫助學員設定合適的健身目標與計劃。讓你以專業的指導達到最佳成果。"
-                  imageSrc="/images/coach03.jpg"
+                  imageSrc="./images/coach03.jpg"
                 />
                 <CoachCard
                   name="文彥 Wenyen"
                   role="教練"
                   hashtags={["運動目標", "體能提升", "燃燒脂肪"]}
                   description="專注於運動後的恢復與預防傷害，讓你在安全的環境中達到最佳效果。健康和成果，我一起陪伴你實現。"
-                  imageSrc="/images/coach07.jpg"
+                  imageSrc="./images/coach07.jpg"
                 />
                 <CoachCard
                   name="詹姆斯 James"
                   role="教練"
                   hashtags={["健身啟發", "運動挑戰", "燃燒脂肪"]}
                   description="無論是增肌還是減脂，我會為你量身打造最佳的訓練計劃。讓我們一起實現更健康的未來。"
-                  imageSrc="/images/coach08.jpg"
+                  imageSrc="./images/coach08.jpg"
                 />
               </div>
             </div>
@@ -325,21 +325,21 @@ function CenterNavbar() {
                   role="教練"
                   hashtags={["專業指導", "體能提升", "科學健身"]}
                   description="擅長增肌、減脂與身體雕塑，根據學員的需求制定訓練目標。無論你的目標是什麼，我都能幫助你實現。"
-                  imageSrc="/images/coach01.jpg"
+                  imageSrc="./images/coach01.jpg"
                 />
                 <CoachCard
                   name="蘭娜 Lanna"
                   role="教練"
                   hashtags={["正確訓練", "體能提升"]}
                   description="提供專業的健身計劃與飲食建議，讓你在最短的時間內達成最好的效果。讓每一個動作都充滿目的。"
-                  imageSrc="/images/coach02.jpg"
+                  imageSrc="./images/coach02.jpg"
                 />
                 <CoachCard
                   name="莉莉 Lily"
                   role="教練"
                   hashtags={["健身生活", "增肌減脂", "個人訓練"]}
                   description="結合TRX、功能性訓練與減脂訓練，我專注於幫助學員提升全身力量與協調。透過有效的訓練計劃，快速達成減脂與塑形目標。"
-                  imageSrc="/images/coach04.jpg"
+                  imageSrc="./images/coach04.jpg"
                 />
               </div>
             </div>
