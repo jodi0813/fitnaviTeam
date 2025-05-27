@@ -119,6 +119,21 @@
     }
   }
 
+
+  .info-text {
+    margin-top: 16px;
+    color: #fefcf7;
+    text-align: center;
+    /* 段落/14 */
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: 1.4px;
+  }
+}
+
   .submit-button {
     width: 100%;
     padding: 7px 0;
@@ -134,17 +149,3 @@
     border: none;
     cursor: pointer;
   }
-
-  .info-text {
-    margin-top: 16px;
-    color: #fefcf7;
-    text-align: center;
-    /* 段落/14 */
-    font-family: "Noto Sans TC";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%; /* 19.6px */
-    letter-spacing: 1.4px;
-  }
-}
