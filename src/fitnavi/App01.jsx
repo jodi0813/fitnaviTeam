@@ -40,7 +40,6 @@ import ScrollToTop from "../components/ScrollToTop";
 import Index from "./HomePage/Index";
 
 
-
 function App() {
   return (
     <>
