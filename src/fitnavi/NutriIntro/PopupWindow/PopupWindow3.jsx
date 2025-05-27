@@ -18,7 +18,7 @@ export default function PopupWindow3({ onClose, onNext, onPrev }) {
                 <div className="step-popup step3" onClick={(e) => e.stopPropagation()}>
                     <img
                         className="close"
-                        src="/images/close-icon.svg"
+                        src="./images/close-icon.svg"
                         alt="close-modal"
                         onClick={onClose}
                     />
@@ -37,9 +37,9 @@ export default function PopupWindow3({ onClose, onNext, onPrev }) {
                     {/* 輸入卡號 */}
                     <div className="credit-payment">
                         <div className="icon">
-                            <img src="/images/icon-visa.svg" alt="icon-visa" />
-                            <img src="/images/icon-master.svg" alt="icon-master" />
-                            <img src="/images/icon-jcb.svg" alt="icon-jcb" />
+                            <img src="./images/icon-visa.svg" alt="icon-visa" />
+                            <img src="./images/icon-master.svg" alt="icon-master" />
+                            <img src="./images/icon-jcb.svg" alt="icon-jcb" />
                         </div>
                         <div className="input-credit">
                             <div className="row1">

@@ -149,7 +149,7 @@ a {
 }
 
 .footerwrapper {
-    background-image: url(/images/Footer.png);
+    background-image: url(./images/Footer.png);
     display: flex;
     flex-direction: column;
     width: 100%;

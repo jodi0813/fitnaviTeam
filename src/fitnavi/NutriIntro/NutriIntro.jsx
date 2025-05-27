@@ -188,7 +188,7 @@ function NutriIntro() {
         {
             id: "card5",
             date: "2024/09/13",
-            img: "/images/article-11.jpg",
+            img: "./images/article-11.jpg",
             title: "減脂不只是吃得少，吃對才是王道",
             content: "一味節食容易導致代謝下降與肌肉流失。想健康減脂，關鍵在於選對食物、控制熱量並保持飽足感，讓你不挨餓也能慢慢瘦下來！",
             tags: ["減脂", "健康飲食"],
