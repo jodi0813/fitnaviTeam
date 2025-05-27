@@ -36,7 +36,7 @@ function Article() {
                                 搞懂訓練順序，讓妳少走冤枉路！</h2>
                             <div className="dateshare">
                                 <p>2025-01-02</p>
-                                <button class="share" type="button"><img src="./images/share.png" alt="" width="15"
+                                <button class="share" type="button"><img src="/images/share.png" alt="" width="15"
                                     height="15" /></button>
                             </div>
                         </div>

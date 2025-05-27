@@ -1,9 +1,9 @@
 // Navbar.jsx
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.scss";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { HiX } from "react-icons/hi";
+
 
 function Navbar() {
   const navigate = useNavigate();
@@ -29,12 +29,12 @@ function Navbar() {
 
           <div className="menu">
             <ul>
-              <li><Link to="/coach">健身教練</Link></li>
-              <li><Link to="/nutritionist">營養師</Link></li>
-              <li><Link to="/myfavorite">我的收藏</Link></li>
-              <li><Link to="/allarticle">知識文章</Link></li>
-              <li><Link to="/centerMap">健身場地</Link></li>
-              <li><Link to="/Joinus">加入我們</Link></li>
+              <li><NavLink to="/coach" className={({ isActive }) => isActive ? "active" : ""}>健身教練</NavLink></li>
+<li><NavLink to="/nutritionist" className={({ isActive }) => isActive ? "active" : ""}>營養師</NavLink></li>
+              <li><NavLink to="/myfavorite" className={({ isActive }) => isActive ? "active" : ""}>我的收藏</NavLink></li>
+              <li><NavLink to="/allarticle" className={({ isActive }) => isActive ? "active" : ""}>知識文章</NavLink></li>
+              <li><NavLink to="/centerMap" className={({ isActive }) => isActive ? "active" : ""}>健身場地</NavLink></li>
+<li><NavLink to="/Joinus" className={({ isActive }) => isActive ? "active" : ""}>加入我們</NavLink></li>
             </ul>
           </div>
 

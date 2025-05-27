@@ -288,6 +288,7 @@ function CenterNavbar() {
         {/* 三、私人教練 */}
         {activeTab === "fitnessTrainer" && (
           <section id="fitnessTrainer">
+
             <div className="trainersCards">
               {/* 男性教練 */}
               <Subtitle subtitle="男性教練" subtitleEN="Male Trainers" />

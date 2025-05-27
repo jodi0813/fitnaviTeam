@@ -5,7 +5,7 @@ import HeroSection from "./HeroSection/HeroSection";
 import NutritionistSection from "./NutritionistSection/NutritionistSection";
 import SearchSection from "./SearchSection/SearchSection";
 import TrainerSection from "./TrainerSection/TrainerSection";
-import "./HomePage.scss";
+import "./Index.scss";
 
 // 動畫設定：淡入＋放大
 const fadeInScale = {
@@ -20,14 +20,14 @@ const fadeInScale = {
   }
 };
 
-function HomePage() {
+function Index() {
   const [startAnim, setStartAnim] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setStartAnim(true);
-        window.removeEventListener("scroll", handleScroll); // ✅ 只觸發一次
+        window.removeEventListener("scroll", handleScroll); //只觸發一次
       }
     };
 
@@ -59,4 +59,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Index;
