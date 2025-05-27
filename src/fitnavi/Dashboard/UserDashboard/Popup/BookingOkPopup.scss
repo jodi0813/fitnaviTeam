@@ -1,26 +1,35 @@
 .booking-ok-popup {
-  background-color: #6c6461;
+  background-color:rgba(67, 61, 61, 0.90);
   border-radius: 16px;
   padding: 32px 24px;
   text-align: center;
   color: #fff;
-  max-width: 280px;
+  width: 246px;
   margin: auto;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   p {
-    margin: 8px 0;
+    color: #fefcf7;
+    text-align: center;
+    /* 段落/14 */
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: 1.4px;
   }
 
-  h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 12px 0 4px;
-  }
-
-  .date, .time {
+  .time {
     color: #ff8740;
-    font-weight: bold;
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    letter-spacing: 1.6px;
   }
 
   .button-group {
@@ -31,21 +40,26 @@
 
     button {
       flex: 1;
-      padding: 8px 16px;
+      padding: 4px 24px;
       border-radius: 999px;
-      font-weight: bold;
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; /* 19.6px */
+      letter-spacing: 1.4px;
       border: none;
       cursor: pointer;
     }
 
     .cancel-btn {
-      background-color: #fff;
-      color: #6c6461;
+      background-color: #FEFCF7;
+      color: 3A2C19;
     }
 
     .confirm-btn {
       background-color: #ff8740;
-      color: white;
+      color: #FEFCF7;
     }
   }
 }

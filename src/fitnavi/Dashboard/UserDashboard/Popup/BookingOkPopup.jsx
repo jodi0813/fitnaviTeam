@@ -1,18 +1,27 @@
-import React from "react";
 import "./BookingOkPopup.scss";
 
 function BookingOkPopup({ onClose }) {
   return (
     <div className="bookingOverlay">
       <div className="booking-ok-popup">
-        <p>請確認是否預約</p>
-        <h3>飛飛 Feifei</h3>
-        <p>一對一重量訓練指導</p>
-        <p className="date">2025年4月10日</p>
-        <p className="time">11:30 - 12:30</p>
+        <div>
+          <p>請確認是否預約</p>
+        </div>
+        <div>
+          <p>飛飛 Feifei</p>
+          <p>一對一重量訓練指導</p>
+        </div>
+        <div>
+          <p className="time">2025年5月27日</p>
+          <p className="time">10:00 - 11:00</p>
+        </div>
         <div className="button-group">
-          <button className="cancel-btn" onClick={onClose}>取消</button>
-          <button className="confirm-btn" onClick={onClose}>確認</button>
+          <button className="cancel-btn" onClick={onClose}>
+            取消
+          </button>
+          <button className="confirm-btn" onClick={onClose}>
+            確認
+          </button>
         </div>
       </div>
     </div>
