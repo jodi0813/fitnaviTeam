@@ -589,3 +589,9 @@
     }
 }
 
+.selected-button button.active {
+  background:  #FF8740;      // 你想要的顏色
+  color: #fff;           // 你想要的文字顏色
+  border: none;
+  outline: none;
+}
