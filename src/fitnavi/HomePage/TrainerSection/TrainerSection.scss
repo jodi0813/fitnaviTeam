@@ -209,16 +209,14 @@
         }
       }
     }
-  }
-
-  // 按鈕區
+      // 按鈕區
   .home-trainer-controls {
     display: flex;
-    width: 85%;
+    width: 86%;
     justify-content: space-between;
     position: absolute;
-    top: 575px;
-    right: 3%;
+    bottom:49%;
+    right: 2%;
 
     button {
       all: unset;
@@ -354,6 +352,9 @@
 
     }
   }
+
+  }
+
 
 
 
