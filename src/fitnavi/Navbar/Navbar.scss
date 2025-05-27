@@ -6,7 +6,7 @@
   // left: 0;
   // width: 100%;
   //修改防止動畫跑版(繼旻)
-  top:25px;
+  top: 25px;
   left: 0;
   width: 100vw;
   background: transparent;
@@ -72,13 +72,14 @@
       display: flex;
       width: 100%;
       justify-content: space-evenly;
-
+   align-items:  center;
       @media (max-width: 1024px) {
         display: none;
       }
 
       ul {
         display: flex;
+        align-items:  center;
       }
 
       li {
@@ -89,8 +90,46 @@
           font-size: 14px;
           font-weight: 500;
           color: #3a2c19;
+          position: relative;
+          text-align: center;
+          font-style: normal;
+          line-height: 140%;
+          /* 19.6px */
+          letter-spacing: 1.4px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0%;
+            height: 1px;
+            background-color: #ff8740; // 橘色底線
+            transition: width 0.3s;
+
+
+          }
+
+          &:hover {
+            color: #FF8740;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
         }
       }
+    }
+
+    .menu a.active {
+      color: #FF8740;
+      text-align: center;
+      font-family: "Noto Sans TC";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 150%;
+      letter-spacing: 1.6px;
     }
   }
 
@@ -225,6 +264,7 @@
 }
 
 //防止出現水平卷軸
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
