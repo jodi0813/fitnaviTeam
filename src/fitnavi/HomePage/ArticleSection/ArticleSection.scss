@@ -29,9 +29,9 @@
     background-position: center top;
     background-repeat: no-repeat;
     width: 100%;
-    // display: flex;
+    // display: flex;                                                   
     // flex-direction: column;
-    // position: relative;
+    // position: relative;                                                     
 
 
 
@@ -91,12 +91,13 @@
 
 
 .Hompagearticle-Chtitle {
-    right: 10%;
-    top: 50%;
+    right: 18%;
+    bottom: -61%;
     transform: translateY(-100%);
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
+    align-items: start;
 
     @media (max-width: 1360px) {
         right: 5%;
@@ -117,25 +118,41 @@
 
     }
 
+    .subTitle {
+        width: 558px;
+        margin-bottom: 10%;
+
+        p {
+            color: #3A2C19;
+            font-family: "Noto Sans TC";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 40px;
+            /* 200% */
+            letter-spacing: 0.4px;
+        }
+    }
+
     button {
-        width: 30%;
-        height: 10%;
-        align-self: flex-end;
-        padding: 16px 84px;
+        width: 300px;
+        height: 48px;
+
+        
         justify-content: center;
         align-items: center;
-        gap: 10px;
+
         border-radius: 999px;
         background: var(--primary, #FF8740);
 
         color: var(--white, var(--white, #FEFCF7));
         text-align: center;
-        font-family: "" Noto Sans TC", sans-serif; Sans TC", sans-serif;
-        font-size: 24px;
+        font-family: "Noto Sans TC";
+        font-size: 20px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        letter-spacing: 2.4px;
+        letter-spacing: 2px;
         white-space: nowrap;
 
         &:focus,
