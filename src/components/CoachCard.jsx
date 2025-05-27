@@ -6,7 +6,7 @@ function CoachCard({ imageSrc, role, name, hashtags = [], description, link }) {
   const [liked, setLiked] = useState(false);
   return (
     <>
-     
+
       <Link to={link} >
         <div className="coach-card">
           <div className="image-container">
@@ -33,8 +33,8 @@ function CoachCard({ imageSrc, role, name, hashtags = [], description, link }) {
             </div>
             <p className="coach-details">{description}</p>
           </div>
-<div className="more-button">
-          瞭解更多▶</div>
+          <div className="more-button">
+            瞭解更多▶</div>
         </div>
       </Link>
     </>
