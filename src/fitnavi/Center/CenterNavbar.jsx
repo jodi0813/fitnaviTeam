@@ -91,15 +91,15 @@ function CenterNavbar() {
               {/* 場景外觀的照片 */}
               <div className="centerPhotosBox">
                 <button>
-                  <img src="/images/arrow-left.svg" alt="左箭頭" />
+                  <img src="./images/arrow-left.svg" alt="左箭頭" />
                 </button>
                 <div className="centerPhotos">
-                  <img src="/images/center01.jpg" alt="外觀照片1" />
-                  <img src="/images/center02-f.png" alt="外觀照片2" />
-                  <img src="/images/center03.jpg" alt="外觀照片3" />
+                  <img src="./images/center01.jpg" alt="外觀照片1" />
+                  <img src="./images/center02-f.png" alt="外觀照片2" />
+                  <img src="./images/center03.jpg" alt="外觀照片3" />
                 </div>
                 <button>
-                  <img src="/images/arrow-right.svg" alt="右箭頭" />
+                  <img src="./images/arrow-right.svg" alt="右箭頭" />
                 </button>
               </div>
             </div>
@@ -174,7 +174,7 @@ function CenterNavbar() {
               {/* 有氧器材的照片 */}
               <div className="centerPhotosBox">
                 <button>
-                  <img src="/images/arrow-left.svg" alt="左箭頭" />
+                  <img src="./images/arrow-left.svg" alt="左箭頭" />
                 </button>
                 <div className="centerPhotos">
                   <img
@@ -191,7 +191,7 @@ function CenterNavbar() {
                   />
                 </div>
                 <button>
-                  <img src="/images/arrow-right.svg" alt="右箭頭" />
+                  <img src="./images/arrow-right.svg" alt="右箭頭" />
                 </button>
               </div>
               <div className="center-introduce">
@@ -219,15 +219,15 @@ function CenterNavbar() {
               {/* 重訓器材的照片 */}
               <div className="centerPhotosBox">
                 <button>
-                  <img src="/images/arrow-left.svg" alt="左箭頭" />
+                  <img src="./images/arrow-left.svg" alt="左箭頭" />
                 </button>
                 <div className="centerPhotos">
-                  <img src="/images/weightTraining01.jpg" alt="重訓器材照片1" />
-                  <img src="/images/weightTraining02.jpg" alt="重訓器材照片2" />
-                  <img src="/images/weightTraining03.jpg" alt="重訓器材照片3" />
+                  <img src="./images/weightTraining01.jpg" alt="重訓器材照片1" />
+                  <img src="./images/weightTraining02.jpg" alt="重訓器材照片2" />
+                  <img src="./images/weightTraining03.jpg" alt="重訓器材照片3" />
                 </div>
                 <button>
-                  <img src="/images/arrow-right.svg" alt="右箭頭" />
+                  <img src="./images/arrow-right.svg" alt="右箭頭" />
                 </button>
               </div>
               <div className="center-introduce">
@@ -256,14 +256,14 @@ function CenterNavbar() {
               {/* 更衣淋浴的照片 */}
               <div className="centerPhotosBox">
                 <button>
-                  <img src="/images/arrow-left.svg" alt="左箭頭" />
+                  <img src="./images/arrow-left.svg" alt="左箭頭" />
                 </button>
                 <div className="centerPhotos">
-                  <img src="/images/showerArea01.jpg" alt="更衣淋浴照片1" />
-                  <img src="/images/showerArea02.jpg" alt="更衣淋浴照片2" />
+                  <img src="./images/showerArea01.jpg" alt="更衣淋浴照片1" />
+                  <img src="./images/showerArea02.jpg" alt="更衣淋浴照片2" />
                 </div>
                 <button>
-                  <img src="/images/arrow-right.svg" alt="右箭頭" />
+                  <img src="./images/arrow-right.svg" alt="右箭頭" />
                 </button>
               </div>
               <div className="center-introduce">
