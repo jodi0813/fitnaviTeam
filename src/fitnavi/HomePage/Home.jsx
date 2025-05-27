@@ -5,7 +5,7 @@ import HeroSection from "./HeroSection/HeroSection";
 import NutritionistSection from "./NutritionistSection/NutritionistSection";
 import SearchSection from "./SearchSection/SearchSection";
 import TrainerSection from "./TrainerSection/TrainerSection";
-import "./Index.scss";
+import "./Home.scss";
 
 // 動畫設定：淡入＋放大
 const fadeInScale = {
@@ -20,7 +20,7 @@ const fadeInScale = {
   }
 };
 
-function Index() {
+function Home() {
   const [startAnim, setStartAnim] = useState(false);
 
   useEffect(() => {
@@ -59,4 +59,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default Home;
