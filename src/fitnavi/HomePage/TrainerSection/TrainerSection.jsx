@@ -144,8 +144,8 @@ function TrainerSection() {
             <Link to="/Joinus">
               <JoinButton2 text="成為合作教練" to="/Joinus" />
             </Link>
-            <Link to="/Joinus">
-              <JoinButton text="查看更多教練" to="/Joinus" />
+            <Link to="/Coach">
+              <JoinButton text="查看更多教練" to="/Coach" />
             </Link>
           </div>
         </div>
