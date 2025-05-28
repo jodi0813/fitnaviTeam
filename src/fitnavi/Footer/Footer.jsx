@@ -27,7 +27,7 @@ function Footer() {
 
 
                 <div className="footerwrapper">
-                    {/* <img src="/images/Footer.png" alt="Footer" /> */}
+                     <img src="./images/Footer.png" alt="Footer" /> 
 
                     <div className="footer-overlaytext">
                         <div className="footer-columntext">
