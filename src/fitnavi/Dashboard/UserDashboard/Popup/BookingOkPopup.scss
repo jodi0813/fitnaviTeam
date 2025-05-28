@@ -1,0 +1,66 @@
+@use "../../../reset.scss";
+.booking-ok-popup {
+  background-color:rgba(67, 61, 61, 0.90);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  color: #fff;
+  width: 246px;
+  margin: auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  p {
+    color: #fefcf7;
+    text-align: center;
+    /* 段落/14 */
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: 1.4px;
+  }
+
+  .time {
+    color: #ff8740;
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    letter-spacing: 1.6px;
+  }
+
+  .button-group {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    button {
+      flex: 1;
+      padding: 4px 24px;
+      border-radius: 999px;
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; /* 19.6px */
+      letter-spacing: 1.4px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cancel-btn {
+      background-color: #FEFCF7;
+      color: 3A2C19;
+    }
+
+    .confirm-btn {
+      background-color: #ff8740;
+      color: #FEFCF7;
+    }
+  }
+}

@@ -1,89 +1,83 @@
 @use "../../reset.scss";
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
-#Hero-Aricles {
-    position: relative;
-    z-index: 1;
-    margin-top: 20%;
+// #Hero-Aricles {
+//     position: relative;
+//     z-index: 1;
+//     margin-top: 20%;
 
 
-}
+// }
 
-@media (max-width: 1360px) {
-    .ArticleSection-wrapper {
-        max-width: 70%;
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
+// @media (max-width: 1360px) {
+//     .ArticleSection-wrapper {
+//         max-width: 70%;
+//         margin-left: 0;
+//         margin-right: 0;
+//     }
+// }
 
 
 
 .ArticleSection-wrapper {
 
     position: relative;
-    bottom: 1;
-    // margin-top: 30%;
-    background-image: url('/images/article-bg-pattern.png');
+
+    background-image: url('./images/article-bg-pattern.png');
     background-size: 100% 100%;
     background-position: center top;
     background-repeat: no-repeat;
     width: 100%;
-    // display: flex;                                                   
-    // flex-direction: column;
-    // position: relative;                                                     
-
-
-
+    padding-top: 24%;
 
     .cards-text-container {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
         position: relative;
-        gap: 10rem;
+        width: 100%;
 
 
+        .cards-all {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 16%;
 
-        .cards-column1 {
-            margin-left: 10%;
-            flex: 1;
-            width: 40%;
+
+            .cards-column1 {
+                display: flex;
+                flex-direction: column;
+                width: fit-content;
+
+            }
+
+            .cards-column2 {
+                margin-top: 8%;
+                display: flex;
+                flex-direction: column;
+                width: fit-content;
+                
+            }
+
         }
 
-
         .Article-text-column {
-            flex: 1;
-            top: 250px;
-            position: relative;
+
+            left: calc(50% + 96px);
+            top: -90px;
+            position: absolute;
             color: var(--dark, #3A2C19);
-            text-align: right;
+            // text-align: right;
             font-family: "Dela Gothic One";
             font-size: 128px;
             font-style: normal;
             font-weight: 400;
-            max-width: 2%;
-            max-height: 400px;
-            /* 78.125% */
-            // text-transform: capitalize;
-            // // transform: rotate(90deg);
-            // text-transform: uppercase; // ← 建議改成 uppercase 全部大寫
-            // transform: rotate(90deg) translateY(-250px); // ← 改這裡
+            letter-spacing: 19.2px;
             transform: rotate(90deg);
             transform-origin: top left;
             margin: 0px;
 
         }
 
-        .cards-column2 {
-            margin-top: 150px;
-            justify-content: flex-start;
-            position: relative;
-            margin-left: 0px;
-            flex: 1;
-            width: 40%;
-        }
     }
 }
 
@@ -91,19 +85,13 @@
 
 
 .Hompagearticle-Chtitle {
-    right: 18%;
-    bottom: -61%;
-    transform: translateY(-100%);
+    left:45%;
+    top: calc(100% - 200px);
+
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: start;
-
-    @media (max-width: 1360px) {
-        right: 5%;
-
-    }
-
 
     h2 {
         color: var(--dark, #3A2C19);
@@ -138,7 +126,7 @@
         width: 300px;
         height: 48px;
 
-        
+
         justify-content: center;
         align-items: center;
 

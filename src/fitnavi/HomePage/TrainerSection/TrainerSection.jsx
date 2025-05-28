@@ -11,35 +11,35 @@ function TrainerSection() {
       enName: "James",
       areas: ["台北市", "/", "新北市"],
       skills: ["＃重量訓練", "＃減脂雕塑"],
-      img: "/images/hometrainer1.png",
+      img: "./images/hometrainer1.png",
     },
     {
       name: "莉莉亞",
       enName: "Liliya",
       areas: ["台北市", "/", "新北市"],
       skills: ["＃減脂塑形", "＃新手入門"],
-      img: "/images/hometrainer2.png",
+      img: "./images/hometrainer2.png",
     },
     {
       name: "強森",
       enName: "Johnson",
       areas: ["台北市", "/", "新北市"],
       skills: ["＃重量訓練", "＃短期塑形"],
-      img: "/images/hometrainer3.png",
+      img: "./images/hometrainer3.png",
     },
     {
       name: "芳芳",
       enName: "Fang",
       areas: ["台北市", "/", "新北市"],
       skills: ["＃重量訓練", "＃減脂塑形"],
-      img: "/images/hometrainer4.png",
+      img: "./images/hometrainer4.png",
     },
     {
       name: "茱莉亞",
       enName: "Julia",
       areas: ["台北市", "/", "新北市"],
       skills: ["＃重量訓練", "＃減脂雕塑"],
-      img: "/images/hometrainer5.png",
+      img: "./images/hometrainer5.png",
     },
   ];
 
@@ -70,7 +70,7 @@ function TrainerSection() {
           <span className="home-trainer-mainTitle1">讓專業陪你前進</span>
           <span className="home-trainer-mainTitle2">效率與安全兼得</span>
         </div>
-        <img src="/images/home-trainer-arrow.svg" alt="" />
+        <img src="./images/home-trainer-arrow.svg" alt="" />
       </header>
       {/* 卡牌輪播區 */}
       <div className="trainer-card-box">
@@ -86,7 +86,7 @@ function TrainerSection() {
               <span className="home-trainer-enname">{focusTrainer.enName}</span>
             </div>
             <div className="trainer-info-box home-trainer-area">
-              <img src="/images/homepage-icon-map.svg" alt="" />
+              <img src="./images/homepage-icon-map.svg" alt="" />
               {focusTrainer.areas.map((area, i) => (
                 <span key={i}>{area}</span>
               ))}
@@ -113,11 +113,11 @@ function TrainerSection() {
         <div className="home-trainer-controls">
           <button className="next-btn" onClick={handleNext}>
             <span className="label"></span>
-            <img className="arrow" src="/images/carousel-arrow-left.svg" alt="next" />
+            <img className="arrow" src="./images/carousel-arrow-left.svg" alt="next" />
           </button>
           <button className="prev-btn" onClick={handlePrev}>
             <span className="label"></span>
-            <img className="arrow" src="/images/carousel-arrow-right.svg" alt="prev" />
+            <img className="arrow" src="./images/carousel-arrow-right.svg" alt="prev" />
           </button>
         </div>
       </div>
@@ -126,7 +126,7 @@ function TrainerSection() {
       {/* 底部內容 */}
       <div className="home-trainer-footer">
         <div className="home-trainer-img">
-          <img src="/images/coachshadom.png" alt="" />
+          <img src="./images/coachshadom.png" alt="" />
         </div>
         <div className="home-trainer-title">
           <div className="home-trainer-title1">

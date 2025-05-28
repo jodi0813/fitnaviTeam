@@ -21,7 +21,7 @@ export default function PopupWindow4({ onClose }) {
                         {/* <!-- 按鈕區 --> */}
                         <div className="button">
                             <button className="home-btn" onClick={()=>navigate('/')}>回首頁</button>
-                            <button className="reserve-btn" onClick={()=>navigate('/')}>前往預約</button>
+                            <button className="reserve-btn" onClick={()=>navigate('/memberlist')}>前往預約</button>
                         </div>
                     </div>
 

@@ -188,7 +188,7 @@ function NutriIntro() {
         {
             id: "card5",
             date: "2024/09/13",
-            img: "/images/article-11.jpg",
+            img: "./images/article-11.jpg",
             title: "減脂不只是吃得少，吃對才是王道",
             content: "一味節食容易導致代謝下降與肌肉流失。想健康減脂，關鍵在於選對食物、控制熱量並保持飽足感，讓你不挨餓也能慢慢瘦下來！",
             tags: ["減脂", "健康飲食"],
@@ -289,7 +289,7 @@ function NutriIntro() {
                             <div className="Nutri-prices-button">
                                 <p>10堂優惠 ：$1,400/單堂</p>
                                 <div className="Nutri-price-with-button">
-                                    <button class="classinrto" type="button" onClick={() => setShowPopup(true)}>
+                                    <button className="classinrto" type="button" onClick={() => setShowPopup(true)}>
                                         <span className="Nutriclassinrto-text">立即報名</span>
                                         <img src="./images/search.svg" alt="" />
                                     </button>
@@ -298,7 +298,7 @@ function NutriIntro() {
 
                         </div>
 
-                        <div class="Nutri-place">
+                        <div className="Nutri-place">
                             <p>上課平台<br />可選擇</p>
 
                             <div className="moreimg5">
@@ -585,8 +585,9 @@ function NutriIntro() {
                                         display: "grid",
                                         flexDirection: "column",
                                         gridTemplateColumns: "repeat(3, 1fr)", // 每行 3 欄
-                                        gap: "50px",
-                                        maxWidth: "960px", // 3 張卡片寬 + gap
+                                        gap: "1%",
+                                        maxWidth: "100%", 
+                                        // 3 張卡片寬 + gap
                                         margin: "0 auto",  // 置中
                                         width: "100%",
                                     }}>

@@ -8,21 +8,21 @@ function OrdersBox({ subtitle, subtitleEN, userTab, setUserTab, bt, p1, p2 }) {
       <div className="orderboxButtonText">
         <div className="orderboxButton">
           <button
-            className={userTab === "bt1" ? "userBt" : "userBt"}
+            className={userTab === "bt1" ? "userBt" : ""}
             onClick={() => setUserTab("bt1")}
           >
             {bt}
           </button>
 
           <button
-            className={userTab === "bt2" ? "userBt" : "userBt"}
+            className={userTab === "bt2" ? "userBt" : ""}
             onClick={() => setUserTab("bt2")}
           >
             訂單總覽
           </button>
 
           <button
-            className={userTab === "bt3" ? "userBt" : "userBt"}
+            className={userTab === "bt3" ? "userBt" : ""}
             onClick={() => setUserTab("bt3")}
           >
             完成的課程

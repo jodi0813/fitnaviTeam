@@ -39,9 +39,9 @@ function MyOrders() {
   ];
   /* 控制按鈕彈窗 */
   const [popupType, setPopupType] = useState(null);
-  const handleOpenList = () => setPopupType("list");//訂單編號
-  const handleOpenChat = () => setPopupType("chat");//聯絡教練
-  const handleOpenProblem = () => setPopupType("problem");//問題
+  const handleOpenList = () => setPopupType("list"); //訂單編號
+  const handleOpenChat = () => setPopupType("chat"); //聯絡教練
+  const handleOpenProblem = () => setPopupType("problem"); //問題
   const handleClosePopup = () => setPopupType(null);
   return (
     <>
@@ -62,9 +62,11 @@ function MyOrders() {
         {orders.map((order, index) => (
           <div className="table-row" key={index}>
             {/* 序號 */}
-            <span >{order.no}</span>
+            <span>{order.no}</span>
             {/* 訂單編號 */}
-            <span onClick={handleOpenList} className="order-id" >{order.id}</span>
+            <span onClick={handleOpenList} className="order-id">
+              {order.id}
+            </span>
             {/* 講師名稱 */}
             <span>{order.teacher}</span>
             {/* 上課日期 */}
@@ -75,27 +77,30 @@ function MyOrders() {
             <span>
               {order.location}
               <br />
-              {order.locationCH}{" "}
+              {order.locationCH}
             </span>
             {/* 聯絡講師(按鈕) */}
             <span>
-              <button onClick={handleOpenChat} className="btn-orange">留言</button>
+              <button onClick={handleOpenChat} className="btn-orange">
+                留言
+              </button>
             </span>
             {/* 預約確認(按鈕待確認) */}
             <span>
               <div className="orderCheck">
                 <span>{order.confirmStatus}</span>
                 <span>
-                  {order.confirmAction && (<button className="btn-cancel">{order.confirmAction}</button>)}
-                </span></div>
+                  {/* {order.confirmAction && (<button className="btn-cancel">{order.confirmAction}</button>)} */}
+                </span>
+              </div>
             </span>
             {/* 課程完成(按鈕待確認) */}
-            <span>
-              {order.progress}
-            </span>
+            <span>{order.progress}</span>
             {/* 問題反映 */}
             <span>
-              <button onClick={handleOpenProblem} className="btn-outline">聯絡客服</button>
+              <button onClick={handleOpenProblem} className="btn-outline">
+                聯絡客服
+              </button>
             </span>
           </div>
         ))}
@@ -105,5 +110,6 @@ function MyOrders() {
       {popupType === "chat" && <StudentChatPopup onClose={handleClosePopup} />}
       {popupType === "problem" && <ProblemPopup onClose={handleClosePopup} />}
     </>
-  )
-} export default MyOrders;
+  );
+}
+export default MyOrders;

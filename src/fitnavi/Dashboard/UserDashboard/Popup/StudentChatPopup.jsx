@@ -20,7 +20,7 @@ function StudentChatPopup({ onClose }) {
                 <div className="messages">
                     {/* 用戶 */}
                     <div className="messageUser">
-                        <img src="/images/useravatar.jpg" alt="用戶頭像" className="avatar" />
+                        <img src="./images/useravatar.jpg" alt="用戶頭像" className="avatar" />
                         <div className="bubble">教練你好～請問方便在課程的前10分鐘安排熱身指導嗎？</div>
                     </div>
 
@@ -32,7 +32,7 @@ function StudentChatPopup({ onClose }) {
 
                     {/* 用戶 */}
                     <div className="messageUser">
-                        <img src="/images/useravatar.jpg" alt="用戶頭像" className="avatar" />
+                        <img src="./images/useravatar.jpg" alt="用戶頭像" className="avatar" />
                         <div className="bubble">我想練試看看臀腿訓練！</div>
                     </div>
 
@@ -44,7 +44,7 @@ function StudentChatPopup({ onClose }) {
 
                     {/* 用戶 */}
                     <div className="messageUser">
-                        <img src="/images/useravatar.jpg" alt="用戶頭像" className="avatar" />
+                        <img src="./images/useravatar.jpg" alt="用戶頭像" className="avatar" />
                         <div className="bubble">沒問題，謝謝教練，明天19:00健身房見喔。</div>
                     </div>
 
