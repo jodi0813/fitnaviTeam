@@ -154,7 +154,7 @@ a {
     width: 100%;
     box-sizing: border-box;
     min-height: 600px;
-    background-image: url('./images/Footer.png'); 
+    background-image: url('/images/Footer.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
