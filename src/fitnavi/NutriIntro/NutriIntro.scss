@@ -47,7 +47,7 @@
 
             >* {
                 width: 100%;
-                max-width: clamp(1200px, 80vw, 1440px); 
+                max-width: clamp(1200px, 80vw, 1440px);
                 margin: 80px auto 0 auto;
                 box-sizing: border-box;
             }
@@ -681,7 +681,7 @@
 
     width: 100%;
     // max-width: 1200px;
-     max-width: 1200px;
+    max-width: 1200px;
     margin: 80px auto 0 auto;
     box-sizing: border-box;
     display: flex;
@@ -779,7 +779,7 @@
 #Nutri-exp-cer {
     width: 100%;
     max-width: 1200px;
-    
+
     margin: 80px auto 0 auto; // 上下可調整，左右 auto
     display: flex;
     flex-direction: row;
@@ -1092,7 +1092,7 @@
                     right: 90px;
                     top: -5px;
 
-                                        &::before,
+                    &::before,
                     &::after {
                         content: "";
                         position: absolute;
@@ -1368,14 +1368,14 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            
+
             @media (max-width:1440px) {
                 margin-left: -3%;
-                
+
             }
 
             .star-rate {
-                position: relative;           
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -1384,10 +1384,10 @@
 
                 @media (max-width:1920px) {
                     margin-left: 32%;
-                    
+
                 }
-            
-             
+
+
                 p {
                     color: var(--dark, #3A2C19);
                     text-align: center;
@@ -1395,7 +1395,7 @@
                     font-weight: 400;
                     line-height: 150%;
                     text-transform: capitalize;
-                   
+
                 }
 
                 .Star {
@@ -1404,7 +1404,7 @@
                     align-items: center;
                     gap: 10px; // 星星之間的間距
                     flex-wrap: wrap; // 小螢幕下可換行
-                  }
+                }
             }
 
             .Nutri-commentcard {
@@ -1423,7 +1423,7 @@
                     padding: 30px 30px 18px 30px;
                 }
 
-                .Nutri-commentcard > * {
+                .Nutri-commentcard>* {
                     @media (max-width: 1024px) {
                         width: 100% !important;
                         height: 100% !important;
@@ -1450,159 +1450,167 @@
 
                     @media (max-width:1920px) {
                         left: calc(66.66% - 120px);
-                        
-                    };
+
+                    }
+
+                    ;
 
                     @media (max-width:1680px) {
                         left: calc(66.66% - 60px);
-                        
-                    };
+
+                    }
+
+                    ;
+
                     @media (max-width:1440px) {
                         left: calc(66.66% - 40px);
-                        
-                    };
+
+                    }
+
+                    ;
                 }
+            }
+
+            .Star-rate {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            h3 {
+                color: var(--dark, #3A2C19);
+                font-size: 30px;
+                font-weight: 400;
+                line-height: 150%;
+                text-transform: capitalize;
+                margin-left: 40%;
+            }
+
+            p.description {
+                color: var(--dark, #3A2C19);
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 140%;
+                letter-spacing: 1.4px;
+                margin-top: 30px;
+            }
+
+            .Name-date {
+                margin-top: 90px;
+                display: flex;
+                flex-direction: row;
+                gap: 120px;
+
+                @media (max-width: 1024px) {
+                    gap: 50px;
                 }
 
-                .Star-rate {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-items: center;
-                }
-
-                h3 {
-                    color: var(--dark, #3A2C19);
-                    font-size: 30px;
-                    font-weight: 400;
-                    line-height: 150%;
-                    text-transform: capitalize;
-                    margin-left: 40%;
-                }
-
-                p.description {
-                    color: var(--dark, #3A2C19);
+                p.Name {
+                    color: #000;
                     font-family: "Noto Sans TC", sans-serif;
                     font-size: 14px;
                     font-weight: 500;
-                    line-height: 140%;
                     letter-spacing: 1.4px;
-                    margin-top: 30px;
+                    white-space: nowrap;
                 }
 
-                .Name-date {
-                    margin-top: 90px;
-                    display: flex;
-                    flex-direction: row;
-                    gap: 120px;
-
-                    @media (max-width: 1024px) {
-                        gap: 50px;
-                    }
-
-                    p.Name {
-                        color: #000;
-                        font-family: "Noto Sans TC", sans-serif;
-                        font-size: 14px;
-                        font-weight: 500;
-                        letter-spacing: 1.4px;
-                        white-space: nowrap;
-                    }
-
-                    p.Date {
-                        color: var(--dark, #3A2C19);
-                        text-align: right;
-                        font-family: "Noto Sans TC", sans-serif;
-                        font-size: 14px;
-                        font-weight: 500;
-                        letter-spacing: 1.4px;
-                    }
+                p.Date {
+                    color: var(--dark, #3A2C19);
+                    text-align: right;
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 1.4px;
                 }
             }
+        }
 
-            .seeMoreComment {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                margin-top: 5%;
-                
-                @media (max-width:1920px) {
-                    margin-left: -70px;
-                    
-                }
-                @media (max-width:1440px) {
-                    margin-left: -30px;
-                    
-                }
+        .seeMoreComment {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 5%;
+
+            @media (max-width:1920px) {
+                margin-left: -70px;
+
             }
 
-            button {
-                align-self: center;
-                margin-top: 40px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            @media (max-width:1440px) {
+                margin-left: -30px;
 
-                width: 300px;
-                height: 40px;
-                border-radius: 999px;
-                background: var(--primary, #FF8740);
-                border: none;
-                cursor: pointer;
+            }
+        }
 
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 20px;
-                font-weight: 700;
-                letter-spacing: 2px;
-                color: var(--white, #FEFCF7);
-                text-align: center;
-                position: relative;
-                overflow: hidden;
+        button {
+            align-self: center;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 300px;
+            height: 40px;
+            border-radius: 999px;
+            background: var(--primary, #FF8740);
+            border: none;
+            cursor: pointer;
+
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--white, #FEFCF7);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+
+            .seeMore-text {
+                transition: transform 0.3s ease, color 0.3s ease;
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+                opacity: 0;
+                position: absolute;
+                right: 30px;
+                transition: opacity 0.3s ease;
+            }
+
+            &:hover {
+                background: var(--white, #FEFCF7);
+                border: 1px solid var(--primary, #FF8740);
 
                 .seeMore-text {
-                    transition: transform 0.3s ease, color 0.3s ease;
+                    transform: translateX(-10px);
+                    color: var(--primary, #FF8740);
                 }
 
                 img {
-                    width: 24px;
-                    height: 24px;
-                    opacity: 0;
-                    position: absolute;
-                    right: 30px;
-                    transition: opacity 0.3s ease;
+                    opacity: 1;
+                }
+            }
+
+            &:active {
+                .seeMore-text {
+                    color: var(--primary, #FF8740);
+                    font-size: 16px;
+                    font-weight: 500;
+                    letter-spacing: 1.6px;
                 }
 
-                &:hover {
-                    background: var(--white, #FEFCF7);
-                    border: 1px solid var(--primary, #FF8740);
-
-                    .seeMore-text {
-                        transform: translateX(-10px);
-                        color: var(--primary, #FF8740);
-                    }
-
-                    img {
-                        opacity: 1;
-                    }
-                }
-
-                &:active {
-                    .seeMore-text {
-                        color: var(--primary, #FF8740);
-                        font-size: 16px;
-                        font-weight: 500;
-                        letter-spacing: 1.6px;
-                    }
-
-                    img {
-                        width: 20px;
-                        height: 20px;
-                    }
+                img {
+                    width: 20px;
+                    height: 20px;
                 }
             }
         }
     }
+}
 
 
 
@@ -1693,7 +1701,7 @@
         >* {
             width: 100%;
             // max-width: 1200px;
-            margin: 80px auto 0 auto; 
+            margin: 80px auto 0 auto;
             /* 取消左右 auto */
             padding: 0 16px;
             box-sizing: border-box;
