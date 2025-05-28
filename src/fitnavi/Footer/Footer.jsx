@@ -13,12 +13,12 @@ function Footer() {
                 style={{ cursor: 'pointer' }}
             >
                 <p>回頂部</p>
-                <img src={`${process.env.PUBLIC_URL}/images/back-to-top.gif`} alt="回頂部" />
+               <img src="./images/back-to-top.gif" alt="回頂部" />
             </button>
 
             <div className="footerwrapper">
                 {/* Footer 背景圖片 */}
-                <img src={`${process.env.PUBLIC_URL}/images/Footer.png`} alt="Footer" />
+               <img src="./images/Footer.png" alt="Footer" />
 
                 <div className="footer-overlaytext">
                     <div className="footer-columntext">

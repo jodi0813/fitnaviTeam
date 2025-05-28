@@ -149,23 +149,17 @@ a {
 }
 
 .footerwrapper {
-    
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* max-width: 100%; */
     box-sizing: border-box;
-    /* max-width: 100vw; */
     min-height: 600px;
+    background-image: url('./images/Footer.png'); /* ✅ 正確方式 */
     background-size: cover;
-    position: relative;
     background-repeat: no-repeat;
-    /* background-position: center; */
-    /* flex-wrap: wrap; */
-    z-index: 1;
-    /* border: 1px solid red; */
     background-position: top center;
-
+    position: relative;
+    z-index: 1;
 }
 
 
