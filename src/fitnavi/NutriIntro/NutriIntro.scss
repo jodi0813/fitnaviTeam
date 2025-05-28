@@ -6,19 +6,21 @@
     src: url(../../assets/MantouSans-Regular.ttf);
 }
 
+#aboutNutri,
+#spefield,
+#Nutri-exp-cer,
+#Nutri-reservation,
+#Nutriarticle,
+#Nutri-comment {
+    scroll-margin-top: 90px;
+}
+
 
 #Nutriintro {
     padding: 120px 50px;
 
 
-    #aboutNutri,
-    #spefield,
-    #Nutri-exp-cer,
-    #Nutri-reservation,
-    #Nutriarticle,
-    #Nutri-comment {
-        scroll-margin-top: 80px;
-    }
+
 
 
     .nav-nav-content {
@@ -537,7 +539,8 @@
                 padding-right: 10px;
 
 
-                a {
+                button {
+                    background-color: transparent;
                     display: flex;
                     flex-direction: column;
                     color: var(--dark, #3A2C19);

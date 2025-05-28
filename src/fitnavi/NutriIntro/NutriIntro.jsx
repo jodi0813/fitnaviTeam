@@ -10,6 +10,7 @@ import PopupWindow1 from '../NutriIntro/PopupWindow/PopupWindow1';
 import PopupWindow2 from '../NutriIntro/PopupWindow/PopupWindow2';
 import PopupWindow3 from '../NutriIntro/PopupWindow/PopupWindow3';
 import PopupWindow4 from '../NutriIntro/PopupWindow/PopupWindow4';
+import { useRef } from 'react';
 
 
 
@@ -214,7 +215,15 @@ function NutriIntro() {
         nutriArticleData[(index + 2) % nutriArticleData.length],
     ];
 
-
+    //頁面區域移動
+    const phase1Ref = useRef(null);
+    const phase2Ref = useRef(null);
+    const phase3Ref = useRef(null);
+    const phase4Ref = useRef(null);
+    const phase5Ref = useRef(null);
+    const phase6Ref = useRef(null);
+    const phase7Ref = useRef(null);
+    const phase8Ref = useRef(null);
 
 
     return (
@@ -324,14 +333,14 @@ function NutriIntro() {
                     <div className="Nutrinav">
                         <nav className="Nutri-intro">
                             <ul>
-                                <li><a href="#aboutNutri">關於營養師</a></li>
-                                <li><a href="#spefield">專長領域</a></li>
-                                <li><a href="#Nutri-exp-cer">工作經歷</a></li>
-                                <li><a href="#Nutri-exp-cer">專業證照</a></li>
-                                <li><a href="#Nutri-reservation">預約流程</a></li>
-                                <li><a href="#Nutri-reservation">營養師可預約時間</a></li>
-                                <li><a href="#Nutriarticle">發表文章</a></li>
-                                <li><a href="#Nutri-comment">學員評價</a></li>
+                                <button onClick={() => phase1Ref.current?.scrollIntoView({ behavior: 'smooth' })}>關於營養師</button>
+                                <button onClick={() => phase2Ref.current?.scrollIntoView({ behavior: 'smooth' })}>專長領域</button>
+                                <button onClick={() => phase3Ref.current?.scrollIntoView({ behavior: 'smooth' })}>工作經歷</button>
+                                <button onClick={() => phase4Ref.current?.scrollIntoView({ behavior: 'smooth' })}>專業證照</button>
+                                <button onClick={() => phase5Ref.current?.scrollIntoView({ behavior: 'smooth' })}>預約流程</button>
+                                <button onClick={() => phase6Ref.current?.scrollIntoView({ behavior: 'smooth' })}>營養師可預約時間</button>
+                                <button onClick={() => phase7Ref.current?.scrollIntoView({ behavior: 'smooth' })}>發表文章</button>
+                                <button onClick={() => phase8Ref.current?.scrollIntoView({ behavior: 'smooth' })}>學員評價</button>
                             </ul>
                         </nav>
                     </div>
@@ -339,7 +348,7 @@ function NutriIntro() {
                     <div className="nutriintro-all">
 
 
-                        <section id="aboutnutri">
+                        <section id="aboutnutri" ref={phase1Ref}>
 
 
                             <div className="nutrisvg">
@@ -360,7 +369,7 @@ function NutriIntro() {
 
 
 
-                        <section id="spefield">
+                        <section id="spefield" ref={phase2Ref}>
                             <div className="spefield-wrapper">
                                 <div className="spetitle">
                                     <h3>專長領域</h3>
@@ -412,9 +421,9 @@ function NutriIntro() {
 
                         </section>
 
-                        <section id="Nutri-exp-cer">
+                        <section id="Nutri-exp-cer" >
                             <div className="Nutri-exp-cer-wrapper">
-                                <div className="expcontent">
+                                <div className="expcontent" ref={phase3Ref}>
                                     <div className="exptitle">
                                         <h3>工作經歷</h3>
                                         <h4>Working Experiences</h4>
@@ -431,7 +440,7 @@ function NutriIntro() {
 
                                 </div>
 
-                                <div className="certificate">
+                                <div className="certificate" ref={phase4Ref}>
                                     <div className="certitle">
                                         <h3>專業證照</h3>
                                         <h4>Certification</h4>
@@ -451,9 +460,9 @@ function NutriIntro() {
 
                         </section>
 
-                        <section id="Nutri-reservation">
+                        <section id="Nutri-reservation" >
                             <div className="Nutri-reservation-wrapper">
-                                <div className="nutrireserve">
+                                <div className="nutrireserve" ref={phase5Ref}>
                                     <div className="restitle">
                                         <h3>預約流程</h3>
                                         <h4>Reserve Process</h4>
@@ -484,7 +493,7 @@ function NutriIntro() {
                                     </div>
                                 </div>
 
-                                <div className="Nutri-calendar-reservetime">
+                                <div className="Nutri-calendar-reservetime" ref={phase6Ref}>
                                     <div className="caltitle">
                                         <h3>營養師可預約時間</h3>
                                         <h4>Available Time</h4>
@@ -504,7 +513,7 @@ function NutriIntro() {
                         </section>
 
 
-                        <section id="Nutriarticle">
+                        <section id="Nutriarticle" ref={phase7Ref}>
 
                             <div className="Nutriarticle-wrapper">
                                 <div className="articletitle">
@@ -550,7 +559,7 @@ function NutriIntro() {
                         </section>
 
 
-                        <section className="Nutri-comment-wrapper">
+                        <section className="Nutri-comment-wrapper" ref={phase8Ref}>
                             <div id="Nutri-comment">
                                 <div className="Nutricommentitle">
                                     <h3>學員評價</h3>
@@ -586,7 +595,7 @@ function NutriIntro() {
                                         flexDirection: "column",
                                         gridTemplateColumns: "repeat(3, 1fr)", // 每行 3 欄
                                         gap: "1%",
-                                        maxWidth: "100%", 
+                                        maxWidth: "100%",
                                         // 3 張卡片寬 + gap
                                         margin: "0 auto",  // 置中
                                         width: "100%",

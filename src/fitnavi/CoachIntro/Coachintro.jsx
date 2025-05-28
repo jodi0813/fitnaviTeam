@@ -354,8 +354,8 @@ function Coachintro() {
                                 <button onClick={() => phase5Ref.current?.scrollIntoView({ behavior: 'smooth' })}>預約流程</button>
                                 <button onClick={() => phase6Ref.current?.scrollIntoView({ behavior: 'smooth' })}>教練可預約時間</button>
                                 <button onClick={() => phase7Ref.current?.scrollIntoView({ behavior: 'smooth' })}>發表文章</button>
-                               <button onClick={() => phase8Ref.current?.scrollIntoView({ behavior: 'smooth' })}>學員評價</button>
-                               
+                                <button onClick={() => phase8Ref.current?.scrollIntoView({ behavior: 'smooth' })}>學員評價</button>
+
                             </ul>
                         </nav>
                     </div>
