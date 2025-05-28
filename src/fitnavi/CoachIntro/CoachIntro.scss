@@ -14,7 +14,7 @@
 #certificate,
 #reservation1,
 #coacharticle {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 90px;
     /* 依你的 nav 高度調整 */
 }
 
@@ -489,7 +489,8 @@
                     padding-right: 10px;
 
 
-                    a {
+                    button {
+                        background-color: transparent;
                         display: flex;
                         flex-direction: column;
                         color: var(--dark, #3A2C19);

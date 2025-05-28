@@ -11,7 +11,7 @@ import PopupWindow1 from "./PopupWindow/PopupWindow1";
 import PopupWindow2 from "./PopupWindow/PopupWindow2";
 import PopupWindow3 from "./PopupWindow/PopupWindow3";
 import PopupWindow4 from "./PopupWindow/PopupWindow4";
-// import ArticlecardsCarousel from "../../components/Carousel/ArticlecardsCarousel/ArticlecardsCarousel"
+import { useRef } from 'react';
 
 
 
@@ -224,6 +224,16 @@ function Coachintro() {
     ]);
 
 
+    //頁面區域移動
+    const phase1Ref = useRef(null);
+    const phase2Ref = useRef(null);
+    const phase3Ref = useRef(null);
+    const phase4Ref = useRef(null);
+    const phase5Ref = useRef(null);
+    const phase6Ref = useRef(null);
+    const phase7Ref = useRef(null);
+    const phase8Ref = useRef(null);
+
 
 
     return (
@@ -336,21 +346,23 @@ function Coachintro() {
                     <div className="coachnav">
                         <nav className="intro">
                             <ul>
-                                <li><a href="#aboutCoach">關於教練</a></li>
-                                <li><a href="#spe">專長領域</a></li>
-                                <li><a href="#Coach-exp-cer">工作經歷</a></li>
-                                <li><a href="#certificate">專業證照</a></li>
-                                <li><a href="#reservation1">預約流程</a></li>
-                                <li><a href="#reservation1">教練可預約時間</a></li>
-                                <li><a href="#coacharticle">發表文章</a></li>
-                                <li><a href="#Coach-comment">學員評價</a></li>
+
+                                <button onClick={() => phase1Ref.current?.scrollIntoView({ behavior: 'smooth' })}>關於教練</button>
+                                <button onClick={() => phase2Ref.current?.scrollIntoView({ behavior: 'smooth' })}>專長領域</button>
+                                <button onClick={() => phase3Ref.current?.scrollIntoView({ behavior: 'smooth' })}>工作經歷</button>
+                                <button onClick={() => phase4Ref.current?.scrollIntoView({ behavior: 'smooth' })}>專業證照</button>
+                                <button onClick={() => phase5Ref.current?.scrollIntoView({ behavior: 'smooth' })}>預約流程</button>
+                                <button onClick={() => phase6Ref.current?.scrollIntoView({ behavior: 'smooth' })}>教練可預約時間</button>
+                                <button onClick={() => phase7Ref.current?.scrollIntoView({ behavior: 'smooth' })}>發表文章</button>
+                               <button onClick={() => phase8Ref.current?.scrollIntoView({ behavior: 'smooth' })}>學員評價</button>
+                               
                             </ul>
                         </nav>
                     </div>
 
                     <div className="coachintro-all">
 
-                        <div id="aboutCoach">
+                        <div id="aboutCoach" ref={phase1Ref}>
 
                             <div className="coachsvg">
                                 <p>不只是訓練，<br />是量身打造的改變</p>
@@ -368,7 +380,7 @@ function Coachintro() {
                                 不論妳是健身新手，還是想突破瓶頸的進階訓練者，我都會陪妳一起前進，一起打造更強壯、更健康的自己。</p>
                         </div>
 
-                        <section id="spe">
+                        <section id="spe" ref={phase2Ref}>
                             <div className="coachspefield-wrapper">
                                 <div className="spetitle">
                                     <h3>專長領域</h3>
@@ -382,7 +394,7 @@ function Coachintro() {
                             </div>
                         </section>
 
-                        <section id="Coach-exp-cer">
+                        <section id="Coach-exp-cer" ref={phase3Ref}>
                             <div className="coach-exp-cer-wrapper">
                                 <div className="expcontent">
                                     <div className="exptitle">
@@ -400,7 +412,7 @@ function Coachintro() {
 
                                 </div>
 
-                                <div id="certificate">
+                                <div id="certificate" ref={phase4Ref}>
                                     <div className="certitle">
                                         <h3>專業證照</h3>
                                         <h4>Certification</h4>
@@ -419,7 +431,7 @@ function Coachintro() {
 
                         <section id="reservation1">
                             <div className="coach-reservation-wrapper">
-                                <div className="reserve">
+                                <div className="reserve" ref={phase5Ref}>
                                     <div className="restitle">
                                         <h3>預約流程</h3>
                                         <h4>Reserve Process</h4>
@@ -450,7 +462,7 @@ function Coachintro() {
                                     </div>
                                 </div>
 
-                                <div className="Coach-Available-reservetime">
+                                <div className="Coach-Available-reservetime" ref={phase6Ref}>
                                     <div className="caltitle">
                                         <h3>教練可預約時間</h3>
                                         <h4>Available Time</h4>
@@ -470,7 +482,7 @@ function Coachintro() {
                         </section>
 
 
-                        <div id="coacharticle">
+                        <div id="coacharticle" ref={phase7Ref}>
                             <div className="article-wrapper">
 
                                 <div className="articletitle">
@@ -514,7 +526,7 @@ function Coachintro() {
                             </div>
                         </div>
 
-                        <div className="Coach-comment-wrapper">
+                        <div className="Coach-comment-wrapper" ref={phase8Ref}>
                             <div id="Coach-comment">
                                 <div className="commentitle">
                                     <h3>學員評價</h3>
