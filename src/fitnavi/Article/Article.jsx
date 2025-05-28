@@ -36,8 +36,13 @@ function Article() {
                                 搞懂訓練順序，讓妳少走冤枉路！</h2>
                             <div className="dateshare">
                                 <p>2025-01-02</p>
-                                <button class="share" type="button"><img src="./images/share.png" alt="" width="15"
-                                    height="15" /></button>
+                                <button class="share" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                        <path d="M4.16699 12.5V20.8333C4.16699 21.3859 4.38649 21.9158 4.77719 22.3065C5.16789 22.6972 5.69779 22.9167 6.25033 22.9167H18.7503C19.3029 22.9167 19.8328 22.6972 20.2235 22.3065C20.6142 21.9158 20.8337 21.3859 20.8337 20.8333V12.5" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M16.6663 6.25001L12.4997 2.08334L8.33301 6.25001" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M12.5 2.08334V15.625" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
 

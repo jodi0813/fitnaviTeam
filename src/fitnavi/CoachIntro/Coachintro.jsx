@@ -341,7 +341,7 @@ function Coachintro() {
                                 <li><a href="#Coach-exp-cer">工作經歷</a></li>
                                 <li><a href="#certificate">專業證照</a></li>
                                 <li><a href="#reservation1">預約流程</a></li>
-                                <li><a href="reservation1">教練可預約時間</a></li>
+                                <li><a href="#reservation1">教練可預約時間</a></li>
                                 <li><a href="#coacharticle">發表文章</a></li>
                                 <li><a href="#Coach-comment">學員評價</a></li>
                             </ul>
