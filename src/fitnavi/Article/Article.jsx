@@ -2,18 +2,15 @@ import "./Article.scss";
 import MaintitleBread from "../../components/Title/MaintitleBread";
 import { useNavigate } from 'react-router-dom';
 
-function Article() {
-    const navigate = useNavigate();
 
-    const scrollToSection = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+function Article() {
+    // const { id } = useParams();
+    // const article = cardsData.find(card => card.id === id); 
+    const navigate = useNavigate();
 
     return (
         <>
+
             <main id="card9">
                 <div className="card9-title">
                     <MaintitleBread
@@ -27,8 +24,11 @@ function Article() {
                     />
                 </div>
 
-                {/* */}
+
+
+                {/* <!-- banner區域 --> */}
                 <section className="article-banner">
+
                     <div className="article-content">
                         <div className="article-bannercontent">
                             <p>營養調配</p>
@@ -36,17 +36,19 @@ function Article() {
                                 搞懂訓練順序，讓妳少走冤枉路！</h2>
                             <div className="dateshare">
                                 <p>2025-01-02</p>
-                                <button className="share" type="button"><img src="./images/share.png" alt="" width="15"
+                                <button class="share" type="button"><img src="./images/share.png" alt="" width="15"
                                     height="15" /></button>
                             </div>
                         </div>
+
                     </div>
+
                     <div className="bannerimg">
                         <img src="./images/articlebanner.jpg" alt="" />
                     </div>
                 </section>
 
-                {/* */}
+                {/* <!-- 文章內容區 --> */}
                 <section className="article">
                     <div className="phase1">
                         <h4> 在開始健身計畫之前，「我該先增肌還是先減脂？」是許多人最常問的問題。<br />
@@ -55,20 +57,22 @@ function Article() {
                         </h4>
                     </div>
 
-                    {/* */}
+
+                    {/* <!-- 目錄、標題、文章撰寫人 --> */}
                     <div className="phase2">
                         <div className="tablecontent">
                             <div className="tabletitle">
                                 <p>TABLE OF CONTENTS</p>
                             </div>
+
                             <div className="table">
-                                {/* Modified links */}
-                                <a onClick={() => scrollToSection('Article-content')}>●為什麼需要區分增肌與減脂？<br /></a>
-                                <a onClick={() => scrollToSection('phase3')}>●該先增肌還是先減脂？這樣判斷最有效<br /></a>
-                                <a onClick={() => scrollToSection('phase4')}>●訓練與飲食策略建議<br /></a>
-                                <a onClick={() => scrollToSection('phase5')}>●體態重組：是否能同時增肌與減脂？<br /></a>
-                                <a onClick={() => scrollToSection('phase6')}>●正確順序，提升效率</a>
+                                <a href="#Article-content">●為什麼需要區分增肌與減脂？<br /></a>
+                                <a href="#phase3">●該先增肌還是先減脂？這樣判斷最有效<br /></a>
+                                <a href="#phase4">●訓練與飲食策略建議<br /></a>
+                                <a href="#phase5">●體態重組：是否能同時增肌與減脂？<br /></a>
+                                <a href="#phase6">●正確順序，提升效率</a>
                             </div>
+
                         </div>
 
                         <div id="Article-content">
@@ -78,6 +82,7 @@ function Article() {
                                 減脂則仰賴熱量赤字與代謝調控，促進脂肪分解。
                                 由於這兩個過程在營養攝取與訓練重點上常常相互衝突，因此同時進行時容易成效有限。
                                 釐清當前身體狀況與目標，有助於更有效率地規劃訓練與飲食策略。</p>
+
                         </div>
 
                         <div className="article-author">
@@ -85,11 +90,12 @@ function Article() {
                                 <img src="./images/nutritionist02.jpg" alt="" />
                                 <p>安娜 Anna</p>
                             </div>
+
                             <p>透過合理的飲食規劃，協助您實現健康的生活方式。每一口食物，都是為健康加分的機會。</p>
                         </div>
                     </div>
 
-                    {/* */}
+                    {/* <!-- 文章內容，包含圖片文字 --> */}
                     <div id="phase3">
                         <div></div>
                         <div className="content">
@@ -106,6 +112,7 @@ function Article() {
                         <img src="./images/articlephoto.png" alt="" />
                         <div></div>
                     </div>
+
 
                     <div id="phase4">
                         <div></div>
@@ -148,7 +155,10 @@ function Article() {
                         </div>
                         <div></div>
                     </div>
+
+
                 </section>
+
 
                 <section>
                     <div className="bottom">
@@ -163,16 +173,19 @@ function Article() {
                                 <p>#標籤</p>
                                 <p>#標籤</p>
                             </div>
-                            {/* Uncommented and modified the return button */}
-                            <div className="button">
-                                <button className="bottombutton" onClick={() => navigate('/Allarticle')}>←返回上一頁</button>
-                            </div>
+
+                            {/* <div className="button">
+                                <button className="bottombutton" onClick={() => { navigate('/Allarticle'); window.scrollTo(0, 0); }}>←返回上一頁</button>
+                            </div> */}
+
                         </div>
+
                     </div>
+
                 </section>
             </main >
-        </>
-    );
-}
 
-export default Article;
+        </>
+    )
+}
+export default Article
