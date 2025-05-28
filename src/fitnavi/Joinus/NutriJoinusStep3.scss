@@ -29,7 +29,7 @@
     border-bottom: 1px solid #3a2c19;
 
     .Step3-title {
-      display: flex;
+       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: baseline;
@@ -70,11 +70,11 @@
     min-height: 0;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 5px;
 
     .Aboutme-textarea {
       .Aboutme-textarea-title {
-        display: flex;
+       display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 150%;
@@ -111,7 +111,7 @@
     }
 
     .Aboutme-uploadphotos {
-      margin-top: 14px;
+      // margin-top: 14px;
 
       .Aboutme-uploadphotos-title {
         width: 202px;
@@ -175,11 +175,12 @@
       }
     }
 
+
     .scrollFieldset-teachExperience {
       margin-top: 8px;
       width: 430px;
       max-height: 114px;
-      border: 1px solid #d0cdc9;
+      // border: 1px solid #d0cdc9;
       border-radius: 8px;
       overflow-y: auto;
       background: #fff;
@@ -193,14 +194,14 @@
           display: table;
           width: 100%;
           table-layout: fixed;
-          background-color: #f4f4f4;
+          // background-color: #f4f4f4;
 
           th {
             padding: 8px;
             font-size: 10px;
             text-align: center;
             color: var(--gray, #989794);
-            border-bottom: 1px solid #3a2c19;
+            // border-bottom: 1px solid #3a2c19;
           }
         }
 
@@ -214,6 +215,7 @@
             display: table;
             width: 100%;
             table-layout: fixed;
+            
           }
 
           td {
@@ -221,7 +223,8 @@
             font-size: 14px;
             text-align: center;
             color: var(--dark, #3A2C19);
-            border-bottom: 1px solid #3a2c19;
+            border-bottom: 1px solid rgba(58, 44, 25, 0.2);
+            padding-bottom: 20px;
           }
 
           input {
@@ -310,4 +313,3 @@
     }
   }
 }
-
