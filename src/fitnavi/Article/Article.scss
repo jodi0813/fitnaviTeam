@@ -224,7 +224,7 @@
         font-style: normal;
         font-weight: 500;
         line-height: 140%;
-        /* 19.6px */
+        white-space: nowrap;
         letter-spacing: 1.4px;
         background-color: transparent;
         padding: 0px;
@@ -300,6 +300,8 @@
         font-weight: 400;
         line-height: normal;
         margin-bottom: 1%;
+
+    
       }
 
       p {

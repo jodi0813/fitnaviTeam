@@ -63,7 +63,7 @@ export default function Article() {
                         </div>
                         <div className="table-content">
                             <button onClick={() => phase2Ref.current?.scrollIntoView({ behavior: 'smooth' })}>·為什麼需要區分增肌與減脂？</button>
-                            <button onClick={() => phase3Ref.current?.scrollIntoView({ behavior: 'smooth' })}>·該先增肌還是先減脂？這樣判斷最有效</button>
+                            <button onClick={() => phase3Ref.current?.scrollIntoView({ behavior: 'smooth' })}>·該先增肌還是先減脂？ 這樣判斷最有效</button>
                             <button onClick={() => phase4Ref.current?.scrollIntoView({ behavior: 'smooth' })}>·訓練與飲食策略建議</button>
                             <button onClick={() => phase5Ref.current?.scrollIntoView({ behavior: 'smooth' })}>·體態重組：是否能同時增肌與減脂？</button>
                             <button onClick={() => phase6Ref.current?.scrollIntoView({ behavior: 'smooth' })}>·正確順序，提升效率</button>
@@ -92,7 +92,7 @@ export default function Article() {
                         </div>
 
                         <div id="phase3" ref={phase3Ref}>
-                            <h3>該先增肌還是先減脂？這樣判斷最有效</h3>
+                            <h3>該先增肌還是先減脂？ 這樣判斷最有效</h3>
                             <p> 1.體脂偏高（女性體脂 ≥30%） 建議優先減脂。此階段直接進行增肌可能導致脂肪進一步堆積，建議先降低體脂、提升基礎代謝與運動表現。
                                 2.體脂適中但肌肉量不足 建議進行基礎增肌。透過阻力訓練與熱量維持（或輕盈餘），有助於提升身體線條與代謝基礎，為後續減脂打下穩固基礎。
                                 3.體脂中等且有一定肌肉基礎 可彈性選擇，依目標體態調整方向。若希望修飾線條可採「緩慢減脂」，若目標是增加體積或力量，可考慮短期增肌期。

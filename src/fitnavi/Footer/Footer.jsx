@@ -13,7 +13,7 @@ function Footer() {
                 style={{ cursor: 'pointer' }}
             >
                 <p>回頂部</p>
-               <img src="./images/back-to-top.gif" alt="回頂部" />
+               <img src="./images/goTop.gif" alt="回頂部" />
             </button>
 
             <div className="footerwrapper">
