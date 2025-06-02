@@ -477,7 +477,15 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
-            margin-top: 220px;
+
+            @media (max-width: 1920px) {
+                margin-top: 300px;
+            }
+
+            @media (max-width: 1680px) {
+                margin-top: 230px;
+            }
+
 
             .intro {
                 margin-top: 60px;
@@ -1640,29 +1648,24 @@
 }
 
 .coachsvg {
+    display: flex;
     position: relative;
-    left: 70%;
+    left: 80%;
 
-    // bottom: 10%;
     p {
-    //    right: 10%;
-        color: var(--dark, #3A2C19);
-        /* heading/標題3 */
-        font-family: "Noto Sans TC";
+        position: absolute;
+        right: 10%;
+        transform: rotate(-4.948deg);
         font-size: 32px;
-        font-style: normal;
+        font-family: "Noto Sans TC";
         font-weight: 700;
-        line-height: normal;
         letter-spacing: 3.2px;
+        color: var(--dark, #3A2C19);
         width: 313.635px;
         height: 76.158px;
-        transform: rotate(-4.948deg);
-        flex-shrink: 0;
     }
-
-
-
 }
+
 
 
 
@@ -2220,4 +2223,3 @@
 
     }
 }
-
