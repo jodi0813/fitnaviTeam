@@ -1,14 +1,16 @@
 .card {
   position: relative;
-  width: fit-content;
-  /* margin-right: 20px; */
+  width: max-content;
+  height: auto; 
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 1024px) {
-    margin-right: 0px !important;
-    width: 240px;
-    height: 25rem;
+    width: auto !important;
+    height: auto !important;
   }
 }
+
 
 /* 日期 */
 .data {
