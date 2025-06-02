@@ -6,6 +6,7 @@
   @media (max-width: 1024px) {
     margin-right: 0px !important;
     width: 240px;
+    height: 25rem;
   }
 }
 
@@ -52,22 +53,26 @@
   top: -10px;
   border-radius: 20px;
   border: 1px solid #3A2C19;
-  padding: 18px;
+  padding:0.8rem;
+
+
 
   @media (max-width: 1024px) {
-    width: 200px;
-    height: 170px;
+    width: 200px !important;
+    height: auto;
   }
 }
 
 /* 文章標題 */
 .contentBox h4 {
-  color: #3A2C19;
-  font-family: "Noto Sans TC", sans-serif;
+  color: var(--dark, #3A2C19);
+  /* heading/標題4/Bold */
+  font-family: "Noto Sans TC";
   font-size: 20px;
+  font-style: normal;
   font-weight: 700;
+  line-height: normal;
   letter-spacing: 2px;
-  margin: 0;
   margin-bottom: 10px;
 }
 
@@ -86,6 +91,20 @@
   font-weight: 500;
   letter-spacing: 1.4px;
   line-height: 1.4;
+}
+
+/* 1024螢幕時變成兩行 */
+@media (max-width: 1024px) {
+  .contentBox p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* 限制 2 行 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* max-height: 2.8em;
+    行高 * 2 行 */
+  }
 }
 
 /* 底下兩個tag */
