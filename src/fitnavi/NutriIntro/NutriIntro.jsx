@@ -337,7 +337,7 @@ function NutriIntro() {
                                 <button onClick={() => phase2Ref.current?.scrollIntoView({ behavior: 'smooth' })}>專長領域</button>
                                 <button onClick={() => phase3Ref.current?.scrollIntoView({ behavior: 'smooth' })}>工作經歷</button>
                                 <button onClick={() => phase4Ref.current?.scrollIntoView({ behavior: 'smooth' })}>專業證照</button>
-                                <button onClick={() => phase5Ref.current?.scrollIntoView({ behavior: 'smooth' })}>預約流程</button>
+                                <button onClick={() => phase4Ref.current?.scrollIntoView({ behavior: 'smooth' })}>預約流程</button>
                                 <button onClick={() => phase6Ref.current?.scrollIntoView({ behavior: 'smooth' })}>營養師可預約時間</button>
                                 <button onClick={() => phase7Ref.current?.scrollIntoView({ behavior: 'smooth' })}>發表文章</button>
                                 <button onClick={() => phase8Ref.current?.scrollIntoView({ behavior: 'smooth' })}>學員評價</button>
@@ -421,9 +421,9 @@ function NutriIntro() {
 
                         </section>
 
-                        <section id="Nutri-exp-cer" >
+                        <section id="Nutri-exp-cer" ref={phase3Ref}>
                             <div className="Nutri-exp-cer-wrapper">
-                                <div className="expcontent" ref={phase3Ref}>
+                                <div className="expcontent" >
                                     <div className="exptitle">
                                         <h3>工作經歷</h3>
                                         <h4>Working Experiences</h4>
@@ -440,7 +440,7 @@ function NutriIntro() {
 
                                 </div>
 
-                                <div className="certificate" ref={phase4Ref}>
+                                <div className="certificate" >
                                     <div className="certitle">
                                         <h3>專業證照</h3>
                                         <h4>Certification</h4>
@@ -460,7 +460,7 @@ function NutriIntro() {
 
                         </section>
 
-                        <section id="Nutri-reservation" >
+                        <section id="Nutri-reservation"  ref={phase4Ref}>
                             <div className="Nutri-reservation-wrapper">
                                 <div className="nutrireserve" ref={phase5Ref}>
                                     <div className="restitle">

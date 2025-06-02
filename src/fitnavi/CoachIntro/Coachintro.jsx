@@ -352,7 +352,7 @@ function Coachintro() {
                                 <button onClick={() => phase3Ref.current?.scrollIntoView({ behavior: 'smooth' })}>工作經歷</button>
                                 <button onClick={() => phase4Ref.current?.scrollIntoView({ behavior: 'smooth' })}>專業證照</button>
                                 <button onClick={() => phase5Ref.current?.scrollIntoView({ behavior: 'smooth' })}>預約流程</button>
-                                <button onClick={() => phase6Ref.current?.scrollIntoView({ behavior: 'smooth' })}>教練可預約時間</button>
+                                <button onClick={() => phase5Ref.current?.scrollIntoView({ behavior: 'smooth' })}>教練可預約時間</button>
                                 <button onClick={() => phase7Ref.current?.scrollIntoView({ behavior: 'smooth' })}>發表文章</button>
                                 <button onClick={() => phase8Ref.current?.scrollIntoView({ behavior: 'smooth' })}>學員評價</button>
 
@@ -429,9 +429,9 @@ function Coachintro() {
                             </div>
                         </section>
 
-                        <section id="reservation1">
+                        <section id="reservation1" ref={phase5Ref}>
                             <div className="coach-reservation-wrapper">
-                                <div className="reserve" ref={phase5Ref}>
+                                <div className="reserve" >
                                     <div className="restitle">
                                         <h3>預約流程</h3>
                                         <h4>Reserve Process</h4>
