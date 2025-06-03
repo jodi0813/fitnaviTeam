@@ -11,7 +11,8 @@
 #Nutri-exp-cer,
 #Nutri-reservation,
 #Nutriarticle,
-#Nutri-comment,.Nutri-comment-wrapper {
+#Nutri-comment,
+.Nutri-comment-wrapper {
     scroll-margin-top: 90px;
 }
 
@@ -691,7 +692,7 @@
     flex-direction: column;
     align-items: flex-start; // 內容靠左
 
-    
+
 
 
 
@@ -1731,7 +1732,7 @@
 
 @media screen and (max-width: 1024px) {
 
-   
+
 
     // 主內容外層
     #Nutriintro,
@@ -1919,17 +1920,24 @@
     //介紹區
     #aboutnutri {
 
-        width: 70% !important;
-        margin: 32px 0 0 0 !important; // 左右 margin 設 0，讓他貼齊左側
-        padding: 0 12px !important;
+        // width: 70% !important;
+        // margin: 32px 0 0 0 !important; // 左右 margin 設 0，讓他貼齊左側
+        // padding: 0 12px !important;
+        // box-sizing: border-box;
+        // margin-top: 250px !important;
+        // margin-left: 1% !important;
+        width: 100%;
         box-sizing: border-box;
-        margin-top: 250px !important;
-        margin-left: 1% !important;
+        margin: 0 auto;
 
-        .about-title {
+        .Nutriabout-title {
+            // gap: 18px !important; // 標題區間距縮小
+            // flex-direction: column; // 標題副標題上下疊
+            // align-items: flex-start; // 靠左對齊
             gap: 18px !important; // 標題區間距縮小
             flex-direction: column; // 標題副標題上下疊
             align-items: flex-start; // 靠左對齊
+            padding: 30px;
 
             h3 {
                 font-size: 32px !important;
@@ -1948,13 +1956,15 @@
         p {
             color: var(--dark, #3A2C19);
             /* heading/標題4/medium */
-            font-family: "Noto Sans TC";
+            font-family: "Noto Sans TC", sans-serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
             line-height: 40px;
             /* 200% */
             letter-spacing: 0.4px;
+            padding: 30px;
+            max-width: 820px;
         }
 
     }
@@ -1965,23 +1975,37 @@
     //導覽區
 
     .Nutrinav {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: flex-end !important;
+        // width: 15% !important;
+        // min-width: 90px;
+        // align-self: stretch;
+        // margin-top: 250px !important;
         display: flex;
         flex-direction: column;
         align-items: flex-end !important;
-        width: 15% !important;
-        min-width: 90px;
+        width: 10% !important;
         align-self: stretch;
-        margin-top: 250px !important;
     }
 
-    .Nutrinav ul {
-        width: 100%;
-        align-items: flex-end !important;
-        text-align: right !important;
-        padding: 0;
-        margin: 0;
-        list-style: none;
+    .Nutri-intro {
+        margin-top: 0px !important;
+      
+
+        .Nutrinav ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            border-right: 0.6px solid #3A2C19;
+            gap: 30px;
+            padding-right: 110px !important;
+            padding-left: 10px;
+        }
+
     }
+
 
 
 
