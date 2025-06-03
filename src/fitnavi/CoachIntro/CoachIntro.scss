@@ -1867,12 +1867,8 @@
         width: 100%;
         box-sizing: border-box;
         margin: 0 auto;
-        /* Ensure no extra margin pushes it out */
         padding: 0 10px;
-        /* Add some horizontal padding for content, adjust as needed */
-        overflow-x: hidden;
-        /* Crucial for preventing overflow within this section */
-
+ 
 
         .about-title {
             gap: 18px !important;
@@ -2122,7 +2118,7 @@
             margin-right: auto;
             box-sizing: border-box;
 
-            
+
 
 
             .Coach-comment-line1 {
