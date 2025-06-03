@@ -478,12 +478,16 @@
             justify-content: flex-start;
             align-items: flex-start;
 
-            @media (max-width: 1920px) {
-                margin-top: 300px;
-            }
+            // @media (max-width: 1920px) {
+            //     margin-top: 300px !important;
+            // }
 
-            @media (max-width: 1680px) {
-                margin-top: 230px;
+            // @media (max-width: 1680px) {
+            //     margin-top: 230px !important;
+            // }
+
+            @media (max-width: 1440px) {
+                margin-top: 250px !important;
             }
 
 
@@ -617,7 +621,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start; // 內容靠左
-    margin-top: 200px;
+    margin-top: 250px;
 
     .coachspefield-wrapper {
         width: 100%;
@@ -1359,6 +1363,8 @@
                     width: 300px;
                     height: 300px;
                     padding: 30px 30px 18px 30px;
+                    position: relative;
+
 
 
                 }
@@ -1453,15 +1459,13 @@
             }
 
             .Name-date {
-                margin-top: 90px;
+
                 display: flex;
                 flex-direction: row;
                 gap: 120px;
+                position: absolute;
+                top: 280px;
 
-                @media (max-width: 1024px) {
-                    gap: 50px;
-
-                }
 
                 p.Name {
                     color: #000;
@@ -1681,7 +1685,7 @@
         box-sizing: border-box;
     }
 
-    // 主要兩區塊
+
     .Coachintro-person {
         display: flex !important;
         flex-direction: row !important;
@@ -1848,6 +1852,7 @@
         }
     }
 
+
     //介紹區
     #aboutCoach {
 
@@ -1956,29 +1961,29 @@
             padding-left: 20px;
         }
 
-   
 
-    .coach-circlewrapper {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 0 16px; // 可視情況調整左右留白
 
-        img {
-            display: block;
-            margin-left: 0 !important;
-            width: 100%; // 響應式寬度
-            max-width: 800px !important; // 可自訂最大寬度
-            height: auto;
+        .coach-circlewrapper {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 16px; // 可視情況調整左右留白
+
+            img {
+                display: block;
+                margin-left: 0 !important;
+                width: 100%; // 響應式寬度
+                max-width: 800px !important; // 可自訂最大寬度
+                height: auto;
+            }
         }
     }
- }
 
     //工作經歷區
     #Coach-exp-cer {
         width: 100% !important;
         max-width: none;
         padding: 0 10px;
-        overflow-x: auto;
+
         margin-top: 100px !important; // 視需求調整
         // margin-left: 1% !important;
 
@@ -2108,36 +2113,35 @@
                 position: relative !important;
                 gap: 30px !important;
 
-
-
-                .Coach-comment-card {
-                    width: 250px !important;
-                    height: 300px;
-                    padding: 10px !important;
-
-
-                }
-
-
-
-                &::before,
-                &::after {
-                    content: "";
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    width: 1px;
-                    border-left: 1px dashed #ccc;
-                }
-
                 &::before {
-                    left: calc(33.33% - 50px) !important;
+                    left: calc(33.33% - 60px) !important;
                 }
 
                 &::after {
-                    left: calc(66.66% - 90px) !important;
+                    left: calc(66.66% - 100px) !important;
                 }
+            }
+
+
+            .Coach-comment-card {
+                width: 250px !important;
+                height: 300px;
+                padding: 10px !important;
+                position: relative;
+
+                .Name-date {
+
+                    display: flex;
+                    flex-direction: row;
+                    gap: 50px !important;
+                    position: absolute;
+                    top: 240px !important;
+
+                }
+
+
+
+
             }
 
 
@@ -2181,46 +2185,6 @@
 
             }
 
-            .Name-date {
-                margin-top: 90px;
-                display: flex;
-                flex-direction: row;
-                gap: 120px;
-
-                @media (max-width: 1024px) {
-                    gap: 50px;
-                    margin-top: 50px !important;
-                }
-
-                p.Name {
-                    color: #000;
-
-                    /* 段落/14 */
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
-                    /* 19.6px */
-                    letter-spacing: 1.4px;
-                    white-space: nowrap;
-                }
-
-                p.Date {
-                    color: var(--dark, #3A2C19);
-                    text-align: right;
-                    /* 段落/14 */
-                    font-family: " Sans TC";
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
-                    /* 19.6px */
-                    letter-spacing: 1.4px;
-                }
-
-
-            }
 
         }
 
@@ -2244,6 +2208,10 @@
         box-sizing: border-box !important;
     }
 }
+
+
+
+
 
 @media screen and (max-width: 1440px) {
 
@@ -2287,7 +2255,7 @@
             }
 
             &::before {
-                left: -40px;
+                left: -100px !important;
                 top: 30px;
                 transform: rotate(45deg);
             }
@@ -2305,13 +2273,23 @@
         margin-top: 2%;
     }
 
+    // .coachnav {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: flex-start;
+    //     align-items: flex-start;
+    //     margin-top: 300px !important;
+
+
+    // }
+}
+
+@media screen and (max-width:1920px) {
     .coachnav {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin-top: 250px !important;
+
+        margin-top: 220px !important;
 
 
     }
+
 }
