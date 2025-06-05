@@ -6,9 +6,12 @@
   margin: 0 auto;
   /* 左右外距自動，實現置中 */
   width: 100%;
-    @media (max-width: 1024px) {
-      padding:0px;
-    }
+
+  @media (max-width: 1024px) {
+    padding: 0px;
+    
+  }
+
   .allCoachCards {
     display: flex;
     flex-direction: column;
@@ -17,6 +20,7 @@
     margin: 0 auto;
     gap: 25px;
     margin-top: 59px;
+     @media (max-width: 1024px) {    margin-top: 0px;}
   }
 }
 
@@ -35,7 +39,9 @@
   align-items: center;
   gap: 10px;
   width: 100%;
-
+  @media (max-width: 1024px) {
+ flex-direction: column;
+  }
   #area,
   #trainingNeeds,
   #sex {
@@ -113,12 +119,16 @@
   grid-template-columns: repeat(3, 1fr); // 一列三格
   gap: 32px; // 同時控制橫向與直向間距
 
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr); // 一列兩格
+    gap: 16px;
+  }
 }
 
 .coachTitleBox {
   width: 100%;
   display: flex;
-
+justify-content: flex-end;
 
   .all-coach {
     color: #ff8740;
@@ -126,6 +136,12 @@
     font-size: 80px;
     font-weight: 400;
     display: flex;
+
+    @media (max-width: 1024px) {
+      color: #3A2C19;
+      font-size: 36px;
+      letter-spacing: 10.8px;
+    }
   }
 }
 
