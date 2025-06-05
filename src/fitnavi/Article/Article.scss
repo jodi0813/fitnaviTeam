@@ -201,7 +201,7 @@
         line-height: 140%;
         /* 19.6px */
         letter-spacing: 1.4px;
-        width: 220px;
+        width: auto;
         border-bottom: 2px solid #3A2C19;
         padding-bottom: 10%;
         margin-bottom: 5%;
@@ -302,7 +302,7 @@
         line-height: normal;
         margin-bottom: 1%;
 
-    
+
       }
 
       p {
@@ -433,6 +433,10 @@
     border-radius: 20px;
     background: #DFDFDE;
     margin-right: 10px;
+
+    @media screen and (min-width: 390px) and (max-width: 1024px) {
+      display: none;
+    }
 
 
 
@@ -580,5 +584,151 @@
       text-align: justify;
       padding-right: 90px;
     }
+  }
+}
+
+
+//393-1024調整
+@media (min-width: 390px) and (max-width: 1024px) {
+  #card9 {
+    width: 100%;
+    display: block;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .article-banner .article-content .article-bannercontent {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px !important;
+    margin-top: 0px;
+  }
+
+  .bannerimg {
+    width: 100%;
+    height: 10rem !important;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .articlecard-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .table-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0px;
+    margin-top: 1rem !important;
+  }
+
+  .phase1 {
+    margin-top: 1rem;
+
+
+    h4 {
+      color: var(--gray, #989794) !important;
+      /* 段落/14 */
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 14px !important;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      /* 19.6px */
+      letter-spacing: 1.4px;
+    }
+  }
+
+  #Article-maincontent,
+  #phase3,
+  #phase4,
+  #phase5,
+  #phase6 {
+    h3 {
+      color: var(--dark, #3A2C19);
+      font-size: 20px !important;
+      font-style: normal;
+      font-weight: 700 !important;
+      line-height: normal;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 14px !important;
+      color: var(--dark, #3A2C19) !important;
+      font-style: normal;
+      font-weight: 500 !important;
+      line-height: 140% !important;
+      /* 19.6px */
+      letter-spacing: 1.4px !important;
+    }
+  }
+
+
+
+
+
+
+}
+
+
+.responsive-author {
+  display: none;
+
+  @media screen and (min-width: 390px) and (max-width: 1024px) {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50px;
+    border: 1px solid var(--white, #FEFCF7);
+  }
+
+  .articleWriter {
+    color: var(--gray, #989794);
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 1px;
+  }
+
+  .WriterName {
+    color: var(--primary, var(--primary, #FF8740));
+    /* 段落/14 */
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 10px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 19.6px */
+    letter-spacing: 1.4px;
   }
 }
