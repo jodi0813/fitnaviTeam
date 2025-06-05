@@ -165,7 +165,7 @@ export default function Article() {
                     </svg>
                     <div className="bottomcontent">
                         <div className="hashtag">
-                            <p>#增肌</p><p>#減脂</p><p>#營養策略</p><p>#健身新手</p><p>#體態重組</p>
+                            <p>#增肌</p><p>#減脂</p><p>#健康飲食</p><p>#蛋白質補充</p>
                         </div>
                     </div>
                 </div>
