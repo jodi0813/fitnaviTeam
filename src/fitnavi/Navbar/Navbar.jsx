@@ -2,13 +2,19 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.scss";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { HiX } from "react-icons/hi";
-
-
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 function Navbar() {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+const location = useLocation();
+  useEffect(() => {
+    const token = localStorage.getItem("token"); // 
+    setIsLoggedIn(!!token);
+  }, [location]);
+
 
   return (
     <header id="navbarHeader">
@@ -41,13 +47,27 @@ function Navbar() {
             </ul>
           </div>
 
-          <button
-            type="button"
-            className="nbr-login"
-            onClick={() => navigate("/MemberLogin")}
-          >
-            登入 / 註冊
-          </button>
+          {isLoggedIn ? (
+            <button
+              type="button"
+              className="nbr-login"
+              onClick={() => {
+                localStorage.removeItem("token"); // or loginUser
+                setIsLoggedIn(false);
+                navigate("/"); // 登出後導回首頁
+              }}
+            >
+              我的頁面
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="nbr-login"
+              onClick={() => navigate("/MemberLogin")}
+            >
+              登入 / 註冊
+            </button>
+          )}
 
           {/* 手機版全畫面選單 */}
           <div className={`mobile-menu ${isMenuOpen ? "show" : ""}`}>

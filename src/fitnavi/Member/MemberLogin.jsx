@@ -39,6 +39,8 @@ function MemberLogin() {
     }
 
     if (match !== null) {
+        localStorage.setItem("token", account); //  登入成功存進 localStorage
+      
       if (account === "Jackcoach@gmail.com") {
         navigate("/CoachDashboardList");
       } else {
