@@ -57,7 +57,7 @@ const location = useLocation();
                 navigate("/"); // 登出後導回首頁
               }}
             >
-              我的頁面
+              登出
             </button>
           ) : (
             <button
