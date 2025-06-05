@@ -45,6 +45,15 @@ export default function Article() {
                                 </svg>
                             </button>
                         </div>
+
+                        {/* 390-1024才會出現的區域 */}
+                        <div className="responsive-author">
+                            <img src="./images/nutritionist02.jpg" alt="" />
+                            <div>
+                                <p className="articleWriter">文章作者</p>
+                                <p className="WriterName">安娜 Anna</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="bannerimg">
