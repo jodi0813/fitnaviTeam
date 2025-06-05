@@ -26,9 +26,9 @@ function CoachCard({ imageSrc, role, name, hashtags = [], description, link }) {
             </span>
             <div className="hashtag">
               {hashtags.map((tag, index) => (
-                <a href="#" key={index}>
+                <span key={index}>
                   #{tag}
-                </a>
+                </span>
               ))}
             </div>
             <p className="coach-details">{description}</p>

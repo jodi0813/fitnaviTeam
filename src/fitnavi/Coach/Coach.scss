@@ -6,7 +6,9 @@
   margin: 0 auto;
   /* 左右外距自動，實現置中 */
   width: 100%;
-
+    @media (max-width: 1024px) {
+      padding:0px;
+    }
   .allCoachCards {
     display: flex;
     flex-direction: column;
@@ -71,7 +73,8 @@
     transition: border 0.2s ease;
     cursor: pointer;
     max-width: 517px;
-background-color: transparent;
+    background-color: transparent;
+
     &::placeholder {
       color: #aaa;
       transition: opacity 0.2s ease;
@@ -255,4 +258,3 @@ background-color: transparent;
     }
   }
 }
- 
