@@ -1261,7 +1261,7 @@
     margin: 80px auto 0 auto; // 上下可調整，左右 auto
     display: flex;
     flex-direction: row;
-    margin-top: 200px !important;
+    // margin-top: 200px !important;
 
 
 
@@ -1670,7 +1670,7 @@
     html,
     body {
         scroll-behavior: smooth;
-        overflow-x: hidden;
+        scroll-snap-type: y proximity; 
         width: 100vw;
     }
 
@@ -1678,7 +1678,8 @@
         padding: 120px 10px;
     }
 
-    // 主內容外層
+
+
     #Coachintro,
     #aboutCoach,
     #spe,
@@ -1690,10 +1691,39 @@
         min-width: 0;
         margin: 0 auto !important;
         box-sizing: border-box;
-        /* Ensure padding and border are included in the element's total width */
 
     }
 
+    #aboutCoach,
+    #spe,
+    #Coach-exp-cer,
+    #certificate,
+    #reservation1,
+    #coacharticle,
+    .Coach-comment-wrapper {
+        scroll-margin-top: 90px !important;
+        /* 依你的 nav 高度調整 */
+    }
+
+    //   .coachintro-all {
+    //     /* 這些保持不變，已經很響應式 */
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     width: 100%;
+    //     margin: 0 auto;
+    //     position: relative;
+    // }
+
+    // .coachintro-all > * {
+    //     width: 100%;
+    //     /* max-width: 1200px; 在此媒體查詢內功能上無效，但無害 */
+    //     /* 針對垂直間距進行調整 */
+    //     margin: 40px auto 0 auto; /* 將 80px 調整為 40px，或你認為更合適的值 */
+    //     padding: 0 16px;
+    //     box-sizing: border-box;
+    // }
 
     .Coachintro-person {
         display: flex !important;
@@ -1753,7 +1783,7 @@
             margin-top: 50px;
             display: flex;
             flex-direction: column;
-            gap: 100px;
+           
 
             .personinfo {
                 padding-right: 10px;
@@ -1868,7 +1898,7 @@
         box-sizing: border-box;
         margin: 0 auto;
         padding: 0 10px;
- 
+
 
         .about-title {
             gap: 18px !important;
@@ -1915,6 +1945,7 @@
 
     .coachsvg {
         position: relative;
+         right: 50px !important;
 
         p {
             top: -20px;
@@ -2063,7 +2094,7 @@
         width: 100% !important;
         margin-top: 80px !important;
         overflow-x: hidden;
-        /* Prevent horizontal scroll */
+  
 
 
         .ViewArticles {
@@ -2072,7 +2103,6 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-
             margin: 0 auto;
         }
 
@@ -2094,11 +2124,11 @@
         }
 
         .ViewArticles-left {
-            left: 10px;
+            left: 10px !important;
         }
 
         .ViewArticles-right {
-            right: 100px;
+            right: 100px !important;
         }
     }
 
@@ -2205,7 +2235,7 @@
 
     /* --- */
 
-    /* Make sure all images and buttons don't exceed their containers */
+
     img,
     button {
         max-width: 100% !important;
