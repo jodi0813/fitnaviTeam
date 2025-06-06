@@ -189,6 +189,8 @@
     /* 這裡去掉固定高度，讓它撐滿 */
     height: auto;
     padding-left: 10px;
+    position: sticky;
+    top: 0;
 
     .tabletitle {
       p {
