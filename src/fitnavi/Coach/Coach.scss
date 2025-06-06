@@ -36,24 +36,34 @@
   align-items: center;
 }
 
-.fiflterBt {
-  display: flex;
-  padding: 8px 24px;
-  align-items: center;
-  gap: 12px;
-  border-radius: 99px;
-  border: 1px solid #FF8740;
-  background: #FFF;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 140%;
-  /* 19.6px */
-  letter-spacing: 1.4px;
-  color: #FF8740;
+.fiflterPhone {
+  display: none;
 
-  img {
-    width: 24px;
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .fiflterBt {
+    display: flex;
+    padding: 8px 24px;
+    align-items: center;
+    gap: 12px;
+    border-radius: 99px;
+    border: 1px solid #FF8740;
+    background: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 140%;
+    /* 19.6px */
+    letter-spacing: 1.4px;
+    color: #FF8740;
+
+    img {
+      width: 24px;
+    }
   }
 }
 
@@ -183,38 +193,55 @@
   align-items: center;
   gap: 10px;
 
+  @media (max-width: 1024px) {
+    width: 100%;
+    flex-direction: column;
+    padding: 6px 20px;
+  }
+
   .favoriteBt1 {
     display: flex;
     gap: 24px;
-  }
 
-  .favoriteActive {
-    outline: none;
-    border-radius: 999px;
-    border: 1px solid #ff8740;
-    background: #ff8740;
-    color: #FFF;
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%;
-    padding: 6px 24px;
-    /* 24px */
-  }
+    @media (max-width: 1024px) {
+      border-radius: 999px;
+      background: #FFF;
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.10);
+      width: 100%;
+      padding: 8px;
+      gap: 0px;
+    }
 
-  .favoriteNoActive {
-    color: #3a2c19;
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%;
-    /* 24px */
-    border-radius: 999px;
-    border: 1px solid #ff8740;
-    background: #fefcf7;
-    padding: 6px 24px;
+    button {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+      border-radius: 999px;
+      padding: 6px 24px;
+      border: 1px solid #ff8740;
+
+      @media (max-width: 1024px) {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        border: none;
+        white-space: nowrap;
+        padding: 8px 0px;
+        background-color: #FFF;
+      }
+    }
+
+    .favoriteActive {
+      outline: none;
+      background: #ff8740;
+      color: #FFF;
+
+    }
+
+    .favoriteNoActive {
+      color: #3a2c19;
+    }
   }
 
   .favorite-count {
@@ -226,6 +253,13 @@
     line-height: 150%;
     gap: 10px;
     display: flex;
+
+    @media (max-width: 1024px) {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      padding: 8px 0px;
+    }
 
     .c-count {
       color: #ff8740;
