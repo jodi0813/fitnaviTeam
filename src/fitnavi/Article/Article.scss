@@ -495,164 +495,71 @@
 }
 
 
-// .bottom {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   padding: 16px 20px;
-//   box-sizing: border-box;
-//   max-width: 1920px;
-//   margin: 0 auto;
-//   min-width: 390px;
-//   width: 100%;
 
-//   .bottom-inner {
-//     width: 100%;
-//     max-width: 1440px; // 預設最大寬
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     box-sizing: border-box;
-
-//     @media (min-width: 800px) and (max-width: 1024px) {
-//       max-width: 1024px;
-//       width: 100%;
-//     }
-
-//     @media (min-width: 1025px) {
-//       max-width: 1440px;
-//     }
-//   }
-
-//   .bottom-line {
-//     width: 100%;
-//     max-width: 1024px;
-//     box-sizing: border-box;
-//     margin: 20px 0;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-
-//     svg {
-//       height: 2px;
-//       box-sizing: border-box;
-//       width: auto;
-//       display: block;
-//       margin-left: 0;
-//       margin-right: 10px;
-//     }
-
-//     // 390-800px：置中
-//     @media (min-width: 390px) and (max-width: 800px) {
-//       justify-content: center;
-
-//       svg {
-//         margin-right: 0;
-//         width: auto;
-//       }
-//     }
-
-//     // 800-1024px：靠左
-//     @media (min-width: 800px) and (max-width: 1024px) {
-//       justify-content: flex-start;
-
-//       svg {
-//         margin-right: 0;
-//         width: auto;
-//       }
-//     }
-
-//     // 1025px 以上：置中，寬度撐滿
-//     @media (min-width: 1025px) {
-//       max-width: 1440px;
-//       justify-content: center;
-
-//       svg {
-//         width: 100%;
-//         margin-right: 0;
-//       }
-//     }
-//   }
-
-//   .bottomcontent {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-//     width: 100%;
-
-//     .hashtag {
-//       display: flex;
-//       justify-content: flex-start;
-//       align-items: center;
-//       gap: 10px;
-//       width: 100%;
-//       max-width: 1024px;
-//       margin-top: 30px;
-//       box-sizing: border-box;
-
-//       @media (min-width: 800px) and (max-width: 1024px) {
-//         justify-content: flex-start;
-//         white-space: nowrap;
-//       }
-//     }
-
-//     p {
-//       display: flex;
-//       padding: 3px 10px;
-//       justify-content: center;
-//       align-items: center;
-//       border-radius: 8px;
-//       background: var(--primary, #FF8740);
-//       color: var(--white, #FEFCF7);
-//       text-align: center;
-//       font-family: "Noto Sans TC";
-//       font-size: 14px;
-//       font-style: normal;
-//       font-weight: 500;
-//       line-height: 140%;
-//       letter-spacing: 1.4px;
-//     }
-//   }
-// }
-
-// @media (min-width: 801px) and (max-width: 1024px) {
-//   .bottom .bottom-inner {
-//     width: 60%;
-//     padding-left: 10%;
-//   }
-
-//   .bottom .bottomcontent .hashtag {
-//     justify-content: flex-start;
-//     white-space: nowrap;
-//   }
-// }
 
 .bottom {
   width: 100%;
   background: var(--white, #FEFCF7);
   padding: 40px 0;
 
-  .bottom-inner {
-    width: 100%;
-    max-width: 1440px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
+  // .bottom-inner {
+  //   width: 100%;
+  //   max-width: 1440px;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   box-sizing: border-box;
 
-    @media (min-width: 801px) and (max-width: 1024px) {
-      max-width: 1024px;
-      width: 60%;
+  //   @media (min-width: 801px) and (max-width: 1024px) {
+  //     max-width: 1024px;
+  //     width: 70%;
 
-      align-items: flex-start; // 還原為 flex-start
-      margin-left: auto;
-    }
+  //     align-items: flex-start; // 還原為 flex-start
+  //     margin-left: auto;
+  //   }
+
+  //    @media (min-width: 1025px) and (max-width: 1440px) {
+     
+  //     margin: 0 auto; // 置中
+  //     align-items: center;
+  //     width: 70%;
+  //     max-width: 1000px;
+  //   }
+
+  //   @media (min-width: 1441px) {
+     
+  //     margin: 0 auto; // 置中
+  //     align-items: center;
+  //      width: 100%;
+  //   }
+  // }
+.bottom-inner {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+
+  @media (min-width: 801px) and (max-width: 1024px) {
+    max-width: 1024px;
+    width: 70%; // ok 這裡 1024px 可以自己設定想要 70%
+    align-items: flex-end;
+    margin-left: auto;
+  
   }
+
+  @media (min-width: 1025px) {
+    max-width: 1200px;   // 固定 1024px 和內容一致
+    width: 100%;         // 讓內容固定 1024px，不要用 70%，就能和內容齊
+    margin: 0 auto;
+    align-items: center; // 視需求可改 flex-start
+  }
+}
 
   .bottom-line {
     width: 100%;
-    max-width: 1024px;
+    // max-width: 1440px;
     box-sizing: border-box;
     margin: 20px 0;
     display: flex;
@@ -745,15 +652,15 @@
 }
 
 // 同步調整文章區塊寬度，使 bottom-inner 與 articlecard-content 寬度一致
-.articlecard-wrapper .articlecard-content {
-  width: 100%;
-  max-width: 1024px;
+// .articlecard-wrapper .articlecard-content {
+//   width: 100%;
+//   max-width: 1024px;
 
-  @media (min-width: 801px) and (max-width: 1024px) {
-    width: 70%;
-    padding-left: 10%;
-  }
-}
+//   @media (min-width: 801px) and (max-width: 1024px) {
+//     width: 70%;
+//     padding-left: 10%;
+//   }
+// }
 
 
 
