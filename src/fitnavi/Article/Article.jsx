@@ -159,15 +159,38 @@ export default function Article() {
 
             {/* 底部區塊 */}
             <section>
-                <div className="bottom">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1002" height="2" viewBox="0 0 1002 2" fill="none">
-                        <path d="M1 1L1001 1" stroke="var(--dark, #3A2C19)" strokeWidth="2" strokeLinecap="round" />
-                    </svg>
-                    <div className="bottomcontent">
-                        <div className="hashtag">
-                            <p>#增肌</p><p>#減脂</p><p>#健康飲食</p><p>#蛋白質補充</p>
+                <div className="bottom-wrapper">
+
+                   
+                    <div className="bottom" style={{ padding: '0 20px', boxSizing: 'border-box' }}>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="100%"
+                            height="2"
+                            viewBox="0 0 1002 2"
+                            preserveAspectRatio="none"
+                            fill="none"
+                        >
+                            <path
+                                d="M10 1 L992 1"
+                                stroke="var(--dark, #3A2C19)"
+                                strokeWidth="0.5px"
+                                strokeLinecap="round"
+                            />
+                        </svg>
+                        <div className="bottomcontent">
+                            <div className="hashtag">
+                                <p>#增肌</p>
+                                <p>#減脂</p>
+                                <p>#健康飲食</p>
+                                <p>#蛋白質補充</p>
+                            </div>
                         </div>
                     </div>
+
+
+
+            
                 </div>
             </section>
         </main>
