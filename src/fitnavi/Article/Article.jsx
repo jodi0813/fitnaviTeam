@@ -158,26 +158,28 @@ export default function Article() {
             </section>
 
             {/* 底部區塊 */}
-            <section>
-                <div className="bottom-wrapper">
+            {/* 底部區塊 */}
+            <section className="bottom-wrapper">
+                <div className="bottom">
+                    <div className="bottom-inner">
+                        <div className="bottom-line">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="100%"
+                                height="2"
+                                viewBox="0 0 1002 2"
+                                preserveAspectRatio="none"
+                                fill="none"
+                            >
+                                <path
+                                    d="M10 1 L992 1"
+                                    stroke="var(--dark, #3A2C19)"
+                                    strokeWidth="0.5px"
+                                    strokeLinecap="round"
+                                />
+                            </svg>
+                        </div>
 
-                   
-                    <div className="bottom" style={{ padding: '0 20px', boxSizing: 'border-box' }}>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="100%"
-                            height="2"
-                            viewBox="0 0 1002 2"
-                            preserveAspectRatio="none"
-                            fill="none"
-                        >
-                            <path
-                                d="M10 1 L992 1"
-                                stroke="var(--dark, #3A2C19)"
-                                strokeWidth="0.5px"
-                                strokeLinecap="round"
-                            />
-                        </svg>
                         <div className="bottomcontent">
                             <div className="hashtag">
                                 <p>#增肌</p>
@@ -188,11 +190,9 @@ export default function Article() {
                         </div>
                     </div>
 
-
-
-            
                 </div>
             </section>
+
         </main>
     );
 }
