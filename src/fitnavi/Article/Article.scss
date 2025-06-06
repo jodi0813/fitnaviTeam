@@ -492,47 +492,202 @@
   max-width: 1200px;
   margin: 0 auto;
 
-
-  .blank {
-    flex: 1;
-  }
 }
 
+
+// .bottom {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   padding: 16px 20px;
+//   box-sizing: border-box;
+//   max-width: 1920px;
+//   margin: 0 auto;
+//   min-width: 390px;
+//   width: 100%;
+
+//   .bottom-inner {
+//     width: 100%;
+//     max-width: 1440px; // 預設最大寬
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     box-sizing: border-box;
+
+//     @media (min-width: 800px) and (max-width: 1024px) {
+//       max-width: 1024px;
+//       width: 100%;
+//     }
+
+//     @media (min-width: 1025px) {
+//       max-width: 1440px;
+//     }
+//   }
+
+//   .bottom-line {
+//     width: 100%;
+//     max-width: 1024px;
+//     box-sizing: border-box;
+//     margin: 20px 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     svg {
+//       height: 2px;
+//       box-sizing: border-box;
+//       width: auto;
+//       display: block;
+//       margin-left: 0;
+//       margin-right: 10px;
+//     }
+
+//     // 390-800px：置中
+//     @media (min-width: 390px) and (max-width: 800px) {
+//       justify-content: center;
+
+//       svg {
+//         margin-right: 0;
+//         width: auto;
+//       }
+//     }
+
+//     // 800-1024px：靠左
+//     @media (min-width: 800px) and (max-width: 1024px) {
+//       justify-content: flex-start;
+
+//       svg {
+//         margin-right: 0;
+//         width: auto;
+//       }
+//     }
+
+//     // 1025px 以上：置中，寬度撐滿
+//     @media (min-width: 1025px) {
+//       max-width: 1440px;
+//       justify-content: center;
+
+//       svg {
+//         width: 100%;
+//         margin-right: 0;
+//       }
+//     }
+//   }
+
+//   .bottomcontent {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100%;
+
+//     .hashtag {
+//       display: flex;
+//       justify-content: flex-start;
+//       align-items: center;
+//       gap: 10px;
+//       width: 100%;
+//       max-width: 1024px;
+//       margin-top: 30px;
+//       box-sizing: border-box;
+
+//       @media (min-width: 800px) and (max-width: 1024px) {
+//         justify-content: flex-start;
+//         white-space: nowrap;
+//       }
+//     }
+
+//     p {
+//       display: flex;
+//       padding: 3px 10px;
+//       justify-content: center;
+//       align-items: center;
+//       border-radius: 8px;
+//       background: var(--primary, #FF8740);
+//       color: var(--white, #FEFCF7);
+//       text-align: center;
+//       font-family: "Noto Sans TC";
+//       font-size: 14px;
+//       font-style: normal;
+//       font-weight: 500;
+//       line-height: 140%;
+//       letter-spacing: 1.4px;
+//     }
+//   }
+// }
+
+// @media (min-width: 801px) and (max-width: 1024px) {
+//   .bottom .bottom-inner {
+//     width: 60%;
+//     padding-left: 10%;
+//   }
+
+//   .bottom .bottomcontent .hashtag {
+//     justify-content: flex-start;
+//     white-space: nowrap;
+//   }
+// }
+
 .bottom {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  // gap: 20px;
-  // padding: 0 20px;
-  // width: 100%;
-  // max-width: 1440px;
-  // margin: 0 auto;
-  // box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: 0 auto;
-  padding: 16px;
-  min-width: 390px;
-
-
   width: 100%;
-  max-width: 1920px;
-  /* 你可以設定最大寬度 */
-  margin: 0 auto;
-  padding: 0 20px;
-  /* 外部左右間距 */
-  box-sizing: border-box;
+  background: var(--white, #FEFCF7);
+  padding: 40px 0;
 
-
-  svg {
-    display: block;
+  .bottom-inner {
     width: 100%;
-    height: 2px;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-sizing: border-box;
-    margin: auto;
+
+    @media (min-width: 801px) and (max-width: 1024px) {
+      max-width: 1024px;
+      width: 60%;
+
+      align-items: flex-start; // 還原為 flex-start
+      margin-left: auto;
+    }
+  }
+
+  .bottom-line {
+    width: 100%;
+    max-width: 1024px;
+    box-sizing: border-box;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      height: 2px;
+      box-sizing: border-box;
+      width: 100%; // 滿寬填滿父容器
+      display: block;
+      margin-left: 0;
+      margin-right: 10px;
+    }
+
+    @media (min-width: 390px) and (max-width: 800px) {
+      justify-content: center;
+
+      svg {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+
+    @media (min-width: 801px) and (max-width: 1024px) {
+      justify-content: flex-end !important;
+
+      svg {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%; // 填滿父元素
+      }
+    }
   }
 
   .bottomcontent {
@@ -541,7 +696,11 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    // margin: 20px 0;
+
+    @media (min-width: 390px) and (max-width: 800px) {
+      justify-content: center;
+      align-items: center;
+    }
 
     .hashtag {
       display: flex;
@@ -553,6 +712,18 @@
       margin-top: 30px;
       box-sizing: border-box;
 
+      @media (min-width: 390px) and (max-width: 800px) {
+        padding-left: 10px;
+      }
+
+      @media (min-width: 801px) and (max-width: 1024px) {
+        justify-content: flex-start;
+        white-space: nowrap;
+
+      }
+
+
+
       p {
         display: flex;
         padding: 3px 10px;
@@ -560,21 +731,30 @@
         align-items: center;
         border-radius: 8px;
         background: var(--primary, #FF8740);
-        color: var(--white, var(--white, #FEFCF7));
+        color: var(--white, #FEFCF7);
         text-align: center;
-
-        /* 段落/14 */
         font-family: "Noto Sans TC";
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 140%;
-        /* 19.6px */
         letter-spacing: 1.4px;
       }
     }
   }
 }
+
+// 同步調整文章區塊寬度，使 bottom-inner 與 articlecard-content 寬度一致
+.articlecard-wrapper .articlecard-content {
+  width: 100%;
+  max-width: 1024px;
+
+  @media (min-width: 801px) and (max-width: 1024px) {
+    width: 70%;
+    padding-left: 10%;
+  }
+}
+
 
 
 
@@ -670,16 +850,7 @@
 
 
 
-@media (min-width: 800px) and (max-width: 1024px) {
-  .bottom {
-    padding: 16px;
-    align-self: flex-end;
-    margin: 0;
-    margin-left: auto;
-  }
 
-
-}
 
 
 
