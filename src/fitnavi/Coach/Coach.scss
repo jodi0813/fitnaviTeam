@@ -9,7 +9,7 @@
 
   @media (max-width: 1024px) {
     padding: 0px;
-    
+
   }
 
   .allCoachCards {
@@ -20,7 +20,10 @@
     margin: 0 auto;
     gap: 25px;
     margin-top: 59px;
-     @media (max-width: 1024px) {    margin-top: 0px;}
+
+    @media (max-width: 1024px) {
+      margin-top: 0px;
+    }
   }
 }
 
@@ -33,15 +36,39 @@
   align-items: center;
 }
 
+.fiflterBt {
+  display: flex;
+  padding: 8px 24px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 99px;
+  border: 1px solid #FF8740;
+  background: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+  color: #FF8740;
+
+  img {
+    width: 24px;
+  }
+}
+
 #personal-search-form {
   display: flex;
   // min-width: 916px;
   align-items: center;
   gap: 10px;
   width: 100%;
+
   @media (max-width: 1024px) {
- flex-direction: column;
+    display: none;
+
   }
+
   #area,
   #trainingNeeds,
   #sex {
@@ -117,9 +144,9 @@
 .coachNineCards {
   display: grid;
   grid-template-columns: repeat(3, 1fr); // 一列三格
-  gap: 32px; // 同時控制橫向與直向間距
+  gap: 16px; // 同時控制橫向與直向間距
 
-  @media (max-width: 1024px) {
+  @media (max-width: 600px) {
     grid-template-columns: repeat(2, 1fr); // 一列兩格
     gap: 16px;
   }
@@ -128,7 +155,10 @@
 .coachTitleBox {
   width: 100%;
   display: flex;
-justify-content: flex-end;
+
+  @media (max-width: 1024px) {
+    justify-content: flex-end;
+  }
 
   .all-coach {
     color: #ff8740;
