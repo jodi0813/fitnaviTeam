@@ -669,18 +669,17 @@
 }
 
 
-//800-1024
-// @media (min-width: 800px) and (max-width: 1024px) {
-//   .bottom {
-//     padding: 16px;
-//     width: 70%;
-//     align-self: flex-end;
-//     margin: 0;
-//     margin-left: auto;
-//   }
+
+@media (min-width: 800px) and (max-width: 1024px) {
+  .bottom {
+    padding: 16px;
+    align-self: flex-end;
+    margin: 0;
+    margin-left: auto;
+  }
 
 
-// }
+}
 
 
 
