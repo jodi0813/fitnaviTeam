@@ -9,7 +9,7 @@ function Navbar() {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-const location = useLocation();
+  const location = useLocation();
   useEffect(() => {
     const token = localStorage.getItem("token"); // 
     setIsLoggedIn(!!token);

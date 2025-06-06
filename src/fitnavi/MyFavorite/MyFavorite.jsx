@@ -109,7 +109,7 @@ function MyFavorite() {
               }
               onClick={() => setActiveTab("CoachFavoriteCards")}
             >
-              教練
+              健身教練
             </button>
             <button
               className={

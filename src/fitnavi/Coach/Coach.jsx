@@ -384,7 +384,7 @@ function Coach() {
               </button>
             </form>
           </div>
-          <div className="fiflterBt">
+          <div className="fiflterPhone">
             <button className="fiflterBt">篩選<img src="./images/filter.svg" alt="篩選按鈕" /></button>
             </div>
           <div className="coachTitleBox">
