@@ -19,12 +19,40 @@
     box-sizing: border-box;
 }
 
+.Joinus-introduction {
+    .BringPro {
+        color: var(--primary, var(--primary, #FF8740));
+        /* heading/標題4/Bold */
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2px;
+        margin-top: 1rem;
+    }
+
+    .BringPro-intro {
+        color: var(--dark, #3A2C19);
+        /* 段落/14 */
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        /* 19.6px */
+        letter-spacing: 1.4px;
+        margin-top: 10px;
+    }
+
+}
+
 .Joinus-form {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 5%;
     gap: 150px;
 
 
@@ -68,9 +96,9 @@
                     flex-direction: row;
                     align-items: baseline;
                     margin-bottom: 33px;
-                    
 
-                  
+
+
 
                     .imcoach-Iam {
                         color: var(--dark, #3A2C19);
@@ -384,7 +412,7 @@
                 opacity: 0;
                 // transform: translateX(10px); // 預設略偏右
                 transition: opacity 0.3s ease, transform 0.3s ease;
-                
+
             }
 
             &:hover {

@@ -147,7 +147,11 @@ export default function Article() {
 
                     {/* 作者介紹 */}
                     <div className="article-author">
-                        <div className="author-info">
+                        <div
+                            className="author-info"
+                            style={{ cursor: "pointer" }}
+                            onClick={() => navigate('/NutriIntro')}
+                        >
                             <img src="./images/nutritionist02.jpg" alt="營養師安娜頭像" />
                             <p>安娜 Anna</p>
                         </div>
