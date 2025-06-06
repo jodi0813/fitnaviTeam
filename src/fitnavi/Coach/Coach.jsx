@@ -284,6 +284,7 @@ function Coach() {
   const [keyword, setKeyword] = useState("");
   const [filteredCoaches, setFilteredCoaches] = useState(coachList);
   const [currentPage, setCurrentPage] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -332,14 +333,22 @@ function Coach() {
       }, 0);
     }
   }, []);
-
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  /* 小尺寸篩選按鈕開關控制 */
+  const [showFilter, setShowFilter] = useState(false);
   return (
     <>
       <div id="coachMain">
         <MainTitle title1="健身教練" title2="找到專屬你的健身教練" />
         <div className="allCoachCards">
-          <div className="searchBox">
-            <form
+          {/* <div className="searchBox"> */}
+          {/* <form
               action=""
               method="post"
               onSubmit={(e) => e.preventDefault()}
@@ -382,13 +391,132 @@ function Coach() {
               <button type="button" className="submit" onClick={handleSearch}>
                 搜尋
               </button>
-            </form>
+            </form> */}
+          {/* </div> */}
+          {/* <div className="coachTitleBox">
+            <span className="all-coach">全部教練</span>
+          </div> */}
+
+          {/* 小尺寸篩選 */}
+          <div className="filterSection">
+            {isMobile ? (
+              <>
+                <div className="coachTitleBox">
+                  <span className="all-coach">全部教練</span>
+                </div>
+
+                <div className="fiflterPhone">
+                  <div>
+                  <button
+                    className="fiflterBt"
+                    onClick={() => setShowFilter(!showFilter)}
+                  >
+                    篩選
+                    <img src="./images/filter.svg" alt="篩選按鈕" />
+                  </button>
+                  </div>
+                </div>
+                {showFilter && (
+                  <form
+                    action=""
+                    method="post"
+                    onSubmit={(e) => e.preventDefault()}
+                    id="personal-search-form"
+                    title="健身教練搜尋"
+                    className="searchCoachBox mobileSearch"
+                  >
+                    <CustomDropdown
+                      label="選擇地區"
+                      selected={
+                        selectedCity === "all" || selectedCity === "" ? "全部區域" : selectedCity
+                      }
+                      onSelect={setSelectedCity}
+                      options={["全部區域", ...cities]}
+                    />
+                    <CustomDropdown
+                      label="訓練需求"
+                      selected={
+                        selectedHashtag === "all" || selectedHashtag === "" ? "全部訓練需求" : selectedHashtag
+                      }
+                      onSelect={setSelectedHashtag}
+                      options={["全部訓練需求", ...trainingOptions]}
+                    />
+                    <CustomDropdown
+                      label="性別"
+                      selected={
+                        selectedSex === "all" || selectedSex === "" ? "全部性別" : selectedSex
+                      }
+                      onSelect={setSelectedSex}
+                      options={["全部性別", "男", "女"]}
+                    />
+                    <input
+                      type="search"
+                      name="keyword-search"
+                      id="keyword-search"
+                      placeholder="關鍵字搜尋"
+                      value={keyword}
+                      onChange={(e) => setKeyword(e.target.value)}
+                    ></input>
+                    <button type="button" className="submit" onClick={handleSearch}>
+                      搜尋
+                    </button>
+                  </form>
+
+                )}
+              </>)
+              : (
+                <>
+                  <form
+                    action=""
+                    method="post"
+                    onSubmit={(e) => e.preventDefault()}
+                    id="personal-search-form"
+                    title="健身教練搜尋"
+                    className="searchCoachBox desktopSearch"
+                  >
+                    <CustomDropdown
+                      label="選擇地區"
+                      selected={
+                        selectedCity === "all" || selectedCity === "" ? "全部區域" : selectedCity
+                      }
+                      onSelect={setSelectedCity}
+                      options={["全部區域", ...cities]}
+                    />
+                    <CustomDropdown
+                      label="訓練需求"
+                      selected={
+                        selectedHashtag === "all" || selectedHashtag === "" ? "全部訓練需求" : selectedHashtag
+                      }
+                      onSelect={setSelectedHashtag}
+                      options={["全部訓練需求", ...trainingOptions]}
+                    />
+                    <CustomDropdown
+                      label="性別"
+                      selected={
+                        selectedSex === "all" || selectedSex === "" ? "全部性別" : selectedSex
+                      }
+                      onSelect={setSelectedSex}
+                      options={["全部性別", "男", "女"]}
+                    />
+                    <input
+                      type="search"
+                      name="keyword-search"
+                      id="keyword-search"
+                      placeholder="關鍵字搜尋"
+                      value={keyword}
+                      onChange={(e) => setKeyword(e.target.value)}
+                    ></input>
+                    <button type="button" className="submit" onClick={handleSearch}>
+                      搜尋
+                    </button>
+                  </form>
+                  <div className="coachTitleBox">
+                    <span className="all-coach">全部教練</span>
+                  </div>
+                </>
+              )
+            }
           </div>
-          <div className="fiflterPhone">
-            <button className="fiflterBt">篩選<img src="./images/filter.svg" alt="篩選按鈕" /></button>
-            </div>
-          <div className="coachTitleBox">
-            <span className="all-coach">全部教練</span></div>
 
           {currentItems.length === 0 ? (
             <div className="noResult">找不到符合條件的教練</div>

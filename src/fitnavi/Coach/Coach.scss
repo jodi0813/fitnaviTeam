@@ -2,14 +2,12 @@
 
 #coachMain {
   padding: 120px 50px;
-  /* 上下內距 */
   margin: 0 auto;
   /* 左右外距自動，實現置中 */
   width: 100%;
 
   @media (max-width: 1024px) {
     padding: 0px;
-
   }
 
   .allCoachCards {
@@ -27,24 +25,18 @@
   }
 }
 
-.searchBox {
-  display: flex;
-  justify-content: center;
-  // padding: 0px 150px;
+
+.filterSection {
   width: 100%;
-  // min-width: 916px;
-  align-items: center;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 }
 
 .fiflterPhone {
-  display: none;
-
-  @media (max-width: 1024px) {
-    display: flex;
+  display: flex;
     justify-content: flex-end;
-    width: 100%;
-  }
-
   .fiflterBt {
     display: flex;
     padding: 8px 24px;
@@ -57,7 +49,6 @@
     font-style: normal;
     font-weight: 900;
     line-height: 140%;
-    /* 19.6px */
     letter-spacing: 1.4px;
     color: #FF8740;
 
@@ -67,16 +58,23 @@
   }
 }
 
-#personal-search-form {
+.searchCoachBox {
   display: flex;
   // min-width: 916px;
   align-items: center;
   gap: 10px;
   width: 100%;
 
-  @media (max-width: 1024px) {
-    display: none;
+  &.mobileSearch {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
 
+  &.desktopSearch {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
   }
 
   #area,
@@ -93,7 +91,7 @@
     outline: none;
     flex: 1;
     max-width: 225px;
-    // appearance: none;
+
   }
 
   option {
@@ -176,11 +174,13 @@
     font-size: 80px;
     font-weight: 400;
     display: flex;
+    width: 100%;
 
     @media (max-width: 1024px) {
       color: #3A2C19;
       font-size: 36px;
       letter-spacing: 10.8px;
+      justify-content: flex-end;
     }
   }
 }
