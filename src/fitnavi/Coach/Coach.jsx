@@ -333,6 +333,8 @@ function Coach() {
       }, 0);
     }
   }, []);
+
+  /* 小尺寸 */
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 1024);
@@ -347,56 +349,7 @@ function Coach() {
       <div id="coachMain">
         <MainTitle title1="健身教練" title2="找到專屬你的健身教練" />
         <div className="allCoachCards">
-          {/* <div className="searchBox"> */}
-          {/* <form
-              action=""
-              method="post"
-              onSubmit={(e) => e.preventDefault()}
-              id="personal-search-form"
-              title="健身教練搜尋"
-            >
-              <CustomDropdown
-                label="選擇地區"
-                selected={
-                  selectedCity === "all" || selectedCity === "" ? "全部區域" : selectedCity
-                }
-                onSelect={setSelectedCity}
-                options={["全部區域", ...cities]}
-              />
-              <CustomDropdown
-                label="訓練需求"
-                selected={
-                  selectedHashtag === "all" || selectedHashtag === "" ? "全部訓練需求" : selectedHashtag
-                }
-                onSelect={setSelectedHashtag}
-                options={["全部訓練需求", ...trainingOptions]}
-              />
-              <CustomDropdown
-                label="性別"
-                selected={
-                  selectedSex === "all" || selectedSex === "" ? "全部性別" : selectedSex
-                }
-                onSelect={setSelectedSex}
-                options={["全部性別", "男", "女"]}
-              />
-              <label htmlFor="keyword-search"></label>
-              <input
-                type="search"
-                name="keyword-search"
-                id="keyword-search"
-                placeholder="關鍵字搜尋"
-                value={keyword}
-                onChange={(e) => setKeyword(e.target.value)}
-              ></input>
-              <button type="button" className="submit" onClick={handleSearch}>
-                搜尋
-              </button>
-            </form> */}
-          {/* </div> */}
-          {/* <div className="coachTitleBox">
-            <span className="all-coach">全部教練</span>
-          </div> */}
-
+       
           {/* 小尺寸篩選 */}
           <div className="filterSection">
             {isMobile ? (
@@ -404,7 +357,6 @@ function Coach() {
                 <div className="coachTitleBox">
                   <span className="all-coach">全部教練</span>
                 </div>
-
                 <div className="fiflterPhone">
                   <div>
                   <button
@@ -461,7 +413,6 @@ function Coach() {
                       搜尋
                     </button>
                   </form>
-
                 )}
               </>)
               : (
