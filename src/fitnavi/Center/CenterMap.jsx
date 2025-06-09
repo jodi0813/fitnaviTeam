@@ -269,7 +269,7 @@ function CenterMap() {
 
                 >
                   <span>       請選擇您的篩選條件</span>
-           
+
                   <img
                     src="./images/dropdown.svg"
                     alt="篩選按鈕"
@@ -418,26 +418,26 @@ function CenterMap() {
             <div className="photosNumber">
               共有 <span>{filteredResults.length}</span> 間符合條件的場館
             </div>
+            <div className="gymCards">
+              {filteredResults.map((gym, i) => (
+                <div
+                  className={`gymCard ${activeGymIndex === i ? "active" : ""}`}
+                  key={i}
+                  onClick={() => {
+                    setActiveGymIndex(i);
+                    setActiveLatLng(gym.latlng);
+                  }}
+                >
+                  <img src={gym.img} alt={gym.name} className="centerPic" />
+                  {/* 遮罩效果：只有沒被選中的才顯示 */}
+                  <div className="overlay" />
 
-            {filteredResults.map((gym, i) => (
-              <div
-                className={`gymCard ${activeGymIndex === i ? "active" : ""}`}
-                key={i}
-                onClick={() => {
-                  setActiveGymIndex(i);
-                  setActiveLatLng(gym.latlng);
-                }}
-              >
-                <img src={gym.img} alt={gym.name} className="centerPic" />
-                {/* 遮罩效果：只有沒被選中的才顯示 */}
-                <div className="overlay" />
-
-                <div className="gymCardText">
-                  <h3>{gym.name}</h3>
-                  <p>{gym.features.map((f) => `#${f}`).join(" ")}</p>
+                  <div className="gymCardText">
+                    <h3>{gym.name}</h3>
+                    <p>{gym.features.map((f) => `#${f}`).join(" ")}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}</div>
           </div>
         </div>
 

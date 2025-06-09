@@ -7,6 +7,7 @@
 
   @media (max-width: 1024px) {
     padding: 0px;
+
   }
 
   .mapSearchAll {
@@ -39,7 +40,7 @@
         }
 
         .centerFilterBt {
-          width:90%;
+          width: 60%;
           padding: 12px;
           background-color: #fff;
           border: 0.5px solid #989794;
@@ -50,7 +51,13 @@
           margin-bottom: 1rem;
           display: flex;
           justify-content: space-between;
-          img{
+          margin: 0 auto;
+
+          @media (max-width: 768px) {
+            width: 90%;
+          }
+
+          img {
             width: 30px;
             height: 30px;
           }
@@ -159,8 +166,10 @@
         padding-right: 4px;
 
         @media (max-width: 1024px) {
-          flex-direction: row;
+          width: 100%;
+          height: 100%;
         }
+
 
         .photosNumber {
           color: #3a2c19;
@@ -183,57 +192,78 @@
           }
         }
 
-        .gymCard {
-          position: relative;
-          cursor: pointer;
-          width: 100%;
-          height: 162px;
+        .gymCards {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
 
-          &.active {
-            border: 5px solid #ff8740; // 橘色邊框
-            border-radius: 12px;
-            box-sizing: border-box;
+          @media (max-width: 1024px) {
+            flex-direction: row;
+            overflow-x: auto;
+            overflow-y: unset;
+            width: 100%;
+            /* 讓卡片不換行 */
+            white-space: nowrap;
+
+            /* 可視需要讓每張卡片固定寬度 */
+            .gymCard {
+              min-width: 220px;
+              max-width: 220px;
+              flex: 0 0 auto;
+            }
           }
 
-          .centerPic {
+          .gymCard {
+            position: relative;
+            cursor: pointer;
             width: 100%;
             height: 162px;
 
-            border-radius: 8px;
-            display: block;
-            object-fit: cover;
-            overflow: hidden;
-          }
-
-          .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4); // 遮罩的黑色與透明度
-            z-index: 1;
-            transition: opacity 0.3s ease;
-            border-radius: 8px;
-          }
-
-          .gymCardText {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            padding: 16px;
-            color: white;
-            z-index: 2;
-
-            h3 {
-              font-size: 14px;
+            &.active {
+              border: 5px solid #ff8740; // 橘色邊框
+              border-radius: 12px;
+              box-sizing: border-box;
             }
 
-            p {
-              margin: 0;
-              font-size: 12px;
-              line-height: 1.4;
-              font-weight: 400;
+            .centerPic {
+              width: 100%;
+              height: 162px;
+              border-radius: 8px;
+              display: block;
+              object-fit: cover;
+              overflow: hidden;
+            }
+
+            .overlay {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.4); // 遮罩的黑色與透明度
+              z-index: 1;
+              transition: opacity 0.3s ease;
+              border-radius: 8px;
+            }
+
+            .gymCardText {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              padding: 16px;
+              color: white;
+              z-index: 2;
+
+              h3 {
+                font-size: 14px;
+              }
+
+              p {
+                margin: 0;
+                font-size: 12px;
+                line-height: 1.4;
+                font-weight: 400;
+              }
             }
           }
         }
@@ -246,6 +276,11 @@
       width: 50%;
       position: relative;
       overflow: hidden;
+
+      @media (max-width: 1024px) {
+        margin: 0 auto;
+        width: 100%;
+      }
 
       .mapPopup {
 
