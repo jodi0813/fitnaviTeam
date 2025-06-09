@@ -124,23 +124,45 @@ function Footer() {
 
     const renderMobileFooter = () => (
         <section id="footer-s">
-            <button
+            {/* <button
                 className="Back-to-top-button"
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 style={{ cursor: 'pointer' }}
             >
                 <p>回頂部</p>
                 <img src="./images/goTop.gif" alt="回頂部" />
-            </button>
+            </button> */}
 
             <div className="footerwrapper">
-                {/* 手機版 Footer 不同架構 */}
+
                 <div className="footer-overlaytext">
                     <div className="footer-columntext">
-                        <div className="explore">
-                            <h4>網站導覽</h4>
-                            <p onClick={() => { navigate('/Coach'); window.scrollTo(0, 0); }}>健身教練</p>
+                        <div className="footer-logo">
+                            <img src="./images/favicon-white.svg" alt="" />
                         </div>
+
+
+                        <div className="slogan-login">
+                            <p>每一次挑戰都是突破！</p>
+                            <button>登入/註冊</button>
+                        </div>
+
+                        <div className="footer-contact">
+                            <div className="footer-contact-content">
+                                <p>CONTACT</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2" height="72" viewBox="0 0 2 72" fill="none">
+                                    <path d="M1 1C1.8 5 1.33333 50 1 72" stroke="#FEFCF7" />
+                                </svg>
+                            </div>
+
+                            <div className="footer-icon">
+                                <img src="./images/instagram.svg" alt="" />
+                                <img src="./images/facebook.svg" alt="" />
+                                <img src="./images/line.svg" alt="" />
+                            </div>
+                        </div>
+
+
                     </div>
 
                     <div className="copyright">

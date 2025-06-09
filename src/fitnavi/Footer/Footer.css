@@ -332,12 +332,17 @@ a {
     #footer-m .footer-columntext {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
+        /* 空間均分 */
         align-items: center;
         gap: 50px;
+
         position: absolute;
         top: 30%;
-        left: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        /* 居中 */
+        width: 80%;
 
     }
 
@@ -406,7 +411,9 @@ a {
     }
 
     #footer-m .footer-icon {
-        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
 
         img {
             width: 20px;
@@ -423,6 +430,143 @@ a {
         font-weight: 500;
         line-height: 140%;
         /* 16.8px */
+        letter-spacing: 1.2px;
+    }
+
+
+}
+
+@media (min-width: 393px) and (max-width: 768px) {
+
+   
+
+    #footer-s {
+        flex-shrink: 0;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        padding: 0;
+        margin: 0;
+    }
+
+    #footer-s .footerwrapper {
+        background-image: url('/images/Footer393-768.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        height: 183px;
+        min-height: 183px;
+        max-height: 183px;
+        position: relative;
+    }
+
+    #footer-s .footer-overlaytext {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    #footer-s .footer-columntext {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 500px;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+
+    #footer-s .slogan-login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #footer-s .slogan-login p {
+        color: #FFF;
+        text-align: center;
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: 1.2px;
+        white-space: nowrap;
+    }
+
+    #footer-s .slogan-login button {
+        display: flex;
+        padding: 8px 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        border: 0.5px solid var(--primary, #FF8740);
+        background: #FFF;
+        color: var(--primary, var(--primary, #FF8740));
+        text-align: center;
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 1.2px;
+        white-space: nowrap;
+    }
+
+    #footer-s .footer-contact {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    #footer-s .footer-contact .footer-contact-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    #footer-s .footer-contact p {
+        color: var(--white, var(--white, #FEFCF7));
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 1.2px;
+        transform: rotate(90deg);
+        margin-top: 0px;
+    }
+
+    #footer-s .footer-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #footer-s .footer-icon img {
+        width: 20px;
+        height: 20px;
+    }
+
+    #footer-s .copyright {
+        color: var(--white, var(--white, #FEFCF7));
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
         letter-spacing: 1.2px;
     }
 }
