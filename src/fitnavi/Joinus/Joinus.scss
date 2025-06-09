@@ -136,10 +136,21 @@
                 align-items: center;
                 gap: 14px;
                 margin-bottom: 11px;
+                padding-left: 30px;
 
 
                 h4 {
-                    margin-left: 40px;
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    opacity: 0.6;
                 }
 
                 .imcoach-youcan-line {
@@ -150,12 +161,12 @@
             }
 
             p {
-                margin-top: 12px;
-                margin-left: 70px;
+                margin-top: 14px;
+                padding-left: 30px;
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
-                font-size: 14px;
+                font-size: 12px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 140%;
@@ -171,10 +182,20 @@
                 align-items: center;
                 gap: 14px;
                 margin-bottom: 11px;
-                margin-top: 33px;
+                padding-left: 30px;
 
                 h4 {
-                    margin-left: 40px;
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    opacity: 0.6;
                 }
 
                 .imcoach-youhaveto-line {
@@ -195,7 +216,7 @@
             width: 320px;
             height: 50px;
             padding: 8px 84px;
-            margin-top: 50px;
+            margin-top: 30px;
             border-radius: 999px;
             background: var(--primary, #FF8740);
 
@@ -319,6 +340,8 @@
                         letter-spacing: 3.6px;
                     }
 
+
+
                 }
             }
 
@@ -332,9 +355,445 @@
                 align-items: center;
                 gap: 14px;
                 margin-bottom: 11px;
+                padding-left: 30px;
 
                 h4 {
-                    margin-left: 40px;
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    opacity: 0.6;
+                }
+            }
+
+            .imnutrionist-youcan-line {
+                width: 60%;
+                height: 0.6px;
+                background: #3A2C19;
+            }
+        }
+
+        p {
+            margin-top: 14px;
+            padding-left: 30px;
+            color: var(--dark, #3A2C19);
+            /* 段落/14 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+        }
+
+        .imnutrionist-youhaveto {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 11px;
+            padding-left: 30px;
+
+            h4 {
+                color: var(--dark, #3A2C19);
+                text-align: center;
+                /* 段落/14 */
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+                opacity: 0.6;
+            }
+
+            .imnutrionist-youhaveto-line {
+                width: 60%;
+                height: 0.6px;
+                background: #3A2C19;
+            }
+        }
+
+    }
+
+    .imnutrionist-joinbutton {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        width: 320px;
+        height: 50px;
+        padding: 8px 84px;
+        margin-top: 30px;
+        border-radius: 999px;
+        background: var(--primary, #FF8740);
+
+        color: var(--white, var(--white, #FEFCF7));
+        text-align: center;
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 140%;
+        /* 22.4px */
+        letter-spacing: 1.6px;
+
+        img {
+            width: 20px;
+            height: 23px;
+            position: absolute;
+            right: 80px;
+            opacity: 0;
+            // transform: translateX(10px); // 預設略偏右
+            transition: opacity 0.3s ease, transform 0.3s ease;
+
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 4px 8px 0px 0px #3A2C19;
+            border: none;
+            outline: none;
+
+            img {
+                opacity: 1;
+                // transform: translateX(0); // icon 滑進來
+            }
+
+            span {
+                transform: translateX(-10px);
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+
+        }
+
+        &:active {
+            // transform: translateY(-4px);
+            box-shadow: 3px 6px 0px 0px #3A2C19;
+            font-size: 14px;
+            border: none;
+            outline: none;
+            transform: translate(2px, 2px);
+
+
+            img {
+                width: 18px;
+                height: 20px;
+            }
+        }
+    }
+
+}
+
+
+
+//響應式
+//801-1024px
+@media (min-width:801px) and (max-width:1024px) {
+
+
+
+    .Joinus-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        /* 不用 center，圖片可以靠上，靠 margin 控制 */
+        margin-top: 5%;
+        gap: 50px;
+    }
+
+    .imnutrionist-Iam,
+    .imcoach-Iam {
+        color: var(--dark, #3A2C19);
+        font-family: "Dela Gothic One";
+        font-size: 14px !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        /* 285.714% */
+        letter-spacing: 1.4px;
+        white-space: nowrap;
+    }
+
+    .imcoach-coach,
+    .imnutrionist-nutrionist {
+        color: var(--primary, var(--primary, #FF8740));
+        font-family: "Dela Gothic One";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        /* 166.667% */
+        letter-spacing: 2.4px;
+        white-space: nowrap;
+    }
+
+    .imcoach {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        form {
+            border-radius: 24px;
+            background: #FFF;
+            box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.25);
+            height: 290px !important;
+            width: 330px !important;
+            position: relative;
+
+            .coach-label-img {
+                display: flex;
+                flex-direction: row;
+                gap: 150px;
+                position: relative;
+                height: 50px;
+
+
+                img {
+                    position: absolute;
+                    top: 5rem !important;
+                    left: -2rem !important;
+                    max-width: none !important;
+                    max-height: none !important;
+                    object-fit: contain;
+                    width: 150px !important;
+                    height: 200px !important;
+                }
+
+
+                label {
+                    position: relative;
+                    top: -15px;
+                    left: 20px;
+                    display: inline-flex;
+                    flex-direction: row;
+                    align-items: baseline;
+                    margin-bottom: 33px;
+
+
+
+
+                    .imcoach-Iam {
+                        color: var(--dark, #3A2C19);
+                        font-family: "Dela Gothic One";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+                        /* 166.667% */
+                        letter-spacing: 2.4px;
+                        // position: relative;
+                        margin-right: 5px;
+                    }
+
+                    .imcoach-coach {
+                        color: var(--primary, var(--primary, #FF8740));
+                        font-family: "Dela Gothic One";
+                        font-size: 36px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+                        letter-spacing: 3.6px;
+                    }
+
+                }
+            }
+
+
+
+            .imcoach-youcan {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 14px;
+                margin-bottom: 5px !important;
+                padding-left: 30px;
+
+
+                h4 {
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    opacity: 0.6;
+                }
+
+                .imcoach-youcan-line {
+                    width: 60%;
+                    height: 0.6px;
+                    background: #3A2C19;
+                }
+            }
+
+            p {
+                margin-top: 14px;
+                padding-left: 30px;
+                color: var(--dark, #3A2C19);
+                /* 段落/14 */
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
+
+            .imcoach-youhaveto {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 14px;
+                margin-top: 10px;
+
+                h4 {
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    opacity: 0.6;
+                }
+
+                .imcoach-youhaveto-line {
+                    width: 60%;
+                    height: 0.6px;
+                    background: #3A2C19;
+                }
+            }
+
+        }
+
+
+
+
+    }
+
+
+    .imnutrionist {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        form {
+            border-radius: 24px;
+            background: #FFF;
+            box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.25);
+            height: 290px !important;
+            width: 330px !important;
+            position: relative;
+
+            .nutri-label-img {
+                display: flex;
+                flex-direction: row;
+                gap: 150px;
+                position: relative;
+                height: 50px;
+
+                img {
+                    width: 60px;
+                    height: 120px;
+                    position: relative;
+                    top: -150%;
+                    left: 70%;
+
+                }
+
+                label {
+                    position: relative;
+                    top: -15px;
+                    left: 20px;
+                    display: inline-flex;
+                    flex-direction: row;
+                    align-items: baseline;
+                    margin-bottom: 33px;
+
+
+
+
+                    .imnutrionist-Iam {
+                        color: var(--dark, #3A2C19);
+                        font-family: "Dela Gothic One";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+                        /* 166.667% */
+                        letter-spacing: 2.4px;
+                        // position: relative;
+                        margin-right: 5px;
+                    }
+
+                    .imnutrionist-nutrionist {
+                        color: var(--primary, var(--primary, #FF8740));
+                        font-family: "Dela Gothic One";
+                        font-size: 36px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+                        letter-spacing: 3.6px;
+                    }
+
+                }
+            }
+
+
+
+            .imnutrionist-youcan {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 14px;
+                margin-bottom: 5px !important;
+                padding-left: 30px;
+
+
+                h4 {
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    opacity: 0.6;
                 }
 
                 .imnutrionist-youcan-line {
@@ -345,12 +804,12 @@
             }
 
             p {
-                margin-top: 12px;
-                margin-left: 70px;
+                margin-top: 14px;
+                padding-left: 30px;
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
-                font-size: 14px;
+                font-size: 12px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 140%;
@@ -365,11 +824,20 @@
                 justify-content: flex-start;
                 align-items: center;
                 gap: 14px;
-                margin-bottom: 11px;
-                margin-top: 33px;
+                margin-top: 10px;
 
                 h4 {
-                    margin-left: 40px;
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    opacity: 0.6;
                 }
 
                 .imnutrionist-youhaveto-line {
@@ -381,74 +849,448 @@
 
         }
 
-        .imnutrionist-joinbutton {
+
+        .nutri-label-img {
             display: flex;
             flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 12px;
-            width: 320px;
+            gap: 150px;
+            position: relative;
             height: 50px;
-            padding: 8px 84px;
-            margin-top: 50px;
-            border-radius: 999px;
-            background: var(--primary, #FF8740);
 
-            color: var(--white, var(--white, #FEFCF7));
-            text-align: center;
-            font-family: "Noto Sans TC", sans-serif;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 900;
-            line-height: 140%;
-            /* 22.4px */
-            letter-spacing: 1.6px;
 
             img {
-                width: 20px;
-                height: 23px;
                 position: absolute;
-                right: 80px;
-                opacity: 0;
-                // transform: translateX(10px); // 預設略偏右
-                transition: opacity 0.3s ease, transform 0.3s ease;
-
+                top: 5rem !important;
+                left: -2rem !important;
+                max-width: none !important;
+                max-height: none !important;
+                object-fit: contain;
+                width: 150px !important;
+                height: 200px !important;
             }
 
-            &:hover {
-                transform: translateY(-4px);
-                box-shadow: 4px 8px 0px 0px #3A2C19;
-                border: none;
-                outline: none;
 
-                img {
-                    opacity: 1;
-                    // transform: translateX(0); // icon 滑進來
+            label {
+                position: relative;
+                top: -15px;
+                left: 20px;
+                display: inline-flex;
+                flex-direction: row;
+                align-items: baseline;
+                margin-bottom: 33px;
+
+
+
+
+                .imnutrionist-Iam {
+                    color: var(--dark, #3A2C19);
+                    font-family: "Dela Gothic One";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 40px;
+                    /* 166.667% */
+                    letter-spacing: 2.4px;
+                    // position: relative;
+                    margin-right: 5px;
                 }
 
-                span {
-                    transform: translateX(-10px);
-                    transition: opacity 0.3s ease, transform 0.3s ease;
+                .imnutrionist-nutrionist {
+                    color: var(--primary, var(--primary, #FF8740));
+                    font-family: "Dela Gothic One";
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: 3.6px;
                 }
 
-
-            }
-
-            &:active {
-                // transform: translateY(-4px);
-                box-shadow: 3px 6px 0px 0px #3A2C19;
-                font-size: 14px;
-                border: none;
-                outline: none;
-                transform: translate(2px, 2px);
-
-
-                img {
-                    width: 18px;
-                    height: 20px;
-                }
             }
         }
 
     }
+
+
+
+
+
+
+}
+
+
+//393-800px
+@media (min-width:393px) and (max-width:800px) {
+
+    #Joinus-Form {
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    // overflow-x: hidden;
+    /* 隱藏橫向溢出 */
+    width: 100%;
+    // border: 1px solid red;
+    box-sizing: border-box;
+}
+
+    .Joinus-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+        gap: 50px;
+    }
+
+.Joinus-introduction {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    max-width: 350px !important;
+
+}
+
+    .imcoach {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        form {
+            border-radius: 24px;
+            background: #FFF;
+            box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.25);
+            height: 280px !important;
+            width: 327px !important;
+            position: relative;
+
+            .coach-label-img {
+                display: flex;
+                flex-direction: row;
+                gap: 150px;
+                position: relative;
+                height: 30px !important;
+
+
+                img {
+                    position: absolute;
+                    top: 5rem !important;
+                    left: -2rem !important;
+                    max-width: none !important;
+                    max-height: none !important;
+                    object-fit: contain;
+                    width: 150px !important;
+                    height: 200px !important;
+                }
+
+
+                label {
+                    position: relative;
+                    top: -15px;
+                    left: 20px;
+                    display: inline-flex;
+                    flex-direction: row;
+                    align-items: baseline;
+
+
+
+
+
+                    .imcoach-Iam {
+                        color: var(--dark, #3A2C19);
+                        font-family: "Dela Gothic One";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+                        /* 166.667% */
+                        letter-spacing: 2.4px;
+                        // position: relative;
+                        margin-right: 5px;
+                    }
+
+                    .imcoach-coach {
+                        color: var(--primary, var(--primary, #FF8740));
+                        font-family: "Dela Gothic One";
+                        font-size: 36px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+                        letter-spacing: 3.6px;
+                    }
+
+                }
+            }
+
+
+
+            .imcoach-youcan {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 14px;
+                padding-left: 20px !important;
+
+
+                h4 {
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    opacity: 0.6;
+                }
+
+                .imcoach-youcan-line {
+                    width: 60%;
+                    height: 0.6px;
+                    background: #3A2C19;
+                }
+            }
+
+            p {
+                margin-top: 14px;
+                padding-left: 20px !important;
+                color: var(--dark, #3A2C19);
+                /* 段落/14 */
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
+
+            .imcoach-youhaveto {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 14px;
+                margin-top: 10px;
+
+                h4 {
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    opacity: 0.6;
+                }
+
+                .imcoach-youhaveto-line {
+                    width: 60%;
+                    height: 0.6px;
+                    background: #3A2C19;
+                }
+            }
+
+        }
+
+
+
+
+    }
+
+    .imnutrionist {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        form {
+            border-radius: 24px;
+            background: #FFF;
+            box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.25);
+            height: 280px !important;
+            width: 327px !important;
+            position: relative;
+
+            .nutri-label-img {
+                display: flex;
+                flex-direction: row;
+                gap: 150px;
+                position: relative;
+                height: 30px !important;
+
+
+                img {
+                    position: absolute;
+                    top: 5rem !important;
+                    left: -4.5rem !important;
+                    max-width: none !important;
+                    max-height: none !important;
+                    object-fit: contain;
+                    width: 150px !important;
+                    height: 200px !important;
+                }
+
+
+                label {
+                    position: relative;
+                    top: -15px;
+                    left: 20px;
+                    display: inline-flex;
+                    flex-direction: row;
+                    align-items: baseline;
+
+
+
+
+
+                    .imnutrionist-Iam {
+                        color: var(--dark, #3A2C19);
+                        font-family: "Dela Gothic One";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+                        /* 166.667% */
+                        letter-spacing: 2.4px;
+                        // position: relative;
+                        margin-right: 5px;
+                    }
+
+                    .imnutrionist-nutrionist {
+                        color: var(--primary, var(--primary, #FF8740));
+                        font-family: "Dela Gothic One";
+                        font-size: 36px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+                        letter-spacing: 3.6px;
+                    }
+
+                }
+            }
+
+
+
+            .imnutrionist-youcan {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 14px;
+                padding-left: 20px !important;
+
+
+                h4 {
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    opacity: 0.6;
+                }
+
+                .imnutrionist-youcan-line {
+                    width: 60%;
+                    height: 0.6px;
+                    background: #3A2C19;
+                }
+            }
+
+            p {
+                margin-top: 14px;
+                padding-left: 20px !important;
+                color: var(--dark, #3A2C19);
+                /* 段落/14 */
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
+
+            .imnutrionist-youhaveto {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 14px;
+                margin-top: 10px;
+
+                h4 {
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    opacity: 0.6;
+                }
+
+                .imnutrionist-youhaveto-line {
+                    width: 60%;
+                    height: 0.6px;
+                    background: #3A2C19;
+                }
+            }
+
+        }
+
+
+
+
+    }
+
+    .imnutrionist-Iam,
+    .imcoach-Iam {
+        color: var(--dark, #3A2C19);
+        font-family: "Dela Gothic One";
+        font-size: 14px !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        /* 285.714% */
+        letter-spacing: 1.4px;
+        white-space: nowrap;
+    }
+
+    .imcoach-coach,
+    .imnutrionist-nutrionist {
+        color: var(--primary, var(--primary, #FF8740));
+        font-family: "Dela Gothic One";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        /* 166.667% */
+        letter-spacing: 2.4px;
+        white-space: nowrap;
+    }
+
+
+
 }
