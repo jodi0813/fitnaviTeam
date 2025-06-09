@@ -41,17 +41,21 @@
 
         .centerFilterBt {
           width: 60%;
-          padding: 12px;
-          background-color: #fff;
+          padding: 8px 12px;
+          background-color: #FEFCF7;
           border: 0.5px solid #989794;
           border-radius: 8px;
           color: #989794;
-          font-weight: bold;
-          font-size: 16px;
           margin-bottom: 1rem;
           display: flex;
           justify-content: space-between;
+          align-items: center;
           margin: 0 auto;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          letter-spacing: 1.2px;
 
           @media (max-width: 768px) {
             width: 90%;
@@ -168,6 +172,8 @@
         @media (max-width: 1024px) {
           width: 100%;
           height: 100%;
+          align-items: flex-start;
+          padding: 3% 0px 3% 3%;
         }
 
 
@@ -202,10 +208,14 @@
             overflow-x: auto;
             overflow-y: unset;
             width: 100%;
-            /* 讓卡片不換行 */
             white-space: nowrap;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
 
-            /* 可視需要讓每張卡片固定寬度 */
+            &::-webkit-scrollbar {
+              display: none; // Chrome/Safari
+            }
+
             .gymCard {
               min-width: 220px;
               max-width: 220px;
@@ -218,6 +228,10 @@
             cursor: pointer;
             width: 100%;
             height: 162px;
+
+            @media (max-width: 1024px) {
+              height: 100%;
+            }
 
             &.active {
               border: 5px solid #ff8740; // 橘色邊框
@@ -263,6 +277,11 @@
                 font-size: 12px;
                 line-height: 1.4;
                 font-weight: 400;
+
+                @media (max-width: 1024px) {
+                  white-space: normal;
+                  word-break: break-all;
+                }
               }
             }
           }
