@@ -14,7 +14,7 @@ function Joinus() {
 
                 <section className='Joinus-introduction'>
                     <p className='BringPro'>把你的專業，帶到更多人眼前。</p>
-                    <p className='BringPro-intro'>歡迎具備專業資格的您加入我們的行列！完成表單申請並通過資格審核後， <br />
+                    <p className='BringPro-intro'>歡迎具備專業資格的您加入我們的行列！<br /> 完成表單申請並通過資格審核後， <br />
                         即可在我們的平台上開課、建立個人專頁，讓教學與熱情被看見。</p>
                 </section>
 
