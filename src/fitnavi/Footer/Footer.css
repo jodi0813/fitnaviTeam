@@ -161,7 +161,7 @@ a {
     position: relative;
     z-index: 1;
 
-    
+
 
 }
 
@@ -247,7 +247,7 @@ a {
 
     @media (max-width: 1024px) {
         left: 80% !important;
-        
+
     }
 
 
@@ -268,7 +268,7 @@ a {
         /* 24px */
         letter-spacing: 1.6px;
         margin: 0 auto;
-       
+
 
 
         &::before,
@@ -305,3 +305,124 @@ a {
 }
 
 
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #footer-m .footerwrapper {
+        background-image: url('/images/Footer769-1024.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+
+        height: 200px !important;
+        min-height: 0 !important;
+        /* 清除 min-height 限制 */
+        max-height: 200px !important;
+        /* 可加強限制 */
+    }
+
+
+    #footer-m .footer-overlaytext {
+        display: flex;
+        flex-direction: column;
+        /* 外層保持 column */
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer-m .footer-columntext {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        position: absolute;
+        top: 30%;
+        left: 25%;
+
+    }
+
+    #footer-m .slogan-login {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        p {
+            color: #FFF;
+            text-align: center;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+            letter-spacing: 1.2px;
+            white-space: nowrap;
+        }
+
+        button {
+            display: flex;
+            padding: 8px 10px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            border: 0.5px solid var(--primary, #FF8740);
+            background: #FFF;
+            color: var(--primary, var(--primary, #FF8740));
+            text-align: center;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            letter-spacing: 1.2px;
+            white-space: nowrap;
+        }
+    }
+
+    #footer-m .footer-contact {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        .footer-contact-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+
+        p {
+            color: var(--white, var(--white, #FEFCF7));
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            letter-spacing: 1.2px;
+            transform: rotate(90deg);
+            margin-top: 0px;
+        }
+    }
+
+    #footer-m .footer-icon {
+        gap: 10px;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    #footer-m .copyright {
+        color: var(--white, var(--white, #FEFCF7));
+        /* 段落(小尺寸)/12 */
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        /* 16.8px */
+        letter-spacing: 1.2px;
+    }
+}
