@@ -184,12 +184,28 @@
     line-height: 40px;
     letter-spacing: 0.4px;
 
+    @media (max-width:1024px) {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      /* 19.6px */
+      letter-spacing: 1.4px;
+    }
+
     strong {
       color: #989794;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 500;
       line-height: 150%;
       letter-spacing: 1.6px;
+
+      @media (max-width:1024px) {
+        font-size: 12px;
+        font-style: normal;
+        line-height: 140%;
+        letter-spacing: 1.2px;
+      }
     }
   }
 
@@ -211,6 +227,8 @@
       .informationLeft {
         padding: 0px 36px;
         flex: 1;
+        display: flex;
+        gap: 12px;
       }
     }
 
