@@ -168,3 +168,18 @@ button:focus {
   outline: none;
   box-shadow: none;
 }
+html {
+  font-size: 16px; // 桌機
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px; // 平板
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; // 手機
+  }
+}

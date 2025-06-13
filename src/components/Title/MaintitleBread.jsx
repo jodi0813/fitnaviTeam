@@ -26,7 +26,7 @@ function MainTitleBread({ title1, title2, breadcrumbList = [] }) {
             </ol>
           </nav>
         </header>
-        <hr />
+        <div className="member-line"></div> {/* 橫線 */}
         <button onClick={() => back(-1)} className="backBt">&lt; 返回列表</button>
       </div>
     </>
