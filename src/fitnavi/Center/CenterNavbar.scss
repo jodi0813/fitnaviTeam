@@ -22,6 +22,11 @@
   border: 1px solid rgba(0, 0, 0, 0.3);
   background: #fff;
 
+  @media (max-width:1024px) {
+    padding: 8px;
+    gap: 0px;
+  }
+
   .centerActive {
     color: #ff8740;
     background-color: #fff;
@@ -38,6 +43,11 @@
     text-decoration-skip-ink: none;
     text-decoration-thickness: 10%;
     text-underline-offset: 25%;
+
+    @media (max-width:1024px) {
+      font-size: 16px;
+      padding: 8px 20px;
+    }
   }
 
   .centerNoActive {
@@ -51,6 +61,11 @@
     line-height: 140%;
     letter-spacing: 1.4px;
     outline: none;
+
+    @media (max-width:1024px) {
+      font-size: 16px;
+      padding: 8px 20px;
+    }
   }
 }
 
@@ -222,9 +237,10 @@
     align-items: center;
     width: 90%;
 
-      @media (max-width: 1024px) {
-        flex-direction: column;
-      }
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+
     .contactInfo {
       display: flex;
       flex: 1;

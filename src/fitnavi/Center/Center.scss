@@ -16,7 +16,9 @@
     align-items: center;
     width: 100%;
     margin-top: 19px;
-
+     @media (max-width:1024px) {
+    gap: 36px;
+      }
     .centerPhotoBox {
       position: relative;
       width: 85%;
@@ -34,6 +36,7 @@
 
         @media (max-width:1024px) {
           border-radius: 0px;
+          height: 160px;
         }
       }
 
@@ -71,7 +74,7 @@
             line-height: normal;
 
             @media (max-width:1024px) {
-              font-size:20px;
+              font-size: 20px;
             }
           }
 
@@ -81,7 +84,7 @@
             letter-spacing: 2px;
 
             @media (max-width:1024px) {
-              font-size:14px;
+              font-size: 14px;
               font-weight: 500;
               letter-spacing: 1.4px;
             }
@@ -89,7 +92,12 @@
 
           .hashtag {
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
+
+            @media (max-width:1024px) {
+              gap: 4px;
+            }
           }
 
           .hashtag a {
@@ -101,8 +109,9 @@
             /* 24px */
             letter-spacing: 1.6px;
             color: #ff8740;
- @media (max-width:1024px) {
-         font-size: 12px;
+
+            @media (max-width:1024px) {
+              font-size: 12px;
             }
           }
         }
@@ -114,7 +123,9 @@
       flex-direction: column;
       padding: 87px 0px 0px 0px;
       width: 75%;
-
+        @media (max-width:1024px) {
+        width: 80%;
+        }
       .introductionTitle {
         display: flex;
         align-items: center;
@@ -140,11 +151,13 @@
         font-style: normal;
         font-weight: 500;
         line-height: 150%;
-        /* 24px */
         letter-spacing: 1.6px;
         color: #3a2c19;
-
         padding: 26px 48px;
+
+        @media (max-width:1024px) {
+        padding: 0px;
+        }
       }
     }
 

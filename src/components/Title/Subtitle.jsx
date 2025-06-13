@@ -7,7 +7,7 @@ function Subtitle({subtitle, subtitleEN}) {
         <h2 className="member-title">{subtitle}</h2>
         <div className="subtitleWrapper">
           <span className="member-subtitle">{subtitleEN}</span>
-          <div className="member-line"></div> {/* 橫線 */}
+          <div className="member-lineSmall"></div> {/* 橫線 */}
         </div>
       </div>
     </>
