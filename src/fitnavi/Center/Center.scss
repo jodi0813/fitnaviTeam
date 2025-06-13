@@ -1,27 +1,45 @@
 @use "../reset.scss";
+
 #centerMain {
   width: 100%;
   padding: 120px 50px;
-      display: flex;
-    flex-direction: column;
- 
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width:1024px) {
+    padding: 63px 0px;
+  }
+
   .main-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin-top: 19px;
-    // padding: 0px 150px;
+     @media (max-width:1024px) {
+    gap: 36px;
+      }
     .centerPhotoBox {
       position: relative;
       width: 85%;
+
+      @media (max-width:1024px) {
+        width: 100%;
+      }
+
       .centerPic {
         align-self: stretch;
         border-radius: 16px;
         height: 338.786px;
         object-fit: cover;
         width: 100%;
+
+        @media (max-width:1024px) {
+          border-radius: 0px;
+          height: 160px;
+        }
       }
+
       .centerTitle2 {
         display: flex;
         align-items: flex-end;
@@ -30,35 +48,61 @@
         bottom: -70px;
         gap: 6px;
         width: 100%;
+
         .centerLogoPic {
           width: 143px;
           height: 143px;
           aspect-ratio: 1;
           border-radius: 143px;
 
+          @media (max-width:1024px) {
+            width: 80px;
+            height: 80px;
+          }
+
         }
+
         .center-nameBox {
           display: flex;
           flex-direction: column;
+
           .center-name {
             color: #3a2c19;
-            font-size: 32px;
+            font-size: 2rem;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+
+            @media (max-width:1024px) {
+              font-size: 20px;
+            }
           }
+
           .center-area {
-            font-size: 20px;
+            font-size: 1.25rem;
             font-weight: 700;
             letter-spacing: 2px;
+
+            @media (max-width:1024px) {
+              font-size: 14px;
+              font-weight: 500;
+              letter-spacing: 1.4px;
+            }
           }
+
           .hashtag {
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
+
+            @media (max-width:1024px) {
+              gap: 4px;
+            }
           }
+
           .hashtag a {
             font-family: "Noto Sans TC", sans-serif;
-            font-size: 16px;
+            font-size: 1rem;
             font-style: normal;
             font-weight: 500;
             line-height: 150%;
@@ -66,19 +110,26 @@
             letter-spacing: 1.6px;
             color: #ff8740;
 
+            @media (max-width:1024px) {
+              font-size: 12px;
+            }
           }
         }
       }
     }
+
     .centerIntroduction {
       display: flex;
       flex-direction: column;
       padding: 87px 0px 0px 0px;
       width: 75%;
+        @media (max-width:1024px) {
+        width: 80%;
+        }
       .introductionTitle {
-              display: flex;
-               align-items: center;
-               gap: 24px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
 
         span {
           font-size: 20px;
@@ -87,21 +138,26 @@
           color: #ff8740;
 
         }
+
         .introductionTitleLine {
           flex: 1; // 撐滿剩下的寬度
           height: 1px;
           background-color: #3a2c19;
         }
       }
+
       .introduction {
         font-family: "Noto Sans TC", sans-serif;
         font-style: normal;
         font-weight: 500;
-        line-height: 150%; /* 24px */
+        line-height: 150%;
         letter-spacing: 1.6px;
         color: #3a2c19;
-
         padding: 26px 48px;
+
+        @media (max-width:1024px) {
+        padding: 0px;
+        }
       }
     }
 
