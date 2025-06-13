@@ -37,43 +37,256 @@
     margin-top: 60px;
     position: relative;
 
-    @media (max-width: 1024px) {
-        .Allarticle-Search {
-          max-width: 750px !important;
-          width: 100%;
-          box-sizing: border-box;
-          padding-left: 20px;
-          padding-right: 20px;
-          display: flex;
-          flex-direction: row;
-          justify-content: center !important;
-          align-items: center !important;
-          gap: 10px;
-          flex-wrap: nowrap;
-        }
-        .Allarticle-Search .selected-button {
-          display: flex;
-          flex-direction: row;
-          gap: 10px;
-          justify-content: center;
-          align-items: center;
-          width: 100%;     // 強制佔滿父容器
-          min-width: 0;
-        }
-      }
+    // @media (max-width: 1024px) {
+    //     .Allarticle-Search {
+    //       max-width: 750px !important;
+    //       width: 100%;
+    //       box-sizing: border-box;
+    //       padding-left: 20px;
+    //       padding-right: 20px;
+    //       display: flex;
+    //       flex-direction: row;
+    //       justify-content: center !important;
+    //       align-items: center !important;
+    //       gap: 10px;
+    //       flex-wrap: nowrap;
+    //     }
+    //     // .Allarticle-Search .selected-button {
+    //     //   display: flex;
+    //     //   flex-direction: row;
+    //     //   gap: 10px;
+    //     //   justify-content: center;
+    //     //   align-items: center;
+    //     //   width: 100%;     // 強制佔滿父容器
+    //     //   min-width: 0;
+    //     // }
+    //   }
+
+    // .selected-button {
+    //     display: flex;
+    //     flex-direction: row;
+    //     gap: 5%;
+
+    //     // @media (max-width: 1024px) {
+    //     //     margin-left: 10px; /* 也改成10px */
+    //     //     margin-right: 10px;
+
+    //     //   }
+
+
+
+    //     button {
+    //         display: flex;
+    //         height: 40px;
+    //         min-width: 144px;
+    //         padding: 12px 36px;
+    //         justify-content: center;
+    //         align-items: center;
+    //         border-radius: 99px;
+    //         border: 1px solid #FF8740;
+
+    //         background: #FFF;
+    //         color: #FF8740;
+
+    //         text-align: center;
+    //         font-family: "Noto Sans TC", sans-serif;
+    //         font-size: var(--fontsize-H3, 18px);
+    //         font-style: normal;
+    //         font-weight: 700;
+    //         line-height: 150%;
+    //         white-space: nowrap;
+
+    //         /* 27px */
+    //     }
+
+    //     button:hover,
+    //     button:active {
+    //         display: flex;
+    //         height: 40px;
+    //         min-width: 144px;
+    //         padding: 12px 36px;
+    //         justify-content: center;
+    //         align-items: center;
+
+    //         border-radius: 99px;
+    //         background: #FF8740;
+    //         color: #FFF;
+
+    //         text-align: center;
+    //         font-family: "Noto Sans TC";
+    //         font-size: var(--fontsize-H3, 18px);
+    //         font-style: normal;
+    //         font-weight: 700;
+    //         line-height: 150%;
+
+    //         border: none;
+    //         outline: none;
+    //     }
+
+    // }
+
+
+
+    // .Search-Button {
+    //     display: flex;
+    //     height: 40px;
+    //     width: 479px;
+    //     padding: 8px 20px;
+    //     align-items: center;
+
+    //     border-radius: 20px;
+    //     border: 0.5px solid var(--dark, #3A2C19);
+    //     background: var(--white, #FEFCF7);
+
+    //     // @media (max-width: 1024px) {
+    //     //    gap: 10px;
+    //     //     width: 200px;
+    //     //   }
+
+    //     &::placeholder {
+    //         color: var(--gray, #989794);
+    //         /* 段落/14 */
+    //         font-family: "" Sans TC", sans-serif; Sans TC", sans-serif;
+    //         font-size: 14px;
+    //         font-style: normal;
+    //         font-weight: 500;
+    //         line-height: 140%;
+    //         /* 19.6px */
+    //         letter-spacing: 1.4px;
+    //     }
+
+    //     &::after {
+    //         content: "";
+    //         // position: absolute;
+    //         // right: 12px;
+    //         width: 16px;
+    //         height: 16px;
+    //         background-image: url("./images/search-icon.svg");
+    //         background-repeat: no-repeat;
+    //         background-size: contain;
+    //     }
+
+
+    //     &:focus,
+    //     &:focus-visible,
+    //     &:active,
+    //     &:hover {
+    //         // border: none;
+    //         outline: none;
+    //     }
+    // }
+
+    // .ClickSearch-Button {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     position: relative; // 給 img 定位用
+    //     overflow: hidden;
+    //     width: 300px;
+    //     height: 40px;
+    //     padding: 8px 84px;
+    //     border-radius: 999px;
+    //     background: var(--primary, #FF8740);
+    //     color: var(--white, #FEFCF7);
+    //     font-family: "Noto Sans TC", sans-serif;
+    //     font-size: 20px;
+    //     font-weight: 900;
+    //     letter-spacing: 1.4px;
+    //     white-space: nowrap;
+    //     cursor: pointer;
+
+    //     // @media (max-width: 1024px) {
+    //     //     gap: 10px;
+    //     //      width: 200px;
+    //     //    }
+
+    //     // .text-search {
+    //     //     transition: transform 0.3s ease; // 修正這裡的語法
+    //     // }
+
+    //     img {
+    //         width: 24px;
+    //         height: 24px;
+    //         position: absolute;
+    //         right: 100px;
+    //         opacity: 0;
+    //         // transform: translateX(10px); // 預設略偏右
+    //         transition: opacity 0.3s ease, transform 0.3s ease;
+    //     }
+
+    //     &:hover {
+
+    //         width: 300px;
+    //         height: 40px;
+    //         padding: 8px 84px;
+    //         justify-content: center;
+    //         align-items: center;
+    //         border-radius: 999px;
+    //         border: 1px solid var(--primary, #FF8740);
+    //         background: var(--white, #FEFCF7);
+
+    //         .text-search {
+    //             transform: translateX(-10px); // 文字左滑
+    //             color: var(--primary, var(--primary, #FF8740));
+    //             text-align: center;
+    //             /* heading/標題4/Bold */
+    //             font-family: "Noto Sans TC";
+    //             font-size: 20px;
+    //             font-style: normal;
+    //             font-weight: 700;
+    //             line-height: normal;
+    //             letter-spacing: 2px;
+    //             transition: opacity 0.3s ease, transform 0.3s ease;
+    //         }
+
+    //         img {
+    //             opacity: 1;
+    //             // transform: translateX(0); // icon 滑進來
+    //         }
+    //     }
+
+    //     &:active {
+    //         outline: none;
+
+    //         .text-search {
+    //             color: var(--primary, var(--primary, #FF8740));
+    //             text-align: center;
+    //             /* 段落/16 */
+    //             font-family: "Noto Sans TC";
+    //             font-size: 16px;
+    //             font-style: normal;
+    //             font-weight: 500;
+    //             line-height: 150%;
+    //             /* 24px */
+    //             letter-spacing: 1.6px;
+    //         }
+
+    //         img {
+    //             width: 18px;
+    //             height: 18px;
+    //         }
+    //     }
+
+    //     &:focus,
+    //     &:focus-visible {
+    //         border: 1px solid #FF8740;
+    //         outline: none;
+    //     }
+
+
+    // }
+
+
+    /* === 桌機版元件（預設顯示） === */
+    .selected-button,
+    .Search-Button,
+    .ClickSearch-Button {
+        display: flex;
+    }
 
     .selected-button {
-        display: flex;
         flex-direction: row;
         gap: 5%;
-
-        @media (max-width: 1024px) {
-            margin-left: 10px; /* 也改成10px */
-            margin-right: 10px;
-            
-          }
-
-
 
         button {
             display: flex;
@@ -84,81 +297,44 @@
             align-items: center;
             border-radius: 99px;
             border: 1px solid #FF8740;
-           
             background: #FFF;
             color: #FF8740;
-
-            text-align: center;
             font-family: "Noto Sans TC", sans-serif;
             font-size: var(--fontsize-H3, 18px);
-            font-style: normal;
             font-weight: 700;
             line-height: 150%;
             white-space: nowrap;
-
-            /* 27px */
         }
 
         button:hover,
         button:active {
-            display: flex;
-            height: 40px;
-            min-width: 144px;
-            padding: 12px 36px;
-            justify-content: center;
-            align-items: center;
-
-            border-radius: 99px;
             background: #FF8740;
             color: #FFF;
-
-            text-align: center;
-            font-family: "Noto Sans TC";
-            font-size: var(--fontsize-H3, 18px);
-            font-style: normal;
-            font-weight: 700;
-            line-height: 150%;
-
             border: none;
             outline: none;
         }
-
     }
 
-
-
     .Search-Button {
-        display: flex;
         height: 40px;
         width: 479px;
         padding: 8px 20px;
         align-items: center;
-
         border-radius: 20px;
         border: 0.5px solid var(--dark, #3A2C19);
         background: var(--white, #FEFCF7);
 
-        @media (max-width: 1024px) {
-           gap: 10px;
-            width: 200px;
-          }
-
         &::placeholder {
             color: var(--gray, #989794);
-            /* 段落/14 */
-            font-family: "" Sans TC", sans-serif; Sans TC", sans-serif;
+            font-family: "Noto Sans TC", sans-serif;
             font-size: 14px;
-            font-style: normal;
             font-weight: 500;
             line-height: 140%;
-            /* 19.6px */
             letter-spacing: 1.4px;
         }
 
         &::after {
             content: "";
-            // position: absolute;
-            // right: 12px;
             width: 16px;
             height: 16px;
             background-image: url("./images/search-icon.svg");
@@ -166,28 +342,25 @@
             background-size: contain;
         }
 
-
         &:focus,
         &:focus-visible,
         &:active,
         &:hover {
-            // border: none;
             outline: none;
         }
     }
 
     .ClickSearch-Button {
-        display: flex;
         justify-content: center;
         align-items: center;
-        position: relative; // 給 img 定位用
+        position: relative;
         overflow: hidden;
         width: 300px;
         height: 40px;
         padding: 8px 84px;
         border-radius: 999px;
         background: var(--primary, #FF8740);
-        color: var(--white, #FEFCF7);
+        color: #FEFCF7;
         font-family: "Noto Sans TC", sans-serif;
         font-size: 20px;
         font-weight: 900;
@@ -195,70 +368,38 @@
         white-space: nowrap;
         cursor: pointer;
 
-        @media (max-width: 1024px) {
-            gap: 10px;
-             width: 200px;
-           }
-
-        // .text-search {
-        //     transition: transform 0.3s ease; // 修正這裡的語法
-        // }
-
         img {
             width: 24px;
             height: 24px;
             position: absolute;
             right: 100px;
             opacity: 0;
-            // transform: translateX(10px); // 預設略偏右
             transition: opacity 0.3s ease, transform 0.3s ease;
         }
 
         &:hover {
-
-            width: 300px;
-            height: 40px;
-            padding: 8px 84px;
-            justify-content: center;
-            align-items: center;
-            border-radius: 999px;
-            border: 1px solid var(--primary, #FF8740);
-            background: var(--white, #FEFCF7);
+            background: #FEFCF7;
+            color: #FF8740;
+            border: 1px solid #FF8740;
 
             .text-search {
-                transform: translateX(-10px); // 文字左滑
-                color: var(--primary, var(--primary, #FF8740));
-                text-align: center;
-                /* heading/標題4/Bold */
-                font-family: "Noto Sans TC";
+                transform: translateX(-10px);
+                color: #FF8740;
                 font-size: 20px;
-                font-style: normal;
                 font-weight: 700;
-                line-height: normal;
-                letter-spacing: 2px;
                 transition: opacity 0.3s ease, transform 0.3s ease;
             }
 
             img {
                 opacity: 1;
-                // transform: translateX(0); // icon 滑進來
             }
         }
 
         &:active {
-            outline: none;
-
             .text-search {
-                color: var(--primary, var(--primary, #FF8740));
-                text-align: center;
-                /* 段落/16 */
-                font-family: "Noto Sans TC";
+                color: #FF8740;
                 font-size: 16px;
-                font-style: normal;
                 font-weight: 500;
-                line-height: 150%;
-                /* 24px */
-                letter-spacing: 1.6px;
             }
 
             img {
@@ -272,11 +413,52 @@
             border: 1px solid #FF8740;
             outline: none;
         }
-
-
     }
 
+    /* === 平板版 600-1024 顯示用 === */
+    .selected-button-alt,
+    .ClickSearch-Button-alt {
+        display: none;
+    }
 
+    @media (min-width: 600px) and (max-width: 1024px) {
+
+        .selected-button,
+        .Search-Button,
+        .ClickSearch-Button {
+            display: none !important;
+        }
+
+        .selected-button-alt,
+        .ClickSearch-Button-alt {
+            display: flex !important;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .selected-button-alt button {
+            padding: 10px 20px;
+            background: #FF8740;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            white-space: nowrap;
+            font-weight: bold;
+        }
+
+        .ClickSearch-Button-alt {
+            background: #FF8740;
+            color: #fff;
+            border-radius: 30px;
+            padding: 10px 24px;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            margin-top: 12px;
+        }
+    }
 
 
 
@@ -301,13 +483,8 @@
         align-items: flex-start;
         width: 10%;
 
-        @media (max-width: 1024px) {
-
-            max-width: 80px;
-            width: 100%;
-            // padding-left:20px; // 防止卡片貼邊
-            box-sizing: border-box;
-
+        @media (min-width: 600px) and (max-width: 1024px) {
+            display: none; // 在平板區間隱藏
         }
 
         .cat {
@@ -475,6 +652,10 @@
             border-bottom: 2px solid #3A2C19;
             padding-bottom: 5px;
 
+            @media (min-width: 600px) and (max-width: 1024px) {
+                display: none; // 在平板區間隱藏
+            }
+
             p {
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
@@ -516,14 +697,13 @@
             width: 100%;
             margin-top: 5%;
 
-            @media (max-width: 1024px) {
-                grid-template-columns: repeat(3, 1fr);
-                max-width: 740px;
-                width: 100%;
-                margin: 0 auto;
-                padding-right: 20px; // 防止卡片貼邊
+            @media (max-width: 1024px) and (min-width: 600px) {
+                grid-template-columns: repeat(3, 1fr); // 平板改成兩欄
+                gap: 24px; // 改成固定 px 間距會比較穩
+                padding: 0 16px;
                 box-sizing: border-box;
-                margin-top: 10px;
+                width: 100%;
+                margin-top: 24px;
             }
 
             #card2>tag {
@@ -590,10 +770,31 @@
 }
 
 .selected-button button.active {
-  background:  #FF8740;      // 你想要的顏色
-  color: #fff;           // 你想要的文字顏色
-  border: none;
-  outline: none;
+    background: #FF8740; // 你想要的顏色
+    color: #fff; // 你想要的文字顏色
+    border: none;
+    outline: none;
 }
 
 
+//600-1024
+.Allarticle-Card-article > .card10,
+.Allarticle-Card-article > .card11,
+.Allarticle-Card-article > .card12,
+.Allarticle-Card-article > .card13,
+.Allarticle-Card-article > .card14,
+.Allarticle-Card-article > .card15 {
+  display: none;
+}
+
+/* 600~1024px 時，額外顯示 10~15 張 */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .Allarticle-Card-article > .card10,
+  .Allarticle-Card-article > .card11,
+  .Allarticle-Card-article > .card12,
+  .Allarticle-Card-article > .card13,
+  .Allarticle-Card-article > .card14,
+  .Allarticle-Card-article > .card15 {
+    display: block;
+  }
+}
