@@ -162,7 +162,7 @@ function CenterMap() {
       area: "永康區",
       features: ["重訓器材", "團體課程", "補給品販賣機"],
       img: "./images/center14.jpg",
-      latlng: [23.0212, 120.2530],
+      latlng: [23.0212, 120.253],
     },
     {
       name: "鐵魂訓練所(高雄三民館)",
@@ -186,7 +186,7 @@ function CenterMap() {
       area: "仁愛區",
       features: ["飛輪", "重訓器材", "女性專區"],
       img: "./images/center17.jpg",
-      latlng: [25.1290, 121.7415],
+      latlng: [25.129, 121.7415],
     },
   ];
 
@@ -266,15 +266,10 @@ function CenterMap() {
                 <button
                   className="centerFilterBt"
                   onClick={() => setShowFilter((prev) => !prev)}
-
                 >
-                  <span>       請選擇您的篩選條件</span>
+                  <span> 請選擇您的篩選條件</span>
 
-                  <img
-                    src="./images/dropdown.svg"
-                    alt="篩選按鈕"
-
-                  />
+                  <img src="./images/dropdown.svg" alt="篩選按鈕" />
                 </button>
                 {showFilter && (
                   <form
@@ -326,8 +321,9 @@ function CenterMap() {
                         ))}
                       </select>
                     </div>
-                    <legend>服務項目</legend>
+
                     <fieldset className="centerItem">
+                      <legend className="centerItemTitle">服務項目</legend>
                       {featureOptions.map((option, index) => (
                         <div className="checkboxItem" key={index}>
                           <input
@@ -337,7 +333,9 @@ function CenterMap() {
                             checked={searchData.features.includes(option.value)}
                             onChange={handleCheckboxChange}
                           />
-                          <label htmlFor={`order${index + 1}`}>{option.label}</label>
+                          <label htmlFor={`order${index + 1}`}>
+                            {option.label}
+                          </label>
                         </div>
                       ))}
                     </fieldset>
@@ -393,7 +391,7 @@ function CenterMap() {
                     ))}
                   </select>
                 </div>
-                <legend>服務項目</legend>
+                <legend className="centerItemTitle">服務項目</legend>
                 <fieldset className="centerItem">
                   {featureOptions.map((option, index) => (
                     <div className="checkboxItem" key={index}>
@@ -404,7 +402,9 @@ function CenterMap() {
                         checked={searchData.features.includes(option.value)}
                         onChange={handleCheckboxChange}
                       />
-                      <label htmlFor={`order${index + 1}`}>{option.label}</label>
+                      <label htmlFor={`order${index + 1}`}>
+                        {option.label}
+                      </label>
                     </div>
                   ))}
                 </fieldset>
@@ -437,7 +437,8 @@ function CenterMap() {
                     <p>{gym.features.map((f) => `#${f}`).join(" ")}</p>
                   </div>
                 </div>
-              ))}</div>
+              ))}
+            </div>
           </div>
         </div>
 
