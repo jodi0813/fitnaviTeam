@@ -17,7 +17,7 @@ export default function Article() {
     return (
         <main id="card9">
             {/* 主標題與麵包屑導航 */}
-            <div className="card9-title">
+            {/* <div className="card9-title">
                 <MaintitleBread
                     title1="知識文章"
                     title2="補足符合您需求的知識"
@@ -27,7 +27,7 @@ export default function Article() {
                         { label: "文章內頁" },
                     ]}
                 />
-            </div>
+            </div> */}
 
             {/* banner 區域 */}
             <section className="article-banner">
@@ -70,7 +70,7 @@ export default function Article() {
                         <div className="tabletitle">
                             <p>TABLE OF CONTENTS</p>
                         </div>
-                        <div className="table-content">
+                        <div className="article-table-content">
                             <button onClick={() => phase2Ref.current?.scrollIntoView({ behavior: 'smooth' })}>·為什麼需要區分增肌與減脂？</button>
                             <button onClick={() => phase3Ref.current?.scrollIntoView({ behavior: 'smooth' })}>·該先增肌還是先減脂？ 這樣判斷最有效</button>
                             <button onClick={() => phase4Ref.current?.scrollIntoView({ behavior: 'smooth' })}>·訓練與飲食策略建議</button>
