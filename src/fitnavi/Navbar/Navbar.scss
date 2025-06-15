@@ -119,12 +119,10 @@
             height: 1px;
             background-color: #ff8740; // 橘色底線
             transition: width 0.3s;
-
-
           }
 
           &:hover {
-            color: #FF8740;
+            color: #ff8740;
           }
 
           &:hover::after {
@@ -135,7 +133,7 @@
     }
 
     .menu a.active {
-      color: #FF8740;
+      color: #ff8740;
       text-align: center;
       font-family: "Noto Sans TC";
       font-size: 16px;
@@ -148,7 +146,7 @@
 
   .nbr-login {
     background: #ff8740;
-    color: #FEFCF7;
+    color: #fefcf7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,7 +189,6 @@
     &:focus {
       outline: none;
       box-shadow: none;
-
     }
   }
 
@@ -225,7 +222,7 @@
   gap: 80px;
 
   @media (max-width: 1024px) {
-    display: block;
+    display: flex;
   }
 
   .mobile-title {
@@ -238,7 +235,6 @@
     img {
       height: auto;
       width: auto;
-
     }
 
     .mobile-close {
@@ -248,26 +244,71 @@
       &:focus {
         outline: none;
         box-shadow: none;
-
       }
     }
   }
-
-  .mobile-login {
+  .mobile-navbar {
     display: flex;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
-    border-radius: 8px;
-    background: #FF8740;
+    justify-content: flex-start;
+    ul {
+      width: 100%;
+      .mobile-line {
+        width: 100%;
+        height: 0.5px;
+        background-color: #989794;
+      }
+    }
+  }
+  .mobile-navbarBox {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    color: #fff;
-    margin-top: 80px;
+    gap: 12px;
 
+    li {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
+  .mobile-navbarBt {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .mobile-memberBt {
+      display: flex;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 8px;
+      background: #ff8740;
+      width: 100%;
+      color: #fff;
+    }
+    .mobile-login {
+      display: flex;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 8px;
+      border: 0.5px solid #ff8740;
+      background: #fff;
+      width: 100%;
+      color: #ff8740;
+      text-align: center;
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 140%; /* 19.6px */
+      letter-spacing: 1.4px;
+    }
+  }
 
   ul {
     display: flex;
@@ -276,7 +317,7 @@
     gap: 36px;
 
     li a {
-      color: #3A2C19;
+      color: #3a2c19;
       font-family: "Noto Sans TC";
       font-size: 20px;
       font-style: normal;
