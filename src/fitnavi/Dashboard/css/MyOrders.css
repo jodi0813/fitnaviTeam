@@ -158,21 +158,25 @@ label {
   font-family: "Noto Sans TC", sans-serif;
 }
 
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("../../public/images/Vector1.svg");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  color: #989794;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%; /* 19.6px */
-  letter-spacing: 1.4px;
+button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
 .order-table {
   border: 1px solid #eee;
   padding: 10px;
@@ -186,7 +190,7 @@ select {
   padding: 12px;
   border-bottom: 1px solid #ddd;
   font-size: 14px;
-  background-color: #F9FAFC;
+  background-color: #f9fafc;
 }
 .order-table .table-header .order-id,
 .order-table .table-row .order-id {
@@ -203,23 +207,27 @@ select {
   flex-direction: column;
 }
 .order-table .table-header {
-  background-color: #FFF;
+  background-color: #fff;
   font-weight: bold;
 }
 .order-table .btn-orange {
-  background-color: #FF8740;
-  color: #fff;
+  background-color: #ff8740;
   border: none;
   border-radius: 999px;
   padding: 4px 12px;
-  font-size: 12px;
+  color: #fefcf7;
+  text-align: center;
+  /* 段落/14 */
+  font-family: "Noto Sans TC";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: 1.4px;
 }
-.order-table .btn-outline {
-  border: 1px solid #000;
-  border-radius: 999px;
-  padding: 4px 12px;
-  font-size: 12px;
-  background: transparent;
+.order-table .btn-orange:focus {
+  outline: none;
+  box-shadow: none;
 }
 .order-table .status {
   display: inline-block;
@@ -228,9 +236,9 @@ select {
   font-size: 12px;
 }
 .order-table .status.done {
-  background-color: #FFF;
-  color: #FF8740;
-  border: 1px solid #FF8740;
+  background-color: #fff;
+  color: #ff8740;
+  border: 1px solid #ff8740;
   padding: 4px 12px;
 }
 .order-table .status.pending {
@@ -241,4 +249,13 @@ select {
   display: flex;
   flex-direction: column;
   gap: 10vh;
+}
+
+.btn-outline-orange {
+  border: 1px solid #ff8740;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12px;
+  background: transparent;
+  color: #ff8740;
 }
