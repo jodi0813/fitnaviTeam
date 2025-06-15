@@ -12,15 +12,17 @@ function ForgetPassword() {
 
                     <div className='KeyinEmail'>
                         <label htmlFor="">Email</label>
-                        <input type="text" />
-                        <button>
+                        <input type="text" placeholder='請輸入註冊時的信箱' />
+                        <button >
                             <span className="email-text">寄送驗證信</span>
                             <img src="./images/search.svg" alt="" /></button>
                     </div>
 
                     <div className='ForgetPassword-option'>
                         {/* <button className="Alreadyhavepassword">已經有帳號？</button> */}
-                        <button className="Returntologin" onClick={() => navigate('/MemberLogin')}>已經有帳號？回到登入頁面</button>
+                        <button className="Returntologin" onClick={() => navigate('/MemberLogin')}>
+                            <span>已經是會員？</span>
+                            <p>會員登入</p></button>
                     </div>
 
 
