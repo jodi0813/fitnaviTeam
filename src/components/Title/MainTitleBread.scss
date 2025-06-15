@@ -1,17 +1,29 @@
 @use "../../fitnavi/reset.scss";
 
 .mainTitleBreadBox {
-
   .mainTitleBread {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     padding: 0px 4px;
-
+    @media (max-width: 1024px) {
+      align-items: center;
+    }
     .titleBoxBread {
       display: flex;
       align-items: baseline;
-
+        @media (max-width: 1024px) {
+        gap: 16px;
+          
+        }
+      .titleBackBt {
+        display: none;
+        @media (max-width: 1024px) {
+          display: flex;
+          padding: 0px;
+          
+        }
+      }
       .title1 {
         font-size: 3rem;
         font-style: normal;
@@ -22,15 +34,13 @@
         font-family: "Dela Gothic One", sans-serif;
 
         @media (max-width: 1024px) {
-          font-size: 1.5rem;
-
+          font-size: 24px;
         }
-
       }
 
       .title2 {
         // -webkit-text-strokeWidth: 1px;
-        -webkit-text-stroke: 1px var(--dark, #3A2C19); //繼旻調
+        -webkit-text-stroke: 1px var(--dark, #3a2c19); //繼旻調
         font-family: "Mantou Sans";
         font-size: 24px;
         font-style: normal;
@@ -42,7 +52,6 @@
 
         @media (max-width: 1024px) {
           display: none;
-
         }
       }
     }
@@ -69,29 +78,36 @@
         }
       }
     }
-
   }
 
   .backBt {
     background-color: transparent;
     text-align: center;
-    /* heading/標題4/Bold */
-    font-family: "Noto Sans TC";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 2px;
     padding: 0;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+    .backText {
+      font-family: "Noto Sans TC";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2px;
+    }
   }
 }
 
 .member-line {
   width: 150%;
   height: 1px;
-  background-color: #3A2C19; // 和副標一樣色
+  background-color: #3a2c19; // 和副標一樣色
   margin-top: 4px; // 副標和橫線的距離
 
   @media (max-width: 1024px) {
     display: none;
-  }}
+  }
+}
