@@ -52,7 +52,7 @@
         border: 0.8px solid var(--dark, #3A2C19);
 
         p {
-           
+
             color: var(--dark, #3A2C19);
             text-align: center;
             /* heading/標題4/medium */
@@ -71,14 +71,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
             width: 200px;
             height: 40px;
             border-radius: 999px;
             background: var(--primary, #FF8740);
             border: none;
             cursor: pointer;
-        
+
             font-family: "Noto Sans TC", sans-serif;
             font-size: 20px;
             font-weight: 700;
@@ -87,11 +87,11 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-        
+
             .success-text {
                 transition: transform 0.3s ease, color 0.3s ease;
             }
-        
+
             img {
                 width: 24px;
                 height: 24px;
@@ -101,28 +101,28 @@
                 transition: opacity 0.3s ease;
                 opacity: 0;
             }
-        
+
             &:hover {
                 background: var(--white, #FEFCF7);
                 border: 1px solid var(--primary, #FF8740);
-        
+
                 .success-text {
                     transform: translateX(-10px); // 向左滑動
                     color: var(--primary, #FF8740);
                 }
-        
+
                 img {
                     opacity: 1;
                 }
             }
-        
+
             &:active {
                 .success-text {
                     font-size: 16px;
                     font-weight: 500;
                     letter-spacing: 1.6px;
                 }
-        
+
                 img {
                     width: 20px;
                     height: 20px;
@@ -157,3 +157,53 @@
     }
 }
 
+
+@media (min-width: 393px) and (max-width: 1024px) {
+
+    .LoginSuccess-title {
+        display: none !important;
+    }
+
+    .LoginSuccess-content {
+        border: none !important;
+
+        button {
+            width: 322px !important;
+            height: 40px !important;
+            border-radius: 8px !important;
+
+            .success-text {
+                color: #FFF;
+
+                text-align: center;
+                font-family:  "Noto Sans TC", sans-serif;
+                font-size: 14px !important;
+                font-style: normal;
+                font-weight: 900 !important;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
+
+            img{
+                display: none;
+            }
+        }
+
+        button:hover {
+            background: var(--primary, #FF8740) !important;
+            border: none !important;
+        
+            .login-text,
+            .success-text {
+              transform: none !important;
+              color: var(--white, #FEFCF7) !important;
+            }
+        
+            img {
+              opacity: 0 !important;
+            }
+          }
+    }
+
+}

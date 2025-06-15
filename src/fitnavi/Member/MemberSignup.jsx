@@ -172,7 +172,7 @@ function MemberSignup() {
                         <div className='MemberSignup-option-s'>
 
                             <button className="Returntologin" onClick={() => navigate('/MemberLogin')}>
-                                已經有帳號？
+                                已經是會員？
                                 <span>回到登入頁面</span></button>
                         </div>
 

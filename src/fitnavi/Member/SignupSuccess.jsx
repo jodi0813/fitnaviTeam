@@ -12,7 +12,7 @@ function LoginSuccess() {
                     <div className="LoginSuccess-title">恭喜您</div>
 
                     <div className='LoginSuccess-content'>
-                        <p>已註冊成功！<br/>可以開始預約課程了！</p>
+                        <p>註冊成功！<br/>可以開始預約課程了！</p>
 
                         <button onClick={()=>navigate('/MemberLogin')}>
                             <span className='success-text'>重新登入</span>
