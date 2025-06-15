@@ -158,21 +158,25 @@ label {
   font-family: "Noto Sans TC", sans-serif;
 }
 
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("../../public/images/Vector1.svg");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  color: #989794;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%; /* 19.6px */
-  letter-spacing: 1.4px;
+button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
 .home-nutritionist {
   position: relative;
   display: flex;
@@ -185,7 +189,9 @@ select {
   display: flex;
   align-items: flex-end;
   align-self: center;
-  margin-right: 7%;
+  margin-left: 13%;
+  width: 100%;
+  gap: 50px;
 }
 .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard {
   display: flex;
@@ -194,18 +200,19 @@ select {
   border: 1px solid #ff8740;
   background: #fff;
   box-shadow: 8px 8px 0px 0px #ff8740;
-  width: 250px;
-  height: 355px;
+  width: 20%;
+  aspect-ratio: 5/7;
   transform: skew(-20deg, 0deg);
-  margin-left: 70px;
 }
 .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard .home-nutritionist-img {
   position: absolute;
-  right: 48px;
-  top: -68px;
+  right: 20%;
+  bottom: 0%;
+  width: 100%;
+  z-index: 99;
 }
 .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard .home-nutritionist-img img {
-  width: 241px;
+  width: 92%;
   transform: none;
   transform: skew(20deg, 0deg);
 }
@@ -214,6 +221,7 @@ select {
   flex-direction: column;
   gap: 15px;
   position: absolute;
+  height: fit-content;
   right: -80px;
   top: -50px;
 }
@@ -266,26 +274,26 @@ select {
 }
 .home-nutritionist .nutritionist-card-box .home-nutritionist-queue {
   display: inline-flex;
-  width: fit-content;
-  height: 280px;
+  width: 50%;
+  height: auto;
 }
 .home-nutritionist .nutritionist-card-box .home-nutritionist-queue .nutritionist-card-small {
-  width: 160px;
+  width: 100%;
   height: auto;
 }
 .home-nutritionist .nutritionist-card-box .home-nutritionist-queue .nutritionist-card-small img {
   width: 100%;
   display: block;
 }
-.home-nutritionist .home-nutritionist-controls {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls {
   display: flex;
   width: 85%;
   justify-content: space-between;
   position: absolute;
-  top: 345px;
-  right: 10%;
+  top: 35%;
+  right: 13%;
 }
-.home-nutritionist .home-nutritionist-controls button {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls button {
   all: unset;
   /* optional: 為了確保可以點擊 */
   cursor: pointer;
@@ -303,74 +311,74 @@ select {
   gap: 4px;
   transform: skew(-20deg, 0deg);
 }
-.home-nutritionist .home-nutritionist-controls button .label {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls button .label {
   position: relative;
   display: inline-block;
   transition: all 0.3s ease;
   white-space: nowrap;
 }
-.home-nutritionist .home-nutritionist-controls button .label::after {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls button .label::after {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
 }
-.home-nutritionist .home-nutritionist-controls .next-btn .label::before {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .next-btn .label::before {
   content: "NEXT";
 }
-.home-nutritionist .home-nutritionist-controls .next-btn .label::after {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .next-btn .label::after {
   content: "下一位";
 }
-.home-nutritionist .home-nutritionist-controls .next-btn:hover .label {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .next-btn:hover .label {
   color: #ff8740;
 }
-.home-nutritionist .home-nutritionist-controls .next-btn:hover .label::before {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .next-btn:hover .label::before {
   opacity: 0;
 }
-.home-nutritionist .home-nutritionist-controls .next-btn:hover .label::after {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .next-btn:hover .label::after {
   opacity: 1;
   transform: skew(-10deg, 0deg);
 }
-.home-nutritionist .home-nutritionist-controls .next-btn:hover .arrow {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .next-btn:hover .arrow {
   content: url("/images/carousel-arrow-right-orange.svg");
   transform: scaleX(1.4);
 }
-.home-nutritionist .home-nutritionist-controls .next-btn:active .arrow {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .next-btn:active .arrow {
   transform: scaleX(0.95);
   transition: transform 0.3s ease;
 }
-.home-nutritionist .home-nutritionist-controls .next-btn:active .label {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .next-btn:active .label {
   transform: scale(0.9);
   transition: transform 0.3s ease;
 }
-.home-nutritionist .home-nutritionist-controls .prev-btn .label::before {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .prev-btn .label::before {
   content: "PREV";
 }
-.home-nutritionist .home-nutritionist-controls .prev-btn .label::after {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .prev-btn .label::after {
   content: "上一位";
 }
-.home-nutritionist .home-nutritionist-controls .prev-btn:hover {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .prev-btn:hover {
   transition: all 0.3s ease;
 }
-.home-nutritionist .home-nutritionist-controls .prev-btn:hover .label {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .prev-btn:hover .label {
   color: #ff8740;
 }
-.home-nutritionist .home-nutritionist-controls .prev-btn:hover .label::before {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .prev-btn:hover .label::before {
   opacity: 0;
 }
-.home-nutritionist .home-nutritionist-controls .prev-btn:hover .label::after {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .prev-btn:hover .label::after {
   opacity: 1;
   transform: skew(-10deg, 0deg);
 }
-.home-nutritionist .home-nutritionist-controls .prev-btn:hover .arrow {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .prev-btn:hover .arrow {
   content: url("/images/carousel-arrow-left-orange.svg");
   transform: scaleX(1.4);
 }
-.home-nutritionist .home-nutritionist-controls .prev-btn:active .arrow {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .prev-btn:active .arrow {
   transform: scaleX(0.95);
   transition: transform 0.3s ease;
 }
-.home-nutritionist .home-nutritionist-controls .prev-btn:active .label {
+.home-nutritionist .nutritionist-card-box .home-nutritionist-controls .prev-btn:active .label {
   transform: scale(0.9);
   transition: transform 0.3s ease;
 }
@@ -380,11 +388,13 @@ select {
   padding-top: 30px;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 .home-nutritionist .home-nutritionist-footer .home-nutritionist-img {
   position: absolute;
   right: 0%;
-  top: -66px;
+  bottom: -24%;
+  width: 17%;
 }
 .home-nutritionist .home-nutritionist-footer .home-nutritionist-title {
   display: flex;
@@ -398,14 +408,14 @@ select {
   flex-direction: column;
   gap: 10px;
 }
-.home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title2 {
+.home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title2 {
   display: flex;
   align-items: center;
   transform: skew(-20deg, 0deg);
   gap: 32px;
   padding-left: 7%;
 }
-.home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title2 .home-nutritionist-titleCh {
+.home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title2 .home-nutritionist-titleCh {
   font-family: "Mantou Sans";
   font-size: 84px;
   font-style: normal;
@@ -413,8 +423,9 @@ select {
   line-height: normal;
   letter-spacing: 12.8px;
   color: #3a2c19;
+  white-space: nowrap;
 }
-.home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title2 .home-nutritionist-titleEn {
+.home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title2 .home-nutritionist-titleEn {
   color: #fefcf7;
   font-family: "Dela Gothic One";
   font-size: 64px;
@@ -424,7 +435,12 @@ select {
   /* 156.25% */
   text-transform: capitalize;
 }
-.home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title3 {
+@media (max-width: 1150px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title2 .home-nutritionist-titleEn {
+    font-size: 56px;
+  }
+}
+.home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title3 {
   color: #3a2c19;
   font-family: "Noto Sans TC", sans-serif;
   font-size: 20px;
@@ -435,7 +451,7 @@ select {
   letter-spacing: 0.4px;
   padding-left: 4%;
 }
-.home-nutritionist .home-nutritionist-footer .home-nutritionist-button {
+.home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-button {
   display: flex;
   gap: 20px;
-}/*# sourceMappingURL=NutritionistSection.css.map */
+}

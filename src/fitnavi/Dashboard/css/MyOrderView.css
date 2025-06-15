@@ -158,21 +158,25 @@ label {
   font-family: "Noto Sans TC", sans-serif;
 }
 
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("../../public/images/Vector1.svg");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  color: #989794;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%; /* 19.6px */
-  letter-spacing: 1.4px;
+button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
 .orderview-table {
   border: 1px solid #eee;
   padding: 10px;

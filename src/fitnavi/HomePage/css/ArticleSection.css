@@ -159,94 +159,78 @@ label {
   font-family: "Noto Sans TC", sans-serif;
 }
 
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("../../public/images/Vector1.svg");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  color: #989794;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%; /* 19.6px */
-  letter-spacing: 1.4px;
+button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
-#Hero-Aricles {
-  position: relative;
-  z-index: 1;
-  margin-top: 20%;
+html {
+  font-size: 16px;
 }
 
-@media (max-width: 1360px) {
-  .ArticleSection-wrapper {
-    max-width: 70%;
-    margin-left: 0;
-    margin-right: 0;
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
   }
 }
 .ArticleSection-wrapper {
   position: relative;
-  bottom: 1;
-  background-image: url("/images/article-bg-pattern.png");
+  background-image: url("./images/article-bg-pattern.png");
   background-size: 100% 100%;
   background-position: center top;
   background-repeat: no-repeat;
   width: 100%;
+  padding-top: 24%;
 }
 .ArticleSection-wrapper .cards-text-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
   position: relative;
-  gap: 10rem;
+  width: 100%;
 }
-.ArticleSection-wrapper .cards-text-container .cards-column1 {
-  margin-left: 10%;
-  flex: 1;
-  width: 40%;
+.ArticleSection-wrapper .cards-text-container .cards-all {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 16%;
+}
+.ArticleSection-wrapper .cards-text-container .cards-all .cards-column1 {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.ArticleSection-wrapper .cards-text-container .cards-all .cards-column2 {
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
 }
 .ArticleSection-wrapper .cards-text-container .Article-text-column {
-  flex: 1;
-  top: 250px;
-  position: relative;
+  left: calc(50% + 96px);
+  top: -90px;
+  position: absolute;
   color: var(--dark, #3A2C19);
-  text-align: right;
   font-family: "Dela Gothic One";
   font-size: 128px;
   font-style: normal;
   font-weight: 400;
-  max-width: 2%;
-  max-height: 400px;
-  /* 78.125% */
+  letter-spacing: 19.2px;
   transform: rotate(90deg);
   transform-origin: top left;
   margin: 0px;
 }
-.ArticleSection-wrapper .cards-text-container .cards-column2 {
-  margin-top: 150px;
-  justify-content: flex-start;
-  position: relative;
-  margin-left: 0px;
-  flex: 1;
-  width: 40%;
-}
 
 .Hompagearticle-Chtitle {
-  right: 10%;
-  top: 50%;
-  transform: translateY(-100%);
-  position: relative;
+  left: 45%;
+  top: calc(100% - 200px);
+  position: absolute;
   display: flex;
   flex-direction: column;
-}
-@media (max-width: 1360px) {
-  .Hompagearticle-Chtitle {
-    right: 5%;
-  }
+  align-items: start;
 }
 .Hompagearticle-Chtitle h2 {
   color: var(--dark, #3A2C19);
@@ -259,27 +243,38 @@ select {
   letter-spacing: 12.8px;
   white-space: nowrap;
 }
+.Hompagearticle-Chtitle .subTitle {
+  width: 558px;
+  margin-bottom: 10%;
+}
+.Hompagearticle-Chtitle .subTitle p {
+  color: #3A2C19;
+  font-family: "Noto Sans TC";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  /* 200% */
+  letter-spacing: 0.4px;
+}
 .Hompagearticle-Chtitle button {
-  width: 30%;
-  height: 10%;
-  align-self: flex-end;
-  padding: 16px 84px;
+  width: 300px;
+  height: 48px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   border-radius: 999px;
   background: var(--primary, #FF8740);
   color: var(--white, var(--white, #FEFCF7));
   text-align: center;
-  font-family: "" Noto Sans TC ", sans-serif; Sans TC", sans-serif;
-  font-size: 24px;
+  font-family: "Noto Sans TC";
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 2.4px;
+  letter-spacing: 2px;
   white-space: nowrap;
 }
 .Hompagearticle-Chtitle button:focus, .Hompagearticle-Chtitle button:focus-visible, .Hompagearticle-Chtitle button:hover {
   outline: none;
   border: none;
-}/*# sourceMappingURL=ArticleSection.css.map */
+}

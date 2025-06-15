@@ -159,21 +159,25 @@ label {
   font-family: "Noto Sans TC", sans-serif;
 }
 
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("../../public/images/Vector1.svg");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  color: #989794;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 140%; /* 19.6px */
-  letter-spacing: 1.4px;
+button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
 .HeroSection {
   position: relative;
   width: 100%;
@@ -254,29 +258,7 @@ select {
   top: 20%;
   z-index: 2;
   height: 100%;
-}
-@media (max-width: 393px) {
-  .HeroSection .Hero-Section-Title {
-    width: 30%;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 1024px) {
-  .HeroSection .Hero-Section-Title {
-    width: 50%;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 1360px) {
-  .HeroSection .Hero-Section-Title {
-    width: 95%;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 1920px) {
-  .HeroSection .Hero-Section-Title {
-    width: 100%;
-  }
+  width: 100%;
 }
 .HeroSection .Hero-Section-Title .Hero-Section-Catchphrase h2 {
   color: #FEFCF7;
@@ -285,7 +267,11 @@ select {
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
-  /* 180px */
+}
+@media (max-width: 1200px) {
+  .HeroSection .Hero-Section-Title .Hero-Section-Catchphrase h2 {
+    font-size: 155px;
+  }
 }
 .HeroSection .Hero-Section-Title .Hero-Section-Catchphrase .h3-HeroTitle {
   display: flex;
@@ -302,6 +288,11 @@ select {
   line-height: 100%;
   text-transform: capitalize;
 }
+@media (max-width: 1200px) {
+  .HeroSection .Hero-Section-Title .Hero-Section-Catchphrase .h3-HeroTitle h3.S-HeroTitle {
+    font-size: 180px;
+  }
+}
 .HeroSection .Hero-Section-Title .Hero-Section-Catchphrase .h3-HeroTitle h3.tronger-HeroTitle {
   color: #EB7223;
   font-family: "Dela Gothic One";
@@ -310,13 +301,19 @@ select {
   font-weight: 400;
   line-height: 100%;
 }
+@media (max-width: 1200px) {
+  .HeroSection .Hero-Section-Title .Hero-Section-Catchphrase .h3-HeroTitle h3.tronger-HeroTitle {
+    font-size: 155px;
+  }
+}
 .HeroSection .Hero-Section-Title .Hero-Section-content {
   display: inline-block;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   width: 50%;
-  padding: 1%;
+  padding-top: 3%;
+  padding-left: 1%;
 }
 .HeroSection .Hero-Section-Title .Hero-Section-content p {
   color: #FFF;
@@ -331,7 +328,7 @@ select {
 }
 .HeroSection .Hero-section-scroll {
   position: absolute;
-  top: 63%;
+  top: 64%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -404,4 +401,4 @@ select {
     transform: translateY(0);
     /* 停留原位 */
   }
-}/*# sourceMappingURL=HeroSection.css.map */
+}
