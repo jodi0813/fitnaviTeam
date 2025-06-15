@@ -1,6 +1,13 @@
 @use "../../fitnavi/reset.scss";
 
 .mainTitleBreadBox {
+  background: rgba(255, 255, 255, 0.20);
+backdrop-filter: blur(2px);
+ position: fixed;
+ top: 62px;
+  left: 0;
+  width: 100%;
+   z-index: 10;
   .mainTitleBread {
     display: flex;
     align-items: baseline;
@@ -18,6 +25,7 @@
         }
       .titleBackBt {
         display: none;
+        background-color: transparent;
         @media (max-width: 1024px) {
           display: flex;
           padding: 0px;

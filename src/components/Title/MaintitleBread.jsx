@@ -10,7 +10,7 @@ function MainTitleBread({ title1, title2, breadcrumbList = [] }) {
         <header className="mainTitleBread">
           <div className="titleBoxBread">
             <button onClick={() => back(-1)} className="titleBackBt">
-              <FaAngleLeft size={20} />
+              <FaAngleLeft size={20}/>
             </button>
             <h2 className="title1">{title1}</h2>
             <p className="title2">{title2}</p>
