@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (max-width:1024px) {
+  @media (max-width: 1024px) {
     padding: 63px 0px;
   }
 
@@ -16,14 +16,14 @@
     align-items: center;
     width: 100%;
     margin-top: 19px;
-     @media (max-width:1024px) {
-    gap: 36px;
-      }
+    @media (max-width: 1024px) {
+      gap: 36px;
+    }
     .centerPhotoBox {
       position: relative;
       width: 85%;
 
-      @media (max-width:1024px) {
+      @media (max-width: 1024px) {
         width: 100%;
       }
 
@@ -34,7 +34,7 @@
         object-fit: cover;
         width: 100%;
 
-        @media (max-width:1024px) {
+        @media (max-width: 1024px) {
           border-radius: 0px;
           height: 160px;
         }
@@ -45,7 +45,7 @@
         align-items: flex-end;
         position: absolute;
         left: 34px;
-        bottom: -70px;
+        bottom: -73px;
         gap: 6px;
         width: 100%;
 
@@ -55,47 +55,49 @@
           aspect-ratio: 1;
           border-radius: 143px;
 
-          @media (max-width:1024px) {
+          @media (max-width: 1024px) {
             width: 80px;
             height: 80px;
           }
-
         }
 
         .center-nameBox {
           display: flex;
           flex-direction: column;
+          .center-nameBox1 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            .center-name {
+              color: #3a2c19;
+              font-size: 2rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
 
-          .center-name {
-            color: #3a2c19;
-            font-size: 2rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+              @media (max-width: 1024px) {
+                font-size: 20px;
+              }
+            }
 
-            @media (max-width:1024px) {
-              font-size: 20px;
+            .center-area {
+              font-size: 1.25rem;
+              font-weight: 700;
+              letter-spacing: 2px;
+
+              @media (max-width: 1024px) {
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: 1.4px;
+              }
             }
           }
-
-          .center-area {
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-
-            @media (max-width:1024px) {
-              font-size: 14px;
-              font-weight: 500;
-              letter-spacing: 1.4px;
-            }
-          }
-
           .hashtag {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
 
-            @media (max-width:1024px) {
+            @media (max-width: 1024px) {
               gap: 4px;
             }
           }
@@ -110,7 +112,7 @@
             letter-spacing: 1.6px;
             color: #ff8740;
 
-            @media (max-width:1024px) {
+            @media (max-width: 1024px) {
               font-size: 12px;
             }
           }
@@ -123,9 +125,9 @@
       flex-direction: column;
       padding: 87px 0px 0px 0px;
       width: 75%;
-        @media (max-width:1024px) {
+      @media (max-width: 1024px) {
         width: 80%;
-        }
+      }
       .introductionTitle {
         display: flex;
         align-items: center;
@@ -136,7 +138,6 @@
           font-weight: 700;
           letter-spacing: 2px;
           color: #ff8740;
-
         }
 
         .introductionTitleLine {
@@ -155,11 +156,10 @@
         color: #3a2c19;
         padding: 26px 48px;
 
-        @media (max-width:1024px) {
-        padding: 0px;
+        @media (max-width: 1024px) {
+          padding: 0px;
         }
       }
     }
-
   }
 }

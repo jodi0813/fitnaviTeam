@@ -4,6 +4,9 @@
 .centerSection {
   width: 100%;
   padding: 20px;
+  @media (max-width: 1024px) {
+    padding: 0px 20px;
+  }
 }
 
 .centerMenu {
@@ -49,6 +52,11 @@
     @media (max-width: 1024px) {
       font-size: 16px;
       flex: 1;
+      border-radius: 99px;
+      background: var(--primary, #ff8740);
+      color: #fefcf7;
+      text-decoration: none;
+      padding: 8px 0px;
     }
   }
 
@@ -67,6 +75,7 @@
     @media (max-width: 1024px) {
       font-size: 16px;
       flex: 1;
+      padding: 8px 0px;
     }
   }
 }
@@ -203,38 +212,105 @@
   @media (max-width: 1024px) {
     gap: 36px;
   }
-  ul li {
-    color: #3a2c19;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 40px;
-    letter-spacing: 0.4px;
+  // ul li {
+  //   color: #3a2c19;
+  //   font-size: 20px;
+  //   font-weight: 500;
+  //   line-height: 40px;
+  //   letter-spacing: 0.4px;
 
+  //   @media (max-width: 1024px) {
+  //     font-size: 14px;
+  //     font-style: normal;
+  //     font-weight: 500;
+  //     line-height: 140%;
+  //     /* 19.6px */
+  //     letter-spacing: 1.4px;
+  //   }
+
+  //   strong {
+  //     color: #989794;
+  //     font-size: 1rem;
+  //     font-weight: 500;
+  //     line-height: 150%;
+  //     letter-spacing: 1.6px;
+
+  //     @media (max-width: 1024px) {
+  //       font-size: 12px;
+  //       font-style: normal;
+  //       line-height: 140%;
+  //       letter-spacing: 1.2px;
+  //     }
+  //   }
+  // }
+  .contactInfoBox {
+    display: flex;
+    padding: 0px 36px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
     @media (max-width: 1024px) {
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 140%;
-      /* 19.6px */
-      letter-spacing: 1.4px;
+      padding: 0px;
+      gap: 16px;
     }
+    .contactInfo1 {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-self: stretch;
 
-    strong {
-      color: #989794;
-      font-size: 1rem;
-      font-weight: 500;
-      line-height: 150%;
-      letter-spacing: 1.6px;
-
-      @media (max-width: 1024px) {
-        font-size: 12px;
+      .contactInfo2 {
+        display: flex;
+        align-items: flex-start;
+        gap: 4px;
+        align-self: stretch;
+        color: #989794;
+        font-family: "Noto Sans TC";
+        font-size: 1rem;
         font-style: normal;
-        line-height: 140%;
-        letter-spacing: 1.2px;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: 1.6px;
+        @media (max-width: 1024px) {
+          font-size: 12px;
+        }
+      }
+      .contactInfo3 {
+        display: flex;
+        padding: 0px 32px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        align-self: stretch;
+        @media (max-width: 1024px) {
+          padding: 0px 20px;
+        }
+        .contactInfo4 {
+          color: #3a2c19;
+          font-family: "Noto Sans TC";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 40px;
+          letter-spacing: 0.4px;
+          @media (max-width: 1024px) {
+            font-size: 14px;
+            line-height: 140%;
+          }
+        }
+      }
+
+      .social-icons {
+        display: flex;
+        padding: 0px 36px;
+        align-items: flex-start;
+        gap: 48px;
+        align-self: stretch;
+        margin-top: 16px;
       }
     }
   }
-
   /* 基本資料 */
   .basicVenueInfo {
     display: flex;
@@ -309,75 +385,6 @@
         gap: 16px;
         width: 100%;
         padding: 10px 0px;
-      }
-      .contactInfoBox {
-        display: flex;
-        padding: 0px 36px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
-        align-self: stretch;
-        @media (max-width: 1024px) {
-          padding: 0px;
-          gap: 16px;
-        }
-        .contactInfo1 {
-          display: flex;
-          flex-direction: column;
-          gap: 4px;
-          align-self: stretch;
-
-          .contactInfo2 {
-            display: flex;
-            align-items: flex-start;
-            gap: 4px;
-            align-self: stretch;
-            color: #989794;
-            font-family: "Noto Sans TC";
-            font-size: 1rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 150%;
-            letter-spacing: 1.6px;
-            @media (max-width: 1024px) {
-              font-size: 12px;
-            }
-          }
-
-          .contactInfo3 {
-            display: flex;
-            padding: 0px 32px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            align-self: stretch;
-            @media (max-width: 1024px) {
-              padding: 0px 20px;
-            }
-            .contactInfo4 {
-              color: #3a2c19;
-              font-family: "Noto Sans TC";
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 40px;
-              letter-spacing: 0.4px;
-              @media (max-width: 1024px) {
-                font-size: 14px;
-                line-height: 140%;
-              }
-            }
-          }
-
-          .social-icons {
-            display: flex;
-            padding: 0px 36px;
-            align-items: flex-start;
-            gap: 48px;
-            align-self: stretch;
-            margin-top: 16px;
-          }
-        }
       }
     }
   }

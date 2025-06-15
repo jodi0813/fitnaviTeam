@@ -4,6 +4,7 @@ import Subtitle from "../../components/Title/Subtitle";
 import CoachCard from "../../components/CoachCard";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { SiLine } from "react-icons/si"; // LINE 要用 Simple Icons 庫
+import { FaSquareCheck } from "react-icons/fa6";
 function CenterNavbar() {
   const [activeTab, setActiveTab] = useState("centerInformation"); // 預設是場館資料
   return (
@@ -51,33 +52,51 @@ function CenterNavbar() {
               <Subtitle subtitle="基本資料" subtitleEN="Basic Venue Info" />
               <div className="informationSection">
                 <div className="informationLeft">
-                  <ul>
-                    <li>
-                      <strong>
-                        <span class="dot">•</span>地址
-                      </strong>
-                      <br />
-                      100 台北市 中正區 濟南路一段 321號 1、2樓
-                    </li>
-                    <li>
-                      <strong>營業時間</strong>
-                      <br />
-                      24小時
-                    </li>
-                    <li>
-                      <strong>
-                        <span class="dot">•</span>有無停車場
-                      </strong>
-                      <br />有 100 台北市 中正區 濟南路一段 321號 B1
-                    </li>
-                    <li>
-                      <strong>
+                  <div className="contactInfoBox">
+                    <div className="contactInfo1">
+                      <div className="contactInfo2">
+                        <span class="dot">•</span>
+                        地址
+                      </div>
+                      <div className="contactInfo3">
+                        <div className="contactInfo4">
+                          100 台北市 中正區 濟南路一段 321號 1、2樓
+                        </div>
+                      </div>
+                    </div>
+                    <div className="contactInfo1">
+                      <div className="contactInfo2">
+                        <span class="dot">•</span>
+                        營業時間
+                      </div>
+                      <div className="contactInfo3">
+                        <div className="contactInfo4">24小時</div>
+                      </div>
+                    </div>
+
+                    <div className="contactInfo1">
+                      <div className="contactInfo2">
+                        <span class="dot">•</span>
+                        有無停車場
+                      </div>
+                      <div className="contactInfo3">
+                        <div className="contactInfo4">
+                          有 <FaSquareCheck color="green" size={18} />
+                          100 台北市 中正區 濟南路一段 321號 B1
+                        </div>
+                      </div>
+                    </div>
+                    <div className="contactInfo1">
+                      <div className="contactInfo2">
                         <span class="dot">•</span>大眾運輸
-                      </strong>
-                      <br />
-                      捷運善導寺站3號出口、公車123號、456號、789號
-                    </li>
-                  </ul>
+                      </div>
+                      <div className="contactInfo3">
+                        <div className="contactInfo4">
+                          捷運善導寺站3號出口、公車123號、456號、789號
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div className="informationRight">
                   <img src="./images/map.jpg" alt="場館地圖位置" />
@@ -222,9 +241,18 @@ function CenterNavbar() {
                   <img src="./images/arrow-left.svg" alt="左箭頭" />
                 </button>
                 <div className="centerPhotos">
-                  <img src="./images/weightTraining01.jpg" alt="重訓器材照片1" />
-                  <img src="./images/weightTraining02.jpg" alt="重訓器材照片2" />
-                  <img src="./images/weightTraining03.jpg" alt="重訓器材照片3" />
+                  <img
+                    src="./images/weightTraining01.jpg"
+                    alt="重訓器材照片1"
+                  />
+                  <img
+                    src="./images/weightTraining02.jpg"
+                    alt="重訓器材照片2"
+                  />
+                  <img
+                    src="./images/weightTraining03.jpg"
+                    alt="重訓器材照片3"
+                  />
                 </div>
                 <button>
                   <img src="./images/arrow-right.svg" alt="右箭頭" />
@@ -288,7 +316,6 @@ function CenterNavbar() {
         {/* 三、私人教練 */}
         {activeTab === "fitnessTrainer" && (
           <section id="fitnessTrainer">
-
             <div className="trainersCards">
               {/* 男性教練 */}
               <Subtitle subtitle="男性教練" subtitleEN="Male Trainers" />

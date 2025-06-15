@@ -28,7 +28,7 @@ function Center() {
                 className="centerLogoPic"
               />
               <div className="center-nameBox">
-                <div>
+                <div className="center-nameBox1">
                   <span className="center-name">TECHNOGym</span>
                   <span className="center-area">(忠孝館)</span>
                 </div>
