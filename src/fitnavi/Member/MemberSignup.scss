@@ -643,19 +643,19 @@
                         opacity: 0;
                     }
         
-                    &:hover {
-                        background: var(--white, #FEFCF7);
-                        border: 1px solid var(--primary, #FF8740);
+                    // &:hover {
+                    //     background: var(--white, #FEFCF7);
+                    //     border: 1px solid var(--primary, #FF8740);
         
-                        .Signup-text {
-                            transform: translateX(-10px); // 向左滑動
-                            color: var(--primary, #FF8740);
-                        }
+                    //     .Signup-text {
+                    //         transform: translateX(-10px); // 向左滑動
+                    //         color: var(--primary, #FF8740);
+                    //     }
         
-                        img {
-                            opacity: 1;
-                        }
-                    }
+                    //     img {
+                    //         opacity: 1;
+                    //     }
+                    // }
         
                     &:active {
                         .Signup-text {

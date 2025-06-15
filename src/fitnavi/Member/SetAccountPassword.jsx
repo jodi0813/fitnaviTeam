@@ -125,6 +125,11 @@ function SetAccountPassword() {
                     >
                         返回上一步
                     </button>
+
+                    <button className='alreadyButton'>
+                        <span>已經是會員？</span>
+                        <p>會員登入</p>
+                    </button>
             
                 </div>
 
