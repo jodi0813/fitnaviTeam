@@ -288,6 +288,7 @@ function Coach() {
 
   const handleSearch = (e) => {
     e.preventDefault();
+    setShowFilter(false); // 小尺寸搜尋後自動隱藏表單
     setCurrentPage(0); // 回到第一頁
     const result = coachList.filter((coach) => {
       const matchCity =
@@ -349,7 +350,7 @@ function Coach() {
       <div id="coachMain">
         <MainTitle title1="健身教練" title2="找到專屬你的健身教練" />
         <div className="allCoachCards">
-       
+
           {/* 小尺寸篩選 */}
           <div className="filterSection">
             {isMobile ? (
@@ -359,13 +360,13 @@ function Coach() {
                 </div>
                 <div className="fiflterPhone">
                   <div>
-                  <button
-                    className="fiflterBt"
-                    onClick={() => setShowFilter(!showFilter)}
-                  >
-                    篩選
-                    <img src="./images/filter.svg" alt="篩選按鈕" />
-                  </button>
+                    <button
+                      className="fiflterBt"
+                      onClick={() => setShowFilter(!showFilter)}
+                    >
+                      篩選
+                      <img src="./images/filter.svg" alt="篩選按鈕" />
+                    </button>
                   </div>
                 </div>
                 {showFilter && (
@@ -489,14 +490,14 @@ function Coach() {
             </div>
           )}
         </div>
-<Pagination
-  pageCount={pageCount}
-  currentPage={currentPage}
-  onPageChange={(page) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }}
-/>
+        <Pagination
+          pageCount={pageCount}
+          currentPage={currentPage}
+          onPageChange={(page) => {
+            setCurrentPage(page);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        />
 
       </div>
     </>
