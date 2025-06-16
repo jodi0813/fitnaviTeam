@@ -1,22 +1,6 @@
 @use "../../reset.scss";
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
-// #Hero-Aricles {
-//     position: relative;
-//     z-index: 1;
-//     margin-top: 20%;
-
-
-// }
-
-// @media (max-width: 1360px) {
-//     .ArticleSection-wrapper {
-//         max-width: 70%;
-//         margin-left: 0;
-//         margin-right: 0;
-//     }
-// }
-
 
 
 .ArticleSection-wrapper {
@@ -29,6 +13,7 @@
     background-repeat: no-repeat;
     width: 100%;
     padding-top: 24%;
+    padding-bottom: 15%;
 
     .cards-text-container {
         display: flex;
@@ -55,7 +40,7 @@
                 display: flex;
                 flex-direction: column;
                 width: fit-content;
-                
+
             }
 
         }
@@ -76,6 +61,15 @@
             transform-origin: top left;
             margin: 0px;
 
+            @media(max-width:1024px) {
+                left: calc(50% + 50px);
+                font-size: 72px;
+                font-style: normal;
+                line-height: 100px;
+                /* 138.889% */
+                letter-spacing: 10.8px;
+            }
+
         }
 
     }
@@ -85,13 +79,19 @@
 
 
 .Hompagearticle-Chtitle {
-    left:45%;
+    left: 45%;
     top: calc(100% - 200px);
 
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: start;
+
+    @media(max-width:1024px){
+        top:65%;
+    }
+
+
 
     h2 {
         color: var(--dark, #3A2C19);
@@ -104,11 +104,46 @@
         letter-spacing: 12.8px;
         white-space: nowrap;
 
+        @media(max-width:1024px) {
+            color: var(--primary, var(--primary, #FF8740));
+            font-size: 64px;
+            letter-spacing: 6.4px;
+            opacity: 0.5;
+        }
+
+
     }
+
+
+    .title1 {
+        @media(max-width:1024px) {
+            position: absolute;
+            top: -152%;
+            right: -69%;
+        }
+    }
+
+    .title2 {
+        display: none;
+
+        @media(max-width:1024px) {
+            display: block;
+            position: absolute;
+            bottom: 0%;
+            left: -134%;
+        }
+    }
+
+
 
     .subTitle {
         width: 558px;
         margin-bottom: 10%;
+
+        @media(max-width:1024px) {
+            width: 310px;
+            margin-top: 55%;
+        }
 
         p {
             color: #3A2C19;
@@ -119,6 +154,13 @@
             line-height: 40px;
             /* 200% */
             letter-spacing: 0.4px;
+
+            @media(max-width:1024px) {
+                font-size: 14px;
+                line-height: 28px;
+                /* 200% */
+                letter-spacing: 0.28px;
+            }
         }
     }
 
@@ -142,6 +184,12 @@
         line-height: normal;
         letter-spacing: 2px;
         white-space: nowrap;
+        @media(max-width:1024px){
+            width: 320px;
+            height: 40px;
+            border-radius: 8px;
+            margin-top: 25px; 
+        }
 
         &:focus,
         &:focus-visible,
