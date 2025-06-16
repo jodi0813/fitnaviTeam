@@ -32,7 +32,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 5%;
+        gap: 0;
         width: 100%;
 
 
@@ -477,6 +477,7 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
+            margin-top: 12rem;
 
             // @media (max-width: 1920px) {
             //     margin-top: 300px !important;
@@ -569,6 +570,8 @@
                 margin-top: 24px;
                 word-break: break-all;
                 word-wrap: break-word;
+                width: 80%;
+                padding-left: 2rem;
             }
 
 
@@ -578,6 +581,8 @@
                 flex-direction: row;
                 align-items: center;
                 gap: 50px;
+                margin-top: 10rem;
+                // padding-left: 2rem;
 
                 h3 {
                     width: 138px;
@@ -1185,24 +1190,19 @@
         }
 
         .ViewArticles {
-
             max-width: 1200px;
-            // margin-top: 80px;
+            margin: 0 auto; // ✅ 水平置中
             box-sizing: border-box;
-            justify-content: center;
+
             display: flex;
+            justify-content: center;
+            align-items: center;
             flex-direction: row;
             flex-wrap: nowrap;
-            align-items: center;
             gap: 60px;
-
-            // @media (min-width: 1680px) {
-            //     margin-left: 20%;
-            // }
 
             .ViewArticles-left,
             .ViewArticles-right {
-                width: 48px;
                 width: 48px;
                 height: 48px;
                 flex: 0 0 48px;
@@ -1214,42 +1214,37 @@
                 justify-content: center;
                 cursor: pointer;
                 z-index: 10;
-            }
 
-            .ViewArticles-left:hover,
-            .ViewArticles-left:focus,
-            .ViewArticles-left:focus-visible {
-                outline: none;
-                box-shadow: none;
-                border: none;
-            }
-
-            .ViewArticles-right:hover,
-            .ViewArticles-right:focus,
-            .ViewArticles-right:focus-visible {
-                outline: none;
-                box-shadow: none;
-                border: none;
-            }
-
-            .Three-classcards {
-                display: block;
-                display: flex;
-                flex-direction: row;
-                gap: 24px;
-                width: auto;
-
-                // 不需要 align-items: center
-                @media (min-width: 1680px) {
-                    gap: 30px;
+                &:hover,
+                &:focus,
+                &:focus-visible {
+                    outline: none;
+                    box-shadow: none;
+                    border: none;
                 }
             }
 
-            .my-swiper-container{
-                display: none;
+            .Three-classcards {
+                display: flex;
+                flex-direction: row;
+                gap: 24px;
+                width: 100%;
+                margin: 0 auto; // ✅ 卡片容器置中
+
+                @media (min-width: 1025px) {
+                    width: 80%; // ✅ 大螢幕固定寬
+                }
+
+                @media (min-width: 1680px) {
+                    gap: 30px; // 加大間距
+                }
             }
 
+            .my-swiper-container {
+                display: none;
+            }
         }
+
 
     }
 
@@ -1434,7 +1429,7 @@
                 line-height: 140%;
                 /* 19.6px */
                 letter-spacing: 1.4px;
-                margin-top: 30px;
+                // margin-top: 30px;
 
                 @media (max-width: 1024px) {
                     overflow: hidden;
@@ -1628,8 +1623,9 @@
 
 .coachsvg {
     display: flex;
-    position: relative;
-    left: 70%;
+    position: absolute;
+    right: 3rem;
+    top: 5rem;
 
     p {
         position: absolute;
@@ -1911,7 +1907,7 @@
             flex-direction: column;
             align-items: flex-start;
             padding-left: 2.5rem;
-            margin-top: 20rem;
+            margin-top: 20rem !important;
 
 
             h3 {
@@ -1937,9 +1933,9 @@
             font-weight: 500;
             line-height: 40px;
             letter-spacing: 0.4px;
-            padding-left: 2.5rem;
+            padding-left: 2.5rem !important;
             /* Consider reducing this padding or making it horizontal only */
-            max-width: 90%;
+            max-width: 90% !important;
             /* Ensure the paragraph doesn't exceed its parent's width */
             box-sizing: border-box;
             /* Include padding in the width calculation */
@@ -1999,7 +1995,7 @@
         align-self: stretch;
 
         .intro {
-            margin-top: 100% !important;
+            margin-top: 8rem !important;
             width: 100%;
 
             ul {
@@ -2195,7 +2191,7 @@
             .coach-reserve-img {
                 position: absolute;
                 width: 40% !important;
-                min-height: 250px;
+                min-height: 0px !important;
                 display: flex;
 
                 img {
@@ -2262,71 +2258,43 @@
 
 
 
-    // #coacharticle {
-    //     width: 100% !important;
-    //     margin-top: 80px !important;
-        
-
-
-    //     .ViewArticles {
-    //         position: relative;
-    //         display: flex;
-    //         align-items: flex-start;
-    //         justify-content: flex-start;
-            
-
-    //         .Three-classcards {
-    //             justify-content: flex-start !important;
-    //         }
-
-    //     }
-
-
-
-    //     .ViewArticles-left,
-    //     .ViewArticles-right {
-    //         display: none !important;
-    //     }
-
-        
-    // }
     #coacharticle {
         margin-top: 5rem !important;
         overflow-x: visible;
-      
+
         // .article-wrapper {
         //   overflow-x: visible;
         // }
-      
+
         // .ViewArticles {
         //   overflow-x: visible; /* ← 建議移除 auto，因為 Three-classcards 已控制 */
         //   scroll-snap-type: x mandatory;
         //   -webkit-overflow-scrolling: touch;
         // }
-      
+
         .Three-classcards {
-          display: none !important;
+            display: none !important;
         }
 
-        .my-swiper-container{
+        .my-swiper-container {
             display: block !important;
         }
-      
+
         // .Three-classcards::-webkit-scrollbar {
         //   display: none;
         // }
-      
+
         // .Three-classcards .Articlecardscoach {
         //   flex: 0 0 auto !important;
         //   scroll-snap-align: start;
         // }
-      
-        // .ViewArticles-left,
-        // .ViewArticles-right {
-        //   display: none !important;
-        // }
-      }
-      
+
+        .ViewArticles-left,
+        .ViewArticles-right {
+            display: none !important;
+        }
+    }
+
 
     /* --- */
 
@@ -2340,8 +2308,7 @@
 
         .star-card-wrapper {
             width: 100%;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto !important;
             box-sizing: border-box;
 
 
@@ -2349,39 +2316,128 @@
 
             .Coach-comment-line1 {
 
-                width: 100%;
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                /* 三欄 */
+                gap: 5px !important;
+                /* 卡片間距 */
+                padding: 0 40px;
+                justify-items: center;
                 margin: 0 auto !important;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative !important;
-                gap: 30px !important;
+                position: relative;
 
                 &::before {
-                    left: calc(33.33% - 60px) !important;
+                    position: absolute;
+                    left: 36% !important;
+
                 }
 
                 &::after {
-                    left: calc(66.66% - 100px) !important;
+                    position: absolute;
+                    left: 64% !important;
                 }
+
+                // ::before,
+                // ::after {
+                //     position: absolute !important;
+                //     content: "" !important;
+                //     top: 0;
+                //     width: 1px;
+                //     height: 100%;
+                //     background-color: #ccc;
+                //     /* or whatever your line is */
+                // }
+
+                // &::before {
+                //     left: 30% !important;
+                // }
+
+                // &::after {
+                //     left: 80% !important;
+                // }
             }
 
 
             .Coach-comment-card {
-                width: 250px !important;
-                height: 300px;
-                padding: 10px !important;
-                position: relative;
+                width: 12rem !important;
+                height: 15rem !important;
+                padding: 0px !important;
+                // position: relative;
+
+                // .Name-date {
+
+                //     display: flex;
+                //     flex-direction: row;
+                //     gap: 50px !important;
+                //     position: absolute;
+                //     top: 240px !important;
+
+                // }
+
+                p.description {
+                    width: 140px !important;
+                    height: 100px !important;
+                    color: var(--dark, #3A2C19);
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px !important;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1.4;
+                    letter-spacing: 1.4px;
+                    padding-left: 12px !important;
+                    padding-right: 12px !important;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    /* 限制顯示兩行 */
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                }
 
                 .Name-date {
 
                     display: flex;
                     flex-direction: row;
-                    gap: 50px !important;
+                    justify-content: center !important;
+                    align-items: center !important;
+                    gap: 20px !important;
                     position: absolute;
-                    top: 240px !important;
+                    top: 200px !important;
+
+
+                    p.Name {
+                        color: #000;
+
+                        /* 段落/14 */
+                        font-family: "Noto Sans TC", sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                        white-space: nowrap;
+                    }
+
+                    p.Date {
+                        color: var(--gray, #989794);
+                        text-align: right;
+                        /* 段落/14 */
+                        font-family: " Sans TC";
+                        font-size: 12px !important;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                    }
+
 
                 }
+
+
+
             }
 
 
@@ -2395,7 +2451,7 @@
 
             h3 {
                 color: var(--dark, #3A2C19);
-                font-size: 30px;
+                font-size: 14px !important;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 150%;
@@ -2413,10 +2469,11 @@
                 font-weight: 500;
                 line-height: 140%;
                 letter-spacing: 1.4px;
-                margin-top: 30px;
-                margin: 30px auto 0 auto !important;
+                // margin-top: 30px;
+                // margin: 30px auto 0 auto !important;
                 text-align: left;
                 width: 200px;
+                margin-top: 10px !important;
 
             }
         }
@@ -2427,6 +2484,7 @@
         }
 
     }
+
 
 
 
@@ -2514,12 +2572,12 @@
 //     // }
 // }
 
-@media screen and (max-width:1920px) {
-    .coachnav {
+// @media screen and (max-width:1920px) {
+//     .coachnav {
 
-        margin-top: 220px !important;
+//         margin-top: 220px !important;
 
 
-    }
+//     }
 
-}
+// }
