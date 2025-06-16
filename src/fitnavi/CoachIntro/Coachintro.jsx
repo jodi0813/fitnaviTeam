@@ -3,7 +3,7 @@ import { useState } from "react";
 import MaintitleBread from '../../components/Title/MaintitleBread';
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
-import Articlecards from "../../components/Articlecards/Articlecards";
+import Articlecardscoach from "../../components/Articlecards/Articlecardscoach";
 import { useNavigate } from 'react-router-dom';
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
 import PhotoGallery1 from '../../components/Carousel/PhotoGallery1';
@@ -11,6 +11,7 @@ import PopupWindow1 from "./PopupWindow/PopupWindow1";
 import PopupWindow2 from "./PopupWindow/PopupWindow2";
 import PopupWindow3 from "./PopupWindow/PopupWindow3";
 import PopupWindow4 from "./PopupWindow/PopupWindow4";
+import ArticleCardsSwiper from '../../components/ArticleCardsSwiper'; 
 import { useRef } from 'react';
 
 
@@ -516,23 +517,27 @@ function Coachintro() {
                                             <path d="M30 36L18 24L30 12" stroke="#3A2C19" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg></button>
 
-                                    
-                                        <div className="Three-classcards">
-                                            {visibleCards.map((card, index) => (
-                                                <Articlecards
-                                                    key={index}
-                                                    date={card.date}
-                                                    img={card.img}
-                                                    title={card.title}
-                                                    content={card.content}
-                                                    tags={card.tags}
-                                                    category={card.category}
-                                                    className={`card${index + 1}`}
-                                                    onClick={() => navigate(`/article/${card.id}`)}
-                                                />
-                                            ))}
-                                        </div>
-                                    
+{/* 
+                                    <div className="Three-classcards">
+                                        {visibleCards.map((card, index) => (
+                                            <Articlecardscoach
+                                                key={index}
+                                                date={card.date}
+                                                img={card.img}
+                                                title={card.title}
+                                                content={card.content}
+                                                tags={card.tags}
+                                                category={card.category}
+                                                className={`Articlecardscoach card${index + 1}`}
+                                                onClick={() => navigate(`/article/${card.id}`)}
+                                            />
+                                        ))}
+                                    </div> */}
+
+                                    <div className="my-swiper-container">
+                                        <ArticleCardsSwiper visibleCards={visibleCards} navigate={navigate} />
+                                    </div>
+
 
 
                                     <button className=" ViewArticles-right" onClick={goBack}>
