@@ -27,6 +27,9 @@
     gap: 48px; //兩個區塊的間隔
     width: 100%;
     justify-content: center;
+    @media(max-width:1024px){
+      gap:5%;
+    }
 
     .home-search-block {
       display: flex;
@@ -39,12 +42,30 @@
       aspect-ratio: 5/4;
       padding: 2.5% 2.5% 3% 2.5%;
 
+      @media(max-width:1024px) {
+        box-shadow: none;
+        background: none;
+        // border: 1px solid red;
+        aspect-ratio: none;
+        height: 300px;
+        padding: 0;
+
+      }
+
       .home-search-titleBox {
         display: flex;
         align-items: flex-end;
         gap: 32px;
         padding-bottom: 0.8rem;
         border-bottom: 1px solid #FF8740;
+
+        @media(max-width:1024px) {
+          gap: 12px;
+          border: none;
+          border-left: 3px solid #FF8740;
+          padding: 0;
+          padding-left: 12px;
+        }
 
         .home-search-title {
           color: #ff8740;
@@ -54,6 +75,14 @@
           font-weight: 700;
           line-height: normal;
           letter-spacing: 3.2px;
+
+          @media(max-width:1024px) {
+            color: var(--dark, #3A2C19);
+            /* heading/標題4/Bold */
+            font-size: 20px;
+            letter-spacing: 2px;
+
+          }
         }
 
         .home-search-titleEn {
@@ -63,6 +92,11 @@
           font-style: normal;
           font-weight: 100;
           line-height: normal;
+
+          @media(max-width:1024px) {
+            color: var(--dark, #3A2C19);
+            font-size: 20px;
+          }
         }
       }
 
@@ -79,6 +113,12 @@
           width: 40%;
           height: auto;
 
+          @media(max-width:1024px) {
+            position: absolute;
+            width: 30%;
+            top:-12%;
+          }
+
           img {
             width: 100%;
           }
@@ -94,10 +134,21 @@
           width: 60%;
           padding-top: 40px;
 
+          @media(max-width:1024px) {
+            width: 100%;
+          }
+
           .home-search-dropdowns1 {
             display: flex;
             flex-direction: column;
             gap: 30px;
+
+            @media(max-width:1024px) {
+              width: 65%;
+              align-self: flex-end;
+              gap:12px;
+
+            }
 
 
           }
@@ -119,12 +170,24 @@
             font-weight: 500;
             line-height: 140%;
             letter-spacing: 1.4px;
+            background-color: #FEFCF7;
+
+            @media(max-width:1024px) {
+              border-radius: 8px;
+              font-size: 12px;
+            }
           }
 
           .home-search-botton {
             display: flex;
             flex-direction: column;
             gap: 29px;
+
+            @media(max-width:1024px) {
+              width: 65%;
+              align-self: flex-end;
+              gap:12px;
+            }
 
             .home-search-toggleBt {
               display: flex;
@@ -136,7 +199,6 @@
                 flex: 1;
                 justify-content: center;
                 align-items: center;
-                flex: 1;
                 border-radius: 99px;
                 border: 1px solid #ff8740;
                 opacity: 0.8;
@@ -148,6 +210,12 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: 150%;
+                white-space: nowrap;
+
+                @media(max-width:1024px) {
+                  border-radius: 8px;
+                  font-size: 14px;
+                }
 
                 &:hover {
                   background: #ff8740;
@@ -187,6 +255,12 @@
             line-height: normal;
             letter-spacing: 2px;
             transition: all 0.15s ease-out;
+            white-space: nowrap;
+
+            @media(max-width:1024px) {
+              font-size: 14px;
+              border-radius: 8px;
+            }
 
             .faSearch {
               margin-left: 8px;

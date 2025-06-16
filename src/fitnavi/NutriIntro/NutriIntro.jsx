@@ -467,7 +467,7 @@ function NutriIntro() {
                                         <h3>預約流程</h3>
                                         <h4>Reserve Process</h4>
                                     </div>
-                                    <div className="process">
+                                    <div className="Nutriprocess">
                                         <div className="number">
                                             <p>1</p>
                                             <p>2</p>
