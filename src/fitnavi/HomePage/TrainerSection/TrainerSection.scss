@@ -19,7 +19,7 @@
     margin-bottom: 160px;
 
     @media(max-width:1024px) {
-      margin-bottom: 280px;
+      margin-bottom: 300px;
     }
 
     .mainTitle-col1 {
@@ -467,7 +467,7 @@
 
       @media(max-width:1024px) {
         width: 12%;
-        left: 58%;
+        left: 55.5%;
         bottom: 80px;
       }
     }
@@ -504,8 +504,8 @@
             flex-direction: column;
             gap: 0px;
             position: absolute;
-            top: -136%;
-            left: -125%
+            bottom: 158%;
+            left: -45%
           }
 
           .home-trainer-titleCh {
@@ -561,7 +561,7 @@
 
           @media(max-width:1024px) {
             margin-right: 0%;
-            width: 260px;
+            width: 50%;
 
             :nth-child(1) {
               font-family: "Mantou Sans";
