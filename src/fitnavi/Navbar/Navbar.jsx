@@ -15,7 +15,19 @@ function Navbar() {
     const token = localStorage.getItem("token"); //
     setIsLoggedIn(!!token);
   }, [location]);
+  /* 判斷會員管理狀態是哪個後臺 */
+  const handleGoToDashboard = () => {
+    const role = localStorage.getItem("role");
 
+    if (role === "coach") {
+      navigate("/CoachDashboardList");
+    } else if (role === "member") {
+      navigate("/memberlist");
+    } else {
+      alert("請先登入");
+      navigate("/login");
+    }
+  };
   return (
     <header id="navbarHeader">
       <div className="container">
@@ -95,11 +107,7 @@ function Navbar() {
             <button
               type="button"
               className="nbr-login"
-              onClick={() => {
-                localStorage.removeItem("token"); // or loginUser
-                setIsLoggedIn(false);
-                navigate("/"); // 登出後導回首頁
-              }}
+              onClick={handleGoToDashboard}
             >
               會員管理
             </button>
@@ -121,7 +129,7 @@ function Navbar() {
                 className="mobile-close"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <FaXmark  size={30}/>
+                <FaXmark size={30} />
               </button>
             </div>
             <div className="mobile-navbar">
