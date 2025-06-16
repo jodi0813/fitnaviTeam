@@ -379,7 +379,11 @@ function Coachintro() {
                                 <h3>關於教練</h3>
                                 <h4>About</h4>
                             </div>
-                            <p className="aboutCoach-content">嗨，我是張莉筠，一名熱愛健身、致力於幫助每位學員達成健康與體態目標的專業健身教練。我相信運動不只是改變外在，更能提升自信與生活品質。擁有ACE認證、TRX懸吊訓練系統認證與5年的教學經驗，我也專注於減脂與功能性訓練，並根據每位學員的身體狀況與需求，量身打造最適合的訓練計畫。我重視科學化訓練，搭配適當的飲食指導，讓妳不只在健身房進步，更能在生活中感受到體能提升的改變。<br />
+                            <p className="aboutCoach-content">
+
+                                <p>嗨，我是張莉筠，一名熱愛健身、致力於幫助每位學員達成健康與體態目標的專業健身教練。</p>
+                                <p>我相信運動不只是改變外在，更能提升自信與生活品質。</p>
+                                <p>擁有ACE認證、TRX懸吊訓練系統認證與5年的教學經驗，我也專注於減脂與功能性訓練，並根據每位學員的身體狀況與需求，量身打造最適合的訓練計畫。我重視科學化訓練，搭配適當的飲食指導，讓妳不只在健身房進步，更能在生活中感受到體能提升的改變。</p>
                                 不論妳是健身新手，還是想突破瓶頸的進階訓練者，我都會陪妳一起前進，一起打造更強壯、更健康的自己。</p>
                         </div>
 
@@ -446,7 +450,7 @@ function Coachintro() {
                         <section id="reservation1" ref={phase5Ref}>
                             <div className="coach-reservation-wrapper">
                                 <div className="reserve" >
-                                    <div className="restitle">
+                                    <div className="coachrestitle">
                                         <h3>預約流程</h3>
                                         <h4>Reserve Process</h4>
                                     </div>
