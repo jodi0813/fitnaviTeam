@@ -1018,6 +1018,7 @@
         width: 100%;
         // border: 1px solid red;
         box-sizing: border-box;
+        margin-bottom: 10rem;
     }
 
     .Joinus-form {
@@ -1026,7 +1027,7 @@
         justify-content: center;
         align-items: center;
         margin-top: 10%;
-        gap: 50px;
+        gap: 5rem;
     }
 
     .Joinus-introduction {
@@ -1034,7 +1035,7 @@
         flex-direction: column;
         text-align: right;
         max-width: 350px !important;
-
+        margin-left: auto; // ✅ 讓區塊靠右對齊
     }
 
     .imcoach {
@@ -1189,6 +1190,45 @@
 
         }
 
+        .join-button {
+            width: 320px !important;
+            height: 40px !important;
+            border-radius: 8px !important;
+            color: #FFF;
+            text-align: center;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px !important;
+            font-style: normal;
+            font-weight: 900 !important;
+            line-height: 140%;
+            /* 19.6px */
+
+            &:hover {
+                transform: none;
+                box-shadow: none;
+
+                img {
+                    opacity: 0; // 或 0，看你需不需要圖示
+                }
+
+                span {
+                    transform: none;
+                    transition: none;
+                }
+            }
+
+            &:active {
+                transform: none;
+                box-shadow: none;
+                font-size: 14px;
+
+                img {
+                    width: auto;
+                    height: auto;
+                }
+            }
+
+        }
 
 
 
@@ -1346,6 +1386,45 @@
 
         }
 
+        .join-button {
+            width: 320px !important;
+            height: 40px !important;
+            border-radius: 8px !important;
+            color: #FFF;
+            text-align: center;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px !important;
+            font-style: normal;
+            font-weight: 900 !important;
+            line-height: 140%;
+            /* 19.6px */
+
+            &:hover {
+                transform: none;
+                box-shadow: none;
+
+                img {
+                    opacity: 0; // 或 0，看你需不需要圖示
+                }
+
+                span {
+                    transform: none;
+                    transition: none;
+                }
+            }
+
+            &:active {
+                transform: none;
+                box-shadow: none;
+                font-size: 14px;
+
+                img {
+                    width: auto;
+                    height: auto;
+                }
+            }
+
+        }
 
 
 
