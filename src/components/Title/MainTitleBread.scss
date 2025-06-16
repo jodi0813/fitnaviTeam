@@ -1,13 +1,15 @@
 @use "../../fitnavi/reset.scss";
 
 .mainTitleBreadBox {
-  background: rgba(255, 255, 255, 0.20);
-backdrop-filter: blur(2px);
- position: fixed;
- top: 62px;
-  left: 0;
-  width: 100%;
-   z-index: 10;
+  @media (max-width: 1024px) {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
   .mainTitleBread {
     display: flex;
     align-items: baseline;
@@ -19,17 +21,15 @@ backdrop-filter: blur(2px);
     .titleBoxBread {
       display: flex;
       align-items: baseline;
-        @media (max-width: 1024px) {
+      @media (max-width: 1024px) {
         gap: 16px;
-          
-        }
+      }
       .titleBackBt {
         display: none;
         background-color: transparent;
         @media (max-width: 1024px) {
           display: flex;
           padding: 0px;
-          
         }
       }
       .title1 {
