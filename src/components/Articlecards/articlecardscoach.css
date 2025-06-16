@@ -5,13 +5,7 @@
   display: flex;
   flex-direction: column;
 
-@media (min-width: 769px) and (max-width: 1024px) {
 
-   
-    width: 240px !important;
-    height: 368px !important;
-
-  }
 }
 
 
@@ -179,7 +173,6 @@
   .Articleimgbox {
     max-width: 210px !important;
     max-height: 140px !important;
-    /* 高度不限制 */
     margin: 0 20px 5px 0;
   }
 }

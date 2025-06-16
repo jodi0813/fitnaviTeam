@@ -1187,7 +1187,7 @@
         .ViewArticles {
 
             max-width: 1200px;
-            margin-top: 80px;
+            // margin-top: 80px;
             box-sizing: border-box;
             justify-content: center;
             display: flex;
@@ -2257,34 +2257,73 @@
 
 
 
-    #coacharticle {
-        width: 100% !important;
-        margin-top: 80px !important;
+    // #coacharticle {
+    //     width: 100% !important;
+    //     margin-top: 80px !important;
         
 
 
-        .ViewArticles {
-            position: relative;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
+    //     .ViewArticles {
+    //         position: relative;
+    //         display: flex;
+    //         align-items: flex-start;
+    //         justify-content: flex-start;
             
 
-            .Three-classcards {
-                justify-content: flex-start !important;
-            }
+    //         .Three-classcards {
+    //             justify-content: flex-start !important;
+    //         }
 
-        }
+    //     }
 
 
 
-        .ViewArticles-left,
-        .ViewArticles-right {
-            display: none !important;
-        }
+    //     .ViewArticles-left,
+    //     .ViewArticles-right {
+    //         display: none !important;
+    //     }
 
         
-    }
+    // }
+    #coacharticle {
+        margin-top: 5rem !important;
+        overflow-x: visible;
+      
+        .article-wrapper {
+          overflow-x: visible;
+        }
+      
+        .ViewArticles {
+          overflow-x: visible; /* ← 建議移除 auto，因為 Three-classcards 已控制 */
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+        }
+      
+        .Three-classcards {
+          display: flex;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          gap: 1rem !important; /* 15~20px 更適合卡片排版 */
+          padding: 0 1rem 0.5rem 1rem;
+          scrollbar-width: none;
+        }
+      
+        .Three-classcards::-webkit-scrollbar {
+          display: none;
+        }
+      
+        .Three-classcards .Articlecardscoach {
+          flex: 0 0 auto !important;
+          scroll-snap-align: start;
+        }
+      
+        .ViewArticles-left,
+        .ViewArticles-right {
+          display: none !important;
+        }
+      }
+      
 
     /* --- */
 
