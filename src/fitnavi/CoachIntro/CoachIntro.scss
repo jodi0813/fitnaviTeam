@@ -2167,6 +2167,10 @@
             flex-direction: column;
             // justify-content: flex-start;
 
+            .reserve{
+                position: relative;
+            }
+
             .coachrestitle {
                 h4 {
                     width: 286px !important;
@@ -2184,7 +2188,7 @@
             }
 
             .coach-reserve-img {
-                position: relative;
+                position: absolute;
                 width: 40% !important;
                 min-height: 250px;
                 display: flex;
@@ -2193,19 +2197,17 @@
                     position: absolute;
                     width: 60%;
                     height: auto;
-                    left: 120% !important;
-                    top: 10%;
+                    left: 22rem !important;
+                    top: -10rem !important;
                     z-index: 2;
                 }
 
 
 
-
-
                 p {
                     position: absolute;
-                    left: 180% !important;
-                    top: -30% !important;
+                    left: 35rem !important;
+                    top: -8rem !important;
                     transform: translateX(-50%);
                     color: var(--primary, #FF8740);
                     font-family: "Noto Sans TC", sans-serif;
@@ -2238,12 +2240,20 @@
                 }
             }
 
+          
+                .Coach-Available-calendar {
+                  margin: 0px !important;
+                }
+
+            
+
+
         }
 
     }
 
 
-    /* --- */
+
 
 
 
@@ -2254,39 +2264,35 @@
 
 
 
-        .ViewArticles {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            margin: 0 auto;
-        }
+        // .ViewArticles {
+        //     position: relative;
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     width: 100%;
+        //     margin: 0 auto;
+        // }
 
-        .Three-classcards {
-            display: flex;
-            gap: 16px;
-            width: 100%;
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
+        // .Three-classcards {
+        //     display: flex;
+        //     gap: 16px;
+        //     width: 100%;
+        //     padding: 0 20px;
+        //     box-sizing: border-box;
+        // }
 
         .ViewArticles-left,
         .ViewArticles-right {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
-            cursor: pointer;
+           display: none !important;
         }
 
-        .ViewArticles-left {
-            left: 10px !important;
-        }
+        // .ViewArticles-left {
+        //     left: 10px !important;
+        // }
 
-        .ViewArticles-right {
-            right: 100px !important;
-        }
+        // .ViewArticles-right {
+        //     right: 100px !important;
+        // }
     }
 
     /* --- */

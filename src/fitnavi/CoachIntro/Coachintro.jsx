@@ -516,22 +516,24 @@ function Coachintro() {
                                             <path d="M30 36L18 24L30 12" stroke="#3A2C19" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg></button>
 
-                                    <div className="Three-classcards">
-                                        {visibleCards.map((card, index) => (
-
-                                            <Articlecards
-                                                key={index}
-                                                date={card.date}
-                                                img={card.img}
-                                                title={card.title}
-                                                content={card.content}
-                                                tags={card.tags}
-                                                category={card.category}
-                                                className={`card${index + 1}`}
-                                                onClick={() => navigate(`/article/${card.id}`)}
-                                            />
-                                        ))}
+                                    <div className="CoachIntroPage">
+                                        <div className="Three-classcards">
+                                            {visibleCards.map((card, index) => (
+                                                <Articlecards
+                                                    key={index}
+                                                    date={card.date}
+                                                    img={card.img}
+                                                    title={card.title}
+                                                    content={card.content}
+                                                    tags={card.tags}
+                                                    category={card.category}
+                                                    className={`card${index + 1}`}
+                                                    onClick={() => navigate(`/article/${card.id}`)}
+                                                />
+                                            ))}
+                                        </div>
                                     </div>
+
 
                                     <button className=" ViewArticles-right" onClick={goBack}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="26" viewBox="0 0 14 26" fill="none">
