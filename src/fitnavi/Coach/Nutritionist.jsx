@@ -6,6 +6,7 @@ import MainTitle from "../../components/Title/MainTitle";
 import { cities, taipeiDistricts } from "../../data/locations";
 import { nutritionOptions } from "../../data/hashtag";
 import Pagination from "../../components/Pagination/Pagination";
+import { FaXmark } from "react-icons/fa6";
 
 function CustomDropdown({ label, selected, onSelect, options }) {
   const [open, setOpen] = useState(false);
@@ -271,15 +272,23 @@ function Nutritionist() {
   const [keyword, setKeyword] = useState("");
   const [filteredCards, setFilteredCards] = useState(nutritionistList);
   const [currentPage, setCurrentPage] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
   const handleSearch = (e) => {
     e.preventDefault();
+    setShowFilter(false); // 小尺寸搜尋後自動隱藏表單
     setCurrentPage(0);
     const result = nutritionistList.filter((nutritionist) => {
       const matchCity =
-        selectedCity === "" || nutritionist.city === selectedCity;
-      const matchSex = selectedSex === "" || nutritionist.sex === selectedSex;
+        selectedCity === "all" ||
+        selectedCity === "" ||
+        nutritionist.city === selectedCity;
+      const matchSex =
+        selectedSex === "all" ||
+        selectedSex === "" ||
+        nutritionist.sex === selectedSex;
       const matchHashtag =
+        selectedHashtag === "all" ||
         selectedHashtag === "" ||
         nutritionist.hashtags.includes(selectedHashtag);
       const matchKeyword =
@@ -308,69 +317,174 @@ function Nutritionist() {
     if (hashtag) {
       setSelectedHashtag(hashtag);
       setTimeout(() => {
-        handleSearch({ preventDefault: () => { } });
+        handleSearch({ preventDefault: () => {} });
       }, 0);
     }
   }, []);
+  /* 小尺寸 */
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  /* 小尺寸篩選按鈕開關控制 */
+  const [showFilter, setShowFilter] = useState(false);
 
   return (
     <>
       <div id="coachMain">
         <MainTitle title1="營養師" title2="找到專屬你的營養師" />
         <div className="allCoachCards">
-          <div className="searchBox">
-            <form
-              action=""
-              method="post"
-              name="personal-search-form"
-              id="personal-search-form"
-              title="營養師搜尋"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <CustomDropdown
-                label="選擇地區"
-                selected={
-                  selectedCity === "all" || selectedCity === "" ? "全部區域" : selectedCity
-                }
-                onSelect={setSelectedCity}
-                options={["全部區域", ...cities]}
-              />
-              <CustomDropdown
-                label="諮詢需求"
-                selected={
-                  selectedHashtag === "all" || selectedHashtag === "" ? "全部諮詢需求" : selectedHashtag
-                }
-                onSelect={setSelectedHashtag}
-                options={["全部諮詢需求", ...nutritionOptions]}
-              />
+          {/* 小尺寸篩選 */}
+          <div className="filterSection">
+            {isMobile ? (
+              <>
+                <div className="coachTitleBox">
+                  <span className="all-coach">全部營養師</span>
+                </div>
+                <div className="fiflterPhone">
+                  <div>
+                    <button
+                      className="fiflterBt"
+                      onClick={() => setShowFilter(!showFilter)}
+                    >
+                      篩選
+                      <img src="./images/filter.svg" alt="篩選按鈕" />
+                    </button>
+                  </div>
+                </div>
+                {showFilter && (
+                  <form
+                    action=""
+                    method="post"
+                    id="personal-search-form"
+                    title="營養師搜尋"
+                    onSubmit={(e) => e.preventDefault()}
+                    className="searchCoachBox mobileSearch"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setShowFilter(false)}
+                      className="closeFliter"
+                    >
+                      <FaXmark />
+                    </button>
+                    <CustomDropdown
+                      label="選擇地區"
+                      selected={
+                        selectedCity === "all" || selectedCity === ""
+                          ? "全部區域"
+                          : selectedCity
+                      }
+                      onSelect={setSelectedCity}
+                      options={["全部區域", ...cities]}
+                    />
+                    <CustomDropdown
+                      label="諮詢需求"
+                      selected={
+                        selectedHashtag === "all" || selectedHashtag === ""
+                          ? "全部諮詢需求"
+                          : selectedHashtag
+                      }
+                      onSelect={setSelectedHashtag}
+                      options={["全部諮詢需求", ...nutritionOptions]}
+                    />
 
-              <CustomDropdown
-                label="性別"
-                selected={
-                  selectedSex === "all" || selectedSex === "" ? "全部性別" : selectedSex
-                }
-                onSelect={setSelectedSex}
-                options={["全部性別", "男", "女"]}
-              />
-              <label htmlFor="keyword-search"></label>
-              <input
-                type="search"
-                name="keyword-search"
-                id="keyword-search"
-                placeholder="關鍵字搜尋"
-                value={keyword}
-                onChange={(e) => setKeyword(e.target.value)}
-              ></input>
-              <button type="button" className="submit" onClick={handleSearch}>
-                搜尋
-              </button>
-            </form>
-          </div>
+                    <CustomDropdown
+                      label="性別"
+                      selected={
+                        selectedSex === "all" || selectedSex === ""
+                          ? "全部性別"
+                          : selectedSex
+                      }
+                      onSelect={setSelectedSex}
+                      options={["全部性別", "男", "女"]}
+                    />
+                    <input
+                      type="search"
+                      name="keyword-search"
+                      id="keyword-search"
+                      placeholder="關鍵字搜尋"
+                      value={keyword}
+                      onChange={(e) => setKeyword(e.target.value)}
+                    ></input>
+                    <button
+                      type="button"
+                      className="submit"
+                      onClick={handleSearch}
+                    >
+                      搜尋
+                    </button>
+                  </form>
+                )}
+              </>
+            ) : (
+              <>
+                <form
+                  action=""
+                  method="post"
+                  name="personal-search-form"
+                  id="personal-search-form"
+                  title="營養師搜尋"
+                  onSubmit={(e) => e.preventDefault()}
+                  className="searchCoachBox desktopSearch"
+                >
+                  <CustomDropdown
+                    label="選擇地區"
+                    selected={
+                      selectedCity === "all" || selectedCity === ""
+                        ? "全部區域"
+                        : selectedCity
+                    }
+                    onSelect={setSelectedCity}
+                    options={["全部區域", ...cities]}
+                  />
+                  <CustomDropdown
+                    label="諮詢需求"
+                    selected={
+                      selectedHashtag === "all" || selectedHashtag === ""
+                        ? "全部諮詢需求"
+                        : selectedHashtag
+                    }
+                    onSelect={setSelectedHashtag}
+                    options={["全部諮詢需求", ...nutritionOptions]}
+                  />
 
-          <div className="coachTitleBox">
-            <span className="all-coach">全部營養師</span>
+                  <CustomDropdown
+                    label="性別"
+                    selected={
+                      selectedSex === "all" || selectedSex === ""
+                        ? "全部性別"
+                        : selectedSex
+                    }
+                    onSelect={setSelectedSex}
+                    options={["全部性別", "男", "女"]}
+                  />
+                  <label htmlFor="keyword-search"></label>
+                  <input
+                    type="search"
+                    name="keyword-search"
+                    id="keyword-search"
+                    placeholder="關鍵字搜尋"
+                    value={keyword}
+                    onChange={(e) => setKeyword(e.target.value)}
+                  ></input>
+                  <button
+                    type="button"
+                    className="submit"
+                    onClick={handleSearch}
+                  >
+                    搜尋
+                  </button>
+                </form>
+                <div className="coachTitleBox">
+                  <span className="all-coach">全部營養師</span>
+                </div>
+              </>
+            )}
           </div>
-          {/* 教練小卡 */}
 
           {currentItems.length === 0 ? (
             <div className="noResult">找不到符合條件的教練</div>
@@ -388,14 +502,17 @@ function Nutritionist() {
                     link="/NutriIntro"
                   />
                 ))}
-              </div>{" "}
+              </div>
             </div>
           )}
         </div>
         <Pagination
           pageCount={pageCount}
           currentPage={currentPage}
-          onPageChange={setCurrentPage}
+          onPageChange={(page) => {
+            setCurrentPage(page);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
         />
       </div>
     </>
