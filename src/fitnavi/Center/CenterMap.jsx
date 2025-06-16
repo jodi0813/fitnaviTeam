@@ -38,9 +38,9 @@ function CenterMap() {
   const [activeLatLng, setActiveLatLng] = useState(null);
   const popupRefs = useRef([]);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
-    const [isMobilePhone, setIsMobilePhone] = useState(window.innerWidth <= 769);
+  const [isMobilePhone, setIsMobilePhone] = useState(window.innerWidth <= 769);
   const [showFilter, setShowFilter] = useState(false);
-  const [showGymCardsMobile, setShowGymCardsMobile] = useState(false);
+  const [searchSummary, setSearchSummary] = useState("");
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const city = params.get("city") || "";
@@ -257,37 +257,45 @@ function CenterMap() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const [drawerY, setDrawerY] = useState(500); // 一開始就下移到底部
+  const [isDragging, setIsDragging] = useState(false);
+  const drawerRef = useRef(null);
 
-const [drawerY, setDrawerY] = useState(400); // 一開始就下移到底部
-const [isDragging, setIsDragging] = useState(false);
-const drawerRef = useRef(null);
+  const startYRef = useRef(null);
+  const initialYRef = useRef(0);
 
-const startYRef = useRef(null);
-const initialYRef = useRef(0);
+  const handleTouchStart = (e) => {
+    setIsDragging(true);
+    startYRef.current = e.touches[0].clientY;
+    initialYRef.current = drawerY;
+  };
 
-const handleTouchStart = (e) => {
-  setIsDragging(true);
-  startYRef.current = e.touches[0].clientY;
-  initialYRef.current = drawerY;
-};
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    const currentY = e.touches[0].clientY;
+    const deltaY = currentY - startYRef.current;
+    const newY = Math.max(0, initialYRef.current + deltaY);
+    setDrawerY(Math.min(newY, 400)); // 限制最多拉 400px
+  };
 
-const handleTouchMove = (e) => {
-  if (!isDragging) return;
-  const currentY = e.touches[0].clientY;
-  const deltaY = currentY - startYRef.current;
-  const newY = Math.max(0, initialYRef.current + deltaY);
-  setDrawerY(Math.min(newY, 400)); // 限制最多拉 400px
-};
-
-const handleTouchEnd = () => {
-  setIsDragging(false);
-  if (drawerY > 150) {
-    setDrawerY(400); // 收起
-  } else {
-    setDrawerY(0); // 打開
-  }
-};
-
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    if (drawerY > 150) {
+      setDrawerY(400); // 收起
+    } else {
+      setDrawerY(0); // 打開
+    }
+  };
+  const handleComplete = () => {
+    setShowFilter(false);
+    const summary = [];
+    if (searchData.name) summary.push(searchData.name);
+    if (searchData.city) summary.push(searchData.city);
+    if (searchData.area) summary.push(searchData.area);
+    if (searchData.features.length > 0)
+      summary.push(searchData.features.join("、"));
+    setSearchSummary(summary.join(" / "));
+  };
   return (
     <div id="centerMapMain">
       <MainTitle title1="找場地" title2="找到專屬你的健身場地" />
@@ -296,18 +304,25 @@ const handleTouchEnd = () => {
           <div className="mapSearchLeft1">
             {isMobile ? (
               <>
-                <button
-                  className="centerFilterBt"
-                  onClick={() => setShowFilter((prev) => !prev)}
-                >
-                  <span> 請選擇您的篩選條件</span>
+                <div className="centerFilterBtWrapper">
+                  <div className="centerFilterBtTitle"><span>篩選條件</span></div>
+                  <button
+                    className="centerFilterBt"
+                    onClick={() => setShowFilter((prev) => !prev)}
+                  >
+                    <span>{searchSummary || "請選擇您的篩選條件"}</span>
 
-                  <img src="./images/dropdown.svg" alt="篩選按鈕" />
-                </button>
+                    <img src="./images/dropdown.svg" alt="篩選按鈕" />
+                  </button>
+
+                  <button className="realSearchBt" onClick={handleSearch}>
+                    搜尋
+                  </button>
+                </div>
                 {showFilter && (
                   <form
                     id="center-search-form"
-                    onSubmit={handleSearch}
+                    onSubmit={(e) => e.preventDefault()}
                     className="centerMobileSearchForm"
                   >
                     <div className="nameCityArea">
@@ -372,9 +387,10 @@ const handleTouchEnd = () => {
                         </div>
                       ))}
                     </fieldset>
-                    <button type="submit" className="centerSearchBt">
-                      搜尋
-                    </button>
+                    <div className="searchFinishBt">
+                    <button  onClick={handleComplete}>
+                      完成
+                    </button></div>
                   </form>
                 )}
               </>
@@ -450,41 +466,47 @@ const handleTouchEnd = () => {
           <div className="mapSearchLeft2">
             {isMobilePhone ? (
               <>
-               <div
-  className="gymCardsDrawer"
-  ref={drawerRef}
-  style={{ transform: `translateY(${drawerY}px)` }}
-  onTouchStart={handleTouchStart}
-  onTouchMove={handleTouchMove}
-  onTouchEnd={handleTouchEnd}
->
-  <div className="drawerHandle">符合條件的健身場地</div>
-  <div className="drawerContent">
-    <div className="photosNumber">
-      共有 <span>{filteredResults.length}</span> 間符合條件的場館
-    </div>
-    <div className="gymCards">
-      {filteredResults.map((gym, i) => (
-        <div
-          className={`gymCard ${activeGymIndex === i ? "active" : ""}`}
-          key={i}
-          onClick={() => {
-            setActiveGymIndex(i);
-            setActiveLatLng(gym.latlng);
-          }}
-        >
-          <img src={gym.img} alt={gym.name} className="centerPic" />
-          <div className="overlay" />
-          <div className="gymCardText">
-            <h3>{gym.name}</h3>
-            <p>{gym.features.map((f) => `#${f}`).join(" ")}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
-
+                <div
+                  className="gymCardsDrawer"
+                  ref={drawerRef}
+                  style={{ transform: `translateY(${drawerY}px)` }}
+                  onTouchStart={handleTouchStart}
+                  onTouchMove={handleTouchMove}
+                  onTouchEnd={handleTouchEnd}
+                >
+                  <div className="drawerHandle">符合條件的健身場地</div>
+                  <div className="drawerContent">
+                    <div className="photosNumber">
+                      共有 <span>{filteredResults.length}</span>{" "}
+                      間符合條件的場館
+                    </div>
+                    <div className="gymCards">
+                      {filteredResults.map((gym, i) => (
+                        <div
+                          className={`gymCard ${
+                            activeGymIndex === i ? "active" : ""
+                          }`}
+                          key={i}
+                          onClick={() => {
+                            setActiveGymIndex(i);
+                            setActiveLatLng(gym.latlng);
+                          }}
+                        >
+                          <img
+                            src={gym.img}
+                            alt={gym.name}
+                            className="centerPic"
+                          />
+                          <div className="overlay" />
+                          <div className="gymCardText">
+                            <h3>{gym.name}</h3>
+                            <p>{gym.features.map((f) => `#${f}`).join(" ")}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </>
             ) : (
               <>
@@ -494,7 +516,9 @@ const handleTouchEnd = () => {
                 <div className="gymCards">
                   {filteredResults.map((gym, i) => (
                     <div
-                      className={`gymCard ${activeGymIndex === i ? "active" : ""}`}
+                      className={`gymCard ${
+                        activeGymIndex === i ? "active" : ""
+                      }`}
                       key={i}
                       onClick={() => {
                         setActiveGymIndex(i);
@@ -511,9 +535,9 @@ const handleTouchEnd = () => {
                       </div>
                     </div>
                   ))}
-                </div></>
+                </div>
+              </>
             )}
-
           </div>
         </div>
 
