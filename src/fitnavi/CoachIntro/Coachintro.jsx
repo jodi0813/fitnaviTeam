@@ -278,7 +278,7 @@ function Coachintro() {
                                     )}
                                 </button>
                             </div>
-                            <p>＃健身教練#減脂訓練＃個人指導＃功能性訓練＃TRX</p>
+                            <p>＃健身教練#減脂訓練＃個人指導＃TRX</p>
 
                         </div>
 
@@ -325,14 +325,17 @@ function Coachintro() {
 
                         <div className="Coach-place">
                             <p>上課地點<br />可選擇</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3" height="143" viewBox="0 0 3 143" fill="none">
+                                <path d="M1.8335 142L1.8335 1" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" />
+                            </svg>
                             <div className="moreimg4" >
                                 <img src="./images/classplace-1.jpg" alt="" />
                                 <p>World Gym 台北大安店</p>
                             </div>
 
                             <div className="moreimg5">
-                                <img src="./images/classplace-2.jpg" alt="" />
-                                <p>臺北市大安區B健身房</p>
+                                <img src="./images/center.jpg" alt="" />
+                                <p>TECHNOGym 忠孝館</p>
                             </div>
                         </div>
 
@@ -402,11 +405,22 @@ function Coachintro() {
                                         <h4>Working Experiences</h4>
                                     </div>
 
-                                    <ul >
+                                    <ul className="ul-desktop">
                                         <li >5年健身教練經驗，累積超過200堂私人課程</li>
                                         <li>曾任職於健身工廠，專長TRX、減脂、功能性訓練</li>
                                         <li>指導超過150名學員，達成體態與表現目標</li>
                                         <li>開設團體與企業課程，內容涵蓋TRX懸吊訓練與減脂健身觀念宣導</li>
+                                    </ul>
+
+                                    <ul className="ul-tablet">
+                                        <li >5年健身教練經驗
+                                            <p>累積超過200堂私人課程</p></li>
+                                        <li>曾任職於健身工廠
+                                            <p>專長TRX、減脂、功能性訓練</p></li>
+                                        <li>指導超過150名學員
+                                            <p>達成體態與表現目標</p></li>
+                                        <li>開設團體與企業課程
+                                            <p>內容涵蓋TRX懸吊訓練與減脂健身觀念宣導</p></li>
                                     </ul>
 
 
@@ -436,7 +450,7 @@ function Coachintro() {
                                         <h3>預約流程</h3>
                                         <h4>Reserve Process</h4>
                                     </div>
-                                    <div className="process">
+                                    <div className="Coachprocess">
                                         <div className="number">
                                             <p>1</p>
                                             <p>2</p>
@@ -454,7 +468,7 @@ function Coachintro() {
                                         </div>
                                     </div>
 
-                                    <div className="reserve-img">
+                                    <div className="coach-reserve-img">
                                         <img src="./images/reserved.png" alt="" />
 
                                         <p>預約成功！</p>

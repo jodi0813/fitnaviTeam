@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const images = [
   "./images/coach.jpg",
@@ -14,11 +14,32 @@ export default function PhotoGallery() {
   const [nextIndex, setNextIndex] = useState(null);
   const [showFirstSet, setShowFirstSet] = useState(true);
 
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  // 監聽視窗寬度 769 ~ 1024px
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 769px) and (max-width: 1024px)");
+
+    const handler = (e) => {
+      setIsSmallScreen(e.matches);
+    };
+
+    handler(mediaQuery); // 初始化判斷
+    mediaQuery.addEventListener("change", handler);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handler);
+    };
+  }, []);
+
   const len = images.length;
 
-  const GALLERY_WIDTH = 480;
-  const GAP = 15;
-  const THUMB_WIDTH = (GALLERY_WIDTH - GAP * 2) / 3; // 150px
+  // 根據是否小螢幕設定寬高與間距
+  const GALLERY_WIDTH = isSmallScreen ? 260 : 480;
+  const GAP = isSmallScreen ? 12 : 15;
+  const THUMB_WIDTH = isSmallScreen ? 78 : (GALLERY_WIDTH - GAP * 2) / 3; // 小圖寬度
+  const THUMB_HEIGHT = isSmallScreen ? 84 : 130; // 小圖高度
+  const MAIN_IMG_HEIGHT = isSmallScreen ? 308 : 640; // 主圖高度 (40rem約640px)
 
   const getThumbIndices = (idx) => [
     (idx + 1) % len,
@@ -56,7 +77,7 @@ export default function PhotoGallery() {
       top: 0,
       left: baseLeft,
       width: THUMB_WIDTH,
-      height: 130,
+      height: THUMB_HEIGHT,
       borderRadius: 10,
       objectFit: "cover",
       boxShadow: "0 0 5px rgba(0,0,0,0.3)",
@@ -68,7 +89,7 @@ export default function PhotoGallery() {
         isAnimating && pos > 0
           ? `translateX(-${THUMB_WIDTH + GAP}px)`
           : "translateX(0)",
-      border: pos === 1 ? "2px solid #007bff" : "none",
+      border:  "none",
       zIndex: pos === 1 ? 2 : 1,
     };
   };
@@ -90,7 +111,7 @@ export default function PhotoGallery() {
         alt="main"
         style={{
           width: GALLERY_WIDTH,
-          height: "40rem",
+          height: MAIN_IMG_HEIGHT,
           objectFit: "cover",
           borderRadius: 20,
           marginBottom: 20,
@@ -105,7 +126,7 @@ export default function PhotoGallery() {
         style={{
           position: "relative",
           width: GALLERY_WIDTH,
-          height: 130,
+          height: THUMB_HEIGHT,
           userSelect: "none",
         }}
       >

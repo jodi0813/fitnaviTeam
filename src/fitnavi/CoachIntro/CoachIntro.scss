@@ -486,9 +486,9 @@
             //     margin-top: 230px !important;
             // }
 
-            @media (max-width: 1440px) {
-                margin-top: 250px !important;
-            }
+            // @media (max-width: 1440px) {
+            //     margin-top: 250px !important;
+            // }
 
 
             .intro {
@@ -778,7 +778,7 @@
 
             }
 
-            ul {
+            .ul-desktop {
                 list-style-type: disc;
                 margin-left: 20px;
 
@@ -795,9 +795,12 @@
                 }
             }
 
-            // @media (min-width: 1440px) {
-            //     margin-left: 18%;
-            // }
+            .ul-tablet {
+                display: none;
+            }
+
+
+
         }
 
         #certificate {
@@ -943,7 +946,7 @@
 
             }
 
-            .process {
+            .Coachprocess {
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
@@ -1002,58 +1005,56 @@
 
             }
 
-            .reserve-img {
-                display: flex;
-                flex-direction: row;
-                position: relative;
+.coach-reserve-img {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    
 
+    img {
+        position: absolute;
+        width: 50%;
+        height: auto;
+        right: -10% !important;
+        top: -30px;
+        transform: translateX(-50%);
+    }
 
-                img {
-                    width: 50%;
-                    height: 90%;
-                    position: relative;
-                    right: 70px;
-                    top: -60px;
-                }
+    p {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--primary, #FF8740);
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: 1.2px;
 
-                p {
-                    color: var(--primary, var(--primary, #FF8740));
-                    /* heading/標題3 */
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 32px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                    letter-spacing: 3.2px;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 2px;
+            background-color: #FF8740;
+        }
 
-                    position: relative;
-                    right: 90px;
-                    top: -10px;
+        &::before {
+            left: -50px;
+            transform: rotate(45deg);
+        }
 
-                    &::before,
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        width: 40px;
-                        height: 2px;
-                        background-color: #FF8740;
+        &::after {
+            right: -50px;
+            transform: rotate(135deg);
+        }
+    }
+}
 
-                    }
-
-                    &::before {
-                        left: -40px;
-                        top: 30px;
-                        transform: rotate(45deg);
-                    }
-
-                    &::after {
-                        right: -30px;
-                        top: 30px;
-                        transform: rotate(135deg);
-                    }
-                }
-            }
 
 
 
@@ -1665,12 +1666,12 @@
 
 
 
-@media screen and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
 
     html,
     body {
         scroll-behavior: smooth;
-        scroll-snap-type: y proximity; 
+        scroll-snap-type: y proximity;
         width: 100vw;
     }
 
@@ -1684,7 +1685,6 @@
     #aboutCoach,
     #spe,
     #Coach-exp-cer,
-    #certificate,
     #reservation1,
     #coacharticle {
         max-width: 100vw !important;
@@ -1705,39 +1705,26 @@
         /* 依你的 nav 高度調整 */
     }
 
-    //   .coachintro-all {
-    //     /* 這些保持不變，已經很響應式 */
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-    //     width: 100%;
-    //     margin: 0 auto;
-    //     position: relative;
-    // }
 
-    // .coachintro-all > * {
-    //     width: 100%;
-    //     /* max-width: 1200px; 在此媒體查詢內功能上無效，但無害 */
-    //     /* 針對垂直間距進行調整 */
-    //     margin: 40px auto 0 auto; /* 將 80px 調整為 40px，或你認為更合適的值 */
-    //     padding: 0 16px;
-    //     box-sizing: border-box;
-    // }
 
     .Coachintro-person {
         display: flex !important;
         flex-direction: row !important;
         align-items: flex-start !important;
-        gap: 12px !important;
+        gap: 5% !important;
         width: 100% !important;
         box-sizing: border-box;
         padding: 0 8px !important;
         margin: 0 auto !important;
+        position: relative;
+        max-width: 960px; // 或依需求調整 900px、95%
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 0 16px !important;
 
         .person-class-photo {
             margin-left: 0 !important;
-            width: 100% !important;
+            width: 60% !important;
             margin-top: 0;
 
             .coachphotos {
@@ -1780,49 +1767,48 @@
             width: 100% !important;
             max-width: 100% !important;
             padding: 0 !important;
-            margin-top: 50px;
             display: flex;
             flex-direction: column;
-           
 
             .personinfo {
                 padding-right: 10px;
-            }
 
-            .personinfo .namefavorite {
-                gap: 32px !important;
-                margin-bottom: 8px !important;
-            }
+                .namefavorite {
+                    gap: 32px !important;
+                    margin-bottom: 8px !important;
+                }
 
-            .personinfo p {
-                font-size: 16px !important;
-                margin-bottom: 10px !important;
-
+                p {
+                    font-size: 16px !important;
+                    margin-bottom: 10px !important;
+                }
             }
 
             .coach-classbox {
-                width: 400px !important;
+                width: 90% !important;
+                height: 80%;
                 border-radius: 18px !important;
                 padding: 16px 8px !important;
                 margin-top: 32px !important;
                 margin-bottom: 12px !important;
-            }
 
-            .coach-classbox .classtime {
-                gap: 10px !important;
+                .classtime {
+                    padding-right: 20px;
 
-                h2 {
-                    font-size: 22px !important;
+                    h2 {
+                        font-size: 22px !important;
+                    }
                 }
             }
 
             .p-linethrough-color {
                 margin-top: 10px !important;
+                margin-bottom: 15px !important;
                 flex-direction: row;
 
-                p,
+
                 p.p-linethrough {
-                    font-size: 15px !important;
+                    font-size: 20px !important;
                     line-height: 22px !important;
                 }
 
@@ -1846,8 +1832,10 @@
             .coach-prices-button {
                 margin-bottom: 8px !important;
 
+
                 p {
-                    font-size: 15px !important;
+                    font-size: 20px !important;
+                    margin-bottom: 15px !important;
                 }
 
                 .price-with-button {
@@ -1856,7 +1844,7 @@
                     button {
                         width: 200px !important;
                         font-size: 15px !important;
-                        margin-top: 10px !important;
+                        margin-top: 90px !important;
                         height: 36px !important;
                     }
                 }
@@ -1864,32 +1852,45 @@
 
             .Coach-place {
                 flex-direction: row !important;
-                gap: 10px;
-                margin-bottom: 0 !important;
+                gap: 1rem !important;
+                margin-top: 1rem !important;
+                position: absolute;
+                top: 95%;
+                left: 30%;
 
                 p {
-                    font-size: 14px !important;
+                    font-size: 20px !important;
                     margin-top: 4px !important;
+                    // padding: 10px;
+                    white-space: nowrap;
                 }
 
                 img {
-                    width: 150px !important;
+                    width: 12rem !important;
                     height: 120px !important;
                     margin-top: 6px !important;
                 }
 
                 .moreimg4,
                 .moreimg5 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
                     img {
                         border-radius: 10px !important;
                     }
+
+
                 }
             }
         }
     }
 
 
-    /* --- */
+
+
 
 
 
@@ -1898,13 +1899,16 @@
         box-sizing: border-box;
         margin: 0 auto;
         padding: 0 10px;
+        position: relative;
+
 
 
         .about-title {
             gap: 18px !important;
             flex-direction: column;
             align-items: flex-start;
-            padding: 20px;
+            padding-left: 2.5rem;
+            margin-top: 20rem;
 
 
             h3 {
@@ -1929,7 +1933,7 @@
             font-weight: 500;
             line-height: 40px;
             letter-spacing: 0.4px;
-            padding: 30px;
+            padding-left: 2.5rem;
             /* Consider reducing this padding or making it horizontal only */
             max-width: 90%;
             /* Ensure the paragraph doesn't exceed its parent's width */
@@ -1944,22 +1948,34 @@
 
 
     .coachsvg {
-        position: relative;
-         right: 50px !important;
+        position: absolute;
+        top: 15rem;
+        right: 10%; // ✅ 整體靠右，不用 left
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; // ✅ 讓 p 和 svg 往右對齊，不擠壓 svg
+
+        svg {
+            width: 224px;
+            height: auto; // ✅ 保持原始比例
+            transform: rotate(-8.679deg); // 可選：如果你真的想旋轉 SVG
+        }
 
         p {
-            top: -20px;
-            right: 100px;
+            margin-top: 0.2rem;
+            margin-right: 9rem;
             color: var(--dark, #3A2C19);
             font-family: "Noto Sans TC", sans-serif;
-            font-size: 32px !important;
-            font-style: normal;
+            font-size: 20px;
+            width: fit-content;
+            transform: rotate(-8.679deg);
             font-weight: 700;
-            line-height: normal;
-            letter-spacing: 3.2px;
+            letter-spacing: 2px;
             white-space: nowrap;
         }
     }
+
 
 
     /* --- */
@@ -1974,7 +1990,7 @@
         align-self: stretch;
 
         .intro {
-            margin-top: 0px !important;
+            margin-top: 120% !important;
             width: 100%;
 
             ul {
@@ -2011,7 +2027,7 @@
 
 
         .coach-circlewrapper {
-            width: 100%;
+            width: 90%;
             box-sizing: border-box;
             padding: 0 16px;
 
@@ -2030,18 +2046,19 @@
 
 
     #Coach-exp-cer {
-        width: 100% !important;
-        max-width: none;
+        margin-top: 80px !important;
+        width: 100%;
         padding: 0 10px;
-        margin-top: 100px !important;
+        /* Add consistent horizontal padding */
+        box-sizing: border-box;
         overflow-x: hidden;
-        /* Crucial for preventing overflow within this section */
 
 
         .coach-exp-cer-wrapper {
             min-width: 700px;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            justify-content: flex-start;
             // gap: 40px;
 
         }
@@ -2059,7 +2076,46 @@
         }
 
         .expcontent {
-            width: 350px !important;
+            width: 35rem !important;
+
+            .ul-desktop {
+                display: none;
+            }
+
+            .ul-tablet {
+                display: block !important;
+                list-style-type: disc;
+                margin-left: 20px;
+
+
+                li {
+
+                    font-family: "Noto Sans TC", sans-serif;
+                    color: var(--dark, #3A2C19);
+                    /* 段落/14 */
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                }
+
+                p {
+
+                    color: var(--gray, #989794);
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    letter-spacing: 1.4px;
+                    margin-bottom: 2rem;
+                }
+
+
+            }
         }
 
         .certitle {
@@ -2068,8 +2124,20 @@
             }
         }
 
-        .certificate {
-            width: 350px !important;
+        #certificate {
+            margin-top: 80px;
+
+            li {
+                color: var(--dark, #3A2C19);
+                /* 段落/14 */
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px !important;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
         }
     }
 
@@ -2078,11 +2146,86 @@
 
 
     #reservation1 {
-        width: 100% !important;
-        max-width: none;
+        margin-top: 80px !important;
+        width: 100%;
         padding: 0 10px;
-        overflow-x: auto;
-        margin-top: 150px !important;
+        /* Add consistent horizontal padding */
+        box-sizing: border-box;
+        overflow-x: hidden;
+
+        .coach-reservation-wrapper {
+            min-width: 700px;
+            display: flex;
+            flex-direction: column;
+            // justify-content: flex-start;
+
+            .Coachprocess {
+                display: flex;
+                justify-content: center !important;
+                gap: 20px; // 可以調整間距
+                margin: 20px auto;
+                width: fit-content;
+                padding-left: 10%;
+            }
+
+            .coach-reserve-img {
+                display: flex;
+                flex-direction: row;
+                position: relative;
+
+
+                img {
+                    position: absolute;
+                    width: 50%;
+                    height: 90%;
+                    position: relative;
+                    left: 100% !important;
+                    bottom: 100rem !important;
+                }
+
+                p {
+                    
+                    color: var(--primary, var(--primary, #FF8740));
+                    /* 段落(小尺寸)/12 */
+                    font-family:"Noto Sans TC", sans-serif;
+                    font-size: 12px !important;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 16.8px */
+                    letter-spacing: 1.2px;
+
+                    position: absolute;
+                    left: 60%;
+                    top: -50%;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        width: 40px;
+                        height: 2px;
+                        background-color: #FF8740;
+
+                    }
+
+                    &::before {
+                        left: -100px !important;
+                        top: 30px;
+                        transform: rotate(45deg);
+                    }
+
+                    &::after {
+                        right: -30px;
+                        top: 30px;
+                        transform: rotate(135deg);
+                    }
+                }
+            }
+
+        }
+
     }
 
 
@@ -2094,7 +2237,7 @@
         width: 100% !important;
         margin-top: 80px !important;
         overflow-x: hidden;
-  
+
 
 
         .ViewArticles {
@@ -2233,7 +2376,7 @@
     }
 
 
-    /* --- */
+
 
 
     img,
@@ -2302,10 +2445,10 @@
         }
     }
 
-    .coachsvg {
-        left: 60% !important;
-        margin-top: 2%;
-    }
+    // .coachsvg {
+    //     left: 60% !important;
+    //     margin-top: 2%;
+    // }
 
     // .coachnav {
     //     display: flex;
