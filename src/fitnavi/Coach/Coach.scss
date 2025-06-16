@@ -92,6 +92,15 @@
 
   }
 
+  .closeFliter {
+position: absolute;
+background: transparent;
+top: 12px;
+right: 12px;
+
+
+  }
+
   &.desktopSearch {
     display: flex;
     justify-content: center;
@@ -143,6 +152,7 @@
       width: 320px;
       border-radius: 8px;
       background-color: #fff;
+          border: 1px solid #989794;
     }
 
     &::placeholder {

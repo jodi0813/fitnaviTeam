@@ -6,6 +6,7 @@ import MainTitle from "../../components/Title/MainTitle";
 import { cities } from "../../data/locations";
 import { trainingOptions } from "../../data/hashtag";
 import Pagination from "../../components/Pagination/Pagination";
+import { FaXmark } from "react-icons/fa6";
 
 
 function CustomDropdown({ label, selected, onSelect, options }) {
@@ -378,6 +379,11 @@ function Coach() {
                     title="健身教練搜尋"
                     className="searchCoachBox mobileSearch"
                   >
+                    <button
+                      type="button"
+                      onClick={() => setShowFilter(false)}
+                      className="closeFliter"
+                    ><FaXmark /></button>
                     <CustomDropdown
                       label="選擇地區"
                       selected={
