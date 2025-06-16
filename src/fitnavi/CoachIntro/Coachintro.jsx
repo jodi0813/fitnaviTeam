@@ -3,7 +3,7 @@ import { useState } from "react";
 import MaintitleBread from '../../components/Title/MaintitleBread';
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
-import Articlecards from "../../components/Articlecards/Articlecards";
+import Articlecardscoach from "../../components/Articlecards/Articlecardscoach";
 import { useNavigate } from 'react-router-dom';
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
 import PhotoGallery1 from '../../components/Carousel/PhotoGallery1';
@@ -519,7 +519,7 @@ function Coachintro() {
                                     <div className="CoachIntroPage">
                                         <div className="Three-classcards">
                                             {visibleCards.map((card, index) => (
-                                                <Articlecards
+                                                <Articlecardscoach
                                                     key={index}
                                                     date={card.date}
                                                     img={card.img}
