@@ -8,6 +8,16 @@
   width: 100%;
   padding: 10% 5% 5%;
 
+  @media(max-width:600px) {
+    align-items: center;
+    // width: 500px;
+    margin: 0 auto;
+  }
+
+  @media(max-width:600px) {
+    padding: 10% 0;
+  }
+
   // 上方標題區
   .home-trainer-mainTitle {
     display: flex;
@@ -21,9 +31,15 @@
     @media(max-width:1024px) {
       margin-bottom: 300px;
     }
+
     @media(max-width:800px) {
       margin-bottom: 200px;
     }
+
+    @media(max-width:600px) {
+      // position: absolute;
+    }
+
 
     .mainTitle-col1 {
       display: flex;
@@ -46,6 +62,15 @@
 
       .decoarrow-left-1024 {
         margin-left: 55%;
+        @media(max-width:600px){
+          margin-left: 33px;
+        }
+      }
+      .decoarrow-right-1024 {
+
+        @media(max-width:600px){
+          margin-left: -100px;
+        }
       }
 
       .home-trainer-mainTitle1 {
@@ -68,6 +93,10 @@
           /* 125% */
           letter-spacing: 6.4px;
         }
+
+        @media(min-width:393px) {
+          margin-left: -11px;
+        }
       }
 
       .home-trainer-mainTitle2 {
@@ -89,6 +118,10 @@
           /* 166.667% */
           letter-spacing: 4.8px;
           margin-left: 65%;
+        }
+
+        @media(max-width:600px) {
+          margin-left: 70px;
         }
       }
     }
@@ -208,6 +241,10 @@
             top: 27px;
           }
 
+          @media(max-width:600px) {
+            padding: 8px 16px;
+          }
+
           //教練英文名
           .home-trainer-enname {
             font-size: 20px;
@@ -253,7 +290,12 @@
           @media(max-width: 1024px) {
             right: 30px;
             top: 345px;
+          }
 
+          @media(max-width: 600px) {
+            right: 30px;
+            top: 295px;
+            padding: 8px;
           }
         }
 
@@ -283,9 +325,15 @@
           letter-spacing: 1.4px;
 
           @media(max-width:1024px) {
-            right: 70px;
+            right: 60px;
             top: 280px;
             z-index: 100;
+          }
+
+          @media(max-width: 600px) {
+            right: 70px;
+            top: 230px;
+            padding: 8px;
           }
         }
       }
@@ -332,8 +380,14 @@
 
       @media(max-width:800px) {
         width: 64%;
-        bottom: 44%;
-        left: 18%;
+        bottom: 44px;
+        left: 18px;
+      }
+
+      @media(max-width:600px) {
+        width: 372px;
+        bottom: 47%;
+        margin: 0 auto;
       }
 
       button {
@@ -354,7 +408,12 @@
         width: 82px;
         gap: 4px;
         transform: skew(-20deg, 0deg);
+
         // transition: all 0.3s ease;
+        @media(max-width:600px) {
+          font-size: 14px;
+          width: 50px;
+        }
 
 
 
@@ -481,9 +540,10 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    // @media(max-width:800px){
-    //   justify-content: center;
-    // }
+
+    @media(max-width:600px) {
+      width: fit-content;
+    }
 
     .home-trainer-img {
       position: absolute;
@@ -500,6 +560,12 @@
       @media(max-width:800px) {
         width: 12%;
         left: 19%;
+        bottom: 80px;
+      }
+
+      @media(max-width:600px) {
+        width: 87px;
+        left: -7%;
         bottom: 80px;
       }
 
@@ -556,6 +622,11 @@
             bottom: 270%;
             left: 15%;
             z-index: -2;
+          }
+
+          @media(max-width:600px) {
+            bottom: 248%;
+            left: -14%;
           }
 
           .home-trainer-titleCh {
