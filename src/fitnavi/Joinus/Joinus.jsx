@@ -61,9 +61,12 @@ function Joinus() {
                             <img src="/images/Polygon.svg" alt="" />
                         </button> */}
                         <JoinButton
+                            className='joinButton-m only-desktop'
                             text="成為合作教練"
                             to="/JoinusCarousel"
                         />
+
+                        
 
 
                     </div>
