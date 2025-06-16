@@ -489,12 +489,15 @@ function Coach() {
             </div>
           )}
         </div>
+<Pagination
+  pageCount={pageCount}
+  currentPage={currentPage}
+  onPageChange={(page) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }}
+/>
 
-        <Pagination
-          pageCount={pageCount}
-          currentPage={currentPage}
-          onPageChange={setCurrentPage}
-        />
       </div>
     </>
   );
