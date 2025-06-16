@@ -5,7 +5,13 @@
   display: flex;
   flex-direction: column;
 
+@media (min-width: 769px) and (max-width: 1024px) {
 
+   
+    width: 240px !important;
+    height: 368px !important;
+
+  }
 }
 
 
@@ -21,7 +27,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(0); /* 基準點 */
+  transform: translateX(0);
+  /* 基準點 */
 
   color: var(--white, #FEFCF7);
   font-family: "Noto Sans TC";
@@ -49,6 +56,16 @@
   border: 1px solid #3A2C19;
   padding: 0.8rem;
 
+  @media (min-width: 769px) and (max-width: 1024px) {
+
+    max-width: 198px !important;
+    max-height: 170px !important;
+    /* 高度不限制 */
+    margin: 0 20px 5px 0;
+    position: relative;
+    right: 10px !important;
+  }
+
 
 }
 
@@ -64,6 +81,7 @@
   line-height: normal;
   letter-spacing: 2px;
   margin-bottom: 10px;
+
 
 }
 
@@ -132,6 +150,14 @@
   letter-spacing: 1.4px;
   white-space: nowrap;
 
+  @media (min-width: 769px) and (max-width: 1024px) {
+
+   
+    position: relative;
+     left: -20px !important;
+  }
+
+
 
 }
 
@@ -147,21 +173,25 @@
   border: none !important;
   outline: none !important;
   margin: 0 30px 5px 0;
-
-
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .Articleimgbox {
+    max-width: 210px !important;
+    max-height: 140px !important;
+    /* 高度不限制 */
+    margin: 0 20px 5px 0;
+  }
+}
 
-
-/* 圖片區的圖片 */
 .Articleimgbox img {
   width: 100%;
   height: auto;
+  /* 保持圖片比例 */
   object-fit: cover;
   border-radius: 20px;
   transition: transform 0.3s ease;
   display: block;
-
 }
 
 

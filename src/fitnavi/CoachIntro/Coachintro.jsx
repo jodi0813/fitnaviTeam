@@ -3,7 +3,7 @@ import { useState } from "react";
 import MaintitleBread from '../../components/Title/MaintitleBread';
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
-import Articlecardscoach from "../../components/Articlecards/Articlecardscoach";
+import Articlecards from "../../components/Articlecards/Articlecards";
 import { useNavigate } from 'react-router-dom';
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
 import PhotoGallery1 from '../../components/Carousel/PhotoGallery1';
@@ -516,10 +516,10 @@ function Coachintro() {
                                             <path d="M30 36L18 24L30 12" stroke="#3A2C19" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg></button>
 
-                                    <div className="CoachIntroPage">
+                                    
                                         <div className="Three-classcards">
                                             {visibleCards.map((card, index) => (
-                                                <Articlecardscoach
+                                                <Articlecards
                                                     key={index}
                                                     date={card.date}
                                                     img={card.img}
@@ -532,7 +532,7 @@ function Coachintro() {
                                                 />
                                             ))}
                                         </div>
-                                    </div>
+                                    
 
 
                                     <button className=" ViewArticles-right" onClick={goBack}>

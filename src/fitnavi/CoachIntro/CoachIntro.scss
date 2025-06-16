@@ -2167,7 +2167,7 @@
             flex-direction: column;
             // justify-content: flex-start;
 
-            .reserve{
+            .reserve {
                 position: relative;
             }
 
@@ -2240,12 +2240,12 @@
                 }
             }
 
-          
-                .Coach-Available-calendar {
-                  margin: 0px !important;
-                }
 
-            
+            .Coach-Available-calendar {
+                margin: 0px !important;
+            }
+
+
 
 
         }
@@ -2260,39 +2260,30 @@
     #coacharticle {
         width: 100% !important;
         margin-top: 80px !important;
-        overflow-x: hidden;
+        
 
 
+        .ViewArticles {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            
 
-        // .ViewArticles {
-        //     position: relative;
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: center;
-        //     width: 100%;
-        //     margin: 0 auto;
-        // }
+            .Three-classcards {
+                justify-content: flex-start !important;
+            }
 
-        // .Three-classcards {
-        //     display: flex;
-        //     gap: 16px;
-        //     width: 100%;
-        //     padding: 0 20px;
-        //     box-sizing: border-box;
-        // }
+        }
+
+
 
         .ViewArticles-left,
         .ViewArticles-right {
-           display: none !important;
+            display: none !important;
         }
 
-        // .ViewArticles-left {
-        //     left: 10px !important;
-        // }
-
-        // .ViewArticles-right {
-        //     right: 100px !important;
-        // }
+        
     }
 
     /* --- */
