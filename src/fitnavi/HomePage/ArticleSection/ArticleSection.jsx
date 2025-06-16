@@ -114,7 +114,11 @@ function ArticleSection() {
 
                 {/* 底下標題小語跟按鈕 */}
                 <div className="Hompagearticle-Chtitle">
-                    <h2>知識文章</h2>
+                    <div className="chTitle">
+                        <h2 className="title1">知識文章</h2>
+                        <h2 className="title2">知識文章</h2>
+
+                    </div>
                     <div className="subTitle">
                         <p>
                             「來自現場的知識，走得穩，也走得遠」<br />

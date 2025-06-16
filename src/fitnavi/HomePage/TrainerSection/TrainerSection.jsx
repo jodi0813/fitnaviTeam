@@ -68,9 +68,11 @@ function TrainerSection() {
       <header className="home-trainer-mainTitle">
         <div className="mainTitle-col1">
           <span className="home-trainer-mainTitle1">讓專業陪你前進</span>
+          <img className="decoarrow-right-1024" src="./images/homepage-arrow-right-1024.svg" alt="" />
           <span className="home-trainer-mainTitle2">效率與安全兼得</span>
+          <img className="decoarrow-left-1024" src="./images/homepage-arrow-left-1024.svg" alt="" />
         </div>
-        <img src="./images/home-trainer-arrow.svg" alt="" />
+        <img className="decoarrow" src="./images/home-trainer-arrow.svg" alt="" />
       </header>
       {/* 卡牌輪播區 */}
       <div className="trainer-card-box">

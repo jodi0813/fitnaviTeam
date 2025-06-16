@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: 10% 5% 5%;
+  padding: 48% 5% 5%;
 
   //卡牌輪播區域
   .nutritionist-card-box {
@@ -16,6 +16,12 @@
     margin-left: 13%;
     width: 100%;
     gap: 50px;
+
+    @media(max-width:10224px) {
+      justify-content: flex-end;
+      margin-right: 28%;
+      margin-left: 0;
+    }
 
     .home-nutritionist-maincard {
       display: flex;
@@ -28,6 +34,11 @@
       aspect-ratio: 5 / 7;
       transform: skew(-20deg, 0deg);
 
+      @media(max-width:1024px) {
+        box-shadow: 14px 14px 0px 0px #ff8740;
+        transform: skew(-16deg, 0deg);
+      }
+
 
       .home-nutritionist-img {
         position: absolute;
@@ -36,10 +47,18 @@
         width: 100%;
         z-index: 99;
 
+        @media(max-width:1024px) {
+          right: 8%;
+        }
+
         img {
           width: 92%;
           transform: none;
           transform: skew(20deg, 0deg);
+
+          @media(max-width:1024px) {
+            transform: skew(16deg, 0deg);
+          }
         }
       }
 
@@ -70,11 +89,26 @@
           line-height: normal;
           letter-spacing: 3.2px;
           color: #3a2c19;
+          white-space: nowrap;
+
+          @media(max-width:1024px) {
+            width: fit-content;
+            font-size: 14px;
+            gap: 3px;
+            padding: 8px 24px;
+            position: absolute;
+            right: 20px;
+            top: 27px;
+          }
 
           //英文名
           .home-nutritionist-enname {
             font-size: 20px;
             letter-spacing: 2px;
+
+            @media(max-width:1024px) {
+              font-size: 14px;
+            }
           }
         }
 
@@ -103,6 +137,12 @@
           font-weight: 500;
           line-height: 140%;
           letter-spacing: 1.4px;
+
+          @media(max-width:1024px) {
+            right: 70px;
+            top: 280px;
+            z-index: 100;
+          }
         }
       }
 
@@ -113,7 +153,12 @@
       display: inline-flex;
       width: 50%;
       height: auto;
+
       // margin-left:14%;
+      @media (max-width:1024px) {
+        display: none;
+      }
+
 
 
       .nutritionist-card-small {
@@ -136,6 +181,11 @@
       position: absolute;
       top: 35%;
       right: 13%;
+      @media(max-width:1024px){
+        width: 47%;
+        top:74%;
+        right:3%;
+      }
 
       button {
         all: unset;
@@ -291,16 +341,27 @@
       right: 0%;
       bottom: -24%;
       width: 17%;
+      @media(max-width:1024px){
+        left:30%;
+        bottom:200%;
+        width: 12%;
+      }
     }
 
     .home-nutritionist-title {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-
-
       width: 100%;
       gap: 45px;
+
+      @media(max-width:1024px) {
+        gap: 5px;
+        position: absolute;
+        width: fit-content;
+        bottom: 0%;
+        left: 0%;
+      }
 
       .home-nutritionist-title1 {
         display: flex;
@@ -316,6 +377,14 @@
           gap: 32px;
           padding-left: 7%;
 
+          @media(max-width:1024px) {
+            flex-direction: column;
+            gap: 0px;
+            position: absolute;
+            top: -127%;
+            left: 85%
+          }
+
           .home-nutritionist-titleCh {
             // text-align: center;
             // -webkit-text-strokeWidth: 1px;
@@ -328,6 +397,12 @@
             letter-spacing: 12.8px;
             color: #3a2c19;
             white-space: nowrap;
+
+            @media(max-width:1024px) {
+              font-size: 128px;
+              line-height: 113%;
+              order:2;
+            }
           }
 
           .home-nutritionist-titleEn {
@@ -340,8 +415,9 @@
             /* 156.25% */
             text-transform: capitalize;
 
-            @media (max-width: 1150px) {
-              font-size: 56px;
+            @media(max-width:1024px) {
+              font-size: 24px;
+              line-height: 0%;
             }
           }
 
@@ -357,12 +433,54 @@
           /* 200% */
           letter-spacing: 0.4px;
           padding-left: 4%;
+          span{
+            display: block;
+          }
+
+          @media(max-width:1024px) {
+            margin-right: 0%;
+            width: 260px;
+
+            :nth-child(1) {
+              font-family: "Mantou Sans";
+              font-size: 16px;
+              letter-spacing: 1.6px;
+            }
+
+            :nth-child(2) {
+              font-size: 14px;
+              letter-spacing: 1.4px;
+              line-height: 30px;
+            }
+          }
         }
       }
 
       .home-nutritionist-button {
         display: flex;
         gap: 20px;
+
+        @media(max-width:1024px) {
+          flex-direction: column;
+          gap: 12px;
+          margin-right: 0%;
+
+          a {
+            height: 40px;
+
+            button {
+              width: 320px;
+              height: 40px;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 900;
+              line-height: 140%;
+              /* 19.6px */
+              letter-spacing: 1.4px;
+              border-radius: 8px;
+            }
+          }
+        }
 
       }
     }
