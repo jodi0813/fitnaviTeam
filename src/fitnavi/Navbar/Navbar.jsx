@@ -101,7 +101,7 @@ function Navbar() {
                 navigate("/"); // 登出後導回首頁
               }}
             >
-              登出
+              會員管理
             </button>
           ) : (
             <button
