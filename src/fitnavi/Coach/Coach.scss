@@ -93,10 +93,10 @@
   }
 
   .closeFliter {
-position: absolute;
-background: transparent;
-top: 12px;
-right: 12px;
+    position: absolute;
+    background: transparent;
+    top: 12px;
+    right: 12px;
 
 
   }
@@ -152,7 +152,7 @@ right: 12px;
       width: 320px;
       border-radius: 8px;
       background-color: #fff;
-          border: 1px solid #989794;
+      border: 1px solid #989794;
     }
 
     &::placeholder {
