@@ -517,7 +517,7 @@ function Coachintro() {
                                             <path d="M30 36L18 24L30 12" stroke="#3A2C19" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg></button>
 
-{/* 
+
                                     <div className="Three-classcards">
                                         {visibleCards.map((card, index) => (
                                             <Articlecardscoach
@@ -532,7 +532,7 @@ function Coachintro() {
                                                 onClick={() => navigate(`/article/${card.id}`)}
                                             />
                                         ))}
-                                    </div> */}
+                                    </div> 
 
                                     <div className="my-swiper-container">
                                         <ArticleCardsSwiper visibleCards={visibleCards} navigate={navigate} />

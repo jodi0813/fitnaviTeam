@@ -1233,6 +1233,7 @@
             }
 
             .Three-classcards {
+                display: block;
                 display: flex;
                 flex-direction: row;
                 gap: 24px;
@@ -1242,6 +1243,10 @@
                 @media (min-width: 1680px) {
                     gap: 30px;
                 }
+            }
+
+            .my-swiper-container{
+                display: none;
             }
 
         }
@@ -2289,39 +2294,37 @@
         margin-top: 5rem !important;
         overflow-x: visible;
       
-        .article-wrapper {
-          overflow-x: visible;
-        }
+        // .article-wrapper {
+        //   overflow-x: visible;
+        // }
       
-        .ViewArticles {
-          overflow-x: visible; /* ← 建議移除 auto，因為 Three-classcards 已控制 */
-          scroll-snap-type: x mandatory;
-          -webkit-overflow-scrolling: touch;
-        }
+        // .ViewArticles {
+        //   overflow-x: visible; /* ← 建議移除 auto，因為 Three-classcards 已控制 */
+        //   scroll-snap-type: x mandatory;
+        //   -webkit-overflow-scrolling: touch;
+        // }
       
         .Three-classcards {
-          display: flex;
-          flex-wrap: nowrap;
-          overflow-x: auto;
-          scroll-snap-type: x mandatory;
-          gap: 1rem !important; /* 15~20px 更適合卡片排版 */
-          padding: 0 1rem 0.5rem 1rem;
-          scrollbar-width: none;
-        }
-      
-        .Three-classcards::-webkit-scrollbar {
-          display: none;
-        }
-      
-        .Three-classcards .Articlecardscoach {
-          flex: 0 0 auto !important;
-          scroll-snap-align: start;
-        }
-      
-        .ViewArticles-left,
-        .ViewArticles-right {
           display: none !important;
         }
+
+        .my-swiper-container{
+            display: block !important;
+        }
+      
+        // .Three-classcards::-webkit-scrollbar {
+        //   display: none;
+        // }
+      
+        // .Three-classcards .Articlecardscoach {
+        //   flex: 0 0 auto !important;
+        //   scroll-snap-align: start;
+        // }
+      
+        // .ViewArticles-left,
+        // .ViewArticles-right {
+        //   display: none !important;
+        // }
       }
       
 
