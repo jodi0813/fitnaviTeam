@@ -19,7 +19,10 @@
     margin-bottom: 160px;
 
     @media(max-width:1024px) {
-      margin-bottom: 280px;
+      margin-bottom: 300px;
+    }
+    @media(max-width:800px) {
+      margin-bottom: 200px;
     }
 
     .mainTitle-col1 {
@@ -110,7 +113,12 @@
     margin-left: 34%;
     width: 100%;
     gap: 90px;
-    @media(max-width:1024px){}
+
+    @media(max-width:800px) {
+      justify-content: center;
+      margin-left: 0;
+    }
+
 
 
     .home-trainer-maincard {
@@ -129,6 +137,15 @@
         box-shadow: 14px 14px 0px 0px #ff8740;
         transform: skew(-16deg, 0deg);
       }
+
+      @media(max-width:800px) {
+        width: 25%;
+      }
+
+      @media(max-width:600px) {
+        width: 140px;
+      }
+
 
       .home-trainer-img {
         position: absolute;
@@ -313,6 +330,12 @@
         left: 6%;
       }
 
+      @media(max-width:800px) {
+        width: 64%;
+        bottom: 44%;
+        left: 18%;
+      }
+
       button {
         all: unset;
         /* optional: 為了確保可以點擊 */
@@ -458,6 +481,9 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    // @media(max-width:800px){
+    //   justify-content: center;
+    // }
 
     .home-trainer-img {
       position: absolute;
@@ -467,9 +493,16 @@
 
       @media(max-width:1024px) {
         width: 12%;
-        left: 58%;
+        left: 55.5%;
         bottom: 80px;
       }
+
+      @media(max-width:800px) {
+        width: 12%;
+        left: 19%;
+        bottom: 80px;
+      }
+
     }
 
     .home-trainer-title {
@@ -484,8 +517,15 @@
         gap: 5px;
         position: absolute;
         width: fit-content;
-        bottom:0%;
-        right:0%;
+        bottom: 0%;
+        right: 0%;
+      }
+
+      @media(max-width:800px) {
+        position: relative;
+        width: 100%;
+        margin-top: 144px;
+        align-items: center;
       }
 
       .home-trainer-title1 {
@@ -493,6 +533,10 @@
         flex-direction: column;
         align-items: flex-end;
         margin-top: 2%;
+
+        @media(max-width:800px) {
+          width: 320px;
+        }
 
         .home-trainer-title2 {
           display: flex;
@@ -504,8 +548,14 @@
             flex-direction: column;
             gap: 0px;
             position: absolute;
-            top: -136%;
-            left: -125%
+            bottom: 158%;
+            left: -45%
+          }
+
+          @media(max-width:800px) {
+            bottom: 270%;
+            left: 15%;
+            z-index: -2;
           }
 
           .home-trainer-titleCh {
@@ -525,6 +575,10 @@
               font-size: 128px;
               line-height: 113%;
             }
+
+            @media(max-width:800px) {
+              opacity: 0.2;
+            }
           }
 
           .home-trainer-titleEn {
@@ -541,6 +595,7 @@
             @media(max-width:1024px) {
               font-size: 24px;
               line-height: 0%;
+              white-space: nowrap;
             }
           }
         }
@@ -561,7 +616,7 @@
 
           @media(max-width:1024px) {
             margin-right: 0%;
-            width: 260px;
+            width: 50%;
 
             :nth-child(1) {
               font-family: "Mantou Sans";
@@ -574,6 +629,10 @@
               letter-spacing: 1.4px;
               line-height: 30px;
             }
+          }
+
+          @media(max-width:800px) {
+            width: 256px;
           }
         }
       }

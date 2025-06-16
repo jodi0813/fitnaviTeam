@@ -9,6 +9,10 @@
   z-index: 0;
   left: 0;
 
+  @media(max-width:1024px) {
+    height: 155vh;
+  }
+
   // 影片讓下面邊界不要這麼明顯的濾鏡
   &::after {
     content: "";
@@ -99,6 +103,11 @@
     height: 100%;
     width: 100%;
 
+    @media(max-width:1024px) {
+      top: 15%;
+      margin-left: 9%;
+    }
+
 
 
     .Hero-Section-Catchphrase {
@@ -114,6 +123,10 @@
 
         @media (max-width: 1200px) {
           font-size: 155px;
+        }
+
+        @media(max-width:1024px) {
+          font-size: clamp(90px, 15.15vw, 155px);
         }
       }
 
@@ -135,6 +148,10 @@
           @media (max-width: 1200px) {
             font-size: 180px;
           }
+
+          @media(max-width:1024px) {
+            font-size: clamp(80px, 13vw + 36px, 180px);
+          }
         }
 
         h3.tronger-HeroTitle {
@@ -147,6 +164,10 @@
 
           @media (max-width: 1200px) {
             font-size: 155px;
+          }
+
+          @media(max-width:1024px) {
+            font-size: clamp(60px, 15vw, 155px);
           }
 
         }
@@ -164,6 +185,7 @@
       width: 50%;
       padding-top: 3%;
       padding-left: 1%;
+      min-width: 300px;
 
       p {
         color: #FFF;
@@ -175,7 +197,10 @@
         line-height: 150%;
         /* 36px */
         letter-spacing: 2.4px;
-        white-space: nowrap;
+        // white-space: nowrap;
+        @media(max-width:1024px){
+          font-size: clamp(14px, 2.34vw, 24px);
+        }
 
       }
 
@@ -188,13 +213,6 @@
 
   .Hero-section-scroll {
 
-    // position: relative;
-    // flex-direction: column;
-    // align-self: center;
-
-    // // // left: 35%;
-    // // top: -10%;
-    // border: none;
     position: absolute;
     top: 64%;
     left: 50%;
@@ -208,6 +226,10 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -20%);
+    }
+
+    @media(max-width:1024px) {
+      top: 60%;
     }
 
     p {

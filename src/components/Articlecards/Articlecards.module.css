@@ -5,12 +5,20 @@
   display: flex;
   flex-direction: column;
 
+  /* 其他頁面的響應式 */
   @media (max-width: 1024px) {
     width: auto !important;
     height: auto !important;
   }
 }
 
+/* coachintro 頁面的 card 不套用響應式 */
+.coachintro .card {
+  @media (max-width: 1024px) {
+    width: max-content !important;
+    height: auto !important;
+  }
+}
 
 /* 日期 */
 .data {
@@ -40,13 +48,19 @@
     font-size: 10px;
     letter-spacing: 0.8px;
     border-radius: 4px;
-
-    /* 不要再改 position/right，保持右上角對齊 */
   }
 }
 
-
-
+/* coachintro 頁面的日期不套用響應式 */
+.coachintro .data {
+  @media (max-width: 1024px) {
+    width: 100px !important;
+    height: 24px !important;
+    font-size: 14px !important;
+    letter-spacing: 1.4px !important;
+    border-radius: 8px !important;
+  }
+}
 
 /* 文章內容摘要區 */
 .contentBox {
@@ -60,8 +74,6 @@
   border: 1px solid #3A2C19;
   padding: 0.8rem;
 
-
-
   @media (max-width: 1024px) and (min-width: 600px) {
     width: 150px;
     height: 80px;
@@ -72,10 +84,20 @@
   }
 }
 
+/* coachintro 頁面的內容區不套用響應式 */
+.coachintro .contentBox {
+  @media (max-width: 1024px) and (min-width: 600px) {
+    width: 300px !important;
+    height: 170px !important;
+    right: 50px !important;
+    border-radius: 20px !important;
+    border: 1px solid #3A2C19 !important;
+  }
+}
+
 /* 文章標題 */
 .contentBox h4 {
   color: var(--dark, #3A2C19);
-  /* heading/標題4/Bold */
   font-family: "Noto Sans TC";
   font-size: 20px;
   font-style: normal;
@@ -86,14 +108,18 @@
 
   @media (max-width: 1024px) and (min-width: 600px) {
     font-size: 12px;
-
   }
 }
 
+/* coachintro 頁面的標題不套用響應式 */
+.coachintro .contentBox h4 {
+  @media (max-width: 1024px) and (min-width: 600px) {
+    font-size: 20px !important;
+  }
+}
 
 /* 文章摘要內容 */
 .contentBox p {
-
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
@@ -108,11 +134,15 @@
 
   @media (max-width: 1024px) and (min-width: 600px) {
     display: none;
-
   }
 }
 
-
+/* coachintro 頁面的內容段落不套用響應式 */
+.coachintro .contentBox p {
+  @media (max-width: 1024px) and (min-width: 600px) {
+    display: -webkit-box !important;
+  }
+}
 
 /* 底下兩個tag */
 .tag {
@@ -124,21 +154,7 @@
   bottom: -30px;
   right: -12%;
   white-space: nowrap;
-
-  /* @media (max-width: 1024px) and (min-width: 600px) {
-    position: relative;
-    bottom: -10px;
-    right: 0;
-    margin-top: 5px;
-    justify-content: flex-start;
-    gap: 5px;
-    max-width: 100%;
-    white-space: nowrap;
-
-  } */
 }
-
-
 
 /* 底下兩個tag的文字樣式 */
 .tag p {
@@ -181,19 +197,27 @@
     align-items: center;
     gap: 10px;
     color: var(--white, var(--white, #FEFCF7));
-    /* 段落(小尺寸)/12 */
     font-family: "Noto Sans TC", sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
-    /* 16.8px */
     letter-spacing: 1.2px;
     left: 0px;
     top: 4.5rem;
-
   }
+}
 
+/* coachintro 頁面的左上角 tag 不套用響應式 */
+.coachintro .tagBox {
+  @media (max-width: 1024px) and (min-width: 600px) {
+    position: relative !important;
+    padding: 5px 15px !important;
+    font-size: 14px !important;
+    letter-spacing: 1.4px !important;
+    left: -60px !important;
+    top: -200px !important;
+  }
 }
 
 /* 圖片區 */
@@ -213,15 +237,22 @@
   }
 }
 
+/* coachintro 頁面的圖片區不套用響應式 */
+.coachintro .Articleimgbox {
+  @media (max-width: 1024px) and (min-width: 600px) {
+    width: 320px !important;
+    height: 200px !important;
+  }
+}
+
 /* 圖片區的圖片 */
 .Articleimgbox img {
   width: 100%;
-    height: auto;
+  height: auto;
   object-fit: cover;
   border-radius: 20px;
   transition: transform 0.3s ease;
   display: block;
-  /* 確保 hover 可正常觸發 */
 
   @media (max-width: 1024px) {
     width: 100%;
@@ -229,20 +260,15 @@
   }
 }
 
+/* coachintro 頁面的圖片不套用響應式 */
+.coachintro .Articleimgbox img {
+  @media (max-width: 1024px) {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
 /* 圖片區hover效果 */
 .Articleimgbox img:hover {
   transform: scale(1.1);
 }
-
-
-
-/* .card2 .tag {
-
-  position: relative;
-  bottom: -100px;
-}
-
-.card7TagAdjust .tag p {
-  position: relative;
-  left: 150px;
-} */
