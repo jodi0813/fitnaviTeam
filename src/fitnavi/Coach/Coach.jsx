@@ -8,7 +8,6 @@ import { trainingOptions } from "../../data/hashtag";
 import Pagination from "../../components/Pagination/Pagination";
 import { FaXmark } from "react-icons/fa6";
 
-
 function CustomDropdown({ label, selected, onSelect, options }) {
   const [open, setOpen] = useState(false);
 
@@ -331,7 +330,7 @@ function Coach() {
     if (hashtag) {
       setSelectedHashtag(hashtag);
       setTimeout(() => {
-        handleSearch({ preventDefault: () => { } });
+        handleSearch({ preventDefault: () => {} });
       }, 0);
     }
   }, []);
@@ -346,12 +345,13 @@ function Coach() {
   }, []);
   /* 小尺寸篩選按鈕開關控制 */
   const [showFilter, setShowFilter] = useState(false);
+
+  
   return (
     <>
       <div id="coachMain">
         <MainTitle title1="健身教練" title2="找到專屬你的健身教練" />
         <div className="allCoachCards">
-
           {/* 小尺寸篩選 */}
           <div className="filterSection">
             {isMobile ? (
@@ -383,11 +383,15 @@ function Coach() {
                       type="button"
                       onClick={() => setShowFilter(false)}
                       className="closeFliter"
-                    ><FaXmark /></button>
+                    >
+                      <FaXmark />
+                    </button>
                     <CustomDropdown
                       label="選擇地區"
                       selected={
-                        selectedCity === "all" || selectedCity === "" ? "全部區域" : selectedCity
+                        selectedCity === "all" || selectedCity === ""
+                          ? "全部區域"
+                          : selectedCity
                       }
                       onSelect={setSelectedCity}
                       options={["全部區域", ...cities]}
@@ -395,7 +399,9 @@ function Coach() {
                     <CustomDropdown
                       label="訓練需求"
                       selected={
-                        selectedHashtag === "all" || selectedHashtag === "" ? "全部訓練需求" : selectedHashtag
+                        selectedHashtag === "all" || selectedHashtag === ""
+                          ? "全部訓練需求"
+                          : selectedHashtag
                       }
                       onSelect={setSelectedHashtag}
                       options={["全部訓練需求", ...trainingOptions]}
@@ -403,7 +409,9 @@ function Coach() {
                     <CustomDropdown
                       label="性別"
                       selected={
-                        selectedSex === "all" || selectedSex === "" ? "全部性別" : selectedSex
+                        selectedSex === "all" || selectedSex === ""
+                          ? "全部性別"
+                          : selectedSex
                       }
                       onSelect={setSelectedSex}
                       options={["全部性別", "男", "女"]}
@@ -416,64 +424,77 @@ function Coach() {
                       value={keyword}
                       onChange={(e) => setKeyword(e.target.value)}
                     ></input>
-                    <button type="button" className="submit" onClick={handleSearch}>
+                    <button
+                      type="button"
+                      className="submit"
+                      onClick={handleSearch}
+                    >
                       搜尋
                     </button>
                   </form>
                 )}
-              </>)
-              : (
-                <>
-                  <form
-                    action=""
-                    method="post"
-                    onSubmit={(e) => e.preventDefault()}
-                    id="personal-search-form"
-                    title="健身教練搜尋"
-                    className="searchCoachBox desktopSearch"
+              </>
+            ) : (
+              <>
+                <form
+                  action=""
+                  method="post"
+                  onSubmit={(e) => e.preventDefault()}
+                  id="personal-search-form"
+                  title="健身教練搜尋"
+                  className="searchCoachBox desktopSearch"
+                >
+                  <CustomDropdown
+                    label="選擇地區"
+                    selected={
+                      selectedCity === "all" || selectedCity === ""
+                        ? "全部區域"
+                        : selectedCity
+                    }
+                    onSelect={setSelectedCity}
+                    options={["全部區域", ...cities]}
+                  />
+                  <CustomDropdown
+                    label="訓練需求"
+                    selected={
+                      selectedHashtag === "all" || selectedHashtag === ""
+                        ? "全部訓練需求"
+                        : selectedHashtag
+                    }
+                    onSelect={setSelectedHashtag}
+                    options={["全部訓練需求", ...trainingOptions]}
+                  />
+                  <CustomDropdown
+                    label="性別"
+                    selected={
+                      selectedSex === "all" || selectedSex === ""
+                        ? "全部性別"
+                        : selectedSex
+                    }
+                    onSelect={setSelectedSex}
+                    options={["全部性別", "男", "女"]}
+                  />
+                  <input
+                    type="search"
+                    name="keyword-search"
+                    id="keyword-search"
+                    placeholder="關鍵字搜尋"
+                    value={keyword}
+                    onChange={(e) => setKeyword(e.target.value)}
+                  ></input>
+                  <button
+                    type="button"
+                    className="submit"
+                    onClick={handleSearch}
                   >
-                    <CustomDropdown
-                      label="選擇地區"
-                      selected={
-                        selectedCity === "all" || selectedCity === "" ? "全部區域" : selectedCity
-                      }
-                      onSelect={setSelectedCity}
-                      options={["全部區域", ...cities]}
-                    />
-                    <CustomDropdown
-                      label="訓練需求"
-                      selected={
-                        selectedHashtag === "all" || selectedHashtag === "" ? "全部訓練需求" : selectedHashtag
-                      }
-                      onSelect={setSelectedHashtag}
-                      options={["全部訓練需求", ...trainingOptions]}
-                    />
-                    <CustomDropdown
-                      label="性別"
-                      selected={
-                        selectedSex === "all" || selectedSex === "" ? "全部性別" : selectedSex
-                      }
-                      onSelect={setSelectedSex}
-                      options={["全部性別", "男", "女"]}
-                    />
-                    <input
-                      type="search"
-                      name="keyword-search"
-                      id="keyword-search"
-                      placeholder="關鍵字搜尋"
-                      value={keyword}
-                      onChange={(e) => setKeyword(e.target.value)}
-                    ></input>
-                    <button type="button" className="submit" onClick={handleSearch}>
-                      搜尋
-                    </button>
-                  </form>
-                  <div className="coachTitleBox">
-                    <span className="all-coach">全部教練</span>
-                  </div>
-                </>
-              )
-            }
+                    搜尋
+                  </button>
+                </form>
+                <div className="coachTitleBox">
+                  <span className="all-coach">全部教練</span>
+                </div>
+              </>
+            )}
           </div>
 
           {currentItems.length === 0 ? (
@@ -504,7 +525,6 @@ function Coach() {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         />
-
       </div>
     </>
   );
