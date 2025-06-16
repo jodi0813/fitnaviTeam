@@ -121,9 +121,8 @@ function NutritionistSection() {
               <div className="home-nutritionist-title3">
                 <span>
                   「吃對，比少吃更重要」
-                  <br />
-                  營養師協助你規劃均衡又可持續的飲食，從生活習慣出發，讓每一餐都為目標加分。
                 </span>
+                <span>營養師協助你規劃均衡又可持續的飲食，從生活習慣出發，讓每一餐都為目標加分。</span>
               </div>
             </div>
             <div className="home-nutritionist-button">
