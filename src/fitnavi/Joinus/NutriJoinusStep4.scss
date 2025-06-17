@@ -6,16 +6,16 @@
     src: url(../../assets/MantouSans-Regular.ttf);
 }
 
-#NuriJoinusStep4-Form {
-    padding: 120px 50px;
-    width: 100%
-}
+// #NuriJoinusStep4-Form {
+//     padding: 120px 50px;
+//     width: 100%
+// }
 
 .NutriJoinus-Step4-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; // 讓它垂直滿版置中
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // height: 100vh; // 讓它垂直滿版置中
 
 
     .NutriJoinus-Step4 {
@@ -38,7 +38,13 @@
         // box-shadow: 4px 4px 24px 0px rgba(58, 44, 25, 0.30);
         box-shadow: 8px 8px 0px 0px #3A2C19;
 
+        @media(max-width:1024px) {
+            width: 360px !important;
+            height: 590px !important;
+            padding: 12px;
 
+
+        }
 
         .JoinusStep4-title {
             display: flex;
@@ -47,6 +53,14 @@
             margin-bottom: 40px;
             border-bottom: 1px solid #3a2c19;
             width: 450px;
+
+            @media (max-width: 1024px) {
+                gap: 10px;
+                margin-bottom: 12px;
+                width: 289px;
+
+
+            }
 
             .Step4-title {
                 display: flex;
@@ -65,6 +79,7 @@
                     font-weight: 400;
                     line-height: normal;
                     letter-spacing: 0px;
+
                 }
 
                 h4 {
@@ -176,6 +191,11 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
+
+        @media (max-width: 1024px) {
+            margin-top: 0px; // 響應式控制與下方距離
+        }
+
 
             button {
                 border-radius: 999px;

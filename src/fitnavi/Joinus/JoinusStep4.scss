@@ -17,10 +17,23 @@
 //     align-items: center;
 //     height: 100vh; // 讓它垂直滿版置中
 
+.joinus-form-wrapper {
+
+
+    @media(max-width:1024px) {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
 
 .CoachJoinus-Step4 {
-    position: relative;
 
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -38,6 +51,14 @@
     // box-shadow: 4px 4px 24px 0px rgba(58, 44, 25, 0.30);
     box-shadow: 8px 8px 0px 0px #3A2C19;
 
+    @media(max-width:1024px) {
+        width: 360px !important;
+        height: 590px !important;
+        padding: 12px;
+
+
+    }
+
 
 
     .JoinusStep4-title {
@@ -48,6 +69,13 @@
         border-bottom: 1px solid #3a2c19;
         width: 450px;
 
+        @media (max-width: 1024px) {
+            gap: 10px;
+            margin-bottom: 12px;
+            width: 289px;
+
+        }
+
         .Step4-title {
             display: flex;
             flex-direction: row;
@@ -55,6 +83,16 @@
             align-items: baseline;
             gap: 10px;
             white-space: nowrap;
+
+            @media (max-width: 1024px) {
+                width: 289px; // 控制整個元素的寬度
+                gap: 5px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+            }
 
             h3 {
                 color: var(--dark, #3A2C19);
@@ -65,6 +103,19 @@
                 font-weight: 400;
                 line-height: normal;
                 letter-spacing: 0px;
+
+
+                @media(max-width:1024px) {
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    font-family: "Dela Gothic One";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 3.6px;
+                    padding-left: 20px;
+                }
             }
 
             h4 {
@@ -78,6 +129,21 @@
                 line-height: 250%;
                 /* 35px */
                 letter-spacing: 1.4px;
+
+                @media(max-width:1024px) {
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    /* 段落(小尺寸)/12 */
+                    font-family: "Noto Sans TC";
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 16.8px */
+                    letter-spacing: 1.2px;
+                    white-space: wrap;
+
+                }
             }
         }
 
@@ -91,6 +157,19 @@
             line-height: 140%;
             /* 19.6px */
             letter-spacing: 1.4px;
+
+            @media(max-width:1024px) {
+                color: var(--primary, var(--primary, #FF8740));
+                opacity: 0.5;
+                text-align: center;
+                font-family: "Dela Gothic One";
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                /* 14px */
+                letter-spacing: 1px;
+            }
         }
 
     }
@@ -111,6 +190,11 @@
         border-radius: 8px;
         border: 1px solid var(--dark, #3A2C19);
         background: var(--white, #FEFCF7);
+
+        @media(max-width:1024px) {
+            width: 289px;
+            margin: 0 auto;
+        }
 
         p {
             color: var(--dark, #3A2C19);
@@ -176,6 +260,11 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+
+        @media (max-width: 1024px) {
+            margin-top: 0px; // 響應式控制與下方距離
+        }
+
 
         .Step4Pre-button {
             width: 100px;
