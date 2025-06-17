@@ -8,10 +8,14 @@
   width: 100%;
   padding: 48% 5% 5%;
 
+  @media(max-width:800px) {
+    padding: 36% 5% 5%;
+  }
+
   @media(max-width:600px) {
     align-items: center;
     margin: 0 auto;
-    // padding: 10% 0;
+    padding: 48% 5% 5%;
   }
 
 
@@ -32,9 +36,7 @@
 
     @media(max-width:800px) {
       justify-content: center;
-      align-items: center;
       margin: 0;
-
     }
 
     .home-nutritionist-maincard {
@@ -227,18 +229,25 @@
 
       @media(max-width:800px) {
         width: 64%;
-        top: 47%;
-        right: 17%;
+        top: 40%;
+        right: 18%;
       }
 
-      @media(max-width:600px) {
+        @media(max-width:600px) {
         width: 350px;
-        top: 120px;
+        bottom: 47%;
         margin: 0 auto;
-        left: 50%; // 添加這兩行來真正置中
+        left: 48%; 
         transform: translateX(-50%);
-
       }
+        @media(max-width:400px) {
+        width: 350px;
+        top: 268px;
+        margin: 0 auto;
+        left: 46%; 
+        transform: translateX(-50%);
+      }
+
 
 
       button {
@@ -397,6 +406,7 @@
 
     @media(max-width:800px) {
       padding: 0;
+      transform: translateY(-30px);
     }
 
     @media(max-width:600px) {
@@ -424,8 +434,8 @@
       }
 
       @media(max-width:600px) {
-        width: 87px;
-        left: -7%;
+        width: 92px;
+        left: 80%;
         bottom: 80px;
       }
 
@@ -479,14 +489,14 @@
           }
 
           @media(max-width:800px) {
-            top: -257%;
-            left: 26%;
+            top: -213%;
+            left: 29%;
             z-index: -2;
           }
 
           @media(max-width:600px) {
-            top: -127%;
-            left: 85%;
+            top: -196%;
+            left: 8%;
           }
 
 
