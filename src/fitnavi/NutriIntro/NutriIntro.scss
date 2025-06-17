@@ -1709,18 +1709,25 @@
 
 
 
-@media screen and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
 
-    #Nutriintro {
+    html,
+    body {
+        scroll-behavior: smooth;
+        scroll-snap-type: y proximity;
+        width: 100vw;
+    }
+
+    #Coachintro {
         padding: 120px 10px;
     }
+
 
     // 主內容外層
     #Nutriintro,
     #aboutnutri,
     #spefield,
     #Nutri-exp-cer,
-
     #Nutri-reservation,
     #Nutriarticle {
         max-width: 100vw !important;
@@ -1729,21 +1736,38 @@
         box-sizing: border-box;
     }
 
+    #aboutnutri,
+    #spefield,
+    #Nutri-exp-cer,
+    #certificate,
+    #reservation1,
+    #coacharticle,
+    .Coach-comment-wrapper {
+        scroll-margin-top: 90px !important;
+        /* 依你的 nav 高度調整 */
+    }
+
+
+
     // 主要兩區塊
     .Nutriintro-person {
         display: flex !important;
-        display: flex !important;
         flex-direction: row !important;
         align-items: flex-start !important;
-        gap: 12px !important;
+        gap: 5% !important;
         width: 100% !important;
         box-sizing: border-box;
         padding: 0 8px !important;
         margin: 0 auto !important;
+        position: relative;
+        max-width: 960px; // 或依需求調整 900px、95%
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 0 16px !important;
 
         .Nutri-person-class-photo {
             margin-left: 0 !important;
-            width: 100% !important;
+            width: 60% !important;
             margin-top: 0;
 
             .Nutri-photogallery {
@@ -1786,60 +1810,63 @@
             width: 100% !important;
             max-width: 100% !important;
             padding: 0 !important;
-            // margin-top: 50px;
             display: flex;
             flex-direction: column;
-            // gap: 100px;
-
-
-            .personinfo .namefavorite {
-                gap: 32px !important;
-                margin-bottom: 8px !important;
 
 
 
-            }
+            .Nutri-personinfo {
+                padding-right: 10px;
 
-            .personinfo p {
-                font-size: 16px !important;
-                margin-bottom: 10px !important;
+                .namefavorite {
+                    gap: 32px !important;
+                    margin-bottom: 8px !important;
+                }
 
+                p {
+                    font-size: 16px !important;
+                    margin-bottom: 10px !important;
+                }
             }
 
             .Nutri-classbox {
-                width: 400px !important;
+                width: 90% !important;
+                height: 80%;
                 border-radius: 18px !important;
                 padding: 16px 8px !important;
                 margin-top: 32px !important;
                 margin-bottom: 12px !important;
-            }
 
-            .Nutri-classbox .classtime {
-                gap: 10px !important;
+                .classtime {
+                    padding-right: 20px;
 
-                h2 {
-                    font-size: 22px !important;
+                    h2 {
+                        font-size: 22px !important;
+                    }
                 }
+
             }
+
+
 
             .p-linethrough-color {
                 margin-top: 10px !important;
+                margin-bottom: 15px !important;
                 flex-direction: row;
 
-                p,
                 p.p-linethrough {
-                    font-size: 15px !important;
+                    font-size: 20px !important;
                     line-height: 22px !important;
                 }
 
                 span .Arrow-price .Arrow-orange {
-                    width: 14px !important;
-                    height: 14px !important;
+                    width: 20px !important;
+                    height: 24px !important;
                 }
 
                 span .Arrow-price p.OrangePrice {
-                    font-size: 20px !important;
-                    line-height: 24px !important;
+                    font-size: 40px !important;
+                    line-height: 14px !important;
                 }
 
                 span p.SingleClass,
@@ -2148,71 +2175,71 @@
     }
 }
 
-@media screen and (max-width: 1440px) {
+// @media screen and (max-width: 1440px) {
 
-    .nutrisvg {
-        left: 60% !important;
-    }
+//     .nutrisvg {
+//         left: 60% !important;
+//     }
 
-}
+// }
 
-@media screen and (max-width: 1440px) {
+// @media screen and (max-width: 1440px) {
 
-    .reserve-img {
-        display: flex;
-        flex-direction: row;
-        position: relative;
+//     .reserve-img {
+//         display: flex;
+//         flex-direction: row;
+//         position: relative;
 
 
-        img {
-            width: 50%;
-            height: 90%;
-            position: relative;
-            left: 40px !important;
-            top: -100px !important;
-        }
+//         img {
+//             width: 50%;
+//             height: 90%;
+//             position: relative;
+//             left: 40px !important;
+//             top: -100px !important;
+//         }
 
-        p {
-            color: var(--primary, var(--primary, #FF8740));
-            /* heading/標題3 */
-            font-family: "Noto Sans TC", sans-serif;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            letter-spacing: 3.2px;
+//         p {
+//             color: var(--primary, var(--primary, #FF8740));
+//             /* heading/標題3 */
+//             font-family: "Noto Sans TC", sans-serif;
+//             font-size: 32px;
+//             font-style: normal;
+//             font-weight: 700;
+//             line-height: normal;
+//             letter-spacing: 3.2px;
 
-            position: relative;
-            left: 30px;
-            top: -10px;
+//             position: relative;
+//             left: 30px;
+//             top: -10px;
 
-            &::before,
-            &::after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                width: 40px;
-                height: 2px;
-                background-color: #FF8740;
+//             &::before,
+//             &::after {
+//                 content: "";
+//                 position: absolute;
+//                 top: 50%;
+//                 width: 40px;
+//                 height: 2px;
+//                 background-color: #FF8740;
 
-            }
+//             }
 
-            &::before {
-                left: -40px;
-                top: 30px;
-                transform: rotate(45deg);
-            }
+//             &::before {
+//                 left: -40px;
+//                 top: 30px;
+//                 transform: rotate(45deg);
+//             }
 
-            &::after {
-                right: -30px;
-                top: 30px;
-                transform: rotate(135deg);
-            }
-        }
-    }
+//             &::after {
+//                 right: -30px;
+//                 top: 30px;
+//                 transform: rotate(135deg);
+//             }
+//         }
+//     }
 
-    .nutrisvg {
-        left: 60% !important;
-    }
+//     .nutrisvg {
+//         left: 60% !important;
+//     }
 
-}
+// }
