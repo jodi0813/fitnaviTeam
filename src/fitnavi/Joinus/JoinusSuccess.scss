@@ -83,7 +83,7 @@
         color: #FFF;
         text-align: center;
         /* heading/標題4/Bold */
-        font-family: "Noto Sans TC";
+        font-family: "Noto Sans TC", sans-serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -109,6 +109,25 @@
             outline: none;
             border: 1px solid #FF8740;
         }
+
+        @media(max-width:1024px) {
+            width: 320px;
+            height: 40px;
+            border-radius: 8px;
+            background: var(--primary, #FF8740);
+            color: #FFF;
+
+            text-align: center;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+        }
+
+
     }
 
 

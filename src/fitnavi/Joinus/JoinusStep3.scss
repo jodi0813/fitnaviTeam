@@ -7,14 +7,19 @@
 }
 
 .joinus-form-wrapper {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @media(max-width:1024px) {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
 
 
 .CoachJoinus-Step3 {
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -33,6 +38,7 @@
     width: 360px;
     height: 590px !important;
     padding: 12px;
+ 
 
   }
 
