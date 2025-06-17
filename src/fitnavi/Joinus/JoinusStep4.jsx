@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./JoinusStep4.scss";
-import MainTitle from "../../components/Title/MainTitle";
+// import MainTitle from "../../components/Title/MainTitle";
 
 function JoinusStep4({ onPre, onSubmit }) {
     const navigate = useNavigate();
@@ -27,7 +27,7 @@ function JoinusStep4({ onPre, onSubmit }) {
 
     return (
         <>
-            <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
+            {/* <MainTitle title1="加入我們" title2="成為我們的合作夥伴" /> */}
             <div className='joinus-form-wrapper'>
                 <form className='CoachJoinus-Step4' onSubmit={handleSubmit}>
                     <div className='JoinusStep4-title'>
