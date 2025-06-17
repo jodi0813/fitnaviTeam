@@ -56,6 +56,15 @@ function ArticleSection() {
             content: "減脂並不意味著無止境的節食，關鍵在於合理控制飲食，搭配有效的運動。減少糖分與不健康脂肪的攝取，讓你在消耗脂肪的同時保持活力。",
             tags: ["減脂", "健康飲食", "瘦身攻略"],
             category: "減脂攻略"
+        },
+        {
+            id: "card10",
+            img: "./images/article-8.jpg",
+            title: "增肌該怎麼吃？營養搭配與飲食策略分享",
+            content: "想要增肌，光靠訓練是不夠的，飲食也起著關鍵作用。適量增加蛋白質和碳水化合物的攝入，並確保攝取足夠的熱量，讓你在訓練後獲得更多肌肉增長。",
+            tags: ["增肌", "蛋白質補充"],
+            category: "增肌飲食",
+            role: '營養師'
         }
     ]
 
@@ -69,6 +78,11 @@ function ArticleSection() {
                     <h3 className="right-top">知識文章</h3>
                     <h3 className="left-bottom">知識文章</h3>
                 </div>
+                {/* ARTICLE小尺寸用標題 */}
+
+                <div className="article-left article-title-s">ARTICLES</div>
+                <div className="article-right article-title-s">ARTICLES</div>
+
                 {/* 英文標題加兩欄文章 */}
                 <div className="cards-text-container">
                     {/* 兩欄文章 */}
@@ -105,7 +119,7 @@ function ArticleSection() {
                                         content={item.content}
                                         tags={item.tags}
                                         category={item.category}
-                                        className={`card${index + 1}`}
+                                        className={`card${index + 1} ${item.id === 'card10' ? 'hide-on-large' : ''}`}
                                         onClick={() => navigate(`/article/${item.id}`)}
                                     />
                                 ))}

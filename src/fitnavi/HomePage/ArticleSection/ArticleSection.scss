@@ -14,8 +14,13 @@
     width: 100%;
     padding-top: 24%;
     padding-bottom: 15%;
-    @media(max-width:1024px){
+
+    @media(max-width:1024px) {
         padding-top: 35%;
+    }
+
+    @media(max-width:600px) {
+        background-image: none;
     }
 
     .orangeTitle {
@@ -38,13 +43,51 @@
                 position: absolute;
                 right: 20px;
                 top: -180px;
+
+                @media(max-width:600px) {
+                    top: -140px;
+                }
             }
+
             .left-bottom {
                 position: absolute;
                 left: 20px;
                 bottom: -690px;
             }
         }
+    }
+
+    .article-title-s {
+        width: 100%;
+        position: absolute;
+        color: var(--dark, #3A2C19);
+        font-family: "Dela Gothic One";
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 10.8px;
+        transform: rotate(90deg);
+        transform-origin: top left;
+        margin: 0px;
+        display: none;
+        opacity: 0.2;
+
+        @media(max-width:600px) {
+            display: block;
+
+        }
+    }
+
+    .article-left {
+        position: absolute;
+        left: 110px;
+        top: 140px;
+    }
+
+    .article-right {
+        position: absolute;
+        left: 400px;
+        top: 850px;
     }
 
     .cards-text-container {
@@ -59,12 +102,22 @@
             width: 100%;
             gap: 16%;
 
+            @media(max-width:600px) {
+                flex-direction: column;
+                align-items: center;
+                gap: 6%;
+            }
+
 
             .cards-column1 {
                 display: flex;
                 flex-direction: column;
                 width: fit-content;
 
+                @media(max-width:600px) {
+                    transform: translateX(40%);
+                    gap: 30px;
+                }
             }
 
             .cards-column2 {
@@ -74,6 +127,17 @@
                 width: fit-content;
                 transform: translateX(30px);
 
+                @media(max-width:600px) {
+                    transform: translateX(-30%);
+                    gap: 30px;
+                }
+
+            }
+
+            .hide-on-large {
+                @media (min-width: 601px) {
+                    display: none;
+                }
             }
 
         }
@@ -101,6 +165,10 @@
                 line-height: 100px;
                 /* 138.889% */
                 letter-spacing: 10.8px;
+            }
+
+            @media(max-width: 600px) {
+                display: none;
             }
 
         }
@@ -171,6 +239,10 @@
                 /* 200% */
                 letter-spacing: 0.28px;
             }
+
+            @media(max-width:600px) {
+                display: none;
+            }
         }
     }
 
@@ -202,6 +274,11 @@
             margin-top: 60px;
             transform: translateX(-110px);
             font-size: 14px;
+        }
+
+        @media(max-width:600px) {
+            margin-top: 350px;
+            transform: translateX(-135px);
         }
 
         &:focus,
