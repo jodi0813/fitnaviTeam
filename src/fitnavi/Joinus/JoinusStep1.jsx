@@ -3,7 +3,7 @@ import "./JoinusStep1.scss";
 
 function JoinusStep1({ onNext }) {
   return (
-    <section id="JoinusStep1-Form">
+    <div className="joinus-form-wrapper">
       <form
         className="CoachJoinus-Step1-form"
         onSubmit={(e) => {
@@ -51,7 +51,7 @@ function JoinusStep1({ onNext }) {
 
         </button>
       </form>
-    </section>
+    </div>
   );
 }
 
