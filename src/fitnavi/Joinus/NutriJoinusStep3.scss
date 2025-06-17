@@ -6,6 +6,17 @@
   src: url(../../assets/MantouSans-Regular.ttf);
 }
 
+.joinus-form-wrapper {
+
+  @media(max-width:1024px) {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
 .NutriJoinus-Step3 {
   position: relative;
   display: flex;
@@ -21,11 +32,12 @@
   box-shadow: 8px 8px 0px 0px #3A2C19;
   box-sizing: border-box;
 
+
   @media(max-width:1024px) {
     width: 360px;
     min-height: 590px;
-    padding: 12px;
-
+    margin-bottom: 5rem;
+    margin-top: 5rem;
   }
 
   .NutriJoinusStep3-title {
@@ -38,6 +50,7 @@
     @media (max-width: 1024px) {
       gap: 10px;
       margin-bottom: 12px;
+      width: 289px;
 
     }
 
@@ -61,6 +74,17 @@
         font-size: 36px;
         letter-spacing: 5.4px;
         text-align: center;
+
+        @media(max-width:1024px) {
+          color: var(--dark, #3A2C19);
+          text-align: center;
+          font-family: "Dela Gothic One";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 3.6px;
+        }
       }
 
       h4 {
@@ -71,6 +95,19 @@
         font-weight: 500;
         line-height: 250%;
         letter-spacing: 1.4px;
+
+        @media(max-width:1024px) {
+          color: var(--dark, #3A2C19);
+          text-align: center;
+          /* 段落(小尺寸)/12 */
+          font-family: "Noto Sans TC";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          /* 16.8px */
+          letter-spacing: 1.2px;
+        }
       }
     }
 
@@ -81,6 +118,19 @@
       line-height: 140%;
       letter-spacing: 1.4px;
       text-align: center;
+
+      @media(max-width:1024px) {
+        color: var(--primary, var(--primary, #FF8740));
+        opacity: 0.5;
+        text-align: center;
+        font-family: "Dela Gothic One";
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        /* 14px */
+        letter-spacing: 1px;
+      }
     }
   }
 
@@ -141,7 +191,7 @@
           border-radius: 8px;
           border: 1px solid var(--dark, #3A2C19);
           background: #FFF;
-          margin-left: 44px;
+          margin-left: 10px;
 
         }
 
@@ -443,10 +493,11 @@
     flex-direction: row;
     gap: 300px;
     width: 100%;
+   
 
-    
+
     @media(max-width:1024px) {
-        gap: 150px !important;
+      gap: 150px !important;
     }
 
     .Pre-button,

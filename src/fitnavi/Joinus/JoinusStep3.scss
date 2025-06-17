@@ -36,9 +36,10 @@
 
   @media(max-width:1024px) {
     width: 360px;
-    height: 590px !important;
-    padding: 12px;
+    min-height: 590px;
     margin-bottom: 5rem;
+    margin-top: 5rem;
+
 
   }
 
@@ -52,6 +53,7 @@
     @media (max-width: 1024px) {
       gap: 10px;
       margin-bottom: 12px;
+      width: 289px;
 
     }
 
@@ -192,7 +194,7 @@
           border-radius: 8px;
           border: 1px solid var(--dark, #3A2C19);
           background: #FFF;
-          margin-left: 44px;
+          margin-left: 10px;
 
         }
 
