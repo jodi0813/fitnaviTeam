@@ -53,11 +53,10 @@
 
     @media(max-width:1024px) {
         width: 360px !important;
-        height: 590px !important;
-        padding: 12px;
+        min-height: 590px;
         margin-bottom: 5rem;
-
-    }
+        margin-top: 5rem;
+      }
 
 
 

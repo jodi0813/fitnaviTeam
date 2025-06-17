@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./NutriJoinusStep3.scss";
 
 function NutriJoinusStep3({ onNext, onPre }) {
+  const navigate = useNavigate();
+
   // 教學經歷狀態，預設一筆空資料
   const [experiences, setExperiences] = useState([
     { id: Date.now(), company: '', position: '', years: '', months: '' }
@@ -26,8 +29,26 @@ function NutriJoinusStep3({ onNext, onPre }) {
     setExperiences(experiences.map(exp => exp.id === id ? { ...exp, [field]: value } : exp));
   };
 
-  return (
+  // 判斷是否為小於 1024px
+  const isMobile = window.innerWidth < 1024;
 
+  const handleNext = () => {
+    if (isMobile) {
+      navigate('/NutriJoinusStep4');
+    } else {
+      onNext();
+    }
+  };
+
+  const handlePre = () => {
+    if (isMobile) {
+      navigate('/NutriJoinusStep2');
+    } else {
+      onPre();
+    }
+  };
+
+  return (
     <div className='joinus-form-wrapper'>
       <form
         className='NutriJoinus-Step3'
@@ -80,37 +101,11 @@ function NutriJoinusStep3({ onNext, onPre }) {
                 {experiences.map((exp, index) => (
                   <tr key={exp.id}>
                     <td>{index + 1}</td>
+                    <td>{exp.company || '單位名稱'}</td>
+                    <td>{exp.position || '工作職稱'}</td>
                     <td>
-                      <input
-                        type="text"
-                        value={exp.company}
-                        onChange={e => updateExperience(exp.id, 'company', e.target.value)}
-                        placeholder="單位名稱"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value={exp.position}
-                        onChange={e => updateExperience(exp.id, 'position', e.target.value)}
-                        placeholder="工作職稱"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        value={exp.years}
-                        onChange={e => updateExperience(exp.id, 'years', e.target.value)}
-                        placeholder="年"
-                        style={{ width: '40px', marginRight: '4px' }}
-                      />年
-                      <input
-                        type="text"
-                        value={exp.months}
-                        onChange={e => updateExperience(exp.id, 'months', e.target.value)}
-                        placeholder="月"
-                        style={{ width: '40px', marginLeft: '8px', marginRight: '4px' }}
-                      />月
+                      <input type="text" value={exp.years} readOnly placeholder="年" />年
+                      <input type="text" value={exp.months} readOnly placeholder="月" />月
                     </td>
                     <td>
                       <div className="buttonGroup">
@@ -128,12 +123,11 @@ function NutriJoinusStep3({ onNext, onPre }) {
         </div>
 
         <div className='NutriStep3-NextPreButton'>
-          <button type="button" className='Pre-button' onClick={onPre}>◀ 上一步</button>
-          <button type="button" className='Next-button' onClick={onNext}>下一步 ▶</button>
+          <button type="button" className='Pre-button' onClick={handlePre}>◀ 上一步</button>
+          <button type="button" className='Next-button' onClick={handleNext}>下一步 ▶</button>
         </div>
       </form>
     </div>
-
   );
 }
 

@@ -406,30 +406,31 @@
     }
 
     // 更新按鈕區塊
+
     .update-button {
       display: flex;
       justify-content: flex-end;
 
       @media (max-width: 1024px) {
-        margin-right: 1%;
-        margin-top: 12px;
+          margin-right: 1%;
+          margin-top: 12px;
       }
 
       .update {
-        width: 50px;
-        height: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 4px 12px;
-        border-radius: 999px;
-        border: 1px solid var(--primary, #FF8740);
-        background: var(--primary, #FF8740);
-        color: var(--white, #FEFCF7);
-        font-size: 12px;
-        white-space: nowrap;
+          width: 50px;
+          height: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 4px 12px;
+          border-radius: 999px;
+          border: 1px solid var(--primary, #FF8740);
+          background: var(--primary, #FF8740);
+          color: var(--white, #FEFCF7);
+          font-size: 12px;
+          white-space: nowrap;
       }
-    }
+  }
   }
 
   .Nutri-NextPreButton {

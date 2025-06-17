@@ -339,6 +339,12 @@
       gap: 150%;
       width: 199px;
 
+      @media(max-width:1024px) {
+        gap: 90%;
+
+      }
+
+
       h4,
       p {
         font-family: "Noto Sans TC", sans-serif;
@@ -358,7 +364,6 @@
       }
     }
 
-
     .scrollFieldset-teachExperience {
       margin-top: 8px;
       width: 430px;
@@ -372,7 +377,6 @@
         width: 289px;
 
       }
-
 
       .simpleTable {
         width: 100%;
@@ -416,6 +420,7 @@
             color: var(--dark, #3A2C19);
             border-bottom: 1px solid rgba(58, 44, 25, 0.2);
             padding-bottom: 20px;
+            white-space: nowrap;
 
             @media(max-width:1024px) {
               padding: 10px;
