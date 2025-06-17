@@ -6,6 +6,17 @@
   src: url(../../assets/MantouSans-Regular.ttf);
 }
 
+.joinus-form-wrapper {
+
+  @media(max-width:1024px) {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
 .CoachJoinus-Step2 {
   position: relative;
   display: flex;
@@ -23,7 +34,10 @@
 
   @media(max-width:1024px) {
     width: 360px;
-    height: 590px !important;
+    min-height: 590px;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+
   }
 
   .JoinusStep2-header {
@@ -127,6 +141,8 @@
     }
   }
 
+
+
   .Step2Checkbox,
   .Step2-certification,
   .scrollFieldset {
@@ -136,6 +152,10 @@
   .Step2Checkbox {
     position: relative;
 
+    @media(max-width:1024px) {
+      display: none;
+    }
+
     .Specitialty-title {
       display: flex;
       flex-direction: row;
@@ -143,6 +163,10 @@
       gap: 270px;
       margin-bottom: 4px;
       width: 193px;
+
+      @media(max-width:1024px) {
+        gap: 120px;
+      }
 
       h4,
       p {
@@ -322,11 +346,29 @@
         gap: 10px;
         margin-left: 0;
         padding-left: 0;
+
+
       }
     }
 
+
+    .scrollContent {
+      @media (max-width: 1024px) {
+          width: 289px;
+      }
+
+      .cert-line {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-left: 0;
+          padding-left: 0;
+      }
+  }
+
+
     // 上傳按鈕
-    button.upload {
+    button.nutriupload {
       height: 25px;
       padding: 4px 12px;
       margin-right: 18px;
@@ -334,6 +376,8 @@
       border-radius: 999px;
       border: 1px solid var(--primary, #FF8740);
       color: #FF8740;
+ 
+     
 
       @media (max-width: 1024px) {
         width: 54px;

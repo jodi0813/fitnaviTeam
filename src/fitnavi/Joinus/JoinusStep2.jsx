@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./JoinusStep2.scss";
 import MultiSelectDropdown from "../../components/MultiSelectDropdown";
-import MainTitle from "../../components/Title/MainTitle";
+// import MainTitle from "../../components/Title/MainTitle";
 
 function JoinusStep2({ onNext, onPre }) {
   const navigate = useNavigate();
@@ -53,7 +53,7 @@ function JoinusStep2({ onNext, onPre }) {
 
   return (
     <>
-      <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
+      {/* <MainTitle title1="加入我們" title2="成為我們的合作夥伴" /> */}
       <div className='joinus-form-wrapper'>
         <form className='CoachJoinus-Step2' onSubmit={(e) => e.preventDefault()}>
 
