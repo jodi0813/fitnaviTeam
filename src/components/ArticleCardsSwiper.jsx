@@ -8,8 +8,8 @@ function ArticleCardsSwiper({ visibleCards, navigate }) {
     <Swiper
       spaceBetween={16}
       slidesPerView={'auto'}
-      loop={true}
-      freeMode={true}
+      loop={true}       // 啟用雙向無限滑動
+      freeMode={false}  // 關閉自由模式，確保有 snap 效果
       style={{ padding: '0 1rem' }}
     >
       {visibleCards.map((card, index) => (
@@ -34,3 +34,6 @@ function ArticleCardsSwiper({ visibleCards, navigate }) {
 }
 
 export default ArticleCardsSwiper;
+
+
+
