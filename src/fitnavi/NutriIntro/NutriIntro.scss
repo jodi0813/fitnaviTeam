@@ -848,32 +848,9 @@
                     margin-left: 16px;
                 }
 
-                .ul-desktop {
-                    list-style-type: disc;
-                    margin-left: 20px;
-
-                    li {
-                        color: var(--dark, #3A2C19);
-                        /* heading/標題4/medium */
-                        font-family: "Noto Sans TC", sans-serif;
-                        font-size: 20px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 40px;
-                        /* 200% */
-                        letter-spacing: 0.4px;
-                    }
-                }
-
-                .ul-tablet {
-                    display: none;
-                }
-
-
-
             }
 
-            ul {
+            .ul-desktop {
                 list-style-type: disc;
                 margin-left: 20px;
 
@@ -888,6 +865,10 @@
                     /* 200% */
                     letter-spacing: 0.4px;
                 }
+            }
+
+            .ul-tablet {
+                display: none;
             }
 
             // @media (min-width: 1440px) {
@@ -1092,31 +1073,35 @@
             }
 
             .reserve-img {
-                display: flex;
-                flex-direction: row;
                 position: relative;
+                width: 100%;
+                min-height: 250px;
+                display: flex;
+
 
                 img {
-                    width: 50%;
-                    height: 90%;
-                    position: relative;
-                    right: 70px;
-                    top: -50px;
+                    position: absolute;
+                    width: 60%;
+                    height: auto;
+                    left: -5%;
+                    top: -40%;
+                    z-index: 2;
                 }
 
                 p {
-                    color: var(--primary, var(--primary, #FF8740));
-                    /* heading/標題3 */
+                    position: absolute;
+                    top: -5%;
+                    left: 65%;
+                    transform: translateX(-50%);
+                    color: var(--primary, #FF8740);
                     font-family: "Noto Sans TC", sans-serif;
                     font-size: 32px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                    letter-spacing: 3.2px;
+                    font-weight: 500;
+                    line-height: 140%;
+                    letter-spacing: 1.2px;
+                    white-space: nowrap;
+                    z-index: 1;
 
-                    position: relative;
-                    right: 90px;
-                    top: -5px;
 
                     &::before,
                     &::after {
@@ -1126,18 +1111,15 @@
                         width: 40px;
                         height: 2px;
                         background-color: #FF8740;
-
                     }
 
                     &::before {
-                        left: -40px;
-                        top: 30px;
+                        left: -50px;
                         transform: rotate(45deg);
                     }
 
                     &::after {
-                        right: -30px;
-                        top: 30px;
+                        right: -50px;
                         transform: rotate(135deg);
                     }
                 }
@@ -2179,30 +2161,101 @@
     //預約區
 
     #Nutri-reservation {
-        width: 100% !important;
-        max-width: none;
+        margin-top: 80px !important;
+        width: 100%;
         padding: 0 10px;
-        overflow-x: auto;
-        margin-top: 150px !important; // 視需求調整
-        margin-left: 1% !important;
+        /* Add consistent horizontal padding */
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .Nutri-reservation-wrapper {
-        min-width: 200px; // 根據內容調整
-        flex: 0 0 auto;
+        min-width: 700px;
+        display: flex;
+        flex-direction: column !important;
+
+        .nutrireserve {
+            position: relative;
+        }
+
+        .restitle {
+            h4 {
+                width: 286px !important;
+            }
+        }
+
+        .Nutriprocess {
+            display: flex;
+            justify-content: flex-start !important;
+            gap: 20px; // 可以調整間距
+
+            width: fit-content;
+
+        }
+
+        .reserve-img {
+            position: absolute !important;
+            width: 40% !important;
+            min-height: 0px !important;
+            display: flex !important;
+
+            img {
+                position: absolute !important;
+                width: 60% !important;
+                height: auto !important;
+                left: 22rem !important;
+                top: -10rem !important;
+                z-index: 2;
+            }
+
+
+
+            p {
+                position: absolute !important;
+                left: 35rem !important;
+                top: -8rem !important;
+                transform: translateX(-50%);
+                color: var(--primary, #FF8740);
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 12px !important;
+                font-weight: 500;
+                line-height: 140%;
+                letter-spacing: 1.2px;
+                white-space: nowrap;
+                z-index: 1;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50% !important;
+                    width: 40px;
+                    height: 2px;
+                    background-color: #FF8740;
+                }
+
+                &::before {
+                    left: -50px !important; // 原來是 -70px，往內靠近文字
+                    transform: rotate(45deg) !important;
+                }
+
+                &::after {
+                    right: -50px !important; // 原來是 -70px，同樣往內靠近文字
+                    transform: rotate(135deg) !important;
+                }
+            }
+        }
+
+        .Nutri-Available-calendar {
+            margin: 0px !important;
+        }
+
+
+
     }
 
-    .restitle h4,
-    .caltitle h4 {
-        margin: 0;
-        padding: 0;
-        width: 200px !important;
-    }
 
 
-    // .reserve {
-    //     max-width: 350px;
-    // }
 
 
 
