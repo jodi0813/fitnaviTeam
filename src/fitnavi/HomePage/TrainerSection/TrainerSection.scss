@@ -12,9 +12,6 @@
     align-items: center;
     // width: 500px;
     margin: 0 auto;
-  }
-
-  @media(max-width:600px) {
     padding: 10% 0;
   }
 
@@ -62,13 +59,15 @@
 
       .decoarrow-left-1024 {
         margin-left: 55%;
-        @media(max-width:600px){
+
+        @media(max-width:600px) {
           margin-left: 33px;
         }
       }
+
       .decoarrow-right-1024 {
 
-        @media(max-width:600px){
+        @media(max-width:600px) {
           margin-left: -100px;
         }
       }
@@ -385,9 +384,11 @@
       }
 
       @media(max-width:600px) {
-        width: 372px;
+        width: 350px;
         bottom: 47%;
         margin: 0 auto;
+        left: 50%; // 添加這兩行來真正置中
+        transform: translateX(-50%);
       }
 
       button {
@@ -619,14 +620,15 @@
           }
 
           @media(max-width:800px) {
-            bottom: 270%;
-            left: 15%;
+            bottom: 272%;
+            left: 23%;
             z-index: -2;
+            align-items: start;
           }
 
           @media(max-width:600px) {
-            bottom: 248%;
-            left: -14%;
+            bottom: 255%;
+            left: -17%;
           }
 
           .home-trainer-titleCh {
@@ -649,6 +651,8 @@
 
             @media(max-width:800px) {
               opacity: 0.2;
+              font-size: 96px;
+              margin-left: 20px;
             }
           }
 

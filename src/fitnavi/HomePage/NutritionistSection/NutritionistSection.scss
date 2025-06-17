@@ -8,6 +8,13 @@
   width: 100%;
   padding: 48% 5% 5%;
 
+  @media(max-width:600px) {
+    align-items: center;
+    margin: 0 auto;
+    // padding: 10% 0;
+  }
+
+
   //卡牌輪播區域
   .nutritionist-card-box {
     display: flex;
@@ -118,6 +125,11 @@
             top: 27px;
           }
 
+          @media(max-width:600px) {
+            padding: 8px 16px;
+          }
+
+
           //英文名
           .home-nutritionist-enname {
             font-size: 20px;
@@ -160,6 +172,14 @@
             top: 280px;
             z-index: 100;
           }
+
+
+          @media(max-width: 600px) {
+            right: 70px;
+            top: 230px;
+            padding: 8px;
+          }
+
         }
       }
 
@@ -207,14 +227,17 @@
 
       @media(max-width:800px) {
         width: 64%;
-        top: 490px;
-        right: 138px;
+        top: 47%;
+        right: 17%;
       }
 
       @media(max-width:600px) {
-        width: 372px;
-        bottom: 47%;
+        width: 350px;
+        top: 120px;
         margin: 0 auto;
+        left: 50%; // 添加這兩行來真正置中
+        transform: translateX(-50%);
+
       }
 
 
@@ -237,6 +260,12 @@
         gap: 4px;
         transform: skew(-20deg, 0deg);
         // transition: all 0.3s ease;
+
+        @media(max-width:600px) {
+          font-size: 14px;
+          width: 50px;
+        }
+
 
 
 
@@ -365,9 +394,15 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    @media(max-width:800px){
+
+    @media(max-width:800px) {
       padding: 0;
     }
+
+    @media(max-width:600px) {
+      width: fit-content;
+    }
+
 
 
     .home-nutritionist-img {
@@ -474,6 +509,7 @@
 
             @media(max-width:800px) {
               opacity: 0.2;
+              font-size: 96px;
             }
 
           }
