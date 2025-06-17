@@ -93,24 +93,19 @@ function NutriJoinusStep2({ onNext, onPre }) {
           {/* 證照輸入欄位 */}
           <fieldset className="scrollFieldset">
             <legend>證照名稱</legend>
-            <div className="scrollContent">
+            <div className="scrollContent" >
               {certifications.map((cert, index) => (
-                <div key={cert.id}>
+                <div key={cert.id} className="cert-line">
                   <input
                     type="text"
                     value={cert.name}
                     onChange={(e) => updateCertificationName(cert.id, e.target.value)}
                   />
                   <button type="button" className='upload'>上傳檔案</button>
-                  <button
-                    type="button"
-                    className='delete'
-                    onClick={() => deleteCertification(cert.id)}
-                  >
-                    刪除
-                  </button>
+                  <button type="button" className='delete' onClick={() => deleteCertification(cert.id)}>刪除</button>
                 </div>
               ))}
+
 
               <div className="update-button">
                 <button type="button" className='update' onClick={addCertification}>新增</button>
