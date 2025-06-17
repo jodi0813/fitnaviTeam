@@ -1,7 +1,7 @@
 import React from 'react';
 import "./JoinusSuccess.scss";
 import { useNavigate } from 'react-router-dom';
-import MainTitle from "../../components/Title/MainTitle";
+// import MainTitle from "../../components/Title/MainTitle";
 
 
 function JoinusSuccess() {
@@ -9,7 +9,7 @@ function JoinusSuccess() {
     return (
         <>
             <section id='Joinus-Success'> 
-                <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
+                {/* <MainTitle title1="加入我們" title2="成為我們的合作夥伴" /> */}
           
 
 

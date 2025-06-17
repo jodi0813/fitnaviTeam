@@ -1,6 +1,6 @@
 import React from 'react';
 import "./JoinusLoading.scss";
-import MainTitle from "../../components/Title/MainTitle";
+// import MainTitle from "../../components/Title/MainTitle";
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import memberImg from '../../../public/images/coach&nutri-393.png';
@@ -19,7 +19,7 @@ function JoinusLoading() {
     return (
         <>
             <section id='Joinus-Loading'>
-                <MainTitle title1="加入我們" title2="成為我們的合作夥伴" />
+                {/* <MainTitle title1="加入我們" title2="成為我們的合作夥伴" /> */}
 
 
                 <div className="Loading">
