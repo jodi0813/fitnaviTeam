@@ -23,7 +23,7 @@
 
   @media(max-width:1024px) {
     width: 360px;
-    min-height: 590px;
+    height: 590px !important;
   }
 
   .JoinusStep2-header {
@@ -396,8 +396,9 @@
     gap: 300px;
 
     @media(max-width:1024px) {
-      gap: 100px;
+      gap: 150px !important;
     }
+
 
     .Step2Pre-button,
     .Step2Next-button {
