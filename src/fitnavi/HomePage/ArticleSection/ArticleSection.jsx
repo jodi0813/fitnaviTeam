@@ -64,6 +64,11 @@ function ArticleSection() {
             {/* 整個區塊 */}
 
             <section className="ArticleSection-wrapper">
+                {/* 知識文章裝飾性標題 */}
+                <div className="orangeTitle">
+                    <h3 className="right-top">知識文章</h3>
+                    <h3 className="left-bottom">知識文章</h3>
+                </div>
                 {/* 英文標題加兩欄文章 */}
                 <div className="cards-text-container">
                     {/* 兩欄文章 */}
@@ -114,11 +119,10 @@ function ArticleSection() {
 
                 {/* 底下標題小語跟按鈕 */}
                 <div className="Hompagearticle-Chtitle">
-                    <div className="chTitle">
-                        <h2 className="title1">知識文章</h2>
-                        <h2 className="title2">知識文章</h2>
 
-                    </div>
+                    <h2 className="title1">知識文章</h2>
+
+
                     <div className="subTitle">
                         <p>
                             「來自現場的知識，走得穩，也走得遠」<br />
