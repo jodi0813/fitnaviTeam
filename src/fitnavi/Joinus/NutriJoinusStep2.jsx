@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./NutriJoinusStep2.scss";
 import MultiSelectDropdown from "../../components/MultiSelectDropdown";
 
 function NutriJoinusStep2({ onNext, onPre }) {
+  const navigate = useNavigate();
+
   const [certifications, setCertifications] = useState([
     { id: Date.now(), name: "" }
   ]);
@@ -42,8 +45,26 @@ function NutriJoinusStep2({ onNext, onPre }) {
     }
   };
 
-  return (
+  // ✅ 新增上下步邏輯（依螢幕寬度決定導向或執行 onNext/onPre）
+  const handleNext = () => {
+    window.scrollTo(0, 0);
+    if (window.innerWidth < 1024) {
+      navigate('/NutriJoinusStep3');
+    } else {
+      onNext && onNext();
+    }
+  };
 
+  const handlePre = () => {
+    window.scrollTo(0, 0);
+    if (window.innerWidth < 1024) {
+      navigate('/NutriJoinusStep1');
+    } else {
+      onPre && onPre();
+    }
+  };
+
+  return (
     <div className='joinus-form-wrapper'>
       <form className='CoachJoinus-Step2' onSubmit={(e) => e.preventDefault()}>
         {/* Header */}
@@ -78,11 +99,11 @@ function NutriJoinusStep2({ onNext, onPre }) {
         </div>
 
         <MultiSelectDropdown
-            options={specialties}
-            selectedOptions={selectedSpecialties}
-            setSelectedOptions={setSelectedSpecialties}
-            maxSelect={6}
-          />
+          options={specialties}
+          selectedOptions={selectedSpecialties}
+          setSelectedOptions={setSelectedSpecialties}
+          maxSelect={6}
+        />
 
         {/* 證照說明 */}
         <div className='Step2-certification'>
@@ -113,8 +134,6 @@ function NutriJoinusStep2({ onNext, onPre }) {
                 <button type="button" className='delete' onClick={() => deleteCertification(cert.id)}>刪除</button>
               </div>
             ))}
-
-
             <div className="update-button">
               <button type="button" className='update' onClick={addCertification}>新增</button>
             </div>
@@ -123,12 +142,11 @@ function NutriJoinusStep2({ onNext, onPre }) {
 
         {/* 上一步 / 下一步 */}
         <div className='NextPreButton'>
-          <button type="button" onClick={onPre} className='Step2Pre-button'>◀ 上一步</button>
-          <button type="button" onClick={onNext} className='Step2Next-button'>下一步 ▶</button>
+          <button type="button" onClick={handlePre} className='Step2Pre-button'>◀ 上一步</button>
+          <button type="button" onClick={handleNext} className='Step2Next-button'>下一步 ▶</button>
         </div>
       </form>
     </div>
-
   );
 }
 
