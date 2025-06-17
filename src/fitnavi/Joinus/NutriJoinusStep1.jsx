@@ -1,9 +1,9 @@
 import React from 'react';
-import "./JoinusStep1.scss";
+import "./NutriJoinusStep1.scss";
 import { useNavigate } from 'react-router-dom';
 // import MainTitle from "../../components/Title/MainTitle";
 
-function JoinusStep1({ onNext }) {
+function NutriJoinusStep1({ onNext }) {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -12,7 +12,7 @@ function JoinusStep1({ onNext }) {
 
     const isMobile = window.innerWidth < 1024;
     if (isMobile) {
-      navigate('/JoinusStep2');
+      navigate('/NutriJoinusStep2');
     } else {
       onNext && onNext();
     }
@@ -67,4 +67,4 @@ function JoinusStep1({ onNext }) {
   );
 }
 
-export default JoinusStep1;
+export default NutriJoinusStep1;

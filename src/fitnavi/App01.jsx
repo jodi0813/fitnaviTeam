@@ -24,6 +24,7 @@ import JoinusStep3 from "./Joinus/JoinusStep3";
 import JoinusStep4 from "./Joinus/JoinusStep4";
 import JoinusLoading from "./Joinus/JoinusLoading";
 import JoinusSuccess from "./Joinus/JoinusSuccess";
+import NutriJoinusStep1 from "./Joinus/NutriJoinusStep1"
 import NutriJoinusStep2 from "./Joinus/NutriJoinusStep2"
 import NutriJoinusStep3 from "./Joinus/NutriJoinusStep3"
 import NutriJoinusStep4 from "./Joinus/NutriJoinusStep4"
@@ -80,6 +81,7 @@ function App() {
           <Route path="/JoinusStep4" element={<JoinusStep4 />} />
           <Route path="/JoinusLoading" element={<JoinusLoading />} />
           <Route path="/JoinusSuccess" element={<JoinusSuccess />} />
+          <Route path="/NutriJoinusStep1" element={<NutriJoinusStep1 />} />
           <Route path="/NutriJoinusStep2" element={<NutriJoinusStep2 />} />
           <Route path="/NutriJoinusStep3" element={<NutriJoinusStep3 />} />
           <Route path="/NutriJoinusStep4" element={<NutriJoinusStep4 />} />
