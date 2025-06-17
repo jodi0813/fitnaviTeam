@@ -8,6 +8,17 @@
   width: 100%;
   padding: 48% 5% 5%;
 
+  @media(max-width:800px) {
+    padding: 36% 5% 5%;
+  }
+
+  @media(max-width:600px) {
+    align-items: center;
+    margin: 0 auto;
+    padding: 48% 5% 5%;
+  }
+
+
   //卡牌輪播區域
   .nutritionist-card-box {
     display: flex;
@@ -25,9 +36,7 @@
 
     @media(max-width:800px) {
       justify-content: center;
-      align-items: center;
       margin: 0;
-
     }
 
     .home-nutritionist-maincard {
@@ -118,6 +127,11 @@
             top: 27px;
           }
 
+          @media(max-width:600px) {
+            padding: 8px 16px;
+          }
+
+
           //英文名
           .home-nutritionist-enname {
             font-size: 20px;
@@ -160,6 +174,14 @@
             top: 280px;
             z-index: 100;
           }
+
+
+          @media(max-width: 600px) {
+            right: 70px;
+            top: 230px;
+            padding: 8px;
+          }
+
         }
       }
 
@@ -207,15 +229,25 @@
 
       @media(max-width:800px) {
         width: 64%;
-        top: 490px;
-        right: 138px;
+        top: 40%;
+        right: 18%;
       }
 
-      @media(max-width:600px) {
-        width: 372px;
+        @media(max-width:600px) {
+        width: 350px;
         bottom: 47%;
         margin: 0 auto;
+        left: 48%; 
+        transform: translateX(-50%);
       }
+        @media(max-width:400px) {
+        width: 350px;
+        top: 268px;
+        margin: 0 auto;
+        left: 46%; 
+        transform: translateX(-50%);
+      }
+
 
 
       button {
@@ -237,6 +269,12 @@
         gap: 4px;
         transform: skew(-20deg, 0deg);
         // transition: all 0.3s ease;
+
+        @media(max-width:600px) {
+          font-size: 14px;
+          width: 50px;
+        }
+
 
 
 
@@ -365,9 +403,16 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    @media(max-width:800px){
+
+    @media(max-width:800px) {
       padding: 0;
+      transform: translateY(-30px);
     }
+
+    @media(max-width:600px) {
+      width: fit-content;
+    }
+
 
 
     .home-nutritionist-img {
@@ -389,8 +434,8 @@
       }
 
       @media(max-width:600px) {
-        width: 87px;
-        left: -7%;
+        width: 92px;
+        left: 80%;
         bottom: 80px;
       }
 
@@ -444,14 +489,14 @@
           }
 
           @media(max-width:800px) {
-            top: -257%;
-            left: 26%;
+            top: -213%;
+            left: 29%;
             z-index: -2;
           }
 
           @media(max-width:600px) {
-            top: -127%;
-            left: 85%;
+            top: -196%;
+            left: 8%;
           }
 
 
@@ -474,6 +519,7 @@
 
             @media(max-width:800px) {
               opacity: 0.2;
+              font-size: 96px;
             }
 
           }
