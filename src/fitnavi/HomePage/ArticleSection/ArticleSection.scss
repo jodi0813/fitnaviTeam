@@ -14,6 +14,38 @@
     width: 100%;
     padding-top: 24%;
     padding-bottom: 15%;
+    @media(max-width:1024px){
+        padding-top: 35%;
+    }
+
+    .orangeTitle {
+        width: 100%;
+        color: var(--primary, var(--primary, #FF8740));
+        font-family: "Mantou Sans";
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 6.4px;
+        display: none;
+        position: absolute;
+        opacity: 0.4;
+
+        @media(max-width:1024px) {
+            display: block;
+
+            .right-top {
+                position: absolute;
+                right: 20px;
+                top: -180px;
+            }
+            .left-bottom {
+                position: absolute;
+                left: 20px;
+                bottom: -690px;
+            }
+        }
+    }
 
     .cards-text-container {
         display: flex;
@@ -40,6 +72,7 @@
                 display: flex;
                 flex-direction: column;
                 width: fit-content;
+                transform: translateX(30px);
 
             }
 
@@ -87,8 +120,8 @@
     flex-direction: column;
     align-items: start;
 
-    @media(max-width:1024px){
-        top:65%;
+    @media(max-width:1024px) {
+        top: 65%;
     }
 
 
@@ -105,33 +138,10 @@
         white-space: nowrap;
 
         @media(max-width:1024px) {
-            color: var(--primary, var(--primary, #FF8740));
-            font-size: 64px;
-            letter-spacing: 6.4px;
-            opacity: 0.5;
+            display: none;
         }
 
 
-    }
-
-
-    .title1 {
-        @media(max-width:1024px) {
-            position: absolute;
-            top: -152%;
-            right: -69%;
-        }
-    }
-
-    .title2 {
-        display: none;
-
-        @media(max-width:1024px) {
-            display: block;
-            position: absolute;
-            bottom: 0%;
-            left: -134%;
-        }
     }
 
 
@@ -184,11 +194,13 @@
         line-height: normal;
         letter-spacing: 2px;
         white-space: nowrap;
-        @media(max-width:1024px){
+
+        @media(max-width:1024px) {
             width: 320px;
             height: 40px;
             border-radius: 8px;
-            margin-top: 25px; 
+            margin-top: 60px;
+            transform: translateX(-110px);
             font-size: 14px;
         }
 
