@@ -1,17 +1,25 @@
 import React from 'react';
 import "./JoinusStep1.scss";
+import { useNavigate } from 'react-router-dom';
 
 function JoinusStep1({ onNext }) {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+
+    const isMobile = window.innerWidth < 1024;
+    if (isMobile) {
+      navigate('/JoinusStep2');
+    } else {
+      onNext && onNext();
+    }
+  };
+
   return (
     <div className="joinus-form-wrapper">
-      <form
-        className="CoachJoinus-Step1-form"
-        onSubmit={(e) => {
-          e.preventDefault(); // 防止頁面重新整理
-          onNext();           // 切換到下一步
-          window.scrollTo(0, 0); // 捲動到最上方（可選）
-        }}
-      >
+      <form className="CoachJoinus-Step1-form" onSubmit={handleSubmit}>
         <div className="JoinusStep1-title">
           <div className="Step1-title">
             <h3>基本資料</h3>
@@ -48,7 +56,6 @@ function JoinusStep1({ onNext }) {
           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
             <path d="M10 6L0 0.226497V11.7735L10 6Z" fill="#FF8740" />
           </svg>
-
         </button>
       </form>
     </div>

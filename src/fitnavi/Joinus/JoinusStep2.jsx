@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./JoinusStep2.scss";
+import MultiSelectDropdown from "../../components/MultiSelectDropdown";
 
 function JoinusStep2({ onNext, onPre }) {
+  const navigate = useNavigate();
+
   const [certifications, setCertifications] = useState([
     { id: Date.now(), name: "" }
   ]);
@@ -28,107 +32,120 @@ function JoinusStep2({ onNext, onPre }) {
     ));
   };
 
-  const handleSpecialtyChange = (e) => {
-    const { checked, value } = e.target;
-    if (checked) {
-      // 選取時，判斷是否已經選滿6項
-      if (selectedSpecialties.length >= 6) {
-        // 超過6個不讓選
-        e.preventDefault();
-        return;
-      }
-      setSelectedSpecialties([...selectedSpecialties, value]);
+  const handleNext = () => {
+    window.scrollTo(0, 0);
+    if (window.innerWidth < 1024) {
+      navigate('/JoinusStep3');
     } else {
-      // 取消選取
-      setSelectedSpecialties(selectedSpecialties.filter(item => item !== value));
+      onNext && onNext();
+    }
+  };
+
+  const handlePre = () => {
+    window.scrollTo(0, 0);
+    if (window.innerWidth < 1024) {
+      navigate('/JoinusStep1');
+    } else {
+      onPre && onPre();
     }
   };
 
   return (
-    <section id='JoinusStep2-Form'>
-      <div className='CoachJoinus-Step2-wrapper'>
-        <form className='CoachJoinus-Step2' onSubmit={(e) => e.preventDefault()}>
-          {/* Header */}
-          <div className='JoinusStep2-header'>
-            <div className='Step2-title'>
-              <h4>專長</h4>
-              <h5>Expertise</h5>
-            </div>
-            <p>2/4</p>
+    <div className='joinus-form-wrapper'>
+      <form className='CoachJoinus-Step2' onSubmit={(e) => e.preventDefault()}>
+        
+        {/* Header */}
+        <div className='JoinusStep2-header'>
+          <div className='Step2-title'>
+            <h4>專長</h4>
+            <h5>Expertise</h5>
           </div>
+          <p>2/4</p>
+        </div>
 
-          {/* 專長選項 */}
-          <div className='Step2Checkbox'>
-            <div className='Specitialty-title'>
-              <h4>專長領域：</h4>
-              <p>最多6項</p>
-            </div>
-            <div className='Step2Checkbox-group'>
-              {specialties.map((label, index) => (
-                <label key={index} className="checkbox-item">
-                  <input
-                    type="checkbox"
-                    name="specialty"
-                    value={label}
-                    checked={selectedSpecialties.includes(label)}
-                    onChange={handleSpecialtyChange}
-                  />
-                  {label}
-                </label>
-              ))}
-            </div>
+        {/* 專長選項（checkbox 與 dropdown 共存） */}
+        <div className='Step2Checkbox'>
+          <div className='Specitialty-title'>
+            <h4>專長領域：</h4>
+            <p>最多6項</p>
           </div>
+          <div className='Step2Checkbox-group'>
+            {specialties.map((label, index) => (
+              <label key={index} className="checkbox-item">
+                <input
+                  type="checkbox"
+                  name="specialty"
+                  value={label}
+                  checked={selectedSpecialties.includes(label)}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    if (e.target.checked) {
+                      if (selectedSpecialties.length < 6) {
+                        setSelectedSpecialties([...selectedSpecialties, value]);
+                      } else {
+                        alert("最多選擇6項專長！");
+                      }
+                    } else {
+                      setSelectedSpecialties(selectedSpecialties.filter(item => item !== value));
+                    }
+                  }}
+                />
+                {label}
+              </label>
+            ))}
+          </div>
+        </div>
 
-          {/* 專業證照區塊 */}
-          <div className='Step2-certification'>
-            <div className='Step2-certification-header'>
-              <div className='Step2-certification-title'>
-                <h4>專業證照：</h4>
-                <h5>至少需有一張</h5>
+        {/* 下拉多選（可選） */}
+        <MultiSelectDropdown
+          options={specialties}
+          selectedOptions={selectedSpecialties}
+          setSelectedOptions={setSelectedSpecialties}
+          maxSelect={6}
+        />
+
+        {/* 專業證照區塊 */}
+        <div className='Step2-certification'>
+          <div className='Step2-certification-header'>
+            <div className='Step2-certification-title'>
+              <h4>專業證照：</h4>
+              <h5>至少需有一張</h5>
+            </div>
+            <p>
+              我們歡迎具備國際專業證照（如 NSCA、ACE、NASM）的教練加入，
+              但若您仍在準備中，只要有豐富經驗與熱忱，也非常歡迎您與我們合作！
+            </p>
+          </div>
+        </div>
+
+        {/* 證照輸入欄位（可滾動） */}
+        <fieldset className="scrollFieldset">
+          <legend>證照名稱</legend>
+          <div className="coach-scrollContent">
+            {certifications.map((cert) => (
+              <div key={cert.id} className="cert-line">
+                <input
+                  type="text"
+                  value={cert.name}
+                  onChange={(e) => updateCertificationName(cert.id, e.target.value)}
+                />
+                <button type="button" className='upload'>上傳</button>
+                <button type="button" className='delete' onClick={() => deleteCertification(cert.id)}>刪除</button>
               </div>
-              <p>
-                我們歡迎具備國際專業證照（如 NSCA、ACE、NASM）的教練加入，
-                但若您仍在準備中，只要有豐富經驗與熱忱，也非常歡迎您與我們合作！
-              </p>
+            ))}
+            <div className="update-button">
+              <button type="button" className='update' onClick={addCertification}>新增</button>
             </div>
           </div>
+        </fieldset>
 
-          {/* 證照輸入欄位 */}
-          <fieldset className="scrollFieldset">
-            <legend>證照名稱</legend>
-            <div className="scrollContent">
-              {certifications.map((cert, index) => (
-                <div key={cert.id}>
-                  <input
-                    type="text"
-                    value={cert.name}
-                    onChange={(e) => updateCertificationName(cert.id, e.target.value)}
-                  />
-                  <button type="button" className='upload'>上傳檔案</button>
-                  <button
-                    type="button"
-                    className='delete'
-                    onClick={() => deleteCertification(cert.id)}
-                  >
-                    刪除
-                  </button>
-                </div>
-              ))}
-
-              <div className="update-button">
-                <button type="button" className='update' onClick={addCertification}>新增</button>
-              </div>
-            </div>
-          </fieldset>
-
-          {/* 上一步 / 下一步 */}
-          <div className='NextPreButton'>
-            <button onClick={onPre} className='Step2Pre-button'>◀ 上一步</button>
-            <button onClick={onNext} className='Step2Next-button'>下一步 ▶</button>
-          </div>
-        </form>
-      </div>
-    </section>
+        {/* 導覽按鈕 */}
+        <div className='NextPreButton'>
+          <button type="button" onClick={handlePre} className='Step2Pre-button'>◀ 上一步</button>
+          <button type="button" onClick={handleNext} className='Step2Next-button'>下一步 ▶</button>
+        </div>
+      </form>
+    </div>
   );
 }
 
