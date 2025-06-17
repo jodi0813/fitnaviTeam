@@ -6,8 +6,12 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: 48% 5% 5%;
+  padding: 10% 5% 5%;
 
+
+  @media(max-width:1024px) {
+    padding: 48% 5% 5%;
+  }
   @media(max-width:800px) {
     padding: 36% 5% 5%;
   }
