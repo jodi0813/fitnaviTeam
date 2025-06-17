@@ -225,7 +225,7 @@
 
                         p.FirstPrice {
                             position: relative;
-                            margin-bottom: 5px;
+                            margin-bottom: 20px;
                             margin-left: 25px;
                             color: var(--dark, #3A2C19);
                             /* 段落/14 */
@@ -2086,44 +2086,44 @@
 
         .expcontent {
             width: 35rem !important;
-
+    
             .ul-desktop {
                 display: none;
             }
-
+    
             .ul-tablet {
                 display: block !important;
-                list-style-type: disc;
-                margin-left: 20px;
-
-
+                list-style-type: disc !important;
+                margin-left: 20px !important;
+    
+    
                 li {
-
-                    font-family: "Noto Sans TC", sans-serif;
-                    color: var(--dark, #3A2C19);
+    
+                    font-family: "Noto Sans TC", sans-serif !important;
+                    color: var(--dark, #3A2C19) !important;
                     /* 段落/14 */
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
+                    font-size: 14px !important;
+                    font-style: normal !important;
+                    font-weight: 500 !important;
+                    line-height: 140%!important;
                     /* 19.6px */
-                    letter-spacing: 1.4px;
+                    letter-spacing: 1.4px!important
                 }
-
+    
                 p {
-
-                    color: var(--gray, #989794);
+    
+                    color: var(--gray, #989794)!important;
                     /* 段落/14 */
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
-                    letter-spacing: 1.4px;
-                    margin-bottom: 2rem;
+                    font-family: "Noto Sans TC", sans-serif !important;
+                    font-size: 14px !important;
+                    font-style: normal!important;
+                    font-weight: 500!important;
+                    line-height: 140%!important;
+                    letter-spacing: 1.4px!important;
+                    margin-bottom: 2rem!important;
                 }
-
-
+    
+    
             }
         }
 

@@ -429,7 +429,15 @@ function NutriIntro() {
                                         <h4>Working Experiences</h4>
                                     </div>
 
-                                    <ul >
+                                    <ul className="ul-desktop">
+                                        <li >國防醫學院運動營養學系 碩士</li>
+                                        <li>北健康生活診所 營養師，提供個人化營養諮詢與膳食規劃</li>
+                                        <li>華碩企業健康講座講師，推廣職場健康飲食</li>
+                                        <li>私人健身營養顧問，協助運動員、健身族群設計個人化飲食策略</li>
+                                        <li>社群內容創作者，於 IG (@anna_nutrition) 分享實用營養知識</li>
+                                    </ul>
+
+                                    <ul className="ul-tablet">
                                         <li >國防醫學院運動營養學系 碩士</li>
                                         <li>北健康生活診所 營養師，提供個人化營養諮詢與膳食規劃</li>
                                         <li>華碩企業健康講座講師，推廣職場健康飲食</li>

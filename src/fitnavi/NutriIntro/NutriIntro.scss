@@ -275,7 +275,7 @@
 
                         p.FirstPrice {
                             position: relative;
-                            margin-bottom: 5px;
+                            margin-bottom: 15px;
                             margin-left: 25px;
                             color: var(--dark, #3A2C19);
                             /* 段落/14 */
@@ -848,6 +848,26 @@
                     margin-left: 16px;
                 }
 
+                .ul-desktop {
+                    list-style-type: disc;
+                    margin-left: 20px;
+
+                    li {
+                        color: var(--dark, #3A2C19);
+                        /* heading/標題4/medium */
+                        font-family: "Noto Sans TC", sans-serif;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 40px;
+                        /* 200% */
+                        letter-spacing: 0.4px;
+                    }
+                }
+
+                .ul-tablet {
+                    display: none;
+                }
 
 
 
@@ -1839,6 +1859,11 @@
 
                 .classtime {
                     padding-right: 20px;
+                    gap: 10px !important;
+
+                    .timeblock {
+                        gap: 5px !important;
+                    }
 
                     h2 {
                         font-size: 22px !important;
@@ -1850,7 +1875,7 @@
 
 
             .p-linethrough-color {
-                margin-top: 10px !important;
+                margin-top: 20px !important;
                 margin-bottom: 15px !important;
                 flex-direction: row;
 
@@ -1897,22 +1922,33 @@
 
             .Nutri-place {
                 flex-direction: row !important;
-                gap: 10px;
-                margin-bottom: 0 !important;
+                gap: 1rem !important;
+                margin-top: 0 !important;
+                position: absolute;
+                top: 95%;
+                left: 30%;
+
 
                 p {
-                    font-size: 14px !important;
+                    font-size: 20px !important;
                     margin-top: 4px !important;
+                    // padding: 10px;
+                    white-space: nowrap;
                 }
 
                 img {
-                    width: 150px !important;
+                    width: 12rem !important;
                     height: 120px !important;
                     margin-top: 6px !important;
                 }
 
                 .moreimg4,
                 .moreimg5 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
                     img {
                         border-radius: 10px !important;
                     }
@@ -1923,17 +1959,17 @@
 
     //介紹區
     #aboutnutri {
-
         width: 100%;
         box-sizing: border-box;
         margin: 0 auto;
         padding: 0 10px;
+        position: relative;
 
         .Nutriabout-title {
-            gap: 18px !important;
             flex-direction: column;
             align-items: flex-start;
-            padding: 20px;
+            padding-left: 2.5rem;
+            margin-top: 20rem !important;
 
             h3 {
                 font-size: 32px !important;
@@ -1949,19 +1985,26 @@
             }
         }
 
-        p {
+        .aboutNutri-p {
+            margin-top: 5rem !important;
             color: var(--dark, #3A2C19);
             font-family: "Noto Sans TC", sans-serif;
-            font-size: 20px;
+            font-size: 14px !important;
             font-style: normal;
             font-weight: 500;
             line-height: 40px;
             letter-spacing: 0.4px;
-            padding: 30px;
+            padding-left: 2.5rem !important;
             /* Consider reducing this padding or making it horizontal only */
-            max-width: 90%;
+            max-width: 90% !important;
             /* Ensure the paragraph doesn't exceed its parent's width */
             box-sizing: border-box;
+            /* Include padding in the width calculation */
+        }
+
+        .aboutNutri-p p {
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
     }
@@ -1972,32 +2015,26 @@
     //導覽區
 
     .Nutrinav {
-        // display: flex;
-        // flex-direction: column;
-        // align-items: flex-end !important;
-        // width: 15% !important;
-        // min-width: 90px;
-        // align-self: stretch;
-        // margin-top: 250px !important;
         display: flex;
         flex-direction: column;
         align-items: flex-end !important;
-        width: 13% !important;
+        max-width: 10% !important;
         align-self: stretch;
     }
 
     .Nutri-intro {
-        margin-top: 0px !important;
+        margin-top: 8rem !important;
+        width: 100%;
 
 
-        .Nutrinav ul {
+        ul {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             align-items: flex-end;
             border-right: 0.6px solid #3A2C19;
             gap: 30px;
-            padding-right: 110px !important;
+            padding-right: 105px !important;
             padding-left: 10px;
         }
 
@@ -2009,32 +2046,56 @@
     //專長區
     #spefield {
         margin-top: 200px !important;
-        margin-left: 1% !important;
+        width: 100%;
+        padding: 0 10px;
+        /* Add consistent horizontal padding */
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
+    .spetitle {
+        padding-left: 20px;
+
+        h3 {
+            white-space: nowrap;
+        }
+
+        h4 {
+            width: 286px !important;
+        }
+    }
+
+
     .nutri-circlewrapper {
+        width: 90%;
+        box-sizing: border-box;
+        padding: 0 16px;
+
         img {
-            width: 822px !important;
-            height: 250px !important;
+            display: block;
+            margin-left: 0 !important;
+            width: 100%;
+            max-width: 800px !important;
+            height: auto;
         }
     }
 
 
     //工作經歷區
     #Nutri-exp-cer {
-        width: 100% !important;
-        max-width: none;
+        margin-top: 80px !important;
+        width: 100%;
         padding: 0 10px;
-        overflow-x: auto;
-        margin-top: 100px !important; // 視需求調整
-        margin-left: 1% !important;
+        /* Add consistent horizontal padding */
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .Nutri-exp-cer-wrapper {
-        min-width: 700px; // 根據內容調整，確保不會壓縮
+        min-width: 700px;
         display: flex;
-        flex-direction: row; // 維持橫向排列
-        gap: 40px; // 或你想要的間距
+        flex-direction: column !important;
+        justify-content: flex-start;
     }
 
     .Nutri-exp-cer-wrapper .expcontent,
@@ -2045,22 +2106,74 @@
 
     .exptitle {
         h4 {
-            width: 200px !important;
+            width: 286px !important;
         }
     }
 
     .expcontent {
-        width: 350px !important;
+        width: 35rem !important;
+
+        .ul-desktop {
+            display: none;
+        }
+
+        .ul-tablet {
+            display: block !important;
+            list-style-type: disc !important;
+            margin-left: 20px !important;
+
+
+            li {
+
+                font-family: "Noto Sans TC", sans-serif !important;
+                color: var(--dark, #3A2C19) !important;
+                /* 段落/14 */
+                font-size: 14px !important;
+                font-style: normal !important;
+                font-weight: 500 !important;
+                line-height: 140%!important;
+                /* 19.6px */
+                letter-spacing: 1.4px!important
+            }
+
+            p {
+
+                color: var(--gray, #989794)!important;
+                /* 段落/14 */
+                font-family: "Noto Sans TC", sans-serif !important;
+                font-size: 14px !important;
+                font-style: normal!important;
+                font-weight: 500!important;
+                line-height: 140%!important;
+                letter-spacing: 1.4px!important;
+                margin-bottom: 2rem!important;
+            }
+
+
+        }
     }
 
     .certitle {
         h4 {
-            width: 200px !important;
+            width: 286px !important;
         }
     }
 
     .certificate {
-        width: 350px !important;
+        margin-top: 80px;
+
+        li {
+            color: var(--dark, #3A2C19);
+            /* 段落/14 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px !important;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+        }
+
     }
 
     //預約區
