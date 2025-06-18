@@ -1,5 +1,3 @@
-
-
 import Articlecards from '../../components/Articlecards/Articlecards';
 import './AllArticle.scss';
 import React, { useState, useEffect } from 'react';
@@ -402,8 +400,39 @@ function Allarticle() {
                 <div className='Allarticle-cards'>
                     <div className="Allarticle-cards-title">
                         <p>Articles</p>
-                        <h4>{<h4>{category || '全部分類'}</h4>
-                        }</h4>
+                        <h4>
+                            {(() => {
+                                const filters = [];
+                                
+                                // 角色篩選
+                                if (selectedRole) {
+                                    filters.push(selectedRole);
+                                }
+                                
+                                // 分類篩選
+                                if (category) {
+                                    filters.push(category);
+                                }
+                                
+                                // 標籤篩選
+                                if (tag) {
+                                    filters.push(`#${tag}`);
+                                }
+                                
+                                // 關鍵字搜尋
+                                if (searchTitle) {
+                                    filters.push(`${searchTitle}`);
+                                }
+                                
+                                // 如果沒有任何篩選條件
+                                if (filters.length === 0) {
+                                    return '全部分類';
+                                }
+                                
+                                // 用 " | " 連接所有篩選條件
+                                return filters.join(' | ');
+                            })()}
+                        </h4>
                     </div>
 
                     <div className="Allarticle-Card-article">
