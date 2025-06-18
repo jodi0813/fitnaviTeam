@@ -2061,6 +2061,7 @@ body {
                             letter-spacing: 2px;
                             padding-left: 2px;
                             padding-right: 2px;
+                            margin-bottom: 20px;
                         }
                     }
                 }
@@ -2091,7 +2092,20 @@ body {
                         margin-bottom: 30px;
                         margin-top: 10px;
 
-                        
+                        @media(max-width:768px) {
+                            margin-bottom: 10px;
+                            margin-top: 0px;
+                            display: flex;
+                            width: 227px;
+                            padding: 12px 0px;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 10px;
+                            border-radius: 99px;
+                            border: 1px solid var(--primary, #FF8740);
+                            background: var(--white, #FEFCF7);
+                        }
                     }
 
                 }
@@ -2122,6 +2136,13 @@ body {
                     top: -40%;
                     z-index: 2;
 
+                    @media(max-width:768px) {
+                        left: 70%;
+                        top: -40%;
+                        width: 130px;
+                        height: 120px;
+                    }
+
                     @media (min-width: 769px) and (max-width: 1024px) {
                         position: absolute;
                         width: 60%;
@@ -2146,6 +2167,22 @@ body {
                     letter-spacing: 1.2px;
                     white-space: nowrap;
                     z-index: 1;
+
+                    @media(max-width:768px) {
+                        position: absolute;
+                        top: -40%;
+                        left: 95%;
+                        color: var(--primary, var(--primary, #FF8740));
+
+                        /* 段落(小尺寸)/12 */
+                        font-family: "Noto Sans TC", sans-serif;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 16.8px */
+                        letter-spacing: 1.2px;
+                    }
 
                     @media (min-width: 769px) and (max-width: 1024px) {
                         position: absolute;
@@ -2186,7 +2223,14 @@ body {
                         left: -50px;
                         transform: rotate(45deg);
 
+                        @media(max-width:768px) {
+                            top: 40%;
+                            left: -25px;
+                            transform: rotate(60deg);
+                        }
+
                         @media (min-width: 769px) and (max-width: 1024px) {
+                            top: 40%;
                             left: -50px; // 原來是 -70px，往內靠近文字
                             transform: rotate(45deg);
                         }
@@ -2195,6 +2239,11 @@ body {
                     &::after {
                         right: -50px;
                         transform: rotate(135deg);
+
+                        @media(max-width:768px) {
+                            right: -18px;
+                            transform: rotate(120deg);
+                        }
 
                         @media (min-width: 769px) and (max-width: 1024px) {
                             right: -50px; // 原來是 -70px，同樣往內靠近文字

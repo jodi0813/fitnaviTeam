@@ -185,6 +185,23 @@ html {
   width: 100%;
   padding: 10% 5% 5%;
 }
+@media (max-width: 1024px) {
+  .home-nutritionist {
+    padding: 48% 5% 5%;
+  }
+}
+@media (max-width: 800px) {
+  .home-nutritionist {
+    padding: 36% 5% 5%;
+  }
+}
+@media (max-width: 600px) {
+  .home-nutritionist {
+    align-items: center;
+    margin: 0 auto;
+    padding: 48% 5% 5%;
+  }
+}
 .home-nutritionist .nutritionist-card-box {
   display: flex;
   align-items: flex-end;
@@ -192,6 +209,19 @@ html {
   margin-left: 13%;
   width: 100%;
   gap: 50px;
+}
+@media (max-width: 1024px) {
+  .home-nutritionist .nutritionist-card-box {
+    justify-content: flex-end;
+    margin-right: 28%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 800px) {
+  .home-nutritionist .nutritionist-card-box {
+    justify-content: center;
+    margin: 0;
+  }
 }
 .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard {
   display: flex;
@@ -204,6 +234,22 @@ html {
   aspect-ratio: 5/7;
   transform: skew(-20deg, 0deg);
 }
+@media (max-width: 1024px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard {
+    box-shadow: 14px 14px 0px 0px #ff8740;
+    transform: skew(-16deg, 0deg);
+  }
+}
+@media (max-width: 800px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard {
+    width: 25%;
+  }
+}
+@media (max-width: 600px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard {
+    width: 140px;
+  }
+}
 .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard .home-nutritionist-img {
   position: absolute;
   right: 20%;
@@ -211,10 +257,20 @@ html {
   width: 100%;
   z-index: 99;
 }
+@media (max-width: 1024px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard .home-nutritionist-img {
+    right: 8%;
+  }
+}
 .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard .home-nutritionist-img img {
   width: 92%;
   transform: none;
   transform: skew(20deg, 0deg);
+}
+@media (max-width: 1024px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard .home-nutritionist-img img {
+    transform: skew(16deg, 0deg);
+  }
 }
 .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard .home-nutritionist-info {
   display: flex;
@@ -242,10 +298,32 @@ html {
   line-height: normal;
   letter-spacing: 3.2px;
   color: #3a2c19;
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard .home-nutritionist-info .home-nutritionist-name {
+    width: fit-content;
+    font-size: 14px;
+    gap: 3px;
+    padding: 8px 24px;
+    position: absolute;
+    right: 20px;
+    top: 27px;
+  }
+}
+@media (max-width: 600px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard .home-nutritionist-info .home-nutritionist-name {
+    padding: 8px 16px;
+  }
 }
 .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard .home-nutritionist-info .home-nutritionist-name .home-nutritionist-enname {
   font-size: 20px;
   letter-spacing: 2px;
+}
+@media (max-width: 1024px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard .home-nutritionist-info .home-nutritionist-name .home-nutritionist-enname {
+    font-size: 14px;
+  }
 }
 .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard .home-nutritionist-info .home-nutritionist-tags {
   display: flex;
@@ -272,10 +350,29 @@ html {
   line-height: 140%;
   letter-spacing: 1.4px;
 }
+@media (max-width: 1024px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard .home-nutritionist-info .home-nutritionist-tags {
+    right: 70px;
+    top: 280px;
+    z-index: 100;
+  }
+}
+@media (max-width: 600px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-maincard .home-nutritionist-info .home-nutritionist-tags {
+    right: 70px;
+    top: 230px;
+    padding: 8px;
+  }
+}
 .home-nutritionist .nutritionist-card-box .home-nutritionist-queue {
   display: inline-flex;
   width: 50%;
   height: auto;
+}
+@media (max-width: 1024px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-queue {
+    display: none;
+  }
 }
 .home-nutritionist .nutritionist-card-box .home-nutritionist-queue .nutritionist-card-small {
   width: 100%;
@@ -292,6 +389,38 @@ html {
   position: absolute;
   top: 35%;
   right: 13%;
+}
+@media (max-width: 1024px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-controls {
+    width: 47%;
+    top: 74%;
+    right: 3%;
+  }
+}
+@media (max-width: 800px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-controls {
+    width: 64%;
+    top: 40%;
+    right: 18%;
+  }
+}
+@media (max-width: 600px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-controls {
+    width: 350px;
+    bottom: 47%;
+    margin: 0 auto;
+    left: 48%;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 400px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-controls {
+    width: 350px;
+    top: 268px;
+    margin: 0 auto;
+    left: 46%;
+    transform: translateX(-50%);
+  }
 }
 .home-nutritionist .nutritionist-card-box .home-nutritionist-controls button {
   all: unset;
@@ -310,6 +439,12 @@ html {
   width: 82px;
   gap: 4px;
   transform: skew(-20deg, 0deg);
+}
+@media (max-width: 600px) {
+  .home-nutritionist .nutritionist-card-box .home-nutritionist-controls button {
+    font-size: 14px;
+    width: 50px;
+  }
 }
 .home-nutritionist .nutritionist-card-box .home-nutritionist-controls button .label {
   position: relative;
@@ -390,11 +525,43 @@ html {
   align-items: center;
   width: 100%;
 }
+@media (max-width: 800px) {
+  .home-nutritionist .home-nutritionist-footer {
+    padding: 0;
+    transform: translateY(-30px);
+  }
+}
+@media (max-width: 600px) {
+  .home-nutritionist .home-nutritionist-footer {
+    width: fit-content;
+  }
+}
 .home-nutritionist .home-nutritionist-footer .home-nutritionist-img {
   position: absolute;
   right: 0%;
   bottom: -24%;
   width: 17%;
+}
+@media (max-width: 1024px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-img {
+    left: 36%;
+    bottom: 200%;
+    width: 12%;
+  }
+}
+@media (max-width: 800px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-img {
+    width: 14%;
+    left: 65%;
+    bottom: 80px;
+  }
+}
+@media (max-width: 600px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-img {
+    width: 92px;
+    left: 80%;
+    bottom: 80px;
+  }
 }
 .home-nutritionist .home-nutritionist-footer .home-nutritionist-title {
   display: flex;
@@ -403,10 +570,32 @@ html {
   width: 100%;
   gap: 45px;
 }
+@media (max-width: 1024px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title {
+    gap: 5px;
+    position: absolute;
+    width: fit-content;
+    bottom: 0%;
+    left: 0%;
+  }
+}
+@media (max-width: 800px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title {
+    position: relative;
+    width: 100%;
+    margin-top: 144px;
+    align-items: center;
+  }
+}
 .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+@media (max-width: 800px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 {
+    width: 320px;
+  }
 }
 .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title2 {
   display: flex;
@@ -414,6 +603,28 @@ html {
   transform: skew(-20deg, 0deg);
   gap: 32px;
   padding-left: 7%;
+}
+@media (max-width: 1024px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title2 {
+    flex-direction: column;
+    gap: 0px;
+    position: absolute;
+    top: -127%;
+    left: 85%;
+  }
+}
+@media (max-width: 800px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title2 {
+    top: -213%;
+    left: 29%;
+    z-index: -2;
+  }
+}
+@media (max-width: 600px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title2 {
+    top: -196%;
+    left: 8%;
+  }
 }
 .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title2 .home-nutritionist-titleCh {
   font-family: "Mantou Sans";
@@ -425,6 +636,19 @@ html {
   color: #3a2c19;
   white-space: nowrap;
 }
+@media (max-width: 1024px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title2 .home-nutritionist-titleCh {
+    font-size: 128px;
+    line-height: 113%;
+    order: 2;
+  }
+}
+@media (max-width: 800px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title2 .home-nutritionist-titleCh {
+    opacity: 0.2;
+    font-size: 96px;
+  }
+}
 .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title2 .home-nutritionist-titleEn {
   color: #fefcf7;
   font-family: "Dela Gothic One";
@@ -435,9 +659,10 @@ html {
   /* 156.25% */
   text-transform: capitalize;
 }
-@media (max-width: 1150px) {
+@media (max-width: 1024px) {
   .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title2 .home-nutritionist-titleEn {
-    font-size: 56px;
+    font-size: 24px;
+    line-height: 0%;
   }
 }
 .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title3 {
@@ -451,7 +676,52 @@ html {
   letter-spacing: 0.4px;
   padding-left: 4%;
 }
+.home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title3 span {
+  display: block;
+}
+@media (max-width: 1024px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title3 {
+    margin-right: 0%;
+    width: 260px;
+  }
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title3 :nth-child(1) {
+    font-family: "Mantou Sans";
+    font-size: 16px;
+    letter-spacing: 1.6px;
+  }
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title3 :nth-child(2) {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 800px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-title1 .home-nutritionist-title3 {
+    width: 256px;
+  }
+}
 .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-button {
   display: flex;
   gap: 20px;
+}
+@media (max-width: 1024px) {
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-button {
+    flex-direction: column;
+    gap: 12px;
+    margin-right: 0%;
+  }
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-button a {
+    height: 40px;
+  }
+  .home-nutritionist .home-nutritionist-footer .home-nutritionist-title .home-nutritionist-button a button {
+    width: 320px;
+    height: 40px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 140%;
+    /* 19.6px */
+    letter-spacing: 1.4px;
+    border-radius: 8px;
+  }
 }

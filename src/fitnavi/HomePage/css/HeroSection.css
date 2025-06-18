@@ -186,6 +186,11 @@ html {
   z-index: 0;
   left: 0;
 }
+@media (max-width: 1024px) {
+  .HeroSection {
+    height: 155vh;
+  }
+}
 .HeroSection::after {
   content: "";
   position: absolute;
@@ -260,6 +265,12 @@ html {
   height: 100%;
   width: 100%;
 }
+@media (max-width: 1024px) {
+  .HeroSection .Hero-Section-Title {
+    top: 15%;
+    margin-left: 9%;
+  }
+}
 .HeroSection .Hero-Section-Title .Hero-Section-Catchphrase h2 {
   color: #FEFCF7;
   font-family: "Dela Gothic One";
@@ -271,6 +282,11 @@ html {
 @media (max-width: 1200px) {
   .HeroSection .Hero-Section-Title .Hero-Section-Catchphrase h2 {
     font-size: 155px;
+  }
+}
+@media (max-width: 1024px) {
+  .HeroSection .Hero-Section-Title .Hero-Section-Catchphrase h2 {
+    font-size: clamp(90px, 15.15vw, 155px);
   }
 }
 .HeroSection .Hero-Section-Title .Hero-Section-Catchphrase .h3-HeroTitle {
@@ -293,6 +309,11 @@ html {
     font-size: 180px;
   }
 }
+@media (max-width: 1024px) {
+  .HeroSection .Hero-Section-Title .Hero-Section-Catchphrase .h3-HeroTitle h3.S-HeroTitle {
+    font-size: clamp(80px, 13vw + 36px, 180px);
+  }
+}
 .HeroSection .Hero-Section-Title .Hero-Section-Catchphrase .h3-HeroTitle h3.tronger-HeroTitle {
   color: #EB7223;
   font-family: "Dela Gothic One";
@@ -306,6 +327,11 @@ html {
     font-size: 155px;
   }
 }
+@media (max-width: 1024px) {
+  .HeroSection .Hero-Section-Title .Hero-Section-Catchphrase .h3-HeroTitle h3.tronger-HeroTitle {
+    font-size: clamp(60px, 15vw, 155px);
+  }
+}
 .HeroSection .Hero-Section-Title .Hero-Section-content {
   display: inline-block;
   flex-direction: row;
@@ -314,6 +340,7 @@ html {
   width: 50%;
   padding-top: 3%;
   padding-left: 1%;
+  min-width: 300px;
 }
 .HeroSection .Hero-Section-Title .Hero-Section-content p {
   color: #FFF;
@@ -324,7 +351,11 @@ html {
   line-height: 150%;
   /* 36px */
   letter-spacing: 2.4px;
-  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .HeroSection .Hero-Section-Title .Hero-Section-content p {
+    font-size: clamp(14px, 2.34vw, 24px);
+  }
 }
 .HeroSection .Hero-section-scroll {
   position: absolute;
@@ -342,6 +373,11 @@ html {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -20%);
+  }
+}
+@media (max-width: 1024px) {
+  .HeroSection .Hero-section-scroll {
+    top: 60%;
   }
 }
 .HeroSection .Hero-section-scroll p {

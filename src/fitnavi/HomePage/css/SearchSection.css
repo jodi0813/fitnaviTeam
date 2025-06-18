@@ -194,11 +194,28 @@ html {
   line-height: 40px;
   letter-spacing: 9.6px;
 }
+@media (max-width: 768px) {
+  .home-search .home-search-mainTitle {
+    font-size: clamp(24px, 6.5vw, 48px);
+  }
+}
 .home-search .home-search-section {
   display: flex;
   gap: 48px;
   width: 100%;
   justify-content: center;
+}
+@media (max-width: 1024px) {
+  .home-search .home-search-section {
+    gap: 5%;
+  }
+}
+@media (max-width: 768px) {
+  .home-search .home-search-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
 }
 .home-search .home-search-section .home-search-block {
   display: flex;
@@ -211,12 +228,41 @@ html {
   aspect-ratio: 5/4;
   padding: 2.5% 2.5% 3% 2.5%;
 }
+@media (max-width: 1024px) {
+  .home-search .home-search-section .home-search-block {
+    box-shadow: none;
+    background: none;
+    aspect-ratio: none;
+    height: 300px;
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  .home-search .home-search-section .home-search-block {
+    width: 85%;
+    max-width: 500px;
+  }
+}
+@media (max-width: 500px) {
+  .home-search .home-search-section .home-search-block {
+    height: 250px;
+  }
+}
 .home-search .home-search-section .home-search-block .home-search-titleBox {
   display: flex;
   align-items: flex-end;
   gap: 32px;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid #FF8740;
+}
+@media (max-width: 1024px) {
+  .home-search .home-search-section .home-search-block .home-search-titleBox {
+    gap: 12px;
+    border: none;
+    border-left: 3px solid #FF8740;
+    padding: 0;
+    padding-left: 12px;
+  }
 }
 .home-search .home-search-section .home-search-block .home-search-titleBox .home-search-title {
   color: #ff8740;
@@ -227,6 +273,14 @@ html {
   line-height: normal;
   letter-spacing: 3.2px;
 }
+@media (max-width: 1024px) {
+  .home-search .home-search-section .home-search-block .home-search-titleBox .home-search-title {
+    color: var(--dark, #3A2C19);
+    /* heading/標題4/Bold */
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+}
 .home-search .home-search-section .home-search-block .home-search-titleBox .home-search-titleEn {
   color: #ff8740;
   font-family: "Noto Sans TC", sans-serif;
@@ -234,6 +288,12 @@ html {
   font-style: normal;
   font-weight: 100;
   line-height: normal;
+}
+@media (max-width: 1024px) {
+  .home-search .home-search-section .home-search-block .home-search-titleBox .home-search-titleEn {
+    color: var(--dark, #3A2C19);
+    font-size: 20px;
+  }
 }
 .home-search .home-search-section .home-search-block .home-search-main {
   display: flex;
@@ -247,6 +307,21 @@ html {
   width: 40%;
   height: auto;
 }
+@media (max-width: 1024px) {
+  .home-search .home-search-section .home-search-block .home-search-main .home-search-illustration {
+    position: absolute;
+    width: 30%;
+    top: -19%;
+  }
+}
+@media (max-width: 768px) {
+  .home-search .home-search-section .home-search-block .home-search-main .home-search-illustration {
+    position: absolute;
+    width: 25%;
+    top: -13%;
+    left: 3%;
+  }
+}
 .home-search .home-search-section .home-search-block .home-search-main .home-search-illustration img {
   width: 100%;
 }
@@ -257,10 +332,22 @@ html {
   width: 60%;
   padding-top: 40px;
 }
+@media (max-width: 1024px) {
+  .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns {
+    width: 100%;
+  }
+}
 .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-dropdowns1 {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+@media (max-width: 1024px) {
+  .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-dropdowns1 {
+    width: 65%;
+    align-self: flex-end;
+    gap: 12px;
+  }
 }
 .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns select {
   display: flex;
@@ -279,11 +366,25 @@ html {
   font-weight: 500;
   line-height: 140%;
   letter-spacing: 1.4px;
+  background-color: #FEFCF7;
+}
+@media (max-width: 1024px) {
+  .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns select {
+    border-radius: 8px;
+    font-size: 12px;
+  }
 }
 .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-botton {
   display: flex;
   flex-direction: column;
   gap: 29px;
+}
+@media (max-width: 1024px) {
+  .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-botton {
+    width: 65%;
+    align-self: flex-end;
+    gap: 12px;
+  }
 }
 .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-botton .home-search-toggleBt {
   display: flex;
@@ -295,7 +396,6 @@ html {
   flex: 1;
   justify-content: center;
   align-items: center;
-  flex: 1;
   border-radius: 99px;
   border: 1px solid #ff8740;
   opacity: 0.8;
@@ -307,6 +407,13 @@ html {
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-botton .home-search-toggleBt button {
+    border-radius: 8px;
+    font-size: 14px;
+  }
 }
 .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .home-search-botton .home-search-toggleBt button:hover {
   background: #ff8740;
@@ -341,6 +448,13 @@ html {
   line-height: normal;
   letter-spacing: 2px;
   transition: all 0.15s ease-out;
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .homeSearchBt {
+    font-size: 14px;
+    border-radius: 8px;
+  }
 }
 .home-search .home-search-section .home-search-block .home-search-main .home-search-dropdowns .homeSearchBt .faSearch {
   margin-left: 8px;

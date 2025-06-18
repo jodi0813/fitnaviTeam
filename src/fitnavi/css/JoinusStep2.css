@@ -1,0 +1,686 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+* {
+  box-sizing: border-box;
+  /* 不累加邊框及內距 */
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 字體 */
+body {
+  font-family: "Noto Sans TC", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Dela Gothic One";
+  line-height: 1.5;
+  background-color: #fefcf7;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 重置連接 */
+a {
+  display: block;
+  /* a預設的行內元素，不支援寬高及上下間距，通常會改為區塊，方便設定 */
+  color: #444;
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #fefcf7;
+  overflow-x: hidden;
+}
+
+input,
+textarea,
+select,
+option,
+button,
+label {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+@font-face {
+  font-family: "Mantou Sans";
+  src: url(../../assets/MantouSans-Regular.ttf);
+}
+@media (max-width: 1024px) {
+  .joinus-form-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.CoachJoinus-Step2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 550px;
+  height: 650px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  padding-right: 32px;
+  padding-left: 32px;
+  border-radius: 32px;
+  border: 1px solid var(--dark, #3A2C19);
+  background: #FFF;
+  box-shadow: 8px 8px 0px 0px #3A2C19;
+}
+@media (max-width: 1024px) {
+  .CoachJoinus-Step2 {
+    width: 360px;
+    min-height: 590px;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+}
+.CoachJoinus-Step2 .JoinusStep2-header {
+  display: flex;
+  flex-direction: row;
+  gap: 60%;
+  width: 100%;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #3a2c19;
+}
+@media (max-width: 1024px) {
+  .CoachJoinus-Step2 .JoinusStep2-header {
+    gap: 30%;
+    margin-bottom: 12px;
+  }
+}
+.CoachJoinus-Step2 .JoinusStep2-header .Step2-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 12px;
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .CoachJoinus-Step2 .JoinusStep2-header .Step2-title {
+    width: 289px;
+    gap: 10px;
+  }
+}
+.CoachJoinus-Step2 .JoinusStep2-header .Step2-title h4 {
+  color: var(--dark, #3A2C19);
+  text-align: center;
+  font-family: "Dela Gothic One";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 5.4px;
+}
+@media (max-width: 1024px) {
+  .CoachJoinus-Step2 .JoinusStep2-header .Step2-title h4 {
+    color: var(--dark, #3A2C19);
+    text-align: center;
+    font-family: "Dela Gothic One";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.6px;
+  }
+}
+.CoachJoinus-Step2 .JoinusStep2-header .Step2-title h5 {
+  color: var(--dark, #3A2C19);
+  opacity: 0.5;
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 250%;
+  /* 35px */
+  letter-spacing: 1.4px;
+}
+@media (max-width: 1024px) {
+  .CoachJoinus-Step2 .JoinusStep2-header .Step2-title h5 {
+    color: var(--dark, #3A2C19);
+    text-align: center;
+    /* 段落(小尺寸)/12 */
+    font-family: "Noto Sans TC";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 16.8px */
+    letter-spacing: 1.2px;
+  }
+}
+.CoachJoinus-Step2 .JoinusStep2-header p {
+  color: var(--primary, var(--primary, #FF8740));
+  text-align: center;
+  font-family: "Dela Gothic One";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}
+@media (max-width: 1024px) {
+  .CoachJoinus-Step2 .JoinusStep2-header p {
+    color: var(--primary, var(--primary, #FF8740));
+    opacity: 0.5;
+    text-align: center;
+    font-family: "Dela Gothic One";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 14px */
+    letter-spacing: 1px;
+  }
+}
+.CoachJoinus-Step2 .multi-select-dropdown {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .CoachJoinus-Step2 .multi-select-dropdown {
+    display: block;
+  }
+}
+.CoachJoinus-Step2 .Step2Checkbox {
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .CoachJoinus-Step2 .Step2Checkbox {
+    display: none;
+  }
+}
+.CoachJoinus-Step2 .Step2Checkbox .Specitialty-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 270px;
+  margin-bottom: 4px;
+  width: 193px;
+}
+@media (max-width: 1024px) {
+  .CoachJoinus-Step2 .Step2Checkbox .Specitialty-title {
+    gap: 120px;
+  }
+}
+.CoachJoinus-Step2 .Step2Checkbox h4 {
+  color: var(--dark, #3A2C19);
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+  white-space: nowrap;
+}
+.CoachJoinus-Step2 .Step2Checkbox p {
+  color: var(--primary, var(--primary, #FF8740));
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+  white-space: nowrap;
+}
+.CoachJoinus-Step2 .Step2Checkbox::after {
+  width: 193px;
+  height: 0.5px;
+  background: #3A2C19;
+}
+.CoachJoinus-Step2 .Step2Checkbox-group {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.CoachJoinus-Step2 .Step2Checkbox-group label {
+  color: var(--dark, #3A2C19);
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}
+.CoachJoinus-Step2 .Step2Checkbox-group input {
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1/1;
+  border-radius: 3px;
+  border: 1px solid var(--dark, #3A2C19);
+  background: #FFF;
+}
+
+.Step2-certification {
+  margin-top: 30px;
+  margin-bottom: 18px;
+}
+@media (max-width: 1024px) {
+  .Step2-certification {
+    margin-top: 100px;
+  }
+}
+.Step2-certification .Step2-certification-header {
+  display: flex;
+  flex-direction: column;
+}
+.Step2-certification .Step2-certification-header .Step2-certification-title {
+  display: flex;
+  flex-direction: row;
+  width: 222px;
+  margin-bottom: 4px;
+  gap: 250px;
+}
+@media (max-width: 1024px) {
+  .Step2-certification .Step2-certification-header .Step2-certification-title {
+    gap: 120px;
+  }
+}
+.Step2-certification .Step2-certification-header .Step2-certification-title h4 {
+  color: var(--dark, #3A2C19);
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+  white-space: nowrap;
+}
+.Step2-certification .Step2-certification-header .Step2-certification-title h5 {
+  color: var(--primary, var(--primary, #FF8740));
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+  white-space: nowrap;
+}
+.Step2-certification .Step2-certification-header p {
+  color: var(--gray, #989794);
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 14px */
+  letter-spacing: 1px;
+}
+
+.scrollFieldset {
+  width: 441px;
+  max-height: 300px;
+  overflow-y: auto;
+  border-bottom: 1px solid #D0CDC9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 18px;
+  margin-bottom: 8px;
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 1.2px;
+}
+@media (max-width: 1024px) {
+  .scrollFieldset {
+    width: 289px !important;
+  }
+}
+.scrollFieldset::-webkit-scrollbar {
+  width: 10px;
+}
+.scrollFieldset::-webkit-scrollbar-thumb {
+  width: 8px;
+  border-radius: 99px;
+  background: #D9D9D9;
+}
+.scrollFieldset::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollFieldset input {
+  height: 30px;
+  border-radius: 99px;
+  border: 0.5px solid var(--dark, #3A2C19);
+  background: #FFF;
+  margin-right: 18px;
+}
+@media (max-width: 1024px) {
+  .scrollFieldset input {
+    width: 160px;
+    border-radius: 8px;
+    margin-right: 0;
+  }
+}
+.scrollFieldset legend {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  color: var(--dark, #3A2C19);
+  font-size: 10px;
+  padding-top: 18px;
+  letter-spacing: 1px;
+}
+@media (max-width: 1024px) {
+  .scrollFieldset legend {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+}
+@media (max-width: 1024px) {
+  .scrollFieldset .coach-scrollContent {
+    width: 289px;
+  }
+}
+.scrollFieldset .coach-scrollContent .cert-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 0;
+  padding-left: 0;
+}
+.scrollFieldset button.upload {
+  height: 25px;
+  padding: 4px 12px;
+  margin-right: 18px;
+  margin-bottom: 8px;
+  border-radius: 999px;
+  border: 1px solid var(--primary, #FF8740);
+  color: #FF8740;
+}
+@media (max-width: 1024px) {
+  .scrollFieldset button.upload {
+    width: 54px;
+    height: 28px;
+    margin: 0;
+  }
+}
+.scrollFieldset button.delete {
+  width: 50px;
+  height: 25px;
+  padding: 4px 12px;
+  margin-right: 5px !important;
+  margin-bottom: 8px;
+  border-radius: 999px;
+  border: 1px solid #3A2C19;
+  color: #3A2C19;
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .scrollFieldset button.delete {
+    width: 54px;
+    height: 28px;
+    margin: 0;
+  }
+}
+.scrollFieldset .update-button {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 1024px) {
+  .scrollFieldset .update-button {
+    margin-right: 1%;
+    margin-top: 12px;
+  }
+}
+.scrollFieldset .update-button .update {
+  width: 50px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--primary, #FF8740);
+  background: var(--primary, #FF8740);
+  color: var(--white, #FEFCF7);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.NextPreButton {
+  display: flex;
+  flex-direction: row;
+  gap: 300px;
+  width: 100%;
+  margin-top: 50px;
+}
+@media (max-width: 1024px) {
+  .NextPreButton {
+    gap: 150px !important;
+  }
+}
+.NextPreButton .Step2Pre-button {
+  width: 100px;
+  height: 40px;
+  border: 1px solid var(--dark, #3A2C19);
+  color: var(--dark, #3A2C19);
+  margin: 0px;
+  white-space: nowrap;
+  border-radius: 999px;
+  text-align: center;
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}
+.NextPreButton .Step2Pre-button:focus, .NextPreButton .Step2Pre-button:focus-visible {
+  outline: none;
+}
+.NextPreButton .Step2Next-button {
+  width: 100px;
+  height: 40px;
+  border: 1px solid #FF8740;
+  color: #FF8740;
+  margin: 0px;
+  white-space: nowrap;
+  border-radius: 999px;
+  text-align: center;
+  /* 段落/14 */
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  /* 19.6px */
+  letter-spacing: 1.4px;
+}
+.NextPreButton .Step2Next-button:focus, .NextPreButton .Step2Next-button:focus-visible {
+  outline: none;
+}
+
+.CoachJoinus-Step2 {
+  width: 550px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  padding: 19px 32px;
+  border-radius: 32px;
+  border: 1px solid var(--dark, #3A2C19);
+  background: #FFF;
+  box-shadow: 8px 8px 0px 0px #3A2C19;
+  box-sizing: border-box;
+}
+
+.Step2Checkbox,
+.Step2-certification,
+.scrollFieldset {
+  width: 100%;
+}
+
+.scrollFieldset {
+  flex: 1 1 0;
+  min-height: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.NextPreButton {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 300px;
+}
