@@ -14,18 +14,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-.myinfoEditButton{
-  color:  #FEFCF7;
-/* 段落/16 */
-font-family: "Noto Sans TC";
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 150%; /* 24px */
-letter-spacing: 1.6px;
-border-radius: 99px;
-background: #FF8740;
-}
+    .myinfoEditButton {
+      color: #fefcf7;
+      /* 段落/16 */
+      font-family: "Noto Sans TC";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%; /* 24px */
+      letter-spacing: 1.6px;
+      border-radius: 99px;
+      background: #ff8740;
+    }
     .myinfoAvatar {
       width: 80px;
       height: 80px;
@@ -38,7 +38,10 @@ background: #FF8740;
       align-items: center;
       gap: 32px;
 
-    
+      .myinfoNameBox {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         .myinfoName {
           display: flex;
           align-items: center;
@@ -71,8 +74,8 @@ background: #FF8740;
             align-items: center;
             gap: 12px;
             border-radius: 99px;
-            border: 1px solid #FF8740;
-            color: #FF8740;
+            border: 1px solid #ff8740;
+            color: #ff8740;
             font-family: "Noto Sans TC", sans-serif;
             font-size: 20px;
             font-style: normal;
@@ -81,7 +84,7 @@ background: #FF8740;
             letter-spacing: 2px;
           }
         }
-      
+      }
     }
 
     .myinfoBt {

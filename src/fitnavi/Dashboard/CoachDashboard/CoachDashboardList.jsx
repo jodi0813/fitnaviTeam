@@ -6,9 +6,17 @@ import StudentOrder from "./StudentOrder";
 import CourseManagement from "./CourseManagement";
 import MainTitle from "../../../components/Title/MainTitle";
 import Articlemanagement from "./Articlemanagement";
-
+import { MdOutlineLogout } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 function CoachDashboardList() {
   const [memberTab, setMemberTab] = useState("coachInfo");
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("role");
+    navigate("/");
+  };
   return (
     <>
       <div className="coachDashboardAll">
@@ -69,7 +77,12 @@ function CoachDashboardList() {
                 >
                   文章管理
                 </button>
+                {localStorage.getItem("token") && (
+                  <button onClick={handleLogout} className="memberBt logoutBt">登出 <MdOutlineLogout /></button>
+                )}
+
               </div>
+
               <div className="list-illustration">
                 <div className="list-illustration1">
                   <img src="./images/coachnutri.png" alt="" />
@@ -86,7 +99,7 @@ function CoachDashboardList() {
           {memberTab === "coachOrder" && <CoachOrder />}
           {memberTab === "studentOrder" && <StudentOrder />}
           {memberTab === "courseManagement" && <CourseManagement />}
-          {memberTab === "articlemanagement"&&<Articlemanagement/>}
+          {memberTab === "articlemanagement" && <Articlemanagement />}
         </div>
       </div>
     </>
