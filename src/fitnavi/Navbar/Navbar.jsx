@@ -208,7 +208,10 @@ function Navbar() {
                 <button
                   type="button"
                   className="nbr-login"
-                  onClick={() => navigate("/MemberLogin")}
+                  onClick={() => {
+                    navigate("/MemberLogin");
+                    setIsMenuOpen(false);
+                  }}
                 >
                   登入 / 註冊
                 </button>
