@@ -350,12 +350,12 @@ body {
                     height: 290px;
                     display: flex;
                     max-width: 500px;
-                    padding: 20px;
+                    padding: 10px;
                     margin: 5rem auto;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    align-items: flex-end;
+                    align-items: center;
                     border-radius: 12px;
                     border: 0.5px solid var(--dark, #3A2C19);
                     background: #FFF;
@@ -379,16 +379,17 @@ body {
                     flex-direction: row;
                     justify-content: flex-start;
                     align-items: center;
-                    gap: 30%;;
+                    gap: 30%;
+
 
                     @media(max-width: 768px) {
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
                         gap: 5px; // 可調整間距
-                        width: 100%;  // 加上寬度避免內容被擠壓
+                        width: 100%; // 加上寬度避免內容被擠壓
                         white-space: normal;
-                        margin-top: 20px;
+
 
                     }
 
@@ -416,7 +417,7 @@ body {
                             font-weight: 700;
                             line-height: normal;
                             letter-spacing: 2px;
-                            
+
 
                         }
 
@@ -444,6 +445,10 @@ body {
                     justify-content: flex-start;
                     align-items: last baseline;
                     margin-top: 30px;
+
+                    @media(max-width: 768px) {
+                        display: none;
+                    }
 
                     @media (min-width: 769px) and (max-width: 1024px) {
                         margin-top: 10px;
@@ -577,8 +582,120 @@ body {
 
                 }
 
+                .p-linethrough-color-mobile {
+                    display: none;
+
+                    @media(max-width: 768px) {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start; // <-- 置中看起來會更穩定
+                        align-items: flex-start;
+                        width: 100%; // <-- 關鍵：不讓它被內容撐爆
+                        overflow-x: hidden; // 可選：避免橫向捲軸
+                        box-sizing: border-box;
+                        // padding: 0 10px;
+                        margin-top: 10px;
+                    }
+
+                    .class-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%; // 建議先用百分比，再靠父層 padding 控距離
+                        // max-width: 313px;
+                        gap: 15px;
+
+                        .first-class,
+                        .class-price {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            h5 {
+                                color: var(--dark, #3A2C19);
+
+                                /* 段落/14 */
+                                font-family: "Noto Sans TC", sans-serif;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 140%;
+                                /* 19.6px */
+                                letter-spacing: 1.4px;
+                            }
+
+                            .prices {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: flex-start;
+                                align-items: center;
+                                white-space: nowrap;
+
+                                p {
+                                    color: var(--gray, #989794);
+
+                                    /* 段落(小尺寸)/10 */
+                                    font-family: "Noto Sans TC", sans-serif;
+                                    font-size: 10px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 140%;
+                                    /* 14px */
+                                    letter-spacing: 1px;
+                                }
+
+                                h6 {
+                                    color: var(--dark, #3A2C19);
+                                    text-align: right;
+
+                                    /* 段落/14 */
+                                    font-family: "Noto Sans TC", sans-serif;
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 140%;
+                                    /* 19.6px */
+                                    letter-spacing: 1.4px;
+                                }
+
+                                .prices-600 {
+                                    color: var(--primary, var(--primary, #FF8740));
+                                    font-family: 'Alata';
+                                    font-size: 32px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: normal;
+                                }
+                            }
+
+                        }
+
+                        .classinrto-text-mobile {
+                            width: 331px;
+                            height: 40px;
+                            border-radius: 8px;
+                            background: var(--primary, #FF8740);
+                            color: #FFF;
+                            text-align: center;
+                            font-family: "Noto Sans TC", sans-serif;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 900;
+                            line-height: 140%;
+                            /* 19.6px */
+                            letter-spacing: 1.4px;
+                        }
+
+                    }
+
+
+                }
+
                 .coach-prices-button {
                     margin-bottom: 15px;
+
+                    @media(max-width: 768px) {
+                        display: none;
+                    }
 
                     @media (min-width: 769px) and (max-width: 1024px) {
                         margin-bottom: 8px;
@@ -719,6 +836,12 @@ body {
         margin-bottom: 0px;
         gap: 2%;
 
+        @media(max-width: 768px) {
+            width: 138px;
+            height: 86px;
+        }
+
+
         @media (min-width: 769px) and (max-width: 1024px) {
             flex-direction: row;
             gap: 1rem;
@@ -727,6 +850,62 @@ body {
             top: 95%;
             left: 30%;
         }
+
+        .chooseclassplace {
+            writing-mode: vertical-rl;
+            white-space: nowrap;
+
+            @media(max-width: 768px) {
+
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-items: flex-end;
+                writing-mode: horizontal-tb;
+                white-space: normal;
+                gap: 0px;
+                
+            }
+
+            .choose {
+
+                @media(max-width: 768px) {
+
+                    color: var(--gray, #989794);
+                    text-align: right;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                }
+
+            }
+
+            .classplace {
+                @media(max-width: 768px) {
+                    color: var(--primary, var(--primary, #FF8740));
+                    text-align: right;
+
+                    /* heading/標題4/Bold */
+                    font-family: "Noto Sans TC",sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 2px;
+                }
+            }
+
+
+
+        }
+
+
 
         p {
             writing-mode: vertical-rl;
@@ -738,6 +917,12 @@ body {
             line-height: normal;
             letter-spacing: 2px;
             margin-top: 2%;
+
+            @media(max-width: 768px) {
+                writing-mode: horizontal-tb;
+
+
+            }
 
             @media (min-width: 769px) and (max-width: 1024px) {
                 font-size: 20px;
@@ -956,7 +1141,7 @@ body {
                 flex-direction: row;
                 align-items: center;
                 gap: 50px;
-                margin-top: 10rem;
+                // margin-top: 10rem;
 
                 @media (min-width: 769px) and (max-width: 1024px) {
                     gap: 18px;

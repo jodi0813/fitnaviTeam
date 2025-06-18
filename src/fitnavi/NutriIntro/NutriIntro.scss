@@ -462,6 +462,25 @@
         margin-bottom: 0px;
         gap: 40px;
 
+        .chooseclassplace {
+            @media(max-width: 768px) {
+                display: flex;
+                flex-direction: column-reverse;
+                /* 反轉上下順序 */
+                align-items: flex-start;
+                /* 保持靠左對齊 */
+                font-size: 20px;
+                font-weight: 700;
+                color: #3A2C19;
+                font-family: "Noto Sans TC", sans-serif;
+                line-height: normal;
+                letter-spacing: 2px;
+
+
+            }
+
+        }
+
         p {
             writing-mode: vertical-rl;
             color: #3A2C19;
@@ -472,7 +491,11 @@
             line-height: normal;
             letter-spacing: 2px;
             margin-bottom: 55px;
+
+
         }
+
+
 
         img {
             width: 204px;
@@ -2101,14 +2124,14 @@
         align-items: flex-end !important;
         max-width: 12% !important;
         align-self: stretch;
-        transform: translateX(-30px); 
- 
+        transform: translateX(-30px);
+
 
         .Nutri-intro {
             margin-top: 5rem !important;
             width: 100%;
-    
-    
+
+
             ul {
                 display: flex;
                 flex-direction: column;
@@ -2119,7 +2142,7 @@
                 padding-right: 110px !important;
                 // padding-left: 10px;
             }
-    
+
         }
     }
 
@@ -2414,11 +2437,11 @@
 
             .Coach-comment-line1 {
 
-                display: grid!important;
-                grid-template-columns: repeat(3, 1fr)!important;
-                gap: 20px!important;
-                width: 100%!important;          
-                margin: 0 auto!important; 
+                display: grid !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                gap: 20px !important;
+                width: 100% !important;
+                margin: 0 auto !important;
                 // transform: translateX(-30px);
 
                 &::before {
@@ -2518,7 +2541,7 @@
             .member-comment {
                 color: var(--primary, var(--primary, #FF8740));
                 /* heading/標題3 */
-                font-family:  "Noto Sans TC", sans-serif;
+                font-family: "Noto Sans TC", sans-serif;
                 font-size: 32px;
                 font-style: normal;
                 font-weight: 700;

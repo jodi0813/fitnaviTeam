@@ -13,13 +13,12 @@ export default function PhotoGallery() {
   const [animating, setAnimating] = useState(false);
   const [nextIndex, setNextIndex] = useState(null);
   const [showFirstSet, setShowFirstSet] = useState(true);
+  const [screenType, setScreenType] = useState("large");
 
-  const [screenType, setScreenType] = useState("large"); // 'mobile', 'tablet', 'large'
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
   const containerRef = useRef(null);
 
-  // 監聽視窗寬度變化
   useEffect(() => {
     const updateScreenType = () => {
       const width = window.innerWidth;
@@ -31,21 +30,15 @@ export default function PhotoGallery() {
         setScreenType("large");
       }
     };
-
     updateScreenType();
     window.addEventListener("resize", updateScreenType);
-
-    return () => {
-      window.removeEventListener("resize", updateScreenType);
-    };
+    return () => window.removeEventListener("resize", updateScreenType);
   }, []);
 
   const len = images.length;
-
   const THUMB_WIDTH = 156;
   const THUMB_HEIGHT = 191;
   const GAP = 8;
-
   const MOBILE_GALLERY_WIDTH = THUMB_WIDTH * 2.5 + GAP * 1.5;
 
   const getThumbIndices = (startIdx) => {
@@ -80,7 +73,6 @@ export default function PhotoGallery() {
   const onTouchEnd = () => {
     if (screenType !== "mobile" || touchStart === null || touchEnd === null)
       return;
-
     const distance = touchStart - touchEnd;
     if (distance > 50) {
       const nextIdx = (activeIndex + 1) % len;
@@ -131,15 +123,6 @@ export default function PhotoGallery() {
 
   return (
     <div style={{ textAlign: "center", padding: "0 40px", boxSizing: "border-box" }}>
-      <style>
-        {`
-          img:focus {
-            outline: none !important;
-          }
-        `}
-      </style>
-
-      {/* 主圖 - 手機版不顯示 */}
       {screenType !== "mobile" && (
         <div
           ref={containerRef}
@@ -170,7 +153,6 @@ export default function PhotoGallery() {
         </div>
       )}
 
-      {/* 縮圖列 */}
       <div
         ref={screenType === "mobile" ? containerRef : null}
         onTouchStart={screenType === "mobile" ? onTouchStart : undefined}
@@ -211,10 +193,7 @@ export default function PhotoGallery() {
               key={"f" + pos}
               src={images[idx]}
               alt={`thumb${pos}`}
-              style={{
-                ...getThumbStyle(pos, true),
-                border:  "none",
-              }}
+              style={getThumbStyle(pos, true)}
               draggable={false}
               tabIndex={-1}
               onClick={screenType === "mobile" ? undefined : () => handleClick(idx)}
@@ -227,10 +206,7 @@ export default function PhotoGallery() {
               key={"s" + pos}
               src={images[idx]}
               alt={`thumb${pos}`}
-              style={{
-                ...getThumbStyle(pos, false),
-                border: "none",
-              }}
+              style={getThumbStyle(pos, false)}
               draggable={false}
               tabIndex={-1}
               onClick={screenType === "mobile" ? undefined : () => handleClick(idx)}
@@ -250,53 +226,41 @@ export default function PhotoGallery() {
             gap: 10,
           }}
         >
-          {images.map((_, i) => {
-            const svg =
-              i === activeIndex ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10"
-                  height="10"
-                  viewBox="0 0 10 10"
-                  fill="none"
-                >
-                  <circle cx="5" cy="5" r="5" fill="#f97316" />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="10"
-                  height="10"
-                  viewBox="0 0 10 10"
-                  fill="none"
-                >
-                  <circle cx="5" cy="5" r="5" fill="#989794" />
-                </svg>
-              );
-
-            return (
-              <button
-                key={i}
-                onClick={() => handleClick(i)}
-                disabled={animating}
-                style={{
-                  background: "none",
-                  border: "none",
-                  outline: "none",
-                  padding: 0,
-                  width: 10,
-                  height: 10,
-                  cursor: animating ? "not-allowed" : "pointer",
-                  userSelect: "none",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-                dangerouslySetInnerHTML={{ __html: svg }}
-                aria-label={`切換到第${i + 1}張圖`}
-              />
-            );
-          })}
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => handleClick(i)}
+              disabled={animating}
+              style={{
+                background: "none",
+                border: "none",
+                outline: "none",
+                padding: 0,
+                width: 10,
+                height: 10,
+                cursor: animating ? "not-allowed" : "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              aria-label={`切換到第${i + 1}張圖`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                fill="none"
+              >
+                <circle
+                  cx="5"
+                  cy="5"
+                  r="5"
+                  fill={i === activeIndex ? "#FF8740" : "#989794"}
+                />
+              </svg>
+            </button>
+          ))}
         </div>
       )}
     </div>

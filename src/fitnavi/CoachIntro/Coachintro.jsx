@@ -333,6 +333,58 @@ function Coachintro() {
                                 <p className="SingleClass">/單堂</p>
                             </div>
 
+                            <div className="p-linethrough-color-mobile">
+                                <div className="class-wrapper">
+                                    <div className="first-class">
+                                        <h5>首次體驗</h5>
+                                        <div className="prices">
+                                            <p>NT$</p>
+                                            <h6 className="prices-600">600</h6>
+                                            <p>單堂</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="class-price">
+                                        <h5>單堂價格</h5>
+                                        <div className="prices">
+                                            <p>NT$</p>
+                                            <h6>1,500</h6>
+                                            <p>單堂</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="class-price">
+                                        <h5>單堂價格</h5>
+                                        <div className="prices">
+                                            <p>NT$</p>
+                                            <h6>1,400</h6>
+                                            <p>單堂</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="class-price">
+                                        <h5>單堂價格</h5>
+                                        <div className="prices">
+                                            <p>NT$</p>
+                                            <h6>1,300</h6>
+                                            <p>單堂</p>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        className="classinrto-text-mobile"
+                                        type="button"
+                                        onClick={() => setShowPopup(true)}
+                                    >
+                                        <span className="classinrto-text">立即報名</span>
+
+                                    </button>
+                                </div>
+
+
+
+                            </div>
+
                             <div className="coach-prices-button">
                                 <p>10堂優惠 ：$1,400/單堂</p>
                                 <div className="price-with-button">
@@ -351,19 +403,24 @@ function Coachintro() {
                         </div>
 
                         <div className="Coach-place">
-                            <p>上課地點<br />可選擇</p>
+                            <div className="chooseclassplace">
+                                <p className="choose">可選擇</p> <br />
+                                <p className="classplace">上課地點</p>
+
+                            </div>
+
                             <svg xmlns="http://www.w3.org/2000/svg" width="3" height="143" viewBox="0 0 3 143" fill="none">
                                 <path d="M1.8335 142L1.8335 1" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" />
-                            </svg>
-                            <div className="moreimg4" >
+                            </svg> 
+                             <div className="moreimg4" >
                                 <img src="./images/classplace-1.jpg" alt="" />
                                 <p>World Gym 台北大安店</p>
                             </div>
-
+{/* 
                             <div className="moreimg5">
                                 <img src="./images/center.jpg" alt="" />
                                 <p>TECHNOGym 忠孝館</p>
-                            </div>
+                            </div>    */}
                         </div>
 
                     </div>
@@ -660,13 +717,15 @@ function Coachintro() {
 
             {/* Overlay Modal */}
             {/* {showPopup && <PopupWindow1 onClose={() => setShowPopup(false)} onNext={nextStep} onPrev={prevStep}/>} */}
-            {showPopup && (
-                <StepComponent
-                    onClose={() => setShowPopup(false)}
-                    onNext={nextStep}
-                    onPrev={prevStep}
-                />
-            )}
+            {
+                showPopup && (
+                    <StepComponent
+                        onClose={() => setShowPopup(false)}
+                        onNext={nextStep}
+                        onPrev={prevStep}
+                    />
+                )
+            }
 
         </>
     )
