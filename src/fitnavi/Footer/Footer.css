@@ -436,9 +436,9 @@ a {
 
 }
 
-@media (min-width: 393px) and (max-width: 768px) {
+@media (max-width: 768px) {
 
-   
+
 
     #footer-s {
         flex-shrink: 0;
@@ -479,12 +479,12 @@ a {
         top: 30%;
         left: 50%;
         transform: translateX(-50%);
-        width: 90%;
-        max-width: 500px;
+        width: 100%;
+        max-width: 360px;
         box-sizing: border-box;
-        padding: 0 10px;
+        padding: 0 16px;
     }
-
+    
     #footer-s .slogan-login {
         display: flex;
         flex-direction: column;
@@ -553,6 +553,7 @@ a {
         display: flex;
         flex-direction: column;
         gap: 8px;
+        
     }
 
     #footer-s .footer-icon img {
@@ -568,5 +569,6 @@ a {
         font-weight: 500;
         line-height: 140%;
         letter-spacing: 1.2px;
+        padding: 0 16px;
     }
 }
