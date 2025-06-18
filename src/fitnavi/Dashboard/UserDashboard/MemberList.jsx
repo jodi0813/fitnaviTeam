@@ -19,6 +19,16 @@ function MemberList() {
       <div id="memberListAll">
         <MainTitle title1="會員管理" title2="在這裡管理您的課程及文章" />
         <div className="memberList">
+          <div className="logoutBtMobileBox">
+            {localStorage.getItem("token") && (
+              <button
+                onClick={handleLogout}
+                className="memberBt logoutBtMobile"
+              >
+                登出 <MdOutlineLogout size={20}/>
+              </button>
+            )}
+          </div>
           {/* 左側選單 */}
           <div className="memberBotton">
             {/* 一般用戶 */}
