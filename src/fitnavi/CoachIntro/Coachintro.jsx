@@ -11,7 +11,7 @@ import PopupWindow1 from "./PopupWindow/PopupWindow1";
 import PopupWindow2 from "./PopupWindow/PopupWindow2";
 import PopupWindow3 from "./PopupWindow/PopupWindow3";
 import PopupWindow4 from "./PopupWindow/PopupWindow4";
-import ArticleCardsSwiper from '../../components/ArticleCardsSwiper'; 
+import ArticleCardsSwiper from '../../components/ArticleCardsSwiper';
 import { useRef } from 'react';
 
 
@@ -92,8 +92,8 @@ function Coachintro() {
         },
 
 
-        
-        
+
+
     ];
 
     // 取得目前應該顯示的三張卡片（循環）
@@ -260,6 +260,28 @@ function Coachintro() {
                 />
 
                 <section className="Coachintro-person">
+
+                    <div className="personinfo-mobile">
+
+
+                        <div className="namefavorite-mobile">
+                            <img src="./images/coachintro-mobile.jpg" alt="" className="coachintro-mobile-img" />
+                            <div className="intro-mobile">
+                                <h2>張莉筠 Lila</h2>
+                                <p>＃健身教練#減脂訓練＃個人指導＃TRX</p>
+
+                            </div>
+
+                            <button onClick={() => setLiked(!liked)} className="like-button">
+                                {liked ? (
+                                    <IoMdHeart size={30} color="#FF8740" />
+                                ) : (
+                                    <IoMdHeartEmpty size={30} color="#FF8740" />
+                                )}
+                            </button>
+                        </div>
+
+                    </div>
 
                     <div className="person-class-photo">
                         <div className="coachphotos">
@@ -536,7 +558,7 @@ function Coachintro() {
                                                 onClick={() => navigate(`/article/${card.id}`)}
                                             />
                                         ))}
-                                    </div> 
+                                    </div>
 
                                     <div className="my-swiper-container">
                                         <ArticleCardsSwiper visibleCards={visibleCards} navigate={navigate} />
