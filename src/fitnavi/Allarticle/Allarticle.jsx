@@ -218,6 +218,7 @@ function Allarticle() {
     //小尺寸按鈕視窗控制
     const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
 
+
     return (
         <section id='Allarticle-section'>
             <MainTitle title1="知識文章" title2="補足符合您需求的知識" className="no-line" />
@@ -253,95 +254,90 @@ function Allarticle() {
                     <div className="FilterModal">
                         <div className="FilterModal-overlay" onClick={() => setIsFilterModalOpen(false)}></div>
                         <div className="FilterModal-content">
-                            <h3>條件篩選</h3>
+                            {/* 關閉按鈕 */}
+                            <button className="close-button" onClick={() => setIsFilterModalOpen(false)}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 6L18 18" stroke="#3A2C19" strokeWidth="3" strokeLinecap="round" />
+                                    <path d="M18 6L6 18" stroke="#3A2C19" strokeWidth="3" strokeLinecap="round" />
+                                </svg>
+                            </button>
 
                             {/* 角色選擇 */}
-                            <div className="filter-section">
+                            <div className="filter-role">
                                 <label>選擇角色</label>
                                 <div className="role-button-group">
-                                    <button
-                                        className={selectedRole === '' ? 'active' : ''}
-                                        onClick={() => setSelectedRole('')}
-                                    >
+                                    <button className={selectedRole === '' ? 'active' : ''} onClick={() => setSelectedRole('')}>
                                         不限
                                     </button>
-                                    <button
-                                        className={selectedRole === '教練' ? 'active' : ''}
-                                        onClick={() => setSelectedRole('教練')}
-                                    >
-                                        教練
+                                    <button className={selectedRole === '教練' ? 'active' : ''} onClick={() => setSelectedRole('教練')}>
+                                        健身教練
                                     </button>
-                                    <button
-                                        className={selectedRole === '營養師' ? 'active' : ''}
-                                        onClick={() => setSelectedRole('營養師')}
-                                    >
+                                    <button className={selectedRole === '營養師' ? 'active' : ''} onClick={() => setSelectedRole('營養師')}>
                                         營養師
                                     </button>
                                 </div>
-
                             </div>
 
+                            {/* 分類與標籤 */}
+                            <div className="filter-section-wrapper">
+                                <label>文章分類與標籤</label>
+                                <div className='filter-section'>
+                                    <select value={category} onChange={(e) => setcategory(e.target.value)}>
+                                        <option value="" className='Cat-label'>分類</option>
+                                        <option value="健身入門">健身入門</option>
+                                        <option value="重量訓練">重量訓練</option>
+                                        <option value="燃脂運動">燃脂運動</option>
+                                        <option value="肌力提升">肌力提升</option>
+                                        <option value="體態雕塑">體態雕塑</option>
+                                        <option value="伸展放鬆">伸展放鬆</option>
+                                        <option value="減脂攻略">減脂攻略</option>
+                                        <option value="增肌飲食">增肌飲食</option>
+                                        <option value="營養調配">營養調配</option>
+                                    </select>
 
-
-                            {/* 文章分類 */}
-                            <div className="filter-section">
-                                <label>文章分類</label>
-                                <select value={category} onChange={(e) => setcategory(e.target.value)}>
-                                    <option value="">不限</option>
-                                    <option value="健身入門">健身入門</option>
-                                    <option value="重量訓練">重量訓練</option>
-                                    <option value="燃脂運動">燃脂運動</option>
-                                    <option value="肌力提升">肌力提升</option>
-                                    <option value="體態雕塑">體態雕塑</option>
-                                    <option value="伸展放鬆">伸展放鬆</option>
-                                    <option value="減脂攻略">減脂攻略</option>
-                                    <option value="增肌飲食">增肌飲食</option>
-                                    <option value="營養調配">營養調配</option>
-                                </select>
-                            </div>
-
-                            {/* 標籤選擇 */}
-                            <div className="filter-section">
-                                <label>標籤</label>
-                                <select value={tag} onChange={(e) => setTag(e.target.value)}>
-                                    <option value="">不限</option>
-                                    <option value="新手健身">新手健身</option>
-                                    <option value="迷思破解">迷思破解</option>
-                                    <option value="養成習慣">養成習慣</option>
-                                    <option value="重訓">重訓</option>
-                                    <option value="燃脂">燃脂</option>
-                                    <option value="HIIT訓練">HIIT訓練</option>
-                                    <option value="放鬆肌肉">放鬆肌肉</option>
-                                    <option value="力量突破">力量突破</option>
-                                    <option value="肌力提升">肌力提升</option>
-                                    <option value="曲線雕塑">曲線雕塑</option>
-                                    <option value="瘦身攻略">瘦身攻略</option>
-                                    <option value="體態">體態</option>
-                                    <option value="減脂">減脂</option>
-                                    <option value="健康飲食">健康飲食</option>
-                                    <option value="增肌">增肌</option>
-                                    <option value="蛋白質補充">蛋白質補充</option>
-                                    <option value="健身營養">健身營養</option>
-                                    <option value="飲食">飲食</option>
-                                </select>
+                                    <select value={tag} onChange={(e) => setTag(e.target.value)}>
+                                        <option value="" className='Tag-label'>標籤</option>
+                                        <option value="新手健身">新手健身</option>
+                                        <option value="迷思破解">迷思破解</option>
+                                        <option value="養成習慣">養成習慣</option>
+                                        <option value="重訓">重訓</option>
+                                        <option value="燃脂">燃脂</option>
+                                        <option value="HIIT訓練">HIIT訓練</option>
+                                        <option value="放鬆肌肉">放鬆肌肉</option>
+                                        <option value="力量突破">力量突破</option>
+                                        <option value="肌力提升">肌力提升</option>
+                                        <option value="曲線雕塑">曲線雕塑</option>
+                                        <option value="瘦身攻略">瘦身攻略</option>
+                                        <option value="體態">體態</option>
+                                        <option value="減脂">減脂</option>
+                                        <option value="健康飲食">健康飲食</option>
+                                        <option value="增肌">增肌</option>
+                                        <option value="蛋白質補充">蛋白質補充</option>
+                                        <option value="健身營養">健身營養</option>
+                                        <option value="飲食">飲食</option>
+                                    </select>
+                                </div>
                             </div>
 
                             {/* 關鍵字搜尋 */}
-                            <div className="filter-section">
+                            <div className="filter-keyword">
                                 <label>關鍵字搜尋</label>
                                 <input
                                     type="text"
                                     value={inputTitle}
                                     onChange={(e) => setInputTitle(e.target.value)}
-                                    placeholder="輸入標題或內容關鍵字"
+                                    placeholder="請輸入關鍵字"
+                                    className="input-with-icon"
                                 />
+
                             </div>
-                            {/* 按鈕 */}
+
+                            {/* 搜尋按鈕 */}
                             <button className="apply-button" onClick={() => {
                                 handleSearch();
                                 setIsFilterModalOpen(false);
                             }}>
-                                套用篩選
+                                搜尋
                             </button>
                         </div>
                     </div>
