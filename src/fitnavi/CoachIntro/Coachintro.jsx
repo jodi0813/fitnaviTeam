@@ -558,7 +558,7 @@ function Coachintro() {
                         <div className="Coach-comment-wrapper" ref={phase8Ref}>
                             <div id="Coach-comment">
                                 <div className="commentitle">
-                                    <h3>學員評價</h3>
+                                    <h3 className="member-comment">學員評價</h3>
                                     <h4>Rating</h4>
                                 </div>
 

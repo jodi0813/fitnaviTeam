@@ -561,7 +561,7 @@ function NutriIntro() {
                         <section className="Nutri-comment-wrapper" ref={phase8Ref}>
                             <div id="Nutri-comment">
                                 <div className="Nutricommentitle">
-                                    <h3>學員評價</h3>
+                                    <h3 className="member-comment">學員評價</h3>
                                     <h4>Rating</h4>
                                 </div>
 

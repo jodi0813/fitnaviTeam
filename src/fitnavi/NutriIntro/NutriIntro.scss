@@ -1355,10 +1355,10 @@
             justify-content: flex-start;
             align-items: flex-start;
 
-            h3 {
+            .member-comment {
                 color: var(--primary, #FF8740);
                 font-family: "Noto Sans TC", sans-serif;
-                font-size: 32px;
+                font-size: 32px !important;
                 font-weight: 700;
                 letter-spacing: 3.2px;
                 margin-right: 15px;
@@ -1549,30 +1549,30 @@
                 letter-spacing: 1.4px;
                 // margin-top: 30px;
 
-                @media (max-width: 1024px) {
-                    overflow: hidden;
-                    color: var(--dark, #3A2C19);
-                    text-overflow: ellipsis;
-                    /* 段落/14 */
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
-                    /* 19.6px */
-                    letter-spacing: 1.4px;
-                    overflow: hidden;
-                    color: var(--dark, #3A2C19);
-                    text-overflow: ellipsis;
-                    /* 段落/14 */
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
-                    /* 19.6px */
-                    letter-spacing: 1.4px;
-                }
+                // @media (max-width: 1024px) {
+                //     overflow: hidden;
+                //     color: var(--dark, #3A2C19);
+                //     text-overflow: ellipsis;
+                //     /* 段落/14 */
+                //     font-family: "Noto Sans TC", sans-serif;
+                //     font-size: 14px;
+                //     font-style: normal;
+                //     font-weight: 500;
+                //     line-height: 140%;
+                //     /* 19.6px */
+                //     letter-spacing: 1.4px;
+                //     overflow: hidden;
+                //     color: var(--dark, #3A2C19);
+                //     text-overflow: ellipsis;
+                //     /* 段落/14 */
+                //     font-family: "Noto Sans TC", sans-serif;
+                //     font-size: 14px;
+                //     font-style: normal;
+                //     font-weight: 500;
+                //     line-height: 140%;
+                //     /* 19.6px */
+                //     letter-spacing: 1.4px;
+                // }
             }
 
             .Name-date {
@@ -2515,6 +2515,17 @@
                 align-items: center;
             }
 
+            .member-comment {
+                color: var(--primary, var(--primary, #FF8740));
+                /* heading/標題3 */
+                font-family:  "Noto Sans TC", sans-serif;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 3.2px;
+            }
+
 
             h3 {
                 color: var(--dark, #3A2C19);
@@ -2523,7 +2534,7 @@
                 font-weight: 400;
                 line-height: 150%;
                 text-transform: capitalize;
-                margin-left: 50%;
+                // margin-left: 50%;
             }
 
 
