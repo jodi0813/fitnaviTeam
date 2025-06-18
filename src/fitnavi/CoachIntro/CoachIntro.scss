@@ -2045,6 +2045,23 @@ body {
                         align-items: center;
                         line-height: 140%;
                         margin-bottom: 10px;
+
+                        @media(max-width:768px) {
+                            width: 32px;
+                            height: 32px;
+                            color: var(--white, var(--white, #FEFCF7));
+                            text-align: center;
+
+                            /* heading/標題4/Bold */
+                            font-family: "Noto Sans TC", sans-serif;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                            letter-spacing: 2px;
+                            padding-left: 2px;
+                            padding-right: 2px;
+                        }
                     }
                 }
 
@@ -2073,6 +2090,8 @@ body {
                         white-space: nowrap;
                         margin-bottom: 30px;
                         margin-top: 10px;
+
+                        
                     }
 
                 }
