@@ -1305,12 +1305,20 @@
                 display: flex;
                 flex-direction: row;
                 gap: 24px;
-                width: auto;
+                width: 100%;
+                margin: 0 auto;
 
-                // 不需要 align-items: center
+                @media (min-width: 1025px) {
+                    width: 80%;
+                }
+
                 @media (min-width: 1680px) {
                     gap: 30px;
                 }
+            }
+
+            .my-swiper-container {
+                display: none;
             }
 
         }
@@ -1370,39 +1378,40 @@
 
         .Nutristar-card-wrapper {
             width: 100%;
-            // max-width: 1200px;
-            margin: 0 auto;
+            max-width: 1200px !important;
+            margin-left: auto;
+            margin-right: auto;
             box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
 
-            @media (max-width:1440px) {
-                margin-left: -3%;
 
-            }
+            // @media (max-width:1440px) {
+            //     margin-left: -3%;
+
+            // }
 
             .star-rate {
-                position: relative;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
                 margin: 0 auto;
+                position: relative;
 
-                @media (max-width:1920px) {
-                    margin-left: 32%;
+                // @media (max-width:1920px) {
+                //     margin-left: 32%;
 
-                }
+                // }
 
 
                 p {
                     color: var(--dark, #3A2C19);
-                    text-align: center;
+                    justify-content: flex-start;
                     font-size: 100px;
+                    font-style: normal;
                     font-weight: 400;
                     line-height: 150%;
+                    /* 150px */
                     text-transform: capitalize;
+
 
                 }
 
@@ -1415,23 +1424,31 @@
                 }
             }
 
-            .Nutri-commentcard {
+            .Coach-comment-line1 {
+
                 width: 100%;
-                margin: 0 auto;
+                margin: 0 auto !important;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
                 gap: 50px;
                 position: relative;
 
-                .Nutri-commentcard {
+
+
+
+                .Coach-comment-card {
                     width: 300px;
                     height: 300px;
                     padding: 30px 30px 18px 30px;
+                    position: relative;
+
+
+
                 }
 
-                .Nutri-commentcard>* {
+                .Coach-comment-card>* {
                     @media (max-width: 1024px) {
                         width: 100% !important;
                         height: 100% !important;
@@ -1442,6 +1459,7 @@
                 &::before,
                 &::after {
                     content: "";
+                    content: "";
                     position: absolute;
                     top: 0;
                     bottom: 0;
@@ -1450,13 +1468,56 @@
                 }
 
                 &::before {
-                    left: calc(33.33% - 40px);
+                    left: calc(33.33% - 35px);
                 }
 
                 &::after {
-                    left: clamp(300px, 66.66% - 60px, 1200px);
+                    left: calc(66.66% - 75px);
                 }
             }
+
+            // .Nutri-commentcard {
+            //     width: 100%;
+            //     margin: 0 auto;
+            //     display: flex;
+            //     flex-wrap: wrap;
+            //     justify-content: center;
+            //     align-items: center;
+            //     gap: 50px;
+            //     position: relative;
+
+            //     .Nutri-commentcard {
+            //         width: 300px;
+            //         height: 300px;
+            //         padding: 30px 30px 18px 30px;
+            //     }
+
+            //     .Nutri-commentcard>* {
+            //         @media (max-width: 1024px) {
+            //             width: 100% !important;
+            //             height: 100% !important;
+            //             box-sizing: border-box;
+            //         }
+            //     }
+
+            //     &::before,
+            //     &::after {
+            //         content: "";
+            //         position: absolute;
+            //         top: 0;
+            //         bottom: 0;
+            //         width: 1px;
+            //         border-left: 1px dashed #ccc;
+            //     }
+
+            //     &::before {
+            //         left: calc(33.33% - 40px);
+            //     }
+
+            //     &::after {
+            //         left: clamp(300px, 66.66% - 60px, 1200px);
+            //     }
+            // }
 
             .Star-rate {
                 display: flex;
@@ -1468,37 +1529,69 @@
             h3 {
                 color: var(--dark, #3A2C19);
                 font-size: 30px;
+                font-style: normal;
                 font-weight: 400;
                 line-height: 150%;
+                /* 45px */
                 text-transform: capitalize;
-                margin-left: 40%;
+                margin-left: 50%;
             }
 
             p.description {
                 color: var(--dark, #3A2C19);
+                /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 14px;
+                font-style: normal;
                 font-weight: 500;
                 line-height: 140%;
+                /* 19.6px */
                 letter-spacing: 1.4px;
-                margin-top: 30px;
+                // margin-top: 30px;
+
+                @media (max-width: 1024px) {
+                    overflow: hidden;
+                    color: var(--dark, #3A2C19);
+                    text-overflow: ellipsis;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    overflow: hidden;
+                    color: var(--dark, #3A2C19);
+                    text-overflow: ellipsis;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                }
             }
 
             .Name-date {
-                margin-top: 90px;
                 display: flex;
                 flex-direction: row;
                 gap: 120px;
-
-                @media (max-width: 1024px) {
-                    gap: 50px;
-                }
+                position: absolute;
+                top: 280px;
 
                 p.Name {
                     color: #000;
+
+                    /* 段落/14 */
                     font-family: "Noto Sans TC", sans-serif;
                     font-size: 14px;
+                    font-style: normal;
                     font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
                     letter-spacing: 1.4px;
                     white-space: nowrap;
                 }
@@ -1506,9 +1599,13 @@
                 p.Date {
                     color: var(--dark, #3A2C19);
                     text-align: right;
-                    font-family: "Noto Sans TC", sans-serif;
+                    /* 段落/14 */
+                    font-family: " Sans TC";
                     font-size: 14px;
+                    font-style: normal;
                     font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
                     letter-spacing: 1.4px;
                 }
             }
@@ -1520,82 +1617,84 @@
             align-items: center;
             width: 100%;
             margin-top: 5%;
+            margin-left: -50px;
 
-            @media (max-width:1920px) {
-                margin-left: -70px;
 
-            }
+            button {
+                align-self: center;
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-            @media (max-width:1440px) {
-                margin-left: -30px;
+                width: 300px;
+                height: 40px;
+                border-radius: 999px;
+                background: var(--primary, #FF8740);
+                border: none;
+                cursor: pointer;
 
-            }
-        }
-
-        button {
-            align-self: center;
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            width: 300px;
-            height: 40px;
-            border-radius: 999px;
-            background: var(--primary, #FF8740);
-            border: none;
-            cursor: pointer;
-
-            font-family: "Noto Sans TC", sans-serif;
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: var(--white, #FEFCF7);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-
-            .seeMore-text {
-                transition: transform 0.3s ease, color 0.3s ease;
-            }
-
-            img {
-                width: 24px;
-                height: 24px;
-                opacity: 0;
-                position: absolute;
-                right: 30px;
-                transition: opacity 0.3s ease;
-            }
-
-            &:hover {
-                background: var(--white, #FEFCF7);
-                border: 1px solid var(--primary, #FF8740);
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                color: var(--white, #FEFCF7);
+                text-align: center;
+                position: relative;
+                overflow: hidden;
 
                 .seeMore-text {
-                    transform: translateX(-10px);
-                    color: var(--primary, #FF8740);
+                    transition: transform 0.3s ease, color 0.3s ease;
                 }
 
                 img {
-                    opacity: 1;
-                }
-            }
-
-            &:active {
-                .seeMore-text {
-                    color: var(--primary, #FF8740);
-                    font-size: 16px;
-                    font-weight: 500;
-                    letter-spacing: 1.6px;
+                    width: 24px;
+                    height: 24px;
+                    opacity: 0;
+                    position: absolute;
+                    right: 30px;
+                    transition: opacity 0.3s ease;
                 }
 
-                img {
-                    width: 20px;
-                    height: 20px;
+                &:hover {
+
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 999px;
+                    background: var(--white, #FEFCF7);
+                    border: 1px solid var(--primary, #FF8740);
+
+                    .seeMore-text {
+                        transform: translateX(-10px); // 向左滑動
+                        color: var(--primary, #FF8740);
+                    }
+
+                    img {
+                        opacity: 1;
+                        // transform: translateX(0); // icon 滑進來
+                    }
                 }
+
+                &:active {
+                    outline: none;
+
+                    .seeMore-text {
+                        color: var(--primary, var(--primary, #FF8740));
+                        font-size: 16px;
+                        font-weight: 500;
+                        letter-spacing: 1.6px;
+                    }
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
             }
+
         }
+
     }
 }
 
@@ -1950,7 +2049,7 @@
         .Nutriabout-title {
             flex-direction: column;
             align-items: flex-start;
-            padding-left: 2.5rem;
+            padding-left: 0.5rem;
             margin-top: 20rem !important;
 
             h3 {
@@ -1976,7 +2075,7 @@
             font-weight: 500;
             line-height: 40px;
             letter-spacing: 0.4px;
-            padding-left: 2.5rem !important;
+            padding-left: 1.5rem !important;
             /* Consider reducing this padding or making it horizontal only */
             max-width: 90% !important;
             /* Ensure the paragraph doesn't exceed its parent's width */
@@ -2000,27 +2099,31 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end !important;
-        max-width: 10% !important;
+        max-width: 12% !important;
         align-self: stretch;
-    }
+        transform: translateX(-30px); 
+ 
 
-    .Nutri-intro {
-        margin-top: 8rem !important;
-        width: 100%;
-
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-end;
-            border-right: 0.6px solid #3A2C19;
-            gap: 30px;
-            padding-right: 105px !important;
-            padding-left: 10px;
+        .Nutri-intro {
+            margin-top: 5rem !important;
+            width: 100%;
+    
+    
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                border-right: 0.6px solid #3A2C19;
+                gap: 30px;
+                padding-right: 110px !important;
+                // padding-left: 10px;
+            }
+    
         }
-
     }
+
+
 
 
 
@@ -2036,7 +2139,7 @@
     }
 
     .spetitle {
-        padding-left: 20px;
+
 
         h3 {
             white-space: nowrap;
@@ -2113,22 +2216,22 @@
                 font-size: 14px !important;
                 font-style: normal !important;
                 font-weight: 500 !important;
-                line-height: 140%!important;
+                line-height: 140% !important;
                 /* 19.6px */
-                letter-spacing: 1.4px!important
+                letter-spacing: 1.4px !important
             }
 
             p {
 
-                color: var(--gray, #989794)!important;
+                color: var(--gray, #989794) !important;
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif !important;
                 font-size: 14px !important;
-                font-style: normal!important;
-                font-weight: 500!important;
-                line-height: 140%!important;
-                letter-spacing: 1.4px!important;
-                margin-bottom: 2rem!important;
+                font-style: normal !important;
+                font-weight: 500 !important;
+                line-height: 140% !important;
+                letter-spacing: 1.4px !important;
+                margin-bottom: 2rem !important;
             }
 
 
@@ -2246,11 +2349,17 @@
             }
         }
 
-        .Nutri-Available-calendar {
-            margin: 0px !important;
+
+        .Nutri-calendar-reservetime {
+
+            margin-top: 80px;
         }
 
 
+
+        .Nutri-Available-calendar {
+            margin: 20px !important;
+        }
 
     }
 
@@ -2261,71 +2370,210 @@
 
 
     #Nutriarticle {
-        width: 100% !important;
-        max-width: none;
-        margin-top: 80px !important;
-        margin-left: 1% !important;
-        /* 讓內容盡量靠左，或視情況調整 */
-        overflow-x: unset;
-    }
-
-    .Nutri-ViewArticles {
-        max-width: 80% !important;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin-top: 5rem !important;
+        overflow-x: visible;
 
     }
+
+    // .Nutri-ViewArticles {
+    //     max-width: 80% !important;
+    //     position: relative;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+
+    // }
 
     //   
     .NutriViewArticles-left {
-        width: 12px;
-        height: 24px;
-        left: 5px;
+        display: none !important;
     }
 
     .NutriViewArticles-right {
-        width: 12px;
-        height: 24px;
-        right: 5px;
+        display: none !important;
     }
 
-    // .Three-classcards {
-    //     display: flex;
-    //     flex-direction: row;
-    //     gap: 16px !important;
-    //     // max-width: 1200px !important;
-    //     margin: 0 auto;
-    //     // padding: 0 50px;
-    //     // /* 預留空間給左右箭頭 */
-    //     box-sizing: border-box;
-    // }
+    .Three-classcards {
+        display: none !important;
+    }
+
+    .my-swiper-container {
+        display: block !important;
+    }
+
 
     #Nutri-comment {
         width: 100% !important;
-        max-width: none;
-        padding: 0 10px;
         overflow-x: auto;
-        margin-top: 150px !important; // 視需求調整
-        margin-left: 1% !important;
+        margin-top: 150px !important;
+
+        .Nutristar-card-wrapper {
+            width: 100% !important;
+            margin: 0 auto !important;
+            box-sizing: border-box !important;
+
+            .Coach-comment-line1 {
+
+                display: grid!important;
+                grid-template-columns: repeat(3, 1fr)!important;
+                gap: 20px!important;
+                width: 100%!important;          
+                margin: 0 auto!important; 
+                // transform: translateX(-30px);
+
+                &::before {
+                    position: absolute;
+                    left: 33% !important;
+
+                }
+
+                &::after {
+                    position: absolute;
+                    left: 66% !important;
+                }
+
+
+            }
+
+            .Coach-comment-card {
+                width: 12rem !important;
+                height: 15rem !important;
+                padding: 0px !important;
+
+
+                p.description {
+                    width: 140px !important;
+                    height: 100px !important;
+                    color: var(--dark, #3A2C19);
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px !important;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1.4;
+                    letter-spacing: 1.4px;
+                    padding-left: 12px !important;
+                    padding-right: 12px !important;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    /* 限制顯示兩行 */
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                }
+
+                .Name-date {
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center !important;
+                    align-items: center !important;
+                    gap: 20px !important;
+                    position: absolute;
+                    top: 200px !important;
+
+
+                    p.Name {
+                        color: #000;
+
+                        /* 段落/14 */
+                        font-family: "Noto Sans TC", sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                        white-space: nowrap;
+                    }
+
+                    p.Date {
+                        color: var(--gray, #989794);
+                        text-align: right;
+                        /* 段落/14 */
+                        font-family: " Sans TC";
+                        font-size: 12px !important;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                    }
+
+
+                }
+
+
+
+            }
+
+
+            .Star-rate {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+
+            h3 {
+                color: var(--dark, #3A2C19);
+                font-size: 14px !important;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                text-transform: capitalize;
+                margin-left: 50%;
+            }
+
+
+            p.description {
+
+                color: var(--dark, #3A2C19);
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                letter-spacing: 1.4px;
+                // margin-top: 30px;
+                // margin: 30px auto 0 auto !important;
+                text-align: left;
+                width: 200px;
+                margin-top: 10px !important;
+
+            }
+        }
     }
 
+
+
     .nutrisvg {
-        position: relative;
-        right: 50px !important;
+        position: absolute;
+        top: 14rem;
+        right: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        svg {
+            width: 224px;
+            height: auto;
+            transform: rotate(-8.679deg);
+        }
 
         p {
-            top: -20px;
-            right: 90px;
+            margin-top: 0.2rem;
+            // margin-right: 9rem;
             color: var(--dark, #3A2C19);
             font-family: "Noto Sans TC", sans-serif;
-            font-size: 32px !important;
-            font-style: normal;
+            font-size: 20px;
+            width: fit-content;
+            transform: rotate(-8.679deg);
             font-weight: 700;
-            line-height: normal;
-            letter-spacing: 3.2px;
+            letter-spacing: 2px;
             white-space: nowrap;
+            right: 20px;
         }
     }
 

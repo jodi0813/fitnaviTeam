@@ -1,15 +1,17 @@
 import "./NutriIntro.scss";
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import MaintitleBread from '../../components/Title/MaintitleBread';
 import { IoMdHeartEmpty, IoMdHeart } from "react-icons/io";
 import { BsClock } from "react-icons/bs";
-import Articlecards from '../../components/Articlecards/Articlecards';
+import Articlecardscoach from "../../components/Articlecards/Articlecardscoach";
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
 import PhotoGallery2 from "../../components/Carousel/PhotoGallery2";
 import PopupWindow1 from '../NutriIntro/PopupWindow/PopupWindow1';
 import PopupWindow2 from '../NutriIntro/PopupWindow/PopupWindow2';
 import PopupWindow3 from '../NutriIntro/PopupWindow/PopupWindow3';
 import PopupWindow4 from '../NutriIntro/PopupWindow/PopupWindow4';
+import ArticleCardsSwiper from '../../components/ArticleCardsSwiper'; 
 import { useRef } from 'react';
 
 
@@ -17,6 +19,9 @@ import { useRef } from 'react';
 function NutriIntro() {
     //管理愛心
     const [liked, setLiked] = useState(false);
+
+    //管理導航
+    const navigate = useNavigate();
 
     //管理彈窗
     //管理彈窗打開
@@ -214,6 +219,13 @@ function NutriIntro() {
         nutriArticleData[(index + 1) % nutriArticleData.length],
         nutriArticleData[(index + 2) % nutriArticleData.length],
     ];
+
+    const visibleCards = [
+        nutriArticleData[index % nutriArticleData.length],
+        nutriArticleData[(index + 1) % nutriArticleData.length],
+        nutriArticleData[(index + 2) % nutriArticleData.length],
+    ];
+    
 
     //頁面區域移動
     const phase1Ref = useRef(null);
@@ -513,7 +525,7 @@ function NutriIntro() {
 
                                         {nutrivisibleCards.map((card, index) => (
 
-                                            <Articlecards
+                                            <Articlecardscoach
                                                 key={index}
                                                 date={card.date}
                                                 img={card.img}
@@ -528,6 +540,11 @@ function NutriIntro() {
 
 
                                     </div>
+
+                                    <div className="my-swiper-container">
+                                        <ArticleCardsSwiper visibleCards={visibleCards} navigate={navigate} />
+                                    </div>
+
                                     <button className=" NutriViewArticles-right" onClick={goBack}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="26" viewBox="0 0 14 26" fill="none">
                                             <path d="M1 25L13 13L1 1" stroke="#3A2C19" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -572,26 +589,16 @@ function NutriIntro() {
 
                                     </div>
 
-                                    <div className="Nutri-commentcard" style={{
-                                        display: "grid",
-                                        flexDirection: "column",
-                                        gridTemplateColumns: "repeat(3, 1fr)", // 每行 3 欄
-                                        gap: "1%",
-                                        maxWidth: "100%",
-                                        // 3 張卡片寬 + gap
-                                        margin: "0 auto",  // 置中
-                                        width: "100%",
-                                    }}>
-
+                                    <div className="Coach-comment-line1">
                                         {cardData.slice(0, 9).map((card, index) => (
                                             <div
+                                                className="Coach-comment-card"
                                                 key={index}
                                                 style={{
-                                                    marginTop: (index === 1 || index === 4 || index === 7) ? "60px" : "10px" // 設定 marginTop
-                                                }}>
-
+                                                    marginTop: (index === 1 || index === 4 || index === 7) ? "60px" : "10px"
+                                                }}
+                                            >
                                                 <ColorCard
-                                                    key={index}
                                                     description={card.description}
                                                     cardColor={card.color}
                                                     rate={parseFloat(card.rate)}
@@ -600,7 +607,6 @@ function NutriIntro() {
                                                 />
                                             </div>
                                         ))}
-
                                     </div>
 
                                     <div className="seeMoreComment">
