@@ -402,6 +402,7 @@ function Allarticle() {
                 <div className='Allarticle-cards'>
                     <div className="Allarticle-cards-title">
                         <p>Articles</p>
+                        <img src="./images/findLesson.png" alt="" />
                         <h4>
                             {(() => {
                                 const filters = [];

@@ -10,8 +10,8 @@
 
 #Allarticle-section {
     padding-top: 120px;
-    // padding-left: 50px;
-    // padding-right: 0;
+    padding-left: 50px;
+    padding-right: 50px;
     box-sizing: border-box;
     // overflow-x: hidden;
     /* 隱藏橫向溢出 */
@@ -22,6 +22,14 @@
     align-items: stretch;
 
     @media (min-width: 600px) and (max-width: 1024px) {
+        padding-top: 0px;
+        padding-bottom: 10rem; // 多留點空間讓 footer 不會蓋住內容
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    @media (max-width: 599px) {
         padding-top: 0px;
         padding-bottom: 10rem; // 多留點空間讓 footer 不會蓋住內容
 
@@ -48,6 +56,12 @@
         margin-top: 10px;
 
     }
+
+    @media (max-width: 599px) {
+        margin-top: 10px;
+
+    }
+
 
 
     /* === 桌機版元件（預設顯示） === */
@@ -933,6 +947,7 @@
             margin-right: 0px;
             border-bottom: 2px solid #3A2C19;
             padding-bottom: 5px;
+            position: relative;
 
             @media (min-width: 600px) and (max-width: 1024px) {
                 display: flex;
@@ -941,20 +956,35 @@
                 right: 1rem;
                 border-bottom: none;
                 gap: 12px;
-               
+
             }
 
             p {
                 color: var(--dark, #3A2C19);
-                /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 14px;
                 font-style: normal;
-                font-weight: 500;
-                // line-height: 140%;
-                /* 19.6px */
+                font-weight: 600; /* 變粗點 */
                 letter-spacing: 1.4px;
-            }
+              
+                @media (max-width: 1024px) {
+                  position: relative;
+                  z-index: 2;
+                  color: var(--dark, #3A2C19);
+              
+                  -webkit-text-stroke-width: 1px;
+                  -webkit-text-stroke-color: rgba(254, 252, 247, 0.3);
+                  font-family: "Noto Sans TC";
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 140%;
+                  letter-spacing: 1.4px;
+                  overflow: hidden;
+                }
+              }
+              
+
 
             h4 {
                 color: var(--primary, var(--primary, #FF8740));
@@ -966,6 +996,34 @@
                 line-height: normal;
                 margin: 0px;
                 white-space: nowrap;
+
+                @media (max-width: 1024px) {
+                    color: var(--primary, var(--primary, #FF8740));
+                    text-align: right;
+                    font-family: "Dela Gothic One";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    z-index: 2;
+
+                }
+            }
+
+            img {
+                display: none;
+
+                @media  (max-width: 1024px) {
+                    display: block;
+                    width: 143px;
+                    height: 150px;
+                    position: absolute;
+                    opacity: 0.3;
+                    z-index: 0;
+                    right: -30px;
+                    top: -20px;
+
+                }
             }
         }
 
@@ -991,7 +1049,7 @@
                 // padding: 0 16px;
                 box-sizing: border-box;
                 width: 100%;
-                margin-top: 5rem;
+                margin-top: 6rem;
             }
 
             @media (max-width: 599px) {
