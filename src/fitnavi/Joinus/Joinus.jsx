@@ -28,12 +28,13 @@ function Joinus() {
 
     return (
         <>
+            <MainTitle
+                title1="加入我們"
+                title2="成為我們的合作夥伴"
+                className="no-line"
+            />
             <section id='Joinus-Form'>
-                <MainTitle
-                    title1="加入我們"
-                    title2="成為我們的合作夥伴"
-                    className="no-line"
-                />
+
 
                 <section className='Joinus-introduction'>
                     <p className='BringPro'>把你的專業，帶到更多人眼前。</p>

@@ -8,7 +8,7 @@ import { MdOutlineLogout } from "react-icons/md";
 
 function MemberList() {
   const [memberTab, setMemberTab] = useState("myinfo");
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
@@ -22,7 +22,7 @@ function MemberList() {
           {/* 左側選單 */}
           <div className="memberBotton">
             {/* 一般用戶 */}
-            <div className="memberListBox personalList">
+            <div className="memberListBox">
               <button
                 className={
                   memberTab === "myinfo" ? "memberBt memberActive" : "memberBt"
