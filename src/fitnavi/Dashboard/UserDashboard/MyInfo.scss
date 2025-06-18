@@ -10,6 +10,7 @@
   border-radius: 24px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
   @media (max-width: 1024px) {
+    align-items: center;
     box-shadow: none;
     background-color: transparent;
     padding: 0px;
@@ -52,6 +53,7 @@
       .myinfoNameBox {
         display: flex;
         gap: 32px;
+
         .myinfoName {
           display: flex;
           align-items: center;
@@ -92,7 +94,22 @@
             font-weight: 700;
             line-height: normal;
             letter-spacing: 2px;
+            @media (max-width: 1024px) {
+              color: #ff8740;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 140%; /* 16.8px */
+              letter-spacing: 1.2px;
+            }
           }
+        }
+      }
+      .coachinfoNameBox {
+        @media (max-width: 1024px) {
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
         }
       }
     }
@@ -123,13 +140,23 @@
     @media (max-width: 1024px) {
       flex-direction: column;
       gap: 24px;
+      width: 60%;
+    }
+    @media (max-width: 767px) {
+      flex-direction: column;
+      gap: 24px;
+      width: 100%;
     }
     .profileContentLeft {
       display: flex;
       flex-direction: column;
       gap: 24px;
     }
-
+    .profileContent1 {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
     .myinfoSection {
       display: flex;
       flex-direction: column;
@@ -195,27 +222,28 @@
         .myinfoCheckbox {
           display: flex;
           flex-direction: column;
-          .myinfoCheck{
-                  display: flex;
-                  align-items: center;
-          .trShow {
-            font-size: 14px;
-            color: #000;
-            font-family: "Noto Sans TC";
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%; /* 19.6px */
-            letter-spacing: 1.4px;
-            @media (max-width: 1024px) {
-              color: #989794;
+          .myinfoCheck {
+            display: flex;
+            align-items: center;
+            .trShow {
+              font-size: 14px;
+              color: #000;
               font-family: "Noto Sans TC";
-              font-size: 12px;
               font-style: normal;
               font-weight: 500;
-              line-height: 140%; /* 16.8px */
-              letter-spacing: 1.2px;
+              line-height: 140%; /* 19.6px */
+              letter-spacing: 1.4px;
+              @media (max-width: 1024px) {
+                color: #989794;
+                font-family: "Noto Sans TC";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%; /* 16.8px */
+                letter-spacing: 1.2px;
+              }
             }
-          }}
+          }
         }
       }
     }

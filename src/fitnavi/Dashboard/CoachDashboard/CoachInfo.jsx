@@ -1,4 +1,3 @@
-
 import Subtitle from "../../../components/Title/Subtitle";
 import "../UserDashboard/MyInfo.scss";
 function CoachInfo() {
@@ -13,7 +12,7 @@ function CoachInfo() {
           <div className="myinfoHeader">
             <div className="myinfoNameSection">
               <img src="./images/coach13.jpg" className="myinfoAvatar" />
-              <div className="myinfoNameBox">
+              <div className="myinfoNameBox coachinfoNameBox">
                 <div className="myinfoName">
                   <span className="coachinfoName">健身教練</span>
                 </div>
@@ -29,10 +28,10 @@ function CoachInfo() {
                 </div>
               </div>
             </div>
-            <div className="myinfoBt">
+            {/* <div className="myinfoBt">
               <button className="myinfoBt1">編輯個人資訊</button>
               <button className="myinfoBt1">編輯教練詳細介紹</button>
-            </div>
+            </div> */}
           </div>
 
           {/* 基本資料+健康資訊+聯絡資訊 */}
@@ -61,12 +60,14 @@ function CoachInfo() {
                 <h3 className="myinfosectionTitle">聯絡資訊</h3>
                 <div className="myinfoItem">
                   <span className="myinfoItem1">Email</span>
-                  <span>feifei0303@gmail.com</span>
                   <div className="myinfoCheckbox">
-                    <input type="checkbox" name="stuCheck" id="stuCheck" />
-                    <label htmlFor="stuCheck" className="trShow">
-                      在訂單中顯示
-                    </label>
+                    <span>feifei0303@gmail.com</span>
+                    <div className="myinfoCheck">
+                      <input type="checkbox" name="stuCheck" id="stuCheck" />
+                      <label htmlFor="stuCheck" className="trShow">
+                        在訂單中顯示
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <div className="myinfoItem">
@@ -110,8 +111,11 @@ function CoachInfo() {
                 <h3 className="myinfosectionTitle">收款方式</h3>
                 <div className="myinfoItem">
                   <span className="myinfoItem1"> 銀行轉帳</span>
-                  <span>未來銀行 台北分行<br />
-                    999-123456789012</span>
+                  <span>
+                    未來銀行 台北分行
+                    <br />
+                    999-123456789012
+                  </span>
                 </div>
               </div>
             </div>

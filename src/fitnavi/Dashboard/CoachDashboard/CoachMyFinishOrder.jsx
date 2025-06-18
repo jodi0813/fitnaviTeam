@@ -14,7 +14,7 @@ function CoachMyFinishOrder() {
                     <span>課程進度</span>
                     <span>課程狀態</span>
                 </div>
-                <div>無資料</div>
+                <div  className="noOrder">無資料</div>
             </div>
 
         </>
