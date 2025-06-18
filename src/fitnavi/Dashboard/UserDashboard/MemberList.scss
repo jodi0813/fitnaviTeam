@@ -2,15 +2,19 @@
 #memberListAll {
   display: flex;
   flex-direction: column;
-  width:100vw;
+  width: 100vw;
   padding: 120px 80px;
   gap: 28px;
+  @media (max-width: 1024px) {
+    padding: 0px;
 
-
-
+  }
   .memberList {
     display: flex;
-
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+    }
     .memberBotton {
       display: flex;
       flex-direction: column;
@@ -18,22 +22,38 @@
       width: 20%;
       padding-top: 70px;
       padding-left: 30px;
+      @media (max-width: 1024px) {
+        flex-direction: row;
+        padding-top: 0px;
+        width: 90%;
+        max-width: 600px ;
+      }
       .memberListBox {
         display: flex;
         flex-direction: column;
         gap: 10px;
         border-radius: 20px 0px 0px 20px;
-        background: #fbadad;
+        background-color: #fbadad;
         padding: 20px 20px 0 20px;
         width: 206px;
-    
+        @media (max-width: 1024px) {
+          flex-direction: row;
+          justify-content: space-evenly;
+          background-color: #fff;
+          width: 100%;
+          border-radius: 99px;
+          border: 0.5px solid #989794;
+          padding: 0;
+        }
       }
       .memberListBox.studentList {
         background: #fbdbad;
       }
       .member1 {
-        width:100px;
-
+        width: 100px;
+        @media (max-width: 1024px) {
+          display: none;
+        }
       }
 
       /* 被選到跟沒選到的按鈕樣式 */
@@ -54,6 +74,17 @@
         justify-content: center;
         align-items: center;
         white-space: nowrap;
+        color: #3a2c19;
+        @media (max-width: 1024px) {
+          background: transparent;
+          font-family: "Noto Sans TC";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%; /* 16.8px */
+          letter-spacing: 1.2px;
+                 width: auto;
+        }
       }
       .memberBt.memberActive {
         width: 216px;
@@ -64,9 +95,22 @@
         letter-spacing: 2px;
         outline: none;
         z-index: 1;
+        @media (max-width: 1024px) {
+          color: #ff8740;
+          font-family: "Noto Sans TC";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 140%; /* 16.8px */
+          letter-spacing: 1.2px;
+          width: auto;
+        }
       }
-            .logoutBt{
-        margin-top: 48px ;
+      .logoutBt {
+        margin-top: 48px;
+        @media (max-width: 1024px) {
+          margin-top: 0px;
+        }
       }
     }
   }
