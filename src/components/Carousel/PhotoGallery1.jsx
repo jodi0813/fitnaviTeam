@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from "react";
 
 const images = [
@@ -15,7 +14,7 @@ export default function PhotoGallery() {
   const [nextIndex, setNextIndex] = useState(null);
   const [showFirstSet, setShowFirstSet] = useState(true);
 
-  const [screenType, setScreenType] = useState('large'); // 'mobile', 'tablet', 'large'
+  const [screenType, setScreenType] = useState("large"); // 'mobile', 'tablet', 'large'
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
   const containerRef = useRef(null);
@@ -25,73 +24,34 @@ export default function PhotoGallery() {
     const updateScreenType = () => {
       const width = window.innerWidth;
       if (width >= 393 && width <= 768) {
-        setScreenType('mobile');
+        setScreenType("mobile");
       } else if (width >= 769 && width <= 1024) {
-        setScreenType('tablet');
+        setScreenType("tablet");
       } else {
-        setScreenType('large');
+        setScreenType("large");
       }
     };
 
     updateScreenType();
-    window.addEventListener('resize', updateScreenType);
+    window.addEventListener("resize", updateScreenType);
 
     return () => {
-      window.removeEventListener('resize', updateScreenType);
+      window.removeEventListener("resize", updateScreenType);
     };
   }, []);
 
   const len = images.length;
 
-  // 根據螢幕類型設定尺寸
-  const getConfig = () => {
-    switch (screenType) {
-      case 'mobile':
-        const mobileWidth = Math.min(window.innerWidth - 32, 350);
-        const mobileThumbWidth = (mobileWidth - 3 * 8) / 4; // 4張圖，3個間距
-        return {
-          GALLERY_WIDTH: mobileWidth,
-          GAP: 8,
-          THUMB_WIDTH: mobileThumbWidth,
-          THUMB_HEIGHT: mobileThumbWidth * 1.1, // 稍微高一點
-          MAIN_IMG_HEIGHT: 0, // 手機版不顯示主圖
-          SHOW_THUMBS: 4, // 顯示4張縮圖
-        };
-      case 'tablet':
-        return {
-          GALLERY_WIDTH: 260,
-          GAP: 12,
-          THUMB_WIDTH: 78,
-          THUMB_HEIGHT: 84,
-          MAIN_IMG_HEIGHT: 308,
-          SHOW_THUMBS: 3,
-        };
-      default:
-        return {
-          GALLERY_WIDTH: 480,
-          GAP: 15,
-          THUMB_WIDTH: (480 - 15 * 2) / 3,
-          THUMB_HEIGHT: 130,
-          MAIN_IMG_HEIGHT: 640,
-          SHOW_THUMBS: 3,
-        };
-    }
-  };
+  const THUMB_WIDTH = 156;
+  const THUMB_HEIGHT = 191;
+  const GAP = 8;
 
-  const config = getConfig();
+  const MOBILE_GALLERY_WIDTH = THUMB_WIDTH * 2.5 + GAP * 1.5;
 
-  const getThumbIndices = (idx) => {
+  const getThumbIndices = (startIdx) => {
     const indices = [];
-    if (screenType === 'mobile') {
-      // 手機版顯示連續的4張圖
-      for (let i = 0; i < config.SHOW_THUMBS; i++) {
-        indices.push((idx + i) % len);
-      }
-    } else {
-      // 桌面版和平板版顯示下幾張圖
-      for (let i = 1; i <= config.SHOW_THUMBS; i++) {
-        indices.push((idx + i) % len);
-      }
+    for (let i = 0; i < 4; i++) {
+      indices.push((startIdx + i) % len);
     }
     return indices;
   };
@@ -106,32 +66,26 @@ export default function PhotoGallery() {
       ? getThumbIndices(nextIndex ?? activeIndex)
       : getThumbIndices(activeIndex);
 
-  // 觸摸事件處理
   const onTouchStart = (e) => {
-    if (screenType !== 'mobile') return;
+    if (screenType !== "mobile") return;
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
   };
 
   const onTouchMove = (e) => {
-    if (screenType !== 'mobile') return;
+    if (screenType !== "mobile") return;
     setTouchEnd(e.targetTouches[0].clientX);
   };
 
   const onTouchEnd = () => {
-    if (screenType !== 'mobile' || !touchStart || !touchEnd) return;
-    
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
+    if (screenType !== "mobile" || touchStart === null || touchEnd === null)
+      return;
 
-    if (isLeftSwipe) {
-      // 向左滑動，下一張
+    const distance = touchStart - touchEnd;
+    if (distance > 50) {
       const nextIdx = (activeIndex + 1) % len;
       handleClick(nextIdx);
-    }
-    if (isRightSwipe) {
-      // 向右滑動，上一張
+    } else if (distance < -50) {
       const prevIdx = (activeIndex - 1 + len) % len;
       handleClick(prevIdx);
     }
@@ -150,25 +104,25 @@ export default function PhotoGallery() {
   };
 
   const getThumbStyle = (pos, animatingSet) => {
-    const baseLeft = pos * (config.THUMB_WIDTH + config.GAP);
+    const baseLeft = pos * (THUMB_WIDTH + GAP);
     const isAnimating = animating && showFirstSet === animatingSet;
-    
+
     return {
       position: "absolute",
       top: 0,
       left: baseLeft,
-      width: config.THUMB_WIDTH,
-      height: config.THUMB_HEIGHT,
-      borderRadius: screenType === 'mobile' ? 8 : 10,
+      width: THUMB_WIDTH,
+      height: THUMB_HEIGHT,
+      borderRadius: 10,
       objectFit: "cover",
       boxShadow: "0 0 5px rgba(0,0,0,0.3)",
-      cursor: screenType === 'mobile' ? 'default' : 'pointer',
+      cursor: "pointer",
       userSelect: "none",
       transition: "transform 600ms ease, opacity 600ms ease",
       opacity: isAnimating && pos === 0 ? 0 : 1,
       transform:
         isAnimating && pos > 0
-          ? `translateX(-${config.THUMB_WIDTH + config.GAP}px)`
+          ? `translateX(-${THUMB_WIDTH + GAP}px)`
           : "translateX(0)",
       border: "none",
       zIndex: pos === 1 ? 2 : 1,
@@ -176,7 +130,7 @@ export default function PhotoGallery() {
   };
 
   return (
-    <div style={{ textAlign: "center", padding: screenType === 'mobile' ? 16 : 50 }}>
+    <div style={{ textAlign: "center", padding: "0 40px", boxSizing: "border-box" }}>
       <style>
         {`
           img:focus {
@@ -186,29 +140,29 @@ export default function PhotoGallery() {
       </style>
 
       {/* 主圖 - 手機版不顯示 */}
-      {screenType !== 'mobile' && (
+      {screenType !== "mobile" && (
         <div
           ref={containerRef}
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
           style={{
-            width: config.GALLERY_WIDTH,
-            height: config.MAIN_IMG_HEIGHT,
-            margin: '0 auto',
-            position: 'relative',
+            width: 480,
+            height: 640,
+            margin: "0 auto 20px",
+            position: "relative",
           }}
         >
           <img
             src={images[animating ? activeIndex : nextIndex ?? activeIndex]}
             alt="main"
             style={{
-              width: '100%',
-              height: '100%',
+              width: "100%",
+              height: "100%",
               objectFit: "cover",
-              borderRadius: screenType === 'mobile' ? 12 : 20,
+              borderRadius: 20,
               userSelect: "none",
-              display: 'block',
+              display: "block",
             }}
             draggable={false}
             tabIndex={-1}
@@ -218,37 +172,39 @@ export default function PhotoGallery() {
 
       {/* 縮圖列 */}
       <div
-        ref={screenType === 'mobile' ? containerRef : null}
-        onTouchStart={screenType === 'mobile' ? onTouchStart : undefined}
-        onTouchMove={screenType === 'mobile' ? onTouchMove : undefined}
-        onTouchEnd={screenType === 'mobile' ? onTouchEnd : undefined}
+        ref={screenType === "mobile" ? containerRef : null}
+        onTouchStart={screenType === "mobile" ? onTouchStart : undefined}
+        onTouchMove={screenType === "mobile" ? onTouchMove : undefined}
+        onTouchEnd={screenType === "mobile" ? onTouchEnd : undefined}
         style={{
           position: "relative",
-          width: config.GALLERY_WIDTH,
-          height: config.THUMB_HEIGHT,
+          width: screenType === "mobile" ? MOBILE_GALLERY_WIDTH : 480,
+          height: THUMB_HEIGHT,
           userSelect: "none",
-          margin: screenType === 'mobile' ? `0 auto` : `20px auto 0`,
-          cursor: screenType === 'mobile' ? 'grab' : 'default',
-          overflow: screenType === 'mobile' ? 'hidden' : 'visible',
+          margin: "0 auto",
+          cursor: screenType === "mobile" ? "grab" : "default",
+          overflow: "hidden",
         }}
       >
-        {screenType === 'mobile' && (
-          <div style={{
-            position: 'absolute',
-            top: -20,
-            right: 0,
-            background: 'rgba(0,0,0,0.5)',
-            color: 'white',
-            padding: '2px 6px',
-            borderRadius: 4,
-            fontSize: 10,
-            pointerEvents: 'none',
-            zIndex: 10,
-          }}>
+        {screenType === "mobile" && (
+          <div
+            style={{
+              position: "absolute",
+              top: -20,
+              right: 0,
+              background: "rgba(0,0,0,0.5)",
+              color: "white",
+              padding: "2px 6px",
+              borderRadius: 4,
+              fontSize: 10,
+              pointerEvents: "none",
+              zIndex: 10,
+            }}
+          >
             左右滑動
           </div>
         )}
-        
+
         {showFirstSet &&
           firstSetIndices.map((idx, pos) => (
             <img
@@ -257,11 +213,11 @@ export default function PhotoGallery() {
               alt={`thumb${pos}`}
               style={{
                 ...getThumbStyle(pos, true),
-                border: screenType === 'mobile' && idx === activeIndex ? '2px solid #f97316' : 'none',
+                border:  "none",
               }}
               draggable={false}
               tabIndex={-1}
-              onClick={screenType === 'mobile' ? undefined : () => handleClick(idx)}
+              onClick={screenType === "mobile" ? undefined : () => handleClick(idx)}
             />
           ))}
 
@@ -273,21 +229,20 @@ export default function PhotoGallery() {
               alt={`thumb${pos}`}
               style={{
                 ...getThumbStyle(pos, false),
-                border: screenType === 'mobile' && idx === activeIndex ? '2px solid #f97316' : 'none',
+                border: "none",
               }}
               draggable={false}
               tabIndex={-1}
-              onClick={screenType === 'mobile' ? undefined : () => handleClick(idx)}
+              onClick={screenType === "mobile" ? undefined : () => handleClick(idx)}
             />
           ))}
       </div>
 
-      {/* 圓點按鈕 - 手機版隱藏 */}
-      {screenType !== 'mobile' && (
+      {screenType !== "mobile" && (
         <div
           style={{
             marginTop: 20,
-            width: config.GALLERY_WIDTH,
+            width: 480,
             margin: "20px auto 0",
             display: "flex",
             justifyContent: "center",
@@ -297,13 +252,27 @@ export default function PhotoGallery() {
         >
           {images.map((_, i) => {
             const svg =
-              i === activeIndex
-                ? `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-                    <circle cx="5" cy="5" r="5" fill="#f97316"/>
-                  </svg>`
-                : `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
-                    <circle cx="5" cy="5" r="5" fill="#989794"/>
-                  </svg>`;
+              i === activeIndex ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  fill="none"
+                >
+                  <circle cx="5" cy="5" r="5" fill="#f97316" />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  fill="none"
+                >
+                  <circle cx="5" cy="5" r="5" fill="#989794" />
+                </svg>
+              );
 
             return (
               <button
@@ -328,32 +297,6 @@ export default function PhotoGallery() {
               />
             );
           })}
-        </div>
-      )}
-
-      {/* 手機版頁面指示器 */}
-      {screenType === 'mobile' && (
-        <div
-          style={{
-            marginTop: 12,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center", 
-            gap: 6,
-          }}
-        >
-          {images.map((_, i) => (
-            <div
-              key={i}
-              style={{
-                width: 6,
-                height: 6,
-                borderRadius: '50%',
-                backgroundColor: i === activeIndex ? '#f97316' : '#d1d5db',
-                transition: 'background-color 300ms ease',
-              }}
-            />
-          ))}
         </div>
       )}
     </div>
