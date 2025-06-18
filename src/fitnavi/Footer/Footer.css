@@ -436,9 +436,9 @@ a {
 
 }
 
-@media (min-width: 393px) and (max-width: 768px) {
+@media (max-width: 768px) {
 
-   
+
 
     #footer-s {
         flex-shrink: 0;
@@ -553,6 +553,7 @@ a {
         display: flex;
         flex-direction: column;
         gap: 8px;
+        
     }
 
     #footer-s .footer-icon img {
