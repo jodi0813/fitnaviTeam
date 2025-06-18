@@ -16,7 +16,6 @@
     justify-content: space-between;
     .myinfoEditButton {
       color: #fefcf7;
-      /* 段落/16 */
       font-family: "Noto Sans TC";
       font-size: 16px;
       font-style: normal;
@@ -25,6 +24,7 @@
       letter-spacing: 1.6px;
       border-radius: 99px;
       background: #ff8740;
+      padding: 8px 24px;
     }
     .myinfoAvatar {
       width: 80px;
@@ -38,10 +38,6 @@
       align-items: center;
       gap: 32px;
 
-      .myinfoNameBox {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
         .myinfoName {
           display: flex;
           align-items: center;
@@ -83,7 +79,7 @@
             line-height: normal;
             letter-spacing: 2px;
           }
-        }
+        
       }
     }
 
