@@ -1642,6 +1642,18 @@ body {
                 list-style-type: disc;
                 margin-left: 20px;
 
+                li {
+                    color: var(--dark, #3A2C19);
+                    /* heading/標題4/medium */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 40px;
+                    /* 200% */
+                    letter-spacing: 0.4px;
+                }
+
                 @media(max-width: 1024px) {
                     display: none;
                 }
@@ -2119,6 +2131,10 @@ body {
                 min-height: 250px;
                 display: flex;
 
+                @media(max-width:768px){
+                    min-height: 150px;
+                }
+
 
                 @media (min-width: 769px) and (max-width: 1024px) {
                     position: absolute;
@@ -2137,7 +2153,8 @@ body {
                     z-index: 2;
 
                     @media(max-width:768px) {
-                        left: 70%;
+                        // left: 70%;
+                        left: 17rem;
                         top: -40%;
                         width: 130px;
                         height: 120px;
@@ -2170,18 +2187,17 @@ body {
 
                     @media(max-width:768px) {
                         position: absolute;
-                        top: -40%;
-                        left: 95%;
-                        color: var(--primary, var(--primary, #FF8740));
-
-                        /* 段落(小尺寸)/12 */
+                        left: 23rem;
+                        top: -4.5rem;
+                        transform: translateX(-50%);
+                        color: var(--primary, #FF8740);
                         font-family: "Noto Sans TC", sans-serif;
                         font-size: 12px;
-                        font-style: normal;
                         font-weight: 500;
                         line-height: 140%;
-                        /* 16.8px */
                         letter-spacing: 1.2px;
+                        white-space: nowrap;
+                        z-index: 1;
                     }
 
                     @media (min-width: 769px) and (max-width: 1024px) {
@@ -2209,6 +2225,15 @@ body {
                         height: 2px;
                         background-color: #FF8740;
 
+                        @media(max-width:768px){
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            width: 40px;
+                            height: 2px;
+                            background-color: #FF8740;  
+                        }
+
                         @media (min-width: 769px) and (max-width: 1024px) {
                             content: "";
                             position: absolute;
@@ -2224,14 +2249,14 @@ body {
                         transform: rotate(45deg);
 
                         @media(max-width:768px) {
-                            top: 40%;
-                            left: -25px;
+                           
+                            left:-25px;
                             transform: rotate(60deg);
                         }
 
                         @media (min-width: 769px) and (max-width: 1024px) {
                             top: 40%;
-                            left: -50px; // 原來是 -70px，往內靠近文字
+                            left: -50px;
                             transform: rotate(45deg);
                         }
                     }
@@ -2241,12 +2266,12 @@ body {
                         transform: rotate(135deg);
 
                         @media(max-width:768px) {
-                            right: -18px;
+                            right: -20px;
                             transform: rotate(120deg);
                         }
 
                         @media (min-width: 769px) and (max-width: 1024px) {
-                            right: -50px; // 原來是 -70px，同樣往內靠近文字
+                            right: -50px;
                             transform: rotate(135deg);
                         }
                     }
@@ -2615,40 +2640,40 @@ body {
                     }
                 }
 
-                &::before,
-                &::after {
-                    content: "";
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    width: 1px;
-                    border-left: 1px dashed #ccc;
+                // &::before,
+                // &::after {
+                //     content: "";
+                //     content: "";
+                //     position: absolute;
+                //     top: 0;
+                //     bottom: 0;
+                //     width: 1px;
+                //     border-left: 1px dashed #ccc;
 
-                    @media (min-width: 769px) and (max-width: 1024px) {
-                        display: none;
-                    }
+                //     @media (min-width: 769px) and (max-width: 1024px) {
+                //         display: none;
+                //     }
 
 
-                }
+                // }
 
-                &::before {
-                    left: calc(33.33% - 35px);
+                // &::before {
+                //     left: calc(33.33% - 35px);
 
-                    @media (min-width: 769px) and (max-width: 1024px) {
-                        position: absolute;
-                        left: 27%;
-                    }
-                }
+                //     @media (min-width: 769px) and (max-width: 1024px) {
+                //         position: absolute;
+                //         left: 27%;
+                //     }
+                // }
 
-                &::after {
-                    left: calc(66.66% - 75px);
+                // &::after {
+                //     left: calc(66.66% - 75px);
 
-                    @media (min-width: 769px) and (max-width: 1024px) {
-                        position: absolute;
-                        left: 59%;
-                    }
-                }
+                //     @media (min-width: 769px) and (max-width: 1024px) {
+                //         position: absolute;
+                //         left: 59%;
+                //     }
+                // }
 
                 // &::before,
                 // &::after {
@@ -3827,3 +3852,5 @@ body {
 //         box-sizing: border-box !important;
 //     }
 // }
+
+

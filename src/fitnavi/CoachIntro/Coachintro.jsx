@@ -13,6 +13,7 @@ import PopupWindow3 from "./PopupWindow/PopupWindow3";
 import PopupWindow4 from "./PopupWindow/PopupWindow4";
 import ArticleCardsSwiper from '../../components/ArticleCardsSwiper';
 import { useRef } from 'react';
+import React from 'react';
 
 
 
@@ -712,6 +713,7 @@ function Coachintro() {
                                             </div>
                                         ))}
                                     </div>
+
 
                                     <div className="Coach-seeMoreComment">
                                         <button>
