@@ -215,6 +215,10 @@ function Allarticle() {
         setSearchTitle(inputTitle); // 當用戶按下搜尋按鈕時，更新searchTitle
     };
 
+    //小尺寸按鈕視窗控制
+    const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
+
+
     return (
         <section id='Allarticle-section'>
             <MainTitle title1="知識文章" title2="補足符合您需求的知識" className="no-line" />
@@ -240,9 +244,105 @@ function Allarticle() {
 
                 {/* 平板用（600–1024px） */}
 
-                <button className="ClickSearch-Button-alt" onClick={handleSearch}>
-                    篩選
+                <button className="ClickSearch-Button-alt" onClick={() => setIsFilterModalOpen(true)}>
+                    篩選<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M21.25 11.9999H8.895M4.534 11.9999H2.75M4.534 11.9999C4.534 11.4217 4.76368 10.8672 5.17251 10.4584C5.58134 10.0496 6.13583 9.81989 6.714 9.81989C7.29217 9.81989 7.84666 10.0496 8.25549 10.4584C8.66432 10.8672 8.894 11.4217 8.894 11.9999C8.894 12.5781 8.66432 13.1326 8.25549 13.5414C7.84666 13.9502 7.29217 14.1799 6.714 14.1799C6.13583 14.1799 5.58134 13.9502 5.17251 13.5414C4.76368 13.1326 4.534 12.5781 4.534 11.9999ZM21.25 18.6069H15.502M15.502 18.6069C15.502 19.1852 15.2718 19.7403 14.8628 20.1492C14.4539 20.5582 13.8993 20.7879 13.321 20.7879C12.7428 20.7879 12.1883 20.5572 11.7795 20.1484C11.3707 19.7396 11.141 19.1851 11.141 18.6069M15.502 18.6069C15.502 18.0286 15.2718 17.4745 14.8628 17.0655C14.4539 16.6566 13.8993 16.4269 13.321 16.4269C12.7428 16.4269 12.1883 16.6566 11.7795 17.0654C11.3707 17.4742 11.141 18.0287 11.141 18.6069M11.141 18.6069H2.75M21.25 5.39289H18.145M13.784 5.39289H2.75M13.784 5.39289C13.784 4.81472 14.0137 4.26023 14.4225 3.8514C14.8313 3.44257 15.3858 3.21289 15.964 3.21289C16.2503 3.21289 16.5338 3.26928 16.7983 3.37883C17.0627 3.48839 17.3031 3.64897 17.5055 3.8514C17.7079 4.05383 17.8685 4.29415 17.9781 4.55864C18.0876 4.82313 18.144 5.10661 18.144 5.39289C18.144 5.67917 18.0876 5.96265 17.9781 6.22714C17.8685 6.49163 17.7079 6.73195 17.5055 6.93438C17.3031 7.13681 17.0627 7.29739 16.7983 7.40695C16.5338 7.5165 16.2503 7.57289 15.964 7.57289C15.3858 7.57289 14.8313 7.34321 14.4225 6.93438C14.0137 6.52555 13.784 5.97106 13.784 5.39289Z" stroke="#FF8740" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" />
+                    </svg>
                 </button>
+
+                {isFilterModalOpen && (
+                    <div className="FilterModal">
+                        <div className="FilterModal-overlay" onClick={() => setIsFilterModalOpen(false)}></div>
+                        <div className="FilterModal-content">
+                            {/* 關閉按鈕 */}
+                            <button className="close-button" onClick={() => setIsFilterModalOpen(false)}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 6L18 18" stroke="#3A2C19" strokeWidth="3" strokeLinecap="round" />
+                                    <path d="M18 6L6 18" stroke="#3A2C19" strokeWidth="3" strokeLinecap="round" />
+                                </svg>
+                            </button>
+
+                            {/* 角色選擇 */}
+                            <div className="filter-role">
+                                <label>選擇角色</label>
+                                <div className="role-button-group">
+                                    <button className={selectedRole === '' ? 'active' : ''} onClick={() => setSelectedRole('')}>
+                                        不限
+                                    </button>
+                                    <button className={selectedRole === '教練' ? 'active' : ''} onClick={() => setSelectedRole('教練')}>
+                                        健身教練
+                                    </button>
+                                    <button className={selectedRole === '營養師' ? 'active' : ''} onClick={() => setSelectedRole('營養師')}>
+                                        營養師
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* 分類與標籤 */}
+                            <div className="filter-section-wrapper">
+                                <label>文章分類與標籤</label>
+                                <div className='filter-section'>
+                                    <select value={category} onChange={(e) => setcategory(e.target.value)}>
+                                        <option value="" className='Cat-label'>分類</option>
+                                        <option value="健身入門">健身入門</option>
+                                        <option value="重量訓練">重量訓練</option>
+                                        <option value="燃脂運動">燃脂運動</option>
+                                        <option value="肌力提升">肌力提升</option>
+                                        <option value="體態雕塑">體態雕塑</option>
+                                        <option value="伸展放鬆">伸展放鬆</option>
+                                        <option value="減脂攻略">減脂攻略</option>
+                                        <option value="增肌飲食">增肌飲食</option>
+                                        <option value="營養調配">營養調配</option>
+                                    </select>
+
+                                    <select value={tag} onChange={(e) => setTag(e.target.value)}>
+                                        <option value="" className='Tag-label'>標籤</option>
+                                        <option value="新手健身">新手健身</option>
+                                        <option value="迷思破解">迷思破解</option>
+                                        <option value="養成習慣">養成習慣</option>
+                                        <option value="重訓">重訓</option>
+                                        <option value="燃脂">燃脂</option>
+                                        <option value="HIIT訓練">HIIT訓練</option>
+                                        <option value="放鬆肌肉">放鬆肌肉</option>
+                                        <option value="力量突破">力量突破</option>
+                                        <option value="肌力提升">肌力提升</option>
+                                        <option value="曲線雕塑">曲線雕塑</option>
+                                        <option value="瘦身攻略">瘦身攻略</option>
+                                        <option value="體態">體態</option>
+                                        <option value="減脂">減脂</option>
+                                        <option value="健康飲食">健康飲食</option>
+                                        <option value="增肌">增肌</option>
+                                        <option value="蛋白質補充">蛋白質補充</option>
+                                        <option value="健身營養">健身營養</option>
+                                        <option value="飲食">飲食</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            {/* 關鍵字搜尋 */}
+                            <div className="filter-keyword">
+                                <label>關鍵字搜尋</label>
+                                <input
+                                    type="text"
+                                    value={inputTitle}
+                                    onChange={(e) => setInputTitle(e.target.value)}
+                                    placeholder="請輸入關鍵字"
+                                    className="input-with-icon"
+                                />
+
+                            </div>
+
+                            {/* 搜尋按鈕 */}
+                            <button className="apply-button" onClick={() => {
+                                handleSearch();
+                                setIsFilterModalOpen(false);
+                            }}>
+                                搜尋
+                            </button>
+                        </div>
+                    </div>
+                )}
+
             </section>
 
 

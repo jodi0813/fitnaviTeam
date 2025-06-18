@@ -479,18 +479,6 @@
             align-items: flex-start;
             margin-top: 12rem;
 
-            // @media (max-width: 1920px) {
-            //     margin-top: 300px !important;
-            // }
-
-            // @media (max-width: 1680px) {
-            //     margin-top: 230px !important;
-            // }
-
-            // @media (max-width: 1440px) {
-            //     margin-top: 250px !important;
-            // }
-
 
             .intro {
                 margin-top: 60px;
@@ -1906,7 +1894,7 @@
             // gap: 18px !important;
             flex-direction: column;
             align-items: flex-start;
-            padding-left: 2.5rem;
+            padding-left: 0.5rem;
             margin-top: 20rem !important;
 
 
@@ -1933,12 +1921,10 @@
             font-weight: 500;
             line-height: 40px;
             letter-spacing: 0.4px;
-            padding-left: 2.5rem !important;
-            /* Consider reducing this padding or making it horizontal only */
+            padding-left: 1.5rem !important;
             max-width: 90% !important;
-            /* Ensure the paragraph doesn't exceed its parent's width */
             box-sizing: border-box;
-            /* Include padding in the width calculation */
+
         }
 
         .aboutCoach-content p {
@@ -1955,11 +1941,11 @@
     .coachsvg {
         position: absolute;
         top: 14rem;
-        right: 10%; // ✅ 整體靠右，不用 left
+        right: 10%;
 
         display: flex;
         flex-direction: column;
-        align-items: flex-end; // ✅ 讓 p 和 svg 往右對齊，不擠壓 svg
+        align-items: flex-end;
 
         svg {
             width: 224px;
@@ -1991,8 +1977,9 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end !important;
-        max-width: 10% !important;
+        max-width: 12% !important;
         align-self: stretch;
+        transform: translateX(-10px);
 
         .intro {
             margin-top: 8rem !important;
@@ -2027,7 +2014,7 @@
 
 
         .spetitle {
-            padding-left: 20px;
+            // padding-left: 20px;
 
             h4 {
                 width: 286px !important;
@@ -2086,44 +2073,44 @@
 
         .expcontent {
             width: 35rem !important;
-    
+
             .ul-desktop {
                 display: none;
             }
-    
+
             .ul-tablet {
                 display: block !important;
                 list-style-type: disc !important;
                 margin-left: 20px !important;
-    
-    
+
+
                 li {
-    
+
                     font-family: "Noto Sans TC", sans-serif !important;
                     color: var(--dark, #3A2C19) !important;
                     /* 段落/14 */
                     font-size: 14px !important;
                     font-style: normal !important;
                     font-weight: 500 !important;
-                    line-height: 140%!important;
+                    line-height: 140% !important;
                     /* 19.6px */
-                    letter-spacing: 1.4px!important
+                    letter-spacing: 1.4px !important
                 }
-    
+
                 p {
-    
-                    color: var(--gray, #989794)!important;
+
+                    color: var(--gray, #989794) !important;
                     /* 段落/14 */
                     font-family: "Noto Sans TC", sans-serif !important;
                     font-size: 14px !important;
-                    font-style: normal!important;
-                    font-weight: 500!important;
-                    line-height: 140%!important;
-                    letter-spacing: 1.4px!important;
-                    margin-bottom: 2rem!important;
+                    font-style: normal !important;
+                    font-weight: 500 !important;
+                    line-height: 140% !important;
+                    letter-spacing: 1.4px !important;
+                    margin-bottom: 2rem !important;
                 }
-    
-    
+
+
             }
         }
 
@@ -2262,15 +2249,7 @@
         margin-top: 5rem !important;
         overflow-x: visible;
 
-        // .article-wrapper {
-        //   overflow-x: visible;
-        // }
 
-        // .ViewArticles {
-        //   overflow-x: visible; /* ← 建議移除 auto，因為 Three-classcards 已控制 */
-        //   scroll-snap-type: x mandatory;
-        //   -webkit-overflow-scrolling: touch;
-        // }
 
         .Three-classcards {
             display: none !important;
@@ -2280,14 +2259,7 @@
             display: block !important;
         }
 
-        // .Three-classcards::-webkit-scrollbar {
-        //   display: none;
-        // }
 
-        // .Three-classcards .Articlecardscoach {
-        //   flex: 0 0 auto !important;
-        //   scroll-snap-align: start;
-        // }
 
         .ViewArticles-left,
         .ViewArticles-right {
@@ -2307,9 +2279,9 @@
         margin-top: 150px !important;
 
         .star-card-wrapper {
-            width: 100%;
+            width: 100% !important;
             margin: 0 auto !important;
-            box-sizing: border-box;
+            box-sizing: border-box !important;
 
 
 
@@ -2317,24 +2289,22 @@
             .Coach-comment-line1 {
 
                 display: grid !important;
-                grid-template-columns: repeat(3, 1fr) !important;
-                /* 三欄 */
-                gap: 5px !important;
-                /* 卡片間距 */
-                padding: 0 40px;
-                justify-items: center;
-                margin: 0 auto !important;
+                grid-template-columns: repeat(3, 1fr)!important;
+                gap: 20px!important;
+                width: 100%!important; // ✅ 給固定百分比寬度
+                margin: 0 auto!important;
+                // transform: translateX(-30px);
                 position: relative;
 
                 &::before {
                     position: absolute;
-                    left: 36% !important;
+                    left: 33% !important;
 
                 }
 
                 &::after {
                     position: absolute;
-                    left: 64% !important;
+                    left: 66% !important;
                 }
 
                 // ::before,
@@ -2362,17 +2332,7 @@
                 width: 12rem !important;
                 height: 15rem !important;
                 padding: 0px !important;
-                // position: relative;
 
-                // .Name-date {
-
-                //     display: flex;
-                //     flex-direction: row;
-                //     gap: 50px !important;
-                //     position: absolute;
-                //     top: 240px !important;
-
-                // }
 
                 p.description {
                     width: 140px !important;
