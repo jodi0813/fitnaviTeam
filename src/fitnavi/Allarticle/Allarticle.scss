@@ -22,7 +22,7 @@
     align-items: stretch;
 
     @media (min-width: 600px) and (max-width: 1024px) {
-
+        padding-top: 0px;
         padding-bottom: 10rem; // 多留點空間讓 footer 不會蓋住內容
 
     }

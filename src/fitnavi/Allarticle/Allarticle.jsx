@@ -218,8 +218,10 @@ function Allarticle() {
 
 
     return (
+        <>
+        <MainTitle title1="知識文章" title2="補足符合您需求的知識" className="no-line" />
         <section id='Allarticle-section'>
-            <MainTitle title1="知識文章" title2="補足符合您需求的知識" className="no-line" />
+       
 
             <section className="Allarticle-Search">
                 {/* 桌機用 */}
@@ -454,6 +456,7 @@ function Allarticle() {
                 </div>
             </section>
         </section>
+        </>
     );
 }
 
