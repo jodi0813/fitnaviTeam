@@ -1,4 +1,4 @@
-.overlay{
+.overlay {
   position: fixed;
   inset: 0; // 等於 top: 0; right: 0; bottom: 0; left: 0;
   background: rgba(0, 0, 0, 0.5); // 半透明黑
@@ -22,6 +22,10 @@
     10px 10px 10px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(25px);
   z-index: 1000;
+  @media (max-width: 767px) {
+    width: 90%;
+    height: auto;
+  }
   hr {
     width: 100%;
   }
@@ -31,11 +35,14 @@
     justify-content: space-between;
     align-items: center;
     gap: 24px;
-
+    @media (max-width: 767px) {
+      flex-direction: column;
+      gap: 10px;
+    }
     h2 {
       color: #ff8740;
       font-family: "Noto Sans TC", sans-serif;
-      font-size: 20px;
+      font-size: 1.25rem;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -45,7 +52,7 @@
     span {
       color: #fff;
       font-family: "Noto Sans TC", sans-serif;
-      font-size: 14px;
+      font-size: 0.875rem;
       font-style: normal;
       font-weight: 500;
       line-height: 140%;
@@ -88,10 +95,12 @@
     flex-direction: column;
     gap: 12px;
     width: 552px;
-
+    @media (max-width: 767px) {
+      width: auto;
+    }
     .bubble {
       font-family: "Noto Sans TC", sans-serif;
-      font-size: 14px;
+      font-size: 0.875rem;
       font-style: normal;
       font-weight: 500;
       line-height: 140%;
@@ -112,6 +121,11 @@
         border-radius: 100px;
         border: 1px solid #3a2c19;
         background: #fefcf7;
+        @media (max-width: 767px) {
+          word-break: break-all; /* 單字太長時強制換行 */
+          white-space: normal; /* 預設自動換行 */
+          width: 300px;
+        }
       }
     }
 
@@ -139,6 +153,10 @@
       flex-shrink: 0;
       border-radius: 100px;
       border: none;
+      padding: 15px;
+      @media (max-width: 767px) {
+        width: auto;
+      }
     }
   }
 
@@ -150,7 +168,6 @@
 
     &.booking-select {
       display: flex;
-
     }
 
     &.problem-select {
@@ -161,7 +178,7 @@
     label {
       color: #fefcf7;
       font-family: "Noto Sans TC", sans-serif;
-      font-size: 14px;
+      font-size: 0.875rem;
       font-style: normal;
       font-weight: 500;
       line-height: 140%;
@@ -175,7 +192,9 @@
       align-items: center;
       gap: 10px;
       align-self: stretch;
-
+@media (max-width:767px) {
+  padding: 0;
+}
       #classification1,
       #classification2 {
         border-radius: 20px;
