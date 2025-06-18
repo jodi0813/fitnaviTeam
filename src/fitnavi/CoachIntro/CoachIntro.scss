@@ -47,6 +47,10 @@ body {
 #Coachintro {
     padding: 120px 50px;
 
+    @media (max-width: 768px) {
+        padding: 120px 10px;
+    }
+
     @media (min-width: 769px) and (max-width: 1024px) {
         padding: 120px 10px;
     }
@@ -837,8 +841,10 @@ body {
         gap: 2%;
 
         @media(max-width: 768px) {
-            width: 138px;
-            height: 86px;
+            position: absolute;
+            top: 130%;
+            left: 5%;
+
         }
 
 
@@ -860,12 +866,15 @@ body {
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
-                justify-content: flex-end;
+                justify-content: flex-start;
                 align-items: flex-end;
                 writing-mode: horizontal-tb;
                 white-space: normal;
                 gap: 0px;
-                
+                margin-top: 2.5rem;
+                padding-right: 5px;
+
+
             }
 
             .choose {
@@ -892,12 +901,14 @@ body {
                     text-align: right;
 
                     /* heading/標題4/Bold */
-                    font-family: "Noto Sans TC",sans-serif;
+                    font-family: "Noto Sans TC", sans-serif;
                     font-size: 20px;
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;
                     letter-spacing: 2px;
+                    white-space: nowrap;
+
                 }
             }
 
@@ -939,6 +950,14 @@ body {
             padding: 0px;
             margin-top: 15px;
 
+            @media(max-width: 768px) {
+                width: 117px;
+                height: 94px;
+            }
+
+
+
+
             @media (min-width: 769px) and (max-width: 1024px) {
                 width: 12rem;
                 height: 120px;
@@ -974,6 +993,18 @@ body {
                 letter-spacing: 0.4px;
                 text-align: center;
 
+                @media(max-width: 768px) {
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                }
+
             }
 
             img {
@@ -1001,6 +1032,10 @@ body {
             justify-content: flex-start;
             align-items: flex-start;
             margin-top: 12rem;
+
+            @media(max-width: 768px) {
+                display: none;
+            }
 
             @media (min-width: 769px) and (max-width: 1024px) {
                 display: flex;
@@ -1119,6 +1154,21 @@ body {
                 width: 80%;
                 padding-left: 2rem;
 
+                @media(max-width:768px) {
+                    color: var(--dark, #3A2C19);
+                    width: 100%;
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    margin-top: 10px;
+                    padding-left: 0px;
+                }
+
                 @media (min-width: 769px) and (max-width: 1024px) {
                     margin-top: 5rem;
                     color: var(--dark, #3A2C19);
@@ -1141,7 +1191,12 @@ body {
                 flex-direction: row;
                 align-items: center;
                 gap: 50px;
-                // margin-top: 10rem;
+
+                @media (max-width: 768px) {
+                    gap: 18px;
+
+                }
+
 
                 @media (min-width: 769px) and (max-width: 1024px) {
                     gap: 18px;
@@ -1159,6 +1214,21 @@ body {
                     font-weight: 700;
                     letter-spacing: 3.2px;
 
+                    @media(max-width: 768px) {
+                        width: 86px;
+                        color: var(--primary, var(--primary, #FF8740));
+
+                        /* heading/標題4/Bold */
+                        font-family: "Noto Sans TC", sans-serif;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        letter-spacing: 2px;
+                    }
+
+
+
                     @media (min-width: 769px) and (max-width: 1024px) {
                         font-size: 32px;
                         width: auto;
@@ -1173,6 +1243,20 @@ body {
                     border-bottom: 2px solid #3A2C19;
                     padding-bottom: 10px;
                     letter-spacing: 1.4px;
+
+                    @media(max-width: 768px) {
+                        width: 140px;
+                        color: var(--dark, #3A2C19);
+
+                        /* 段落(小尺寸)/10 */
+                        font-family: "Noto Sans TC", sans-serif;
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 14px */
+                        letter-spacing: 1px;
+                    }
 
                     @media (min-width: 769px) and (max-width: 1024px) {
                         width: 300px;
@@ -1205,6 +1289,11 @@ body {
     flex-direction: column;
     align-items: flex-start; // 內容靠左
     margin-top: 250px;
+
+    @media (max-width: 768px) {
+        margin-top: 20px;
+
+    }
 
     @media (min-width: 769px) and (max-width: 1024px) {
         margin-top: 200px;
@@ -1275,7 +1364,14 @@ body {
         }
     }
 
+.coach-circle-s{
+    display: none;
 
+    @media (max-width: 768px) {
+        display: flex;
+       }
+
+}
 
     .coach-circlewrapper {
         display: flex;
@@ -1285,6 +1381,10 @@ body {
         // width: 70%; // 或 100%，兩者要一樣
         margin-left: 0;
         box-sizing: border-box;
+
+        @media (max-width: 768px) {
+         display: none;
+        }
 
         @media (min-width: 769px) and (max-width: 1024px) {
             width: 90%;

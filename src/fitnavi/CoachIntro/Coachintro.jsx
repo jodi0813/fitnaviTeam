@@ -411,16 +411,16 @@ function Coachintro() {
 
                             <svg xmlns="http://www.w3.org/2000/svg" width="3" height="143" viewBox="0 0 3 143" fill="none">
                                 <path d="M1.8335 142L1.8335 1" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" />
-                            </svg> 
-                             <div className="moreimg4" >
+                            </svg>
+                            <div className="moreimg4" >
                                 <img src="./images/classplace-1.jpg" alt="" />
                                 <p>World Gym 台北大安店</p>
                             </div>
-{/* 
+
                             <div className="moreimg5">
                                 <img src="./images/center.jpg" alt="" />
                                 <p>TECHNOGym 忠孝館</p>
-                            </div>    */}
+                            </div>
                         </div>
 
                     </div>
@@ -465,9 +465,9 @@ function Coachintro() {
                             </div>
                             <p className="aboutCoach-content">
 
-                                <p>嗨，我是張莉筠，一名熱愛健身、致力於幫助每位學員達成健康與體態目標的專業健身教練。</p>
-                                <p>我相信運動不只是改變外在，更能提升自信與生活品質。</p>
-                                <p>擁有ACE認證、TRX懸吊訓練系統認證與5年的教學經驗，我也專注於減脂與功能性訓練，並根據每位學員的身體狀況與需求，量身打造最適合的訓練計畫。我重視科學化訓練，搭配適當的飲食指導，讓妳不只在健身房進步，更能在生活中感受到體能提升的改變。</p>
+                                <p>嗨，我是張莉筠，一名熱愛健身、致力於幫助每位學員達成健康與體態目標的專業健身教練。</p> <br />
+                                <p>我相信運動不只是改變外在，更能提升自信與生活品質。</p> <br />
+                                <p>擁有ACE認證、TRX懸吊訓練系統認證與5年的教學經驗，我也專注於減脂與功能性訓練，並根據每位學員的身體狀況與需求，量身打造最適合的訓練計畫。我重視科學化訓練，搭配適當的飲食指導，讓妳不只在健身房進步，更能在生活中感受到體能提升的改變。</p> <br />
                                 不論妳是健身新手，還是想突破瓶頸的進階訓練者，我都會陪妳一起前進，一起打造更強壯、更健康的自己。</p>
                         </div>
 
@@ -480,6 +480,33 @@ function Coachintro() {
 
                                 <div className="coach-circlewrapper">
                                     <img src="./images/spe-field.png" alt="" />
+
+                                </div>
+
+                                <div className="coach-circle-s">
+                                    <div className="upper-circle">
+                                        <div>
+                                            <h5>減脂訓練</h5>
+                                            <p>燃燒脂肪、線條塑造、打造健康體態</p>
+                                        </div>
+
+                                        <div>
+                                            <h5>個人指導</h5>
+                                            <p>專屬訓練計畫、一對一指導、達成健身目標</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="lower-circle">
+                                        <div>
+                                            <h5>功能性訓練</h5>
+                                            <p>長期姿勢改善、減少運動傷害、提升活動能力</p>
+                                        </div>
+                                        <div>
+                                            <h5>TRX懸吊訓練</h5>
+                                            <p>全身訓練、核心強化、增進穩定性與力量</p>
+                                        </div>
+                                    </div>
+
 
                                 </div>
                             </div>
