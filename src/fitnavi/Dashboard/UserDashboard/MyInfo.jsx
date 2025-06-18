@@ -46,7 +46,7 @@ function MyInfo() {
                 </div>
                 <div className="myinfoItem">
                   <span className="myinfoItem1"> 通訊地址</span>
-                  <span>台北市中正區濟南路一段321號12樓</span>
+                  <span>台北市中歪區濟州路零段666號</span>
                 </div>
               </div>
               {/* 聯絡資訊 */}
@@ -104,7 +104,7 @@ function MyInfo() {
                 <span className="myinfoItem1">傷病史</span>
                 <span>
                   一年前腰部受傷，現
-                  <br />
+                  {/* <br /> */}
                   在偶爾會不舒服
                 </span>
               </div>
