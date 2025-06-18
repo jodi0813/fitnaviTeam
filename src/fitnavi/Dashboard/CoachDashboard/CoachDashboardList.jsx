@@ -11,7 +11,6 @@ import { useNavigate } from "react-router-dom";
 function CoachDashboardList() {
   const [memberTab, setMemberTab] = useState("coachInfo");
   const navigate = useNavigate();
-
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
@@ -22,6 +21,16 @@ function CoachDashboardList() {
       <div className="coachDashboardAll">
         <MainTitle title1="會員管理" title2="在這裡管理您的課程及文章" />
         <div className="coachDashboardList">
+          <div className="logoutBtMobileBox">
+            {localStorage.getItem("token") && (
+              <button
+                onClick={handleLogout}
+                className="memberBt logoutBtMobile"
+              >
+                登出 <MdOutlineLogout size={20} />
+              </button>
+            )}
+          </div>
           {/* 左側選單 */}
           <div className="coachDashboardBotton">
             {/* 一般用戶 */}
@@ -78,9 +87,10 @@ function CoachDashboardList() {
                   文章管理
                 </button>
                 {localStorage.getItem("token") && (
-                  <button onClick={handleLogout} className="memberBt logoutBt">登出 <MdOutlineLogout /></button>
+                  <button onClick={handleLogout} className="memberBt logoutBt">
+                    登出 <MdOutlineLogout />
+                  </button>
                 )}
-
               </div>
 
               <div className="list-illustration">

@@ -49,11 +49,9 @@
   .orderview-table {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: flex-start;
-
     padding: 0;
-
+border: none;
     .orderview-table-header {
       display: flex;
       flex-direction: column;
@@ -70,7 +68,7 @@
       font-weight: 400;
       line-height: 140%; /* 16.8px */
       letter-spacing: 1.2px;
-      padding: 20px 0px;
+    
       span {
         flex: 1;
         display: flex;
@@ -89,7 +87,7 @@
       font-size: 12px;
       height: 611px;
       width: 137px;
-      padding: 20px 0px;
+ 
       span {
         flex: 1;
             display: flex;

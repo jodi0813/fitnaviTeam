@@ -15,7 +15,7 @@ function CoachMyOrders() {
                     <span>課程完成</span>
                     <span>問題反映</span>
                 </div>
-                <div>無資料</div>
+                <div className="noOrder">無資料</div>
               
             </div>
         </>
