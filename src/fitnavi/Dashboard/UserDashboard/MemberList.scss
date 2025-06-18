@@ -27,6 +27,7 @@
         padding-top: 0px;
         width: 90%;
         max-width: 600px ;
+            padding-left: 0px;
       }
       .memberListBox {
         display: flex;
@@ -109,7 +110,7 @@
       .logoutBt {
         margin-top: 48px;
         @media (max-width: 1024px) {
-          margin-top: 0px;
+         display: none;
         }
       }
     }

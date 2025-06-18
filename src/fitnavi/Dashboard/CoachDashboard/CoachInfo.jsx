@@ -53,7 +53,7 @@ function CoachInfo() {
                 </div>
                 <div className="myinfoItem">
                   <span className="myinfoItem1"> 通訊地址</span>
-                  <span>台北市中正區濟南路一段321號12樓</span>
+                  <span>台北市中歪區濟州路零段666號</span>
                 </div>
               </div>
               {/* 聯絡資訊 */}

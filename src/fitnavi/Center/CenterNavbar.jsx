@@ -60,7 +60,7 @@ function CenterNavbar() {
                       </div>
                       <div className="contactInfo3">
                         <div className="contactInfo4">
-                          100 台北市 中正區 濟南路一段 321號 1、2樓
+                          100 台北市中歪區濟州路零段666號
                         </div>
                       </div>
                     </div>
