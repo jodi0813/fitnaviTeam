@@ -35,7 +35,7 @@ function JoinusStep2({ onNext, onPre }) {
 
   const handleNext = () => {
     window.scrollTo(0, 0);
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth <= 1024) {
       navigate('/JoinusStep3');
     } else {
       onNext && onNext();
@@ -44,7 +44,7 @@ function JoinusStep2({ onNext, onPre }) {
 
   const handlePre = () => {
     window.scrollTo(0, 0);
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth <= 1024) {
       navigate('/JoinusStep1');
     } else {
       onPre && onPre();

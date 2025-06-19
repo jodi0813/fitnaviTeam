@@ -9,7 +9,7 @@ function JoinusStep4({ onPre, onSubmit }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         window.scrollTo(0, 0);
-        if (window.innerWidth < 1024) {
+        if (window.innerWidth <= 1024) {
             navigate('/JoinusLoading'); // ✅ 根據你流程可替換成你想前往的頁面
         } else {
             onSubmit && onSubmit();
@@ -18,7 +18,7 @@ function JoinusStep4({ onPre, onSubmit }) {
 
     const handlePre = () => {
         window.scrollTo(0, 0);
-        if (window.innerWidth < 1024) {
+        if (window.innerWidth <= 1024) {
             navigate('/JoinusStep3');
         } else {
             onPre && onPre();
