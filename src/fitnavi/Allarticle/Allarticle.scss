@@ -783,6 +783,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         width: 10%;
+        padding-left: 1rem;
 
         @media (max-width: 1024px) {
             display: none; // 在平板區間隱藏
