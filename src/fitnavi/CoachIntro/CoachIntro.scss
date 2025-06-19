@@ -2861,7 +2861,7 @@ body {
                 // }
 
                 // &::before {
-                //     left: calc(33.33% - 35px);
+                //     left: calc(33.33%);
 
                 //     @media (min-width: 769px) and (max-width: 1024px) {
                 //         position: absolute;
@@ -2870,7 +2870,7 @@ body {
                 // }
 
                 // &::after {
-                //     left: calc(66.66% - 75px);
+                //     left: calc(66.66% );
 
                 //     @media (min-width: 769px) and (max-width: 1024px) {
                 //         position: absolute;
@@ -2878,24 +2878,28 @@ body {
                 //     }
                 // }
 
-                // &::before,
-                // &::after {
-                //   content: "";
-                //   position: absolute;
-                //   top: 0;
-                //   bottom: 0;
-                //   width: 1px;
-                //   border-left: 1px dashed #ccc;
-                // }
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 1px;
+                    border-left: 1px dashed #ccc;
 
-                // // 改為用 calc 搭配 grid 寬度
-                // &::before {
-                //   left: calc(33.3333% - 30px); // 第 1~2 欄交界處
-                // }
+                    @media(max-width:1024px) {
+                        display: none;
+                    }
+                }
 
-                // &::after {
-                //   left: calc(66.6666% - 40px); // 第 2~3 欄交界處
-                // }
+                // 改為用 calc 搭配 grid 寬度
+                &::before {
+                    left: calc(33.3333%); // 第 1~2 欄交界處
+                }
+
+                &::after {
+                    left: calc(66.6666%); // 第 2~3 欄交界處
+                }
             }
         }
 
@@ -2940,6 +2944,21 @@ body {
             text-transform: capitalize;
             // margin-left: 50%;
 
+            @media(max-width:768px) {
+                margin-left: 10px;
+                color: var(--dark, #3A2C19);
+
+                /* 段落/14 */
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
+
+
             @media (min-width: 769px) and (max-width: 1024px) {
                 color: var(--dark, #3A2C19);
                 font-size: 14px !important;
@@ -2966,6 +2985,25 @@ body {
             /* 19.6px */
             letter-spacing: 1.4px;
             // margin-top: 30px;
+
+            @media(max-width:768px) {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 5;
+                /* ✅ 限制顯示最多 5 行 */
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                margin-top: 20px;
+                color: var(--dark, #3A2C19);
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
 
             @media (min-width: 769px) and (max-width: 1024px) {
                 width: 140px;
@@ -2996,6 +3034,14 @@ body {
             position: absolute;
             top: 280px;
 
+            @media(max-width:768px) {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                position: absolute;
+                top: 15rem;
+            }
+
             @media (min-width: 769px) and (max-width: 1024px) {
                 display: flex;
                 flex-direction: row;
@@ -3019,6 +3065,19 @@ body {
                 /* 19.6px */
                 letter-spacing: 1.4px;
                 white-space: nowrap;
+
+                @media(max-width:768px) {
+                    color: #000;
+
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                }
 
                 @media (min-width: 769px) and (max-width: 1024px) {
                     color: #000;
@@ -3046,6 +3105,20 @@ body {
                 line-height: 140%;
                 /* 19.6px */
                 letter-spacing: 1.4px;
+
+                @media(max-width:768px) {
+                    color: var(--gray, #989794);
+                    text-align: right;
+
+                    /* 段落(小尺寸)/12 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 16.8px */
+                    letter-spacing: 1.2px;
+                }
 
                 @media (min-width: 769px) and (max-width: 1024px) {
                     color: var(--gray, #989794);
@@ -3155,17 +3228,32 @@ body {
 
     }
 
-.Coach-seemore-s {
-  display: none; /* 預設隱藏 */
+    .Coach-seemore-s {
+        display: none;
+        /* 預設隱藏 */
 
-  @media (max-width: 768px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 90%;
-  }
-}
+        @media (max-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 90%;
+
+            p {
+                color: var(--primary, var(--primary, #FF8740));
+                text-align: center;
+                font-family: "Noto Sans TC",sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
+        }
+
+
+    }
 
 
 }
