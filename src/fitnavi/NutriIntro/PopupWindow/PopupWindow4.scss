@@ -75,8 +75,8 @@
     // 返回按鈕、回首頁按鈕
     .prev-btn,
     .home-btn {
-        display: flex; 
-        justify-content: center; 
+        display: flex;
+        justify-content: center;
         align-items: center;
         width: 150px;
         height: 40px;
@@ -91,48 +91,90 @@
     }
 }
 
-.step4{
+.step4 {
     justify-content: center;
-   
-   .content{
-     padding-top: 30px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     
-     img{
-         width: 300px;
-     }
-     h1{
-         font-size: 2rem;
-         font-weight: 700;
-         color: #FF8740;
-         letter-spacing:12px ;
-      
-         padding-bottom: 20px;
-     }
-     .reminder{
-         font-size: 0.8rem;
-         color: #989794;
-     }
-     .steps{
-         font-size: 1.2rem;
-         font-weight: 700;
-         padding: 5px 0 25px 0;
-     }
-   }
-   .button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-   }
- }
- 
+
+    @media(max-width:768px) {
+        justify-content: flex-start !important;
+    }
+
+    .content {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media(max-width:768px) {
+            padding-top: 50px !important;
+        }
+
+        img {
+            width: 300px;
+
+            @media(max-width:768px) {
+                width: 200px;
+            }
+        }
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #FF8740;
+            letter-spacing: 12px;
+            padding-bottom: 20px;
+
+            @media(max-width:768px) {
+                font-size: 32px;
+                letter-spacing: 3.2px;
+                padding-bottom: 60px;
+            }
+        }
+
+        .reminder {
+            font-size: 0.8rem;
+            color: #989794;
+
+            .break {
+                display: none;
+            }
+
+            @media(max-width:768px) {
+                font-size: 14px !important;
+
+                .break {
+                    display: block;
+                }
+            }
+        }
+
+        .steps {
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: 5px 0 25px 0;
+
+            @media(max-width:768px) {
+                font-size: 14px !important;
+                padding: 5px 0 85px 0 !important;
+            }
+        }
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        @media(max-width:768px) {
+            flex-direction: column;
+        }
+    }
+}
+
 //  .step-popup {
 //    display: none;
 //  }
- 
- .step-popup.active {
-   display: block;
- }
+
+.step-popup.active {
+    display: block;
+}

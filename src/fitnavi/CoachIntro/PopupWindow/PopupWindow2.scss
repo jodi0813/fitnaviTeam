@@ -39,6 +39,7 @@
     display: flex;
     flex-direction: column;
 
+
     .close {
         cursor: pointer;
         width: 48px;
@@ -75,8 +76,8 @@
     // 返回按鈕、回首頁按鈕
     .prev-btn,
     .home-btn {
-        display: flex; 
-        justify-content: center; 
+        display: flex;
+        justify-content: center;
         align-items: center;
         width: 150px;
         height: 40px;
@@ -104,6 +105,11 @@
 
         p {
             font-size: 1.2rem;
+
+            @media(max-width:768px) {
+                font-size: 14px !important;
+            }
+
         }
 
         .detail {
@@ -115,26 +121,46 @@
                 font-weight: 700;
                 color: #FF8740;
                 padding-right: 20px;
+
+                @media(max-width:768px) {
+                    font-size: 20px !important;
+                    padding-right: 25px !important;
+                }
             }
 
             img {
                 width: 30px;
                 padding-right: 10px;
+
+                @media(max-width:768px) {
+                    width: 24px !important;
+                    padding-right: 5px !important;
+                }
             }
 
             .time {
                 font-size: 1.2rem;
                 font-weight: 700;
                 padding-right: 10px;
+
+                @media(max-width:768px) {
+                    font-size: 14px !important;
+                    padding-right: 3px !important;
+                }
             }
 
             .unit {
                 font-size: 0.8rem;
                 padding-right: 20px;
+
+                @media(max-width:768px) {
+                    font-size: 14px !important;
+                }
             }
 
             .expiry {
                 font-size: 0.8rem;
+
             }
         }
 
@@ -144,16 +170,29 @@
             .total {
                 font-size: 1.2rem;
                 font-weight: 700;
+
+                @media(max-width:768px) {
+                    font-size: 14px !important;
+                }
             }
 
             .currency {
                 font-size: 0.8rem;
+
+                @media(max-width:768px) {
+                    font-size: 14px !important;
+                }
             }
 
             .price {
                 font-size: 1.8rem;
                 font-weight: 400;
                 color: #FF8740;
+
+                @media(max-width:768px) {
+                    font-size: 32px !important;
+                    font-weight: 600 !important;
+                }
             }
         }
     }
@@ -167,6 +206,10 @@
 
         label {
             font-size: 1.2rem;
+
+            @media(max-width:768px) {
+                font-size: 14px !important;
+            }
         }
 
         textarea {
@@ -188,6 +231,11 @@
         padding-bottom: 8px;
         border-bottom: .5px solid #989794;
         margin-bottom: 35px;
+
+        @media(max-width:768px) {
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
 
         p {
             font-size: 1.2rem;
@@ -222,5 +270,9 @@
         justify-content: flex-end;
         align-items: flex-end;
         gap: 10px;
+
+        @media(max-width:768px) {
+            flex-direction: column;
+        }
     }
 }

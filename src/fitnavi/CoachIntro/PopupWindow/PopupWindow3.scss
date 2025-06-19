@@ -49,6 +49,7 @@
         border-bottom: 0.5px solid #989794;
         padding-bottom: 16px;
         margin-bottom: 25px;
+
     }
 
 
@@ -103,6 +104,10 @@
 
         .method {
             font-size: 1.2rem;
+
+            @media(max-width:768px) {
+                font-size: 14px !important;
+            }
         }
 
         .align-right {
@@ -113,6 +118,10 @@
             .total {
                 font-weight: 700;
                 font-size: 1.2rem;
+
+                @media(max-width:768px) {
+                    font-size: 14px !important;
+                }
             }
 
             .currency {
@@ -123,6 +132,11 @@
                 font-size: 1.8rem;
                 font-weight: 400;
                 color: #FF8740;
+
+                @media(max-width:768px) {
+                    font-size: 32px !important;
+                    font-weight: 600 !important;
+                }
             }
         }
     }
@@ -131,6 +145,10 @@
     .credit-payment {
         padding: 15px 0 20px 0;
         border-bottom: 0.5px solid #989794;
+
+        @media(max-width:768px) {
+            border-bottom: none !important;
+        }
 
         .icon {
             display: flex;
@@ -145,6 +163,12 @@
             background-color: #EAE8E2;
             border-radius: 10px;
 
+            @media(max-width:768px) {
+                width: 313px !important;
+                height: auto !important;
+                padding: 12px 24px !important;
+            }
+
             label {
                 font-size: 0.8rem;
             }
@@ -154,6 +178,11 @@
                 height: 40px;
                 border-radius: 5px;
                 border: none;
+
+                @media(max-width:768px) {
+                    width: 100% !important;
+                    height: 39px!important;
+                }
 
                 &::placeholder {
                     background-color: #FEFCF7;
@@ -165,6 +194,18 @@
             .row2 {
                 display: flex;
                 margin-top: 10px;
+
+                @media(max-width:768px) {
+                    flex-direction: column;
+                    gap: 8px;
+                }
+
+                .input {
+                    @media(max-width:768px) {
+                        width: 60% !important;
+                    }
+
+                }
             }
 
             .row1,
@@ -185,6 +226,10 @@
         padding: 15px 0;
         border-bottom: 0.5px solid #989794;
         margin-bottom: 21px;
+
+        @media(max-width:768px) {
+            padding: 0 0 10px 0 !important;
+        }
 
         p {
             font-size: 1.2rem;
@@ -209,5 +254,9 @@
         justify-content: flex-end;
         align-items: flex-end;
         gap: 10px;
+
+        @media(max-width:768px) {
+            flex-direction: column;
+        }
     }
 }

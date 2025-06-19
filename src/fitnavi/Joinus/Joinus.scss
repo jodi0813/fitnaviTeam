@@ -173,7 +173,7 @@
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
-                font-size: 12px;
+                font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 140%;
@@ -189,6 +189,7 @@
                 align-items: center;
                 gap: 14px;
                 margin-bottom: 11px;
+                margin-top: 30px;
                 padding-left: 30px;
 
                 h4 {
@@ -214,76 +215,7 @@
 
         }
 
-        // .imcoach-joinbutton {
-        //     display: flex;
-        //     flex-direction: row;
-        //     justify-content: center;
-        //     align-items: center;
-        //     gap: 12px;
-        //     width: 320px;
-        //     height: 50px;
-        //     padding: 8px 84px;
-        //     margin-top: 30px;
-        //     border-radius: 999px;
-        //     background: var(--primary, #FF8740);
-
-        //     color: var(--white, var(--white, #FEFCF7));
-        //     text-align: center;
-        //     font-family: "Noto Sans TC", sans-serif;
-        //     font-size: 16px;
-        //     font-style: normal;
-        //     font-weight: 900;
-        //     line-height: 140%;
-        //     /* 22.4px */
-        //     letter-spacing: 1.6px;
-
-        //     img {
-        //         width: 20px;
-        //         height: 23px;
-        //         position: absolute;
-        //         right: 80px;
-        //         opacity: 0;
-        //         // transform: translateX(10px); // 預設略偏右
-        //         transition: opacity 0.3s ease, transform 0.3s ease;
-        //     }
-
-        //     &:hover {
-        //         transform: translateY(-4px);
-        //         box-shadow: 4px 8px 0px 0px #3A2C19;
-        //         border: none;
-        //         outline: none;
-
-        //         img {
-        //             opacity: 1;
-        //             // transform: translateX(0); // icon 滑進來
-        //         }
-
-        //         span {
-        //             transform: translateX(-10px);
-        //             transition: opacity 0.3s ease, transform 0.3s ease;
-        //         }
-
-
-        //     }
-
-        //     &:active {
-        //         // transform: translateY(-4px);
-        //         box-shadow: 3px 6px 0px 0px #3A2C19;
-        //         font-size: 14px;
-        //         border: none;
-        //         outline: none;
-        //         transform: translate(2px, 2px);
-
-
-        //         img {
-        //             width: 18px;
-        //             height: 20px;
-        //         }
-        //     }
-        // }
-
-
-
+        
 
     }
 
@@ -394,7 +326,7 @@
             color: var(--dark, #3A2C19);
             /* 段落/14 */
             font-family: "Noto Sans TC", sans-serif;
-            font-size: 12px;
+            font-size: 14px;
             font-style: normal;
             font-weight: 500;
             line-height: 140%;
@@ -410,6 +342,7 @@
             align-items: center;
             gap: 14px;
             margin-bottom: 11px;
+            margin-top: 30px;
             padding-left: 30px;
 
             h4 {
@@ -570,7 +503,7 @@
                 flex-direction: row;
                 gap: 150px;
                 position: relative;
-                height: 50px;
+                height: 30px !important;
 
 
                 img {
@@ -663,7 +596,7 @@
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
-                font-size: 12px;
+                font-size: 12px !important;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 140%;
@@ -678,7 +611,8 @@
                 justify-content: flex-start;
                 align-items: center;
                 gap: 14px;
-                margin-top: 10px;
+                margin-top: 20px !important;
+
 
                 h4 {
                     color: var(--dark, #3A2C19);
@@ -767,7 +701,7 @@
                 flex-direction: row;
                 gap: 150px;
                 position: relative;
-                height: 50px;
+                height: 30px !important;
 
                 img {
                     width: 60px;
@@ -856,7 +790,7 @@
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
-                font-size: 12px;
+                font-size: 12px !important;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 140%;
@@ -871,7 +805,7 @@
                 justify-content: flex-start;
                 align-items: center;
                 gap: 14px;
-                margin-top: 10px;
+                margin-top: 20px !important;
 
                 h4 {
                     color: var(--dark, #3A2C19);
@@ -902,7 +836,7 @@
             flex-direction: row;
             gap: 150px;
             position: relative;
-            height: 50px;
+            height: 30px !important;
 
 
             img {
@@ -919,7 +853,7 @@
 
             label {
                 position: relative;
-                top: -15px;
+                top: -20px !important;
                 left: 20px;
                 display: inline-flex;
                 flex-direction: row;
@@ -1005,8 +939,8 @@
 }
 
 
-//393-800px
-@media (min-width:393px) and (max-width:800px) {
+
+@media  (max-width:800px) {
 
     #Joinus-Form {
         margin: 0 auto;
@@ -1076,7 +1010,7 @@
 
                 label {
                     position: relative;
-                    top: -15px;
+                    top: -20px !important;
                     left: 20px;
                     display: inline-flex;
                     flex-direction: row;
@@ -1151,7 +1085,7 @@
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
-                font-size: 12px;
+                font-size: 12px !important;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 140%;
@@ -1166,7 +1100,7 @@
                 justify-content: flex-start;
                 align-items: center;
                 gap: 14px;
-                margin-top: 10px;
+                margin-top: 15px !important;
 
                 h4 {
                     color: var(--dark, #3A2C19);
@@ -1347,7 +1281,7 @@
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
-                font-size: 12px;
+                font-size: 12px !important;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 140%;
@@ -1362,7 +1296,7 @@
                 justify-content: flex-start;
                 align-items: center;
                 gap: 14px;
-                margin-top: 10px;
+                margin-top: 15px !important;
 
                 h4 {
                     color: var(--dark, #3A2C19);
