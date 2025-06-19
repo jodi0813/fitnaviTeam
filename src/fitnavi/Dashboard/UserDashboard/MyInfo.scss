@@ -9,6 +9,7 @@
   background-color: #fff;
   border-radius: 24px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+
   @media (max-width: 1024px) {
     align-items: center;
     box-shadow: none;
@@ -16,25 +17,30 @@
     padding: 0px;
     gap: 24px;
   }
+
   .myinfoHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     @media (max-width: 1024px) {
       justify-content: center;
     }
+
     .myinfoEditButton {
       color: #fefcf7;
       font-family: "Noto Sans TC";
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
-      line-height: 150%; /* 24px */
+      line-height: 150%;
+      /* 24px */
       letter-spacing: 1.6px;
       border-radius: 99px;
       background: #ff8740;
       padding: 8px 24px;
     }
+
     .myinfoAvatar {
       width: 80px;
       height: 80px;
@@ -46,10 +52,12 @@
       display: flex;
       align-items: center;
       gap: 32px;
+
       @media (max-width: 1024px) {
         flex-direction: column;
         gap: 8px;
       }
+
       .myinfoNameBox {
         display: flex;
         gap: 32px;
@@ -94,17 +102,20 @@
             font-weight: 700;
             line-height: normal;
             letter-spacing: 2px;
+
             @media (max-width: 1024px) {
               color: #ff8740;
               font-size: 12px;
               font-style: normal;
               font-weight: 500;
-              line-height: 140%; /* 16.8px */
+              line-height: 140%;
+              /* 16.8px */
               letter-spacing: 1.2px;
             }
           }
         }
       }
+
       .coachinfoNameBox {
         @media (max-width: 1024px) {
           flex-direction: column;
@@ -136,32 +147,38 @@
 
   .profileContent {
     display: flex;
-    gap: 32px;
+
     @media (max-width: 1024px) {
       flex-direction: column;
       gap: 24px;
       width: 60%;
     }
+
     @media (max-width: 767px) {
       flex-direction: column;
       gap: 24px;
       width: 100%;
     }
+
     .profileContentLeft {
       display: flex;
+      flex: 1;
       flex-direction: column;
       gap: 24px;
     }
+
     .profileContent1 {
       display: flex;
       flex-direction: column;
       flex: 1;
       gap: 24px;
     }
+
     .myinfoSection {
       display: flex;
       flex-direction: column;
       gap: 12px;
+      flex: 1;
 
       .myinfosectionTitle {
         color: #ff8740;
@@ -171,21 +188,22 @@
         font-weight: 700;
         line-height: normal;
         letter-spacing: 2px;
+
         @media (max-width: 1024px) {
           color: #ff8740;
           font-family: "Noto Sans TC";
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
-          line-height: 140%; /* 19.6px */
+          line-height: 140%;
+          /* 19.6px */
           letter-spacing: 1.4px;
         }
       }
 
       .myinfoItem {
         display: flex;
-        padding: 0px 24px;
-        gap: 10px;
+        padding: 0px 20px;
         color: #3a2c19;
         font-family: "Noto Sans TC", sans-serif;
         font-size: 16px;
@@ -193,11 +211,14 @@
         font-weight: 500;
         line-height: 150%;
         letter-spacing: 1.6px;
+
         @media (max-width: 1024px) {
           padding: 0px 12px;
         }
+
         .myinfoItem1 {
           width: 100px;
+
           @media (max-width: 1024px) {
             color: #989794;
             /* 段落(小尺寸)/12 */
@@ -205,10 +226,12 @@
             font-size: 12px;
             font-style: normal;
             font-weight: 500;
-            line-height: 140%; /* 16.8px */
+            line-height: 140%;
+            /* 16.8px */
             letter-spacing: 1.2px;
           }
         }
+
         span {
           @media (max-width: 1024px) {
             color: #3a2c19;
@@ -216,31 +239,38 @@
             font-size: 12px;
             font-style: normal;
             font-weight: 500;
-            line-height: 140%; /* 16.8px */
+            line-height: 140%;
+            /* 16.8px */
             letter-spacing: 1.2px;
           }
         }
+
         .myinfoCheckbox {
           display: flex;
           flex-direction: column;
+
           .myinfoCheck {
             display: flex;
             align-items: center;
+
             .trShow {
               font-size: 14px;
               color: #000;
               font-family: "Noto Sans TC";
               font-style: normal;
               font-weight: 500;
-              line-height: 140%; /* 19.6px */
+              line-height: 140%;
+              /* 19.6px */
               letter-spacing: 1.4px;
+
               @media (max-width: 1024px) {
                 color: #989794;
                 font-family: "Noto Sans TC";
                 font-size: 12px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 140%; /* 16.8px */
+                line-height: 140%;
+                /* 16.8px */
                 letter-spacing: 1.2px;
               }
             }
