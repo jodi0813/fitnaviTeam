@@ -722,7 +722,7 @@ function Coachintro() {
                                     </div>
 
 
-                                    <div className="Coach-seeMoreComment">
+                                    {/* <div className="Coach-seeMoreComment">
                                         <button>
                                             <span className="seeMore-text">查看更多評價</span>
                                             <img src="./images/search.svg" alt="" />
@@ -737,7 +737,7 @@ function Coachintro() {
                                             </svg>
                                         </button>
 
-                                    </div>
+                                    </div> */}
 
                                 </div>
 

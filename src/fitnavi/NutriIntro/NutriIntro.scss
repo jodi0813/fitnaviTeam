@@ -42,27 +42,49 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
-            margin-top: 220px;
+            margin-top: 12rem;
+
+            @media(max-width: 768px) {
+                display: none;
+            }
+
+            @media (min-width: 769px) and (max-width: 1024px) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                max-width: 12%;
+                align-self: stretch;
+                transform: translateX(-10px);
+                margin-top: 6rem;
+            }
+
         }
 
         .nutrintro-all {
             display: flex;
             flex-direction: column;
-            /* 或 row，看你需求 */
             justify-content: center;
-            /* 主軸置中 */
             align-items: center;
-            /* 由 flex-start 改成 center，讓子元素置中 */
             width: 100%;
             margin: 0 auto;
             position: relative;
-
+        
             >* {
                 width: 100%;
-                max-width: clamp(1200px, 80vw, 1440px);
+                max-width: 1200px;
                 margin: 80px auto 0 auto;
+                padding: 0 16px;
                 box-sizing: border-box;
             }
+
+            @media (max-width: 768px) {
+                .coachintro-all>* {
+                    padding: 0 5px;
+                }
+            }
+            
+
+
         }
 
     }
@@ -1264,27 +1286,76 @@
 
 .nutrisvg {
     position: relative;
-    left: 70%;
-    bottom: 10%;
+
+    @media (min-width: 1025px) {
+        position: absolute;
+        top: 2rem; // ✅ 可視情況微調
+        right: 0; // ✅ 改成固定靠右
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 2;
+    }
+
+    @media (max-width:768px) {
+        position: absolute;
+        right: 1rem;
+        top: -2rem;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        position: absolute;
+        top: 14rem;
+        right: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    svg {
+        @media(max-width:768px) {
+            width: 217px;
+            height: 111px;
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            width: 18rem !important;
+            height: auto;
+            transform: rotate(-8.679deg) !important;
+        }
+    }
 
 
 
     p {
+        position: absolute;
+        right: 10%;
+        transform: rotate(-4.948deg);
+        font-size: 32px;
+        font-family: "Noto Sans TC";
+        font-weight: 700;
+        letter-spacing: 3.2px;
+        color: var(--dark, #3A2C19);
         width: 313.635px;
         height: 76.158px;
-        transform: rotate(-4.948deg);
-        flex-shrink: 0;
-        color: var(--dark, #3A2C19);
-        /* heading/標題3 */
-        font-family: "Noto Sans TC";
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        letter-spacing: 3.2px;
-        position: absolute;
-        top: 0;
-        right: -10px // 或其他位置
+
+        @media(max-width:768px) {
+            top: 10%;
+            width: 153.464px;
+            height: 38.705px;
+            transform: rotate(-7deg);
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1.4px;
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            //   margin-top: 0.2rem;
+            font-size: 20px;
+            transform: rotate(-8.679deg);
+            right: -30%;
+
+        }
     }
 }
 
@@ -2900,6 +2971,32 @@
             /* 45px */
             text-transform: capitalize;
             margin-left: 50%;
+
+            @media(max-width:768px) {
+                margin-left: 10px;
+                color: var(--dark, #3A2C19);
+
+                /* 段落/14 */
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
+
+
+            @media (min-width: 769px) and (max-width: 1024px) {
+                color: var(--dark, #3A2C19);
+                font-size: 14px !important;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                text-transform: capitalize;
+                margin-left: 20px;
+
+            }
         }
 
         p.description {
@@ -2912,32 +3009,48 @@
             line-height: 140%;
             /* 19.6px */
             letter-spacing: 1.4px;
-            // margin-top: 30px;
 
-            // @media (max-width: 1024px) {
-            //     overflow: hidden;
-            //     color: var(--dark, #3A2C19);
-            //     text-overflow: ellipsis;
-            //     /* 段落/14 */
-            //     font-family: "Noto Sans TC", sans-serif;
-            //     font-size: 14px;
-            //     font-style: normal;
-            //     font-weight: 500;
-            //     line-height: 140%;
-            //     /* 19.6px */
-            //     letter-spacing: 1.4px;
-            //     overflow: hidden;
-            //     color: var(--dark, #3A2C19);
-            //     text-overflow: ellipsis;
-            //     /* 段落/14 */
-            //     font-family: "Noto Sans TC", sans-serif;
-            //     font-size: 14px;
-            //     font-style: normal;
-            //     font-weight: 500;
-            //     line-height: 140%;
-            //     /* 19.6px */
-            //     letter-spacing: 1.4px;
-            // }
+            @media(max-width:768px) {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 5;
+                /* ✅ 限制顯示最多 5 行 */
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                margin-top: 20px;
+                color: var(--dark, #3A2C19);
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
+
+            @media (min-width: 769px) and (max-width: 1024px) {
+                width: 140px;
+                height: 100px;
+                color: var(--dark, #3A2C19);
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.4;
+                letter-spacing: 1.4px;
+                padding-right: 12px;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                /* 限制顯示兩行 */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-top: 10px;
+            }
+
+
+
         }
 
         .Name-date {
@@ -2946,6 +3059,28 @@
             gap: 120px;
             position: absolute;
             top: 280px;
+
+
+            @media(max-width:768px) {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                position: absolute;
+                top: 15rem;
+            }
+
+            @media (min-width: 769px) and (max-width: 1024px) {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                position: absolute;
+                top: 200px;
+            }
+
+
+
 
             p.Name {
                 color: #000;
@@ -2959,6 +3094,35 @@
                 /* 19.6px */
                 letter-spacing: 1.4px;
                 white-space: nowrap;
+
+                @media(max-width:768px) {
+                    color: #000;
+
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                }
+
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    color: #000;
+
+                    /* 段落/14 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                    white-space: nowrap;
+                }
+
+
             }
 
             p.Date {
@@ -2972,6 +3136,34 @@
                 line-height: 140%;
                 /* 19.6px */
                 letter-spacing: 1.4px;
+
+                @media(max-width:768px) {
+                    color: var(--gray, #989794);
+                    text-align: right;
+
+                    /* 段落(小尺寸)/12 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 16.8px */
+                    letter-spacing: 1.2px;
+                }
+
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    color: var(--gray, #989794);
+                    text-align: right;
+                    /* 段落/14 */
+                    font-family: " Sans TC";
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                }
+
             }
         }
     }
@@ -2984,8 +3176,13 @@
         margin-top: 5%;
         margin-left: -50px;
 
+        @media (max-width: 768px) {
+            display: none;
+        }
+
 
         button {
+            align-self: center;
             align-self: center;
             margin-top: 40px;
             display: flex;
@@ -3079,7 +3276,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        margin-top: 220px !important;
+        // margin-top: 220px !important;
 
         .Nutri-intro {
             margin-top: 60px;
