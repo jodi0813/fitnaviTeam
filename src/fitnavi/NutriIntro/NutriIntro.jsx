@@ -330,6 +330,41 @@ function NutriIntro() {
                                 <p className="SingleClass">/單堂</p>
                             </div>
 
+                            <div className="p-linethrough-color-mobile">
+                                <div className="class-wrapper">
+                                    <div className="first-class">
+                                        <h5>首次體驗</h5>
+                                        <div className="prices">
+                                            <p>NT$</p>
+                                            <h6 className="prices-600">500</h6>
+                                            <p>單堂</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="class-price">
+                                        <h5>單堂價格</h5>
+                                        <div className="prices">
+                                            <p>NT$</p>
+                                            <h6>1,400</h6>
+                                            <p>單堂</p>
+                                        </div>
+                                    </div>
+
+
+                                    <button
+                                        className="classinrto-text-mobile"
+                                        type="button"
+                                        onClick={() => setShowPopup(true)}
+                                    >
+                                        <span className="classinrto-text">立即報名</span>
+
+                                    </button>
+                                </div>
+
+
+
+                            </div>
+
                             <div className="Nutri-prices-button">
                                 <p>10堂優惠 ：$1,400/單堂</p>
                                 <div className="Nutri-price-with-button">
@@ -343,7 +378,11 @@ function NutriIntro() {
                         </div>
 
                         <div className="Nutri-place">
-                            <p>上課平台<br />可選擇</p>
+                            <div className="chooseclassplace">
+                                <p className="choose">可選擇</p> <br />
+                                <p className="classplace">上課地點</p>
+
+                            </div>
 
                             <div className="moreimg5">
                                 <img src="./images/googleMeet.svg" alt="" />
@@ -414,6 +453,30 @@ function NutriIntro() {
                                 <div className="nutri-circlewrapper">
 
                                     <img src="./images/Nutrispe-field.png" alt="" />
+                                </div>
+
+                                <div className="nutri-circle-s">
+                                    <div className="upper-circle">
+                                        <div>
+                                            <h5>減脂營養規劃</h5>
+                                            <p>根據個人體質目標、設計飲食計畫</p>
+                                        </div>
+
+                                        <div>
+                                            <h5>運動表現提升</h5>
+                                            <p>為健身族群提供能量補充策略</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="lower-circle">
+                                        <div>
+                                            <h5>運動補充品解析</h5>
+                                            <p>蛋白粉、BCAA等補充品應用</p>
+                                        </div>
+
+                                    </div>
+
+
                                 </div>
 
                             </div>

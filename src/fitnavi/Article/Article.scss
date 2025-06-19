@@ -442,7 +442,7 @@
     background: #DFDFDE;
     margin-right: 10px;
 
-    @media screen and (min-width: 390px) and (max-width: 1024px) {
+    @media(max-width: 1024px) {
       display: none;
     }
 
@@ -673,7 +673,7 @@
 
 
 //393-800調整
-@media (min-width: 390px) and (max-width: 800px) {
+@media  (max-width: 800px) {
   #card9 {
     width: 100%;
     display: block;
