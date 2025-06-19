@@ -108,6 +108,13 @@
       margin-left: 9%;
     }
 
+    @media(max-width:1024px) {
+      top: 30%;
+    }
+    @media(max-width:600px) {
+      top: 28%;
+    }
+
 
 
     .Hero-Section-Catchphrase {
@@ -125,9 +132,14 @@
           font-size: 155px;
         }
 
-        @media(max-width:1024px) {
-          font-size: clamp(90px, 15.15vw, 155px);
+        @media (max-width: 1024px) {
+          font-size: 64px;
+          // font-size: clamp(90px, 15.15vw, 155px);
         }
+
+        // @media(max-width:600px) {
+        //   font-size: 64px;
+        // }
       }
 
       .h3-HeroTitle {
@@ -150,8 +162,13 @@
           }
 
           @media(max-width:1024px) {
-            font-size: clamp(80px, 13vw + 36px, 180px);
+            // font-size: clamp(80px, 13vw + 36px, 180px);
+            font-size: 56px;
           }
+
+          // @media(max-width:600px) {
+          //   font-size: 56px;
+          // }
         }
 
         h3.tronger-HeroTitle {
@@ -167,9 +184,13 @@
           }
 
           @media(max-width:1024px) {
-            font-size: clamp(60px, 15vw, 155px);
+            // font-size: clamp(60px, 15vw, 155px);
+            font-size: 56px;
           }
 
+          // @media(max-width:600px) {
+          //   font-size: 56px;
+          // }
         }
       }
 
@@ -187,6 +208,10 @@
       padding-left: 1%;
       min-width: 300px;
 
+      @media(max-width:600px) {
+        padding-top: 8%;
+      }
+
       p {
         color: #FFF;
 
@@ -197,9 +222,11 @@
         line-height: 150%;
         /* 36px */
         letter-spacing: 2.4px;
+
         // white-space: nowrap;
-        @media(max-width:1024px){
-          font-size: clamp(14px, 2.34vw, 24px);
+        @media(max-width:1024px) {
+          // font-size: clamp(14px, 2.34vw, 24px);
+          font-size: 14px;
         }
 
       }
