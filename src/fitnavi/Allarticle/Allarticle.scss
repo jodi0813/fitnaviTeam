@@ -248,9 +248,9 @@
             background: #FFF;
             border-radius: 30px;
             padding: 10px 24px;
-            color: var(--primary, var(--primary, #FF8740));
+            color:  #FF8740;
             font-family: "Noto Sans TC", sans-serif;
-            color: var(--primary, var(--primary, #FF8740));
+            color: #FF8740;
             font-size: 14px;
             font-style: normal;
             font-weight: 900;
@@ -519,9 +519,9 @@
             background: #FFF;
             border-radius: 30px;
             padding: 10px 24px;
-            color: var(--primary, var(--primary, #FF8740));
+            color:  #FF8740;
             font-family: "Noto Sans TC", sans-serif;
-            color: var(--primary, var(--primary, #FF8740));
+            color:  #FF8740;
             font-size: 14px;
             font-style: normal;
             font-weight: 900;
@@ -839,7 +839,7 @@
 
                     &:hover {
 
-                        color: var(--primary, var(--primary, #FF8740));
+                        color:  #FF8740;
                         cursor: pointer;
                         border: none;
                         outline: none;
@@ -853,7 +853,7 @@
                 }
 
                 h4 {
-                    color: var(--primary, var(--primary, #FF8740));
+                    color:  #FF8740;
 
                     /* heading/標題4/medium */
                     font-family: "Noto Sans TC", sans-serif;
@@ -903,7 +903,7 @@
                 border-radius: 8px;
                 background: var(--primary, #FF8740);
 
-                color: var(--white, var(--white, #FEFCF7));
+                color:  #FEFCF7;
                 text-align: right;
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
@@ -996,7 +996,7 @@
 
 
             h4 {
-                color: var(--primary, var(--primary, #FF8740));
+                color:  #FF8740;
                 text-align: right;
                 font-family: "Mantou Sans";
                 font-size: 48px;
@@ -1007,7 +1007,7 @@
                 white-space: nowrap;
 
                 @media (max-width: 1024px) {
-                    color: var(--primary, var(--primary, #FF8740));
+                    color: #FF8740;
                     text-align: right;
                     font-family: "Dela Gothic One";
                     font-size: 24px;
@@ -1123,7 +1123,7 @@
         justify-content: center;
         align-items: center;
 
-        color: var(--white, var(--white, #FEFCF7));
+        color:  #FEFCF7;
         text-align: center;
         /* 段落/14 */
         font-family: "Noto Sans TC", sans-serif;
@@ -1155,7 +1155,7 @@
         margin-top: 60%;
 
         p {
-            color: var(--primary, var(--primary, #FF8740));
+            color:  #FF8740;
             text-align: center;
             font-family: "Noto Sans TC", sans-serif;
             font-size: 14px;

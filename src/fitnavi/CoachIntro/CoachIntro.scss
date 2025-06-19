@@ -142,7 +142,7 @@
 
             p {
                 white-space: nowrap;
-                color: var(--primary, var(--primary, #FF8740));
+                color:  #FF8740;
                 /* heading/標題4/Bold */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 14px;
@@ -314,7 +314,7 @@
 
                 p {
                     white-space: nowrap;
-                    color: var(--primary, var(--primary, #FF8740));
+                    color: #FF8740;
                     /* heading/標題4/Bold */
                     font-family: "Noto Sans TC", sans-serif;
                     font-size: 20px;
@@ -531,7 +531,7 @@
                             }
 
                             p.OrangePrice {
-                                color: var(--primary, var(--primary, #FF8740));
+                                color: #FF8740;
                                 font-family: "Noto Sans TC", sans-serif;
                                 font-size: 40px;
                                 font-style: normal;
@@ -660,7 +660,7 @@
                                 }
 
                                 .prices-600 {
-                                    color: var(--primary, var(--primary, #FF8740));
+                                    color:  #FF8740;
                                     font-family: 'Alata';
                                     font-size: 32px;
                                     font-style: normal;
@@ -799,7 +799,7 @@
                                 outline: none;
 
                                 .classinrto-text {
-                                    color: var(--primary, var(--primary, #FF8740));
+                                    color:  #FF8740;
                                     font-size: 16px;
                                     font-weight: 500;
                                     letter-spacing: 1.6px;
@@ -895,7 +895,7 @@
 
             .classplace {
                 @media(max-width: 768px) {
-                    color: var(--primary, var(--primary, #FF8740));
+                    color:  #FF8740;
                     text-align: right;
 
                     /* heading/標題4/Bold */
@@ -1096,7 +1096,7 @@
                         white-space: nowrap;
 
                         &:hover {
-                            color: var(--primary, var(--primary, #FF8740));
+                            color:  #FF8740;
                             text-align: right;
                             font-family: "Noto Sans TC", sans-serif;
                             font-size: 14px;
@@ -1223,7 +1223,7 @@
 
                     @media(max-width: 768px) {
                         width: 86px;
-                        color: var(--primary, var(--primary, #FF8740));
+                        color:  #FF8740;
 
                         /* heading/標題4/Bold */
                         font-family: "Noto Sans TC", sans-serif;
@@ -1345,7 +1345,7 @@
 
                 @media (max-width: 768px) {
                     width: 86px;
-                    color: var(--primary, var(--primary, #FF8740));
+                    color:  #FF8740;
 
                     /* heading/標題4/Bold */
                     font-family: "Noto Sans TC", sans-serif;
@@ -1589,7 +1589,7 @@
 
                     @media (max-width: 768px) {
                         width: 86px;
-                        color: var(--primary, var(--primary, #FF8740));
+                        color:  #FF8740;
 
                         /* heading/標題4/Bold */
                         font-family: "Noto Sans TC", sans-serif;
@@ -1784,7 +1784,7 @@
 
                     @media (max-width: 768px) {
                         width: 86px;
-                        color: var(--primary, var(--primary, #FF8740));
+                        color:  #FF8740;
 
                         /* heading/標題4/Bold */
                         font-family: "Noto Sans TC", sans-serif;
@@ -1976,7 +1976,7 @@
 
                     @media (max-width: 768px) {
                         width: 86px;
-                        color: var(--primary, var(--primary, #FF8740));
+                        color: #FF8740;
 
                         /* heading/標題4/Bold */
                         font-family: "Noto Sans TC", sans-serif;
@@ -2070,7 +2070,7 @@
                         @media(max-width:768px) {
                             width: 32px;
                             height: 32px;
-                            color: var(--white, var(--white, #FEFCF7));
+                            color:  #FEFCF7;
                             text-align: center;
 
                             /* heading/標題4/Bold */
@@ -2336,7 +2336,7 @@
 
                 @media (max-width: 768px) {
                     width: 86px;
-                    color: var(--primary, var(--primary, #FF8740));
+                    color: #FF8740;
 
                     /* heading/標題4/Bold */
                     font-family: "Noto Sans TC", sans-serif;
@@ -2464,7 +2464,7 @@
 
 
             h3 {
-                color: var(--primary, var(--primary, #FF8740));
+                color: #FF8740;
                 /* heading/標題3 */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 32px;
@@ -2477,7 +2477,7 @@
 
                 @media (max-width: 768px) {
                     width: 86px;
-                    color: var(--primary, var(--primary, #FF8740));
+                    color:  #FF8740;
 
                     /* heading/標題4/Bold */
                     font-family: "Noto Sans TC", sans-serif;
@@ -2651,7 +2651,7 @@
 
 
             .member-comment {
-                color: var(--primary, var(--primary, #FF8740));
+                color: #FF8740;
                 /* heading/標題3 */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 32px !important;
@@ -2663,7 +2663,7 @@
 
                 @media (max-width: 768px) {
                     width: 86px;
-                    color: var(--primary, var(--primary, #FF8740));
+                    color:  #FF8740;
                     /* heading/標題4/Bold */
                     font-family: "Noto Sans TC", sans-serif;
                     font-size: 20px !important;
@@ -2929,7 +2929,7 @@
         }
 
         .member-comment {
-            color: var(--primary, var(--primary, #FF8740));
+            color: #FF8740;
             /* heading/標題3 */
             font-family: "Noto Sans TC", sans-serif;
             font-size: 32px;
@@ -3221,7 +3221,7 @@
                 outline: none;
 
                 .seeMore-text {
-                    color: var(--primary, var(--primary, #FF8740));
+                    color:  #FF8740;
                     font-size: 16px;
                     font-weight: 500;
                     letter-spacing: 1.6px;
@@ -3249,7 +3249,7 @@
             margin-top: 90%;
 
             p {
-                color: var(--primary, var(--primary, #FF8740));
+                color:  #FF8740;
                 text-align: center;
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 14px;

@@ -200,7 +200,7 @@ html {
 }
 .ArticleSection-wrapper .orangeTitle {
   width: 100%;
-  color: var(--primary, var(--primary, #FF8740));
+  color:  #FF8740;
   font-family: "Mantou Sans";
   font-size: 64px;
   font-style: normal;
@@ -409,7 +409,7 @@ html {
   align-items: center;
   border-radius: 999px;
   background: var(--primary, #FF8740);
-  color: var(--white, var(--white, #FEFCF7));
+  color:  #FEFCF7;
   text-align: center;
   font-family: "Noto Sans TC";
   font-size: 20px;

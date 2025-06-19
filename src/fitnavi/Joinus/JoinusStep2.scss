@@ -126,7 +126,7 @@
         }
 
         p {
-            color: var(--primary, var(--primary, #FF8740));
+            color: #FF8740;
             text-align: center;
             font-family: "Dela Gothic One";
             font-size: 14px;
@@ -137,7 +137,7 @@
             letter-spacing: 1.4px;
 
             @media(max-width:1024px) {
-                color: var(--primary, var(--primary, #FF8740));
+                color:  #FF8740;
                 opacity: 0.5;
                 text-align: center;
                 font-family: "Dela Gothic One";
@@ -198,7 +198,7 @@
         }
 
         p {
-            color: var(--primary, var(--primary, #FF8740));
+            color:  #FF8740;
             /* 段落/14 */
             font-family: "Noto Sans TC", sans-serif;
             font-size: 14px;
@@ -287,7 +287,7 @@
             }
 
             h5 {
-                color: var(--primary, var(--primary, #FF8740));
+                color:  #FF8740;
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 14px;

@@ -202,7 +202,7 @@ a {
 }
 
 .footer-overlaytext h4 {
-    color: var(--white, var(--white, #FEFCF7));
+    color:  #FEFCF7;
     text-align: center;
     font-family: "Noto Sans TC", sans-serif;
     font-size: 24px;
@@ -263,7 +263,7 @@ a {
 
 
     p {
-        color: var(--primary, var(--primary, #FF8740));
+        color:  #FF8740;
         /* 段落/16 */
         font-family: "Noto Sans TC", "Sans TC", sans-serif;
         font-size: 16px;
@@ -381,7 +381,7 @@ a {
             border-radius: 8px;
             border: 0.5px solid var(--primary, #FF8740);
             background: #FFF;
-            color: var(--primary, var(--primary, #FF8740));
+            color: #FF8740;
             text-align: center;
             font-family: "Noto Sans TC", sans-serif;
             font-size: 12px;
@@ -407,7 +407,7 @@ a {
         }
 
         p {
-            color: var(--white, var(--white, #FEFCF7));
+            color:  #FEFCF7;
             font-family: "Noto Sans TC", sans-serif;
             font-size: 12px;
             font-style: normal;
@@ -431,7 +431,7 @@ a {
     }
 
     #footer-m .copyright {
-        color: var(--white, var(--white, #FEFCF7));
+        color:  #FEFCF7;
         /* 段落(小尺寸)/12 */
         font-family: "Noto Sans TC", sans-serif;
         font-size: 12px;
@@ -526,7 +526,7 @@ a {
         border-radius: 8px;
         border: 0.5px solid var(--primary, #FF8740);
         background: #FFF;
-        color: var(--primary, var(--primary, #FF8740));
+        color:  #FF8740;
         text-align: center;
         font-family: "Noto Sans TC", sans-serif;
         font-size: 12px;
@@ -551,7 +551,7 @@ a {
     }
 
     #footer-s .footer-contact p {
-        color: var(--white, var(--white, #FEFCF7));
+        color:  #FEFCF7;
         font-family: "Noto Sans TC", sans-serif;
         font-size: 12px;
         font-style: normal;
@@ -575,7 +575,7 @@ a {
     }
 
     #footer-s .copyright {
-        color: var(--white, var(--white, #FEFCF7));
+        color:  #FEFCF7;
         font-family: "Noto Sans TC", sans-serif;
         font-size: 12px;
         font-style: normal;

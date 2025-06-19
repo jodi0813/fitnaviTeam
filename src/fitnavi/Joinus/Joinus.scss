@@ -28,7 +28,7 @@
 
 .Joinus-introduction {
     .BringPro {
-        color: var(--primary, var(--primary, #FF8740));
+        color:  #FF8740;
         /* heading/標題4/Bold */
         font-family: "Noto Sans TC", sans-serif;
         font-size: 20px;
@@ -40,36 +40,29 @@
     }
 
     .BringPro-intro {
-
-        @media (max-width: 800px) {
-
-            width: 100%;
-            max-width: 330px;
-            text-align: right;
-            margin-left: auto;  /* 靠右對齊 */
-
-        }
-
-        @media (min-width: 801px) {
-
-            width: 100%;
-            max-width: 736px;
-            text-align: left;
-            margin-right: auto;  /* 靠右對齊 */
-
-        }
-
-        color: var(--dark, #3A2C19);
-        /* 段落/14 */
-        font-family: "Noto Sans TC";
+        color: #3A2C19;
+        font-family: "Noto Sans TC",sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
-        line-height: 140%;
-        /* 19.6px */
+        line-height: 140%; // 19.6px
         letter-spacing: 1.4px;
         margin-top: 10px;
-    }
+        width: 100%;
+      
+        @media (max-width: 800px) {
+          max-width: 330px;
+          text-align: right;
+          margin-left: auto; // 靠右對齊
+        }
+      
+        @media (min-width: 801px) {
+          max-width: 736px;
+          text-align: left;
+          margin-right: auto; // 靠左對齊
+        }
+      }
+      
 
 }
 
@@ -127,7 +120,7 @@
 
 
                     .imcoach-Iam {
-                        color: var(--dark, #3A2C19);
+                        color:  #3A2C19;
                         font-family: "Dela Gothic One";
                         font-size: 24px;
                         font-style: normal;
@@ -140,7 +133,7 @@
                     }
 
                     .imcoach-coach {
-                        color: var(--primary, var(--primary, #FF8740));
+                        color:  #FF8740;
                         font-family: "Dela Gothic One";
                         font-size: 36px;
                         font-style: normal;
@@ -166,7 +159,7 @@
 
 
                 h4 {
-                    color: var(--dark, #3A2C19);
+                    color: #3A2C19;
                     text-align: center;
                     /* 段落/14 */
                     font-family: "Noto Sans TC", sans-serif;
@@ -189,7 +182,7 @@
             p {
                 margin-top: 14px;
                 padding-left: 30px;
-                color: var(--dark, #3A2C19);
+                color:  #3A2C19;
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 14px;
@@ -212,7 +205,7 @@
                 padding-left: 30px;
 
                 h4 {
-                    color: var(--dark, #3A2C19);
+                    color:  #3A2C19;
                     text-align: center;
                     /* 段落/14 */
                     font-family: "Noto Sans TC", sans-serif;
@@ -278,7 +271,7 @@
 
 
                     .imnutrionist-Iam {
-                        color: var(--dark, #3A2C19);
+                        color: #3A2C19;
                         font-family: "Dela Gothic One";
                         font-size: 24px;
                         font-style: normal;
@@ -291,7 +284,7 @@
                     }
 
                     .imnutrionist-nutrionist {
-                        color: var(--primary, var(--primary, #FF8740));
+                        color:  #FF8740;
                         font-family: "Dela Gothic One";
                         font-size: 36px;
                         font-style: normal;
@@ -318,7 +311,7 @@
                 padding-left: 30px;
 
                 h4 {
-                    color: var(--dark, #3A2C19);
+                    color:  #3A2C19;
                     text-align: center;
                     /* 段落/14 */
                     font-family: "Noto Sans TC";
@@ -342,7 +335,7 @@
         p {
             margin-top: 14px;
             padding-left: 30px;
-            color: var(--dark, #3A2C19);
+            color:  #3A2C19;
             /* 段落/14 */
             font-family: "Noto Sans TC", sans-serif;
             font-size: 14px;
@@ -365,7 +358,7 @@
             padding-left: 30px;
 
             h4 {
-                color: var(--dark, #3A2C19);
+                color:  #3A2C19;
                 text-align: center;
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
@@ -398,9 +391,9 @@
         padding: 8px 84px;
         margin-top: 30px;
         border-radius: 999px;
-        background: var(--primary, #FF8740);
+        background:  #FF8740;
 
-        color: var(--white, var(--white, #FEFCF7));
+        color:  #FEFCF7;
         text-align: center;
         font-family: "Noto Sans TC", sans-serif;
         font-size: 16px;
@@ -478,7 +471,7 @@
 
     .imnutrionist-Iam,
     .imcoach-Iam {
-        color: var(--dark, #3A2C19);
+        color: #3A2C19;
         font-family: "Dela Gothic One";
         font-size: 14px !important;
         font-style: normal;
@@ -491,7 +484,7 @@
 
     .imcoach-coach,
     .imnutrionist-nutrionist {
-        color: var(--primary, var(--primary, #FF8740));
+        color: #FF8740;
         font-family: "Dela Gothic One";
         font-size: 24px;
         font-style: normal;
@@ -550,7 +543,7 @@
 
 
                     .imcoach-Iam {
-                        color: var(--dark, #3A2C19);
+                        color:  #3A2C19;
                         font-family: "Dela Gothic One";
                         font-size: 24px;
                         font-style: normal;
@@ -563,7 +556,7 @@
                     }
 
                     .imcoach-coach {
-                        color: var(--primary, var(--primary, #FF8740));
+                        color:  #FF8740;
                         font-family: "Dela Gothic One";
                         font-size: 36px;
                         font-style: normal;
@@ -589,7 +582,7 @@
 
 
                 h4 {
-                    color: var(--dark, #3A2C19);
+                    color:  #3A2C19;
                     text-align: center;
                     /* 段落/14 */
                     font-family: "Noto Sans TC", sans-serif;
@@ -612,7 +605,7 @@
             p {
                 margin-top: 14px;
                 padding-left: 30px;
-                color: var(--dark, #3A2C19);
+                color:  #3A2C19;
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 12px !important;
@@ -634,7 +627,7 @@
 
 
                 h4 {
-                    color: var(--dark, #3A2C19);
+                    color:  #3A2C19;
                     text-align: center;
                     /* 段落/14 */
                     font-family: "Noto Sans TC", sans-serif;
@@ -744,7 +737,7 @@
 
 
                     .imnutrionist-Iam {
-                        color: var(--dark, #3A2C19);
+                        color:  #3A2C19;
                         font-family: "Dela Gothic One";
                         font-size: 24px;
                         font-style: normal;
@@ -757,7 +750,7 @@
                     }
 
                     .imnutrionist-nutrionist {
-                        color: var(--primary, var(--primary, #FF8740));
+                        color:  #FF8740;
                         font-family: "Dela Gothic One";
                         font-size: 36px;
                         font-style: normal;
@@ -783,7 +776,7 @@
 
 
                 h4 {
-                    color: var(--dark, #3A2C19);
+                    color:  #3A2C19;
                     text-align: center;
                     /* 段落/14 */
                     font-family: "Noto Sans TC", sans-serif;
@@ -806,7 +799,7 @@
             p {
                 margin-top: 14px;
                 padding-left: 30px;
-                color: var(--dark, #3A2C19);
+                color:  #3A2C19;
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 12px !important;
@@ -827,7 +820,7 @@
                 margin-top: 20px !important;
 
                 h4 {
-                    color: var(--dark, #3A2C19);
+                    color:  #3A2C19;
                     text-align: center;
                     /* 段落/14 */
                     font-family: "Noto Sans TC", sans-serif;
@@ -883,7 +876,7 @@
 
 
                 .imnutrionist-Iam {
-                    color: var(--dark, #3A2C19);
+                    color:  #3A2C19;
                     font-family: "Dela Gothic One";
                     font-size: 24px;
                     font-style: normal;
@@ -896,7 +889,7 @@
                 }
 
                 .imnutrionist-nutrionist {
-                    color: var(--primary, var(--primary, #FF8740));
+                    color:  #FF8740;
                     font-family: "Dela Gothic One";
                     font-size: 36px;
                     font-style: normal;
@@ -1040,7 +1033,7 @@
 
 
                     .imcoach-Iam {
-                        color: var(--dark, #3A2C19);
+                        color:  #3A2C19;
                         font-family: "Dela Gothic One";
                         font-size: 24px;
                         font-style: normal;
@@ -1053,7 +1046,7 @@
                     }
 
                     .imcoach-coach {
-                        color: var(--primary, var(--primary, #FF8740));
+                        color:  #FF8740;
                         font-family: "Dela Gothic One";
                         font-size: 36px;
                         font-style: normal;
@@ -1078,7 +1071,7 @@
 
 
                 h4 {
-                    color: var(--dark, #3A2C19);
+                    color: #3A2C19;
                     text-align: center;
                     /* 段落/14 */
                     font-family: "Noto Sans TC", sans-serif;
@@ -1101,7 +1094,7 @@
             p {
                 margin-top: 14px;
                 padding-left: 20px !important;
-                color: var(--dark, #3A2C19);
+                color:  #3A2C19;
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 12px !important;
@@ -1122,7 +1115,7 @@
                 margin-top: 15px !important;
 
                 h4 {
-                    color: var(--dark, #3A2C19);
+                    color:  #3A2C19;
                     text-align: center;
                     /* 段落/14 */
                     font-family: "Noto Sans TC", sans-serif;
@@ -1236,7 +1229,7 @@
 
 
                     .imnutrionist-Iam {
-                        color: var(--dark, #3A2C19);
+                        color:  #3A2C19;
                         font-family: "Dela Gothic One";
                         font-size: 24px;
                         font-style: normal;
@@ -1249,7 +1242,7 @@
                     }
 
                     .imnutrionist-nutrionist {
-                        color: var(--primary, var(--primary, #FF8740));
+                        color:  #FF8740;
                         font-family: "Dela Gothic One";
                         font-size: 36px;
                         font-style: normal;
@@ -1274,7 +1267,7 @@
 
 
                 h4 {
-                    color: var(--dark, #3A2C19);
+                    color:  #3A2C19;
                     text-align: center;
                     /* 段落/14 */
                     font-family: "Noto Sans TC", sans-serif;
@@ -1297,7 +1290,7 @@
             p {
                 margin-top: 14px;
                 padding-left: 20px !important;
-                color: var(--dark, #3A2C19);
+                color:  #3A2C19;
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 12px !important;
@@ -1318,7 +1311,7 @@
                 margin-top: 15px !important;
 
                 h4 {
-                    color: var(--dark, #3A2C19);
+                    color:  #3A2C19;
                     text-align: center;
                     /* 段落/14 */
                     font-family: "Noto Sans TC", sans-serif;
@@ -1386,7 +1379,7 @@
 
     .imnutrionist-Iam,
     .imcoach-Iam {
-        color: var(--dark, #3A2C19);
+        color:  #3A2C19;
         font-family: "Dela Gothic One";
         font-size: 14px !important;
         font-style: normal;
@@ -1399,7 +1392,7 @@
 
     .imcoach-coach,
     .imnutrionist-nutrionist {
-        color: var(--primary, var(--primary, #FF8740));
+        color:  #FF8740;
         font-family: "Dela Gothic One";
         font-size: 24px;
         font-style: normal;

@@ -81,7 +81,7 @@
         align-items: center;
         border-radius: 10px;
         background: var(--primary, #FF8740);
-        color: var(--white, var(--white, #FEFCF7));
+        color:  #FEFCF7;
         /* 段落/14 */
         font-family: "Noto Sans TC", sans-serif;
         font-size: 14px;
@@ -802,7 +802,7 @@
   }
 
   .WriterName {
-    color: var(--primary, var(--primary, #FF8740));
+    color:  #FF8740;
     /* 段落/14 */
     font-family: "Noto Sans TC", sans-serif;
     font-size: 10px;

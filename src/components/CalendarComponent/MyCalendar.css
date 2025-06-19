@@ -22,7 +22,7 @@
 
 /* hover 效果 */
 .react-calendar__tile:hover {
-    color: var(--primary, var(--primary, #FF8740));
+    color:  #FF8740;
     text-align: center;
     font-family: Inter;
     font-size: 15px;
@@ -114,7 +114,7 @@
             background: #F6F7F9;
 
             &:hover {
-                color: var(--primary, var(--primary, #FF8740));
+                color:  #FF8740;
                 text-align: center;
                 font-family: Inter;
                 font-size: 15px;

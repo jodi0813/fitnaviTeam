@@ -196,7 +196,7 @@
 @media (max-width: 768px) {
   .tag p {
     display: block;
-    color: var(--white, var(--white, #FEFCF7));
+    color:  #FEFCF7;
     text-align: right;
 
     /* 段落(小尺寸)/12 */
@@ -246,7 +246,7 @@
     align-items: center;
     border-radius: 4px;
     background: var(--primary, #FF8740);
-    color: var(--white, var(--white, #FEFCF7));
+    color:  #FEFCF7;
 
     /* 段落(小尺寸)/12 */
     font-family: "Noto Sans TC", sans-serif;
