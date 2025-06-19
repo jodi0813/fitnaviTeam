@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./BookingPopup.scss";
 import CalendarComponent from "../../../../components/CalendarComponent/CalendarComponent";
-import { Link } from "react-router-dom";
 import BookingOkPopup from "./BookingOkPopup";
 /* 預約彈窗 */
 function BookingPopup({ onClose, onSubmitBooking }) {

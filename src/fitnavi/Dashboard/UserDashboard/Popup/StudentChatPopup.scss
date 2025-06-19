@@ -82,7 +82,7 @@
       width: 24px;
       height: 24px;
       border-radius: 50%;
-      fill: #fefcf7;
+      background-color: #fefcf7;
       position: absolute;
       right: 12px;
       top: 10px;
@@ -207,7 +207,7 @@
       gap: 10px;
       align-self: stretch;
 
-      @media (max-width:767px) {
+      @media (max-width: 767px) {
         padding: 0;
       }
 
@@ -285,13 +285,10 @@
 
 .review-main {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
 
-  .starsNumber {
-    color: #fefcf7;
-  }
+  width: 100%;
 
   .stars {
     font-size: 30px;
@@ -309,26 +306,165 @@
   }
 
   .score-text {
-
-    color: #FEFCF7;
+    color: #fefcf7;
     font-family: "Noto Sans TC";
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
-    /* 19.6px */
     letter-spacing: 1.4px;
-
+    display: flex;
+    align-items: center;
+    gap: 15px;
     .score {
-      font-weight: bold;
-      font-size: 20px;
-      color: #ffcc00;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 3.2px;
+      font-size: 32px;
+      color: #fc0;
     }
   }
 }
 
-.feedback {
-  height: 150px;
-  border-radius: 12px;
-  background: #FEFCF7;
+.review-main1 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  .feedback {
+    height: 150px;
+    border-radius: 12px;
+    background: #fefcf7;  
+  }
+  .sendBt {
+    display: flex;
+    justify-content: center;
+    button {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 999px;
+      background: #ff8740;
+      color: #fefcf7;
+      text-align: center;
+      font-family: "Noto Sans TC";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2px;
+      width: 170px;
+    }
+  }
+}
+.starsNumber {
+  color: #fefcf7;
+}
+.starsScore {
+  display: flex;
+  justify-content: space-between;
+}
+//ConfirmReviewPopup
+.confirmReview {
+  width: 246px;
+  height: 204px;
+  padding: 24px;
+  gap: 24px;
+  .confirmReviewBox {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    span {
+      color: #fefcf7;
+      text-align: center;
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      letter-spacing: 1.4px;
+    }
+    .orangeReview {
+      color: #ff8740;
+    }
+  }
+  .ConfirmButtons {
+    display: flex;
+    gap: 12px;
+    .cancel-btn {
+      background-color: #fefcf7;
+      color: #3a2c19;
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; /* 19.6px */
+      letter-spacing: 1.4px;
+      width: 93px;
+      border-radius: 999px;
+      display: flex;
+      padding: 4px 24px;
+      justify-content: center;
+      align-items: center;
+    }
+    .confirm-btn {
+      background-color: #ff8740;
+      color: #fefcf7;
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; /* 19.6px */
+      letter-spacing: 1.4px;
+      width: 93px;
+      border-radius: 999px;
+      display: flex;
+      padding: 4px 24px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+//ReviewSuccessPopup
+
+.ReviewSuccess {
+  width: 246px;
+  height: 124px;
+  padding: 24px;
+  .reviewSuccess-icon {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    .reviewSuccess-title {
+      color: #fefcf7;
+      text-align: center;
+      font-family: "Noto Sans TC";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%; /* 24px */
+      letter-spacing: 1.6px;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .reviewSuccessBtBox {
+    .reviewSuccessBt {
+      border-radius: 999px;
+      background: #ff8740;
+      color: #fefcf7;
+      font-family: "Noto Sans TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%; /* 19.6px */
+      letter-spacing: 1.4px;
+      width: 100%;
+      padding: 4px 24px;
+    }
+  }
 }
