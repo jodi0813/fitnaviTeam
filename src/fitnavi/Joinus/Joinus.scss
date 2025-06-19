@@ -40,6 +40,25 @@
     }
 
     .BringPro-intro {
+
+        @media (max-width: 800px) {
+
+            width: 100%;
+            max-width: 330px;
+            text-align: right;
+            margin-left: auto;  /* 靠右對齊 */
+
+        }
+
+        @media (min-width: 801px) {
+
+            width: 100%;
+            max-width: 736px;
+            text-align: left;
+            margin-right: auto;  /* 靠右對齊 */
+
+        }
+
         color: var(--dark, #3A2C19);
         /* 段落/14 */
         font-family: "Noto Sans TC";
@@ -215,7 +234,7 @@
 
         }
 
-        
+
 
     }
 
@@ -940,7 +959,7 @@
 
 
 
-@media  (max-width:800px) {
+@media (max-width:800px) {
 
     #Joinus-Form {
         margin: 0 auto;
@@ -1193,7 +1212,7 @@
 
 
                 img {
-                     position: absolute;
+                    position: absolute;
                     top: 2rem !important;
                     left: -3rem !important;
                     max-width: none !important;
