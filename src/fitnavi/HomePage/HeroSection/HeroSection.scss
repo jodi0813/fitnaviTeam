@@ -13,6 +13,10 @@
     height: 155vh;
   }
 
+  @media(max-width:768px) {
+    height: 140vh;
+  }
+
   // 影片讓下面邊界不要這麼明顯的濾鏡
   &::after {
     content: "";
@@ -111,8 +115,13 @@
     @media(max-width:1024px) {
       top: 30%;
     }
+
+    @media(max-width:768px) {
+      top: 40%;
+    }
+
     @media(max-width:600px) {
-      top: 28%;
+      top: 33%;
     }
 
 
@@ -223,10 +232,15 @@
         /* 36px */
         letter-spacing: 2.4px;
 
-        // white-space: nowrap;
+        white-space: nowrap;
+
         @media(max-width:1024px) {
           // font-size: clamp(14px, 2.34vw, 24px);
           font-size: 14px;
+        }
+
+        @media(max-width:500px) {
+          white-space: wrap;
         }
 
       }
@@ -248,6 +262,10 @@
     flex-direction: column;
     align-items: center;
     z-index: 2;
+
+    @media(max-width:1024px) {
+      display: none;
+    }
 
     @media screen and (min-width: 1359px) and (max-width: 1361px) {
       left: 50%;
