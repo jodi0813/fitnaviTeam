@@ -8,6 +8,14 @@
 
 }
 
+@media (max-width: 768px) {
+  .card {
+    height: 18rem;
+  }
+}
+
+
+
 
 
 /* 日期 */
@@ -36,6 +44,33 @@
 
 }
 
+@media (max-width: 768px) {
+  .data {
+    display: flex;
+    padding: 2px 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.20);
+    color: #FFF;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 6px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 8.4px */
+    letter-spacing: 0.6px;
+    width: 45px;
+    height: 12px;
+    position: absolute;
+  top: 10px;
+  right: 30px;
+
+  }
+}
+
+
+
 
 
 /* 文章內容摘要區 */
@@ -63,6 +98,15 @@
 
 }
 
+@media (max-width: 768px) {
+  .contentBox {
+    max-width: 150px !important;
+    max-height: 100px !important;
+    right: 20px;
+    padding: 20px;
+  }
+}
+
 
 
 /* 文章標題 */
@@ -78,6 +122,23 @@
 
 
 }
+
+@media (max-width: 768px) {
+  .contentBox h4 {
+    color: var(--dark, #3A2C19);
+
+    /* 段落/14 */
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 19.6px */
+    letter-spacing: 1.4px;
+  }
+}
+
+
 
 
 
@@ -96,6 +157,14 @@
   line-height: 1.4;
 
 }
+
+@media (max-width: 768px) {
+  .contentBox p {
+    display: none;
+  }
+}
+
+
 
 
 
@@ -124,6 +193,24 @@
   white-space: nowrap;
 }
 
+@media (max-width: 768px) {
+  .tag p {
+    display: block;
+    color: var(--white, var(--white, #FEFCF7));
+    text-align: right;
+
+    /* 段落(小尺寸)/12 */
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 16.8px */
+    letter-spacing: 1.2px;
+  }
+}
+
+
 /* 左上角的tag */
 .tagBox {
   position: relative;
@@ -145,14 +232,35 @@
   white-space: nowrap;
 
   @media (min-width: 769px) and (max-width: 1024px) {
-
-   
     position: relative;
-     left: -20px !important;
+    left: -20px !important;
   }
 
+}
 
+@media (max-width: 768px) {
+  .tagBox {
+    display: inline-flex;
+    padding: 2px 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: var(--primary, #FF8740);
+    color: var(--white, var(--white, #FEFCF7));
 
+    /* 段落(小尺寸)/12 */
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 16.8px */
+    letter-spacing: 1.2px;
+
+    position: absolute;
+    top: 6rem;
+    left: -2rem;
+  }
 }
 
 
@@ -167,6 +275,14 @@
   border: none !important;
   outline: none !important;
   margin: 0 30px 5px 0;
+}
+
+@media (max-width: 768px) {
+  .Articleimgbox {
+    max-width: 150px !important;
+    max-height: 100px !important;
+    margin: 0 20px 5px 0;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
