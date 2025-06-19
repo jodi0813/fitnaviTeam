@@ -352,6 +352,9 @@ a {
         justify-content: center;
         align-items: center;
         gap: 30px;
+         position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
 
         p {
             color: #FFF;
@@ -491,6 +494,10 @@ a {
         justify-content: center;
         align-items: center;
         gap: 10px;
+         position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        
     }
 
     #footer-s .slogan-login p {
