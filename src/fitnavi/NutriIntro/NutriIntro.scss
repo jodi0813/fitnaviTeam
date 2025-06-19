@@ -1380,12 +1380,29 @@
             align-items: flex-start;
 
             .member-comment {
-                color: var(--primary, #FF8740);
+                color: var(--primary, var(--primary, #FF8740));
+                /* heading/標題3 */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 32px !important;
+                font-style: normal;
                 font-weight: 700;
+                line-height: normal;
                 letter-spacing: 3.2px;
                 margin-right: 15px;
+
+                @media (max-width: 768px) {
+                    width: 86px;
+                    color: var(--primary, var(--primary, #FF8740));
+                    /* heading/標題4/Bold */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 2px;
+
+
+                }
             }
 
             h4 {
