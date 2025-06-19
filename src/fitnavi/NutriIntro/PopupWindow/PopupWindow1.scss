@@ -99,6 +99,21 @@
             font-size: 1.8rem;
             font-weight: 700;
             color: #FF8740;
+
+            .break {
+                display: none;
+            }
+
+
+            @media(max-width:768px) {
+                font-size: 20px !important;
+
+
+                .break {
+                    display: block;
+                }
+            }
+
         }
 
         .detail {
@@ -215,18 +230,18 @@
     padding-left: 0 !important;
     margin-left: 0 !important;
     list-style: none;
-    width: 540px;  // 或你想要的寬度
-  }
-  
-  .plan-list li,
-  .plan-list .first-experience {
+    width: 540px; // 或你想要的寬度
+}
+
+.plan-list li,
+.plan-list .first-experience {
     margin-left: 0 !important;
     padding-left: 0 !important;
     box-sizing: border-box;
-  }
+}
 
-  .plan-list .first-experience{
-    span{
+.plan-list .first-experience {
+    span {
         margin-right: 5px;
     }
-  }
+}
