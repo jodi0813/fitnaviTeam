@@ -220,11 +220,12 @@
     // 按鈕區
     .home-nutritionist-controls {
       display: flex;
-      width: 85%;
+      width: 83%;
       justify-content: space-between;
       position: absolute;
       top: 35%;
       right: 13%;
+      z-index: 100;
 
       @media(max-width:1024px) {
         width: 47%;
