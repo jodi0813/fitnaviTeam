@@ -2131,7 +2131,7 @@ body {
                 min-height: 250px;
                 display: flex;
 
-                @media(max-width:768px){
+                @media(max-width:768px) {
                     min-height: 150px;
                 }
 
@@ -2225,13 +2225,13 @@ body {
                         height: 2px;
                         background-color: #FF8740;
 
-                        @media(max-width:768px){
+                        @media(max-width:768px) {
                             content: "";
                             position: absolute;
                             top: 50%;
                             width: 40px;
                             height: 2px;
-                            background-color: #FF8740;  
+                            background-color: #FF8740;
                         }
 
                         @media (min-width: 769px) and (max-width: 1024px) {
@@ -2249,8 +2249,8 @@ body {
                         transform: rotate(45deg);
 
                         @media(max-width:768px) {
-                           
-                            left:-25px;
+
+                            left: -25px;
                             transform: rotate(60deg);
                         }
 
@@ -2302,6 +2302,15 @@ body {
             align-items: center;
             gap: 10px;
             padding-bottom: 50px;
+            white-space: nowrap;
+
+            @media (max-width: 768px) {
+                gap: 50px;
+                padding-bottom: 20px;
+
+            }
+
+
 
             h3 {
                 color: #FF8740;
@@ -2315,6 +2324,22 @@ body {
                 letter-spacing: 3.2px;
                 margin-right: 16px;
                 white-space: nowrap;
+
+                @media (max-width: 768px) {
+                    width: 86px;
+                    color: var(--primary, var(--primary, #FF8740));
+
+                    /* heading/標題4/Bold */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 2px;
+
+
+                }
+
 
             }
 
@@ -2334,6 +2359,22 @@ body {
                 padding-bottom: 15px;
                 margin-top: 5px;
                 margin-left: 16px;
+
+                @media (max-width: 768px) {
+                    width: 140px;
+                    color: var(--dark, #3A2C19);
+
+                    /* 段落(小尺寸)/10 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 14px */
+                    letter-spacing: 1px;
+
+
+                }
             }
 
 
@@ -2345,18 +2386,20 @@ body {
             margin: 0 auto;
             margin-top: 80px;
 
-            @media(max-width:768px){
+            @media(max-width:768px) {
                 margin-top: 0px;
             }
 
-            @media(max-width:768px){
+            @media(max-width:768px) {
                 .MyCalendar {
                     display: flex;
                     align-items: flex-start;
-                    transform: scale(0.85); /* 縮小到 50% */
-                    transform-origin: top left; /* 從左上角開始縮放，避免跑位 */
-                  }
-                  
+                    transform: scale(0.85);
+                    /* 縮小到 50% */
+                    transform-origin: top left;
+                    /* 從左上角開始縮放，避免跑位 */
+                }
+
             }
 
             @media (min-width: 769px) and (max-width: 1024px) {
@@ -2401,6 +2444,14 @@ body {
             align-items: center;
             gap: 10px;
             padding-bottom: 50px;
+            white-space: nowrap;
+
+            @media (max-width: 768px) {
+                gap: 18px;
+                padding-bottom: 20px;
+
+            }
+
 
 
             h3 {
@@ -2414,6 +2465,21 @@ body {
                 letter-spacing: 3.2px;
                 margin-right: 0px;
                 white-space: nowrap;
+
+                @media (max-width: 768px) {
+                    width: 86px;
+                    color: var(--primary, var(--primary, #FF8740));
+
+                    /* heading/標題4/Bold */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 2px;
+
+
+                }
             }
 
             h4 {
@@ -2430,6 +2496,22 @@ body {
                 padding-bottom: 15px;
                 letter-spacing: 1.4px;
                 margin-left: 15px;
+
+                @media (max-width: 768px) {
+                    width: 140px;
+                    color: var(--dark, #3A2C19);
+
+                    /* 段落(小尺寸)/10 */
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 14px */
+                    letter-spacing: 1px;
+
+
+                }
             }
         }
 
@@ -2444,6 +2526,10 @@ body {
             flex-direction: row;
             flex-wrap: nowrap;
             gap: 60px;
+
+            @media(max-width:768px) {
+                margin: 0px;
+            }
 
             .ViewArticles-left,
             .ViewArticles-right {
@@ -2480,7 +2566,7 @@ body {
                 margin: 0 auto;
 
 
-                @media (min-width: 769px) and (max-width: 1024px) {
+                @media (max-width: 1024px) {
                     display: none;
                 }
 
@@ -2496,8 +2582,10 @@ body {
             .my-swiper-container {
                 display: none;
 
-                @media (min-width: 769px) and (max-width: 1024px) {
+                @media (max-width: 1024px) {
                     display: block;
+                    overflow: visible;
+                    
                 }
             }
         }
@@ -3866,5 +3954,3 @@ body {
 //         box-sizing: border-box !important;
 //     }
 // }
-
-
