@@ -263,10 +263,10 @@ function NutriIntro() {
 
 
                         <div className="namefavorite-mobile">
-                            <img src="./images/coachintro-mobile.jpg" alt="" className="coachintro-mobile-img" />
+                            <img src="./images/Nutri-selfie.jpg" alt="" className="coachintro-mobile-img" />
                             <div className="intro-mobile">
                                 <h2>安娜 Anna</h2>
-                                <p>＃運動員營養#減脂瘦身＃營養配方＃飲食建議</p>
+                                <p> <p className="athlete">＃運動員營養</p>#減脂瘦身＃營養配方＃飲食建議</p>
 
                             </div>
 

@@ -94,13 +94,13 @@
         @media(max-width: 768px) {
             display: flex;
             flex-direction: column;
+             gap: 0px;
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
             display: flex;
             flex-direction: row;
             align-items: flex-start;
-            gap: 5%;
             width: 100%;
             box-sizing: border-box;
             padding: 0 8px;
@@ -110,16 +110,24 @@
             margin-left: auto;
             margin-right: auto;
             padding: 0 16px;
+
+
         }
 
         .nutri-personinfo-mobile {
             display: none;
+
+
 
             @media(max-width: 768px) {
                 display: block;
                 flex-direction: column;
                 justify-content: flex-start;
                 gap: 5px;
+
+                p.athlete {
+                    display: none;
+                }
 
             }
 
@@ -234,13 +242,20 @@
 
 
         .Nutriclass-container {
-            // flex: 1;
 
-            // // box-sizing: border-box;
-            // // // flex: 1;
-            // // width: 50rem;
+            @media (min-width: 769px) and (max-width: 1024px) {
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+            }
 
             .Nutri-personinfo {
+                @media(max-width: 768px) {
+                    display: none;
+                }
+
                 .namefavorite {
                     display: flex;
                     flex-direction: row;
