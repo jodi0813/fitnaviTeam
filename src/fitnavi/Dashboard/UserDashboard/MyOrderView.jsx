@@ -99,6 +99,7 @@ function MyOrderView() {
       </div>
       {/* 根據 popupType 顯示彈窗 */}
       {popupType === "list" && <ListPopup onClose={handleClosePopup} />}
+      
       {popupType === "booking" && (
         <BookingPopup
           onClose={handleClosePopup}

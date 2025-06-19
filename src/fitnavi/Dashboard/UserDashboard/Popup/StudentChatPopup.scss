@@ -1,3 +1,5 @@
+@use "../../../reset.scss";
+
 .overlay {
   position: fixed;
   inset: 0; // 等於 top: 0; right: 0; bottom: 0; left: 0;
@@ -7,6 +9,7 @@
   justify-content: center;
   z-index: 999; // 確保在最上層
 }
+
 .chat-popup {
   position: relative;
   display: flex;
@@ -22,10 +25,12 @@
     10px 10px 10px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(25px);
   z-index: 1000;
+
   @media (max-width: 767px) {
     width: 90%;
     height: auto;
   }
+
   hr {
     width: 100%;
   }
@@ -35,10 +40,12 @@
     justify-content: space-between;
     align-items: center;
     gap: 24px;
+
     @media (max-width: 767px) {
       flex-direction: column;
       gap: 10px;
     }
+
     h2 {
       color: #ff8740;
       font-family: "Noto Sans TC", sans-serif;
@@ -62,6 +69,7 @@
 
     .teacher-info {
       width: 270px;
+
       span {
         color: #fff;
       }
@@ -95,9 +103,11 @@
     flex-direction: column;
     gap: 12px;
     width: 552px;
+
     @media (max-width: 767px) {
       width: auto;
     }
+
     .bubble {
       font-family: "Noto Sans TC", sans-serif;
       font-size: 0.875rem;
@@ -121,9 +131,12 @@
         border-radius: 100px;
         border: 1px solid #3a2c19;
         background: #fefcf7;
+
         @media (max-width: 767px) {
-          word-break: break-all; /* 單字太長時強制換行 */
-          white-space: normal; /* 預設自動換行 */
+          word-break: break-all;
+          /* 單字太長時強制換行 */
+          white-space: normal;
+          /* 預設自動換行 */
           width: 300px;
         }
       }
@@ -154,6 +167,7 @@
       border-radius: 100px;
       border: none;
       padding: 15px;
+
       @media (max-width: 767px) {
         width: auto;
       }
@@ -192,9 +206,11 @@
       align-items: center;
       gap: 10px;
       align-self: stretch;
-@media (max-width:767px) {
-  padding: 0;
-}
+
+      @media (max-width:767px) {
+        padding: 0;
+      }
+
       #classification1,
       #classification2 {
         border-radius: 20px;
@@ -265,4 +281,54 @@
 
 .problem-popup {
   gap: 12px;
+}
+
+.review-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+
+  .starsNumber {
+    color: #fefcf7;
+  }
+
+  .stars {
+    font-size: 30px;
+    cursor: pointer;
+
+    .star {
+      color: #ccc;
+      margin-right: 5px;
+      transition: color 0.2s;
+
+      &.filled {
+        color: #ffcc00;
+      }
+    }
+  }
+
+  .score-text {
+
+    color: #FEFCF7;
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 19.6px */
+    letter-spacing: 1.4px;
+
+    .score {
+      font-weight: bold;
+      font-size: 20px;
+      color: #ffcc00;
+    }
+  }
+}
+
+.feedback {
+  height: 150px;
+  border-radius: 12px;
+  background: #FEFCF7;
 }
