@@ -4,9 +4,9 @@ import CalendarComponent from "../../../../components/CalendarComponent/Calendar
 import { Link } from "react-router-dom";
 import BookingOkPopup from "./BookingOkPopup";
 /* 預約彈窗 */
-function BookingPopup({ onClose, onSubmitBooking  }) {
+function BookingPopup({ onClose, onSubmitBooking }) {
   const [popupType, setPopupType] = useState(null);
-  
+
   const handleOpenBookingOk = () => {
     onClose(); // 關閉自己（外層 popup）
     setTimeout(() => {
@@ -40,9 +40,9 @@ function BookingPopup({ onClose, onSubmitBooking  }) {
             <div className="calendar-section1">
               <CalendarComponent />
 
-<button onClick={onSubmitBooking} className="submit-button">
-          申請預約
-        </button>
+              <button onClick={onSubmitBooking} className="submit-button">
+                申請預約
+              </button>
             </div>
           </div>
 
