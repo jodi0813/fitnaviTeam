@@ -104,21 +104,25 @@ function Navbar() {
           </div>
           <div className="desktop-menu">
             {isLoggedIn ? (
+              <div className="nbr-login">
               <button
                 type="button"
-                className="nbr-login"
+                // className="nbr-login"
                 onClick={handleGoToDashboard}
               >
                 會員管理
               </button>
+              </div>
             ) : (
+              <div className="nbr-login">
               <button
                 type="button"
-                className="nbr-login"
+                // className="nbr-login"
                 onClick={() => navigate("/MemberLogin")}
               >
                 登入 / 註冊
               </button>
+              </div>
             )}
           </div>
           {/* 手機版全畫面選單 */}
