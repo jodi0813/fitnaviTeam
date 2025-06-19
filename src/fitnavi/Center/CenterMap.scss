@@ -10,8 +10,9 @@
     padding: 0px;
     height: calc(100vh - 200px);
   }
+
   @media (max-width: 768px) {
-    height: 100vh;
+    height: auto;
   }
   .mapSearchAll {
     display: flex;
@@ -19,7 +20,8 @@
     gap: 8px;
     overflow-x: hidden;
     width: 100%;
-margin-top: 10px;
+    margin-top: 10px;
+
     @media (max-width: 1024px) {
       flex-direction: column;
     }
@@ -39,30 +41,32 @@ margin-top: 10px;
         width: 50%;
         display: flex;
         justify-content: center;
+
         @media (max-width: 1024px) {
           width: 100%;
         }
+
         .centerFilterBtWrapper {
           display: flex;
           justify-content: center;
           align-items: center;
           gap: 23px;
-          @media (max-width: 1024px) {
-           
-          }
-          @media (max-width: 768px) {
-            flex-direction: column;
-            gap: 8px;
-            padding: 8px;
-          }
+
+          // @media (max-width: 768px) {
+          //   flex-direction: column;
+          //   gap: 8px;
+          //   padding: 8px;
+          // }
           .centerFilterBtTitle {
             display: none;
+
             @media (max-width: 768px) {
               display: flex;
               justify-content: flex-start;
               width: 100%;
             }
           }
+
           .centerFilterBt {
             width: 60%;
             padding: 8px 12px;
@@ -80,13 +84,16 @@ margin-top: 10px;
             font-weight: 500;
             line-height: 140%;
             letter-spacing: 1.2px;
-            @media (max-width: 1024px) {
-             width:  480px;
-            }
 
-            @media (max-width: 768px) {
-              width: 353px;
+            @media (max-width: 1024px) {
+              width: 480px;
             }
+            @media (max-width: 767px) {
+              width:80%;
+            }
+            // @media (max-width: 768px) {
+            //   width: 353px;
+            // }
 
             img {
               width: 30px;
@@ -94,6 +101,7 @@ margin-top: 10px;
             }
           }
         }
+
         .realSearchBt {
           width: 120px;
           height: 40px;
@@ -101,10 +109,11 @@ margin-top: 10px;
           background-color: #ff8740;
           color: #fff;
 
-          @media (max-width: 768px) {
-            width: 353px;
-          }
+          // @media (max-width: 768px) {
+          //   width: 353px;
+          // }
         }
+
         #center-search-form {
           display: flex;
           flex-direction: column;
@@ -143,12 +152,14 @@ margin-top: 10px;
             line-height: normal;
             letter-spacing: 2px;
           }
+
           .searchFinishBt {
             display: flex;
 
             justify-content: center;
             align-items: center;
             padding-bottom: 5px;
+
             button {
               display: flex;
               width: 320px;
@@ -161,6 +172,7 @@ margin-top: 10px;
               color: #fff;
             }
           }
+
           .nameCityArea {
             @media (max-width: 1024px) {
               padding: 10px 12px;
@@ -332,7 +344,8 @@ margin-top: 10px;
           align-items: center;
           gap: 12px;
           width: 100%;
-          @media (max-width: 1024px) and (min-width: 769px) {
+
+          @media (max-width: 1024px) {
             flex-direction: row;
             overflow-x: auto;
             overflow-y: unset;
@@ -361,10 +374,11 @@ margin-top: 10px;
             @media (max-width: 1024px) {
               height: 100%;
             }
-            @media (max-width: 768px) {
-              width: 100%;
-              max-width: 520px;
-            }
+
+            // @media (max-width: 768px) {
+            //   width: 100%;
+            //   max-width: 520px;
+            // }
             &.active {
               border: 5px solid #ff8740; // 橘色邊框
               border-radius: 12px;
@@ -459,6 +473,10 @@ margin-top: 10px;
       @media (max-width: 1024px) {
         margin: 0 auto;
         width: 100%;
+      }
+
+      @media (max-width: 767px) {
+        height: 50%;
       }
 
       .mapPopup {
