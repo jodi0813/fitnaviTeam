@@ -57,7 +57,7 @@ export default function Article() {
                     </div>
                 </div>
                 <div className="bannerimg">
-                    <img src="/images/articlebanner.jpg" alt="文章橫幅圖片" />
+                    <img src="./images/articlebanner.jpg" alt="文章橫幅圖片" />
                 </div>
             </section>
 
@@ -109,7 +109,7 @@ export default function Article() {
                         </div>
 
                         <div className="phase3img">
-                            <img src="/images/articlephoto.png" alt="圖示內容" />
+                            <img src="./images/articlephoto.png" alt="圖示內容" />
                         </div>
 
                         <div id="phase4" ref={phase4Ref}>

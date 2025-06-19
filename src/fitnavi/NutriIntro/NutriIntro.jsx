@@ -11,8 +11,9 @@ import PopupWindow1 from '../NutriIntro/PopupWindow/PopupWindow1';
 import PopupWindow2 from '../NutriIntro/PopupWindow/PopupWindow2';
 import PopupWindow3 from '../NutriIntro/PopupWindow/PopupWindow3';
 import PopupWindow4 from '../NutriIntro/PopupWindow/PopupWindow4';
-import ArticleCardsSwiper from '../../components/ArticleCardsSwiper'; 
+import ArticleCardsSwiper from '../../components/ArticleCardsSwiper';
 import { useRef } from 'react';
+
 
 
 
@@ -225,7 +226,7 @@ function NutriIntro() {
         nutriArticleData[(index + 1) % nutriArticleData.length],
         nutriArticleData[(index + 2) % nutriArticleData.length],
     ];
-    
+
 
     //頁面區域移動
     const phase1Ref = useRef(null);
@@ -257,6 +258,28 @@ function NutriIntro() {
 
 
                 <section className="Nutriintro-person">
+
+                    <div className="nutri-personinfo-mobile">
+
+
+                        <div className="namefavorite-mobile">
+                            <img src="./images/coachintro-mobile.jpg" alt="" className="coachintro-mobile-img" />
+                            <div className="intro-mobile">
+                                <h2>安娜 Anna</h2>
+                                <p>＃運動員營養#減脂瘦身＃營養配方＃飲食建議</p>
+
+                            </div>
+
+                            <button onClick={() => setLiked(!liked)} className="like-button">
+                                {liked ? (
+                                    <IoMdHeart size={30} color="#FF8740" />
+                                ) : (
+                                    <IoMdHeartEmpty size={30} color="#FF8740" />
+                                )}
+                            </button>
+                        </div>
+
+                    </div>
 
                     <div className="Nutri-person-class-photo">
                         <div className="Nutri-photogallery">
@@ -389,7 +412,7 @@ function NutriIntro() {
                                 </div>
 
                                 <div className="nutri-circlewrapper">
-                                   
+
                                     <img src="./images/Nutrispe-field.png" alt="" />
                                 </div>
 

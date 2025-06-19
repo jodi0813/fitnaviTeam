@@ -7,14 +7,14 @@
 }
 
 
-html,
-body {
-    @media (min-width: 769px) and (max-width: 1024px) {
-        scroll-behavior: smooth;
-        scroll-snap-type: y proximity;
-        width: 100vw;
-    }
-}
+// html,
+// body {
+//     @media (min-width: 769px) and (max-width: 1024px) {
+//         scroll-behavior: smooth;
+//         scroll-snap-type: y proximity;
+//         width: 100vw;
+//     }
+// }
 
 #aboutCoach,
 #spe,
@@ -25,9 +25,7 @@ body {
 .Coach-comment-wrapper {
     scroll-margin-top: 90px;
 
-    // @media (min-width: 769px) and (max-width: 1024px) {
-    //     scroll-margin-top: 90px !important;
-    // }
+
 }
 
 #Coachintro,
