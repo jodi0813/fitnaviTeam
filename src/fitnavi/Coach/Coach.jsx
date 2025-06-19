@@ -44,7 +44,7 @@ function Coach() {
     {
       name: "張莉筠 Lila",
       role: "教練",
-      hashtags: ["TRX懸吊", "功能性訓練", "減脂訓練"],
+      hashtags: ["減脂瘦身", "功能性訓練", "減脂訓練"],
       description:
         "結合TRX、功能性訓練與減脂訓練，我專注於幫助學員提升全身力量與協調。",
       imageSrc: "./images/coach09.jpg",
