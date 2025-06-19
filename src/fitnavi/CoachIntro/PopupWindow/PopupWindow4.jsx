@@ -14,8 +14,8 @@ export default function PopupWindow4({ onClose }) {
                             onClick={onClose} />
                         <div className="content">
                             <img src="./images/purchaseFinished.png" alt="purchaseFinished" />
-                            <h1>╲完成訂購╱</h1>
-                            <p class="reminder">請前往 個人頁面 預約專屬時間 並 選擇上課地點</p>
+                            <h3>╲完成訂購╱</h3>
+                            <p class="reminder">請前往個人頁面<br className="break"/>預約專屬時間 並 選擇上課地點</p>
                             <p class="steps">會員中心 ＞ 我的訂單 ＞ 訂單總覽 ＞ 點選預約</p>
                         </div>
                         {/* <!-- 按鈕區 --> */}

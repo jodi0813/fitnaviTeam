@@ -14,7 +14,7 @@ export default function PopupWindow1({ onClose,onNext }) {
                     />
                     <h2>選擇方案</h2>
                     <div className="course">
-                        <h3>安娜 Anna一對一線上諮詢</h3>
+                        <h3>安娜 Anna <br className="break" />一對一線上諮詢</h3>
                         <div className="detail">
                             <img className="clock" src="./images/clock-icon.svg" alt="clock-icon" />
                             <p className="time">60分鐘</p>
