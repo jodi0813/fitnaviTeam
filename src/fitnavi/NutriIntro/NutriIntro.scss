@@ -2221,7 +2221,6 @@
                 }
 
 
-
                 img {
                     position: absolute;
                     width: 60%;
@@ -2246,6 +2245,7 @@
                         top: -10rem;
                         z-index: 2;
                     }
+
                 }
 
                 p {
@@ -2354,7 +2354,6 @@
                     }
                 }
             }
-
 
         }
 
@@ -2686,6 +2685,7 @@
 
 
 
+
     .Nutricommentitle {
         display: flex;
         flex-direction: row;
@@ -2852,7 +2852,7 @@
                 margin: 0 auto;
                 padding: 0 8px;
                 box-sizing: border-box;
-                margin-bottom: 30px;
+                margin-bottom: 70%;
             }
 
             @media (min-width: 769px) and (max-width: 1024px) {
