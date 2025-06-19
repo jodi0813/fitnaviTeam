@@ -93,7 +93,7 @@ function Footer() {
 
                         <div className="slogan-login">
                             <p>每一次挑戰都是突破！</p>
-                            <button>登入/註冊</button>
+                            <button onClick={() => { navigate('/Memberlogin'); window.scrollTo(0, 0); }}>登入/註冊</button>
                         </div>
 
                         <div className="footer-contact">
@@ -144,7 +144,7 @@ function Footer() {
 
                         <div className="slogan-login">
                             <p>每一次挑戰都是突破！</p>
-                            <button>登入/註冊</button>
+                            <button onClick={() => { navigate('/Memberlogin'); window.scrollTo(0, 0); }}>登入/註冊</button>
                         </div>
 
                         <div className="footer-contact">
