@@ -456,7 +456,7 @@ function Allarticle() {
                     </div>
 
                     
-                                    <div className="Coach-seemore-s">
+                                    {/* <div className="Coach-seemore-s">
                                         <button>
                                             <p>瀏覽更多學員評價</p>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
@@ -464,7 +464,7 @@ function Allarticle() {
                                             </svg>
                                         </button>
 
-                                    </div>
+                                    </div> */}
 
                 </div>
 
