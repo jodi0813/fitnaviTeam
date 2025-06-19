@@ -151,7 +151,7 @@
         height: 40px;
         padding: 8px 84px;
         border-radius: 999px;
-        background: var(--primary, #FF8740);
+        background:  #FF8740;
         color: #FEFCF7;
         font-family: "Noto Sans TC", sans-serif;
         font-size: 20px;
@@ -244,7 +244,7 @@
             width: 114px;
             height: 40px;
             border-radius: 99px;
-            border: 1px solid var(--primary, #FF8740);
+            border: 1px solid  #FF8740;
             background: #FFF;
             border-radius: 30px;
             padding: 10px 24px;
@@ -344,7 +344,7 @@
                             cursor: pointer;
 
                             &.active {
-                                background: var(--primary, #FF8740);
+                                background:  #FF8740;
                                 color: var(--white, #FEFCF7);
                                 font-size: 14px;
                                 font-weight: 900;
@@ -515,7 +515,7 @@
             width: 114px;
             height: 40px;
             border-radius: 99px;
-            border: 1px solid var(--primary, #FF8740);
+            border: 1px solid  #FF8740;
             background: #FFF;
             border-radius: 30px;
             padding: 10px 24px;
@@ -615,7 +615,7 @@
                             cursor: pointer;
 
                             &.active {
-                                background: var(--primary, #FF8740);
+                                background:  #FF8740;
                                 color: var(--white, #FEFCF7);
                                 font-size: 14px;
                                 font-weight: 900;
@@ -901,7 +901,7 @@
                 align-items: center;
                 margin-bottom: 20px;
                 border-radius: 8px;
-                background: var(--primary, #FF8740);
+                background:  #FF8740;
 
                 color:  #FEFCF7;
                 text-align: right;
@@ -1116,7 +1116,7 @@
     .page-button5 {
         width: 35px;
         height: 35px;
-        background-color: var(--primary, #FF8740);
+        background-color: #FF8740;
         border-radius: 50%;
         aspect-ratio: 1 / 1;
         display: flex;
