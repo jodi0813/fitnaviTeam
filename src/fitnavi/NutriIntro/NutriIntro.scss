@@ -2544,7 +2544,7 @@
                 cursor: pointer;
                 z-index: 10;
 
-                @media  (max-width: 1024px) {
+                @media (max-width: 1024px) {
                     display: none;
                 }
 
@@ -2606,42 +2606,125 @@
 
 
 
-.Nutri-comment-wrapper {
+#Nutri-comment {
     width: 100%;
-    max-width: 1200px;
-    // max-width: 90%;
-    margin: 200px auto 0 auto;
+    padding-left: 0;
+    padding-right: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
 
-    #Nutri-comment {
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
+
+
+    .Nutricommentitle {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        white-space: nowrap;
 
-        .Nutricommentitle {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: flex-start;
+        @media (max-width: 768px) {
+            gap: 18px;
+            padding-bottom: 20px;
 
-            .member-comment {
+        }
+
+        .member-comment {
+            color: var(--primary, var(--primary, #FF8740));
+            /* heading/標題3 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 32px !important;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 3.2px;
+            margin-right: 15px;
+
+            @media (max-width: 768px) {
+                width: 86px;
                 color: var(--primary, var(--primary, #FF8740));
-                /* heading/標題3 */
+                /* heading/標題4/Bold */
                 font-family: "Noto Sans TC", sans-serif;
-                font-size: 32px !important;
+                font-size: 20px !important;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-                letter-spacing: 3.2px;
-                margin-right: 15px;
+                letter-spacing: 2px;
+
+
+            }
+        }
+
+        h4 {
+            width: 300px;
+            color: var(--dark, #3A2C19);
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1.4px;
+            border-bottom: 2px solid #3A2C19;
+            padding-bottom: 15px;
+
+            @media (max-width: 768px) {
+                width: 140px;
+                color: var(--dark, #3A2C19);
+
+                /* 段落(小尺寸)/10 */
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 14px */
+                letter-spacing: 1px;
+
+
+            }
+        }
+    }
+
+    .Nutristar-card-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 16px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            width: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+
+
+        .star-rate {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            position: relative;
+            margin-bottom: 5rem;
+
+
+
+            p {
+                color: var(--dark, #3A2C19);
+                justify-content: flex-start;
+                font-size: 100px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                /* 150px */
+                text-transform: capitalize;
 
                 @media (max-width: 768px) {
-                    width: 86px;
-                    color: var(--primary, var(--primary, #FF8740));
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+
                     /* heading/標題4/Bold */
                     font-family: "Noto Sans TC", sans-serif;
                     font-size: 20px;
@@ -2649,186 +2732,224 @@
                     font-weight: 700;
                     line-height: normal;
                     letter-spacing: 2px;
-
-
                 }
+
+
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    padding-right: 6rem;
+                }
+
+
             }
 
-            h4 {
-                width: 300px;
-                color: var(--dark, #3A2C19);
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 14px;
-                font-weight: 500;
-                letter-spacing: 1.4px;
-                border-bottom: 2px solid #3A2C19;
-                padding-bottom: 15px;
+            .Star {
+                position: absolute;
+                top: 90%; // 距離父層頂部的距離，你可以調整
+                left: 50%; // ✅ 絕對置中（以父層為基準）
+                transform: translateX(-50%);
+                display: flex;
+                gap: 8px;
+                margin-left: -8%;
+            }
+
+            svg {
+                @media (max-width: 768px) {
+                    width: 24px;
+                    height: 24px;
+                }
             }
         }
 
-        .Nutristar-card-wrapper {
+        .Coach-comment-line1 {
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
             width: 100%;
-            max-width: 1200px !important;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
+            padding: 0 8px;
             box-sizing: border-box;
+            position: relative;
 
-
-            // @media (max-width:1440px) {
-            //     margin-left: -3%;
-
-            // }
-
-            .star-rate {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 0 auto;
-                position: relative;
-
-                // @media (max-width:1920px) {
-                //     margin-left: 32%;
-
-                // }
-
-
-                p {
-                    color: var(--dark, #3A2C19);
-                    justify-content: flex-start;
-                    font-size: 100px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 150%;
-                    /* 150px */
-                    text-transform: capitalize;
-
-
-                }
-
-                .Star {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 10px; // 星星之間的間距
-                    flex-wrap: wrap; // 小螢幕下可換行
-                }
-            }
-
-            .Coach-comment-line1 {
-
+            @media (max-width: 768px) {
+                display: grid;
+                grid-template-columns: repeat(2, auto); // ✅ 依照內容寬度排兩欄
+                gap: 5%;
+                justify-content: center; // ✅ 整個 grid 排版置中
                 width: 100%;
-                margin: 0 auto !important;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 50px;
+                margin: 0 auto;
+                padding: 0 8px;
+                box-sizing: border-box;
+                margin-bottom: 30px;
+            }
+
+            @media (min-width: 769px) and (max-width: 1024px) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                width: 100%;
+                margin: 0 auto;
+                padding-right: 3rem;
+            }
+
+
+
+
+            .Coach-comment-card {
+                width: 300px;
+                height: 300px;
+                padding: 30px 30px 18px 30px;
                 position: relative;
 
-
-
-
-                .Coach-comment-card {
-                    width: 300px;
-                    height: 300px;
-                    padding: 30px 30px 18px 30px;
-                    position: relative;
-
-
-
+                @media (max-width: 768px) {
+                    width: 12rem; // ✅ 填滿 grid 欄位
+                    height: 18rem;
+                    padding: 0px;
                 }
 
-                .Coach-comment-card>* {
-                    @media (max-width: 1024px) {
-                        width: 100% !important;
-                        height: 100% !important;
-                        box-sizing: border-box;
-                    }
+
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    width: 12rem;
+                    height: 15rem;
+                    padding: 0px;
                 }
 
-                &::before,
-                &::after {
-                    content: "";
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    width: 1px;
-                    border-left: 1px dashed #ccc;
-                }
+            }
 
-                &::before {
-                    left: calc(33.33% - 35px);
-                }
-
-                &::after {
-                    left: calc(66.66% - 75px);
+            .Coach-comment-card>* {
+                @media (max-width: 1024px) {
+                    width: 100% !important;
+                    height: 100% !important;
+                    box-sizing: border-box;
                 }
             }
 
-            // .Nutri-commentcard {
-            //     width: 100%;
-            //     margin: 0 auto;
-            //     display: flex;
-            //     flex-wrap: wrap;
-            //     justify-content: center;
-            //     align-items: center;
-            //     gap: 50px;
-            //     position: relative;
-
-            //     .Nutri-commentcard {
-            //         width: 300px;
-            //         height: 300px;
-            //         padding: 30px 30px 18px 30px;
-            //     }
-
-            //     .Nutri-commentcard>* {
-            //         @media (max-width: 1024px) {
-            //             width: 100% !important;
-            //             height: 100% !important;
-            //             box-sizing: border-box;
-            //         }
-            //     }
-
-            //     &::before,
-            //     &::after {
-            //         content: "";
-            //         position: absolute;
-            //         top: 0;
-            //         bottom: 0;
-            //         width: 1px;
-            //         border-left: 1px dashed #ccc;
-            //     }
-
-            //     &::before {
-            //         left: calc(33.33% - 40px);
-            //     }
-
-            //     &::after {
-            //         left: clamp(300px, 66.66% - 60px, 1200px);
-            //     }
+            // &::before,
+            // &::after {
+            //     content: "";
+            //     content: "";
+            //     position: absolute;
+            //     top: 0;
+            //     bottom: 0;
+            //     width: 1px;
+            //     border-left: 1px dashed #ccc;
             // }
 
-            .Star-rate {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
+            // &::before {
+            //     left: calc(33.33% - 35px);
+            // }
+
+            // &::after {
+            //     left: calc(66.66% - 75px);
+            // }
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                border-left: 1px dashed #ccc;
+
+                @media(max-width:1024px) {
+                    display: none;
+                }
             }
 
-            h3 {
-                color: var(--dark, #3A2C19);
-                font-size: 30px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 150%;
-                /* 45px */
-                text-transform: capitalize;
-                margin-left: 50%;
+            // 改為用 calc 搭配 grid 寬度
+            &::before {
+                left: calc(33.3333%); // 第 1~2 欄交界處
             }
 
-            p.description {
-                color: var(--dark, #3A2C19);
+            &::after {
+                left: calc(66.6666%); // 第 2~3 欄交界處
+            }
+
+        }
+
+
+
+        .Star-rate {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .member-comment {
+            color: var(--primary, var(--primary, #FF8740));
+            /* heading/標題3 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 3.2px;
+
+
+        }
+
+
+        h3 {
+            color: var(--dark, #3A2C19);
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            /* 45px */
+            text-transform: capitalize;
+            margin-left: 50%;
+        }
+
+        p.description {
+            color: var(--dark, #3A2C19);
+            /* 段落/14 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+            // margin-top: 30px;
+
+            // @media (max-width: 1024px) {
+            //     overflow: hidden;
+            //     color: var(--dark, #3A2C19);
+            //     text-overflow: ellipsis;
+            //     /* 段落/14 */
+            //     font-family: "Noto Sans TC", sans-serif;
+            //     font-size: 14px;
+            //     font-style: normal;
+            //     font-weight: 500;
+            //     line-height: 140%;
+            //     /* 19.6px */
+            //     letter-spacing: 1.4px;
+            //     overflow: hidden;
+            //     color: var(--dark, #3A2C19);
+            //     text-overflow: ellipsis;
+            //     /* 段落/14 */
+            //     font-family: "Noto Sans TC", sans-serif;
+            //     font-size: 14px;
+            //     font-style: normal;
+            //     font-weight: 500;
+            //     line-height: 140%;
+            //     /* 19.6px */
+            //     letter-spacing: 1.4px;
+            // }
+        }
+
+        .Name-date {
+            display: flex;
+            flex-direction: row;
+            gap: 120px;
+            position: absolute;
+            top: 280px;
+
+            p.Name {
+                color: #000;
+
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 14px;
@@ -2837,156 +2958,110 @@
                 line-height: 140%;
                 /* 19.6px */
                 letter-spacing: 1.4px;
-                // margin-top: 30px;
-
-                // @media (max-width: 1024px) {
-                //     overflow: hidden;
-                //     color: var(--dark, #3A2C19);
-                //     text-overflow: ellipsis;
-                //     /* 段落/14 */
-                //     font-family: "Noto Sans TC", sans-serif;
-                //     font-size: 14px;
-                //     font-style: normal;
-                //     font-weight: 500;
-                //     line-height: 140%;
-                //     /* 19.6px */
-                //     letter-spacing: 1.4px;
-                //     overflow: hidden;
-                //     color: var(--dark, #3A2C19);
-                //     text-overflow: ellipsis;
-                //     /* 段落/14 */
-                //     font-family: "Noto Sans TC", sans-serif;
-                //     font-size: 14px;
-                //     font-style: normal;
-                //     font-weight: 500;
-                //     line-height: 140%;
-                //     /* 19.6px */
-                //     letter-spacing: 1.4px;
-                // }
+                white-space: nowrap;
             }
 
-            .Name-date {
-                display: flex;
-                flex-direction: row;
-                gap: 120px;
-                position: absolute;
-                top: 280px;
-
-                p.Name {
-                    color: #000;
-
-                    /* 段落/14 */
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
-                    /* 19.6px */
-                    letter-spacing: 1.4px;
-                    white-space: nowrap;
-                }
-
-                p.Date {
-                    color: var(--dark, #3A2C19);
-                    text-align: right;
-                    /* 段落/14 */
-                    font-family: " Sans TC";
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 140%;
-                    /* 19.6px */
-                    letter-spacing: 1.4px;
-                }
+            p.Date {
+                color: var(--dark, #3A2C19);
+                text-align: right;
+                /* 段落/14 */
+                font-family: " Sans TC";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
             }
         }
+    }
 
-        .seeMoreComment {
+    .seeMoreComment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 5%;
+        margin-left: -50px;
+
+
+        button {
+            align-self: center;
+            margin-top: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            margin-top: 5%;
-            margin-left: -50px;
 
+            width: 300px;
+            height: 40px;
+            border-radius: 999px;
+            background: var(--primary, #FF8740);
+            border: none;
+            cursor: pointer;
 
-            button {
-                align-self: center;
-                margin-top: 40px;
-                display: flex;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--white, #FEFCF7);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+
+            .seeMore-text {
+                transition: transform 0.3s ease, color 0.3s ease;
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+                opacity: 0;
+                position: absolute;
+                right: 30px;
+                transition: opacity 0.3s ease;
+            }
+
+            &:hover {
+
                 justify-content: center;
                 align-items: center;
-
-                width: 300px;
-                height: 40px;
                 border-radius: 999px;
-                background: var(--primary, #FF8740);
-                border: none;
-                cursor: pointer;
-
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 20px;
-                font-weight: 700;
-                letter-spacing: 2px;
-                color: var(--white, #FEFCF7);
-                text-align: center;
-                position: relative;
-                overflow: hidden;
+                background: var(--white, #FEFCF7);
+                border: 1px solid var(--primary, #FF8740);
 
                 .seeMore-text {
-                    transition: transform 0.3s ease, color 0.3s ease;
+                    transform: translateX(-10px); // 向左滑動
+                    color: var(--primary, #FF8740);
                 }
 
                 img {
-                    width: 24px;
-                    height: 24px;
-                    opacity: 0;
-                    position: absolute;
-                    right: 30px;
-                    transition: opacity 0.3s ease;
+                    opacity: 1;
+                    // transform: translateX(0); // icon 滑進來
+                }
+            }
+
+            &:active {
+                outline: none;
+
+                .seeMore-text {
+                    color: var(--primary, var(--primary, #FF8740));
+                    font-size: 16px;
+                    font-weight: 500;
+                    letter-spacing: 1.6px;
                 }
 
-                &:hover {
-
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 999px;
-                    background: var(--white, #FEFCF7);
-                    border: 1px solid var(--primary, #FF8740);
-
-                    .seeMore-text {
-                        transform: translateX(-10px); // 向左滑動
-                        color: var(--primary, #FF8740);
-                    }
-
-                    img {
-                        opacity: 1;
-                        // transform: translateX(0); // icon 滑進來
-                    }
+                img {
+                    width: 20px;
+                    height: 20px;
                 }
-
-                &:active {
-                    outline: none;
-
-                    .seeMore-text {
-                        color: var(--primary, var(--primary, #FF8740));
-                        font-size: 16px;
-                        font-weight: 500;
-                        letter-spacing: 1.6px;
-                    }
-
-                    img {
-                        width: 20px;
-                        height: 20px;
-                    }
-                }
-
             }
 
         }
 
     }
+
 }
+
 
 
 

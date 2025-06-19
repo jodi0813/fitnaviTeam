@@ -35,16 +35,16 @@ function Footer() {
                         {/* 你的桌機 Footer 內容 */}
                         <div className="explore">
                             <h4>網站導覽</h4>
-                            <p onClick={() => { navigate('/Coach'); window.scrollTo(0, 0); }}>健身教練</p>
-                            <p onClick={() => { navigate('/Nutritionist'); window.scrollTo(0, 0); }}>營養師</p>
-                            <p onClick={() => { navigate('/MyFavorite'); window.scrollTo(0, 0); }}>我的收藏</p>
-                            <p onClick={() => { navigate('/Allarticle'); window.scrollTo(0, 0); }}>知識文章</p>
-                            <p onClick={() => { navigate('/CenterMap'); window.scrollTo(0, 0); }}>健身場地</p>
+                            <p className="clickable" onClick={() => { navigate('/Coach'); window.scrollTo(0, 0); }}>健身教練</p>
+                            <p className="clickable" onClick={() => { navigate('/Nutritionist'); window.scrollTo(0, 0); }}>營養師</p>
+                            <p className="clickable" onClick={() => { navigate('/MyFavorite'); window.scrollTo(0, 0); }}>我的收藏</p>
+                            <p className="clickable" onClick={() => { navigate('/Allarticle'); window.scrollTo(0, 0); }}>知識文章</p>
+                            <p className="clickable" onClick={() => { navigate('/CenterMap'); window.scrollTo(0, 0); }}>健身場地</p>
                         </div>
 
                         <div className="Joinus">
                             <h4>合作夥伴</h4>
-                            <p onClick={() => { navigate('/MemberLogin'); window.scrollTo(0, 0); }}>加入我們</p>
+                            <p className="clickable"onClick={() => { navigate('/MemberLogin'); window.scrollTo(0, 0); }}>加入我們</p>
                             <p>會員管理</p>
                             <p>問題反映</p>
                         </div>

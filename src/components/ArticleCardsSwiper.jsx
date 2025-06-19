@@ -3,13 +3,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import Articlecardscoach from './Articlecards/Articlecardscoach'; 
 
-function ArticleCardsSwiper({ visibleCards, navigate }) {
+function ArticleCardsSwiper({ visibleCards, navigate, spaceBetween = 16 }) {
   return (
     <Swiper
-      spaceBetween={16}
+      spaceBetween={spaceBetween} // ✅ 用 props 控制間距
       slidesPerView={'auto'}
-      loop={true}       // 啟用雙向無限滑動
-      freeMode={false}  // 關閉自由模式，確保有 snap 效果
+      loop={true}
+      freeMode={false}
       style={{ padding: '0 1rem' }}
     >
       {visibleCards.map((card, index) => (
@@ -34,6 +34,3 @@ function ArticleCardsSwiper({ visibleCards, navigate }) {
 }
 
 export default ArticleCardsSwiper;
-
-
-

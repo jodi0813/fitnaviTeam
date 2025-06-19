@@ -637,10 +637,13 @@ function NutriIntro() {
                                         </svg></button>
 
                                 </div>
-
                                 <div className="my-swiper-container">
-                                        <ArticleCardsSwiper visibleCards={visibleCards} navigate={navigate} />
-                                    </div>
+                                    <ArticleCardsSwiper
+                                        visibleCards={visibleCards}
+                                        navigate={navigate}
+                                        spaceBetween={60} // ⬅️ 在這裡指定你想要的間距
+                                    />
+                                </div>
                             </div>
 
 

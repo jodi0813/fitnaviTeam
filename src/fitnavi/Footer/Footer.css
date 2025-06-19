@@ -221,6 +221,10 @@ a {
     line-height: 40px;
 }
 
+.clickable {
+    cursor: pointer;
+  }
+
 
 .copyright {
     position: absolute;
