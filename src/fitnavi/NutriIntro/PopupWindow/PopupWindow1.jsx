@@ -1,6 +1,22 @@
 import "./PopupWindow1.scss";
+import { useState } from "react";
 
-export default function PopupWindow1({ onClose,onNext }) {
+export default function PopupWindow1({ onClose, onNext }) {
+    // 新增：使用一個物件來儲存每個方案的選中狀態
+    const [clickedPlans, setClickedPlans] = useState({
+        "首次體驗課": false,
+        "單堂課程": false,
+        "10堂課程": false,
+        "20堂課程": false,
+    });
+
+    // 新增：切換按鈕的選中狀態
+    const handleClick = (planName) => {
+        setClickedPlans((prev) => ({
+            ...prev,
+            [planName]: !prev[planName], // 切換指定方案的狀態
+        }));
+    };
     
     return (
         <div className="popup-modal-overlay" onClick={onClose}>
@@ -42,7 +58,13 @@ export default function PopupWindow1({ onClose,onNext }) {
                                             <span className="currency">NT$</span>
                                             <span className="price">{plan.price}</span>
                                         </div>
-                                        <button className="select-btn">選擇</button>
+                                        {/* 更新：新增選擇狀態切換邏輯 */}
+                                        <button
+                                            className={clickedPlans[plan.name] ? 'selected-btn' : 'select-btn'}
+                                            onClick={() => handleClick(plan.name)} // 切換選中的狀態
+                                        >
+                                            {clickedPlans[plan.name] ? <img src="./images/check.svg" alt="check" /> : '選擇'}
+                                        </button>
                                     </div>
                                 </div>
                             </li>
