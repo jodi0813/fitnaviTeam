@@ -7,14 +7,14 @@
 }
 
 
-html,
-body {
-    @media (min-width: 769px) and (max-width: 1024px) {
-        scroll-behavior: smooth;
-        scroll-snap-type: y proximity;
-        width: 100vw;
-    }
-}
+// html,
+// body {
+//     @media (min-width: 769px) and (max-width: 1024px) {
+//         scroll-behavior: smooth;
+//         scroll-snap-type: y proximity;
+//         width: 100vw;
+//     }
+// }
 
 #aboutCoach,
 #spe,
@@ -25,9 +25,7 @@ body {
 .Coach-comment-wrapper {
     scroll-margin-top: 90px;
 
-    @media (min-width: 769px) and (max-width: 1024px) {
-        scroll-margin-top: 90px !important;
-    }
+
 }
 
 #Coachintro,
@@ -1154,6 +1152,10 @@ body {
                 width: 80%;
                 padding-left: 2rem;
 
+                
+                @media (min-width: 1025px) {
+                   padding-left: 0.5rem;}
+
                 @media(max-width:768px) {
                     color: var(--dark, #3A2C19);
                     width: 100%;
@@ -1170,7 +1172,7 @@ body {
                 }
 
                 @media (min-width: 769px) and (max-width: 1024px) {
-                    margin-top: 5rem;
+                    margin-top: 2rem;
                     color: var(--dark, #3A2C19);
                     font-family: "Noto Sans TC", sans-serif;
                     font-size: 14px;
@@ -1178,7 +1180,7 @@ body {
                     font-weight: 500;
                     line-height: 40px;
                     letter-spacing: 0.4px;
-                    padding-left: 1.5rem;
+                    padding-left: 1rem;
                     max-width: 90%;
                     box-sizing: border-box;
                 }
@@ -1203,6 +1205,10 @@ body {
                     align-items: center;
                     padding-left: 0.5rem;
                     margin-top: 20rem;
+                }
+
+                @media (min-width: 1025px) {
+                   margin-top: 15%;
                 }
 
                 h3 {
@@ -1652,6 +1658,7 @@ body {
                     line-height: 40px;
                     /* 200% */
                     letter-spacing: 0.4px;
+                    padding-bottom: 10px;
                 }
 
                 @media(max-width: 1024px) {
@@ -1843,6 +1850,7 @@ body {
                     line-height: 40px;
                     /* 200% */
                     letter-spacing: 0.4px;
+                    padding-bottom: 10px;
 
                     @media(max-width:768px) {
                         color: var(--dark, #3A2C19);
@@ -3285,16 +3293,110 @@ body {
 }
 
 
+// .coachsvg {
+//     position: relative;
+//     right: -60%;
+//     bottom: 10%;
+
+//     @media(max-width:768px) {
+//         position: absolute;
+//         right: 1rem;
+//         top: -2rem;
+
+//     }
+
+//     @media (min-width: 769px) and (max-width: 1024px) {
+//         position: absolute;
+//         top: 14rem;
+//         right: 10%;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: flex-end;
+//     }
+
+
+
+//     svg {
+
+//         @media(max-width:768px) {
+//             width: 217px;
+//             height: 111px;
+
+
+//         }
+
+//         @media (min-width: 769px) and (max-width: 1024px) {
+//             width: 18rem !important;
+//             height: auto;
+//             transform: rotate(-8.679deg) !important;
+//         }
+//     }
+
+//     p {
+//         position: absolute;
+//         right: 10%;
+//         transform: rotate(-4.948deg);
+//         font-size: 32px;
+//         font-family: "Noto Sans TC";
+//         font-weight: 700;
+//         letter-spacing: 3.2px;
+//         color: var(--dark, #3A2C19);
+//         width: 313.635px;
+//         height: 76.158px;
+
+//         @media(max-width:768px) {
+//             position: absolute;
+//             top: 1rem;
+
+//             width: 153.464px;
+//             height: 38.705px;
+//             transform: rotate(-7deg);
+//             flex-shrink: 0;
+//             color: var(--dark, #3A2C19);
+
+//             /* 段落/14 */
+//             font-family: "Noto Sans TC";
+//             font-size: 14px;
+//             font-style: normal;
+//             font-weight: 500;
+//             line-height: 140%;
+//             /* 19.6px */
+//             letter-spacing: 1.4px;
+
+//         }
+
+
+//         @media (min-width: 769px) and (max-width: 1024px) {
+//             margin-top: 0.2rem;
+//             color: var(--dark, #3A2C19);
+//             font-family: "Noto Sans TC", sans-serif;
+//             font-size: 20px;
+//             width: fit-content;
+//             transform: rotate(-8.679deg);
+//             font-weight: 700;
+//             letter-spacing: 2px;
+//             white-space: nowrap;
+//             right: 20px;
+//         }
+//     }
+// }
 .coachsvg {
     position: relative;
-    right: 1rem;
-    bottom: 10%;
 
-    @media(max-width:768px) {
+    @media (min-width: 1025px) {
+        position: absolute;
+        top: 2rem; // ✅ 可視情況微調
+        right: 0; // ✅ 改成固定靠右
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 2;
+    }
+
+    @media (max-width:768px) {
         position: absolute;
         right: 1rem;
         top: -2rem;
-
     }
 
     @media (min-width: 769px) and (max-width: 1024px) {
@@ -3307,12 +3409,9 @@ body {
     }
 
     svg {
-
         @media(max-width:768px) {
             width: 217px;
             height: 111px;
-      
-    
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
@@ -3335,41 +3434,25 @@ body {
         height: 76.158px;
 
         @media(max-width:768px) {
-            position: absolute;
-            top: 1rem;
-            
+            top: 10%;
             width: 153.464px;
             height: 38.705px;
             transform: rotate(-7deg);
-            flex-shrink: 0;
-            color: var(--dark, #3A2C19);
-
-            /* 段落/14 */
-            font-family: "Noto Sans TC";
             font-size: 14px;
-            font-style: normal;
             font-weight: 500;
-            line-height: 140%;
-            /* 19.6px */
             letter-spacing: 1.4px;
-
         }
 
-
         @media (min-width: 769px) and (max-width: 1024px) {
-            margin-top: 0.2rem;
-            color: var(--dark, #3A2C19);
-            font-family: "Noto Sans TC", sans-serif;
+            //   margin-top: 0.2rem;
             font-size: 20px;
-            width: fit-content;
             transform: rotate(-8.679deg);
-            font-weight: 700;
-            letter-spacing: 2px;
-            white-space: nowrap;
-            right: 20px;
+            right: -30%;
+
         }
     }
 }
+
 
 
 
@@ -3387,814 +3470,3 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
-
-
-
-
-
-
-
-// @media (min-width: 769px) and (max-width: 1024px) {
-
-//     // html,
-//     // body {
-//     //     scroll-behavior: smooth;
-//     //     scroll-snap-type: y proximity;
-//     //     width: 100vw;
-//     // }
-
-//     // #Coachintro {
-//     //     padding: 120px 10px;
-//     // }
-
-
-
-//     // #Coachintro,
-//     // #aboutCoach,
-//     // #spe,
-//     // #Coach-exp-cer,
-//     // #reservation1,
-//     // #coacharticle {
-//     //     max-width: 100vw !important;
-//     //     min-width: 0;
-//     //     margin: 0 auto !important;
-//     //     box-sizing: border-box;
-
-//     // }
-
-//     // #aboutCoach,
-//     // #spe,
-//     // #Coach-exp-cer,
-//     // #certificate,
-//     // #reservation1,
-//     // #coacharticle,
-//     // .Coach-comment-wrapper {
-//     //     scroll-margin-top: 90px !important;
-//     //     /* 依你的 nav 高度調整 */
-//     // }
-
-
-
-//     // .Coachintro-person {
-//     //     // display: flex !important;
-//     //     // flex-direction: row !important;
-//     //     // align-items: flex-start !important;
-//     //     // gap: 5% !important;
-//     //     // width: 100% !important;
-//     //     // box-sizing: border-box;
-//     //     // padding: 0 8px !important;
-//     //     // margin: 0 auto !important;
-//     //     // position: relative;
-//     //     // max-width: 960px; // 或依需求調整 900px、95%
-//     //     // margin-left: auto !important;
-//     //     // margin-right: auto !important;
-//     //     // padding: 0 16px !important;
-
-//     //     // .person-class-photo {
-//     //     //     // margin-left: 0 !important;
-//     //     //     // width: 60% !important;
-//     //     //     // margin-top: 0;
-
-//     //     //     .coachphotos {
-//     //     //         // width: 100% !important;
-//     //     //         // height: auto !important;
-
-//     //     //         .selfie {
-//     //     //             // margin-bottom: 10px !important;
-
-//     //     //             img {
-//     //     //                 // border-radius: 16px !important;
-//     //     //                 // width: 90% !important;
-//     //     //                 // max-width: 160px !important;
-//     //     //                 // height: auto !important;
-//     //     //                 // display: block;
-//     //     //                 // margin: 0 auto !important;
-//     //     //             }
-//     //     //         }
-
-//     //     //         .more {
-//     //     //             gap: 6px !important;
-//     //     //             margin-left: 0 !important;
-
-//     //     //             img {
-//     //     //                 width: 70px !important;
-//     //     //                 height: 54px !important;
-//     //     //                 border-radius: 12px !important;
-//     //     //             }
-//     //     //         }
-
-//     //     //         .TurnButton {
-//     //     //             margin-left: 0 !important;
-//     //     //             margin-top: 16px !important;
-//     //     //             gap: 6px !important;
-//     //     //         }
-//     //     //     }
-//     //     // }
-
-//     //     .Coachclass-container {
-//     //         // width: 100% !important;
-//     //         // max-width: 100% !important;
-//     //         // padding: 0 !important;
-//     //         // display: flex;
-//     //         // flex-direction: column;
-
-//     //         .personinfo {
-//     //             // padding-right: 10px;
-
-//     //             .namefavorite {
-//     //                 // gap: 32px !important;
-//     //                 // margin-bottom: 8px !important;
-//     //             }
-
-//     //             p {
-//     //                 font-size: 16px !important;
-//     //                 margin-bottom: 10px !important;
-//     //             }
-//     //         }
-
-//     //         .coach-classbox {
-//     //             // width: 90% !important;
-//     //             // height: 80%;
-//     //             // border-radius: 18px !important;
-//     //             // padding: 16px 8px !important;
-//     //             // margin-top: 32px !important;
-//     //             // margin-bottom: 12px !important;
-
-//     //             .classtime {
-//     //                 // padding-right: 20px;
-
-//     //                 h2 {
-//     //                     // font-size: 22px !important;
-//     //                 }
-//     //             }
-//     //         }
-
-//     //         .p-linethrough-color {
-//     //             // margin-top: 10px !important;
-//     //             // margin-bottom: 15px !important;
-//     //             // flex-direction: row;
-
-
-//     //             p.p-linethrough {
-//     //                 // font-size: 20px !important;
-//     //                 // line-height: 22px !important;
-//     //             }
-
-//     //             span .Arrow-price .Arrow-orange {
-//     //                 // width: 14px !important;
-//     //                 // height: 14px !important;
-//     //             }
-
-//     //             span .Arrow-price p.OrangePrice {
-//     //                 // font-size: 40px !important;
-//     //                 // line-height: 14px !important;
-//     //             }
-
-//     //             span p.SingleClass,
-//     //             p.SingleClass {
-//     //                 // font-size: 13px !important;
-//     //                 // line-height: 20px !important;
-//     //             }
-//     //         }
-
-//     //         .coach-prices-button {
-//     //             // margin-bottom: 8px !important;
-
-
-//     //             p {
-//     //                 // font-size: 20px !important;
-//     //                 // margin-bottom: 15px !important;
-//     //             }
-
-//     //             .price-with-button {
-//     //                 // gap: 8px !important;
-
-//     //                 button {
-//     //                     // width: 200px !important;
-//     //                     // font-size: 15px !important;
-//     //                     // margin-top: 90px !important;
-//     //                     // height: 36px !important;
-//     //                 }
-//     //             }
-//     //         }
-
-//     //         .Coach-place {
-//     //             // flex-direction: row !important;
-//     //             // gap: 1rem !important;
-//     //             // margin-top: 1rem !important;
-//     //             // position: absolute;
-//     //             // top: 95%;
-//     //             // left: 30%;
-
-//     //             p {
-//     //                 // font-size: 20px !important;
-//     //                 // margin-top: 4px !important;
-//     //                 // // padding: 10px;
-//     //                 // white-space: nowrap;
-//     //             }
-
-//     //             img {
-//     //                 // width: 12rem !important;
-//     //                 // height: 120px !important;
-//     //                 // margin-top: 6px !important;
-//     //             }
-
-//     //             .moreimg4,
-//     //             .moreimg5 {
-//     //                 // display: flex;
-//     //                 // flex-direction: column;
-//     //                 // justify-content: center;
-//     //                 // align-items: center;
-
-//     //                 img {
-//     //                     border-radius: 10px !important;
-//     //                 }
-
-
-//     //             }
-//     //         }
-//     //     }
-//     // }
-
-
-
-
-
-
-
-//     #aboutCoach {
-//         // width: 100%;
-//         // box-sizing: border-box;
-//         // margin: 0 auto;
-//         // padding: 0 10px;
-//         // position: relative;
-
-
-
-//         .about-title {
-//             // // gap: 18px !important;
-//             // flex-direction: column;
-//             // align-items: flex-start;
-//             // padding-left: 0.5rem;
-//             // margin-top: 20rem !important;
-
-
-//             h3 {
-//                 // font-size: 32px !important;
-//                 // width: auto !important;
-//             }
-
-//             h4 {
-//                 // width: 300px !important;
-//                 // font-size: 14px !important;
-//                 // padding-bottom: 6px !important;
-//                 // border-bottom: 2px solid #3A2C19;
-
-//             }
-//         }
-
-//         // .aboutCoach-content {
-//         //     margin-top: 5rem !important;
-//         //     color: var(--dark, #3A2C19);
-//         //     font-family: "Noto Sans TC", sans-serif;
-//         //     font-size: 14px !important;
-//         //     font-style: normal;
-//         //     font-weight: 500;
-//         //     line-height: 40px;
-//         //     letter-spacing: 0.4px;
-//         //     padding-left: 1.5rem !important;
-//         //     max-width: 90% !important;
-//         //     box-sizing: border-box;
-
-//         // }
-
-//         .aboutCoach-content p {
-//             margin-bottom: 20px;
-//             line-height: 1.6;
-//         }
-
-//     }
-
-//     /* --- */
-
-
-
-//     .coachsvg {
-//         position: absolute;
-//         top: 14rem;
-//         right: 10%;
-
-//         display: flex;
-//         flex-direction: column;
-//         align-items: flex-end;
-
-//         svg {
-//             width: 224px;
-//             height: auto; // ✅ 保持原始比例
-//             transform: rotate(-8.679deg); // 可選：如果你真的想旋轉 SVG
-//         }
-
-//         p {
-//             margin-top: 0.2rem;
-//             // margin-right: 9rem;
-//             color: var(--dark, #3A2C19);
-//             font-family: "Noto Sans TC", sans-serif;
-//             font-size: 20px;
-//             width: fit-content;
-//             transform: rotate(-8.679deg);
-//             font-weight: 700;
-//             letter-spacing: 2px;
-//             white-space: nowrap;
-//         }
-//     }
-
-
-
-//     /* --- */
-
-
-
-//     // .coachnav {
-//     //     // display: flex;
-//     //     // flex-direction: column;
-//     //     // align-items: flex-end !important;
-//     //     // max-width: 12% !important;
-//     //     // align-self: stretch;
-//     //     // transform: translateX(-10px);
-
-//     //     .intro {
-//     //         // margin-top: 8rem !important;
-//     //         // width: 100%;
-
-//     //         ul {
-//     //             // display: flex;
-//     //             // flex-direction: column;
-//     //             // justify-content: flex-end;
-//     //             // align-items: flex-end;
-//     //             // border-right: 0.6px solid #3A2C19;
-//     //             // gap: 30px;
-//     //             // padding-right: 105px !important;
-//     //             // padding-left: 10px;
-
-//     //         }
-//     //     }
-//     // }
-
-//     /* --- */
-
-
-
-//     // #spe {
-//     //     // margin-top: 200px !important;
-//     //     // width: 100%;
-//     //     // padding: 0 10px;
-//     //     // /* Add consistent horizontal padding */
-//     //     // box-sizing: border-box;
-//     //     // overflow-x: hidden;
-//     //     /* Crucial for preventing overflow within this section */
-
-
-//     //     // .spetitle {
-//     //     //     // padding-left: 20px;
-
-//     //     //     h4 {
-//     //     //         width: 286px !important;
-//     //     //     }
-//     //     // }
-
-
-//     //     .coach-circlewrapper {
-//     //         // width: 90%;
-//     //         // box-sizing: border-box;
-//     //         // padding: 0 16px;
-
-//     //         img {
-//     //             display: block;
-//     //             margin-left: 0 !important;
-//     //             width: 100%;
-//     //             max-width: 800px !important;
-//     //             height: auto;
-//     //         }
-//     //     }
-//     // }
-
-//     /* --- */
-
-
-
-//     // #Coach-exp-cer {
-//     //     // margin-top: 80px !important;
-//     //     // width: 100%;
-//     //     // padding: 0 10px;
-//     //     // /* Add consistent horizontal padding */
-//     //     // box-sizing: border-box;
-//     //     // overflow-x: hidden;
-
-
-//     //     // .coach-exp-cer-wrapper {
-//     //     //     min-width: 700px;
-//     //     //     display: flex;
-//     //     //     flex-direction: column;
-//     //     //     justify-content: flex-start;
-//     //     //     // gap: 40px;
-
-//     //     // }
-
-//     //     .coach-exp-cer-wrapper .expcontent,
-//     //     .coach-exp-cer-wrapper #certificate {
-//     //         min-width: 320px;
-//     //         flex: 0 0 auto;
-//     //     }
-
-//     //     // .exptitle {
-//     //     //     h4 {
-//     //     //         width: 286px !important;
-//     //     //     }
-//     //     // }
-
-//     //     // .expcontent {
-//     //     //     // width: 35rem !important;
-
-//     //     //     // .ul-desktop {
-//     //     //     //     display: none;
-//     //     //     // }
-
-//     //     //     .ul-tablet {
-//     //     //         // display: block !important;
-//     //     //         // list-style-type: disc !important;
-//     //     //         // margin-left: 20px !important;
-
-
-//     //     //         li {
-
-//     //     //             // font-family: "Noto Sans TC", sans-serif !important;
-//     //     //             // color: var(--dark, #3A2C19) !important;
-//     //     //             // /* 段落/14 */
-//     //     //             // font-size: 14px !important;
-//     //     //             // font-style: normal !important;
-//     //     //             // font-weight: 500 !important;
-//     //     //             // line-height: 140% !important;
-//     //     //             // /* 19.6px */
-//     //     //             // letter-spacing: 1.4px !important
-//     //     //         }
-
-//     //     //         p {
-
-//     //     //             color: var(--gray, #989794) !important;
-//     //     //             /* 段落/14 */
-//     //     //             font-family: "Noto Sans TC", sans-serif !important;
-//     //     //             font-size: 14px !important;
-//     //     //             font-style: normal !important;
-//     //     //             font-weight: 500 !important;
-//     //     //             line-height: 140% !important;
-//     //     //             letter-spacing: 1.4px !important;
-//     //     //             margin-bottom: 2rem !important;
-//     //     //         }
-
-
-//     //     //     }
-//     //     // }
-
-//     //     // .certitle {
-//     //     //     h4 {
-//     //     //         width: 286px !important;
-//     //     //     }
-//     //     // }
-
-//     //     // #certificate {
-//     //     //     // margin-top: 80px;
-
-//     //     //     li {
-//     //     //         color: var(--dark, #3A2C19);
-//     //     //         /* 段落/14 */
-//     //     //         font-family: "Noto Sans TC", sans-serif;
-//     //     //         font-size: 14px !important;
-//     //     //         font-style: normal;
-//     //     //         font-weight: 500;
-//     //     //         line-height: 140%;
-//     //     //         /* 19.6px */
-//     //     //         letter-spacing: 1.4px;
-//     //     //     }
-//     //     // }
-//     // }
-
-//     /* --- */
-
-
-
-//     // #reservation1 {
-//     //     // margin-top: 80px !important;
-//     //     // width: 100%;
-//     //     // padding: 0 10px;
-//     //     // /* Add consistent horizontal padding */
-//     //     // box-sizing: border-box;
-//     //     // overflow-x: hidden;
-
-//     //     .coach-reservation-wrapper {
-//     //         // min-width: 700px;
-//     //         // display: flex;
-//     //         // flex-direction: column;
-//     //         // justify-content: flex-start;
-
-//     //         // .reserve {
-//     //         //     position: relative;
-//     //         // }
-
-//     //         // .coachrestitle {
-//     //         //     h4 {
-//     //         //         width: 286px !important;
-//     //         //     }
-//     //         // }
-
-
-//     //         // .Coachprocess {
-//     //         //     display: flex;
-//     //         //     justify-content: flex-start !important;
-//     //         //     gap: 20px; // 可以調整間距
-
-//     //         //     width: fit-content;
-
-//     //         // }
-
-//     //         // .coach-reserve-img {
-//     //         //     // position: absolute;
-//     //         //     // width: 40% !important;
-//     //         //     // min-height: 0px !important;
-//     //         //     // display: flex;
-
-//     //         //     // img {
-//     //         //     //     position: absolute;
-//     //         //     //     width: 60%;
-//     //         //     //     height: auto;
-//     //         //     //     left: 22rem !important;
-//     //         //     //     top: -10rem !important;
-//     //         //     //     z-index: 2;
-//     //         //     // }
-
-
-
-//     //         //     p {
-//     //         //         // position: absolute;
-//     //         //         // left: 35rem !important;
-//     //         //         // top: -8rem !important;
-//     //         //         // transform: translateX(-50%);
-//     //         //         // color: var(--primary, #FF8740);
-//     //         //         // font-family: "Noto Sans TC", sans-serif;
-//     //         //         // font-size: 12px !important;
-//     //         //         // font-weight: 500;
-//     //         //         // line-height: 140%;
-//     //         //         // letter-spacing: 1.2px;
-//     //         //         // white-space: nowrap;
-//     //         //         // z-index: 1;
-
-//     //         //         &::before,
-//     //         //         &::after {
-//     //         //             // content: "";
-//     //         //             // position: absolute;
-//     //         //             // top: 50%;
-//     //         //             // width: 40px;
-//     //         //             // height: 2px;
-//     //         //             // background-color: #FF8740;
-//     //         //         }
-
-//     //         //         // &::before {
-//     //         //         //     left: -50px; // 原來是 -70px，往內靠近文字
-//     //         //         //     transform: rotate(45deg);
-//     //         //         // }
-
-//     //         //         &::after {
-//     //         //             right: -50px; // 原來是 -70px，同樣往內靠近文字
-//     //         //             transform: rotate(135deg);
-//     //         //         }
-//     //         //     }
-//     //         // }
-
-
-//     //         .Coach-Available-calendar {
-//     //             margin: 0px !important;
-//     //         }
-
-
-
-
-//     //     }
-
-//     // }
-
-
-
-
-
-
-//     // #coacharticle {
-//     //     // margin-top: 5rem !important;
-//     //     // overflow-x: visible;
-
-
-
-//     //     // .Three-classcards {
-//     //     //     display: none !important;
-//     //     // }
-
-//     //     // .my-swiper-container {
-//     //     //     display: block !important;
-//     //     // }
-
-
-
-//     //     .ViewArticles-left,
-//     //     .ViewArticles-right {
-//     //         display: none !important;
-//     //     }
-//     // }
-
-
-//     /* --- */
-
-
-
-//     // #Coach-comment {
-//     //     // width: 100% !important;
-
-//     //     // overflow-x: auto;
-//     //     // margin-top: 150px !important;
-
-//     //     .star-card-wrapper {
-//     //         // width: 100% !important;
-//     //         // margin: 0 auto !important;
-//     //         // box-sizing: border-box !important;
-
-
-
-
-//     //         .Coach-comment-line1 {
-
-//     //             // display: grid !important;
-//     //             // grid-template-columns: repeat(3, 1fr) !important;
-//     //             // gap: 20px !important;
-//     //             // width: 100% !important; // ✅ 給固定百分比寬度
-//     //             // margin: 0 auto !important;
-//     //             // // transform: translateX(-30px);
-//     //             // position: relative;
-
-//     //             &::before {
-//     //                 position: absolute;
-//     //                 left: 33% !important;
-
-//     //             }
-
-//     //             &::after {
-//     //                 position: absolute;
-//     //                 left: 66% !important;
-//     //             }
-
-//     //             // ::before,
-//     //             // ::after {
-//     //             //     position: absolute !important;
-//     //             //     content: "" !important;
-//     //             //     top: 0;
-//     //             //     width: 1px;
-//     //             //     height: 100%;
-//     //             //     background-color: #ccc;
-//     //             //     /* or whatever your line is */
-//     //             // }
-
-//     //             // &::before {
-//     //             //     left: 30% !important;
-//     //             // }
-
-//     //             // &::after {
-//     //             //     left: 80% !important;
-//     //             // }
-//     //         }
-
-
-//     //         .Coach-comment-card {
-//     //             width: 12rem !important;
-//     //             height: 15rem !important;
-//     //             padding: 0px !important;
-
-
-//     //             p.description {
-//     //                 width: 140px !important;
-//     //                 height: 100px !important;
-//     //                 color: var(--dark, #3A2C19);
-//     //                 font-family: "Noto Sans TC", sans-serif;
-//     //                 font-size: 14px !important;
-//     //                 font-style: normal;
-//     //                 font-weight: 500;
-//     //                 line-height: 1.4;
-//     //                 letter-spacing: 1.4px;
-//     //                 padding-left: 12px !important;
-//     //                 padding-right: 12px !important;
-//     //                 display: -webkit-box;
-//     //                 -webkit-line-clamp: 5;
-//     //                 /* 限制顯示兩行 */
-//     //                 -webkit-box-orient: vertical;
-//     //                 overflow: hidden;
-//     //                 text-overflow: ellipsis;
-
-//     //             }
-
-//     //             .Name-date {
-
-//     //                 display: flex;
-//     //                 flex-direction: row;
-//     //                 justify-content: center !important;
-//     //                 align-items: center !important;
-//     //                 gap: 20px !important;
-//     //                 position: absolute;
-//     //                 top: 200px !important;
-
-
-//     //                 p.Name {
-//     //                     color: #000;
-
-//     //                     /* 段落/14 */
-//     //                     font-family: "Noto Sans TC", sans-serif;
-//     //                     font-size: 14px;
-//     //                     font-style: normal;
-//     //                     font-weight: 500;
-//     //                     line-height: 140%;
-//     //                     /* 19.6px */
-//     //                     letter-spacing: 1.4px;
-//     //                     white-space: nowrap;
-//     //                 }
-
-//     //                 p.Date {
-//     //                     color: var(--gray, #989794);
-//     //                     text-align: right;
-//     //                     /* 段落/14 */
-//     //                     font-family: " Sans TC";
-//     //                     font-size: 12px !important;
-//     //                     font-style: normal;
-//     //                     font-weight: 500;
-//     //                     line-height: 140%;
-//     //                     /* 19.6px */
-//     //                     letter-spacing: 1.4px;
-//     //                 }
-
-
-//     //             }
-
-
-
-//     //         }
-
-
-//     //         .Star-rate {
-//     //             display: flex;
-//     //             flex-direction: row;
-//     //             justify-content: flex-start;
-//     //             align-items: center;
-//     //         }
-
-
-//     //         h3 {
-//     //             color: var(--dark, #3A2C19);
-//     //             font-size: 14px !important;
-//     //             font-style: normal;
-//     //             font-weight: 400;
-//     //             line-height: 150%;
-//     //             text-transform: capitalize;
-//     //             margin-left: 50%;
-//     //         }
-
-
-//     //         p.description {
-
-//     //             color: var(--dark, #3A2C19);
-//     //             font-family: "Noto Sans TC", sans-serif;
-//     //             font-size: 14px;
-//     //             font-style: normal;
-//     //             font-weight: 500;
-//     //             line-height: 140%;
-//     //             letter-spacing: 1.4px;
-//     //             // margin-top: 30px;
-//     //             // margin: 30px auto 0 auto !important;
-//     //             text-align: left;
-//     //             width: 200px;
-//     //             margin-top: 10px !important;
-
-//     //         }
-//     //     }
-
-//     //     .Coach-seeMoreComment {
-
-//     //         margin-left: -80px !important;
-//     //     }
-
-//     // }
-
-
-
-
-
-
-//     img,
-//     button {
-//         max-width: 100% !important;
-//         box-sizing: border-box !important;
-//     }
-// }

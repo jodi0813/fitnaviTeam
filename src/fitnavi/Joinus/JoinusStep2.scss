@@ -9,18 +9,18 @@
 
 .joinus-form-wrapper {
 
-  @media(max-width:1024px) {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    @media(max-width:1024px) {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
 }
 
 
 .CoachJoinus-Step2 {
-   
+
     position: relative;
     display: flex;
     flex-direction: column;
@@ -390,74 +390,76 @@
 
         .cert-line {
             display: flex;
-            align-items: center;
+            // align-items: center;
             gap: 10px;
             margin-left: 0;
             padding-left: 0;
+
+            button.upload {
+                height: 25px;
+                padding: 4px 12px;
+                margin-right: 18px;
+                margin-bottom: 8px;
+                border-radius: 999px;
+                border: 1px solid var(--primary, #FF8740);
+                color: #FF8740;
+
+                @media (max-width: 1024px) {
+                    width: 54px;
+                    height: 28px;
+                    margin: 0;
+                }
+            }
+
+            // 刪除按鈕
+            button.delete {
+                width: 50px;
+                height: 25px;
+                padding: 4px 12px;
+                margin-right: 5px !important;
+                margin-bottom: 8px;
+                border-radius: 999px;
+                border: 1px solid #3A2C19;
+                color: #3A2C19;
+                white-space: nowrap;
+
+                @media (max-width: 1024px) {
+                    width: 54px;
+                    height: 28px;
+                    margin: 0;
+                }
+            }
+
+            // 更新按鈕區塊
+            .update {
+                display: flex;
+                justify-content: flex-end;
+
+                // @media (max-width: 1024px) {
+                //     margin-right: 1%;
+                //     margin-top: 12px;
+                // }
+
+                
+                    width: 50px;
+                    height: 25px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 4px 12px;
+                    border-radius: 999px;
+                    border: 1px solid var(--primary, #FF8740);
+                    background: var(--primary, #FF8740);
+                    color: var(--white, #FEFCF7);
+                    font-size: 12px;
+                    white-space: nowrap;
+                
+            }
         }
     }
 
     // 上傳按鈕
-    button.upload {
-        height: 25px;
-        padding: 4px 12px;
-        margin-right: 18px;
-        margin-bottom: 8px;
-        border-radius: 999px;
-        border: 1px solid var(--primary, #FF8740);
-        color: #FF8740;
 
-        @media (max-width: 1024px) {
-            width: 54px;
-            height: 28px;
-            margin: 0;
-        }
-    }
-
-    // 刪除按鈕
-    button.delete {
-        width: 50px;
-        height: 25px;
-        padding: 4px 12px;
-        margin-right: 5px !important;
-        margin-bottom: 8px;
-        border-radius: 999px;
-        border: 1px solid #3A2C19;
-        color: #3A2C19;
-        white-space: nowrap;
-
-        @media (max-width: 1024px) {
-            width: 54px;
-            height: 28px;
-            margin: 0;
-        }
-    }
-
-    // 更新按鈕區塊
-    .update-button {
-        display: flex;
-        justify-content: flex-end;
-
-        @media (max-width: 1024px) {
-            margin-right: 1%;
-            margin-top: 12px;
-        }
-
-        .update {
-            width: 50px;
-            height: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 4px 12px;
-            border-radius: 999px;
-            border: 1px solid var(--primary, #FF8740);
-            background: var(--primary, #FF8740);
-            color: var(--white, #FEFCF7);
-            font-size: 12px;
-            white-space: nowrap;
-        }
-    }
 }
 
 

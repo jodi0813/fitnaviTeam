@@ -6,6 +6,8 @@
     src: url(../../assets/MantouSans-Regular.ttf);
 }
 
+
+
 #aboutNutri,
 #spefield,
 #Nutri-exp-cer,
@@ -20,6 +22,13 @@
 #Nutriintro {
     padding: 120px 50px;
 
+    @media (max-width: 768px) {
+        padding: 120px 10px;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        padding: 120px 10px;
+    }
 
 
 
@@ -79,8 +88,103 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 5%;
+        gap: 0;
         width: 100%;
+
+        @media(max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 5%;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 8px;
+            margin: 0 auto;
+            position: relative;
+            max-width: 960px; // 或依需求調整 900px、95%
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 16px;
+        }
+
+        .nutri-personinfo-mobile {
+            display: none;
+
+            @media(max-width: 768px) {
+                display: block;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 5px;
+
+            }
+
+            .namefavorite-mobile {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 3rem;
+
+                .coachintro-mobile-img {
+                    width: 64px;
+                    height: 69px;
+                    aspect-ratio: 1/1;
+                    border-radius: 64px;
+                }
+
+
+                h2 {
+                    color: var(--dark, #3A2C19);
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 2px;
+                    white-space: nowrap;
+                }
+
+                button {
+                    background: none;
+                    border: none;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    &:focus,
+                    &:focus-visible {
+                        outline: none;
+                    }
+                }
+
+
+
+            }
+
+            p {
+                white-space: nowrap;
+                color: var(--primary, var(--primary, #FF8740));
+                /* heading/標題4/Bold */
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+
+
+            }
+
+        }
 
         .Nutri-person-class-photo {
             margin-left: 5%;
@@ -1045,7 +1149,7 @@
                 gap: 20px;
 
                 .number {
-                    
+
                     p {
                         background-color: #FF8740;
                         width: 60px;
@@ -1851,861 +1955,792 @@
 
 
 
-@media (min-width: 769px) and (max-width: 1024px) {
-
-    html,
-    body {
-        scroll-behavior: smooth;
-        scroll-snap-type: y proximity;
-        width: 100vw;
-    }
-
-    #Coachintro {
-        padding: 120px 10px;
-    }
-
-
-    // 主內容外層
-    #Nutriintro,
-    #aboutnutri,
-    #spefield,
-    #Nutri-exp-cer,
-    #Nutri-reservation,
-    #Nutriarticle {
-        max-width: 100vw !important;
-        min-width: 0;
-        margin: 0 auto !important;
-        box-sizing: border-box;
-    }
-
-    #aboutnutri,
-    #spefield,
-    #Nutri-exp-cer,
-    #certificate,
-    #reservation1,
-    #coacharticle,
-    .Coach-comment-wrapper {
-        scroll-margin-top: 90px !important;
-        /* 依你的 nav 高度調整 */
-    }
-
-
-
-    // 主要兩區塊
-    .Nutriintro-person {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: flex-start !important;
-        gap: 5% !important;
-        width: 100% !important;
-        box-sizing: border-box;
-        padding: 0 8px !important;
-        margin: 0 auto !important;
-        position: relative;
-        max-width: 960px; // 或依需求調整 900px、95%
-        margin-left: auto !important;
-        margin-right: auto !important;
-        padding: 0 16px !important;
-
-        .Nutri-person-class-photo {
-            margin-left: 0 !important;
-            width: 60% !important;
-            margin-top: 0;
-
-            .Nutri-photogallery {
-                width: 100% !important;
-                height: auto !important;
-
-                .selfie {
-                    margin-bottom: 10px !important;
-
-                    img {
-                        border-radius: 16px !important;
-                        width: 90% !important;
-                        max-width: 160px !important;
-                        height: auto !important;
-                        display: block;
-                        margin: 0 auto !important;
-                    }
-                }
-
-                .more {
-                    gap: 6px !important;
-                    margin-left: 0 !important;
-
-                    img {
-                        width: 70px !important;
-                        height: 54px !important;
-                        border-radius: 12px !important;
-                    }
-                }
-
-                .TurnButton {
-                    margin-left: 0 !important;
-                    margin-top: 16px !important;
-                    gap: 6px !important;
-                }
-            }
-        }
-
-        .Nutriclass-container {
-            width: 100% !important;
-            max-width: 100% !important;
-            padding: 0 !important;
-            display: flex;
-            flex-direction: column;
-
-
-
-            .Nutri-personinfo {
-                padding-right: 10px;
-
-                .namefavorite {
-                    gap: 32px !important;
-                    margin-bottom: 8px !important;
-                }
-
-                p {
-                    font-size: 16px !important;
-                    margin-bottom: 10px !important;
-                }
-            }
-
-            .Nutri-classbox {
-                width: 90% !important;
-                height: 80%;
-                border-radius: 18px !important;
-                padding: 16px 8px !important;
-                margin-top: 32px !important;
-                margin-bottom: 12px !important;
-
-                .classtime {
-                    padding-right: 20px;
-                    gap: 10px !important;
-
-                    .timeblock {
-                        gap: 5px !important;
-                    }
-
-                    h2 {
-                        font-size: 22px !important;
-                    }
-                }
-
-            }
-
-
-
-            .p-linethrough-color {
-                margin-top: 20px !important;
-                margin-bottom: 15px !important;
-                flex-direction: row;
-
-                p.p-linethrough {
-                    font-size: 20px !important;
-                    line-height: 22px !important;
-                }
-
-                span .Arrow-price .Arrow-orange {
-                    width: 20px !important;
-                    height: 24px !important;
-                }
-
-                span .Arrow-price p.OrangePrice {
-                    font-size: 40px !important;
-                    line-height: 14px !important;
-                }
-
-                span p.SingleClass,
-                p.SingleClass {
-                    font-size: 13px !important;
-                    line-height: 20px !important;
-                }
-            }
-
-            .Nutri-prices-button {
-                margin-bottom: 8px !important;
-
-                p {
-                    font-size: 15px !important;
-                }
-
-                .price-with-button {
-                    gap: 8px !important;
-
-                    button {
-                        width: 200px !important;
-                        font-size: 15px !important;
-                        margin-top: 10px !important;
-                        height: 36px !important;
-                    }
-                }
-            }
-
-            .Nutri-place {
-                flex-direction: row !important;
-                gap: 1rem !important;
-                margin-top: 0 !important;
-                position: absolute;
-                top: 95%;
-                left: 30%;
-
-
-                p {
-                    font-size: 20px !important;
-                    margin-top: 4px !important;
-                    // padding: 10px;
-                    white-space: nowrap;
-                }
-
-                img {
-                    width: 12rem !important;
-                    height: 120px !important;
-                    margin-top: 6px !important;
-                }
-
-                .moreimg4,
-                .moreimg5 {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    img {
-                        border-radius: 10px !important;
-                    }
-                }
-            }
-        }
-    }
-
-    //介紹區
-    #aboutnutri {
-        width: 100%;
-        box-sizing: border-box;
-        margin: 0 auto;
-        padding: 0 10px;
-        position: relative;
-
-        .Nutriabout-title {
-            flex-direction: column;
-            align-items: flex-start;
-            padding-left: 0.5rem;
-            margin-top: 20rem !important;
-
-            h3 {
-                font-size: 32px !important;
-                width: auto !important;
-            }
-
-            h4 {
-                width: 300px !important;
-                font-size: 14px !important;
-                padding-bottom: 6px !important;
-                border-bottom: 2px solid #3A2C19;
-
-            }
-        }
-
-        .aboutNutri-p {
-            margin-top: 5rem !important;
-            color: var(--dark, #3A2C19);
-            font-family: "Noto Sans TC", sans-serif;
-            font-size: 14px !important;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 40px;
-            letter-spacing: 0.4px;
-            padding-left: 1.5rem !important;
-            /* Consider reducing this padding or making it horizontal only */
-            max-width: 90% !important;
-            /* Ensure the paragraph doesn't exceed its parent's width */
-            box-sizing: border-box;
-            /* Include padding in the width calculation */
-        }
-
-        .aboutNutri-p p {
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-    }
-
-
-
-
-    //導覽區
-
-    .Nutrinav {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end !important;
-        max-width: 12% !important;
-        align-self: stretch;
-        transform: translateX(-30px);
-
-
-        .Nutri-intro {
-            margin-top: 5rem !important;
-            width: 100%;
-
-
-            ul {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: flex-end;
-                border-right: 0.6px solid #3A2C19;
-                gap: 30px;
-                padding-right: 110px !important;
-                // padding-left: 10px;
-            }
-
-        }
-    }
-
-
-
-
-
-
-    //專長區
-    #spefield {
-        margin-top: 200px !important;
-        width: 100%;
-        padding: 0 10px;
-        /* Add consistent horizontal padding */
-        box-sizing: border-box;
-        overflow-x: hidden;
-    }
-
-    .spetitle {
-
-
-        h3 {
-            white-space: nowrap;
-        }
-
-        h4 {
-            width: 286px !important;
-        }
-    }
-
-
-    .nutri-circlewrapper {
-        width: 90%;
-        box-sizing: border-box;
-        padding: 0 16px;
-
-        img {
-            display: block;
-            margin-left: 0 !important;
-            width: 100%;
-            max-width: 800px !important;
-            height: auto;
-        }
-    }
-
-
-    //工作經歷區
-    #Nutri-exp-cer {
-        margin-top: 80px !important;
-        width: 100%;
-        padding: 0 10px;
-        /* Add consistent horizontal padding */
-        box-sizing: border-box;
-        overflow-x: hidden;
-    }
-
-    .Nutri-exp-cer-wrapper {
-        min-width: 700px;
-        display: flex;
-        flex-direction: column !important;
-        justify-content: flex-start;
-    }
-
-    .Nutri-exp-cer-wrapper .expcontent,
-    .Nutri-exp-cer-wrapper #certificate {
-        min-width: 320px; // 根據內容調整
-        flex: 0 0 auto;
-    }
-
-    .exptitle {
-        h4 {
-            width: 286px !important;
-        }
-    }
-
-    .expcontent {
-        width: 35rem !important;
-
-        .ul-desktop {
-            display: none;
-        }
-
-        .ul-tablet {
-            display: block !important;
-            list-style-type: disc !important;
-            margin-left: 20px !important;
-
-
-            li {
-
-                font-family: "Noto Sans TC", sans-serif !important;
-                color: var(--dark, #3A2C19) !important;
-                /* 段落/14 */
-                font-size: 14px !important;
-                font-style: normal !important;
-                font-weight: 500 !important;
-                line-height: 140% !important;
-                /* 19.6px */
-                letter-spacing: 1.4px !important
-            }
-
-            p {
-
-                color: var(--gray, #989794) !important;
-                /* 段落/14 */
-                font-family: "Noto Sans TC", sans-serif !important;
-                font-size: 14px !important;
-                font-style: normal !important;
-                font-weight: 500 !important;
-                line-height: 140% !important;
-                letter-spacing: 1.4px !important;
-                margin-bottom: 2rem !important;
-            }
-
-
-        }
-    }
-
-    .certitle {
-        h4 {
-            width: 286px !important;
-        }
-    }
-
-    .certificate {
-        margin-top: 80px;
-
-        li {
-            color: var(--dark, #3A2C19);
-            /* 段落/14 */
-            font-family: "Noto Sans TC", sans-serif;
-            font-size: 14px !important;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 140%;
-            /* 19.6px */
-            letter-spacing: 1.4px;
-        }
-
-    }
-
-    //預約區
-
-    #Nutri-reservation {
-        margin-top: 80px !important;
-        width: 100%;
-        padding: 0 10px;
-        /* Add consistent horizontal padding */
-        box-sizing: border-box;
-        overflow-x: hidden;
-    }
-
-    .Nutri-reservation-wrapper {
-        min-width: 700px;
-        display: flex;
-        flex-direction: column !important;
-
-        .nutrireserve {
-            position: relative;
-        }
-
-        .restitle {
-            h4 {
-                width: 286px !important;
-            }
-        }
-
-        .Nutriprocess {
-            display: flex;
-            justify-content: flex-start !important;
-            gap: 20px; // 可以調整間距
-
-            width: fit-content;
-
-        }
-
-        .reserve-img {
-            position: absolute !important;
-            width: 40% !important;
-            min-height: 0px !important;
-            display: flex !important;
-
-            img {
-                position: absolute !important;
-                width: 60% !important;
-                height: auto !important;
-                left: 22rem !important;
-                top: -10rem !important;
-                z-index: 2;
-            }
-
-
-
-            p {
-                position: absolute !important;
-                left: 35rem !important;
-                top: -8rem !important;
-                transform: translateX(-50%);
-                color: var(--primary, #FF8740);
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 12px !important;
-                font-weight: 500;
-                line-height: 140%;
-                letter-spacing: 1.2px;
-                white-space: nowrap;
-                z-index: 1;
-
-                &::before,
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 50% !important;
-                    width: 40px;
-                    height: 2px;
-                    background-color: #FF8740;
-                }
-
-                &::before {
-                    left: -50px !important; // 原來是 -70px，往內靠近文字
-                    transform: rotate(45deg) !important;
-                }
-
-                &::after {
-                    right: -50px !important; // 原來是 -70px，同樣往內靠近文字
-                    transform: rotate(135deg) !important;
-                }
-            }
-        }
-
-
-        .Nutri-calendar-reservetime {
-
-            margin-top: 80px;
-        }
-
-
-
-        .Nutri-Available-calendar {
-            margin: 20px !important;
-        }
-
-    }
-
-
-
-
-
-
-
-    #Nutriarticle {
-        margin-top: 5rem !important;
-        overflow-x: visible;
-
-    }
-
-    // .Nutri-ViewArticles {
-    //     max-width: 80% !important;
-    //     position: relative;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-
-    // }
-
-    //   
-    .NutriViewArticles-left {
-        display: none !important;
-    }
-
-    .NutriViewArticles-right {
-        display: none !important;
-    }
-
-    .Three-classcards {
-        display: none !important;
-    }
-
-    .my-swiper-container {
-        display: block !important;
-    }
-
-
-    #Nutri-comment {
-        width: 100% !important;
-        overflow-x: auto;
-        margin-top: 150px !important;
-
-        .Nutristar-card-wrapper {
-            width: 100% !important;
-            margin: 0 auto !important;
-            box-sizing: border-box !important;
-
-            .Coach-comment-line1 {
-
-                display: grid !important;
-                grid-template-columns: repeat(3, 1fr) !important;
-                gap: 20px !important;
-                width: 100% !important;
-                margin: 0 auto !important;
-                // transform: translateX(-30px);
-
-                &::before {
-                    position: absolute;
-                    left: 33% !important;
-
-                }
-
-                &::after {
-                    position: absolute;
-                    left: 66% !important;
-                }
-
-
-            }
-
-            .Coach-comment-card {
-                width: 12rem !important;
-                height: 15rem !important;
-                padding: 0px !important;
-
-
-                p.description {
-                    width: 140px !important;
-                    height: 100px !important;
-                    color: var(--dark, #3A2C19);
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 14px !important;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 1.4;
-                    letter-spacing: 1.4px;
-                    padding-left: 12px !important;
-                    padding-right: 12px !important;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 5;
-                    /* 限制顯示兩行 */
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-
-                }
-
-                .Name-date {
-
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center !important;
-                    align-items: center !important;
-                    gap: 20px !important;
-                    position: absolute;
-                    top: 200px !important;
-
-
-                    p.Name {
-                        color: #000;
-
-                        /* 段落/14 */
-                        font-family: "Noto Sans TC", sans-serif;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 140%;
-                        /* 19.6px */
-                        letter-spacing: 1.4px;
-                        white-space: nowrap;
-                    }
-
-                    p.Date {
-                        color: var(--gray, #989794);
-                        text-align: right;
-                        /* 段落/14 */
-                        font-family: " Sans TC";
-                        font-size: 12px !important;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 140%;
-                        /* 19.6px */
-                        letter-spacing: 1.4px;
-                    }
-
-
-                }
-
-
-
-            }
-
-
-            .Star-rate {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-            }
-
-            .member-comment {
-                color: var(--primary, var(--primary, #FF8740));
-                /* heading/標題3 */
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 32px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-                letter-spacing: 3.2px;
-            }
-
-
-            h3 {
-                color: var(--dark, #3A2C19);
-                font-size: 14px !important;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 150%;
-                text-transform: capitalize;
-                // margin-left: 50%;
-            }
-
-
-            p.description {
-
-                color: var(--dark, #3A2C19);
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                letter-spacing: 1.4px;
-                // margin-top: 30px;
-                // margin: 30px auto 0 auto !important;
-                text-align: left;
-                width: 200px;
-                margin-top: 10px !important;
-
-            }
-        }
-    }
-
-
-
-    .nutrisvg {
-        position: absolute;
-        top: 14rem;
-        right: 10%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-
-        svg {
-            width: 224px;
-            height: auto;
-            transform: rotate(-8.679deg);
-        }
-
-        p {
-            margin-top: 0.2rem;
-            // margin-right: 9rem;
-            color: var(--dark, #3A2C19);
-            font-family: "Noto Sans TC", sans-serif;
-            font-size: 20px;
-            width: fit-content;
-            transform: rotate(-8.679deg);
-            font-weight: 700;
-            letter-spacing: 2px;
-            white-space: nowrap;
-            right: 20px;
-        }
-    }
-
-
-
-
-
-    // 保證所有圖片、按鈕都不會超出
-    img,
-    button {
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-    }
-}
-
-// @media screen and (max-width: 1440px) {
-
-//     .nutrisvg {
-//         left: 60% !important;
+// @media (min-width: 769px) and (max-width: 1024px) {
+
+//     html,
+//     body {
+//         scroll-behavior: smooth;
+//         scroll-snap-type: y proximity;
+//         width: 100vw;
 //     }
 
-// }
+//     #Coachintro {
+//         padding: 120px 10px;
+//     }
 
-// @media screen and (max-width: 1440px) {
 
-//     .reserve-img {
-//         display: flex;
-//         flex-direction: row;
+//     // 主內容外層
+//     #Nutriintro,
+//     #aboutnutri,
+//     #spefield,
+//     #Nutri-exp-cer,
+//     #Nutri-reservation,
+//     #Nutriarticle {
+//         max-width: 100vw !important;
+//         min-width: 0;
+//         margin: 0 auto !important;
+//         box-sizing: border-box;
+//     }
+
+//     #aboutnutri,
+//     #spefield,
+//     #Nutri-exp-cer,
+//     #certificate,
+//     #reservation1,
+//     #coacharticle,
+//     .Coach-comment-wrapper {
+//         scroll-margin-top: 90px !important;
+//         /* 依你的 nav 高度調整 */
+//     }
+
+
+
+//     // 主要兩區塊
+//     .Nutriintro-person {
+//         display: flex !important;
+//         flex-direction: row !important;
+//         align-items: flex-start !important;
+//         gap: 5% !important;
+//         width: 100% !important;
+//         box-sizing: border-box;
+//         padding: 0 8px !important;
+//         margin: 0 auto !important;
+//         position: relative;
+//         max-width: 960px; // 或依需求調整 900px、95%
+//         margin-left: auto !important;
+//         margin-right: auto !important;
+//         padding: 0 16px !important;
+
+//         .Nutri-person-class-photo {
+//             margin-left: 0 !important;
+//             width: 60% !important;
+//             margin-top: 0;
+
+//             .Nutri-photogallery {
+//                 width: 100% !important;
+//                 height: auto !important;
+
+//                 .selfie {
+//                     margin-bottom: 10px !important;
+
+//                     img {
+//                         border-radius: 16px !important;
+//                         width: 90% !important;
+//                         max-width: 160px !important;
+//                         height: auto !important;
+//                         display: block;
+//                         margin: 0 auto !important;
+//                     }
+//                 }
+
+//                 .more {
+//                     gap: 6px !important;
+//                     margin-left: 0 !important;
+
+//                     img {
+//                         width: 70px !important;
+//                         height: 54px !important;
+//                         border-radius: 12px !important;
+//                     }
+//                 }
+
+//                 .TurnButton {
+//                     margin-left: 0 !important;
+//                     margin-top: 16px !important;
+//                     gap: 6px !important;
+//                 }
+//             }
+//         }
+
+//         .Nutriclass-container {
+//             width: 100% !important;
+//             max-width: 100% !important;
+//             padding: 0 !important;
+//             display: flex;
+//             flex-direction: column;
+
+
+
+//             .Nutri-personinfo {
+//                 padding-right: 10px;
+
+//                 .namefavorite {
+//                     gap: 32px !important;
+//                     margin-bottom: 8px !important;
+//                 }
+
+//                 p {
+//                     font-size: 16px !important;
+//                     margin-bottom: 10px !important;
+//                 }
+//             }
+
+//             .Nutri-classbox {
+//                 width: 90% !important;
+//                 height: 80%;
+//                 border-radius: 18px !important;
+//                 padding: 16px 8px !important;
+//                 margin-top: 32px !important;
+//                 margin-bottom: 12px !important;
+
+//                 .classtime {
+//                     padding-right: 20px;
+//                     gap: 10px !important;
+
+//                     .timeblock {
+//                         gap: 5px !important;
+//                     }
+
+//                     h2 {
+//                         font-size: 22px !important;
+//                     }
+//                 }
+
+//             }
+
+
+
+//             .p-linethrough-color {
+//                 margin-top: 20px !important;
+//                 margin-bottom: 15px !important;
+//                 flex-direction: row;
+
+//                 p.p-linethrough {
+//                     font-size: 20px !important;
+//                     line-height: 22px !important;
+//                 }
+
+//                 span .Arrow-price .Arrow-orange {
+//                     width: 20px !important;
+//                     height: 24px !important;
+//                 }
+
+//                 span .Arrow-price p.OrangePrice {
+//                     font-size: 40px !important;
+//                     line-height: 14px !important;
+//                 }
+
+//                 span p.SingleClass,
+//                 p.SingleClass {
+//                     font-size: 13px !important;
+//                     line-height: 20px !important;
+//                 }
+//             }
+
+//             .Nutri-prices-button {
+//                 margin-bottom: 8px !important;
+
+//                 p {
+//                     font-size: 15px !important;
+//                 }
+
+//                 .price-with-button {
+//                     gap: 8px !important;
+
+//                     button {
+//                         width: 200px !important;
+//                         font-size: 15px !important;
+//                         margin-top: 10px !important;
+//                         height: 36px !important;
+//                     }
+//                 }
+//             }
+
+//             .Nutri-place {
+//                 flex-direction: row !important;
+//                 gap: 1rem !important;
+//                 margin-top: 0 !important;
+//                 position: absolute;
+//                 top: 95%;
+//                 left: 30%;
+
+
+//                 p {
+//                     font-size: 20px !important;
+//                     margin-top: 4px !important;
+//                     // padding: 10px;
+//                     white-space: nowrap;
+//                 }
+
+//                 img {
+//                     width: 12rem !important;
+//                     height: 120px !important;
+//                     margin-top: 6px !important;
+//                 }
+
+//                 .moreimg4,
+//                 .moreimg5 {
+//                     display: flex;
+//                     flex-direction: column;
+//                     justify-content: center;
+//                     align-items: center;
+
+//                     img {
+//                         border-radius: 10px !important;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     //介紹區
+//     #aboutnutri {
+//         width: 100%;
+//         box-sizing: border-box;
+//         margin: 0 auto;
+//         padding: 0 10px;
 //         position: relative;
 
+//         .Nutriabout-title {
+//             flex-direction: column;
+//             align-items: flex-start;
+//             padding-left: 0.5rem;
+//             margin-top: 20rem !important;
+
+//             h3 {
+//                 font-size: 32px !important;
+//                 width: auto !important;
+//             }
+
+//             h4 {
+//                 width: 300px !important;
+//                 font-size: 14px !important;
+//                 padding-bottom: 6px !important;
+//                 border-bottom: 2px solid #3A2C19;
+
+//             }
+//         }
+
+//         .aboutNutri-p {
+//             margin-top: 5rem !important;
+//             color: var(--dark, #3A2C19);
+//             font-family: "Noto Sans TC", sans-serif;
+//             font-size: 14px !important;
+//             font-style: normal;
+//             font-weight: 500;
+//             line-height: 40px;
+//             letter-spacing: 0.4px;
+//             padding-left: 1.5rem !important;
+//             /* Consider reducing this padding or making it horizontal only */
+//             max-width: 90% !important;
+//             /* Ensure the paragraph doesn't exceed its parent's width */
+//             box-sizing: border-box;
+//             /* Include padding in the width calculation */
+//         }
+
+//         .aboutNutri-p p {
+//             margin-bottom: 20px;
+//             line-height: 1.6;
+//         }
+
+//     }
+
+
+
+
+//     //導覽區
+
+//     .Nutrinav {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: flex-end !important;
+//         max-width: 12% !important;
+//         align-self: stretch;
+//         transform: translateX(-30px);
+
+
+//         .Nutri-intro {
+//             margin-top: 5rem !important;
+//             width: 100%;
+
+
+//             ul {
+//                 display: flex;
+//                 flex-direction: column;
+//                 justify-content: flex-end;
+//                 align-items: flex-end;
+//                 border-right: 0.6px solid #3A2C19;
+//                 gap: 30px;
+//                 padding-right: 110px !important;
+//                 // padding-left: 10px;
+//             }
+
+//         }
+//     }
+
+
+
+
+
+
+//     //專長區
+//     #spefield {
+//         margin-top: 200px !important;
+//         width: 100%;
+//         padding: 0 10px;
+//         /* Add consistent horizontal padding */
+//         box-sizing: border-box;
+//         overflow-x: hidden;
+//     }
+
+//     .spetitle {
+
+
+//         h3 {
+//             white-space: nowrap;
+//         }
+
+//         h4 {
+//             width: 286px !important;
+//         }
+//     }
+
+
+//     .nutri-circlewrapper {
+//         width: 90%;
+//         box-sizing: border-box;
+//         padding: 0 16px;
 
 //         img {
-//             width: 50%;
-//             height: 90%;
+//             display: block;
+//             margin-left: 0 !important;
+//             width: 100%;
+//             max-width: 800px !important;
+//             height: auto;
+//         }
+//     }
+
+
+//     //工作經歷區
+//     #Nutri-exp-cer {
+//         margin-top: 80px !important;
+//         width: 100%;
+//         padding: 0 10px;
+//         /* Add consistent horizontal padding */
+//         box-sizing: border-box;
+//         overflow-x: hidden;
+//     }
+
+//     .Nutri-exp-cer-wrapper {
+//         min-width: 700px;
+//         display: flex;
+//         flex-direction: column !important;
+//         justify-content: flex-start;
+//     }
+
+//     .Nutri-exp-cer-wrapper .expcontent,
+//     .Nutri-exp-cer-wrapper #certificate {
+//         min-width: 320px; // 根據內容調整
+//         flex: 0 0 auto;
+//     }
+
+//     .exptitle {
+//         h4 {
+//             width: 286px !important;
+//         }
+//     }
+
+//     .expcontent {
+//         width: 35rem !important;
+
+//         .ul-desktop {
+//             display: none;
+//         }
+
+//         .ul-tablet {
+//             display: block !important;
+//             list-style-type: disc !important;
+//             margin-left: 20px !important;
+
+
+//             li {
+
+//                 font-family: "Noto Sans TC", sans-serif !important;
+//                 color: var(--dark, #3A2C19) !important;
+//                 /* 段落/14 */
+//                 font-size: 14px !important;
+//                 font-style: normal !important;
+//                 font-weight: 500 !important;
+//                 line-height: 140% !important;
+//                 /* 19.6px */
+//                 letter-spacing: 1.4px !important
+//             }
+
+//             p {
+
+//                 color: var(--gray, #989794) !important;
+//                 /* 段落/14 */
+//                 font-family: "Noto Sans TC", sans-serif !important;
+//                 font-size: 14px !important;
+//                 font-style: normal !important;
+//                 font-weight: 500 !important;
+//                 line-height: 140% !important;
+//                 letter-spacing: 1.4px !important;
+//                 margin-bottom: 2rem !important;
+//             }
+
+
+//         }
+//     }
+
+//     .certitle {
+//         h4 {
+//             width: 286px !important;
+//         }
+//     }
+
+//     .certificate {
+//         margin-top: 80px;
+
+//         li {
+//             color: var(--dark, #3A2C19);
+//             /* 段落/14 */
+//             font-family: "Noto Sans TC", sans-serif;
+//             font-size: 14px !important;
+//             font-style: normal;
+//             font-weight: 500;
+//             line-height: 140%;
+//             /* 19.6px */
+//             letter-spacing: 1.4px;
+//         }
+
+//     }
+
+//     //預約區
+
+//     #Nutri-reservation {
+//         margin-top: 80px !important;
+//         width: 100%;
+//         padding: 0 10px;
+//         /* Add consistent horizontal padding */
+//         box-sizing: border-box;
+//         overflow-x: hidden;
+//     }
+
+//     .Nutri-reservation-wrapper {
+//         min-width: 700px;
+//         display: flex;
+//         flex-direction: column !important;
+
+//         .nutrireserve {
 //             position: relative;
-//             left: 40px !important;
-//             top: -100px !important;
+//         }
+
+//         .restitle {
+//             h4 {
+//                 width: 286px !important;
+//             }
+//         }
+
+//         .Nutriprocess {
+//             display: flex;
+//             justify-content: flex-start !important;
+//             gap: 20px; // 可以調整間距
+
+//             width: fit-content;
+
+//         }
+
+//         .reserve-img {
+//             position: absolute !important;
+//             width: 40% !important;
+//             min-height: 0px !important;
+//             display: flex !important;
+
+//             img {
+//                 position: absolute !important;
+//                 width: 60% !important;
+//                 height: auto !important;
+//                 left: 22rem !important;
+//                 top: -10rem !important;
+//                 z-index: 2;
+//             }
+
+
+
+//             p {
+//                 position: absolute !important;
+//                 left: 35rem !important;
+//                 top: -8rem !important;
+//                 transform: translateX(-50%);
+//                 color: var(--primary, #FF8740);
+//                 font-family: "Noto Sans TC", sans-serif;
+//                 font-size: 12px !important;
+//                 font-weight: 500;
+//                 line-height: 140%;
+//                 letter-spacing: 1.2px;
+//                 white-space: nowrap;
+//                 z-index: 1;
+
+//                 &::before,
+//                 &::after {
+//                     content: "";
+//                     position: absolute;
+//                     top: 50% !important;
+//                     width: 40px;
+//                     height: 2px;
+//                     background-color: #FF8740;
+//                 }
+
+//                 &::before {
+//                     left: -50px !important; // 原來是 -70px，往內靠近文字
+//                     transform: rotate(45deg) !important;
+//                 }
+
+//                 &::after {
+//                     right: -50px !important; // 原來是 -70px，同樣往內靠近文字
+//                     transform: rotate(135deg) !important;
+//                 }
+//             }
+//         }
+
+
+//         .Nutri-calendar-reservetime {
+
+//             margin-top: 80px;
+//         }
+
+
+
+//         .Nutri-Available-calendar {
+//             margin: 20px !important;
+//         }
+
+//     }
+
+
+
+
+
+
+
+//     #Nutriarticle {
+//         margin-top: 5rem !important;
+//         overflow-x: visible;
+
+//     }
+
+//     // .Nutri-ViewArticles {
+//     //     max-width: 80% !important;
+//     //     position: relative;
+//     //     display: flex;
+//     //     align-items: center;
+//     //     justify-content: center;
+
+//     // }
+
+//     //   
+//     .NutriViewArticles-left {
+//         display: none !important;
+//     }
+
+//     .NutriViewArticles-right {
+//         display: none !important;
+//     }
+
+//     .Three-classcards {
+//         display: none !important;
+//     }
+
+//     .my-swiper-container {
+//         display: block !important;
+//     }
+
+
+//     #Nutri-comment {
+//         width: 100% !important;
+//         overflow-x: auto;
+//         margin-top: 150px !important;
+
+//         .Nutristar-card-wrapper {
+//             width: 100% !important;
+//             margin: 0 auto !important;
+//             box-sizing: border-box !important;
+
+//             .Coach-comment-line1 {
+
+//                 display: grid !important;
+//                 grid-template-columns: repeat(3, 1fr) !important;
+//                 gap: 20px !important;
+//                 width: 100% !important;
+//                 margin: 0 auto !important;
+//                 // transform: translateX(-30px);
+
+//                 &::before {
+//                     position: absolute;
+//                     left: 33% !important;
+
+//                 }
+
+//                 &::after {
+//                     position: absolute;
+//                     left: 66% !important;
+//                 }
+
+
+//             }
+
+//             .Coach-comment-card {
+//                 width: 12rem !important;
+//                 height: 15rem !important;
+//                 padding: 0px !important;
+
+
+//                 p.description {
+//                     width: 140px !important;
+//                     height: 100px !important;
+//                     color: var(--dark, #3A2C19);
+//                     font-family: "Noto Sans TC", sans-serif;
+//                     font-size: 14px !important;
+//                     font-style: normal;
+//                     font-weight: 500;
+//                     line-height: 1.4;
+//                     letter-spacing: 1.4px;
+//                     padding-left: 12px !important;
+//                     padding-right: 12px !important;
+//                     display: -webkit-box;
+//                     -webkit-line-clamp: 5;
+//                     /* 限制顯示兩行 */
+//                     -webkit-box-orient: vertical;
+//                     overflow: hidden;
+//                     text-overflow: ellipsis;
+
+//                 }
+
+//                 .Name-date {
+
+//                     display: flex;
+//                     flex-direction: row;
+//                     justify-content: center !important;
+//                     align-items: center !important;
+//                     gap: 20px !important;
+//                     position: absolute;
+//                     top: 200px !important;
+
+
+//                     p.Name {
+//                         color: #000;
+
+//                         /* 段落/14 */
+//                         font-family: "Noto Sans TC", sans-serif;
+//                         font-size: 14px;
+//                         font-style: normal;
+//                         font-weight: 500;
+//                         line-height: 140%;
+//                         /* 19.6px */
+//                         letter-spacing: 1.4px;
+//                         white-space: nowrap;
+//                     }
+
+//                     p.Date {
+//                         color: var(--gray, #989794);
+//                         text-align: right;
+//                         /* 段落/14 */
+//                         font-family: " Sans TC";
+//                         font-size: 12px !important;
+//                         font-style: normal;
+//                         font-weight: 500;
+//                         line-height: 140%;
+//                         /* 19.6px */
+//                         letter-spacing: 1.4px;
+//                     }
+
+
+//                 }
+
+
+
+//             }
+
+
+//             .Star-rate {
+//                 display: flex;
+//                 flex-direction: row;
+//                 justify-content: flex-start;
+//                 align-items: center;
+//             }
+
+//             .member-comment {
+//                 color: var(--primary, var(--primary, #FF8740));
+//                 /* heading/標題3 */
+//                 font-family: "Noto Sans TC", sans-serif;
+//                 font-size: 32px;
+//                 font-style: normal;
+//                 font-weight: 700;
+//                 line-height: normal;
+//                 letter-spacing: 3.2px;
+//             }
+
+
+//             h3 {
+//                 color: var(--dark, #3A2C19);
+//                 font-size: 14px !important;
+//                 font-style: normal;
+//                 font-weight: 400;
+//                 line-height: 150%;
+//                 text-transform: capitalize;
+//                 // margin-left: 50%;
+//             }
+
+
+//             p.description {
+
+//                 color: var(--dark, #3A2C19);
+//                 font-family: "Noto Sans TC", sans-serif;
+//                 font-size: 14px;
+//                 font-style: normal;
+//                 font-weight: 500;
+//                 line-height: 140%;
+//                 letter-spacing: 1.4px;
+//                 // margin-top: 30px;
+//                 // margin: 30px auto 0 auto !important;
+//                 text-align: left;
+//                 width: 200px;
+//                 margin-top: 10px !important;
+
+//             }
+//         }
+//     }
+
+
+
+//     .nutrisvg {
+//         position: absolute;
+//         top: 14rem;
+//         right: 10%;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: flex-end;
+
+//         svg {
+//             width: 224px;
+//             height: auto;
+//             transform: rotate(-8.679deg);
 //         }
 
 //         p {
-//             color: var(--primary, var(--primary, #FF8740));
-//             /* heading/標題3 */
+//             margin-top: 0.2rem;
+//             // margin-right: 9rem;
+//             color: var(--dark, #3A2C19);
 //             font-family: "Noto Sans TC", sans-serif;
-//             font-size: 32px;
-//             font-style: normal;
+//             font-size: 20px;
+//             width: fit-content;
+//             transform: rotate(-8.679deg);
 //             font-weight: 700;
-//             line-height: normal;
-//             letter-spacing: 3.2px;
-
-//             position: relative;
-//             left: 30px;
-//             top: -10px;
-
-//             &::before,
-//             &::after {
-//                 content: "";
-//                 position: absolute;
-//                 top: 50%;
-//                 width: 40px;
-//                 height: 2px;
-//                 background-color: #FF8740;
-
-//             }
-
-//             &::before {
-//                 left: -40px;
-//                 top: 30px;
-//                 transform: rotate(45deg);
-//             }
-
-//             &::after {
-//                 right: -30px;
-//                 top: 30px;
-//                 transform: rotate(135deg);
-//             }
+//             letter-spacing: 2px;
+//             white-space: nowrap;
+//             right: 20px;
 //         }
 //     }
 
-//     .nutrisvg {
-//         left: 60% !important;
-//     }
 
+
+
+
+//     // 保證所有圖片、按鈕都不會超出
+//     img,
+//     button {
+//         max-width: 100% !important;
+//         box-sizing: border-box !important;
+//     }
 // }

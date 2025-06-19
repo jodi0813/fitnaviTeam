@@ -19,7 +19,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 550px;
-  min-height: 650px;
+  height: 650px;
   padding: 19px 32px;
   border-radius: 32px;
   border: 1px solid var(--dark, #3A2C19);
@@ -28,7 +28,7 @@
 
   @media(max-width:1024px) {
     width: 360px;
-    min-height: 590px;
+    height: 590px;
     margin-bottom: 5rem;
     margin-top: 5rem;
     
