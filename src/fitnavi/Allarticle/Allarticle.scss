@@ -1192,3 +1192,30 @@
         display: block;
     }
 }
+
+
+
+.Allarticle-cards {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    @media (max-width: 1024px) {
+        width: 95%;
+        max-width: 560px;
+        padding: 0 10px;
+    }
+
+    @media (min-width: 1025px) and (max-width: 1400px) {
+        width: 85%;
+        max-width: 800px;
+        padding: 0 20px;
+    }
+
+    @media (min-width: 1401px) {
+        width: 75%;
+        max-width: 1200px;
+    }
+}
