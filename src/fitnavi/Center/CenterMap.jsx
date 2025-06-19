@@ -38,7 +38,7 @@ function CenterMap() {
   const [activeLatLng, setActiveLatLng] = useState(null);
   const popupRefs = useRef([]);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
-  const [isMobilePhone, setIsMobilePhone] = useState(window.innerWidth <= 769);
+  // const [isMobilePhone, setIsMobilePhone] = useState(window.innerWidth <= 769);
   const [showFilter, setShowFilter] = useState(false);
   const [searchSummary, setSearchSummary] = useState("");
   useEffect(() => {
@@ -305,7 +305,7 @@ function CenterMap() {
             {isMobile ? (
               <>
                 <div className="centerFilterBtWrapper">
-                  <div className="centerFilterBtTitle"><span>篩選條件</span></div>
+                  {/* <div className="centerFilterBtTitle"><span>篩選條件</span></div> */}
                   <button
                     className="centerFilterBt"
                     onClick={() => setShowFilter((prev) => !prev)}
@@ -464,7 +464,7 @@ function CenterMap() {
             )}
           </div>
           <div className="mapSearchLeft2">
-            {isMobilePhone ? (
+            {/* {isMobilePhone ? (
               <>
                 <div
                   className="gymCardsDrawer"
@@ -509,7 +509,7 @@ function CenterMap() {
                 </div>
               </>
             ) : (
-              <>
+              <> */}
                 <div className="photosNumber">
                   共有 <span>{filteredResults.length}</span> 間符合條件的場館
                 </div>
@@ -536,8 +536,8 @@ function CenterMap() {
                     </div>
                   ))}
                 </div>
-              </>
-            )}
+              {/* </>
+            )} */}
           </div>
         </div>
 
