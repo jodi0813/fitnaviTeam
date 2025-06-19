@@ -11,8 +11,9 @@ import PopupWindow1 from "./PopupWindow/PopupWindow1";
 import PopupWindow2 from "./PopupWindow/PopupWindow2";
 import PopupWindow3 from "./PopupWindow/PopupWindow3";
 import PopupWindow4 from "./PopupWindow/PopupWindow4";
-import ArticleCardsSwiper from '../../components/ArticleCardsSwiper'; 
+import ArticleCardsSwiper from '../../components/ArticleCardsSwiper';
 import { useRef } from 'react';
+import React from 'react';
 
 
 
@@ -90,6 +91,10 @@ function Coachintro() {
             tags: ["新手健身", "養成習慣"],
             category: "健身入門",
         },
+
+
+
+
     ];
 
     // 取得目前應該顯示的三張卡片（循環）
@@ -257,6 +262,28 @@ function Coachintro() {
 
                 <section className="Coachintro-person">
 
+                    <div className="personinfo-mobile">
+
+
+                        <div className="namefavorite-mobile">
+                            <img src="./images/coachintro-mobile.jpg" alt="" className="coachintro-mobile-img" />
+                            <div className="intro-mobile">
+                                <h2>張莉筠 Lila</h2>
+                                <p>＃健身教練#減脂訓練＃個人指導＃TRX</p>
+
+                            </div>
+
+                            <button onClick={() => setLiked(!liked)} className="like-button">
+                                {liked ? (
+                                    <IoMdHeart size={30} color="#FF8740" />
+                                ) : (
+                                    <IoMdHeartEmpty size={30} color="#FF8740" />
+                                )}
+                            </button>
+                        </div>
+
+                    </div>
+
                     <div className="person-class-photo">
                         <div className="coachphotos">
                             <PhotoGallery1 />
@@ -307,6 +334,58 @@ function Coachintro() {
                                 <p className="SingleClass">/單堂</p>
                             </div>
 
+                            <div className="p-linethrough-color-mobile">
+                                <div className="class-wrapper">
+                                    <div className="first-class">
+                                        <h5>首次體驗</h5>
+                                        <div className="prices">
+                                            <p>NT$</p>
+                                            <h6 className="prices-600">600</h6>
+                                            <p>單堂</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="class-price">
+                                        <h5>單堂價格</h5>
+                                        <div className="prices">
+                                            <p>NT$</p>
+                                            <h6>1,500</h6>
+                                            <p>單堂</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="class-price">
+                                        <h5>單堂價格</h5>
+                                        <div className="prices">
+                                            <p>NT$</p>
+                                            <h6>1,400</h6>
+                                            <p>單堂</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="class-price">
+                                        <h5>單堂價格</h5>
+                                        <div className="prices">
+                                            <p>NT$</p>
+                                            <h6>1,300</h6>
+                                            <p>單堂</p>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        className="classinrto-text-mobile"
+                                        type="button"
+                                        onClick={() => setShowPopup(true)}
+                                    >
+                                        <span className="classinrto-text">立即報名</span>
+
+                                    </button>
+                                </div>
+
+
+
+                            </div>
+
                             <div className="coach-prices-button">
                                 <p>10堂優惠 ：$1,400/單堂</p>
                                 <div className="price-with-button">
@@ -325,7 +404,12 @@ function Coachintro() {
                         </div>
 
                         <div className="Coach-place">
-                            <p>上課地點<br />可選擇</p>
+                            <div className="chooseclassplace">
+                                <p className="choose">可選擇</p> <br />
+                                <p className="classplace">上課地點</p>
+
+                            </div>
+
                             <svg xmlns="http://www.w3.org/2000/svg" width="3" height="143" viewBox="0 0 3 143" fill="none">
                                 <path d="M1.8335 142L1.8335 1" stroke="#3A2C19" stroke-width="2" stroke-linecap="round" />
                             </svg>
@@ -382,9 +466,9 @@ function Coachintro() {
                             </div>
                             <p className="aboutCoach-content">
 
-                                <p>嗨，我是張莉筠，一名熱愛健身、致力於幫助每位學員達成健康與體態目標的專業健身教練。</p>
-                                <p>我相信運動不只是改變外在，更能提升自信與生活品質。</p>
-                                <p>擁有ACE認證、TRX懸吊訓練系統認證與5年的教學經驗，我也專注於減脂與功能性訓練，並根據每位學員的身體狀況與需求，量身打造最適合的訓練計畫。我重視科學化訓練，搭配適當的飲食指導，讓妳不只在健身房進步，更能在生活中感受到體能提升的改變。</p>
+                                <p>嗨，我是張莉筠，一名熱愛健身、致力於幫助每位學員達成健康與體態目標的專業健身教練。</p> <br />
+                                <p>我相信運動不只是改變外在，更能提升自信與生活品質。</p> <br />
+                                <p>擁有ACE認證、TRX懸吊訓練系統認證與5年的教學經驗，我也專注於減脂與功能性訓練，並根據每位學員的身體狀況與需求，量身打造最適合的訓練計畫。我重視科學化訓練，搭配適當的飲食指導，讓妳不只在健身房進步，更能在生活中感受到體能提升的改變。</p> <br />
                                 不論妳是健身新手，還是想突破瓶頸的進階訓練者，我都會陪妳一起前進，一起打造更強壯、更健康的自己。</p>
                         </div>
 
@@ -397,6 +481,33 @@ function Coachintro() {
 
                                 <div className="coach-circlewrapper">
                                     <img src="./images/spe-field.png" alt="" />
+
+                                </div>
+
+                                <div className="coach-circle-s">
+                                    <div className="upper-circle">
+                                        <div>
+                                            <h5>減脂訓練</h5>
+                                            <p>燃燒脂肪、線條塑造、打造健康體態</p>
+                                        </div>
+
+                                        <div>
+                                            <h5>個人指導</h5>
+                                            <p>專屬訓練計畫、一對一指導、達成健身目標</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="lower-circle">
+                                        <div>
+                                            <h5>功能性訓練</h5>
+                                            <p>長期姿勢改善、減少運動傷害、提升活動能力</p>
+                                        </div>
+                                        <div>
+                                            <h5>TRX懸吊訓練</h5>
+                                            <p>全身訓練、核心強化、增進穩定性與力量</p>
+                                        </div>
+                                    </div>
+
 
                                 </div>
                             </div>
@@ -532,7 +643,7 @@ function Coachintro() {
                                                 onClick={() => navigate(`/article/${card.id}`)}
                                             />
                                         ))}
-                                    </div> 
+                                    </div>
 
                                     <div className="my-swiper-container">
                                         <ArticleCardsSwiper visibleCards={visibleCards} navigate={navigate} />
@@ -554,7 +665,7 @@ function Coachintro() {
                         <div className="Coach-comment-wrapper" ref={phase8Ref}>
                             <div id="Coach-comment">
                                 <div className="commentitle">
-                                    <h3>學員評價</h3>
+                                    <h3 className="member-comment">學員評價</h3>
                                     <h4>Rating</h4>
                                 </div>
 
@@ -603,6 +714,7 @@ function Coachintro() {
                                         ))}
                                     </div>
 
+
                                     <div className="Coach-seeMoreComment">
                                         <button>
                                             <span className="seeMore-text">查看更多評價</span>
@@ -634,13 +746,15 @@ function Coachintro() {
 
             {/* Overlay Modal */}
             {/* {showPopup && <PopupWindow1 onClose={() => setShowPopup(false)} onNext={nextStep} onPrev={prevStep}/>} */}
-            {showPopup && (
-                <StepComponent
-                    onClose={() => setShowPopup(false)}
-                    onNext={nextStep}
-                    onPrev={prevStep}
-                />
-            )}
+            {
+                showPopup && (
+                    <StepComponent
+                        onClose={() => setShowPopup(false)}
+                        onNext={nextStep}
+                        onPrev={prevStep}
+                    />
+                )
+            }
 
         </>
     )

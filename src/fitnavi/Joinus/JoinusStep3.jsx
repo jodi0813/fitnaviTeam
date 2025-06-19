@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./JoinusStep3.scss";
+// import MainTitle from "../../components/Title/MainTitle";
 
 function JoinusStep3({ onNext, onPre }) {
+  const navigate = useNavigate();
+
   // 教學經歷的狀態，預設一筆資料
   const [experiences, setExperiences] = useState([
     { id: Date.now(), company: '健身工廠', position: '私人教練', years: '', months: '' }
@@ -21,9 +25,30 @@ function JoinusStep3({ onNext, onPre }) {
     setExperiences(experiences.filter(exp => exp.id !== id));
   };
 
+  // 下一步按鈕處理
+  const handleNext = () => {
+    window.scrollTo(0, 0);
+    if (window.innerWidth < 1024) {
+      navigate('/JoinusStep4');
+    } else {
+      onNext && onNext();
+    }
+  };
+
+  // 上一步按鈕處理
+  const handlePre = () => {
+    window.scrollTo(0, 0);
+    if (window.innerWidth < 1024) {
+      navigate('/JoinusStep2');
+    } else {
+      onPre && onPre();
+    }
+  };
+
   return (
-    <section id='JoinusStep3-Form'>
-      <div className='CoachJoinus-Step3-wrapper'>
+    <>
+      {/* <MainTitle title1="加入我們" title2="成為我們的合作夥伴" /> */}
+      <div className='joinus-form-wrapper'>
         <form
           className='CoachJoinus-Step3'
           onSubmit={(e) => {
@@ -40,30 +65,28 @@ function JoinusStep3({ onNext, onPre }) {
           </div>
 
           <div className='Step3-form'>
-          <div className='Aboutme-textarea'>
-                <div className='Aboutme-textarea-title'>
-                  <h4>關於我：</h4>
-                  <p>300字以內</p>
-                </div>
-                <textarea name="" id=""></textarea>
+            <div className='Aboutme-textarea'>
+              <div className='Aboutme-textarea-title'>
+                <h4>關於我：</h4>
+                <p>300字以內</p>
               </div>
+              <textarea name="" id=""></textarea>
+            </div>
 
-              <div className='Aboutme-uploadphotos'>
-                <div className='Aboutme-uploadphotos-title'>
-                  <h4>形象照片：</h4>
-                </div>
-                <div className='Aboutme-uploadphotos-button'>
-                  <button className='Aboutme-upload' type="button">上傳檔案</button>
-                  <button type="button">預覽</button>
-                </div>
+            <div className='Aboutme-uploadphotos'>
+              <div className='Aboutme-uploadphotos-title'>
+                <h4>形象照片：</h4>
               </div>
-
-              <div className='teachingExperiences'>
-                <h4>教學經歷：</h4>
-                <p>最多6項</p>
+              <div className='Aboutme-uploadphotos-button'>
+                <button className='Aboutme-upload' type="button">上傳檔案</button>
+                <button type="button">預覽</button>
               </div>
+            </div>
 
-          
+            <div className='teachingExperiences'>
+              <h4>教學經歷：</h4>
+              <p>最多6項</p>
+            </div>
 
             <fieldset className="scrollFieldset-teachExperience">
               <table className="simpleTable">
@@ -102,12 +125,12 @@ function JoinusStep3({ onNext, onPre }) {
           </div>
 
           <div className='Step3-NextPreButton'>
-            <button type="button" className='Step3Pre-button' onClick={onPre}>◀ 上一步</button>
-            <button type="button" className='Step3Next-button' onClick={onNext}>下一步 ▶</button>
+            <button type="button" className='Step3Pre-button' onClick={handlePre}>◀ 上一步</button>
+            <button type="button" className='Step3Next-button' onClick={handleNext}>下一步 ▶</button>
           </div>
         </form>
       </div>
-    </section>
+    </>
   );
 }
 

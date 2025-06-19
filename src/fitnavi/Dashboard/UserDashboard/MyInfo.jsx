@@ -13,18 +13,19 @@ function MyInfo() {
           <div className="myinfoHeader">
             <div className="myinfoNameSection">
               <img src="./images/useravatar.jpg" className="myinfoAvatar" />
-              <div className="myinfoName">
-                <span className="myinfoLabel">姓名</span>
-                <span className="myinfoValue">王明華</span>
-              </div>
-              <div className="myinfoName">
-                <span className="myinfoLabel">暱稱</span>
-                <span className="myinfoValue">阿華</span>
+              <div className="myinfoNameBox">
+                <div className="myinfoName">
+                  <span className="myinfoLabel">姓名</span>
+                  <span className="myinfoValue">王明華</span>
+                </div>
+                <div className="myinfoName">
+                  <span className="myinfoLabel">暱稱</span>
+                  <span className="myinfoValue">阿華</span>
+                </div>
               </div>
             </div>
-              {/* 綁後台會員管理(芝) */}
-              <button className="myinfoEditButton">編輯個人資訊</button>
-       
+            {/* 綁後台會員管理(芝) */}
+            {/* <button className="myinfoEditButton">編輯個人資訊</button> */}
           </div>
 
           {/* 基本資料+健康資訊+聯絡資訊 */}
@@ -45,7 +46,7 @@ function MyInfo() {
                 </div>
                 <div className="myinfoItem">
                   <span className="myinfoItem1"> 通訊地址</span>
-                  <span>台北市中正區濟南路一段321號12樓</span>
+                  <span>台北市中歪區濟州路零段666號</span>
                 </div>
               </div>
               {/* 聯絡資訊 */}
@@ -53,33 +54,34 @@ function MyInfo() {
                 <h3 className="myinfosectionTitle">聯絡資訊</h3>
                 <div className="myinfoItem">
                   <span className="myinfoItem1">Email</span>
-                  <span>huahua0303@gmail.com</span>
                   <div className="myinfoCheckbox">
+                    <span>huahua0303@gmail.com</span>
+                    <div className="myinfoCheck">
                     <input type="checkbox" name="stuCheck" id="stuCheck" />
                     <label htmlFor="stuCheck" className="trShow">
-                      向講師顯示
-                    </label>
+                      在訂單中顯示
+                    </label></div>
                   </div>
                 </div>
                 <div className="myinfoItem">
                   <span className="myinfoItem1">手機號碼</span>
                   <span>0912345678</span>
-                  <div className="myinfoCheckbox">
+                  {/* <div className="myinfoCheckbox">
                     <input type="checkbox" name="stuCheck" id="stuCheck" />
                     <label htmlFor="stuCheck" className="trShow">
                       向講師顯示
                     </label>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="myinfoItem">
                   <span className="myinfoItem1"> Line ID</span>
                   <span>huahua0303</span>
-                  <div className="myinfoCheckbox">
+                  {/* <div className="myinfoCheckbox">
                     <input type="checkbox" name="stuCheck" id="stuCheck" />
                     <label htmlFor="stuCheck" className="trShow">
                       向講師顯示
                     </label>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -102,7 +104,7 @@ function MyInfo() {
                 <span className="myinfoItem1">傷病史</span>
                 <span>
                   一年前腰部受傷，現
-                  <br />
+                  {/* <br /> */}
                   在偶爾會不舒服
                 </span>
               </div>

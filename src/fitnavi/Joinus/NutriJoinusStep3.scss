@@ -6,6 +6,17 @@
   src: url(../../assets/MantouSans-Regular.ttf);
 }
 
+.joinus-form-wrapper {
+
+  @media(max-width:1024px) {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
 .NutriJoinus-Step3 {
   position: relative;
   display: flex;
@@ -21,6 +32,14 @@
   box-shadow: 8px 8px 0px 0px #3A2C19;
   box-sizing: border-box;
 
+
+  @media(max-width:1024px) {
+    width: 360px;
+    min-height: 590px;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+
   .NutriJoinusStep3-title {
     display: flex;
     flex-direction: row;
@@ -28,13 +47,26 @@
     margin-bottom: 40px;
     border-bottom: 1px solid #3a2c19;
 
+    @media (max-width: 1024px) {
+      gap: 10px;
+      margin-bottom: 12px;
+      width: 289px;
+
+    }
+
     .Step3-title {
-       display: flex;
+      display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: baseline;
       gap: 10px;
       white-space: nowrap;
+
+      @media (max-width: 1024px) {
+        width: 289px; // 控制整個元素的寬度
+        gap: 10px;
+
+      }
 
       h3 {
         color: var(--dark, #3A2C19);
@@ -42,6 +74,17 @@
         font-size: 36px;
         letter-spacing: 5.4px;
         text-align: center;
+
+        @media(max-width:1024px) {
+          color: var(--dark, #3A2C19);
+          text-align: center;
+          font-family: "Dela Gothic One";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 3.6px;
+        }
       }
 
       h4 {
@@ -52,6 +95,19 @@
         font-weight: 500;
         line-height: 250%;
         letter-spacing: 1.4px;
+
+        @media(max-width:1024px) {
+          color: var(--dark, #3A2C19);
+          text-align: center;
+          /* 段落(小尺寸)/12 */
+          font-family: "Noto Sans TC";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 140%;
+          /* 16.8px */
+          letter-spacing: 1.2px;
+        }
       }
     }
 
@@ -62,6 +118,19 @@
       line-height: 140%;
       letter-spacing: 1.4px;
       text-align: center;
+
+      @media(max-width:1024px) {
+        color: var(--primary, var(--primary, #FF8740));
+        opacity: 0.5;
+        text-align: center;
+        font-family: "Dela Gothic One";
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        /* 14px */
+        letter-spacing: 1px;
+      }
     }
   }
 
@@ -73,13 +142,21 @@
     gap: 5px;
 
     .Aboutme-textarea {
+      display: flex;
+      flex-direction: column;
+
       .Aboutme-textarea-title {
-       display: flex;
+        display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 150%;
         margin-bottom: 4px;
         width: 193px;
+
+        @media(max-width:1024px) {
+          gap: 90%;
+        }
+
 
         h4,
         p {
@@ -107,11 +184,87 @@
         border: 1px solid var(--dark, #3A2C19);
         background: var(--white, #FEFCF7);
         margin-top: 10px;
+
+        @media(max-width:1024px) {
+          width: 256px;
+          height: 206px;
+          border-radius: 8px;
+          border: 1px solid var(--dark, #3A2C19);
+          background: #FFF;
+          margin-left: 10px;
+
+        }
+
       }
     }
 
+    //     .Aboutme-textarea {
+    //    @media(max-width:1024px) {
+    //      width: 289px;
+    //     }
+
+    //   .Aboutme-textarea-title {
+    //     display: flex;
+    //     justify-content: flex-start;
+    //     align-items: center;
+    //     gap: 150%;
+    //     margin-bottom: 4px;
+    //     width: 193px;
+
+    //     @media(max-width:1024px) {
+    //       gap: 200px;
+    //     }
+
+    //     h4,
+    //     p {
+    //       font-family: "Noto Sans TC", sans-serif;
+    //       font-size: 14px;
+    //       font-weight: 500;
+    //       line-height: 140%;
+    //       letter-spacing: 1.4px;
+    //       white-space: nowrap;
+    //     }
+
+    //     h4 {
+    //       color: var(--dark, #3A2C19);
+    //     }
+
+    //     p {
+    //       color: var(--primary, #FF8740);
+    //     }
+    //   }
+
+    //   @media(max-width:1024px) {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center; /* 整個容器置中 */
+    //   }
+
+    //   textarea {
+    //     height: 156px;
+    //     width: 440px;
+    //     border-radius: 8px;
+    //     border: 1px solid var(--dark, #3A2C19);
+    //     background: var(--white, #FEFCF7);
+    //     margin-top: 10px;
+
+    //     @media(max-width:1024px) {
+    //       width: 256px;
+    //       height: 206px;
+    //       border-radius: 8px;
+    //       border: 1px solid var(--dark, #3A2C19);
+    //       background: #FFF;
+    //       align-self: center;
+    //     }
+    //   }
+    // }
+
+
     .Aboutme-uploadphotos {
-      // margin-top: 14px;
+      @media(max-width:1024px) {
+        width: 289px;
+        height: 60px;
+      }
 
       .Aboutme-uploadphotos-title {
         width: 202px;
@@ -129,6 +282,8 @@
 
       .Aboutme-uploadphotos-button {
         margin-bottom: 36px;
+        display: flex;
+        flex-direction: row;
 
         button {
           margin-right: 18px;
@@ -141,11 +296,39 @@
           line-height: 140%;
           letter-spacing: 1px;
           text-align: center;
+
+          @media(max-width:1024px) {
+            width: 59px;
+            height: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 999px;
+            border: 1px solid var(--primary, #3A2C19);
+            font-size: 14px;
+            white-space: nowrap;
+            padding: 4px 8px;
+
+          }
         }
 
         .Aboutme-upload {
           border-color: #FF8740;
           color: #FF8740;
+
+          @media(max-width:1024px) {
+            width: 77px;
+            height: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 999px;
+            border: 1px solid var(--primary, #FF8740);
+            font-size: 14px;
+            white-space: nowrap;
+            padding: 4px 8px;
+
+          }
         }
       }
     }
@@ -155,6 +338,12 @@
       flex-direction: row;
       gap: 150%;
       width: 199px;
+
+      @media(max-width:1024px) {
+        gap: 90%;
+
+      }
+
 
       h4,
       p {
@@ -175,7 +364,6 @@
       }
     }
 
-
     .scrollFieldset-teachExperience {
       margin-top: 8px;
       width: 430px;
@@ -184,6 +372,11 @@
       border-radius: 8px;
       overflow-y: auto;
       background: #fff;
+
+      @media(max-width:1024px) {
+        width: 289px;
+
+      }
 
       .simpleTable {
         width: 100%;
@@ -202,6 +395,8 @@
             text-align: center;
             color: var(--gray, #989794);
             // border-bottom: 1px solid #3a2c19;
+
+
           }
         }
 
@@ -215,7 +410,7 @@
             display: table;
             width: 100%;
             table-layout: fixed;
-            
+
           }
 
           td {
@@ -225,6 +420,11 @@
             color: var(--dark, #3A2C19);
             border-bottom: 1px solid rgba(58, 44, 25, 0.2);
             padding-bottom: 20px;
+            white-space: nowrap;
+
+            @media(max-width:1024px) {
+              padding: 10px;
+            }
           }
 
           input {
@@ -262,16 +462,32 @@
 
         tbody::-webkit-scrollbar {
           width: 8px;
+
+          @media (max-width: 1024px) {
+            width: 0;
+            /* 小螢幕時隱藏 scrollbar */
+          }
         }
 
         tbody::-webkit-scrollbar-thumb {
           background-color: #d9d9d9;
           border-radius: 4px;
+
+          @media (max-width: 1024px) {
+            background: transparent;
+            /* 小螢幕時隱藏滑塊 */
+          }
         }
 
         tbody::-webkit-scrollbar-track {
           background: transparent;
+
+          @media (max-width: 1024px) {
+            background: transparent;
+            /* 確保小螢幕時也透明 */
+          }
         }
+
       }
     }
   }
@@ -282,6 +498,12 @@
     flex-direction: row;
     gap: 300px;
     width: 100%;
+   
+
+
+    @media(max-width:1024px) {
+      gap: 150px !important;
+    }
 
     .Pre-button,
     .Next-button {

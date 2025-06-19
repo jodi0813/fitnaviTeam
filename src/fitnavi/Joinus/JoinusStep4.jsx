@@ -1,18 +1,35 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./JoinusStep4.scss";
+// import MainTitle from "../../components/Title/MainTitle";
 
 function JoinusStep4({ onPre, onSubmit }) {
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        window.scrollTo(0, 0);
+        if (window.innerWidth < 1024) {
+            navigate('/JoinusLoading'); // ✅ 根據你流程可替換成你想前往的頁面
+        } else {
+            onSubmit && onSubmit();
+        }
+    };
+
+    const handlePre = () => {
+        window.scrollTo(0, 0);
+        if (window.innerWidth < 1024) {
+            navigate('/JoinusStep3');
+        } else {
+            onPre && onPre();
+        }
+    };
+
     return (
-        <section id='JoinusStep4-Form'>
-            <div className='CoachJoinus-Step4-wrapper'>
-                <form
-                    className='CoachJoinus-Step4'
-                    onSubmit={e => {
-                        e.preventDefault(); // 阻止表單的預設提交行為
-                        window.scrollTo(0, 0); // 滾動到頁面頂部
-                        onSubmit(); // 呼叫從父組件傳遞的 onSubmit 函數
-                    }}
-                >
+        <>
+            {/* <MainTitle title1="加入我們" title2="成為我們的合作夥伴" /> */}
+            <div className='joinus-form-wrapper'>
+                <form className='CoachJoinus-Step4' onSubmit={handleSubmit}>
                     <div className='JoinusStep4-title'>
                         <div className='Step4-title'>
                             <h3>合作服務與條款</h3>
@@ -20,6 +37,7 @@ function JoinusStep4({ onPre, onSubmit }) {
                         </div>
                         <p>4/4</p>
                     </div>
+
                     <div className='Step4-form'>
                         <fieldset className="scrollFieldset-CollabarationTerm">
                             <legend></legend>
@@ -32,18 +50,21 @@ function JoinusStep4({ onPre, onSubmit }) {
                                 【五、合作終止與責任限制】 合作夥伴可隨時提出終止合作申請，平台亦可因違規行為、學員重大負評等狀況終止合作關係。本平台為媒合平台，對於合作夥伴與學員間之私人互動、付款或其他爭議不負法律責任，惟將盡力協助協調與處理。
                             </p>
                         </fieldset>
+
                         <div className='AgreeTerm-checkbox'>
                             <input type="checkbox" id="agree-term" />
                             <label htmlFor="agree-term">我同意上述合作服務條款和隱私權政策</label>
                         </div>
                     </div>
+
                     <div className='PreSSendButton'>
-                        <button type="button" onClick={onPre} className='Step4Pre-button'>◀ 上一步</button>
+                        <button type="button" onClick={handlePre} className='Step4Pre-button'>◀ 上一步</button>
                         <button type='submit' className='SendButton'>送出申請 ▶</button>
                     </div>
                 </form>
             </div>
-        </section>
+        </>
     );
 }
+
 export default JoinusStep4;

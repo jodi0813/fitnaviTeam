@@ -6,208 +6,320 @@
     src: url(../../assets/MantouSans-Regular.ttf);
 }
 
-#NuriJoinusStep4-Form {
-    padding: 120px 50px;
-    width: 100%
+// #NuriJoinusStep4-Form {
+//     padding: 120px 50px;
+//     width: 100%
+// }
+
+.joinus-form-wrapper {
+
+
+    @media(max-width:1024px) {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 
-.NutriJoinus-Step4-wrapper {
+
+
+
+.NutriJoinus-Step4 {
+    position: relative;
+    top: -10%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; // 讓它垂直滿版置中
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 550px;
+    height: 700px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-right: 32px;
+    padding-left: 32px;
 
+    border-radius: 32px;
+    border: 1px solid var(--dark, #3A2C19);
+    background: #FFF;
+    // box-shadow: 4px 4px 24px 0px rgba(58, 44, 25, 0.30);
+    box-shadow: 8px 8px 0px 0px #3A2C19;
 
-    .NutriJoinus-Step4 {
-        position: relative;
-        top: -10%;
+    @media(max-width:1024px) {
+        width: 360px;
+        min-height: 590px;
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+
+    }
+
+    .JoinusStep4-title {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 550px;
-        height: 700px;
-        padding-top: 19px;
-        padding-bottom: 19px;
-        padding-right: 32px;
-        padding-left: 32px;
+        flex-direction: row;
+        gap: 5px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #3a2c19;
+        width: 450px;
 
-        border-radius: 32px;
-        border: 1px solid var(--dark, #3A2C19);
-        background: #FFF;
-        // box-shadow: 4px 4px 24px 0px rgba(58, 44, 25, 0.30);
-        box-shadow: 8px 8px 0px 0px #3A2C19;
-
-
-
-        .JoinusStep4-title {
-            display: flex;
-            flex-direction: row;
-            gap: 5px;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #3a2c19;
-            width: 450px;
-
-            .Step4-title {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: baseline;
-                gap: 10px;
-                white-space: nowrap;
-
-                h3 {
-                    color: var(--dark, #3A2C19);
-                    text-align: center;
-                    font-family: "Dela Gothic One";
-                    font-size: 36px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                    letter-spacing: 0px;
-                }
-
-                h4 {
-                    color: var(--dark, #3A2C19);
-                    opacity: 0.5;
-                    text-align: center;
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 250%;
-                    /* 35px */
-                    letter-spacing: 1.4px;
-                }
-            }
-
-            p {
-                color: var(--primary, var(--primary, #FF8740));
-                text-align: center;
-                font-family: "Dela Gothic One";
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 140%;
-                /* 19.6px */
-                letter-spacing: 1.4px;
-            }
+        @media (max-width: 1024px) {
+            gap: 10px;
+            margin-bottom: 12px;
+            width: 289px;
 
         }
 
-        .scrollFieldset-CollabarationTerm {
+        .Step4-title {
             display: flex;
-            padding: 14px 12px 10px 27px;
-            justify-content: flex-end;
-            align-items: flex-start;
-            gap: 17px;
-            max-width: 393px;
-            max-height: 300px;
-            overflow-y: auto;
-            margin-left: 80px;
-            margin-right: 70px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: baseline;
+            gap: 10px;
+            white-space: nowrap;
 
 
-            border-radius: 8px;
-            border: 1px solid var(--dark, #3A2C19);
-            background: var(--white, #FEFCF7);
+            @media (max-width: 1024px) {
+                width: 289px; // 控制整個元素的寬度
+                gap: 5px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
 
-            p {
+            }
+
+            h3 {
                 color: var(--dark, #3A2C19);
+                text-align: center;
+                font-family: "Dela Gothic One";
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0px;
+
+                @media(max-width:1024px) {
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    font-family: "Dela Gothic One";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 3.6px;
+                    padding-left: 20px;
+                }
+
+            }
+
+            h4 {
+                color: var(--dark, #3A2C19);
+                opacity: 0.5;
+                text-align: center;
                 font-family: "Noto Sans TC", sans-serif;
-                font-size: 10px;
+                font-size: 14px;
                 font-style: normal;
                 font-weight: 500;
+                line-height: 250%;
+                /* 35px */
+                letter-spacing: 1.4px;
+
+                @media(max-width:1024px) {
+                    color: var(--dark, #3A2C19);
+                    text-align: center;
+                    /* 段落(小尺寸)/12 */
+                    font-family: "Noto Sans TC";
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 16.8px */
+                    letter-spacing: 1.2px;
+                    white-space: wrap;
+
+                }
+            }
+        }
+
+        p {
+            color: var(--primary, var(--primary, #FF8740));
+            text-align: center;
+            font-family: "Dela Gothic One";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+
+            @media(max-width:1024px) {
+                color: var(--primary, var(--primary, #FF8740));
+                opacity: 0.5;
+                text-align: center;
+                font-family: "Dela Gothic One";
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
                 line-height: 140%;
                 /* 14px */
                 letter-spacing: 1px;
             }
-
-            &::-webkit-scrollbar {
-                width: 10px;
-                height: 143px;
-            }
-
-            &::-webkit-scrollbar-thumb {
-                width: 8px;
-                border-radius: 99px;
-                background: #D9D9D9;
-            }
-
-            &::-webkit-scrollbar-track {
-                background: transparent;
-            }
-
         }
 
-        .AgreeTerm-checkbox {
-            margin-top: 40px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+    }
 
-            input {
-                width: 16px;
-                height: 16px;
-                aspect-ratio: 1/1;
-                border-radius: 3px;
-                border: 1px solid var(--dark, #3A2C19);
-                background: #FFF;
-            }
+    .scrollFieldset-CollabarationTerm {
+        display: flex;
+        padding: 14px 12px 10px 27px;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 17px;
+        max-width: 393px;
+        max-height: 300px;
+        overflow-y: auto;
+        margin-left: 80px;
+        margin-right: 70px;
 
-            label {
-                color: var(--dark, #3A2C19);
-                /* 段落/14 */
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                /* 19.6px */
-                letter-spacing: 1.4px;
-            }
+
+        border-radius: 8px;
+        border: 1px solid var(--dark, #3A2C19);
+        background: var(--white, #FEFCF7);
+
+        @media(max-width:1024px) {
+            width: 289px;
+            margin: 0 auto;
         }
 
-        .PreSSendButton {
-            margin-top: 60px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
+        p {
+            color: var(--dark, #3A2C19);
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 14px */
+            letter-spacing: 1px;
+        }
 
-            button {
-                border-radius: 999px;
-                border: 1px solid var(--primary, #FF8740);
-                text-align: center;
-                /* 段落/14 */
-                font-family: "Noto Sans TC", sans-serif;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 140%;
-                /* 19.6px */
-                letter-spacing: 1.4px;
+        &::-webkit-scrollbar {
+            width: 10px;
+            height: 143px;
+        }
 
-                &:active {
-                    border-radius: 999px;
-                    background: var(--primary, #FF8740);
+        &::-webkit-scrollbar-thumb {
+            width: 8px;
+            border-radius: 99px;
+            background: #D9D9D9;
+        }
 
-                    color: var(--white, var(--white, #FEFCF7));
-                    text-align: center;
-                    font-family: "Noto Sans TC", sans-serif;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 900;
-                    line-height: 140%;
-                    /* 19.6px */
-                    letter-spacing: 1.4px;
-                }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
 
-            }
+    }
 
+    .AgreeTerm-checkbox {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            width: 16px;
+            height: 16px;
+            aspect-ratio: 1/1;
+            border-radius: 3px;
+            border: 1px solid var(--dark, #3A2C19);
+            background: #FFF;
+        }
+
+        label {
+            color: var(--dark, #3A2C19);
+            /* 段落/14 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
         }
     }
 
+
+    .PreSSendButton {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        @media (max-width: 1024px) {
+            margin-top: 0px; // 響應式控制與下方距離
+        }
+
+
+        .Step4Pre-button {
+            width: 100px;
+            height: 40px;
+            border: 1px solid var(--dark, #3A2C19);
+            color: var(--dark, #3A2C19);
+            margin: 0px;
+            white-space: nowrap;
+            border-radius: 999px;
+            text-align: center;
+            /* 段落/14 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+
+            &:focus,
+            &:focus-visible {
+                outline: none;
+            }
+        }
+
+        .SendButton {
+            height: 40px;
+            outline: none;
+            border-radius: 999px;
+            border: 1px solid var(--primary, #FF8740);
+            color: #FF8740;
+            text-align: center;
+            /* 段落/14 */
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+            padding: 10px 16px;
+            justify-content: center;
+            align-items: center;
+
+            &:active {
+                border-radius: 999px;
+                background: var(--primary, #FF8740);
+
+                color: var(--white, var(--white, #FEFCF7));
+                text-align: center;
+                font-family: "Noto Sans TC", sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 140%;
+                /* 19.6px */
+                letter-spacing: 1.4px;
+            }
+
+        }
+
+    }
 }

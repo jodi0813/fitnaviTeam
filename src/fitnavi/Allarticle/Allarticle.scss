@@ -11,7 +11,7 @@
 #Allarticle-section {
     padding-top: 120px;
     padding-left: 50px;
-    padding-right: 0;
+    padding-right: 50px;
     box-sizing: border-box;
     // overflow-x: hidden;
     /* 隱藏橫向溢出 */
@@ -19,6 +19,21 @@
     height: auto;
     // border: 1px solid red;
     box-sizing: border-box;
+    align-items: stretch;
+
+    @media (min-width: 600px) and (max-width: 1024px) {
+        padding-top: 0px;
+        padding-bottom: 10rem; // 多留點空間讓 footer 不會蓋住內容
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    @media (max-width: 599px) {
+        padding-top: 0px;
+        padding-bottom: 10rem; // 多留點空間讓 footer 不會蓋住內容
+
+    }
 
 }
 
@@ -37,244 +52,16 @@
     margin-top: 60px;
     position: relative;
 
-    // @media (max-width: 1024px) {
-    //     .Allarticle-Search {
-    //       max-width: 750px !important;
-    //       width: 100%;
-    //       box-sizing: border-box;
-    //       padding-left: 20px;
-    //       padding-right: 20px;
-    //       display: flex;
-    //       flex-direction: row;
-    //       justify-content: center !important;
-    //       align-items: center !important;
-    //       gap: 10px;
-    //       flex-wrap: nowrap;
-    //     }
-    //     // .Allarticle-Search .selected-button {
-    //     //   display: flex;
-    //     //   flex-direction: row;
-    //     //   gap: 10px;
-    //     //   justify-content: center;
-    //     //   align-items: center;
-    //     //   width: 100%;     // 強制佔滿父容器
-    //     //   min-width: 0;
-    //     // }
-    //   }
+    @media (min-width: 600px) and (max-width: 1024px) {
+        margin-top: 10px;
 
-    // .selected-button {
-    //     display: flex;
-    //     flex-direction: row;
-    //     gap: 5%;
+    }
 
-    //     // @media (max-width: 1024px) {
-    //     //     margin-left: 10px; /* 也改成10px */
-    //     //     margin-right: 10px;
+    @media (max-width: 599px) {
+        margin-top: 10px;
 
-    //     //   }
+    }
 
-
-
-    //     button {
-    //         display: flex;
-    //         height: 40px;
-    //         min-width: 144px;
-    //         padding: 12px 36px;
-    //         justify-content: center;
-    //         align-items: center;
-    //         border-radius: 99px;
-    //         border: 1px solid #FF8740;
-
-    //         background: #FFF;
-    //         color: #FF8740;
-
-    //         text-align: center;
-    //         font-family: "Noto Sans TC", sans-serif;
-    //         font-size: var(--fontsize-H3, 18px);
-    //         font-style: normal;
-    //         font-weight: 700;
-    //         line-height: 150%;
-    //         white-space: nowrap;
-
-    //         /* 27px */
-    //     }
-
-    //     button:hover,
-    //     button:active {
-    //         display: flex;
-    //         height: 40px;
-    //         min-width: 144px;
-    //         padding: 12px 36px;
-    //         justify-content: center;
-    //         align-items: center;
-
-    //         border-radius: 99px;
-    //         background: #FF8740;
-    //         color: #FFF;
-
-    //         text-align: center;
-    //         font-family: "Noto Sans TC";
-    //         font-size: var(--fontsize-H3, 18px);
-    //         font-style: normal;
-    //         font-weight: 700;
-    //         line-height: 150%;
-
-    //         border: none;
-    //         outline: none;
-    //     }
-
-    // }
-
-
-
-    // .Search-Button {
-    //     display: flex;
-    //     height: 40px;
-    //     width: 479px;
-    //     padding: 8px 20px;
-    //     align-items: center;
-
-    //     border-radius: 20px;
-    //     border: 0.5px solid var(--dark, #3A2C19);
-    //     background: var(--white, #FEFCF7);
-
-    //     // @media (max-width: 1024px) {
-    //     //    gap: 10px;
-    //     //     width: 200px;
-    //     //   }
-
-    //     &::placeholder {
-    //         color: var(--gray, #989794);
-    //         /* 段落/14 */
-    //         font-family: "" Sans TC", sans-serif; Sans TC", sans-serif;
-    //         font-size: 14px;
-    //         font-style: normal;
-    //         font-weight: 500;
-    //         line-height: 140%;
-    //         /* 19.6px */
-    //         letter-spacing: 1.4px;
-    //     }
-
-    //     &::after {
-    //         content: "";
-    //         // position: absolute;
-    //         // right: 12px;
-    //         width: 16px;
-    //         height: 16px;
-    //         background-image: url("./images/search-icon.svg");
-    //         background-repeat: no-repeat;
-    //         background-size: contain;
-    //     }
-
-
-    //     &:focus,
-    //     &:focus-visible,
-    //     &:active,
-    //     &:hover {
-    //         // border: none;
-    //         outline: none;
-    //     }
-    // }
-
-    // .ClickSearch-Button {
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     position: relative; // 給 img 定位用
-    //     overflow: hidden;
-    //     width: 300px;
-    //     height: 40px;
-    //     padding: 8px 84px;
-    //     border-radius: 999px;
-    //     background: var(--primary, #FF8740);
-    //     color: var(--white, #FEFCF7);
-    //     font-family: "Noto Sans TC", sans-serif;
-    //     font-size: 20px;
-    //     font-weight: 900;
-    //     letter-spacing: 1.4px;
-    //     white-space: nowrap;
-    //     cursor: pointer;
-
-    //     // @media (max-width: 1024px) {
-    //     //     gap: 10px;
-    //     //      width: 200px;
-    //     //    }
-
-    //     // .text-search {
-    //     //     transition: transform 0.3s ease; // 修正這裡的語法
-    //     // }
-
-    //     img {
-    //         width: 24px;
-    //         height: 24px;
-    //         position: absolute;
-    //         right: 100px;
-    //         opacity: 0;
-    //         // transform: translateX(10px); // 預設略偏右
-    //         transition: opacity 0.3s ease, transform 0.3s ease;
-    //     }
-
-    //     &:hover {
-
-    //         width: 300px;
-    //         height: 40px;
-    //         padding: 8px 84px;
-    //         justify-content: center;
-    //         align-items: center;
-    //         border-radius: 999px;
-    //         border: 1px solid var(--primary, #FF8740);
-    //         background: var(--white, #FEFCF7);
-
-    //         .text-search {
-    //             transform: translateX(-10px); // 文字左滑
-    //             color: var(--primary, var(--primary, #FF8740));
-    //             text-align: center;
-    //             /* heading/標題4/Bold */
-    //             font-family: "Noto Sans TC";
-    //             font-size: 20px;
-    //             font-style: normal;
-    //             font-weight: 700;
-    //             line-height: normal;
-    //             letter-spacing: 2px;
-    //             transition: opacity 0.3s ease, transform 0.3s ease;
-    //         }
-
-    //         img {
-    //             opacity: 1;
-    //             // transform: translateX(0); // icon 滑進來
-    //         }
-    //     }
-
-    //     &:active {
-    //         outline: none;
-
-    //         .text-search {
-    //             color: var(--primary, var(--primary, #FF8740));
-    //             text-align: center;
-    //             /* 段落/16 */
-    //             font-family: "Noto Sans TC";
-    //             font-size: 16px;
-    //             font-style: normal;
-    //             font-weight: 500;
-    //             line-height: 150%;
-    //             /* 24px */
-    //             letter-spacing: 1.6px;
-    //         }
-
-    //         img {
-    //             width: 18px;
-    //             height: 18px;
-    //         }
-    //     }
-
-    //     &:focus,
-    //     &:focus-visible {
-    //         border: 1px solid #FF8740;
-    //         outline: none;
-    //     }
-
-
-    // }
 
 
     /* === 桌機版元件（預設顯示） === */
@@ -432,7 +219,7 @@
         .selected-button-alt,
         .ClickSearch-Button-alt {
             display: flex !important;
-            gap: 12px;
+            gap: 5px;
             justify-content: center;
             align-items: center;
         }
@@ -449,16 +236,520 @@
         }
 
         .ClickSearch-Button-alt {
-            background: #FF8740;
-            color: #fff;
+            width: 114px;
+            height: 40px;
+            border-radius: 99px;
+            border: 1px solid var(--primary, #FF8740);
+            background: #FFF;
             border-radius: 30px;
             padding: 10px 24px;
-            font-size: 16px;
-            font-weight: 700;
-            border: none;
+            color: var(--primary, var(--primary, #FF8740));
+            font-family: "Noto Sans TC", sans-serif;
+            color: var(--primary, var(--primary, #FF8740));
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
             margin-top: 12px;
+            cursor: pointer;
+
+            margin-right: 20px;
+            align-self: flex-end;
+            margin-left: auto;
         }
+
+        .FilterModal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-overlay {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            &-content {
+                position: relative;
+                background: white;
+                padding: 24px;
+                border-radius: 10px;
+                width: 90%;
+                max-width: 400px;
+                z-index: 1000;
+
+                h3 {
+                    margin-bottom: 16px;
+                    font-size: 20px;
+                }
+
+                .close-button {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                }
+
+                .filter-role {
+                    margin-top: 20px;
+
+                    label {
+                        display: block;
+                        margin-bottom: 6px;
+                        color: var(--dark, #3A2C19);
+                        /* 段落/14 */
+                        font-family: "Noto Sans TC", sans-serif;
+                        ;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                    }
+
+                    .role-button-group {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 12px;
+
+                        button {
+                            width: 86px;
+                            height: 36px;
+                            display: flex;
+                            padding: 8px 24px;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 8px;
+                            border: 0.5px solid var(--gray, #989794);
+                            background: #FFF;
+                            white-space: nowrap;
+                            font-family: "Noto Sans TC", sans-serif;
+                            color: #000;
+                            cursor: pointer;
+
+                            &.active {
+                                background: var(--primary, #FF8740);
+                                color: var(--white, #FEFCF7);
+                                font-size: 14px;
+                                font-weight: 900;
+                                letter-spacing: 1.4px;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+
+
+                .filter-section-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 12px;
+
+                    label {
+                        display: block;
+                        margin-bottom: 6px;
+                        color: var(--dark, #3A2C19);
+                        /* 段落/14 */
+                        font-family: "Noto Sans TC", sans-serif;
+                        ;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                    }
+
+                    .filter-section {
+                        margin-bottom: 16px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 12px;
+
+
+                        select {
+                            width: 135px;
+                            height: 35px;
+                            padding: 8px;
+                            border-radius: 6px;
+                            border: 1px solid #ccc;
+                        }
+
+                        .Cat-label,
+                        .Tag-label {
+                            color: var(--gray, #989794);
+                            font-family: "Noto Sans TC", sans-serif;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 140%;
+                            /* 19.6px */
+                            letter-spacing: 1.4px;
+                        }
+                    }
+
+                }
+
+                .filter-keyword {
+                    margin-bottom: 36px;
+
+                    label {
+                        display: block;
+                        margin-bottom: 6px;
+                        color: var(--dark, #3A2C19);
+                        /* 段落/14 */
+                        font-family: "Noto Sans TC", sans-serif;
+                        ;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                    }
+
+                    input {
+                        width: 280px;
+                        height: 40px;
+                        display: flex;
+                        height: 40px;
+                        padding: 8px 20px;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 8px;
+                        border: 0.5px solid var(--gray, #989794);
+                        background: #FFF;
+                        color: var(--gray, #989794);
+                        /* 段落/14 */
+                        font-family: "Noto Sans TC", sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+
+                    }
+
+                    .input-with-icon {
+                        padding-right: 32px;
+                        /* 留空間給 icon */
+                        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none"><circle cx="6.45898" cy="6.66187" r="5.5" stroke="%23989794"/><path d="M16.9998 14.2676L10.5151 9.92407" stroke="%23989794"/></svg>') no-repeat right 8px center;
+                        background-size: 18px 16px;
+                    }
+                }
+
+                .apply-button {
+                    background: #FF8740;
+                    color: white;
+                    font-weight: bold;
+                    width: 100%;
+                    padding: 12px;
+                    border: none;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    color: #FFF;
+
+                    text-align: center;
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                }
+            }
+        }
+
+
     }
+
+    @media (max-width: 599px) {
+
+        .selected-button,
+        .Search-Button,
+        .ClickSearch-Button {
+            display: none !important;
+        }
+
+        .selected-button-alt,
+        .ClickSearch-Button-alt {
+            display: flex !important;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .selected-button-alt button {
+            padding: 10px 20px;
+            background: #FF8740;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            white-space: nowrap;
+            font-weight: bold;
+        }
+
+        .ClickSearch-Button-alt {
+            width: 114px;
+            height: 40px;
+            border-radius: 99px;
+            border: 1px solid var(--primary, #FF8740);
+            background: #FFF;
+            border-radius: 30px;
+            padding: 10px 24px;
+            color: var(--primary, var(--primary, #FF8740));
+            font-family: "Noto Sans TC", sans-serif;
+            color: var(--primary, var(--primary, #FF8740));
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+            margin-top: 12px;
+            cursor: pointer;
+
+            margin-right: 20px;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+
+        .FilterModal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-overlay {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            &-content {
+                position: relative;
+                background: white;
+                padding: 24px;
+                border-radius: 10px;
+                width: 90%;
+                max-width: 400px;
+                z-index: 1000;
+
+                h3 {
+                    margin-bottom: 16px;
+                    font-size: 20px;
+                }
+
+                .close-button {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                }
+
+                .filter-role {
+                    margin-top: 20px;
+
+                    label {
+                        display: block;
+                        margin-bottom: 6px;
+                        color: var(--dark, #3A2C19);
+                        /* 段落/14 */
+                        font-family: "Noto Sans TC", sans-serif;
+                        ;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                    }
+
+                    .role-button-group {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 12px;
+
+                        button {
+                            width: 86px;
+                            height: 36px;
+                            display: flex;
+                            padding: 8px 24px;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 8px;
+                            border: 0.5px solid var(--gray, #989794);
+                            background: #FFF;
+                            white-space: nowrap;
+                            font-family: "Noto Sans TC", sans-serif;
+                            color: #000;
+                            cursor: pointer;
+
+                            &.active {
+                                background: var(--primary, #FF8740);
+                                color: var(--white, #FEFCF7);
+                                font-size: 14px;
+                                font-weight: 900;
+                                letter-spacing: 1.4px;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+
+
+                .filter-section-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 12px;
+
+                    label {
+                        display: block;
+                        margin-bottom: 6px;
+                        color: var(--dark, #3A2C19);
+                        /* 段落/14 */
+                        font-family: "Noto Sans TC", sans-serif;
+                        ;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                    }
+
+                    .filter-section {
+                        margin-bottom: 16px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 12px;
+
+
+                        select {
+                            width: 135px;
+                            height: 35px;
+                            padding: 8px;
+                            border-radius: 6px;
+                            border: 1px solid #ccc;
+                        }
+
+                        .Cat-label,
+                        .Tag-label {
+                            color: var(--gray, #989794);
+                            font-family: "Noto Sans TC", sans-serif;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 140%;
+                            /* 19.6px */
+                            letter-spacing: 1.4px;
+                        }
+                    }
+
+                }
+
+                .filter-keyword {
+                    margin-bottom: 36px;
+
+                    label {
+                        display: block;
+                        margin-bottom: 6px;
+                        color: var(--dark, #3A2C19);
+                        /* 段落/14 */
+                        font-family: "Noto Sans TC", sans-serif;
+                        ;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                    }
+
+                    input {
+                        width: 280px;
+                        height: 40px;
+                        display: flex;
+                        height: 40px;
+                        padding: 8px 20px;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 8px;
+                        border: 0.5px solid var(--gray, #989794);
+                        background: #FFF;
+                        color: var(--gray, #989794);
+                        /* 段落/14 */
+                        font-family: "Noto Sans TC", sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+
+                    }
+
+                    .input-with-icon {
+                        padding-right: 32px;
+                        /* 留空間給 icon */
+                        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none"><circle cx="6.45898" cy="6.66187" r="5.5" stroke="%23989794"/><path d="M16.9998 14.2676L10.5151 9.92407" stroke="%23989794"/></svg>') no-repeat right 8px center;
+                        background-size: 18px 16px;
+                    }
+                }
+
+                .apply-button {
+                    background: #FF8740;
+                    color: white;
+                    font-weight: bold;
+                    width: 100%;
+                    padding: 12px;
+                    border: none;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    color: #FFF;
+
+                    text-align: center;
+                    font-family: "Noto Sans TC", sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 140%;
+                    /* 19.6px */
+                    letter-spacing: 1.4px;
+                }
+            }
+        }
+
+
+    }
+
 
 
 
@@ -466,7 +757,7 @@
 
 .Allarticle-content {
     width: 100%;
-
+    height: auto;
     margin-top: 60px;
     // padding-left: 60px;
     display: flex;
@@ -474,6 +765,11 @@
     gap: 5%;
     justify-content: center;
     align-items: first baseline;
+
+    @media (min-width: 600px) and (max-width: 1024px) {
+        margin-bottom: 10rem;
+        margin-top: 10px;
+    }
 
 
     .cat-tag {
@@ -623,17 +919,17 @@
     }
 
     .Allarticle-cards {
-        max-width: 1000px;
+        // max-width: 1000px;
         width: 100%;
         padding: 0 10px;
-        margin-left: 5%;
-        margin-right: auto;
+        margin: 0 auto; // ✅ 完整置中
+        box-sizing: border-box;
 
-        @media (max-width: 1024px) {
-
-            max-width: 800px;
+        @media (min-width: 600px) and (max-width: 1024px) {
             width: 100%;
-            padding-left: 20px; // 防止卡片貼邊
+            max-width: 560px;
+            padding: 0 10px;
+            margin: 0 auto; // ✅ 完整置中
             box-sizing: border-box;
 
         }
@@ -651,22 +947,44 @@
             margin-right: 0px;
             border-bottom: 2px solid #3A2C19;
             padding-bottom: 5px;
+            position: relative;
 
             @media (min-width: 600px) and (max-width: 1024px) {
-                display: none; // 在平板區間隱藏
+                display: flex;
+                flex-direction: row-reverse;
+                position: absolute;
+                right: 1rem;
+                border-bottom: none;
+                gap: 12px;
+
             }
 
             p {
                 color: var(--dark, #3A2C19);
-                /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 14px;
                 font-style: normal;
-                font-weight: 500;
-                // line-height: 140%;
-                /* 19.6px */
+                font-weight: 600; /* 變粗點 */
                 letter-spacing: 1.4px;
-            }
+              
+                @media (max-width: 1024px) {
+                  position: relative;
+                  z-index: 2;
+                  color: var(--dark, #3A2C19);
+              
+                  -webkit-text-stroke-width: 1px;
+                  -webkit-text-stroke-color: rgba(254, 252, 247, 0.3);
+                  font-family: "Noto Sans TC";
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 140%;
+                  letter-spacing: 1.4px;
+                  overflow: hidden;
+                }
+              }
+              
+
 
             h4 {
                 color: var(--primary, var(--primary, #FF8740));
@@ -678,6 +996,34 @@
                 line-height: normal;
                 margin: 0px;
                 white-space: nowrap;
+
+                @media (max-width: 1024px) {
+                    color: var(--primary, var(--primary, #FF8740));
+                    text-align: right;
+                    font-family: "Dela Gothic One";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    z-index: 2;
+
+                }
+            }
+
+            img {
+                display: none;
+
+                @media  (max-width: 1024px) {
+                    display: block;
+                    width: 143px;
+                    height: 150px;
+                    position: absolute;
+                    opacity: 0.3;
+                    z-index: 0;
+                    right: -30px;
+                    top: -20px;
+
+                }
             }
         }
 
@@ -699,11 +1045,15 @@
 
             @media (max-width: 1024px) and (min-width: 600px) {
                 grid-template-columns: repeat(3, 1fr); // 平板改成兩欄
-                gap: 24px; // 改成固定 px 間距會比較穩
-                padding: 0 16px;
+                gap: 5%;
+                // padding: 0 16px;
                 box-sizing: border-box;
                 width: 100%;
-                margin-top: 24px;
+                margin-top: 6rem;
+            }
+
+            @media (max-width: 599px) {
+                grid-template-columns: repeat(2, 1fr); // ✅ 小螢幕下：兩欄等寬
             }
 
             #card2>tag {
@@ -714,9 +1064,9 @@
             }
         }
 
-        @media (max-width: 1440px) {
-            margin-left: 2%;
-        }
+        // @media (max-width: 1440px) {
+        //     margin-left: 2%;
+        // }
     }
 }
 
@@ -778,23 +1128,24 @@
 
 
 //600-1024
-.Allarticle-Card-article > .card10,
-.Allarticle-Card-article > .card11,
-.Allarticle-Card-article > .card12,
-.Allarticle-Card-article > .card13,
-.Allarticle-Card-article > .card14,
-.Allarticle-Card-article > .card15 {
-  display: none;
+.Allarticle-Card-article>.card10,
+.Allarticle-Card-article>.card11,
+.Allarticle-Card-article>.card12,
+.Allarticle-Card-article>.card13,
+.Allarticle-Card-article>.card14,
+.Allarticle-Card-article>.card15 {
+    display: none;
 }
 
 /* 600~1024px 時，額外顯示 10~15 張 */
 @media (min-width: 600px) and (max-width: 1024px) {
-  .Allarticle-Card-article > .card10,
-  .Allarticle-Card-article > .card11,
-  .Allarticle-Card-article > .card12,
-  .Allarticle-Card-article > .card13,
-  .Allarticle-Card-article > .card14,
-  .Allarticle-Card-article > .card15 {
-    display: block;
-  }
+
+    .Allarticle-Card-article>.card10,
+    .Allarticle-Card-article>.card11,
+    .Allarticle-Card-article>.card12,
+    .Allarticle-Card-article>.card13,
+    .Allarticle-Card-article>.card14,
+    .Allarticle-Card-article>.card15 {
+        display: block;
+    }
 }

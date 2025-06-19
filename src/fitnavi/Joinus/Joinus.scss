@@ -22,6 +22,7 @@
 
     @media (min-width: 393px) and (max-width: 1024px) {
         margin-bottom: 10rem;
+        padding-top: 0px;
     }
 }
 
@@ -1009,7 +1010,7 @@
 
     #Joinus-Form {
         margin: 0 auto;
-        padding-top: 120px;
+        padding-top: 0px;
         padding-left: 30px;
         padding-right: 30px;
         box-sizing: border-box;
@@ -1062,9 +1063,9 @@
 
 
                 img {
-                    position: absolute;
-                    top: 2rem !important;
-                    left: -1rem !important;
+                    position: absolute !important;
+                    top: 1.25rem !important;
+                    left: 18rem !important;
                     max-width: none !important;
                     max-height: none !important;
                     object-fit: contain;

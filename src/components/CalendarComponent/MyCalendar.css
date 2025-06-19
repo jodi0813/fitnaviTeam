@@ -68,6 +68,7 @@
 
 .selectedday-area {
 
+
     .selectedday-time {
         display: flex;
         flex-direction: column;
@@ -134,8 +135,9 @@
 .MyCalendar {
     display: flex;
     align-items: flex-start;
+    
 }
 
 
 
-  
+

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .overlay {
   position: fixed;
   inset: 0;
@@ -23,6 +24,12 @@
   backdrop-filter: blur(25px);
   z-index: 1000;
 }
+@media (max-width: 767px) {
+  .chat-popup {
+    width: 90%;
+    height: auto;
+  }
+}
 .chat-popup hr {
   width: 100%;
 }
@@ -32,10 +39,16 @@
   align-items: center;
   gap: 24px;
 }
+@media (max-width: 767px) {
+  .chat-popup .chat-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 .chat-popup .chat-header h2 {
   color: #ff8740;
   font-family: "Noto Sans TC", sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -44,7 +57,7 @@
 .chat-popup .chat-header span {
   color: #fff;
   font-family: "Noto Sans TC", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
@@ -83,9 +96,14 @@
   gap: 12px;
   width: 552px;
 }
+@media (max-width: 767px) {
+  .chat-popup .messages {
+    width: auto;
+  }
+}
 .chat-popup .messages .bubble {
   font-family: "Noto Sans TC", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
@@ -105,6 +123,13 @@
   border-radius: 100px;
   border: 1px solid #3a2c19;
   background: #fefcf7;
+}
+@media (max-width: 767px) {
+  .chat-popup .messages .messageUser .bubble {
+    word-break: break-all; /* 單字太長時強制換行 */
+    white-space: normal; /* 預設自動換行 */
+    width: 300px;
+  }
 }
 .chat-popup .messages .messageCoach {
   display: flex;
@@ -127,6 +152,12 @@
   flex-shrink: 0;
   border-radius: 100px;
   border: none;
+  padding: 15px;
+}
+@media (max-width: 767px) {
+  .chat-popup .chat-input-area input {
+    width: auto;
+  }
 }
 .chat-popup .popup-subtitle {
   display: flex;
@@ -144,7 +175,7 @@
 .chat-popup .popup-subtitle label {
   color: #fefcf7;
   font-family: "Noto Sans TC", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
@@ -157,6 +188,11 @@
   align-items: center;
   gap: 10px;
   align-self: stretch;
+}
+@media (max-width: 767px) {
+  .chat-popup .popup-subtitle .problemBody {
+    padding: 0;
+  }
 }
 .chat-popup .popup-subtitle .problemBody #classification1,
 .chat-popup .popup-subtitle .problemBody #classification2 {

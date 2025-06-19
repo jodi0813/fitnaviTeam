@@ -187,14 +187,27 @@ html {
   border-radius: 24px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
+@media (max-width: 1024px) {
+  .myinfoCard {
+    align-items: center;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 0px;
+    gap: 24px;
+  }
+}
 .myinfoCard .myinfoHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 1024px) {
+  .myinfoCard .myinfoHeader {
+    justify-content: center;
+  }
+}
 .myinfoCard .myinfoHeader .myinfoEditButton {
-  color: #FEFCF7;
-  /* 段落/16 */
+  color: #fefcf7;
   font-family: "Noto Sans TC";
   font-size: 16px;
   font-style: normal;
@@ -202,7 +215,8 @@ html {
   line-height: 150%; /* 24px */
   letter-spacing: 1.6px;
   border-radius: 99px;
-  background: #FF8740;
+  background: #ff8740;
+  padding: 8px 24px;
 }
 .myinfoCard .myinfoHeader .myinfoAvatar {
   width: 80px;
@@ -215,12 +229,22 @@ html {
   align-items: center;
   gap: 32px;
 }
-.myinfoCard .myinfoHeader .myinfoNameSection .myinfoName {
+@media (max-width: 1024px) {
+  .myinfoCard .myinfoHeader .myinfoNameSection {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+.myinfoCard .myinfoHeader .myinfoNameSection .myinfoNameBox {
+  display: flex;
+  gap: 32px;
+}
+.myinfoCard .myinfoHeader .myinfoNameSection .myinfoNameBox .myinfoName {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-.myinfoCard .myinfoHeader .myinfoNameSection .myinfoName .myinfoLabel {
+.myinfoCard .myinfoHeader .myinfoNameSection .myinfoNameBox .myinfoName .myinfoLabel {
   color: #3a2c19;
   font-family: "Noto Sans TC", sans-serif;
   font-size: 14px;
@@ -230,7 +254,7 @@ html {
   /* 19.6px */
   letter-spacing: 1.4px;
 }
-.myinfoCard .myinfoHeader .myinfoNameSection .myinfoName .myinfoValue {
+.myinfoCard .myinfoHeader .myinfoNameSection .myinfoNameBox .myinfoName .myinfoValue {
   color: #3a2c19;
   font-family: "Noto Sans TC", sans-serif;
   font-size: 20px;
@@ -239,20 +263,37 @@ html {
   line-height: normal;
   letter-spacing: 2px;
 }
-.myinfoCard .myinfoHeader .myinfoNameSection .myinfoName .coachinfoName {
+.myinfoCard .myinfoHeader .myinfoNameSection .myinfoNameBox .myinfoName .coachinfoName {
   display: flex;
   padding: 4px 12px;
   align-items: center;
   gap: 12px;
   border-radius: 99px;
-  border: 1px solid #FF8740;
-  color: #FF8740;
+  border: 1px solid #ff8740;
+  color: #ff8740;
   font-family: "Noto Sans TC", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 2px;
+}
+@media (max-width: 1024px) {
+  .myinfoCard .myinfoHeader .myinfoNameSection .myinfoNameBox .myinfoName .coachinfoName {
+    color: #ff8740;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 16.8px */
+    letter-spacing: 1.2px;
+  }
+}
+@media (max-width: 1024px) {
+  .myinfoCard .myinfoHeader .myinfoNameSection .coachinfoNameBox {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
 }
 .myinfoCard .myinfoHeader .myinfoBt {
   display: flex;
@@ -275,6 +316,25 @@ html {
   display: flex;
   gap: 32px;
 }
+@media (max-width: 1024px) {
+  .myinfoCard .profileContent {
+    flex-direction: column;
+    gap: 24px;
+    width: 60%;
+  }
+}
+@media (max-width: 767px) {
+  .myinfoCard .profileContent {
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+}
+.myinfoCard .profileContent .profileContentLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 .myinfoCard .profileContent .profileContent1 {
   display: flex;
   flex-direction: column;
@@ -294,6 +354,17 @@ html {
   line-height: normal;
   letter-spacing: 2px;
 }
+@media (max-width: 1024px) {
+  .myinfoCard .profileContent .myinfoSection .myinfosectionTitle {
+    color: #ff8740;
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: 1.4px;
+  }
+}
 .myinfoCard .profileContent .myinfoSection .myinfoItem {
   display: flex;
   padding: 0px 24px;
@@ -304,12 +375,64 @@ html {
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
-  /* 24px */
   letter-spacing: 1.6px;
+}
+@media (max-width: 1024px) {
+  .myinfoCard .profileContent .myinfoSection .myinfoItem {
+    padding: 0px 12px;
+  }
 }
 .myinfoCard .profileContent .myinfoSection .myinfoItem .myinfoItem1 {
   width: 100px;
 }
-.myinfoCard .profileContent .myinfoSection .myinfoItem .myinfoCheckbox .trShow {
+@media (max-width: 1024px) {
+  .myinfoCard .profileContent .myinfoSection .myinfoItem .myinfoItem1 {
+    color: #989794;
+    /* 段落(小尺寸)/12 */
+    font-family: "Noto Sans TC";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 16.8px */
+    letter-spacing: 1.2px;
+  }
+}
+@media (max-width: 1024px) {
+  .myinfoCard .profileContent .myinfoSection .myinfoItem span {
+    color: #3a2c19;
+    font-family: "Noto Sans TC";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 16.8px */
+    letter-spacing: 1.2px;
+  }
+}
+.myinfoCard .profileContent .myinfoSection .myinfoItem .myinfoCheckbox {
+  display: flex;
+  flex-direction: column;
+}
+.myinfoCard .profileContent .myinfoSection .myinfoItem .myinfoCheckbox .myinfoCheck {
+  display: flex;
+  align-items: center;
+}
+.myinfoCard .profileContent .myinfoSection .myinfoItem .myinfoCheckbox .myinfoCheck .trShow {
   font-size: 14px;
+  color: #000;
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: 1.4px;
+}
+@media (max-width: 1024px) {
+  .myinfoCard .profileContent .myinfoSection .myinfoItem .myinfoCheckbox .myinfoCheck .trShow {
+    color: #989794;
+    font-family: "Noto Sans TC";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 16.8px */
+    letter-spacing: 1.2px;
+  }
 }

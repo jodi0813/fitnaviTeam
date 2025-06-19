@@ -102,25 +102,25 @@ function Navbar() {
               </li>
             </ul>
           </div>
-
-          {isLoggedIn ? (
-            <button
-              type="button"
-              className="nbr-login"
-              onClick={handleGoToDashboard}
-            >
-              會員管理
-            </button>
-          ) : (
-            <button
-              type="button"
-              className="nbr-login"
-              onClick={() => navigate("/MemberLogin")}
-            >
-              登入 / 註冊
-            </button>
-          )}
-
+          <div className="desktop-menu">
+            {isLoggedIn ? (
+              <button
+                type="button"
+                className="nbr-login"
+                onClick={handleGoToDashboard}
+              >
+                會員管理
+              </button>
+            ) : (
+              <button
+                type="button"
+                className="nbr-login"
+                onClick={() => navigate("/MemberLogin")}
+              >
+                登入 / 註冊
+              </button>
+            )}
+          </div>
           {/* 手機版全畫面選單 */}
           <div className={`mobile-menu ${isMenuOpen ? "show" : ""}`}>
             <div className="mobile-title">
@@ -196,21 +196,26 @@ function Navbar() {
                   <div className="mobile-line"></div>
                 </div>
               </ul>
-            </div>
-            <div className="mobile-navbarBt">
-              <Link
-                to="/CoachDashboardList"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <button type="button" className="mobile-memberBt">
+              {isLoggedIn ? (
+                <button
+                  type="button"
+                  className="nbr-login"
+                  onClick={handleGoToDashboard}
+                >
                   會員管理
                 </button>
-              </Link>
-              <Link to="/MemberLogin" onClick={() => setIsMenuOpen(false)}>
-                <button type="button" className="mobile-login">
+              ) : (
+                <button
+                  type="button"
+                  className="nbr-login"
+                  onClick={() => {
+                    navigate("/MemberLogin");
+                    setIsMenuOpen(false);
+                  }}
+                >
                   登入 / 註冊
                 </button>
-              </Link>
+              )}
             </div>
           </div>
         </nav>
