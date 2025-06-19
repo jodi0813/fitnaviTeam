@@ -11,8 +11,8 @@ import { cities, taipeiDistricts } from "../../data/locations";
 // 解決圖釘圖示載入問題
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
-  iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
-  shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
+  iconUrl: "./images/marker-icon.png",
+  shadowUrl: "./images/marker-shadow.png",
 });
 
 function FlyToLocation({ position }) {
@@ -477,7 +477,7 @@ function CenterMap() {
                   <div className="drawerHandle">符合條件的健身場地</div>
                   <div className="drawerContent">
                     <div className="photosNumber">
-                      共有 <span>{filteredResults.length}</span>{" "}
+                      共有 <span>{filteredResults.length}</span>
                       間符合條件的場館
                     </div>
                     <div className="gymCards">
