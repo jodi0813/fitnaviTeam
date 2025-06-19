@@ -5,7 +5,6 @@ function HeroSection() {
     return (
         <section className="HeroSection">
             <div className="video-wrapper">
-
                 <ReactPlayer
                     url="https://res.cloudinary.com/diyvjhezu/video/upload/v1750254837/herosection-video-final_htbeaq.mp4"
                     playing
@@ -15,10 +14,19 @@ function HeroSection() {
                     width="100%"
                     height="100%"
                     className="hero-video"
-
+                    config={{
+                        file: {
+                            attributes: {
+                                style: {
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover',
+                                    objectPosition: 'center center'
+                                }
+                            }
+                        }
+                    }}
                 />
-
-
                 <div className="overlay"></div>
             </div>
 
