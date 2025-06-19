@@ -790,7 +790,7 @@
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
-                font-size: 12px;
+                font-size: 12px !important;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 140%;
@@ -805,7 +805,7 @@
                 justify-content: flex-start;
                 align-items: center;
                 gap: 14px;
-                margin-top: 10px;
+                margin-top: 20px !important;
 
                 h4 {
                     color: var(--dark, #3A2C19);
@@ -1085,7 +1085,7 @@
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
-                font-size: 12px;
+                font-size: 12px !important;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 140%;
@@ -1100,7 +1100,7 @@
                 justify-content: flex-start;
                 align-items: center;
                 gap: 14px;
-                margin-top: 10px;
+                margin-top: 15px !important;
 
                 h4 {
                     color: var(--dark, #3A2C19);
@@ -1281,7 +1281,7 @@
                 color: var(--dark, #3A2C19);
                 /* 段落/14 */
                 font-family: "Noto Sans TC", sans-serif;
-                font-size: 12px;
+                font-size: 12px !important;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 140%;
@@ -1296,7 +1296,7 @@
                 justify-content: flex-start;
                 align-items: center;
                 gap: 14px;
-                margin-top: 10px;
+                margin-top: 15px !important;
 
                 h4 {
                     color: var(--dark, #3A2C19);
