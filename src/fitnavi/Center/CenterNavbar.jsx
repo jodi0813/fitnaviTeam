@@ -82,7 +82,7 @@ function CenterNavbar() {
                       <div className="contactInfo3">
                         <div className="contactInfo4">
                           有 <FaSquareCheck color="green" size={18} />
-                          100 台北市 中正區 濟南路一段 321號 B1
+                          100 台北市中歪區濟州路零段666號 B1
                         </div>
                       </div>
                     </div>
