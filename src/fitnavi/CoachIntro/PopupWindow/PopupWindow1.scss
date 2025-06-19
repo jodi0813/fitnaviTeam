@@ -38,12 +38,23 @@
     display: flex;
     flex-direction: column;
 
+    @media(max-width:768px) {
+        width: 353px !important;
+        height: 640px !important;
+        padding: 12px 20px !important;
+    }
+
     .close {
         cursor: pointer;
         width: 48px;
         position: absolute;
         top: 4%;
         right: 5%;
+
+        @media(max-width: 768px) {
+            width: 24px !important;
+            top:2%!important;
+        }
     }
 
     h2 {
@@ -53,6 +64,11 @@
         border-bottom: 0.5px solid #989794;
         padding-bottom: 16px;
         margin-bottom: 25px;
+
+        @media(max-width: 768px) {
+            font-size: 20px !important;
+            margin-bottom: 15px!important;
+        }
     }
 
 
@@ -69,9 +85,10 @@
         font-weight: 700;
         color: #FEFCF7;
 
-        // &:active{
-        //     outline: none;
-        // }
+        @media(max-width:768px) {
+            width: 100% !important;
+            border-radius: 8px !important;
+        }
 
     }
 
@@ -99,10 +116,26 @@
         align-items: flex-end;
         padding-bottom: 25px;
 
+        @media(max-width:768px) {
+            padding-bottom: 15px !important;
+        }
+
         h3 {
             font-size: 1.8rem;
             font-weight: 700;
             color: #FF8740;
+
+            .break {
+                display: none;
+            }
+
+            @media(max-width:768px) {
+                font-size: 20px !important;
+
+                .break {
+                    display: block;
+                }
+            }
         }
 
         .detail {
@@ -112,6 +145,14 @@
             img {
                 width: 1.5rem;
                 height: auto;
+
+                @media(max-width:768px) {
+                    width: 24px !important;
+                }
+            }
+
+            p {
+                font-size: 14px;
             }
         }
     }
@@ -137,11 +178,20 @@
                     font-weight: 700;
                     color: #3A2C19;
                     padding-right: 15px;
+
+                    @media(max-width:768px) {
+                        font-size: 14px !important;
+                    }
+
                 }
 
                 .subtitle {
                     font-size: 0.8rem;
                     color: #FF8740;
+
+                    @media(max-width:768px) {
+                        font-size: 14px !important;
+                    }
                 }
             }
 
@@ -150,11 +200,20 @@
                 align-items: center;
                 justify-content: space-between;
 
+                @media(max-width:768px) {
+                    flex-direction: column;
+                    align-items: flex-start !important;
+                }
+
                 .expiry {
 
                     font-size: 0.8rem;
                     font-weight: 700;
                     color: #989794;
+
+                    @media(max-width:768px) {
+                        font-size: 14px !important;
+                    }
                 }
 
 
@@ -163,11 +222,20 @@
                     align-items: center;
                     color: #3A2C19;
 
+                    @media(max-width:768px) {
+                        width: 100% !important;
+                    }
+
                     .align-left {
                         width: 100%;
                         display: flex;
                         align-items: center;
                         flex: 1; // 💡 關鍵，讓左邊區塊撐開，按鈕會自動靠右
+
+                        @media(max-width:768px) {
+                            justify-content: flex-end !important;
+                            margin-right: 8px;
+                        }
 
 
                         .unit {
@@ -176,16 +244,27 @@
                             padding-right: 15px;
                             white-space: nowrap;
 
+                            @media(max-width:768px) {
+                                padding-right: 8px !important;
+                            }
                         }
 
                         .currency {
                             font-size: 0.8rem;
                             padding-right: 5px;
+
+                            @media(max-width:768px) {
+                                padding-right: 0 !important;
+                            }
                         }
 
                         .price {
                             font-size: 1.8rem;
                             padding-right: 30px;
+
+                            @media(max-width:768px) {
+                                padding-right: 0 !important;
+                            }
                         }
                     }
 
@@ -235,6 +314,10 @@
     margin-left: 0 !important;
     list-style: none;
     width: 540px; // 或你想要的寬度
+
+    @media(max-width:768px) {
+        width: 313px !important;
+    }
 }
 
 .plan-list li,
