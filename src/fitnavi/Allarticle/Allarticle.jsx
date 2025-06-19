@@ -455,7 +455,19 @@ function Allarticle() {
                         ))}
                     </div>
 
+                    
+                                    <div className="Coach-seemore-s">
+                                        <button>
+                                            <p>瀏覽更多學員評價</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+                                                <path d="M18 0.5L9 9.5L0 0.5" fill="#FF8740" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+
                 </div>
+
             </section>
         </section>
         </>

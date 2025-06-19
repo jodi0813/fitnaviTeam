@@ -21,9 +21,14 @@
     box-sizing: border-box;
     align-items: stretch;
 
+    @media(max-width:600px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     @media (min-width: 600px) and (max-width: 1024px) {
         padding-top: 0px;
-        padding-bottom: 10rem; // 多留點空間讓 footer 不會蓋住內容
+        // padding-bottom: 10rem; // 多留點空間讓 footer 不會蓋住內容
         padding-left: 10px;
         padding-right: 10px;
 
@@ -526,7 +531,7 @@
             margin-top: 12px;
             cursor: pointer;
 
-            margin-right: 20px;
+            // margin-right: 20px;
             align-self: flex-end;
             margin-left: auto;
         }
@@ -779,7 +784,7 @@
         align-items: flex-start;
         width: 10%;
 
-        @media (min-width: 600px) and (max-width: 1024px) {
+        @media (max-width: 1024px) {
             display: none; // 在平板區間隱藏
         }
 
@@ -925,6 +930,8 @@
         margin: 0 auto; // ✅ 完整置中
         box-sizing: border-box;
 
+
+
         @media (min-width: 600px) and (max-width: 1024px) {
             width: 100%;
             max-width: 560px;
@@ -949,7 +956,7 @@
             padding-bottom: 5px;
             position: relative;
 
-            @media (min-width: 600px) and (max-width: 1024px) {
+            @media (max-width: 1024px) {
                 display: flex;
                 flex-direction: row-reverse;
                 position: absolute;
@@ -964,26 +971,27 @@
                 font-family: "Noto Sans TC", sans-serif;
                 font-size: 14px;
                 font-style: normal;
-                font-weight: 600; /* 變粗點 */
+                font-weight: 600;
+                /* 變粗點 */
                 letter-spacing: 1.4px;
-              
+
                 @media (max-width: 1024px) {
-                  position: relative;
-                  z-index: 2;
-                  color: var(--dark, #3A2C19);
-              
-                  -webkit-text-stroke-width: 1px;
-                  -webkit-text-stroke-color: rgba(254, 252, 247, 0.3);
-                  font-family: "Noto Sans TC";
-                  font-size: 14px;
-                  font-style: normal;
-                  font-weight: 600;
-                  line-height: 140%;
-                  letter-spacing: 1.4px;
-                  overflow: hidden;
+                    position: relative;
+                    z-index: 2;
+                    color: var(--dark, #3A2C19);
+
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: rgba(254, 252, 247, 0.3);
+                    font-family: "Noto Sans TC";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 140%;
+                    letter-spacing: 1.4px;
+                    overflow: hidden;
                 }
-              }
-              
+            }
+
 
 
             h4 {
@@ -1013,7 +1021,7 @@
             img {
                 display: none;
 
-                @media  (max-width: 1024px) {
+                @media (max-width: 1024px) {
                     display: block;
                     width: 143px;
                     height: 150px;
@@ -1030,7 +1038,7 @@
 
         .Allarticle-Card-article {
             flex-direction: row;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             width: 100%;
             display: grid;
@@ -1043,6 +1051,16 @@
             width: 100%;
             margin-top: 5%;
 
+            @media (max-width: 600px) {
+                grid-template-columns: repeat(2, 1fr); // 平板改成兩欄
+                gap: 5%;
+                padding-left: 2rem;
+                box-sizing: border-box;
+                width: 100%;
+                margin-top: 8rem;
+                margin-bottom: 8rem;
+            }
+
             @media (max-width: 1024px) and (min-width: 600px) {
                 grid-template-columns: repeat(3, 1fr); // 平板改成兩欄
                 gap: 5%;
@@ -1052,9 +1070,7 @@
                 margin-top: 6rem;
             }
 
-            @media (max-width: 599px) {
-                grid-template-columns: repeat(2, 1fr); // ✅ 小螢幕下：兩欄等寬
-            }
+
 
             #card2>tag {
                 position: relative;
@@ -1124,6 +1140,33 @@
     color: #fff; // 你想要的文字顏色
     border: none;
     outline: none;
+}
+
+.Coach-seemore-s {
+    display: none;
+    /* 預設隱藏 */
+
+    @media (max-width: 1024px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 60%;
+
+        p {
+            color: var(--primary, var(--primary, #FF8740));
+            text-align: center;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 140%;
+            /* 19.6px */
+            letter-spacing: 1.4px;
+        }
+    }
+
+
 }
 
 

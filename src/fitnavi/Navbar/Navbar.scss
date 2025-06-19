@@ -146,11 +146,11 @@
 
   .nbr-login {
     background: #ff8740;
-    color: #fefcf7;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 24px;
+    // padding: 10px 24px;
     justify-content: center;
     border-radius: 20px;
     font-size: 14px;
@@ -160,7 +160,28 @@
     line-height: 140%;
     height: 40px;
     text-align: center;
-    width: 164px;
+    width: 125px;
+
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+
+    :before {
+      content: " ";
+      display: block;
+      width: 150px;
+      height: 60px;
+      background: rgb(255, 255, 255, .5);
+      position: absolute;
+      top: -10px;
+      left: -210px;
+      transform: rotate(-45deg);
+      transition: all .4s ease-in-out;
+    }
+
+    :hover:before {
+      margin-left: 300%;
+    }
+
     @media (max-width: 1024px) {
       padding: 10px;
       gap: 10px;
@@ -168,8 +189,17 @@
       width: 100%;
 
     }
+
+    button {
+      width: 100%;
+      position: relative;
+      color: #fefcf7;
+    }
   }
 }
+
+// 按鈕hover效果測試
+/* FIFTH BUTTON */
 
 .navbarHamburger {
   cursor: pointer;
@@ -250,15 +280,19 @@
       }
     }
   }
+
   .mobile-navbar {
     display: flex;
     justify-content: flex-start;
+
     @media (max-width: 1024px) {
       flex-direction: column;
       gap: 100px;
     }
+
     ul {
       width: 100%;
+
       .mobile-line {
         width: 100%;
         height: 0.5px;
@@ -266,6 +300,7 @@
       }
     }
   }
+
   .mobile-navbarBox {
     display: flex;
     flex-direction: column;
@@ -284,6 +319,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+
     .mobile-memberBt {
       display: flex;
       padding: 10px;
@@ -296,6 +332,7 @@
       width: 100%;
       color: #fff;
     }
+
     .mobile-login {
       display: flex;
       padding: 10px;
@@ -312,7 +349,8 @@
       font-size: 14px;
       font-style: normal;
       font-weight: 900;
-      line-height: 140%; /* 19.6px */
+      line-height: 140%;
+      /* 19.6px */
       letter-spacing: 1.4px;
     }
   }
@@ -344,6 +382,7 @@ html,
 body {
   overflow-x: hidden;
 }
+
 .desktop-menu {
   display: block;
 
