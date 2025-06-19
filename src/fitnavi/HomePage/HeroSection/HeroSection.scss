@@ -14,7 +14,10 @@
   }
 
   @media(max-width:768px) {
-    height: 140vh;
+    height: 110vh;
+  }
+  @media(max-width:393px) {
+    height: 91vh;
   }
 
   // 影片讓下面邊界不要這麼明顯的濾鏡
@@ -53,16 +56,10 @@
       object-fit: cover;
       display: block;
       z-index: 0;
+      object-position: center center; /* 預設中心 */
 
-
-      @media (max-width: 393px) {
-        width: 30%;
-        margin: 0 auto;
-      }
-
-      @media (max-width: 1024px) {
-        width: 0%;
-        margin: 0 auto;
+      @media (min-width: 1920px) {
+        width: 100%;
       }
 
       @media (max-width: 1360px) {
@@ -70,118 +67,60 @@
         margin: 0 auto;
       }
 
-      @media (min-width: 1920px) {
+
+    }
+   
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); // 你想要的遮罩顏色與透明度
+        z-index: 1;
+        pointer-events: none;
       }
 
 
     }
 
-
-
-
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+    .Hero-Section-Title {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-left: 10%;
+      top: 20%;
+      z-index: 2;
       height: 100%;
-      background: rgba(0, 0, 0, 0.3); // 你想要的遮罩顏色與透明度
-      z-index: 1;
-      pointer-events: none;
-    }
+      width: 100%;
 
-
-  }
-
-  .Hero-Section-Title {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 10%;
-    top: 20%;
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-
-    @media(max-width:1024px) {
-      top: 15%;
-      margin-left: 9%;
-    }
-
-    @media(max-width:1024px) {
-      top: 30%;
-    }
-
-    @media(max-width:768px) {
-      top: 40%;
-    }
-
-    @media(max-width:600px) {
-      top: 33%;
-    }
-
-
-
-    .Hero-Section-Catchphrase {
-
-
-      h2 {
-        color: #FEFCF7;
-        font-family: "Dela Gothic One";
-        font-size: 180px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 100%;
-
-        @media (max-width: 1200px) {
-          font-size: 155px;
-        }
-
-        @media (max-width: 1024px) {
-          font-size: 64px;
-          // font-size: clamp(90px, 15.15vw, 155px);
-        }
-
-        // @media(max-width:600px) {
-        //   font-size: 64px;
-        // }
+      @media(max-width:1024px) {
+        top: 15%;
+        margin-left: 9%;
       }
 
-      .h3-HeroTitle {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: baseline;
+      @media(max-width:1024px) {
+        top: 30%;
+      }
 
-        h3.S-HeroTitle {
-          color: #EB7223;
-          font-family: "Dela Gothic One";
-          font-size: 220px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 100%;
-          text-transform: capitalize;
+      @media(max-width:768px) {
+        top: 50%;
+      }
 
-          @media (max-width: 1200px) {
-            font-size: 180px;
-          }
+      @media(max-width:600px) {
+        top: 40%;
+      }
 
-          @media(max-width:1024px) {
-            // font-size: clamp(80px, 13vw + 36px, 180px);
-            font-size: 56px;
-          }
 
-          // @media(max-width:600px) {
-          //   font-size: 56px;
-          // }
-        }
 
-        h3.tronger-HeroTitle {
-          color: #EB7223;
+      .Hero-Section-Catchphrase {
+
+
+        h2 {
+          color: #FEFCF7;
           font-family: "Dela Gothic One";
           font-size: 180px;
           font-style: normal;
@@ -192,179 +131,230 @@
             font-size: 155px;
           }
 
-          @media(max-width:1024px) {
-            // font-size: clamp(60px, 15vw, 155px);
-            font-size: 56px;
+          @media (max-width: 1024px) {
+            font-size: 64px;
+            // font-size: clamp(90px, 15.15vw, 155px);
           }
 
           // @media(max-width:600px) {
-          //   font-size: 56px;
+          //   font-size: 64px;
           // }
         }
+
+        .h3-HeroTitle {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: baseline;
+
+          h3.S-HeroTitle {
+            color: #EB7223;
+            font-family: "Dela Gothic One";
+            font-size: 220px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            text-transform: capitalize;
+
+            @media (max-width: 1200px) {
+              font-size: 180px;
+            }
+
+            @media(max-width:1024px) {
+              // font-size: clamp(80px, 13vw + 36px, 180px);
+              font-size: 56px;
+            }
+
+            // @media(max-width:600px) {
+            //   font-size: 56px;
+            // }
+          }
+
+          h3.tronger-HeroTitle {
+            color: #EB7223;
+            font-family: "Dela Gothic One";
+            font-size: 180px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+
+            @media (max-width: 1200px) {
+              font-size: 155px;
+            }
+
+            @media(max-width:1024px) {
+              // font-size: clamp(60px, 15vw, 155px);
+              font-size: 56px;
+            }
+
+            // @media(max-width:600px) {
+            //   font-size: 56px;
+            // }
+          }
+        }
+
+
       }
+
+      .Hero-Section-content {
+
+        display: inline-block;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 50%;
+        padding-top: 3%;
+        padding-left: 1%;
+        min-width: 300px;
+
+        @media(max-width:600px) {
+          padding-top: 8%;
+        }
+
+        p {
+          color: #FFF;
+
+          font-family: "Noto Sans TC";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+          /* 36px */
+          letter-spacing: 2.4px;
+
+          white-space: nowrap;
+
+          @media(max-width:1024px) {
+            // font-size: clamp(14px, 2.34vw, 24px);
+            font-size: 14px;
+          }
+
+          @media(max-width:500px) {
+            white-space: wrap;
+          }
+
+        }
+
+
+      }
+
 
 
     }
 
-    .Hero-Section-content {
+    .Hero-section-scroll {
 
-      display: inline-block;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: flex-start;
-      width: 50%;
-      padding-top: 3%;
-      padding-left: 1%;
-      min-width: 300px;
+      position: absolute;
+      top: 64%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
 
-      @media(max-width:600px) {
-        padding-top: 8%;
+      @media(max-width:1024px) {
+        display: none;
+      }
+
+      @media screen and (min-width: 1359px) and (max-width: 1361px) {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -20%);
+      }
+
+      @media(max-width:1024px) {
+        top: 60%;
       }
 
       p {
-        color: #FFF;
-
-        font-family: "Noto Sans TC";
-        font-size: 24px;
-        font-style: normal;
+        color: var(--white, #FEFCF7);
+        text-align: center;
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 14px;
         font-weight: 500;
-        line-height: 150%;
-        /* 36px */
-        letter-spacing: 2.4px;
-
-        white-space: nowrap;
-
-        @media(max-width:1024px) {
-          // font-size: clamp(14px, 2.34vw, 24px);
-          font-size: 14px;
-        }
-
-        @media(max-width:500px) {
-          white-space: wrap;
-        }
-
+        line-height: 140%;
+        letter-spacing: 1.4px;
       }
 
+      .HeroSectionArrow {
+        animation: arrowMove 2.4s infinite ease-in-out;
+        // 整段動畫時間1.6s
+      }
 
+      .Hero-section-scroll-p {
+        animation: textMove 2.4s infinite ease-in-out;
+      }
+
+      /* 箭頭動畫 */
+      @keyframes arrowMove {
+        0% {
+          transform: translateY(0);
+        }
+
+        10.42% {
+          transform: translateY(20px);
+          /* 箭頭往下完成 */
+        }
+
+        45.83% {
+          transform: translateY(20px);
+          /* 停留在下方 */
+        }
+
+        66.67% {
+          transform: translateY(0);
+          /* 往上回原位 */
+        }
+
+        100% {
+          transform: translateY(0);
+          /* 停留原位 */
+        }
+      }
+
+      @keyframes textMove {
+
+        0%,
+        2.08% {
+          transform: translateY(0);
+          /* 文字延遲 0.05s (2.08%) */
+        }
+
+        15.62% {
+          transform: translateY(15px);
+          /* 文字往下完成 */
+        }
+
+        45.83% {
+          transform: translateY(15px);
+          /* 停留 */
+        }
+
+        66.67% {
+          transform: translateY(0);
+          /* 往上回原位 */
+        }
+
+        100% {
+          transform: translateY(0);
+          /* 停留原位 */
+        }
+      }
     }
 
+    // .Hero-bottom-curve {
+
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 300px;
+    //   background-color: #FEFCF7;
+
+    //   border-top-left-radius: 400vw 107vw;
+    //   border-top-right-radius: 400vw 107vw;
+    //   // clip-path: ellipse(53% 100% at 50% 100%);
+    //   bottom: 0;
+    // }
 
 
   }
-
-  .Hero-section-scroll {
-
-    position: absolute;
-    top: 64%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2;
-
-    @media(max-width:1024px) {
-      display: none;
-    }
-
-    @media screen and (min-width: 1359px) and (max-width: 1361px) {
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -20%);
-    }
-
-    @media(max-width:1024px) {
-      top: 60%;
-    }
-
-    p {
-      color: var(--white, #FEFCF7);
-      text-align: center;
-      font-family: "Noto Sans TC", sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 140%;
-      letter-spacing: 1.4px;
-    }
-
-    .HeroSectionArrow {
-      animation: arrowMove 2.4s infinite ease-in-out;
-      // 整段動畫時間1.6s
-    }
-
-    .Hero-section-scroll-p {
-      animation: textMove 2.4s infinite ease-in-out;
-    }
-
-    /* 箭頭動畫 */
-    @keyframes arrowMove {
-      0% {
-        transform: translateY(0);
-      }
-
-      10.42% {
-        transform: translateY(20px);
-        /* 箭頭往下完成 */
-      }
-
-      45.83% {
-        transform: translateY(20px);
-        /* 停留在下方 */
-      }
-
-      66.67% {
-        transform: translateY(0);
-        /* 往上回原位 */
-      }
-
-      100% {
-        transform: translateY(0);
-        /* 停留原位 */
-      }
-    }
-
-    @keyframes textMove {
-
-      0%,
-      2.08% {
-        transform: translateY(0);
-        /* 文字延遲 0.05s (2.08%) */
-      }
-
-      15.62% {
-        transform: translateY(15px);
-        /* 文字往下完成 */
-      }
-
-      45.83% {
-        transform: translateY(15px);
-        /* 停留 */
-      }
-
-      66.67% {
-        transform: translateY(0);
-        /* 往上回原位 */
-      }
-
-      100% {
-        transform: translateY(0);
-        /* 停留原位 */
-      }
-    }
-  }
-
-  // .Hero-bottom-curve {
-
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 300px;
-  //   background-color: #FEFCF7;
-
-  //   border-top-left-radius: 400vw 107vw;
-  //   border-top-right-radius: 400vw 107vw;
-  //   // clip-path: ellipse(53% 100% at 50% 100%);
-  //   bottom: 0;
-  // }
-
-
-}
