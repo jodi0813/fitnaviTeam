@@ -350,7 +350,7 @@ function NutriIntro() {
                                 <button onClick={() => phase3Ref.current?.scrollIntoView({ behavior: 'smooth' })}>工作經歷</button>
                                 <button onClick={() => phase4Ref.current?.scrollIntoView({ behavior: 'smooth' })}>專業證照</button>
                                 <button onClick={() => phase4Ref.current?.scrollIntoView({ behavior: 'smooth' })}>預約流程</button>
-                                <button onClick={() => phase6Ref.current?.scrollIntoView({ behavior: 'smooth' })}>營養師可預約時間</button>
+                                <button onClick={() => phase4Ref.current?.scrollIntoView({ behavior: 'smooth' })}>營養師可預約時間</button>
                                 <button onClick={() => phase7Ref.current?.scrollIntoView({ behavior: 'smooth' })}>發表文章</button>
                                 <button onClick={() => phase8Ref.current?.scrollIntoView({ behavior: 'smooth' })}>學員評價</button>
                             </ul>

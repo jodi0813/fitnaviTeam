@@ -132,11 +132,12 @@ function NutriJoinusStep2({ onNext, onPre }) {
                 />
                 <button type="button" className='nutriupload'>上傳</button>
                 <button type="button" className='delete' onClick={() => deleteCertification(cert.id)}>刪除</button>
+                <button type="button" className='update' onClick={addCertification}>新增</button>
               </div>
             ))}
-            <div className="update-button">
+            {/* <div className="update-button">
               <button type="button" className='update' onClick={addCertification}>新增</button>
-            </div>
+            </div> */}
           </div>
         </fieldset>
 
