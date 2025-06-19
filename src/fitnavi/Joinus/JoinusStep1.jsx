@@ -10,7 +10,7 @@ function JoinusStep1({ onNext }) {
     e.preventDefault();
     window.scrollTo(0, 0);
 
-    const isMobile = window.innerWidth < 1024;
+    const isMobile = window.innerWidth <= 1024;
     if (isMobile) {
       navigate('/JoinusStep2');
     } else {

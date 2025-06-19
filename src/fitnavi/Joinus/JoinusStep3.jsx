@@ -28,7 +28,7 @@ function JoinusStep3({ onNext, onPre }) {
   // 下一步按鈕處理
   const handleNext = () => {
     window.scrollTo(0, 0);
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth <= 1024) {
       navigate('/JoinusStep4');
     } else {
       onNext && onNext();
@@ -38,7 +38,7 @@ function JoinusStep3({ onNext, onPre }) {
   // 上一步按鈕處理
   const handlePre = () => {
     window.scrollTo(0, 0);
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth <= 1024) {
       navigate('/JoinusStep2');
     } else {
       onPre && onPre();

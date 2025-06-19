@@ -15,8 +15,9 @@ function Joinus() {
         const handleResize = () => {
             const width = window.innerWidth;
 
-            setCoachTo(width < 1024 ? "/JoinusStep1" : "/JoinusCarousel");
-            setNutriTo(width < 1024 ? "/NutriJoinusStep1" : "/NutriJoinusCarousel");
+            setCoachTo(width <= 1024 ? "/JoinusStep1" : "/JoinusCarousel");
+            setNutriTo(width <= 1024 ? "/NutriJoinusStep1" : "/NutriJoinusCarousel");
+
         };
 
         handleResize(); // 初始化設定
