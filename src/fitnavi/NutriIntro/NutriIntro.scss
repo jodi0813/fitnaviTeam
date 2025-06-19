@@ -1708,6 +1708,40 @@
 
             .ul-tablet {
                 display: none;
+
+                @media (max-width: 1024px) {
+                    display: block;
+                    list-style-type: disc;
+                    margin-left: 20px;
+                }
+
+                li {
+                    @media (max-width: 1024px) {
+                        font-family: "Noto Sans TC", sans-serif;
+                        color: var(--dark, #3A2C19);
+                        /* 段落/14 */
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 140%;
+                        /* 19.6px */
+                        letter-spacing: 1.4px;
+                    }
+                }
+
+                p {
+                    @media (max-width: 1024px) {
+                        color: var(--gray, #989794) !important;
+                        /* 段落/14 */
+                        font-family: "Noto Sans TC", sans-serif !important;
+                        font-size: 14px !important;
+                        font-style: normal !important;
+                        font-weight: 500 !important;
+                        line-height: 140% !important;
+                        letter-spacing: 1.4px !important;
+                        margin-bottom: 2rem !important;
+                    }
+                }
             }
 
             // @media (min-width: 1440px) {
@@ -1719,6 +1753,15 @@
 
             flex: 1;
 
+            @media (max-width: 768px) {
+                margin-top: 50px;
+            }
+
+
+            @media (min-width: 769px) and (max-width: 1024px) {
+                margin-top: 80px;
+            }
+
             .certitle {
                 display: flex;
                 flex-direction: row;
@@ -1726,6 +1769,12 @@
                 align-items: flex-start;
                 padding-bottom: 50px;
                 white-space: nowrap;
+
+                @media (max-width: 768px) {
+                    gap: 18px;
+                    padding-bottom: 20px;
+
+                }
 
                 h3 {
                     color: #FF8740;
@@ -1738,6 +1787,21 @@
                     line-height: normal;
                     letter-spacing: 3.2px;
                     margin-right: 16px;
+
+                    @media (max-width: 768px) {
+                        width: 86px;
+                        color: var(--primary, var(--primary, #FF8740));
+
+                        /* heading/標題4/Bold */
+                        font-family: "Noto Sans TC", sans-serif;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        letter-spacing: 2px;
+
+
+                    }
                 }
 
                 h4 {
