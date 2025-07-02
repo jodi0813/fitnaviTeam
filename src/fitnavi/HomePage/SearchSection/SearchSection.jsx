@@ -8,17 +8,42 @@ import { useState } from "react";
 function SearchSection() {
   const navigate = useNavigate();
 
-  const handleSearch = () => {
-    const selectedCity = document.getElementById("home-city")?.value || "";
-    const selectedArea = document.getElementById("home-area")?.value || "";
+  // 狀態管理
+  const [selectedCity, setSelectedCity] = useState("");
+  const [selectedArea, setSelectedArea] = useState("");
+  const [selectedRole, setSelectedRole] = useState("");
+  const [selectedTrainingNeed, setSelectedTrainingNeed] = useState("");
+
+  // 場地搜尋導頁
+  const handleVenueSearch = () => {
+    if (!selectedCity || !selectedArea) {
+      alert("請選擇縣市與地區");
+      return;
+    }
+
     navigate(
       `/centerMap?city=${encodeURIComponent(
         selectedCity
       )}&area=${encodeURIComponent(selectedArea)}`
     );
   };
-  const [selectedRole, setSelectedRole] = useState("");
-  const [selectedTrainingNeed, setSelectedTrainingNeed] = useState("");
+
+  // 課程搜尋導頁
+  const handleCourseSearch = () => {
+    if (!selectedRole) {
+      alert("請先選擇健身教練或營養師");
+      return;
+    }
+    if (!selectedTrainingNeed) {
+      alert("請選擇訓練需求");
+      return;
+    }
+
+    navigate(
+      `/${selectedRole}?hashtag=${encodeURIComponent(selectedTrainingNeed)}`
+    );
+  };
+
   return (
     <>
       <div className="home-search">
@@ -33,14 +58,15 @@ function SearchSection() {
             </div>
             <div className="home-search-main">
               <div className="home-search-illustration">
-                <img
-                  src="./images/findGym.png"
-                  alt="走路的角色插圖"
-                />
+                <img src="./images/findGym.png" alt="走路的角色插圖" />
               </div>
               <div className="home-search-dropdowns">
                 <div className="home-search-dropdowns1">
-                  <select id="home-city">
+                  <select
+                    id="home-city"
+                    value={selectedCity}
+                    onChange={(e) => setSelectedCity(e.target.value)}
+                  >
                     <option value="">請選擇縣市</option>
                     {cities.map((city) => (
                       <option key={city} value={city}>
@@ -48,7 +74,10 @@ function SearchSection() {
                       </option>
                     ))}
                   </select>
-                  <select id="home-area">
+                  <select
+                    value={selectedArea}
+                    onChange={(e) => setSelectedArea(e.target.value)}
+                  >
                     <option value="">請選擇地區</option>
                     {taipeiDistricts.map((taipeiDistrict) => (
                       <option key={taipeiDistrict} value={taipeiDistrict}>
@@ -57,7 +86,7 @@ function SearchSection() {
                     ))}
                   </select>
                 </div>
-                <button className="homeSearchBt" onClick={handleSearch}>
+                <button className="homeSearchBt" onClick={handleVenueSearch}>
                   搜尋
                   <span className="faSearch">
                     <FaSearch />
@@ -74,22 +103,29 @@ function SearchSection() {
             </div>
             <div className="home-search-main">
               <div className="home-search-illustration">
-                <img
-                  src="./images/findLesson.png"
-                  alt="指著白板的角色插圖"
-
-                />
+                <img src="./images/findLesson.png" alt="指著白板的角色插圖" />
               </div>
               <div className="home-search-dropdowns">
                 <div className="home-search-botton">
                   <div className="home-search-toggleBt">
-                    <button className={selectedRole === "coach" ? "selected" : ""}
-                      onClick={() => setSelectedRole("coach")}
+                    <button
+                      className={selectedRole === "coach" ? "selected" : ""}
+                      onClick={() => {
+                        setSelectedRole("coach");
+                        setSelectedTrainingNeed(""); // 重設選項
+                      }}
                     >
                       健身教練
                     </button>
-                    <button className={selectedRole === "nutritionist" ? "selected" : ""}
-                      onClick={() => setSelectedRole("nutritionist")}>
+                    <button
+                      className={
+                        selectedRole === "nutritionist" ? "selected" : ""
+                      }
+                      onClick={() => {
+                        setSelectedRole("nutritionist");
+                        setSelectedTrainingNeed(""); // 重設選項
+                      }}
+                    >
                       營養師
                     </button>
                   </div>
@@ -97,6 +133,7 @@ function SearchSection() {
                     <select
                       value={selectedTrainingNeed}
                       onChange={(e) => setSelectedTrainingNeed(e.target.value)}
+                      disabled={!selectedRole} // 未選角色時禁用
                     >
                       <option value="">訓練需求</option>
                       {(selectedRole === "coach"
@@ -110,25 +147,9 @@ function SearchSection() {
                     </select>
                   </div>
                 </div>
-                <button
-                  className="homeSearchBt"
-                  onClick={() => {
-                    if (!selectedRole) {
-                      alert("請先選擇健身教練或營養師");
-                      return;
-                    }
-                    if (!selectedTrainingNeed) {
-                      alert("請選擇訓練需求");
-                      return;
-                    }
-                    navigate(
-                      `/${selectedRole === "coach" ? "coach" : "nutritionist"
-                      }?hashtag=${encodeURIComponent(selectedTrainingNeed)}`
-                    );
-                  }}
-                >
-                  搜尋
-                  <span className="faSearch">
+                    <button className="homeSearchBt" onClick={handleCourseSearch}>
+                搜尋
+                <span className="faSearch">
                     <FaSearch />
                   </span>
                 </button>
