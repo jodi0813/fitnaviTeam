@@ -176,24 +176,84 @@
 }
 
 .articlecard-wrapper {
-  display: flex;
-  flex-direction: row;
 
+    display: flex;
+    align-items: flex-start; // 重點：讓子元素不撐滿高度
+    overflow: visible;       // 保證 sticky 可生效
+    position: relative;      // 建議加上
+ 
 
+  // .tablecontent {
+
+  //   flex: 1;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: flex-start;
+  //   margin-top: 100px;
+  //   /* 這裡去掉固定高度，讓它撐滿 */
+  //   height: auto;
+  //   padding-left: 10px;
+  //   // position: sticky;
+  //   // top: 80px; // 調整距離上方的距離，讓它不要被 header 蓋到
+  //   // z-index: 10;
+
+  //   .tabletitle {
+  //     p {
+  //       color: var(--dark, #3A2C19);
+  //       /* 段落/14 */
+  //       font-family: "Noto Sans TC", sans-serif;
+  //       font-size: 14px;
+  //       font-style: normal;
+  //       font-weight: 500;
+  //       line-height: 140%;
+  //       /* 19.6px */
+  //       letter-spacing: 1.4px;
+  //       width: auto;
+  //       border-bottom: 2px solid #3A2C19;
+  //       padding-bottom: 10%;
+  //       margin-bottom: 5%;
+  //     }
+  //   }
+
+  //   .article-table-content {
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: flex-start;
+  //     align-items: flex-start;
+  //     gap: 10px;
+  //     padding: 0px;
+  //     margin-top: 40px;
+
+      
+      
+
+  //     button {
+  //       color: #000;
+  //       /* 段落/14 */
+  //       font-family: "Noto Sans TC";
+  //       font-size: 14px;
+  //       font-style: normal;
+  //       font-weight: 500;
+  //       line-height: 140%;
+  //       white-space: nowrap;
+  //       letter-spacing: 1.4px;
+  //       background-color: transparent;
+  //       padding: 0px;
+  //     }
+  //   }
+  // }
   .tablecontent {
-
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 100px;
-    /* 這裡去掉固定高度，讓它撐滿 */
     height: auto;
     padding-left: 10px;
-    // position: sticky;
-    // top: 80px; // 調整距離上方的距離，讓它不要被 header 蓋到
-    // z-index: 10;
-
+    position: sticky;
+    top: 80px; // 取消註解，調整距離上方的距離，讓它不要被 header 蓋到
+    z-index: 10; // 取消註解，確保層級正確
+  
     .tabletitle {
       p {
         color: var(--dark, #3A2C19);
@@ -211,7 +271,7 @@
         margin-bottom: 5%;
       }
     }
-
+  
     .article-table-content {
       display: flex;
       flex-direction: column;
@@ -220,10 +280,7 @@
       gap: 10px;
       padding: 0px;
       margin-top: 40px;
-
-      
-      
-
+  
       button {
         color: #000;
         /* 段落/14 */
@@ -236,9 +293,18 @@
         letter-spacing: 1.4px;
         background-color: transparent;
         padding: 0px;
+        border: none; // 添加 border: none 確保按鈕樣式正確
+        cursor: pointer; // 添加滑鼠指標
       }
     }
   }
+
+
+  // .articlecard-wrapper {
+  //   display: flex;
+  //   flex-direction: row;
+  //   overflow: visible;
+  // }
 
   .articlecard-content {
     display: flex;
@@ -492,6 +558,12 @@
 
 }
 
+.article{
+  display: flex;
+  align-items: flex-start; // 重點：讓子元素不撐滿高度
+  overflow: visible;       // 保證 sticky 可生效
+  position: relative;
+}
 
 .bottom-wrapper {
   display: flex;
@@ -509,37 +581,6 @@
   background: var(--white, #FEFCF7);
   padding: 40px 0;
 
-  // .bottom-inner {
-  //   width: 100%;
-  //   max-width: 1440px;
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   box-sizing: border-box;
-
-  //   @media (min-width: 801px) and (max-width: 1024px) {
-  //     max-width: 1024px;
-  //     width: 70%;
-
-  //     align-items: flex-start; // 還原為 flex-start
-  //     margin-left: auto;
-  //   }
-
-  //    @media (min-width: 1025px) and (max-width: 1440px) {
-     
-  //     margin: 0 auto; // 置中
-  //     align-items: center;
-  //     width: 70%;
-  //     max-width: 1000px;
-  //   }
-
-  //   @media (min-width: 1441px) {
-     
-  //     margin: 0 auto; // 置中
-  //     align-items: center;
-  //      width: 100%;
-  //   }
-  // }
 .bottom-inner {
   width: 100%;
   max-width: 1440px;
@@ -658,16 +699,6 @@
   }
 }
 
-// 同步調整文章區塊寬度，使 bottom-inner 與 articlecard-content 寬度一致
-// .articlecard-wrapper .articlecard-content {
-//   width: 100%;
-//   max-width: 1024px;
-
-//   @media (min-width: 801px) and (max-width: 1024px) {
-//     width: 70%;
-//     padding-left: 10%;
-//   }
-// }
 
 
 
@@ -814,3 +845,8 @@
     letter-spacing: 1.4px;
   }
 }
+
+
+
+
+
