@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./MemberLogin.scss";
 import { useNavigate } from "react-router-dom";
-import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import {
   GoogleAuthProvider,
-  signInWithCredential,
   signInWithEmailAndPassword,
+  signInWithPopup,
 } from "firebase/auth";
 import { auth } from "../../firebase";
 
@@ -119,20 +118,13 @@ function MemberLogin() {
     }
   };
 
-  // google登入（官方按鈕 + Firebase）
-  const handleGoogleLoginSuccess = async (credentialResponse) => {
-    const idToken = credentialResponse?.credential;
-    if (!idToken) {
-      setErrorMessage("Google 登入失敗，請重試");
-      return;
-    }
-
+  // google登入（Firebase signInWithPopup）
+  const handleGoogleLogin = async () => {
     setErrorMessage("");
     setIsLoading(true);
-
     try {
-      const credential = GoogleAuthProvider.credential(idToken);
-      const result = await signInWithCredential(auth, credential);
+      const provider = new GoogleAuthProvider();
+      const result = await signInWithPopup(auth, provider);
       const user = result.user;
       const userEmail = user.email || "";
       const userRole = userEmail.includes("coach") ? "coach" : "member";
@@ -148,15 +140,17 @@ function MemberLogin() {
         navigate("/memberlist");
       }
     } catch (error) {
-      console.error("Google 登入處理錯誤:", error);
-      setErrorMessage("Google 登入失敗，請重試");
+      console.error("Google 登入錯誤:", error.code, error.message);
+      if (error.code === "auth/popup-closed-by-user") {
+        setErrorMessage("Google 登入視窗已關閉，請重試");
+      } else if (error.code === "auth/popup-blocked") {
+        setErrorMessage("彈出視窗被瀏覽器封鎖，請允許後重試");
+      } else {
+        setErrorMessage(`Google 登入失敗：${error.code}`);
+      }
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const handleGoogleLoginError = () => {
-    setErrorMessage("Google 登入失敗，請重試");
   };
 
   return (
@@ -271,14 +265,35 @@ function MemberLogin() {
             {!isLoading && <img src="./images/search.svg" alt="" />}
           </button>
           <div className="w-full flex justify-center m-0">
-            <GoogleOAuthProvider clientId="182373470143-vge7k40i9mn15d0fmv5c3is52jublrlp.apps.googleusercontent.com">
-              <GoogleLogin
-                onSuccess={handleGoogleLoginSuccess}
-                onError={handleGoogleLoginError}
-                text="signin_with"
-                shape="rectangular"
-              />
-            </GoogleOAuthProvider>
+            <button
+              type="button"
+              onClick={handleGoogleLogin}
+              disabled={isLoading}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                background: "#fff",
+                border: "1px solid #dadce0",
+                borderRadius: "4px",
+                padding: "8px 12px",
+                fontSize: "14px",
+                fontWeight: "500",
+                color: "#3c4043",
+                cursor: "pointer",
+                fontFamily: "'Google Sans', Roboto, sans-serif",
+                letterSpacing: "0.25px",
+                boxShadow: "0 1px 2px rgba(0,0,0,0.2)",
+              }}
+            >
+              <svg width="18" height="18" viewBox="0 0 18 18">
+                <path fill="#4285F4" d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 0 0 2.38-5.88c0-.57-.05-.66-.15-1.18"/>
+                <path fill="#34A853" d="M8.98 17c2.16 0 3.97-.72 5.3-1.94l-2.6-2a4.8 4.8 0 0 1-7.18-2.54H1.83v2.07A8 8 0 0 0 8.98 17"/>
+                <path fill="#FBBC05" d="M4.5 10.52a4.8 4.8 0 0 1 0-3.04V5.41H1.83a8 8 0 0 0 0 7.18z"/>
+                <path fill="#EA4335" d="M8.98 4.18c1.17 0 2.23.4 3.06 1.2l2.3-2.3A8 8 0 0 0 1.83 5.4L4.5 7.49a4.77 4.77 0 0 1 4.48-3.3"/>
+              </svg>
+              使用 Google 登入
+            </button>
           </div>
         </div>
 
