@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 教練卡牌資料：所有人可讀，僅登入使用者可寫（例如透過匯入腳本或後台維護）
+    match /coaches/{coachId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    // 營養師卡牌資料：規則同教練
+    match /nutritionists/{nutritionistId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}
